@@ -1,0 +1,52 @@
+\documentclass[12pt]{report}
+
+% This first part of the file is called the PREAMBLE. It includes
+% customizations and command definitions. The preamble is everything
+% between \documentclass and \begin{document}.
+
+\usepackage[margin=1in]{geometry}  % set the margins to 1in on all sides
+\usepackage{graphicx}              % to include figures
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{import}
+%\documentclass{report}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{chapterbib}
+
+
+\begin{document}
+
+
+\title{Thesis of DOOM}
+
+\author{Rebecca Roisin Murphy \\ 
+Department of Chemistry \\
+University of Cambridge \\
+Lensfield Road, Cambridge, CB2 1EW}
+
+\maketitle
+
+\begin{abstract}
+  My PhD thesis.
+\end{abstract}
+
+\tableofcontents
+
+\input{/home/rebecca/Documents/repos/thesis/introduction/acknowledgements}
+\input{/home/rebecca/Documents/repos/thesis/introduction/overview}
+\input{/home/rebecca/Documents/repos/thesis/introduction/intro}
+\input{/home/rebecca/Documents/repos/thesis/pyFRET/pyfret_chapter}
+\input{/home/rebecca/Documents/repos/thesis/inference/inference_chapter}
+\input{/home/rebecca/Documents/repos/thesis/sizing/sizing_chapter}
+\input{/home/rebecca/Documents/repos/thesis/illumina/illumina_chapter}
+\input{/home/rebecca/Documents/repos/thesis/conclusions/conclusions}
+
+\nocite{*}
+
+\bibliographystyle{unsrt}
+\bibliography{thesis}
+
+
+\end{document}
