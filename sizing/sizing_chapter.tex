@@ -1,7 +1,42 @@
 \chapter{Bayesian Inference of Oligomer Sizes Using Single Molecule FRET}
+
 \section{Overview}
+This chapter describes the extension of the Bayesian model based inference described in the previous chapter to to problem of oligomer sizing in the study of protein aggregation. The introductory section opens with a brief overview of the diseases of protein aggregation as motivation for the study of small aggregates. We then describe prior research into protein aggregation using single molecule microscopy, paying particular attention to the assumed relationship between aggregate size and emitted photons. We then describe sources of heterogeneity that complicate this relationship and describe acousto-optic modulation as a method to reduce heterogeneity. Finally, we introduce the Holliday Junction~\ref{???} as a model oligomer, which can be used to test sizing tools.
+
+Following this introduction, we describe the adaptation of our FRET emission model to a simplified model of oligomer emission. We describe how this model can be used to infer the brightness of a monomer against a noisy, heterogeneous background. The results presented in this chapter are as follows. Firstly, we present an analysis of some simulated datasets, demonstrating that the complex relationship between size and photon emission leads to extremely broad photon distributions that make accurate sizing difficult. Through a comparison of experimental and simulated datasets, we show that the gamma-poisson mixture model is a good model for the emission process. Secondly, we present an attempt to fit the model parameters using both simulated and experimental data. We show that accurate inference of even the mean monomer brightness is difficult, because the relationship between fluorophore emission and confocal occupancy is challenging to decouple. 
+
+To better understand the relationship between size and emision, we collect single molecule fluorescence data from DNA Holliday junctions labelled with between one and four fluorophores. We analyse this data using both our inference tool and standard thresholding techniques, showing that neither is sufficient to accurately describe the data.
+
+Finally, we use a combination of TIRF microscopy and accousto-optic modulation to probe, and attempt to reduce, the sources of emission heterogeneity. We demonstrate that both the non-uniform excitation profile and the presence of significant photoblinking contribute to our inability to correctly size oligomers based on their fluorescence emission. 
+
 \section{Introduction}
+\subsection{Diseases of Protein Aggregation}
+Several human diseases, such as Alzheimer's Disease~\ref{???} and Parkinson's Disease~\ref{???} are diseases of protein aggregation.
+\subsection{Identifying Oligomers Using smFRET}
+\subsection{The Relationship Between Size and Photos is Complex}
+\subsection{The DNA Holliday Junction as a Model Oligomer}
+
 \section{Theory}
+\subsection{A Generative Model of Oligomer Photon Emission}
+\subsection{Inference of Model Parameters}
+
 \section{Experimental Methods}
+\subsection{Labelling of Protein Monomers}
+\subsection{Protein Aggregation Experiments}
+\subsection{Synthesis of DNA Holliday Junctions}
+\subsection{smFRET Measurements of DNA Holliday Junctions}
+\subsection{Flattening the Confocal Volume Using Acousto-Optic Deflection}
+\subsection{Counting Photobleaching Steps Using TIRF Imaging}
+
 \section{Results}
+\subsection{The need for a Generative Model?}
+\subsection{Understanding the Relationship Between Size and Photon Emission}
+\subsection{How Bright is a Monomer}
+\subsection{How Bright Are Holliday Junction Events}
+\subsection{Attempting to Remove Sources of Heterogeneity}
+\subsection{TIRF Imaging Reveals the Role of Photoblinking}
+
 \section{Conclusions}
+\subsection{Complex Relationship between Size and Photon Emission}
+\subsection{Many Sources of Heterogeneity}
+\subsection{Alternative Methods of Reducing Emission Heterogeneity}

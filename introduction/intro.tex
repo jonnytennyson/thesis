@@ -1,10 +1,15 @@
 \chapter{Introduction}
 \label{chap:intro}
 \section{Introduction}
+
+\section{Fluorescence Microscopy}
+
 \section{Forster Resonance Energy Transfer}
 F\"{o}rster resonance energy transfer (FRET) is a non-radiative energy transfer process that can occur between chromophoric molecules~\cite{forster48}. The degree of energy transfer is dependent on the fluorophore distance, allowing FRET to be used as a ``molecular ruler"~\cite{stryer67}, to determine intramolecular distances. Since FRET was first used to measure the distance between two fluorescent dyes on individual molecules bound to a surface~\cite{ha96}, single-molecule FRET (smFRET) has become a popular tool to investigate the structure and dynamics of biomolecules, both on a surface and diffusing freely in solution~\cite{haran03, schuler02, weiss00}.
 
 \section{Single Molecule Fluorescence Microscopy}
+\subsection{Overview}
+\subsection{Confocal Microscopy}
 In a confocal smFRET experiment, biological molecules are labelled with two fluorescent dyes. The emission spectrum of the donor dye ($D$) is chosen to overlap with the excitation spectrum of the acceptor ($A$). When the donor and acceptor are sufficiently close in space, exciting the donor dye results in FRET and fluorescent emission from the acceptor dye. The FRET efficiency, $E$, which describes the proportion of excitation energy transferred from the donor to the acceptor, depends on the distance, $r$ between the two dyes (Eq.~\ref{eq:efficiency}) and $R_0$, the F\"{o}rster distance, a dye dependent constant that describes the dye separation at which 50\% energy transfer is achieved (Fig.~\ref{fig:fig1_instrumentation} C)
 
 \begin{equation}
@@ -25,4 +30,12 @@ E = \frac{n_A}{n_A + \gamma \cdot n_D}
 
 for $n_A$ and $n_D$ detected acceptor and donor photons respectively and $\gamma$ an experimentally determined instrument-dependent correction factor. During the course of a smFRET experiment, several thousand fluorescent bursts are collected and used to construct FRET efficiency histograms. These histograms can be used to identify populations of fluorescent species~\cite{ha96}, typically by fitting multiple gaussian distributions.
 
-\section{Probabilistic Inference}
+\subsection{Total Internal Fluorescence Miroscopy}
+
+\subsection{Epifluorescent Microscopy}
+
+\subsection{Super-Resolution Microscopy}
+
+\section{Probabilistic Inference and Bayesian Statistics}
+\subsection{Bayesian Statistics}
+\subsection{Sampling Techniques}
