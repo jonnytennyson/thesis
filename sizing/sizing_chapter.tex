@@ -11,22 +11,74 @@ Finally, we use a combination of TIRF microscopy and accousto-optic modulation t
 
 \section{Introduction}
 \subsection{Diseases of Protein Aggregation}
-Several human diseases, such as Alzheimer's Disease~\ref{???} and Parkinson's Disease~\ref{???} are diseases of protein aggregation. The neurodegenerative Alzheimer's Disease is characterised by loss of neuronal cells and the presence of large protein aggregates both in the extra-cellular space and within cells. The extra-cellular deposits are primarily composed of polymers of the peptide Amyloid Beta (hereafter A${\beta}$)~\ref{???}, whilst the intracellular aggregates, named neurofibrillary tangles~\ref{???}, are dominated by the protein Tau~\ref{???}. Similarly, at the cellular level, Parkinson's Disease is charaterised by the presence of Lewy Bodies~\ref{???}, solid depositions of protein, predominantly the intrinsically disordered protein $\alpha$-synculein~\ref{???}, inside nerve cells. 
+Several human diseases, such as Alzheimer's Disease~\cite{???} and Parkinson's Disease~\cite{???} are diseases of protein aggregation. The neurodegenerative Alzheimer's Disease is characterised by loss of neuronal cells and the presence of large protein aggregates both in the extra-cellular space and within cells. The extra-cellular deposits are primarily composed of polymers of the peptide Amyloid Beta (hereafter A${\beta}$)~\cite{???}, whilst the intracellular aggregates, named neurofibrillary tangles~\cite{???}, are dominated by the protein Tau~\cite{???}. Similarly, at the cellular level, Parkinson's Disease is charaterised by the presence of Lewy Bodies~\cite{???}, solid depositions of protein, predominantly the intrinsically disordered protein $\alpha$-synculein~\cite{???}, inside nerve cells.
 
-In both Alzheimer's Disease and Parkinson's Disease, the protein aggregates, when examined at the microscopic level, are found to have an unusual structure.   
+% Need figures: micrographs of lewy body, nf tangle, etc 
 
-\subsection{Identifying Oligomers Using smFRET}
-\subsection{The Relationship Between Size and Photos is Complex}
+In both Alzheimer's Disease and Parkinson's Disease, the protein aggregates, when examined at the microscopic level, are found to have a similar structure: long, polymeric chains of proteins form fibrils with a regular structure comprised of inter-molecular (cross) beta sheets. These amyloid fibres are also found in patients suffering from other forms of neurodegenerative disease, such as Transmissible Spongiform Encephalopathy~\cite{???} and Fatal Familial Insomnia~\cite{???}, as well as in other human diseases that do not include neurodegerative symptoms~\cite{??? diabetes, ra} and some animal diseases~\cite{???scrapie}. 
+
+% Need figures: structure of amyloid (diagram); structure of amyloid (TEM).
+
+The role that amyloidosis plays in neurodegenerative disease is currently not well understood. Heritable mutations, such as the XXX~\cite{???} and YYY~\cite{???}, which predispose the peptides to aggregate formation in vitro are associated with early onset disease. However, it is curently unknown whether some species on the aggregation pathway is cytotoxic~\cite{???} or whether the accumulation of amyloid aggregate overwhelms the cellular degradation pathways, leading to apoptosis via some other route~\cite{???}.      
+
+\subsection{Studying Protein Aggregation}
+As a consequence, understanding the chemical pathway of protein aggregation, particularly of disease-associated peptides such as A${\beta}$ and $\alpha$-synculein, is of considerable biological interest. Current understanding is that aggregation follows a ``nucleated growth" mechanism~\cite{chiti2006}. Under the nucleated growth mechanism, there is an initial lag phase, during which a few protein molecules convert from their native structure to an aggregation nucleus. Following their formation, fibril growth occurs rapidly via polmerisation from these molecular seeds (see Fig.~\ref{fig:aggregation_pathwaysXXX}). Analytical solution of the kinetic equations of aggregation suggests that secondary nucleation via templating dominates the rate of aggregation~\cite{knowles2009}. This theoretical result has been used to explain the differing experimentally observed aggregation rates of the two amyloidogenic peptides A$\beta$-40 and A$\beta$-42~\cite{cohen2013, meisl2014}.
+
+To fully understand the protein aggregation pathway and the nature of the biochemical species involved, it is necessary to study both the kinetics of the aggregation reaction and the biophysical properties of the different species on the aggregation pathway. Owing to its relative abundance, the native structure of the monomeric species is easy to characterise effectively~\cite{???}. Similarly, excellent insight into the morphology of mature fibrils can be obtained through experimental techniques such as TEM microscopy~\cite{???} and SAXS~\cite{???}. Furthermore, the chemical Thioflavin T (ThT hereafter)(Fig.~\ref{fig:ThT} A), which is non-fluorescent when free in solution, but attains a characteristic fluorescence emission spectrum on binding to the beta sheet structure of an amyloid fibril (Fig.~\ref{fig:ThT} B) can be used to study both the mature fibrillar species and also the kinetics of fibril formation (Fig.~\ref{fig:ThT} C).
+
+\paragraph{Using smFRET to Identify Oligomers}
+Unfortunately, the all important oligomeric species involved in nucleation remain relatively elusive to scientific study. Although the presence of oligomers can be detected through ELISA assay~\cite{???} and synthetic oligomers can be prepared in vitro~\cite{???}, direct charaterisation of oligomeric species is hindered by the difficulty of accurately detecting oligomers against a background of monomeric and fibrillar structures. One promising method of oligomer observation is through the use of single molecule fluorescence studies.
+
+Previous work using two colour single-molecule microscopy has been able to both track the kinetics of aggregation of $\alpha$-synuclein and to identify different oligomeric states~\cite{cremades2012}. This research used $\alpha$-synuclein monomers labelled with one of the fluorescent dyes Alexa Fluor 488 and Alexa Fluor 647. Mixtures of monomers labelled with the dyes were incubated under fibrillizing conditions and then subjected to single molecule analysis at time points distributed throughout the duration of the aggregation reaction. AND-based thresholding was used to identify oligomeric species against an overwhelming background of monomers, as only oligomers carrying at least one of each dye type would be able to display photon emission in both donor and acceptor channels. These experiments identified two fluorescent species, displaying different FRET efficiencies. Moreover, the high-FRET species emerged later in the aggregation reaction, was associated with oligomers of larger size and was further demonstrated to show increased resistance to Proteinase-K degradation, suggesting an interconversion between two oligomeric species as the aggregation progressed.
+
+\subsection{The Relationship Between Size and Photon Emission is Complex}
+
+% I need to find a way to describe the sizing as a limitation, without seeming to belittle the whole paper ...
+
+This research provides a fascinating insight into the biophysical changes that occur during amyloid aggregation. However, one limitation is that the method used for determining the size of an observed oligomer is essentially a simple heuristic. Oligomer sizes were determined by comparison with the brightness of a monomer event, correcting for the increased dwell-time of larger molecules in the confocal volume, but otherwise assuming a linear relationship between oligomer size and photon emission rate~\cite{orte08}. The monomer event brightness was determined from fluorescent bursts that consisted of photons of a single colour only.
+
+However, as described in the previous chapter, not all fluorescently labelled molecules passing through the confocal volume result in emission of the same number of photons. Multiple factors, including the confocal dwell time, the pathway taken through the gaussian laser beam and the effect of photobleaching during excitation result in broadening of the photon emission distribution becoming super-poissonian. The emision behaviour is well-approximated by a gamma-Poisson mixture model~\cite{chen1999}, as we use in our inference-based analysis tool~\cite{murphy14}. Single molecule fluorescence studies of oligomeric species are subject to similar behaviours, meaning that the relationship between oligomer size and burst brightness is complex and non-linear. The rest of this chapter describes our attempts to improve our understanding of this relationship, using a combination of simple simulations and experimental observations of model oligomers of known size. 
+
 \subsection{The DNA Holliday Junction as a Model Oligomer}
+For our model oligomer, we chose to use the DNA Holliday Junction~\cite{holliday1964}. The Holliday Junction is a four-way structure that is observed biologically during DNA recombination~\cite{potter1976}. Synthetic Holliday junctions can be prepared using four partially complementary strands of DNA (Fig.~\ref{fig:holliday_junction}). These synthetic structures provide an ideal model for small oligomers in fluorescence studies, as each strand can be independently labelled with a fluorescent dye prior to construction of the junction, enabling precise control of the number of fluorescent dyes present. We prepared synthetic Holliday junctions labelled with between one and four fluorescent dyes. These synthetic species were then used in single molecule fluorescence studies to probe the relationship between oligomer size and photon emisson. 
 
 \section{Theory}
+
+This section describes the extension of our generaive model of the smFRET experiment to the case of a fluorescently labelled oligomers , carrying multiple fluorescent dyes. For simplicity, we consider only molecules labelled with a single dye type (experimentally, either Alexa Fluor 488 or Alexa Fluor 647), allowing FRET effects to be ignored.
+
 \subsection{A Generative Model of Oligomer Photon Emission}
+
+
 \subsection{Inference of Model Parameters}
 
 \section{Experimental Methods}
 \subsection{Labelling of Protein Monomers}
 \subsection{Protein Aggregation Experiments}
-\subsection{Synthesis of DNA Holliday Junctions}
+\subsection{Preparation of DNA Holliday Junctions}
+\paragraph{Holliday Junction Preparation}
+Four oligonucleotides labeled at the 5-prime end by the fluorescent dye Alexa Fluor 488 and with the correct sequence to anneal to form a Holliday Junction were purchased (atdbio), along wih equivalent unlabelled strands (Sigma Life Science). Their sequences are given in Table~\ref{tab:table1_DNAsequences}. The four strands required to generate a Holliday junction were combined in Tris buffer (10 mM, pH 8.0, 50 mM NaCl), to give a final total DNA concentration of 5 $\mu$M in a total volume of 20 $\mu$L, using an equimolar concentration of the four DNA strands. The single-stranded DNAs were annealed into the Holliday Junction by heating to 95$\circ$C for 10 minutes, followed by slow cooling overnight to 25$\circ$C.
+
+\begin{center}
+\begin{table}[!ht]
+%\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+\begin{tabular}{|l|l|}
+\hline
+{\bf Arm} & {\bf Sequence}\\ \hline
+B & CCCTAGCAAGCCGCTGCTACGG{\bf 5} \\
+H & CCGTAGCAGCGAGAGCGGTGGG{\bf 5} \\
+R & CCCACCGCTCTTCTCAACTGGG{\bf 5} \\
+X & CCCAGTTGAGAGCTTGCTAGGG{\bf 5} \\ \hline
+\end{tabular}
+\caption{DNA sequences of the four arms of the Holliday Junction. Each sequence is shown in the 3' - 5' direction/ {\bf 5} is a maleimide linkage to Alexa Fluor 488, present in the fluorescently labelled DNA strands, but absent in their unlabelled partners.}
+\label{tab:table1_DNAsequences}
+%\end{adjustwidth}
+\end{table}
+\end{center}
+
+
+\paragraph{Holliday Junction Purification}
+After annealing, the Holliday Junctionss were purified from the reaction mixture using gel electrophoresis on an 8\% TBE acrylamide gel in TBE buffer (Novex, Life Technologies Ltd.). The complete Holliday Junction was identified by visualising the bands using low intensity (PMT 300V) excitation at 526 nm (XXX CHECK THIS WIH VLADAS) and comparison with a 10 bp DNA ladder. The band corresponding to the complete Holliday Junction was cut from the gel and eluted into 200 $\mu$L of Tris buffer by passive difusion overnight. Holliday Junctions were then stored in the dark at 4$\circ$C until required.
+
 \subsection{smFRET Measurements of DNA Holliday Junctions}
 \subsection{Flattening the Confocal Volume Using Acousto-Optic Deflection}
 \subsection{Counting Photobleaching Steps Using TIRF Imaging}
