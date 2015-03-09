@@ -1,7 +1,7 @@
 \chapter{Bayesian Inference of Oligomer Sizes Using Single Molecule FRET}
 
 \section{Overview}
-This chapter describes the extension of the Bayesian model based inference described in the previous chapter to to problem of oligomer sizing in the study of protein aggregation. The introductory section opens with a brief overview of the diseases of protein aggregation as motivation for the study of small aggregates. We then describe prior research into protein aggregation using single molecule microscopy, paying particular attention to the assumed relationship between aggregate size and emitted photons. We then describe sources of heterogeneity that complicate this relationship and describe acousto-optic modulation as a method to reduce heterogeneity. Finally, we introduce the Holliday Junction~\ref{???} as a model oligomer, which can be used to test sizing tools.
+This chapter describes the extension of the Bayesian model based inference described in the previous chapter to to problem of oligomer sizing in the study of protein aggregation. The introductory section opens with a brief overview of the diseases of protein aggregation as motivation for the study of small aggregates. We then describe prior research into protein aggregation using single molecule microscopy, paying particular attention to the assumed relationship between aggregate size and emitted photons. Next, we describe sources of heterogeneity that complicate this relationship and describe acousto-optic modulation as a method to reduce heterogeneity. Finally, we introduce the Holliday Junction~\ref{???} as a model oligomer, which can be used to test sizing tools.
 
 Following this introduction, we describe the adaptation of our FRET emission model to a simplified model of oligomer emission. We describe how this model can be used to infer the brightness of a monomer against a noisy, heterogeneous background. The results presented in this chapter are as follows. Firstly, we present an analysis of some simulated datasets, demonstrating that the complex relationship between size and photon emission leads to extremely broad photon distributions that make accurate sizing difficult. Through a comparison of experimental and simulated datasets, we show that the gamma-poisson mixture model is a good model for the emission process. Secondly, we present an attempt to fit the model parameters using both simulated and experimental data. We show that accurate inference of even the mean monomer brightness is difficult, because the relationship between fluorophore emission and confocal occupancy is challenging to decouple. 
 
@@ -37,10 +37,29 @@ Previous work using two colour single-molecule microscopy has been able to both 
 
 This research provides a fascinating insight into the biophysical changes that occur during amyloid aggregation. However, one limitation is that the method used for determining the size of an observed oligomer is essentially a simple heuristic. Oligomer sizes were determined by comparison with the brightness of a monomer event, correcting for the increased dwell-time of larger molecules in the confocal volume, but otherwise assuming a linear relationship between oligomer size and photon emission rate~\cite{orte08}. The monomer event brightness was determined from fluorescent bursts that consisted of photons of a single colour only.
 
-However, as described in the previous chapter, not all fluorescently labelled molecules passing through the confocal volume result in emission of the same number of photons. Multiple factors, including the confocal dwell time, the pathway taken through the gaussian laser beam and the effect of photobleaching during excitation result in broadening of the photon emission distribution becoming super-poissonian. The emision behaviour is well-approximated by a gamma-Poisson mixture model~\cite{chen1999}, as we use in our inference-based analysis tool~\cite{murphy14}. Single molecule fluorescence studies of oligomeric species are subject to similar behaviours, meaning that the relationship between oligomer size and burst brightness is complex and non-linear. The rest of this chapter describes our attempts to improve our understanding of this relationship, using a combination of simple simulations and experimental observations of model oligomers of known size. 
+However, as described in the previous chapter, not all fluorescently labelled molecules passing through the confocal volume result in emission of the same number of photons. Multiple factors, including the confocal dwell time, the pathway taken through the gaussian laser beam and the effect of photobleaching during excitation result in broadening of the photon emission distribution becoming super-poissonian. The emision behaviour is well-approximated by a gamma-Poisson mixture model~\cite{chen1999}, as we use in our inference-based analysis tool~\cite{murphy14}. Single molecule fluorescence studies of oligomeric species are subject to similar behaviours, meaning that the relationship between oligomer size and burst brightness is complex and non-linear. The rest of this chapter describes our attempts to improve our understanding of this relationship, using a combination of simple simulations and experimental observations of model oligomers of known size.
+
+\subsection{The Effect of Confocal Excitation Heterogeneity on Photon Emission}
+One of the factors controlling the number of photons emitted during a fluorescent excitaton event is the power of the laser used to excite the fluorophore.  
 
 \subsection{The DNA Holliday Junction as a Model Oligomer}
-For our model oligomer, we chose to use the DNA Holliday Junction~\cite{holliday1964}. The Holliday Junction is a four-way structure that is observed biologically during DNA recombination~\cite{potter1976}. Synthetic Holliday junctions can be prepared using four partially complementary strands of DNA (Fig.~\ref{fig:holliday_junction}). These synthetic structures provide an ideal model for small oligomers in fluorescence studies, as each strand can be independently labelled with a fluorescent dye prior to construction of the junction, enabling precise control of the number of fluorescent dyes present. We prepared synthetic Holliday junctions labelled with between one and four fluorescent dyes. These synthetic species were then used in single molecule fluorescence studies to probe the relationship between oligomer size and photon emisson. 
+For our model oligomer, we chose to use the DNA Holliday Junction~\cite{holliday1964}. The Holliday Junction is a four-way structure that is observed biologically during DNA recombination~\cite{potter1976}. Synthetic Holliday junctions can be prepared using four partially complementary strands of DNA (Fig.~\ref{fig:holliday_junction}) and have frequently been used to study junction dynamics using single molecule fluorescence~\cite{mckinney03, uphoff2010, Hyeon2012}. These synthetic structures provide an ideal model for small oligomers in fluorescence studies, as each strand can be independently labelled with a fluorescent dye prior to construction of the junction, enabling precise control of the number of fluorescent dyes present (Fig.~\ref{fig:holliday_junction_arms}). We prepared synthetic Holliday junctions labelled with between one and four fluorescent dyes as described below. These synthetic species were then used in single molecule fluorescence studies to probe the relationship between oligomer size and photon emisson.
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/holliday_junction.pdf}
+      \caption{Schematic of a synthetic Holliday junction. The four arms, named B, H, R and X are shown in red, blue, yellow and green respectively.}
+      \label{fig:fig3_sample_results}
+   \end{center}
+\end{figure}
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/holliday_junction_labelling.pdf}
+      \caption{Schematic showing the four labelling states of our synthetic Holliday Junction construct. Shown clockwise from top left: The monomer model has only Arm B labelled (top left); the dimer has both arms B and X labelled (top right); the trimer model has labels on arms B, H and R (bottom right); in the tetramer model all four arms are labelled (bottom left).}
+      \label{fig:fig3_sample_results}
+   \end{center}
+\end{figure}
 
 \section{Theory}
 
@@ -56,6 +75,7 @@ This section describes the extension of our generative model of the smFRET exper
 \subsection{Protein Aggregation Experiments}
 \subsection{Preparation of DNA Holliday Junctions}
 \paragraph{Holliday Junction Preparation}
+\emph{Holliday Junction purification was carried out by Vladimiras Oleinikovas under the supervision of the author.}
 Four oligonucleotides labeled at the 5-prime end by the fluorescent dye Alexa Fluor 488 and with the correct sequence to anneal to form a Holliday Junction were purchased (atdbio), along wih equivalent unlabelled strands (Sigma Life Science). Their sequences are given in Table~\ref{tab:table1_DNAsequences}. The four strands required to generate a Holliday junction were combined in Tris buffer (10 mM, pH 8.0, 50 mM NaCl), to give a final total DNA concentration of 5 $\mu$M in a total volume of 20 $\mu$L, using an equimolar concentration of the four DNA strands. The single-stranded DNAs were annealed into the Holliday Junction by heating to 95$\circ$C for 10 minutes, followed by slow cooling overnight to 25$\circ$C.
 
 \begin{center}
@@ -77,10 +97,26 @@ X & CCCAGTTGAGAGCTTGCTAGGG{\bf 5} \\ \hline
 
 
 \paragraph{Holliday Junction Purification}
+\emph{Holliday Junction purification was carried out by Vladimiras Oleinikovas under the supervision of the author.}
 After annealing, the Holliday Junctionss were purified from the reaction mixture using gel electrophoresis on an 8\% TBE acrylamide gel in TBE buffer (Novex, Life Technologies Ltd.). The complete Holliday Junction was identified by visualising the bands using low intensity (PMT 300V) excitation at 526 nm (XXX CHECK THIS WIH VLADAS) and comparison with a 10 bp DNA ladder. The band corresponding to the complete Holliday Junction was cut from the gel and eluted into 200 $\mu$L of Tris buffer by passive difusion overnight. Holliday Junctions were then stored in the dark at 4$\circ$C until required.
 
-\subsection{smFRET Measurements of DNA Holliday Junctions}
-\subsection{Flattening the Confocal Volume Using Acousto-Optic Deflection}
+\subsection{Simple FRET Measurements of DNA Holliday Junctions}
+Labelled Holliday Junctions were diluted to a concentration of 50 pM in TEN buffer (10 mM Tris, 1mM EDTA, 100 mM Nacl), pH 8.0, containing 0.01 \% Tween-20. FRET data were collected for 15 minutes using continuous excitation at 488 nm at a power of 80 mW. Collected photons were binned online in intervals of 1 ms and stored in files of 10000 bins. 
+
+\subsection{Flattening the Confocal Volume Using Acousto-Optic Deflection: A Modified Single Molecule Fluorescence Microscope}
+The microscope used for experiments into the effet of unequal excitation was similar to that described in previous chapters. However, a number of modifications were used to allow alteration of the detection volume. Firslty, a voltage controlled oscillator (DRFA10Y-B-0, PhotonLines) was coupled via an RF amplifier (AMPA-B-30, PhotonLines) to an acousto-optic modulator (MT80-A1-VIS, AA Optolectronincs). The modulator was placed in the beam path of the 488 nm laser () and a triangular wave, provided using a signal generator (), was used to deflect the beam in the transverse direction at a speed of 100 kHz. Modifying the amplitude of the wave allowed the degree of deflection to be precisely controlled. This enabled us to quantify the effect of unequal excitation power on the photon emission distribution. The AO modulator deflects only the first harmonic of the 488 nm laser, which is spatially separated from the zeroth and other order beams. Consequently, we direct only this beam into the back port of an inverted microscope (Nikon Eclipse Ti-U). This harmonic corresponds to approximately 10 \% of the total power output of the laser.
+
+\subsection{Preparation of Microfluidic Channels}
+\paragraph{Preparation of the Master Plate}
+\emph{Master Plate preparation was carried out by Mathew Horrocks. His master plates were used with permission.}
+Master plates for the microfluidic devices were prepared by spin-coating SU-8 2025 photoresist (MicroChem) onto silicon wafer (diameter: 76.2 mm, Compart Technology Ltd.) at 800 rpm for 5 s followed by ramping to 3000 rpm at an acceleration of 300 rpm$s^{-1}$ for 60 s to give a final film thickness of 25 $\mu$m. After spinning, the wafer was prebaked (1 min at 65 $^{\circ}$C, then 3 min at 95 $^{\circ}$C and finally 1 min at 65 $^{\circ}$C), and then exposed to UV light through the mask on a mask aligner (MJB4, SUSS Microtec). After postbaking and development,the master was hard-baked for 60 s at 170 $^{\circ}$C.
+
+\paragraph{Preparation of Individual Devices}
+A 10:1 (w/w) ratio of PDMS and curing agent (Sylgard 184, Dow Corning) was prepared and poured over the master, degassed and then baked overnight at 75 $^{\circ}$C. The devices were cut and peeled off the master. Individual devices were prepared by slicing the PDMS into sections containing approximately six microfluidic channels, punching inlet and outlet holes for each channel using a biopsy punch, and then plasma bonding the PDMS onto plasma-cleaned microscope slides by exposure to oxygen plasma for 7 s (DienerFemto plasma asher), sealing to a glass microscope slide and baking overnight at 75 $^{\circ}$C. The resultant microfluidic channels had a width of approximately 1o0 $\mu$m and a height of approximately 25 $\mu$m.
+
+\subsection{smFRET Measurements to Determine the Effect of Unequal Excitation on Photon Emission}
+Labelled Holliday Junctions were diluted to a concentration of 50 pM in TEN buffer (10 mM Tris, 1mM EDTA, 100 mM Nacl), pH 8.0, containing 0.01 \% Tween-20. This solution was flowed at a speed of 5 mm s$^{-1}$ through the confocal excitation volume using a microfluidic channel. Flow rate and direction was controlled using a peristaltic pump (???) The size of the confocal volume was varied between a diffraction-limited spot and a XXX mm line by varying the amplitude (pk-pk) of the ennervating triangular wave between 0 V and 5 V. Data were collected for XX minutes, using a total laser power of YY mW, corresponding to an excitation laser power (first harmonic) of 5-XXX? mW. Detected photons were binned online into time-bins of YYY $\mu$s and stored in files of 10000 bins.   
+
 \subsection{Counting Photobleaching Steps Using TIRF Imaging}
 
 \section{Results}
