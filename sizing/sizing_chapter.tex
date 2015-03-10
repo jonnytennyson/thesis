@@ -66,7 +66,7 @@ XXXohfuckhelpidontdophysicsXXX
 
 
 \subsection{The DNA Holliday Junction as a Model Oligomer}
-For our model oligomer, we chose to use the DNA Holliday Junction~\cite{holliday1964}. The Holliday Junction is a four-way structure that is observed biologically during DNA recombination~\cite{potter1976}. Synthetic Holliday junctions can be prepared using four partially complementary strands of DNA (Fig.~\ref{fig:holliday_junction}) and have frequently been used to study junction dynamics using single molecule fluorescence~\cite{mckinney03, uphoff2010, Hyeon2012}. These synthetic structures provide an ideal model for small oligomers in fluorescence studies, as each strand can be independently labelled with a fluorescent dye prior to construction of the junction, enabling precise control of the number of fluorescent dyes present (Fig.~\ref{fig:holliday_junction_labelling}). We prepared synthetic Holliday junctions labelled with between one and four fluorescent dyes as described below. These synthetic species were then used in single molecule fluorescence studies to probe the relationship between oligomer size and photon emisson.
+For our model oligomer, we used the DNA Holliday Junction~\cite{holliday1964}. The Holliday Junction is a four-way structure that is observed biologically during DNA recombination~\cite{potter1976}. Synthetic Holliday junctions can be prepared using four partially complementary strands of DNA (Fig.~\ref{fig:holliday_junction}) and have frequently been used to study junction dynamics using single molecule fluorescence~\cite{mckinney03, uphoff2010, Hyeon2012}. These synthetic structures provide an ideal model for small oligomers in fluorescence studies, as each strand can be independently labelled with a fluorescent dye prior to construction of the junction, enabling precise control of the number of fluorescent dyes present (Fig.~\ref{fig:holliday_junction_labelling}). We prepared synthetic Holliday junctions labelled with between one and four fluorescent dyes as described below. The sequences of the four arms used are shown in Table~\ref{tab:table1_DNAsequences} These synthetic species were then used in single molecule fluorescence studies to probe the relationship between oligomer size and photon emisson.
 
 \begin{figure}
    \begin{center}
@@ -86,12 +86,58 @@ For our model oligomer, we chose to use the DNA Holliday Junction~\cite{holliday
 
 \section{Theory}
 
-This section describes the extension of our generative model of the smFRET experiment to the case of fluorescently labelled oligomers, carrying multiple fluorescent dyes. For simplicity, we consider only molecules labelled with a single dye type (experimentally, either Alexa Fluor 488 or Alexa Fluor 647), allowing FRET effects to be ignored. Several other assumptions are also made, namely that the relative concentration of oligomeri species is modelled by a geometric distribution and that all monomers carry a fluorescent dye (a labellling efficiency of 100\%.) Further, we consider only events binned on the order of the dwell time in the confocal volume and do not explicitly consider either the effect of photobleaching partway through a bin or changes in the dwell time caused by slower diffusion of larger molecules.
+This section describes the extension of our generative model of the smFRET experiment to the case of fluorescently labelled oligomers, carrying multiple fluorescent dyes. Here, we describe two different models of photon emission from a labelled oligomer. First, we describe a simple poisson model in which sources of distribution broadening are not considered. We then extend this model to a gamma-poisson mixture model, which includes overdispersion. We show, through comparison of simulations and experimental data that the gamma-poisson mixture is a more appropriate model for oligomer fluorescence.
 
-\subsection{A Generative Model of Oligomer Photon Emission}
+For simplicity, we consider only molecules labelled with a single dye type (experimentally, either Alexa Fluor 488 or Alexa Fluor 647), allowing FRET effects to be ignored. Several other assumptions are also made, namely that the relative concentration of oligomeric species is modelled by a geometric distribution and that all monomers carry a fluorescent dye (a labellling efficiency of 100\%.) Further, we consider only events binned on the order of the dwell time in the confocal volume and do not explicitly consider either the effect of photobleaching partway through a bin or changes in the dwell time caused by slower diffusion of larger molecules. Details of the model, and the roles of these assumptions are given below.
 
+\subsection{A Simple Poisson Model of Oligomer Photon Emission}
+In the simplest fluorescence experiment from an oligomeric species, the fluorescently-labelled oligomers diffuse freely through the confocla detection volume.  When a molecule diffuses into the confocal volume, the laser excites the attached fluorophore(s) and photons are emitted (Fig.~\ref{fig:oligomers}. Typically, both donor and acceptor fluorophores would be used to allowing identification of oligomeric species based on the presence of coincident donor and acceptor bursts. However, we consider a simplified experiment in which monomers are labelled with one dye type only. This enables us to ignore the effect of FRET on the number of photons observed and to consider only the total number of photons emitted in a burst. We also assume full labelling of monomers (100 \% labelling efficiency), so that the number of fluorophore present is equivalent to the oligomer size (in monomers). Under these conditions, we expect intuitively that the number of emitted photons increases with the number of fluorophores present. As for dual-labelled monomers, we consider photons binned into time-bins of length on the order of the dwell time in the confocal volume; we expect the great majority of time-bins to contain noise photons only.
 
-\subsection{Inference of Model Parameters}
+We model this simple experiment as a sequence of measurements ($f_D$) of the number of photons observed in the fluorescence emission channel. Each time-bin is treated as an independent and identically distributed sample from a set of random variables describing the dataset. Each data point ($f_D$) in the data stream is the sum of noise photons and, where an oligomer is present, some photons from a fluorescent event. 
+
+The number of noise photons is drawn from a Poisson distribution with rate parameter $\lambda_D$. The probability of observing $n_D$ noise photons in the donor channel is then:
+\begin{equation}
+n_{D} \sim \text{Poisson}(n_{D}; \lambda_{D}) = \frac{\lambda_{D}^{n_{D}}}{n_{D}!}e^{-\lambda_{D}}
+\end{equation}
+
+In addition to noise, each observation may contain photons from one or more fluorescently labelled oligomers.  As before, the number of molecules present in the excitation volume, $n_{\text{prot}}$ can be described using a Poisson distribution with rate parameter $\lambda_{\text{prot}}$:
+\begin{equation}
+n_{\text{prot}} \sim \text{Poisson}(n_{\text{prot}}; \lambda_{\text{prot}}) = \frac{\lambda_{\text{prot}}^{n_{\text{prot}}}}{n_{\text{prot}}!}e^{-\lambda_{\text{prot}}}
+\label{eq:nprot}
+\end{equation}
+
+However, now we must also consider the oligomer size. In the absence of evidence to the contrary, we assume that fluorophores on an oligomer are non-interacting, such that each fluorophore is excited independently and does not experience quenching effects from the proximity of other fluorophores. We begin with a simple, purely poisson model of oligomer fluorescence. We model each fluorophores as displaying poisson emission with rate parameter $\lambda$. As the sum of poisson random variables is itself a poisson random variable~\cite{???}, an oligomer of size $n$ can be described as having an emission rate of $n \cdot \lambda$. Therefore, the dditional photons present in a time-bin contributued by an oligomer of size $n$ is given by:
+
+\begin{equation}
+c_D \sim \text{Poisson}(c_D; n \cdot \lambda)
+\end{equation} 
+
+The total number observed photons in that time bin, $f_D$, is then the sum $n_D + c_D$.
+
+Given this simple model, we can easily generate multiple datasets with different properties. Below, we describe generation of simulated datasets from oligomers of known size, or from mixtures of oligomer sizes of known size distributuion. However, first we introduce the more complex gamma-poisson mixture model that is a direct extension of the model described in the previous chapter.
+
+\subsection{A Gamma-Poisson Mixture Model of Oligomer Photon Emission}
+The previous section described a simple poisson model of photon emission from labelled oligomers. However, as discussed in the previous chapter, we have found a gamma-poisson (negative binomial) distribution to be a better model for the overdispersion seen in emission from dual-labelled monomers~\cite{murphy14}. This section describes the extension of this model of fluorescence emission to the case of labelled protein oligomers.
+
+The system modelled is equivalent to that described in the previous section. The noise distribution and probability of confocal volume occupancy are unchanged. However, now we choose to include over-dipsersion in our model of fluorophore excitation, by drawing event specific emission parameters from a gamma distribution, moving from a single-step model of emission to a two stage emission process. 
+
+Firstly, given that a fluorescently labelled molecule is present in the confocal volume, we determine a rate of donor emission, $\lambda$for monomers in that specific molecule as a random sample from a gamma distribution with shape parameter $k_D$ and mean $\lambda_B$ (Eq.~\ref{eq:gamma_size}). This captures the variation in the number of photons emitted by a molecule as a result of the diffusion path taken through the confocal volume and the effect of individual fluorophores photobleaching partway through an observation.
+
+\begin{equation}
+\lambda \sim \text{Gamma}(\lambda; k_D, \theta) =  \frac{1}{\Gamma(k_D) \theta^{k_D}} \lambda^{(k_D - 1)} e^{-\frac{\lambda}{\theta}} \quad\text{ for } \theta = \lambda_B / k_D
+\label{eq:gamma_size}
+\end{equation} 
+Here, $\Gamma$ is the Gamma function. 
+
+In the second step, we consider the oligomer size. As above, we consider labelleing efficiency to be 100 \%, such that an oligomer containing $n$ monomers is assumed to have $n$ attached fluorescent dyes. We assume these dyes to be non-interacting. Furthermore, although we are now considering the impact of the pathway through the confocal volume on the number of photons emitted by a fluorophore, the size of an oligomer is still small relative to the size of the confocal volume. Hence, we assume that all fluorophores on a specific oligomer have the same rate of donor emission, $\lambda$, determined according to equation~\ref{eq:gamma_size}. Consequently, the number of photons emitted by an oligomer of size $n$ with emission rate $\lambda$ is given, as before by
+
+\begin{equation}
+c_D \sim \text{Poisson}(c_D; n \cdot \lambda)
+\end{equation}  
+
+and the total number of observed photons, $f_D$ is then the sum $n_D + c_D$. Note, however that whereas in the simple poisson model $\lambda$ was a constant, now $\lambda$ itself is a random variable, which is drawn afresh from equation~\ref{eq:gamma_size} for each oligomer emission event.
+
+The rest of this chapter describes the comparison of simulated datasets generated using these two models with real data from model oligomers of known size and from true protein aggregation experiments with unknown oligomer size distributions. In the next section, we summarize the experimental techniques used to collect single molecule fluorescence data from aggregation timecourses; the preparation of labelled Holliday Junctions as model oligomers; and the modification of the confocal excitation set-up to modify the confocal excitation field. 
 
 \section{Experimental Methods}
 \subsection{Labelling of Protein Monomers}
