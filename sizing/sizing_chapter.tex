@@ -193,16 +193,63 @@ The major results of this chapter are now presented. Firstly, we show that the r
 
 \subsection{The need for a Generative Model}
 % this needs to be said more formally
-To open the results section of this chapter, we present a justification for taking a model-based approach to studying aggregation. It is clear that there are many unknowns and many simplifications in our models. Here, we present some simple simulations to demonstrate the importance of understanding the processes underlying fluorescent emission. Although it is true that our models contain simplifications, it is also true that any method of analsing experimental data contains simplifications and assumptions about the structure of those data. In the case of oligomer sizing experiments, these assumptions are often not made explicit, but are based on fluorophores demontsrating poissonian emission behaviour. Here, we compare the performance of this data analysis methodology, using datasets simulated using both the poisson model of emission behaviour, and the gamma-poisson mixture model. We show that the assumptions made in the data analysis workflow do not hold when the photon emission distribution is overdispersed, leading to calculated oligomer size distributions that are both quantitatively and qualitatively incorrect.  
+To open the results section of this chapter, we present a justification for taking a model-based approach to studying aggregation. It is clear that there are many unknowns and many simplifications in our models. Here, we present some simple simulations to demonstrate the importance of understanding the processes underlying fluorescent emission. Although it is true that our models contain simplifications, it is also true that any method of analsing experimental data contains simplifications and assumptions about the structure of those data. In the case of oligomer sizing experiments, these assumptions are often not made explicit, but are based on fluorophores demontsrating poissonian emission behaviour. Here, we compare the performance of this data analysis methodology, using datasets simulated using both the poisson model of emission behaviour, and the gamma-poisson mixture model. We show that the assumptions made in the data analysis workflow do not hold when the photon emission distribution is overdispersed, leading to calculated oligomer size distributions that are both quantitatively and qualitatively incorrect. 
+
+The largest assumption made in prior work to determine oligomer sizes using single molecule fluorescence is that there is a linear relationship between oligomer size and photon emission. In prior work~\cite{cremades2012}, oligomers were identified by using the AND criterion on time-binnned TCCD data (see introductionXXX and chapterXXX for details) to select time-bins that exceeded some thresholds $T_D$ and $T_A$ in the donor and acceptor channels respectively. Following event selection, the approximate size of each identified oligomer was calculated using the relationship:
+
+\begin{equation}
+\text{size} = \frac{2\cdot I_D + \gamma^{-1} I_A}{I_{\text{monomer}}}
+\label{eq:size_linear}
+\end{equation}
+
+where $I_D$ and $I_A$ are the intensities (number of photons) in the donor and acceptor channels respectively, $\gamma$ is the instrumental gamma factor and $I_{\text{monomer}}$ is the mean brighness of monomer events (selected by identifying events for which $I_D \geq T_D$ but $I_A < T_A$). This means that the calculated oligomer size is simply the oserved event brightness divided by the mean event brightness for monomer events.
+
+Fig.~\ref{fig:poisson_size_photons} shows the expected emission distributions from small oligomers of various sizes, when emission behaviour is purely poisson. This simple simulation ignores contributions from noise and assumes a mean monomer emission of 10 photons. The code used to generate these data can be found in Appendix XXX. As seen from this figure, when the emission behaviour is purely poisson, there are clear, distinct peaks in photon emission frequency for each oligomer size. As a consequence, using Eq.~\ref{eq:size_linear} to estimate the oligomer size gives approximately accurate results. We simulated oligomer emission events, sampling a uniform distribution of sizes with a monomer monomer brightness of $I_{\text{monomer}} = 10$. Event selection was performed using $T_D = 10$ and $T_A = 10$ and the remaining events wer sized, according to Eq.~\ref{eq:size_linear}. The results, shown in Fig.~\ref{fig:poisson_size_photons_uniform} show that, apart from at the very ends of the size distribution, the calculated size distribution (blue curve) is an excellent approximation of the true size distribution (grey histogram).        
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/poisson_size_photons.pdf}
+      \caption{Simulating oligomer photon emission using the simple poisson model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for simple poisson emission. b) The same distributions as in a), plotted using a logarithmic scale.}
+      \label{fig:poisson_size_photons}
+   \end{center}
+\end{figure}
 
 
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/True_vs_Measured_oligomer_events_uniform_poisson_100000_hist.pdf}
+      \caption{True and calculated oligomer sizes for data simulated using poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) closely approximates the true size distribution (grey histogram).}
+      \label{fig:poisson_size_photons_uniform}
+   \end{center}
+\end{figure}
 
+However, when oligomers are simulated using the gamma-poisson mixture model, the assumption of linearity is no longer valid. As Fig.~\ref{fig:gamma_poisson_size_photons} shows, overdipsersal results in much broader distributions for which clear peaks corresponding to different oligomer sizes can no longer be discerned. As a result, estimating the oligomer size using Eq.~\ref{eq:size_linear} gives wildly inaccurate results (Fig.~\ref{fig:gamma_poisson_size_photons_uniform}).
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/gamma_poisson_size_photons.pdf}
+      \caption{Simulating oligomer photon emission using the gamma-poisson mixure model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for gamma-poisson emission. b) The same distributions as in a), plotted using a logarithmic scale to show emission detail.}
+      \label{fig:gamma_poisson_size_photons}
+   \end{center}
+\end{figure}
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf}
+      \caption{True and calculated oligomer sizes for data simulated using gamma-poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) is an extremely poor approximation of the true size distribution (grey histogram).}
+      \label{fig:gamma_poisson_size_photons_uniform}
+   \end{center}
+\end{figure}
+
+This simple analysis of simulated data illustrates the importance of understanding the models that underlie a data analysis technique. If oligomers are pure poisson emitters, then Eq.~\ref{eq:size_linear} is an appropriate method to approximate the oligomer size distribution. However, if the effects of excitation heterogeneity and photobleaching cause significant over-dispersal of the emission distribution, Eq.~\ref{eq:size_linear} produces an estimation of the oligomer size distribution that is extremely inaccurate. In the following section, we compare photon emission histograms from model oligomers of known size with simulated datasets, showing the poisson distribution is a poor model of the observed photon emission distributions.   
 
 \subsection{Understanding the Relationship Between Size and Photon Emission}
+
+
 \subsection{How Bright is a Monomer}
 \subsection{How Bright Are Holliday Junction Events}
 \subsection{Attempting to Remove Sources of Heterogeneity}
-\subsection{TIRF Imaging Reveals the Role of Photoblinking}
+\subsection{Photobleaching Steps Analysis Reveals the Role of Photoblinking}
 
 \section{Conclusions}
 \subsection{Complex Relationship between Size and Photon Emission}
