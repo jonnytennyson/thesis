@@ -244,6 +244,40 @@ However, when oligomers are simulated using the gamma-poisson mixture model, the
 This simple analysis of simulated data illustrates the importance of understanding the models that underlie a data analysis technique. If oligomers are pure poisson emitters, then Eq.~\ref{eq:size_linear} is an appropriate method to approximate the oligomer size distribution. However, if the effects of excitation heterogeneity and photobleaching cause significant over-dispersal of the emission distribution, Eq.~\ref{eq:size_linear} produces an estimation of the oligomer size distribution that is extremely inaccurate. In the following section, we compare photon emission histograms from model oligomers of known size with simulated datasets, showing the poisson distribution is a poor model of the observed photon emission distributions.   
 
 \subsection{Understanding the Relationship Between Size and Photon Emission}
+To understand the relationship between oligomer size and photon emission in a single molecule fluorescence experiment, it is necessary to have experimental datasets for which the size, or size distribution, of oligomers present is known. In a protein aggregation experiment, the aggregation reaction generates an heterogeneous solution of oligomers, but their size distribution is unknown, making them a poor model for understanding photon emission behaviour. 
+
+To overcome this problem, we use a labelled DNA Holliday Junction as a model oligomer. We prepared Holliday Junctions labelled with between one and four fluorophores (Alexa Fluor 488), enabling us to collect data from solutions of pure monomer, dimer, trimer and tetramer models. We compare experimental data collected using these oligomer models from datasets simulated using either the pure poisson or the gamma-poisson emission models. The results are very informative.
+
+Fig.~\ref{fig:HJ_oligomers} displays histograms of the full photon frequency distribution for Holliday Junctions labelled with between one and four fluorophores. These data are displayed on a logarithmic scale, so that key features of the emission distribution can be identified. Several points of interest can be noted. Firstly, similarly to the dual-labelled monomeric species described in the previous chapter, no clear distinction is observed between the poissonian noise distribution and the distribution of photons from fluorescent events. This is true even when multiple fluorophores are present. Consequently, we present the entire dataset, including time-bins containing only noise photons, to avoid distorting the observed brightness distributions. Secondly, no clear peaks -- corresponding to oligomers of different sizes -- are observed. Instead, there is extensive overlap between the photon emission distributions for oligomers of different sizes, with the main differentiator being an increase in the length of the tail for species carrying more flurophores. Finally, it can also be observed that at the opposite end of the distribution, the frequency of events also increases for multimeric species: the monomer model has the highest number of bins containing zero photons. For all other photon counts, multimeric species show an increased frequency of observation. 
+
+This is in contrast to datasets simulated using the pure poisson emission model (Fig.~\ref{fig:poisson_oligomers}). In these datasets, separate peaks corresponding to oligomers of different sizes can be clearly distinguished. Furthermore, rather than a monotonic decrease in frequency with number of observed photons, the poisson model shows an initial decrease in event frequency at low numbers of photons, corresponding to the noise distribtuion, followed by a second peak, corresponding to oligomer events. This produces a clear separation between the noise and event emission distributions, which would allow a simple threshold to select oligomer events.   
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/Holliday_Junctions.pdf}
+      \caption{Histograms of experimental photon emission distributions for labelled Holliday Junctions. All time-bins are shown. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively.}
+      \label{fig:HJ_oligomers}
+   \end{center}
+\end{figure}
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/poisson_oligomers_log.pdf}
+      \caption{Histograms of photon emission distributions for model oligomers simulated using a pure poisson model. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively.}
+      \label{fig:poisson_oligomers}
+   \end{center}
+\end{figure}
+
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/gamma_poisson_oligomers_log.pdf}
+      \caption{Histograms of photon emission distributions for model oligomers simulated using a gamma-poisson mixture model. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively.}
+      \label{fig:gamma_poisson_oligomers}
+   \end{center}
+\end{figure}
+
+
 
 
 \subsection{How Bright is a Monomer}
