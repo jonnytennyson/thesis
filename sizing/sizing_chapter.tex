@@ -283,10 +283,12 @@ Secondly, as the gamma-poisson mixture model appears to better approximate the e
    \end{center}
 \end{figure}
 
+\subsection{Inferring Event Brightness Using the Gamma-Poisson Model}
+The previous section described comparing experimental data from model oligomers of known sizes with simulated datasets. We showed that poisson emission is an extremely poor model of the behaviour of fluorescently labelled oligomers in a single molecule fluorescence experiment. In this section, we use our Metropolis-Hasting sampler, described in Chapter~\autoref{chap:inference} to infer the parameters of our gamma-poisson mixture model, conditioned on single molecule datasets. We first present parameter inference on datasets simulated using this model, demonstrating effective performance. We then present the results of parameter inference conditioned on experimental datasets, showing that our lack of knowledge of key model parameters means that the model is underspecified, making accurate parameter inference difficult.
+
+We simulated five datasets, consisting of oligomers of known size (from monomers to pentamers) using the parameters shown in Table~\ref{tab:oligomer_params}. Then, we used the Metropolis Hastings sampler to infer the mean oligomer and noise emission rates, as well as the oligomer concentration. The initial values used are shown in Table~\ref{tab:initial_values}; the inferred values are shown in Table~\ref{tab:inferred_values}. Two example fits are shown inf Fig.~\ref{fig:hist_fit}
 
 
-
-\subsection{How Bright is a Monomer}
 \subsection{How Bright Are Holliday Junction Events}
 \subsection{Attempting to Remove Sources of Heterogeneity}
 \subsection{Photobleaching Steps Analysis Reveals the Role of Photoblinking}
