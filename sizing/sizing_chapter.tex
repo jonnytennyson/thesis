@@ -286,7 +286,7 @@ Secondly, as the gamma-poisson mixture model appears to better approximate the e
 \subsection{Inferring Event Brightness Using the Gamma-Poisson Model}
 The previous section described comparing experimental data from model oligomers of known sizes with simulated datasets. We showed that poisson emission is an extremely poor model of the behaviour of fluorescently labelled oligomers in a single molecule fluorescence experiment. In this section, we use our Metropolis-Hasting sampler, described in Chapter~\autoref{chap:inference} to infer the parameters of our gamma-poisson mixture model, conditioned on single molecule datasets. We first present parameter inference on datasets simulated using this model, demonstrating effective performance. We then present the results of parameter inference conditioned on experimental datasets, showing that our lack of knowledge of key model parameters means that the model is underspecified, making accurate parameter inference difficult.
 
-We simulated five datasets, consisting of oligomers of known size (from monomers to pentamers) using the parameters shown in Table~\ref{tab:oligomer_params}. Then, we used the Metropolis Hastings sampler to infer the mean oligomer and noise emission rates, as well as the oligomer concentration. The initial values used are shown in Table~\ref{tab:initial_values}; the inferred values are shown in Table~\ref{tab:inferred_values}. Two example fits are shown inf Fig.~\ref{fig:hist_fit}
+We simulated four datasets, consisting of oligomers of known size (from monomers to tetramers) using the parameters shown in Table~\ref{tab:oligomer_params}. Then, we used the Metropolis Hastings sampler to infer the mean oligomer and noise emission rates, as well as the oligomer concentration. The initial values used are shown in Table~\ref{tab:initial_values}; the inferred values are shown in Fig.~\ref{tab:inferred_values}. Two example fits are shown inf Fig.~\ref{fig:hist_fit}
 
 \begin{center}
 \begin{table}[!ht]
@@ -322,12 +322,41 @@ $\lambda_{\text{DB}}$ & 20.0\\
 \hline
 \end{tabular}
 \caption{Initial values used in inferring  oligomers of known size.}
-\label{tab:oligomer_params}
+\label{tab:initial_values}
 %\end{adjustwidth}
 \end{table}
 \end{center}
 
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/divergence.pdf}
+      \caption{Plot of inferred vs true values of $\lambda_{\text{DB}}$. The dashed line shows the expected trend, but the inferred values are underestimated for high values of $\lambda_{\text{DB}}$. Error bars show the standard deviation of 100 samples.}
+      \label{fig:gamma_poisson_oligomers}
+   \end{center}
+\end{figure}
 
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/oligomer_marginals.pdf}
+      \caption{Histograms of photon emission distributions for simulated a) monomers and b) trimers. The overlaid blue circles show the  number of photons predicted by the gamma-poisson mixture model, using parameters inferred from the dataset using the Metropolis sampler.}
+      \label{fig:hist_fit}
+   \end{center}
+\end{figure}
+
+The results are mixed. Although inference performs well for small oligomers (monomers and dimers), when the mean event brightness is ver high, the true value of $\lambda_{\text{DB}}$ is underestimated. Despite the considerable error, this still produces expected emission frequencies that are a good approximation of the true distribution (compare the histogram and the overlaid blue circles in Fig.~\ref{fig:hist_fit} B). The likely cause of this estimation error is the overdispersal. In these simulations, the value of $R_{\text{blue}}$, the overdispersal parameter was 1.0. This produces an extremely broad distribution: in particular, for high mean values $\lambda_{\text{DB}}$, the distribution has a very long tail and the modal observed value is far from the mean of the distribution. As a consequence of this, the possible range of parameters values that provide a good fit to the observed data is very wide and the stationary distribution is broad and flat, allowing many values of $\lambda_{\text{DB}}$ to provide a good approximation of the dataset.
+
+It should be noted that this poor performance is not caused by the sampler not converging. As can be seen from the tight error bars in Fig.~\ref{fig:gamma_poisson_oligomers}, the accepted samples are drawn from a small range of values. Furthermore, the initial conditions do not affect the final value reached by the sampler: although a longer burn-in phase is required when the sampler is initialised using values far from the true parameter values, sampling converges to the same (incorrect) values~\ref{fig:convergence}.
+
+This performance is disappointing. The datasets we have simulated are a greatly simplified approximation of a true single molecule fluorescence dataset from a protein aggregation experiment: they contain ``oligomers" of only a single size, many sources of error, such as cross-talk, are entirely neglected and all model parameters are known. Despite knowing that the model for which we are inferring parameters is precisely the model that generated our datasets, we are unable to recover the correct parameter values. This suggests that our model-based approach will struggle similarly to extract meaningful parameters from experimental datasets.
+
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/Convergence.pdf}
+      \caption{Convergence of the inferred value of $\lambda_{\text{DB}}$ during burn-in for simulations of the trimeric oligomer. The black dashed line represents the true value of $\lambda_{\text{DB}}$.}
+      \label{fig:convergence}
+   \end{center}
+\end{figure}
 
 \subsection{How Bright Are Holliday Junction Events}
 \subsection{Attempting to Remove Sources of Heterogeneity}
