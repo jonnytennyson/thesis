@@ -288,6 +288,46 @@ The previous section described comparing experimental data from model oligomers 
 
 We simulated five datasets, consisting of oligomers of known size (from monomers to pentamers) using the parameters shown in Table~\ref{tab:oligomer_params}. Then, we used the Metropolis Hastings sampler to infer the mean oligomer and noise emission rates, as well as the oligomer concentration. The initial values used are shown in Table~\ref{tab:initial_values}; the inferred values are shown in Table~\ref{tab:inferred_values}. Two example fits are shown inf Fig.~\ref{fig:hist_fit}
 
+\begin{center}
+\begin{table}[!ht]
+%\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+\begin{tabular}{|l|l|}
+\hline
+{\bf Parameter} & {\bf Value}\\ \hline
+$\lambda_{\text{prot}}$ & 0.05\\
+$\lambda_{\text{NB}}$ & 1.0\\
+$\lambda_{\text{DB}}$ (monomer) & 10.0\\
+$\lambda_{\text{DB}}$ (dimer) & 20.0\\
+$\lambda_{\text{DB}}$ (trimer) & 30.0\\
+$\lambda_{\text{DB}}$ (tetramer) & 40.0\\
+$R_{\text{blue}}$ & 1.0\\
+$\gamma_{\text{ins}}$ & 1.0\\
+$n_{\text{samples}}$ & 10000\\ \hline
+\end{tabular}
+\caption{Parameters used in simulating emission datasets for oligomers of known size.}
+\label{tab:oligomer_params}
+%\end{adjustwidth}
+\end{table}
+\end{center}
+
+\begin{center}
+\begin{table}[!ht]
+%\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+\begin{tabular}{|l|l|}
+\hline
+{\bf Parameter} & {\bf Value}\\ \hline
+$\lambda_{\text{prot}}$ & 0.1\\
+$\lambda_{\text{NB}}$ & 1.0\\
+$\lambda_{\text{DB}}$ & 20.0\\
+\hline
+\end{tabular}
+\caption{Initial values used in inferring  oligomers of known size.}
+\label{tab:oligomer_params}
+%\end{adjustwidth}
+\end{table}
+\end{center}
+
+
 
 \subsection{How Bright Are Holliday Junction Events}
 \subsection{Attempting to Remove Sources of Heterogeneity}
