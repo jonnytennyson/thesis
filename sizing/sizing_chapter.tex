@@ -347,8 +347,7 @@ The results are mixed. Although inference performs well for small oligomers (mon
 
 It should be noted that this poor performance is not caused by the sampler not converging. As can be seen from the tight error bars in Fig.~\ref{fig:gamma_poisson_oligomers}, the accepted samples are drawn from a small range of values. Furthermore, the initial conditions do not affect the final value reached by the sampler: although a longer burn-in phase is required when the sampler is initialised using values far from the true parameter values, sampling converges to the same (incorrect) values~\ref{fig:convergence}.
 
-This performance is disappointing. The datasets we have simulated are a greatly simplified approximation of a true single molecule fluorescence dataset from a protein aggregation experiment: they contain ``oligomers" of only a single size, many sources of error, such as cross-talk, are entirely neglected and all model parameters are known. Despite knowing that the model for which we are inferring parameters is precisely the model that generated our datasets, we are unable to recover the correct parameter values. This suggests that our model-based approach will struggle similarly to extract meaningful parameters from experimental datasets.
-
+This performance is disappointing. The datasets we have simulated are a greatly simplified approximation of a true single molecule fluorescence dataset from a protein aggregation experiment: they contain ``oligomers" of only a single size, many sources of error, such as cross-talk, are entirely neglected and all model parameters are known. Despite knowing that the model for which we are inferring parameters is precisely the model that generated our datasets, we are unable to recover the correct parameter values. This suggests that our model-based approach will struggle similarly to extract meaningful parameters from experimental datasets. Our attempt to do so is summarised in the next section.
 
 \begin{figure}
    \begin{center}
@@ -359,7 +358,30 @@ This performance is disappointing. The datasets we have simulated are a greatly 
 \end{figure}
 
 \subsection{How Bright Are Holliday Junction Events}
-\subsection{Attempting to Remove Sources of Heterogeneity}
+This section discusses our attempt to infer parameters of the gamma-poisson mixture model conditioned on data from our Holliday Junction model oligomers. Firstly, we provide a detailed comparison of the simulated and experimental datasets, identifying probable errors in the model. Secondly, we compare different methods of estimating the event brightness of fluorescence emission from the Holliday Junction oligomers. Finally, we consider experimental techniques to understand sources of discrepancy between our model and the observed data.
+
+Fig.~\ref{fig:HJ_sim_overlay} A and B show emission distribution histograms for the monomer and trimer model oligomers, overlaid by simulated monomer and trimer emission distributions, simulated using the gamma-poisson mixture model. Although there is rough agreement between the two distributions, several discrepancies can be noted. Firstly, as is particularly evident in the comparison of monomer data (Fig.~\ref{fig:HJ_sim_overlay} A), the experimental distribution shows a much longer tail of bright events. Secondly, the experimental datasets display fewer events of intermediate fluorescence. These discrepancies suggest that the gamma-poisson mixture model, as parameterised in our simulations, is not a perfect model for fluorescent emission.
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/HJ_overlays.pdf}
+      \caption{Overlays of simulated and experimental photon emission distributions for a) monomer and c) trimer oligomers. The blue histograms display experimental data from the Holliday Junction model oligomers. The green histograms display data from simulations using the gamma-poisson mixture model.}
+      \label{fig:HJ_sim_overlay}
+   \end{center}
+\end{figure}
+
+The most likely source of this discrepancy is incorrect parameterisation of the gamma-poisson mixture distribution. This occurs because the true values of several parameters of this distribution are unknown. In particular, in our simulations, we assume that the overdispersal parameter, $R_{\text{blue}}$, is 1.0. However, for expermimental data, this parameter is unknown. By comparison of datasets simulated using different values of $R_{\text{blue}}$ with experimental data, it is possible to estimate what the experimental value of $R_{\text{blue}}$ is (Fig.~\ref{fig:R_blue}). However, attempts to co-infer $R_{\text{blue}}$ along with other model parameters were unsucessful, resulting in overfitting of the data and unphysical parameter values (see Fig.~\ref{fig:fitting_Rblue} and Table~\ref{tab:R_blue}).   
+
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/varying_R_blue.pdf}
+      \caption{Photon emission distributions for datasets simulated with different values of the overdispersion parameter $R_{\text{blue}}$. The values used are shown in the legend. For high values of $R_{\text{blue}}$, the degree of overdispersal is small, and the fluorescence emission distribution resembles a pure poisson distribuion (black histogram). For small values of $R_{\text{blue}}$, the amount of overdispersal is much greater and the tail of the distribution is lengthened (green histogram).} 
+      \label{fig:R_blue}
+   \end{center}
+\end{figure}
+
+%\subsection{Attempting to Remove Sources of Heterogeneity}
 \subsection{Photobleaching Steps Analysis Reveals the Role of Photoblinking}
 
 \section{Conclusions}
