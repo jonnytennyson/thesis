@@ -374,9 +374,6 @@ The most likely source of this discrepancy is incorrect parameterisation of the 
 
 To overcome this issue, we attempted to co-infer $R_{\text{blue}}$ along with other model parameters, by allowing it to become a variable rather than a constant in our model. Unfortunately, this was also unsuccessful, as the model converges to extremely low values of $R_{\text{blue}}$, for which the inferred oligomer concentration is concommitantly unphysically high and the mean event brightness very low (Table~\ref{tab:R_blue}). 
 
-This poor behaviour is caused by overfitting. There is insufficient information in the datasets to distinguish between a solution with manny molecules each of which emit only a few photons and a model in which few molecules emit many photons in each rare excitation event. Moreover, a model in which there are multiple dim emitters in the confocal volume at any one time gives greater flexibility to exactly fit small, variations in the observed emission distributions. As a result, dim emitters are preferred as they allow the model to more closely approximate this random noise, resulting in clearly incorrect  and unphysical fits.
-
-This has considerable implications for our ability to fit oligomer data using the Metropolis sampler, as the results of sampling are extremely dependent on the value of the overdispersion parameter $R_{\text{blue}}$, which we are not able to infer accurately. Consequently, extension of the inference tool to oligomer sizing is unsuccessful. There is insufficient information obtained from an experiment to accurately calculate the mean event emission brightness or to separate the noise and fluorescence emission distributions, even for molecules carrying a known, uniform number of fluorophores. However, as we have shown (Fig.~\ref{fig:gamma_poisson_size_photons_uniform}), the degree of overdispersal means that simple thresholding analyses are also entirely inappropriate to accurately calculate oligomer size distributions. To obtain accurate size information from a single molecule fluorescence experiment, it is necessary to reduce the sources of heterogeneity, so that photon emission can be well approximated using a pure poisson distribution (Fig.~\ref{fig:poisson_size_photons_uniform}). The following section describes our attempts to understand sources of emission overdispersal. The chapter concludes with a discussion of possible methods to reduce this heterogeneity.   
 
 \begin{figure}
    \begin{center}
@@ -385,6 +382,36 @@ This has considerable implications for our ability to fit oligomer data using th
       \label{fig:R_blue}
    \end{center}
 \end{figure}
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/vary_Rblue.pdf}
+      \caption{Fitting a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text{blue}}$: a) $R_{\text{blue}}$ = 0.1, b) $R_{\text{blue}}$ = 0.5. c) $R_{\text{blue}}$ = 1.0, d) $R_{\text{blue}}$ = 2.0. Although the data superficially seems better fitted when $R_{\text{blue}}$ is smaller, low values of $R_{\text{blue}}$ overfit random variations and produce unphysical parameter values (see Table~\ref{tab:R_blue}).} 
+      \label{fig:vary_Rblue}
+   \end{center}
+\end{figure}
+
+\begin{center}
+\begin{table}
+%\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+\begin{tabular}{|l|l|l|l|}
+\hline
+{\bf $R_{\text{blue}}$} & {\bf $\lambda_{\text{noise}}$} & {\bf $\lambda_{\text{prot}}$} & {\bf $\lambda_{\text{DB}}$}\\ \hline
+0.1 & 0.44 & 0.215 & 2.769 \\
+0.5 & 0.46 & 0.059 & 9.784 \\
+1.0 & 0.47 & 0.042 & 13.156 \\
+2.0 & 0.48	& 0.035	& 15.193 \\
+inferred & 0.48	& 0.035	& 15.193 \\ \hline
+\end{tabular}
+\caption{Inferred parameter values conditioned on a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text{blue}}$. At low values of $R_{\text{blue}}$, overfiting occurs and the inferred parameters are unphysical. When we try to infer the value of $R_{\text{blue}}$ (bottom row), the data is also overfitted.}
+\label{tab:R_blue}
+%\end{adjustwidth}
+\end{table}
+\end{center}
+
+This poor behaviour is caused by overfitting. There is insufficient information in the datasets to distinguish between a solution with manny molecules each of which emit only a few photons and a model in which few molecules emit many photons in each rare excitation event. Moreover, a model in which there are multiple dim emitters in the confocal volume at any one time gives greater flexibility to exactly fit small, variations in the observed emission distributions. As a result, dim emitters are preferred as they allow the model to more closely approximate this random noise, resulting in clearly incorrect  and unphysical fits.
+
+This has considerable implications for our ability to fit oligomer data using the Metropolis sampler, as the results of sampling are extremely dependent on the value of the overdispersion parameter $R_{\text{blue}}$, which we are not able to infer accurately. Consequently, extension of the inference tool to oligomer sizing is unsuccessful. There is insufficient information obtained from an experiment to accurately calculate the mean event emission brightness or to separate the noise and fluorescence emission distributions, even for molecules carrying a known, uniform number of fluorophores. However, as we have shown (Fig.~\ref{fig:gamma_poisson_size_photons_uniform}), the degree of overdispersal means that simple thresholding analyses are also entirely inappropriate to accurately calculate oligomer size distributions. To obtain accurate size information from a single molecule fluorescence experiment, it is necessary to reduce the sources of heterogeneity, so that photon emission can be well approximated using a pure poisson distribution (Fig.~\ref{fig:poisson_size_photons_uniform}). The following section describes our attempts to understand sources of emission overdispersal. The chapter concludes with a discussion of possible methods to reduce this heterogeneity.   
 
 %\subsection{Attempting to Remove Sources of Heterogeneity}
 \subsection{Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}
