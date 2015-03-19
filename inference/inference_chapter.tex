@@ -92,7 +92,7 @@ Pr (\frac{S_G}{S_R})_i = \sum \limits_{\text{all $F, F_{RT} B_G, B_R$ yielding $
 
 where $B_G$ and $B_R$ are respectively the number of background photons in the green (donor) and red (acceptor) channels, $F$ is the total number of fluorescence photons observed, and $F_{RT}$ is the number of fluorescent photons observed in the red channel (due to FRET).
 
-The noise emission distributions are assumed to be poisson, such that the probability of observing $B$ background photons is given by Eq.~\ref{eq:PDA_poisson} for a mean number of background photons $\langle B \rangle$, leaving the ratio of donor and acceptor fluorescence photons to be described by a binomial distribution with parameter $\epsilon$ an apparent FRET efficiency (Eq.~\ref{eq:PDA2}.
+The noise emission distributions are assumed to be poisson, such that the probability of observing $B$ background photons is given by Eq.~\ref{eq:PDA_poisson} for a mean number of background photons $\langle B \rangle$. Similarly, the ratio of donor and acceptor fluorescence photons can be described by a binomial distribution with parameter $\epsilon$, an apparent FRET efficiency (Eq.~\ref{eq:PDA2}.
 
 \begin{equation}
 \Pr_{\langle B \rangle}(B)  = \frac{\langle B \rangle^B \cdot e^{-\langle B \rangle}}{B!}
@@ -104,8 +104,16 @@ The noise emission distributions are assumed to be poisson, such that the probab
 \label{eq:PDA2}
 \end{equation}
 
+Consequently, Eq.~\ref{eq:PDA1} can be rewritten as: 
 
-still assume that thresholding provides unbiased burst selection~\cite{kalinin2007}.  
+\begin{equation}
+Pr (\frac{S_G}{S_R})_i = \sum \limits_{\text{all $N, F_{RT} B_G, B_R$ yielding $(\frac{S_G}{S_R})_i$}} \Pr(N) \Pr_{\epsilon}(N - B_G - B_R| F) \Pr_{\langle B_G \rangle}(B_G) \Pr_{\langle B_R \rangle}(B_R)
+\label{eq:PDA3}
+\end{equation}
+
+$\Pr(N)$ can be estimated from the dataset whilst $\langle B_G \rangle$ and $\langle B_R \rangle$ are estimated from the count rates. Consequently, the only unknown in this equation is the mean value of $\epsilon$, which is then estimated using a Levenberg-Marquardt $X^2$ optimisation.
+
+Despite its sophisticated treatment of noise photons in determining the underlying FRET parameter $\epsilon$, the PDA analysis still uses a simple threshold to select events and assumes that this provides an unbiased sample of fluorescent bursts~\cite{kalinin2007, antonik2006}. As we have illustrated above, even in the simplest cases, this is not a valid assumption. Consequently, we would like to find a method of performing event selection and denoising that does not suffer from these biases.  
 
 %\paragraph{Bayesian Approaches to smFRET Analysis}
 
