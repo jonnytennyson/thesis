@@ -27,36 +27,103 @@ In this chapter, we consider only experiments in which diffusing molecules are s
 \paragraph{The Data}
 As described above, in a basic smFRET experiment, fluorescently-labelled molecules in dilute solution diffuse freely through a laser beam focused with a high aperture objective onto a diffraction-limited focal point~\cite{schuler05}.  When a molecule diffuses into the confocal volume, the laser excites the donor fluorophore and photons are emitted. These experiments yield bursts of donor and acceptor fluorescence, caused by diffusion of a labelled molecule through the excitation volume, against a background of low to zero fluorescence detection. The majority of bins ($>$ 95\%) contain only background noise; the rest contain both background noise and photons from fluorescent bursts (Fig.~\ref{fig:figure_diagram_scheme} C-D). Consequently, the raw data from a confocal smFRET experiment consists of two lists of integers, corresponding to donor and acceptor photon counts. A typical experiment, lasting a minimum of 10 minutes, will consist of at least six million time-bins; many datasets contain upwards of 30 million time-bins, most of which contain only noise photons. 
 
-Consequently, other than the delicate experimental apparatus, one of the key challenges in smFRET experiments, is the selection of photon bursts originating from flourescent excitation events, and the accurate denoising of these identified bursts by removal of background contributions. The following section describes this analytical challenge in detail and explains why simple thresholding approaches are not appropriate to accurately select fluorescent events.
+Aside from the delicate experimental apparatus, one of the key challenges in smFRET experiments is therefore the selection of photon bursts originating from flourescent excitation events, and the accurate denoising of these identified bursts by removal of background contributions. The following section describes this analytical challenge in detail and explains why simple thresholding approaches are not appropriate to accurately select fluorescent events.
 
 \subsection{Approaches to Analysis of smFRET Data}
 \paragraph{Event Selection: Thresholding}
 Analysing a smFRET dataset has two main challenges: identifying fluorescent events and separating the fluorescence emission contribution from noise photons. We call these two steps event selection and event denoising. Event selection is typically achieved by by applying a photon count threshold to the time-bins and retaining as fluorescent eventsonly the time-bins for which that threshold is exceeded~\cite{deniz01, gell06, ying00}. AND thresholding applies a threshold across both donor and acceptor time-bins: $n_D > T_D$ AND $n_A > 1T_A$; SUM thresholding applies a threshold to the sum of the photons observed in the donor and acceptor time-bins: $n_D  + n_A > T$, for $n_D$ and  $n_A$ donor and acceptor photon counts; and $T_D$, $T_A$, and $T$ the photon count thresholds applied to the donor channel, acceptor channel and total photon counts respectively. We note that, as described in the previous chapter, the APBS and DCBS burst search algorithms~\cite{nir06}, as applied to simple FRET data, are analagous to SUM and AND thresholding respectively.
 
-These thresholding-based approaches to event selection rely on the assumption that fluorescence events and background events are linearly separable, allowing application of a simple threshold to effectively isolate the fluorescent events (Fig.~\ref{fig:simulationscatter}). However, when data from a smFRET experiment are examined in close detail, it is clear that this is not the case. Fig.~\ref{fig:scatterDA} (A) shows the raw data from a typical smFRET experiment, plotted as a two-dimensional scatter-plot. Unlike the idealised dataset illustrated in Fig.~\ref{fig:simulationscatter}, in the real dataset there is no clear separation between signal and noise. Consequently, no threshold can accurately separate true events from noise.
+These thresholding-based approaches to event selection rely on the assumption that fluorescence events and background events are linearly separable, allowing application of a simple threshold to effectively isolate the fluorescent events (Fig.~\ref{fig:simulationscatter}). However, when data from a smFRET experiment are examined in close detail, it is clear that this is not the case. Fig.~\ref{fig:scatterDA} (A) shows the raw data from a typical smFRET experiment, plotted as a two-dimensional scatter-plot. Unlike the idealised dataset illustrated in Fig.~\ref{fig:simulationscatter}, in the real dataset there is no clear separation between signal and noise. Consequently, no threshold can accurately separate true events from noise. This problem is exacerbated at very high and very low FRET efficiencies, where thresholds not only remove a large fraction of fluorescent bursts, but do so in a manner that will distort the resulting FRET histogram (Fig.~\ref{fig:lowFRET}).
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{inference/thresholding_idealised.pdf}
+      \caption{A simulated smFRET dataset, for which thresholding is appropriate to separate fluorescent bursts from background noise. a) There is a clear separation between noise emission and fluorescent burst, allowing correct isolation of burst data using both b) AND thresholding (thresholds 15, 15) and c) SUM thresholding (threshold 15)}
+      \label{fig:simulationscatter}
+   \end{center}
+\end{figure}
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{inference/thresholding_real.pdf}
+      \caption{A real smFRET dataset, from a DNA duplex with a 6 bp separation between donor and acceptor dye attachment sites. a) In this dataset, there is no clear separation between noise photons and fluorescent events. Consequently neither b) AND thresholding (thresholds 15, 15) nor c) SUM thresholding (threshold 15) can accurately isolate burst data.}
+      \label{fig:scatterDA}
+   \end{center}
+\end{figure}
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{inference/thresholding_real_low.pdf}
+      \caption{A real smFRET dataset, from a DNA duplex with a 10 bp separation between donor and acceptor dye attachment sites. a) This duplex has a low FRET efficiency, meaning that not only is there is no clear separation between noise photons and fluorescent events, but also that both b) AND thresholding (thresholds 15, 15) and c) SUM thresholding (threshold 15) distort the observed FRET histograms by removing a selection of fluorescent events that is not randomly distributed across all observed FRET effiencies.}
+      \label{fig:lowFRET}
+   \end{center}
+\end{figure}
 
 \paragraph{Event Denoising}
-\paragraph{Stochastic Denoising}
-\paragraph{Bayesian Approaches to smFRET Analysis}
+The second challenge in analysing a smFRET dataset is event denoising. Time-bins selected as containing fluorescent bursts still contain a noise contribution to their total photon count. The most straigtforward method to remove this contribution is to calculate the average photon count in each channel across time-bins from a dataset containing no fluorophores, and then subtract these averaged (usually non-integral) values from each fluorescent event~\cite{nir06}. If the average noise is different between the donor and the acceptor channels, this has the effect of linearly shifting the FRET efficiency histogram by a small amount and can result in analysis artifacts, such as negative, fractional photon counts and negative FRET efficiencies. 
 
-\subsection{Model Based Inference}
-\paragraph{Bayesian Inference}
-\paragraph{Application to Confocal smFRET Data}
-F\"{o}rster Resonance Energy Transfer (FRET) is a powerful technique for studying biological systems at the level of single molecules.  Since the first demonstration that FRET could quantify the distance between two fluorescent dyes~\cite{ha96}, single-molecule FRET (smFRET) became a popular tool to investigate the structure and dynamics of diffusing biomolecules~\cite{haran03, schuler02, weiss00}.  FRET is a non-radiative energy transfer from a donor ($D$) to an acceptor fluorophore ($A$), where the efficiency of energy transfer (the FRET Efficiency, $E$) depends on their separation, $r$: 
+Removal of cross-talk photons and direct excitation contributions to the acceptor channel are achieved in a similar manner. The average ratio of photons in the donor and acceptor channels is calculated for a) a concentrated sample of donor dye and b) a concentrated sample of acceptor dye. These ratios, termed the ``leakage" and ``direct excitation" constants, $l$ and $d$ respectively, are then used to correct the ratio of observed donor and acceptor photons in each retained fluorescent burst (Eq.~\ref{eq:cross-talk}):
+
 \begin{equation}
-E = \frac{1}{1 + (\frac{r}{R_0})^6} , 
-\label{eq:efficiency}
-\end{equation}   
+n_A = n_A - l * n_D \qquad n_A = n_A - d * n_A
+\label{eq:cross-talk}
+\end{equation}
 
-where $R_0$ is the distance for which the transfer efficiency is 50\%. 
+for $n_A$ and $n_D$ photons in the acceptor and donor channels respectively
 
-In a smFRET experiment, photons emitted from the donor and acceptor fluorophores are collected in a continuous stream and time-binned on a time-scale comparable with the average dwell-time of a molecule diffusing through the confocal volume.  Time-bins containing photons from a fluorescent burst are identified by applying a threshold~\cite{deniz01, gell06, ying00} and selected bursts are denoised~\cite{nir06}.  FRET efficiencies are calculated for the denoised bins using: 
+\paragraph{FRET Efficiency Calculation}
+Following these event selection and denoising steps, FRET efficiencies are calculated for the denoised bins using: 
 \begin{equation}
 E = \frac{n_A}{n_A + \gamma \cdot n_D}
 \label{eq:Eprod}
 \end{equation} 
 
 for $n_A$ and $n_D$ photons in the acceptor and donor channels respectively and $\gamma$ an experimentally determined instrument-dependent correction factor.  Histograms constructed from the calculated FRET efficiencies are fitted with Gaussian distributions to identify fluorescent populations~\cite{ha96}.
+
+\paragraph{Stochastic Denoising}
+As described above, these methods of event selection and denoising are simple but prone to artifacts that distort the outcome of downstream analyses. To mitigate this problem, several stochastic denoising methods~\cite{kalinin2007, antonik2006, santoso10, torella11}, based on poisson statistics, have been developed. The most popular of these is a Probability Distribution Analysis (PDA)~\cite{antonik2006}, which attempts to derive the shot-noise limited FRET histogram by explicitly considering the origin of photons observed on the donor and acceptor channels. 
+
+PDA considers observed ratios of donor and acceptor photons, termed the signal ratio, $\frac{S_D}{S_A}$, and total number of photons due to fluorescence emission, $F$. The probability of observing a certain signal ratio, is given by summing  over all combination of noise and fluorescent photons that yield such a ratio, the probability of observing that combination of photons:
+
+\begin{equation}
+Pr (\frac{S_G}{S_R})_i = \sum \limits_{\text{all $F, F_{RT} B_G, B_R$ yielding $(\frac{S_G}{S_R})_i$}} \Pr(F) \Pr(F_{RT}| F) \Pr(B_G) \Pr(B_R)
+\label{eq:PDA1}
+\end{equation}
+
+where $B_G$ and $B_R$ are respectively the number of background photons in the green (donor) and red (acceptor) channels, $F$ is the total number of fluorescence photons observed, and $F_{RT}$ is the number of fluorescent photons observed in the red channel (due to FRET).
+
+The noise emission distributions are assumed to be poisson, such that the probability of observing $B$ background photons is given by Eq.~\ref{eq:PDA_poisson} for a mean number of background photons $\langle B \rangle$, leaving the ratio of donor and acceptor fluorescence photons to be described by a binomial distribution with parameter $\epsilon$ an apparent FRET efficiency (Eq.~\ref{eq:PDA2}.
+
+\begin{equation}
+\Pr_{\langle B \rangle}(B)  = \frac{\langle B \rangle^B \cdot e^{-\langle B \rangle}}{B!}
+\label{eq:PDA_poisson}
+\end{equation}
+
+\begin{equation}
+\Pr_{\epsilon}(F_{RT}|F) = \frac{F!}{F_{RT}! (F - F_{RT})!} \cdot \epsilon^{F_{RT}} \cdot (1 - \epsilon)^{F - F_{RT}}
+\label{eq:PDA2}
+\end{equation}
+
+
+still assume that thresholding provides unbiased burst selection~\cite{kalinin2007}.  
+
+%\paragraph{Bayesian Approaches to smFRET Analysis}
+
+
+\subsection{Model Based Inference}
+\paragraph{Bayesian Inference}
+We address these issues by using model-based Bayesian inference to analyse smFRET data.  Bayesian inference is a probabilistic method~\cite{barber12} that uses conditional probabilities based on Bayes' Theorem~\cite{bayes63} to assess the likelihood that a series of observations were generated by a given model~\cite{mackay03}.  Analysis techniques based on Bayesian statistics are well established for analysis of smFRET data collected from immobilised molecules~\cite{mckinney06, bronson09, bronson10, taylor10, taylor11, uphoff2011}. Bayesian methods have also been applied to single particle tracking ~\cite{yoon08}; analysis of diffusional trajectories~\cite{turkcan12, stigler2012}; fluorescence correlation spectroscopy~\cite{kugel12, guo11, he11, guo2014} and fluorescence lifetime data~\cite{kou05, kalinin2008}. Attempts have been made to apply Bayesian statistics to diffusion-based smFRET experiments~\cite{devore12, gopich07}.  However, these methods are computationally intractable~\cite{gopich03} or apply only to removal of shot-noise from selected burst, so assume access to idealised simulated~\cite{gopich07}, or pre-selected~\cite{devore12} and denoised fluorescent traces~\cite{kou05}.    
+
+\paragraph{Application to Confocal smFRET Data}
+%F\"{o}rster Resonance Energy Transfer (FRET) is a powerful technique for studying biological systems at the level of single molecules.  Since the first demonstration that FRET could quantify the distance between two fluorescent dyes~\cite{ha96}, single-molecule FRET (smFRET) became a popular tool to investigate the structure and dynamics of diffusing biomolecules~\cite{haran03, schuler02, weiss00}.  FRET is a non-radiative energy transfer from a donor ($D$) to an acceptor fluorophore ($A$), where the efficiency of energy transfer (the FRET Efficiency, $E$) depends on their separation, $r$: 
+%\begin{equation}
+%E = \frac{1}{1 + (\frac{r}{R_0})^6} , 
+%\label{eq:efficiency}
+%\end{equation}   
+
+%where $R_0$ is the distance for which the transfer efficiency is 50\%. 
+
+%In a smFRET experiment, photons emitted from the donor and acceptor fluorophores are collected in a continuous stream and time-binned on a time-scale comparable with the average dwell-time of a molecule diffusing through the confocal volume.  Time-bins containing photons from a fluorescent burst are identified by applying a threshold~\cite{deniz01, gell06, ying00} and selected bursts are denoised~\cite{nir06}.  
 
 Determining intramolecular distance information and population sizes from smFRET experiments however remains challenging~\cite{nir06}.  Using smFRET data to constrain molecular dynamics simulations can provide structural information~\cite{kalinin2012, Hoefling2011}. However, incomplete sample labelling, photophysical artifacts, unequal photon detection and the stochastic nature of diffusion through the confocal volume~\cite{nir06}, as well as linker dynamics~\cite{sindbert2011} hamper development of quantitative smFRET techniques.  To overcome these challenges, linear flow has been used to reduce heterogeneity in confocal dwell-time and diffusion pathway~\cite{vogelsang07, horrocks12}, whilst methods to determine correction factors~\cite{deniz99}; development of alternating-laser excitation~\cite{kapanidis05, muller05, doose07, kudryavtsev2012} and multi-parameter fluorescence detection~\cite{sisamakis2010} as well as more sophisticated burst-selection algorithms~\cite{eggeling01, nir06} allow more accurate identification of fluorescent bursts.
 
@@ -70,9 +137,6 @@ However, despite their increasing cost and complexity, these techniques continue
    \end{center}
 \end{figure}
 
-Besides burst selection, there is a need to denoise selected bursts. Typically, this involves subtracting an averaged, non-integral value from all bursts~\cite{nir06}.  This frequently results in fractional or negative photon counts, negative FRET efficiencies and other analysis artifacts.  Stochastic denoising methods~\cite{kalinin2007, antonik2006, santoso10, torella11}, based on poisson statistics, are now used, but still assume that thresholding provides unbiased burst selection~\cite{kalinin2007}.  
-
-We address these issues by using model-based Bayesian inference to analyse smFRET data.  Bayesian inference is a probabilistic method~\cite{barber12} that uses conditional probabilities based on Bayes' Theorem~\cite{bayes63} to assess the likelihood that a series of observations were generated by a given model~\cite{mackay03}.  Analysis techniques based on Bayesian statistics are well established for analysis of smFRET data collected from immobilised molecules~\cite{mckinney06, bronson09, bronson10, taylor10, taylor11, uphoff2011}. Bayesian methods have also been applied to single particle tracking ~\cite{yoon08}; analysis of diffusional trajectories~\cite{turkcan12, stigler2012}; fluorescence correlation spectroscopy~\cite{kugel12, guo11, he11, guo2014} and fluorescence lifetime data~\cite{kou05, kalinin2008}. Attempts have been made to apply Bayesian statistics to diffusion-based smFRET experiments~\cite{devore12, gopich07}.  However, these methods are computationally intractable~\cite{gopich03} or apply only to removal of shot-noise from selected burst, so assume access to idealised simulated~\cite{gopich07}, or pre-selected~\cite{devore12} and denoised fluorescent traces~\cite{kou05}.    
 
 Here we present a simple physical model of the FRET excitation/emission process within a diffusion experiment, incorporating both FRET based emission and background fluorescence events. We use the model as part of a custom-built inference algorithm based on MCMC Metropolis sampling~\cite{hastings70} to infer values for all relevant physical parameters, including intramolecular distances and population sizes, conditioned on a smFRET dataset.  We simultaneously infer all parameters directly from the raw time-binned data, with no intermediate burst selection or denoising steps. The model is summarized schematically in Fig.~\ref{fig:flow_single} and described in detail below. The mathematical model describes a Bayesian belief network and is shown as a directed acyclic graph in standard plate notation (Fig.~\ref{fig:plate_DAG}). We demonstrate this technique's effectiveness using realistic simulated datasets.  We then analyse real smFRET data, generated from single populations and mixtures of dual-labelled DNA molecules, showing that our technique can infer physically appropriate and experimentally informative parameters with high confidence across a wide range of conditions. In particular, we accurately infer absolute populations and FRET efficiencies of a mixture of two fluorescent species, where thresholding-based techniques fail. 
 
@@ -84,6 +148,7 @@ Here we present a simple physical model of the FRET excitation/emission process 
    \end{center}
 \end{figure}
 
+\clearpage
 
 \section{Theory}
 \subsection*{A Physical Model of a smFRET Experiment}
