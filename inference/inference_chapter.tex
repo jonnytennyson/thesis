@@ -169,7 +169,7 @@ In the following section, we describe our physical model of the smFRET experimen
 \clearpage
 
 \section{Theory}
-\subsection*{A Physical Model of a smFRET Experiment}
+\subsection{A Physical Model of a smFRET Experiment}
 Thus far, analysis of smFRET data has not separated a defined model of the physical process from data analysis. As a consequence, implicit assumptions about the physical model may be reproduced during analysis~\cite{ying00}. Our key innovation is development of a model-based Bayesian analysis. This analysis uses a parametric model of the physical emission process. We then infer values for these parameters given a specific dataset, to learn information about intramolecular distances and population sizes for different fluorescent species. The model of photon emission in the presence of both dyes is inspired by the traditional model of FRET efficiency (Eq.~\ref{eq:Eprod}). However, we model the energy transfer as altering the underlying rates of dye photon emission; whereas traditional techniques use the ratio of donor and acceptor photons observed. 
 
 In a basic smFRET experiment, fluorescently-labelled molecules in dilute solution diffuse freely through a laser beam focused with a high aperture objective onto a diffraction-limited focal point~\cite{schuler05}.  When a molecule diffuses into the confocal volume, the laser excites the donor fluorophore and photons are emitted.  Emitted photons are collected through the objective and separated by a dichroic mirror into donor and acceptor photons for collection and analysis (Fig.~\ref{fig:schematic} A).
@@ -249,6 +249,8 @@ where $\Gamma$ is the Gamma function.
 
 As the confocal volume is fixed and emission from the dye is a fundamental property of the dye-laser interaction, the same $k_D$ and $\lambda_B$ are used for all fluorescent populations. 
 
+The choice of a gamma-poisson mixture model to describe the fluorescence emission behaviour was not arbitrary. It is well understood that photon emission from molecules passing through the confocal volume displays super-poissonian behaviour~\cite{chen99}, where the population variance exceeds the mean, owing to the inhomogeneous excitation profile. The negative binomial distribution is a very well characterised and popular probability distribution for modeling overdispersed data for which all observations are positive~\cite{lloydsmith07, bliss53}. It can be parameterised as a gamma-poisson mixture~\cite{lloydsmith07}, where emission behaviour follows a Poisson distribution with gamma-distributed intensity. Under this parameterisation, $\lambda_B$ is the global mean emission rate of photons, whilst the shape parameter $k_D$ describes the degree of overdispersion caused by confocal volume inhomogeneity.   
+
 If only the donor dye is present, additional photons are observed in the donor channel only. These are drawn from a Poisson distribution with rate parameter $\lambda$, where $\lambda$ is determined uniquely for each molecule using Eq.~\ref{eq:gamma}. The number of additional photons is then $c_D$:
 \begin{equation}
 c_D \sim \text{Poisson}(c_{D}; \lambda). 
@@ -293,12 +295,13 @@ This mathematical model describes a Bayesian belief network and is shown as a di
 
 \clearpage
 
-\subsection*{Inference of Model Parameters}
+\subsection{Inference of Model Parameters}
 Our key innovation is the use of Bayesian model-based multi-variate statistical methods to infer the model parameters of the FRET experiment. Given the generative model of the physical process described in the previous section, we use the calculus of probabilities and Bayes' theorem to derive the joint distribution over all model parameters to be estimated.
 
-Estimatuing the parameters of a complex model given some experimental observations is a typical inference problem. In a smFRET experiment, we want to determine the concentrations of the fluorescently labelled species and their respective inter-dye distances given some experimental data. We might also like to know other associated parameters, such as the rate of noise in each channel and the average brightness of fluorescent events. These values are described explicitly as parameters in our generative model. However, due to noise or a small amount of data, as well as the co-dependence of all observations on all parameters, it is difficult to determine the values of these parameters directly from observations. Consequently, a different strategy must be applied and probabilistic inference provides a solution.
+Estimating the parameters of a complex model given some experimental observations is a typical inference problem. In a smFRET experiment, we want to determine the concentrations of the fluorescently labelled species and their respective inter-dye distances given some experimental data. We might also like to know other associated parameters, such as the rate of noise emission in each channel and the average brightness of fluorescent events. These values are described explicitly as parameters in the generative model. However, due to noise or a small amount of data, as well as the co-dependence of all observations on all parameters, it is difficult to determine the values of these parameters directly from observations. Consequently, a different strategy must be applied and probabilistic inference provides a solution.
 
-Using probability theory this inference problem is expressed as determining the conditional probability distribution over the parameters given the observations, namely $\Pr[\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E | (f_D, f_A)_n]$ for a smFRET dataset with $n$ time-bins. Given a generative model of the experiment that describes the probability of generating certain observations given known parameters, namely $\Pr[\text{Obs.} | \text{Par.}]$, we can apply Bayes' theorem to derive the required distribution over parameters:
+Using probability theory this inference problem is expressed as determining the conditional probability distribution over the parameters given the observations, namely $\Pr[\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E | (f_D, f_A)_n]$ for a smFRET dataset with $n$ time-bins. Given a generative model of the experiment that describes the probability of generating certain observations given known parameters, namely $\Pr[\text{Obs.} | \text{Par.}]$, we can apply Bayes' theorem (Eq.~\ref{eq:model_probability}) to derive the required distribution over the parameters of our model:
+
 \begin{multline}
 \Pr[\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E | (f_D, f_A)_n] = \\ = \frac{\Pr[(f_D, f_A)_n |\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E] \cdot \Pr[\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E]}
 {\sum_{\forall \lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E} \Pr[(f_D, f_A)_n | \lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E] \cdot \Pr[\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E]}. 
@@ -313,7 +316,7 @@ The Metropolis algorithm~\cite{metropolis53},~\cite{hastings70} is an MCMC algor
 
 %We have demonstrated that it is possible to generate synthetic FRET data to a high degree of accuracy, using a Gamma-Poisson mixture model.  The next step is to infer the parameters of this model given a data stream.  In other words, to determine directly the origin of photons in a single molecule FRET experiment, without first requiring a lengthy and subjective denoising process.
 
-\subsection*{Inference of Model Parameters}
+%\subsection*{Inference of Model Parameters}
 For each data point $(f_d, f_a)_i$ in a dataset, the probability that it was generated by a given set of parameters can be calculated as the sum of the probabilities that it was generated from each of the distinct states, described in the generative model:
 
 \begin{equation}
@@ -463,7 +466,7 @@ The total probability that the pair of datapoints $f_D, f_A$ was generated by a 
 %The priors can be neglected as they are all uniform distributions over some space (Fig.~S\ref{fig:plate_DAG}).
 Comparing the total probability values for different sets of parameters allows identification of parameter sets that have a high probability of having generated the observed dataset. Repeated sampling of parameters using the Metropolis-Hastings algorithm allows determination of mean parameter values and associated confidence intervals.  
 
-\subsection*{The Metropolis-Hastings Algorithm}
+\subsection{The Metropolis-Hastings Algorithm}
 
 The section above describes a method to sample values of the FRET efficiencies, population sizes an so on by sampling from a Markov Chain that has as its stationary probability the posterior probability over the parameters, $\Pr[\text{Obs.} | \text{Par.}] \cdot \Pr[\text{Par.}]$. We use a custom implementation of the Metropolis algorithm to achieve this. The Metropolis algorithm works as follows.
 
@@ -698,6 +701,10 @@ Here, inference (Fig.~\ref{fig:fig7_real_multi_free} A - C) performs very well. 
 \end{figure}
 
 %\section*{Supplementary Figures}
+\subsection{Justification of the Gamma-Poisson Mixture Model}
+Thus far, we have shown that MCMC sampling to infer the parameters of the model described in Fig.~\ref{fig:plate_DAG} is a very effective method to determine key experimental values, conditioned on a smFRET dataset. However, we have not yet given a detailed justification for using a Gamma-Poisson mixture distribution to describe fluorescence emission. As introduced above, it is well-known that photon emission from molecules passing through the confocal volume displays super-poissonian behaviour~\cite{chen99}. Consequently, although the emission from individual fluorophores can be described using a poisson distribution, a single poisson distribution is insufficient to describe the emission behaviour of a population of fluorescent molecules. This is illustrated in Fig.~\ref{fig:super_poisson}: the distribution of observed photon counts when data is simuated using simple poisson emission behaviour has a much smaller variance than an experimental dataset. Consequently, attempting to fit an experimental dataset using a simple poisson emission model results in poor fits and unphysical parameter values (Fig.~\ref{fig:poisson_fit}, Table~\ref{tab:poisson_values}).
 
-\section{Conclusions}
+As described above however, the gamma-poisson mixture model is able to fit experimental datasets very well. The inclusion of overdispersal allows datasets with a much greater variance than can be described using the single poisson emission parameter to be accurately fitted. Moreover, the features (specifically positive, integral photon counts) of a poisson distribution required to accurately describe a smFRET dataset are retained.
+
+\section{Conclusions and Future Work}
 Model-based Bayesian inference is a powerful tool that is used in data analysis across many disciplines~\cite{mackay03}. However, despite establishment of model-based inference methods to analyze FRET trajectories from immobilised molecules~\cite{mckinney06, bronson09, bronson10, taylor10, taylor11}, a similar method had not been developed for smFRET data from molecules in solution. We have developed a model-based inference method, based on the Metropolis algorithm, suitable for the analysis of these datasets. This enables unbiased, single-step determination of FRET efficiencies and population sizes for one or more fluorescent species, as well as other parameters of the dataset. Raw data is analyzed in a single step directly, requiring neither biased thresholding, nor construction and subjective fitting of FRET histograms.  It is extremely robust across a wide variety of conditions. Model-based inference is an exciting new avenue for analysis of smFRET datasets. With simple modifications, similar methods could be developed for analysis of data collected using alternating excitation methods, as well as for other types of smFRET experiment. The software for simulation of smFRET datasets and for the analysis of both real and simulated data is available publicly and can be downloaded from \url{https://bitbucket.org/rebecca_roisin/fret-inference}. 
