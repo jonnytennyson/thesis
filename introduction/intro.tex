@@ -7,7 +7,20 @@ This chapter provides a general introduction to the contextual background of the
 \subsection{The Physical Basis of Fluorescence}
 Fluorescence is the physical phenomenon by which a molecule that has absorbed a photon of electromagnetic radiation and which is in an excited state relaxes via non-radiative processes, such as vibrational interactions, rotation and translation in its medium and then  emits a photon, hence returning to its ground state. Owing to the intramolecular transitions occurring prior to emission, the photon emitted is of a lower energy than the photon absorbed. The difference in energy between the absorbed and emitted photons is termed the Stokes shift~\cite{Albani2011} and is a characteristic of the energy levels available to the excited molecule.  
 
-The typical timescale for a single fluorescence excitation-emission cycle is approximately $10^{-10} - 10^{-7}$ s. This timescale is dominated by the lifetime of the excited state, (typically $10^{-10} - 10^{-7}$ s), whilst excitation and emission processes have a much shorter timescale (absorption $10^{-15}$ s, relaxation $10^{-12} - 10^{-10}$ s)   
+The fluorescence excitation-emission cycle involves transitions between the singlet ground state ($\text{S}_0$) and first excited state ($\text{S}_1$) of the fluorophore. However, other competing, non-radiative processes can occur. The most significant of these is inter-system crossing, involving a non-radiative transition from a singlet excited state to a triplet excited state. Internal conversion -- a non-radiative transition to a lower singlet state -- is also possible.
+
+One useful parameter for characterising a fluorophore is its quantum yield, $\phi_f$, defined as: 
+
+\begin{equation}
+\phi_f = \frac{k_f}{k_f + k_{nr}}
+\label{eq:quantum_yield}
+\end{equation}
+
+where $k_f$ and $k_{nr}$ are the rates of fluorescence emission and non-radiative emission respectively.
+
+The typical timescale for a single fluorescence excitation-emission cycle is approximately $10^{-10} - 10^{-7}$ s. This timescale is dominated by the lifetime of the excited state, (typically $10^{-10} - 10^{-7}$ s), whilst excitation and emission processes occur on a timescale that is several orders of magniude shorter (absorption $10^{-15}$ s, relaxation $10^{-12} - 10^{-10}$ s). Intersystem crossing ($10^{-10} - 10^{-8}$ s) and internal conversion ($10^{-11} - 10^{-9}$ s) are slower processes.
+
+The energetic interconversions involved in fluorescence can be summarised using a Jablonski diagram (Fig.~\ref{fig:jablonski}). 
 
 \subsection{The Physical Basis of FRET}
 
