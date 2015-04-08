@@ -110,7 +110,7 @@ E = \frac{k_{ET}}{k_f + k_{nr} + k_{ET}}
 where $k_{ET}$, the rate constant for the FRET energy transfer process, is given by:
 
 \begin{equation}
-k_{ET} = \frac{1}{t_D}(\frac{R_0}{r})^6
+k_{ET} = \frac{1}{t_D} \left(\frac{R_0}{r}\right)^6
 \label{eq:k_ET}
 \end{equation}
 
@@ -121,6 +121,37 @@ t_D = \frac{1}{k_{f} + k_{nr}}
 \label{eq:ex_lifetime}
 \end{equation}
 
+Combining Equations~\ref{eq:quantum_yield_donor},~\ref{eq:quantum_yield_donor_FRET} and~\ref{eq:FRET_ratio} yields:
+
+\begin{equation}
+\begin{split}
+E &= 1 - \frac{k_{f} + k_{nr}}{k_f + k_{nr} + k_{ET}} \\ 
+&= 1 - \frac{\phi_{DA}}{\phi_{D}} \\
+&= 1 - \frac{n_{DA}}{n_{D}}
+\label{eq:FRET_ratio_2}
+\end{split}
+\end{equation}
+
+where $n_{DA}$ and $n_D$ are respectively the number of observed photons emitted by the donor fluorophore in the presence and absence of a FRET acceptor at distance $r$.
+
+In the presence of a FRET acceptor, it is not possible to directly observe $n_D$. However, this can be derived from the number of photons observed to be emitted by the acceptor fluorophore, $n_A$. The difference in the number of photons emitted by the donor in the presence and absence of the acceptor is $n_D - n_{DA}$. This is related to the number of photons emitted by the acceptor, $n_A$, as follows:
+
+\begin{equation}
+\frac{n_D - n_{DA}}{n_A} = \frac{\phi_D\eta_D}{\phi_A\eta_A}
+\label{eq:ratio_FRET}
+\end{equation}
+
+where $\phi_D$ and $\phi_A$ are the quantum yields of the donor and acceptor fluorophores respectively, and $\eta_D$ and $\eta_A$ are the respective instrumental detection efficiencies of donor and acceptor photons.
+
+If we call the ratio $\frac{\phi_D\eta_D}{\phi_A\eta_A}$ $\gamma$, Eq.~\ref{eq:ratio_FRET} can be re-arranged to give:
+
+
+\begin{equation}
+n_D = n_D - \frac{n_A}{\gamma}
+\label{eq:get_gamma}
+\end{equation}
+
+Substituting this definition of $n_D$ back into Eq.~\ref{eq:FRET_ratio_2} yields the expected definition of E,~\ref{eq:FRET_E}, that allows the inter-fluorophore distance to be related to the observed ratio of donor and acceptor photons.
 
 \section{Single Molecule Fluorescence Microscopy}
 Since FRET was first used to measure the distance between two fluorescent dyes on individual molecules bound to a surface~\cite{ha96}, single-molecule FRET (smFRET) has become a popular tool to investigate the structure and dynamics of biomolecules, both on a surface and diffusing freely in solution~\cite{haran03, schuler02, weiss00}.
