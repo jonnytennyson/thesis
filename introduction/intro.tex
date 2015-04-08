@@ -5,33 +5,132 @@ This chapter provides a general introduction to the contextual background of the
 
 \section{Fluorescence and FRET}
 \subsection{The Physical Basis of Fluorescence}
-Fluorescence is the physical phenomenon by which a molecule that has absorbed a photon of electromagnetic radiation and which is in an excited state relaxes via non-radiative processes, such as vibrational interactions, rotation and translation in its medium and then  emits a photon, hence returning to its ground state. Owing to the intramolecular transitions occurring prior to emission, the photon emitted is of a lower energy than the photon absorbed. The difference in energy between the absorbed and emitted photons is termed the Stokes shift~\cite{Albani2011} and is a characteristic of the energy levels available to the excited molecule.  
+\paragraph{Fluorescence}
+Fluorescence is the physical phenomenon by which a molecule that has absorbed a photon of electromagnetic radiation and which is in an excited state relaxes via non-radiative processes, such as vibrational interactions, rotation and translation in its medium and then  emits a photon, returning to its ground state. Owing to the intramolecular transitions occurring prior to emission, the photon emitted is of a lower energy than the photon absorbed. The difference in energy between the absorbed and emitted photons is termed the Stokes shift (Fig.~\ref{fig:jablonski} B,~\cite{Albani2011}) and is a characteristic of the energy levels available to the excited molecule. 
 
-The fluorescence excitation-emission cycle involves transitions between the singlet ground state ($\text{S}_0$) and first excited state ($\text{S}_1$) of the fluorophore. However, other competing, non-radiative processes can occur. The most significant of these is inter-system crossing, involving a non-radiative transition from a singlet excited state to a triplet excited state. Internal conversion -- a non-radiative transition to a lower singlet state -- is also possible.
+The typical timescale for a single fluorescence excitation-emission cycle is approximately $10^{-10} - 10^{-7}$ s. This timescale is dominated by the lifetime of the excited state, (typically $10^{-10} - 10^{-7}$ s); photon excitation and emission processes occur on a timescale that is several orders of magniude shorter (absorption $10^{-15}$ s, relaxation $10^{-12} - 10^{-10}$ s).
+ 
+\paragraph{Competing Processes}
+The fluorescence excitation-emission cycle involves transitions between the singlet ground state ($\text{S}_0$) and first excited state ($\text{S}_1$) of the fluorophore (Fig.~\ref{fig:jablonski}). However, other competing, non-radiative processes can occur. Internal conversion -- a non-radiative transition to a lower energy state of the same spin multiplicity -- is possible, although the large energy gap between the $\text{S}_1$ and $\text{S}_0$ states makes it much less frequent than the more accessible fluorescent pathway. A more significant competitor is inter-system crossing, involving a non-radiative transition from the first singlet excited state, $\text{S}_1$ to the first triplet excited state, $\text{T}_1$. Although forbidden by spin selection rules, inter-system crossing is facilitated by spin-orbit coupling, allowing it to compete with fluorescence (rate $10^{-10} - 10^{-8}$ s) as a relaxation pathway.
 
-One useful parameter for characterising a fluorophore is its quantum yield, $\phi_f$, defined as: 
+From the $\text{T}_1$ state there are several accessible pathways to the ground state ($\text{S}_0$). Phosphorescence is the radiative decay from $\text{T}_1$ to $\text{T}_0$; alternatively, a second inter-system crossing back to $\text{S}_1$, followed by delayed fluorescence emission to reach the $\text{S}_0$ state is more common. As the lifetime of the $\text{T}_1$ state is long (on the order of $10^{-6} - 1$ s), this can be observed as photoblinking.  
+
+A third relaxation pathway from the $\text{T}_1$ state is photobleaching. If the fluorophore is in a solution containing dissolved oxygen, the $\text{T}_1$ state can interact with the triplet ground state of molecular oxygen, leading to de-excitation via triplet-triplet annihilation:
+
+\begin{equation}
+^3\text{T}_1 + ^3\text{O}_2 \longrightarrow ^1\text{S}_0 + ^3\text{O}_2
+\label{eq:blinking1}
+\end{equation} 
+
+The resultant singlet oxygen can then irreversibly oxidise the fluorophore, leaving it unable to undergo further fluorescent excitation-emission cycles.   
+
+%Intersystem crossing ($10^{-10} - 10^{-8}$ s) and internal conversion ($10^{-11} - 10^{-9}$ s) are slower processes.
+
+One useful parameter for characterising a fluorophore is its quantum yield, $\phi_f$, the fraction of excited molecules that undergo photon emission to return to the ground state. It is defined as: 
 
 \begin{equation}
 \phi_f = \frac{k_f}{k_f + k_{nr}}
 \label{eq:quantum_yield}
 \end{equation}
 
-where $k_f$ and $k_{nr}$ are the rates of fluorescence emission and non-radiative emission respectively.
+where $k_f$ and $k_{nr}$ are the rates of fluorescence emission and non-radiative emission respectively. When all molecules in the excited state were promoted by photon absorption, $\phi_f$ can be equivalently defined as the fraction of absorption events that result in fluorescence emission: 
 
-The typical timescale for a single fluorescence excitation-emission cycle is approximately $10^{-10} - 10^{-7}$ s. This timescale is dominated by the lifetime of the excited state, (typically $10^{-10} - 10^{-7}$ s), whilst excitation and emission processes occur on a timescale that is several orders of magniude shorter (absorption $10^{-15}$ s, relaxation $10^{-12} - 10^{-10}$ s). Intersystem crossing ($10^{-10} - 10^{-8}$ s) and internal conversion ($10^{-11} - 10^{-9}$ s) are slower processes.
 
-The energetic interconversions involved in fluorescence can be summarised using a Jablonski diagram (Fig.~\ref{fig:jablonski}). 
+\begin{equation}
+\phi_f = \frac{n_{\text{emitted}}}{n_{\text{absorbed}}}
+\label{eq:quantum_yield_ratio}
+\end{equation}
+
+where $n_{\text{emitted}}$ and $n_{\text{absorbed}}$ are respectively the number of emitted and absorbed photons.
+
+The energetic interconversions involved in fluorescence can be summarised using a Jablonski diagram (Fig.~\ref{fig:jablonski}).
+
+\begin{figure}[!ht]
+   \begin{center}
+      %\includegraphics*[clip=true, width=5in]{jablonski.pdf}
+      \caption{A) Jablonski diagram depicting the possible electronic processes undergone by an excited fluorophore. Solid lines indicate electronic transitions, wavy lines indicate vibrational transitions. IC = internal conversion, ISC = intersystem crossing. B) Characteristic times of the processes depicted in the Jablonski diagram. C. Due to fast vibrational relaxation, the fluorescence emission is shifter to longer wavelengths than the absorption (Stokes shift). Figure from~\cite{Horrocks2014}, used with permission.}
+      \label{fig:jablonski}
+   \end{center}
+\end{figure}
 
 \subsection{The Physical Basis of FRET}
+\paragraph{F\"{o}rster Resonance Energy Transfer}
+F\"{o}rster resonance energy transfer (FRET) is a non-radiative energy transfer process that can occur between chromophoric molecules~\cite{forster48}. The degree of energy transfer, E, is dependent on the fluorophore distance, varying inversely with the sixth power of the dye-dye distance, $r$: 
+
+\begin{equation}
+E = \frac{1}{1+ (\frac{r}{R_0})^6}
+\label{eq:FRET_d}
+\end{equation}
+
+Here, $R_0$ is the F\"{o}rster distance, a dye-dependent constant that defines the dye-dye distance for which the energetic transfer efficiency is 50 \%. $R_0$ is defined, for a donor (D) and acceptor (A) fluorophore pair, by their degree of spectral overlap and their relative orientation:
+
+\begin{equation}
+R_0 = \sqrt[\leftroot{-2}\uproot{2}6]{\frac{9000\phi_D\ln(10)\kappa^2J(\lambda)}{128\pi^2n^4N_A}}
+\label{eq:R_0}
+\end{equation}
+
+Here, $\phi_D$ is the quantum yield of the donor fluorophore, $\kappa$ is the dipole orientation factor, $N_A$ is Avogadro's number, n is the refractive index of the medium, and $J(\lambda)$ is the spectral overlap integral:
+
+\begin{equation}
+J(\lambda) = \int f_D(\lambda)\epsilon_A(\lambda)\lambda^4\,d\lambda
+\label{eq:J}
+\end{equation}
+
+where $f_D(\lambda)$ and $\epsilon_A(\lambda)$ are respectively the normalised emission spectrum of the donor and the molar extinction coefficient of the acceptor at wavelength $\lambda$. The dipole orientation factor, $\kappa^2$ is typically assumed to be $\frac{2}{3}$, the value observed if both dyes are freely rotating and hence can be assumed to be isotropically oriented during the lifetime of the $\text{S}_1$ excited state~\cite{Demchenko2008}.
+
+\paragraph{Deriving the FRET Equation}
+The distance dependence of the energy transfer allows FRET to be used as a ``molecular ruler"~\cite{stryer67}, to determine intramolecular distances. For a given FRET enrgy transfer event, the FRET Efficiency, $E$, defined with respect to the intramolecular distance $r$ in Eq.~\ref{eq:FRET_d}, is given ratiometrically by:
+
+\begin{equation}
+E = \frac{n_A}{\gamma \cdot n_D + n_A}
+\label{eq:FRET_E}
+\end{equation}
+
+where $n_A$ and $n_D$ are the number of observed photons emitted by the acceptor and donor fluorophores respectively, and $\gamma$ is an instrument-dependent constant that corrects for unequal detection efficiencies. The equivalence of Eq.~\ref{eq:FRET_d} and Eq.~\ref{eq:FRET_E} is derived below.
+
+As defined above, the quantum yield of a (donor) fluorophore is given by the ratio of the rates of decay from the excited state $\text{S}_1$ via radiative and non-radiative processes: 
+
+\begin{equation}
+\phi_D = \frac{k_f}{k_f + k_{nr}}
+\label{eq:quantum_yield_donor}
+\end{equation}
+
+Similar ratios can be used to describe the quantum yield of a donor fluorophore that can undergo FRET energy transfer (Eq.~\ref{eq:quantum_yield_donor_FRET}) and the FRET efficiency (Eq.~\ref{eq:FRET_ratio}):
+
+\begin{equation}
+\phi_{DA} = \frac{k_f}{k_f + k_{nr} + k_{ET}}
+\label{eq:quantum_yield_donor_FRET}
+\end{equation}
+
+\begin{equation}
+E = \frac{k_{ET}}{k_f + k_{nr} + k_{ET}}
+\label{eq:FRET_ratio}
+\end{equation}
+
+where $k_{ET}$, the rate constant for the FRET energy transfer process, is given by:
+
+\begin{equation}
+k_{ET} = \frac{1}{t_D}(\frac{R_0}{r})^6
+\label{eq:k_ET}
+\end{equation}
+
+and $t_D$ is the lifetime of the excited state in the absence of an acceptor fluorophore: 
+
+\begin{equation}
+t_D = \frac{1}{k_{f} + k_{nr}}
+\label{eq:ex_lifetime}
+\end{equation}
+
 
 \section{Single Molecule Fluorescence Microscopy}
+Since FRET was first used to measure the distance between two fluorescent dyes on individual molecules bound to a surface~\cite{ha96}, single-molecule FRET (smFRET) has become a popular tool to investigate the structure and dynamics of biomolecules, both on a surface and diffusing freely in solution~\cite{haran03, schuler02, weiss00}.
+
 \subsection{Confocal Microscopy}
 \subsection{Instrumentation}
 \subsection{Data Acquisition}
 \subsection{Data Analysis}
 
 \section{Forster Resonance Energy Transfer}
-F\"{o}rster resonance energy transfer (FRET) is a non-radiative energy transfer process that can occur between chromophoric molecules~\cite{forster48}. The degree of energy transfer is dependent on the fluorophore distance, allowing FRET to be used as a ``molecular ruler"~\cite{stryer67}, to determine intramolecular distances. Since FRET was first used to measure the distance between two fluorescent dyes on individual molecules bound to a surface~\cite{ha96}, single-molecule FRET (smFRET) has become a popular tool to investigate the structure and dynamics of biomolecules, both on a surface and diffusing freely in solution~\cite{haran03, schuler02, weiss00}.
 
 \section{Single Molecule Fluorescence Microscopy}
 \subsection{Overview}
