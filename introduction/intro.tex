@@ -169,10 +169,41 @@ An effective way to minimize the background noise is to reduce the emission dete
 \paragraph{Epifluorescence Microscopy}
 The simplest geometry for single molecule fluorescence detection is epifluorescence microscopy (Fig.~\ref{fig:epi}). In an epifluorescence microscope monochromatic, collimated light is focused into the back apperture of an objective lens with a high Numerical Aperture (N.A.). A large volume of the fluorescently labelled sample, which is placed above the objective, is illuminated; emitted photons are collected through the same objective. Fluorescence emission is separated from excitation light using various filters before being focused onto a charge coupled device (CCD) camera which generates a current at each pixel proportional to the intensity of incident light.
 
+The principal advantage of epifluorescent illumination, in addition to its ease of set-up, is the large illumination area. The detection volume is typically seveal microns in diameter, allowing multiple emitters to be imaged at the same time and to be tracked across multiple image frames~\cite{???}. Howerver, because the depth of the illumination volume in epifluorescence microscopy is relatively large, the SNR is quite low: many molecules at different depths into the sample volume are illuminated, resulting in a large amount of out-of-focus fluorescence reaching the CCD camera. Consequently, although epifluorescence microscopes are the most commonly used variant of the fluorescence microscope, they are less useful for single molecule detection, as the SNR is too low to efficiently resolve fluorescence emission from individual molecules.
+
 \paragraph{Total Internal Fluorescence Microscopy}
-\paragraph{Super-Resolution Microscopy}
+Total Internal Fluorescence Microscopy (TIRFM) (Fig.~\ref{fig:TIRF}) uses a similar optical geometry to epifluorescence microscopy: as in epifluorescence imaging, the sample is illuminated via the back port of an objective and fluorescence emission is collected via the same objective and focused onto a CCD camera. Howerver, TIRFM exploits the phenomenon of Total Internal Reflection (TIR) to reduce the depth of the illumination volume and hence increase the SNR.
+
+TIR occurs when a light wave passing through a medium with refractive index $n_1$ meets a dielectric medium with refractive index $n_2 < n_1$ with an incident angle $\theta$, where $\theta > \theta_c$, the critical angle (Fig.~\ref{fig:TIR_angle}). Under these conditions, rather than some of the light being refracted at the boundary between the two media, all of the light is reflected internally. As a result of the TIR, an evanescent wave is generated at the boundary. This wave is propagated along the boundary, but decays exponentially with distance from the boundary. The distance that the wave penetrates beyond the boundary is dependent on the incident angle $\theta$, decreasing as $\theta$ increases. Hence, to minimise the detection volume and maximise the SNR, it is advantageous that $\theta$ exceeds $\theta_c$ by as much as possible. 
+
+The critical angle, $\theta_c$ is determined using Snell's Law~\cite{???} using the ratio of the refractive indices $n_1$ and $n_2$:
+
+\begin{equation}
+\theta_c = \sin^{-1}\left(\frac{n_2}{n_1}\right)
+\label{eq:snell}
+\end{equation}
+
+For a typical borosilicate coverslide ($n = 1.518$) in contact with water ($n = 1.33$), a TIRF angle of $61.2^{\circ}$ is required, enabling fluorescence excitation to be limited to a depth of $\sim 100$ nm. The narrow excitation depth of TIRFM allows all of the advantages of epifluorescence (specifically large excitation area and particle tracking), but increases the SNR sufficiently that fluorescence emission from individual molecules can be effectively resolved.
+
+%\paragraph{Super-Resolution Microscopy}
 \paragraph{Confocal Microscopy}
+Confocal microscopy takes the reduction in excitation volume to the next level, minimizing the detection volume in all dimensions and collecting fluorescence emission from a solution volume of $\sim 1$ fL. In confocal microscopy (Fig.~\ref{fig:confocal}), a collimated laser beam is focused through an infinity corrected objective with a high N.A. onto a diffraction limited spot (diameter $> 1 \mu$m) a few microns into the sample volume. Fluorescence emission from the sample is collected and recollimated by the same objective, passed through a dichroic mirror to remove reflected incident light and then directed through a small aperture pinhole (diameter $50 - 100 \mu$m) placed in the conjugate focal plane to remove out-of-focus fluorescence. The remaining photons are directed onto a Avalanche Photodiode (APD) detector, which can detect individual photons with nanosecond resolution. To enable detection of fluorescence from individual fluorescent molecules, analyte solutions are used at extremely low concentrations (typically $10 - 100$ pM), such that the probability of more than one molecule occupying the confocal volume simultaneously is extremely small. Single molecule confocal microscopy is typically used in this manner to image labelled molecules diffusing freely in solution~\cite{weiss00} or flowed rapidly through the exciting laser beam~\cite{horrocks2012}; however in conjunction with a moveable sample stage or movable laser mount, it can also be used to image surface-tethered molecules~\cite{???}. 
+
 \paragraph{Fluorescence Correlation Spectroscopy}
+Fluorescence Correlation Spectroscopy (FCS) is an extension of the Confocal method described above. In FCS, a higher concentration ($1 - 100$ nM) of analyte solution is used, such that multiple fluorophores to occupy the confocal volume an any time. Temporal fluctuations in the detected fluorescence emission can be used to determine physical paramters of the analyte solution, such as molecular concentrations and diffusion constants. These are determined by fitting a fluorescence autocorrelation function (Eq.~\ref{eq:fcs}) using a three-dimensional diffusion model corrected for photoblinking effects (Eq.~\ref{eq:diffusion}). 
+
+\begin{equation}
+G(\tau) = \frac{\langle \delta F(t) \cdot \delta F(t + \tau)\rangle}{\langle F(t)^2 \rangle}
+\label{eq:fcs}
+\end{equation}   
+
+XXX Explain these equations! XX
+
+\begin{equation}
+G(\tau) = \left( 1 - T + T\exp(\frac{-\tau}{-\tau_T}) \right)\frac{1}{N}\left( \frac{1}{1 + \frac{\tau}{\tau_T}} \right)
+\label{eq:diffusion}
+\end{equation}   
+
 
 \subsection{Fluorophores for Single Molecule Imaging}
 \label{sect:fluorophores}
