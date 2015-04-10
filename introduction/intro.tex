@@ -4,6 +4,8 @@
 This chapter provides a general introduction to the contextual background of the work presented in this thesis. First, we provide a general overview of the physical phenomena of fluorescence and F\"{o}rster resonance energy transfer (FRET). We describe the application of these phenomena to the study of biological molecules and the common experimental and analytical techniques used in these research areas. We then present an overview of techniques of statistical analysis, with a particular focus on model-based Bayesain inference. We present common sampling-based techniques for Bayesian statistical analysis and describe why Bayesian inference is a useful tool in the analysis of single-molecule fluorescence data.
 
 \section{Fluorescence and FRET}
+Since FRET was first used to measure the distance between two fluorescent dyes on individual molecules bound to a surface~\cite{ha96}, single-molecule FRET (smFRET) has become a popular tool to investigate the structure and dynamics of biomolecules, both on a surface and diffusing freely in solution~\cite{haran03, schuler02, weiss00}. We open this chapter with a discussion of the physical basis of molecular fluorescence and FRET. We then describe some of the applications of fluorescence in biological research, and describe the constraints and experimental techniques commonly used in single molecule fluorescence microscopy.
+
 \subsection{The Physical Basis of Fluorescence}
 \paragraph{Fluorescence}
 Fluorescence is the physical phenomenon by which a molecule that has absorbed a photon of electromagnetic radiation and which is in an excited state relaxes via non-radiative processes, such as vibrational interactions, rotation and translation in its medium and then  emits a photon, returning to its ground state. Owing to the intramolecular transitions occurring prior to emission, the photon emitted is of a lower energy than the photon absorbed. The difference in energy between the absorbed and emitted photons is termed the Stokes shift (Fig.~\ref{fig:jablonski} B,~\cite{Albani2011}) and is a characteristic of the energy levels available to the excited molecule. 
@@ -152,16 +154,43 @@ n_D = n_D - \frac{n_A}{\gamma}
 
 Substituting this definition of $n_D$ back into Eq.~\ref{eq:FRET_ratio_2} yields the expected definition of E,~\ref{eq:FRET_E}, that allows the inter-fluorophore distance to be related to an experimentally observed ratio of donor and acceptor photons.
 
+%\section{Fluorescence Microscopy}
 \section{Single Molecule Fluorescence Microscopy}
-Since FRET was first used to measure the distance between two fluorescent dyes on individual molecules bound to a surface~\cite{ha96}, single-molecule FRET (smFRET) has become a popular tool to investigate the structure and dynamics of biomolecules, both on a surface and diffusing freely in solution~\cite{haran03, schuler02, weiss00}.
+Both fluorescence and FRET have found many applications in the study of biological systems. Fluorescence microscopy is a well-established field of research, which uses fluorescence emission to generate an image. Synthetic or naturally occurring fluorophores are conjugated to biomolecules of interest and then excited using monochromcatic light matched to the fluorophore's absorption spectrum. Photons emitted from the fluorophores are collected and used to gain information about the structures and associations of the labelled molecules. 
 
-\subsection{Confocal Microscopy}
-\subsection{Instrumentation}
-\subsection{Data Acquisition}
+Advances in the fields of optical microscopy, fluorophore synthesis and data analysis have facilitated development of optical techniques that are sensitive enough to detect emission from individual fluorophores. This has created the field of single molecule fluorescence microscopy and the capacity to characterise the behaviour of individual biomolecules. The following section describes the benefits of single molecule fluorescence microscopy, introduces the main optical systems used for single molecule imgaing, and discusses the experimental and analytical challenges involved in a single molecule experiment. As the main experimental technique used in this thesis, we focus our discussion on single molecule confocal spectroscopy; however, for context, we include an overview of other single molecule fluorescent techniques.  
+
+%Fluorescence can be used simply to gain information about cellular organisation and molecular localisations; for example by fluorescently labelling specific cellular structures with organic dyes and then imaging planes of the entire cell to identify  
+\subsection{Techniques of Single Molecule Imaging}
+The greatest challenge in single molecule microscopy is to be able to detect dim fluorescence emission from individual molecules against a background of photon emission from other sources, such as Raman scattering by solution molecules~\cite{???} and fluorescence emission from other nearby fluorescent molecules~\cite{???}. Consequently, a large amount of work has been done to maximise the signal-to-noise ratio (SNR) of fluorescent emission data. This ratio can be optimised from both ends; namely maximising the signal and minimising the background noise. Maximising the signal involves the development and selection of fluorophores that achieve many fluorescent emission cycles during an excitation event. This is discussed in Section~\ref{sect:fluorophores}. 
+
+An effective way to minimize the background noise is to reduce the emission detection volume; as the number of photons detected from irrelevant species will be reduced with a smaller detection volume, whereas detection of photons from a single fluorophore of interest within the detection volume will be unaffected. Single molecule fluorescence techniques can hence be characterised based on their method of detection volume reduction: Wide-field techniques, including Epifluorescence Microscopy and Total Internal Fluorescence Microscopy (TIRFM) illuminate and collect data from a wide image plane with a large area but minimal the depth; by contrast confocal microscopy techniques attempt to collect data from the smallest detection volume possible -- a voxel of volume approximately 1 fL. These techniques and the optical geometry required for successful data collection, are summarized below. 
+
+\paragraph{Epifluorescence Microscopy}
+The simplest geometry for single molecule fluorescence detection is epifluorescence microscopy (Fig.~\ref{fig:epi}). In an epifluorescence microscope monochromatic, collimated light is focused into the back apperture of an objective lens with a high Numerical Aperture (N.A.). A large volume of the fluorescently labelled sample, which is placed above the objective, is illuminated; emitted photons are collected through the same objective. Fluorescence emission is separated from excitation light using various filters before being focused onto a charge coupled device (CCD) camera which generates a current at each pixel proportional to the intensity of incident light.
+
+\paragraph{Total Internal Fluorescence Microscopy}
+\paragraph{Super-Resolution Microscopy}
+\paragraph{Confocal Microscopy}
+\paragraph{Fluorescence Correlation Spectroscopy}
+
+\subsection{Fluorophores for Single Molecule Imaging}
+\label{sect:fluorophores}
+
+\section{Confocal Microscopy}
+\subsection{Advantages over Ensemble Fluorescence Methods}
+\subsection{Data Acquisition and Analysis}
+\paragraph{Single Molecule FRET}
+\paragraph{Alternating Laser Excitation}
 \subsection{Data Analysis}
+\paragraph{Event Selection and Denoising}
+\paragraph{Information Gathering?}
+\subsection{Challenges}
+\paragraph{Improving the Signal}
+\paragraph{Accurate Event Selection}
+\paragraph{Accurate Distance Determination}
 
-\section{Forster Resonance Energy Transfer}
-
+\subsection{Advantages of Single Molecule Imaging}
 \section{Single Molecule Fluorescence Microscopy}
 \subsection{Overview}
 \subsection{Confocal Microscopy}
