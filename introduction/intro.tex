@@ -222,7 +222,7 @@ Thus far, we have given a general overview of the different applications of fluo
 
 \subsection{Data Acquisition and Analysis}
 \paragraph{Single Molecule FRET}
-The most common form of confocal single microscopy exploits the phenomenon of FRET (Section~\ref{sect:fret}) for a single molecule FRET (smFRET) experiment. In a single molecule FRET experiment, each molecule is site-specifically labelled with two fluorescent dyes, a donor ($D$) and an acceptor ($A$). The dyes are chosen such that the emission spectrum of the donor overlaps with the excitation spectrum of the acceptor, enabling FRET emission to occur when the two dyes are sufficiently close in space. 
+The most common form of confocal single microscopy exploits the phenomenon of FRET (Section~\ref{sect:fret}) to determine intramolecular distances in a single molecule FRET (smFRET) experiment. In such an experiment, each molecule is site-specifically labelled with two fluorescent dyes, a donor ($D$) and an acceptor ($A$). The dyes are chosen such that the emission spectrum of the donor overlaps with the excitation spectrum of the acceptor, enabling FRET emission to occur when the two dyes are sufficiently close in space. 
 
 A collimated laser beam, matched to the excitation spectrum of the donor, is used to illuminate an extremely dilute solution of these labelled molecules. When a labelled molecule diffuses through the laser beam, the fluorophore is excited and photons are emitted.  Emitted photons are collected, separated from excitation photons, recollimated, then further separated into donor and acceptor wavelengths using a dichroic mirror and directed onto two APD detectors for collection and analysis (Fig.~\ref{fig:fig1_instrumentation} A, B).
 
@@ -235,7 +235,7 @@ E = \frac{n_A}{n_A + \gamma \cdot n_D}
 \label{eq:Eprod}
 \end{equation} 
 
-Histograms of the observed FRET efficiencies (Fig.~\ref{fig:histogram}) can be fitted with gaussian distributions to calculate approximate intramolecular distances and to identify fluorescent sub-populations that might have been invisible to an ensemble-based technique~\cite{joo08, Walter2008}.
+Histograms of the observed FRET efficiencies (Fig.~\ref{fig:histogram}) can be fitted with gaussian distributions to calculate approximate intramolecular distances and to identify conformational sub-populations that might have been invisible to an ensemble-based technique~\cite{joo08, Walter2008}.
 
 \paragraph{Direct Acceptor Excitation}
 One drawback of the experimental technique summarized above is that the acceptor fluorophore can only be observed indirectly via FRET energy transfer from an excited donor fluorophore. Acceptor photobleaching and imperfect labelling of the analyte molecules can therefore lead to experimental artifacts such as the zero peak (Fig.~\ref{fig:zeropeak}), which complicate or distort downstream analysis. As a consequence, several experimental modifications of the simple FRET experiment have been developed to enable direct observation of the acceptor fluorophore.
@@ -245,6 +245,9 @@ One simple modification is Two Colour Coincidence Detection (TCCD)~\cite{orte06,
 A more complex mmodification uses Alternating Laser Exciation (ALEX). In an ALEX experiment the diffusing molecules are excitated by two lasers in rapid alternation~\cite{kapanidis05}. One laser excites the donor fluorophore and the other can directly excite the acceptor fluorophore. The modulation is fast on the timescale of molecular dwell-time, allowing a single fluorescent molecule to receive multiple cycles of donor-acceptor direct excitation. The additional information obtained from direct excitation of the acceptor fluorophore allows fluorescent events originating from improperly labelled molecules to be excluded from further analysis. 
 
 A further modification of this ALEX technique is Periodic Acceptor Excitation (PAX)~\cite{doose07}. PAX is a simplified version of ALEX, in which donor excitation is continuous, but there is rapid modulation of the acceptor excitation power. As in an ALEX experiment, this enables information about the molecular labelling state to be determined, however the experimental setup is simpler as rapid modulation is required for only one of the two lasers used.
+
+\paragraph{Application to Oligomer Sizing}
+As described above, a smFRET experiment is used to obtain information about intramolecular distances. Howerver, single molecule confocal spectroscopy can also be applied to the problem of determining the size and stoichiometry of oligomeric species~\cite{orte10, cremades2012}. In these experiments, individual monomer molecules are labelled with a single fluorophore. Oligomer size and stoichiometry is then calculated by comparing the brightness of fluorescent events with the brightness of a single fluorophore.
 
 
 %For a single fluorescent burst, the FRET efficiency, $E$, can be calculated as (Eq~\ref{eq:Eprod}):
@@ -270,7 +273,9 @@ A further modification of this ALEX technique is Periodic Acceptor Excitation (P
 %\paragraph{Information Gathering?}
 
 %\subsection{Advantages over Ensemble Fluorescence Methods}
-\subsection{Challenges}
+\subsection{Computational Challenges}
+A confocal smFRET experiment, as described above, presents several computational challenges during data analysis. Firstly, it is necessary to be able to accurately identify fluorescent events and to separate them from noise photons. Secondly, where multiple fluorescent populations are present, they must be separated and their intramolecular distances determined. Finally, it is also necessary to 
+
 \paragraph{Improving the Signal}
 \paragraph{Accurate Event Selection}
 \paragraph{Accurate Distance Determination}
