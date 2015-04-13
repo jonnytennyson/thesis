@@ -56,6 +56,7 @@ The energetic interconversions involved in fluorescence can be summarised using 
 \end{figure}
 
 \subsection{The Physical Basis of FRET}
+\label{sect:fret}
 \paragraph{F\"{o}rster Resonance Energy Transfer}
 F\"{o}rster resonance energy transfer (FRET) is a non-radiative energy transfer process that can occur between chromophoric molecules~\cite{forster48}. The degree of energy transfer, E, is dependent on the fluorophore distance, varying inversely with the sixth power of the dye-dye distance, $r$: 
 
@@ -214,35 +215,19 @@ All of the techniques of single molecule fluorescent microscopy described thus f
 
 To maximise the number of excitation-emission cycles, a fluorophore should have a high quantum yield, to maximise the number of photons emitted for some number of absorbed photons. The lifetime of the excited state should also be short, to increase the number of excitation-emission cycles per unit time. Furthermore, the fluorophore should have a high extinction coefficient at the excitation wavelength, to maximise the number of photon absorption events. Furthermore, the fluorophore should be resistant to both permanent photobleaching and to transient photoblinking, to prevent premature attenuation of fluorescence emission. These considerations are particularly pertinent for fluorophores used in confocal techniques, where the number of photons observed from each fluorophore is additionally limited by the dwell-time of the molecule in the confocal volume (typically less than 1 ms).
 
-Considerable effort has been made to synthesize fluorophores that fulfil these requirements for the excitation wavelengths accessible to single molecule microscopy. 
+Considerable effort has been made to synthesize fluorophores that fulfil these requirements for the excitation wavelengths accessible to single molecule microscopy. Many of the most popular dyes are derived from fluorone (Fig.~\ref{fig:fluorone}): fluorescein, the fluorophore used in the first demonstration of single molecule detection~\cite{???} and the green-excited Rhodamine 6G are both built around fluorone's chromophoric heterocyclic structure; functionalised derivatives of these molecules form the basis of a range of blue- and green-excited fluorophores in the commercial Alexa Fluor and Atto ranges (Fig.~\ref{fig:dyes}). Red-excited fluorophores are typically derived from cyanine structures, although the polymethine backbone makes them susceptible to photobleaching via cis/trans isomerisation. To address this issue, conformationally locked derivatives, such as the commercially available Atto647N, have been developed; however both locked and unlocked cyanine derivatives are prone to photoblinking via population of long-lived triplet states~\cite{???}.
 
 \section{Confocal Microscopy}
-\subsection{Advantages over Ensemble Fluorescence Methods}
+Thus far, we have given a general overview of the different applications of fluorescence in single molecule imaging. Howerver, this thesis primarily focuses on the analysis of data single molecule confocal microscopy. Hence, we shall now give a more detailed description of the challenges and experiemntal methodologies specific to this single molecule imaging technique.
+
 \subsection{Data Acquisition and Analysis}
 \paragraph{Single Molecule FRET}
+The most common form of confocal single microscopy exploits the phenomenon of FRET (Section~\ref{sect:fret}) for a single molecule FRET (smFRET) experiment. In a single molecule FRET experiment, each molecule is site-specifically labelled with two fluorescent dyes, a donor ($D$) and an acceptor ($A$). The dyes are chosen such that the emission spectrum of the donor overlaps with the excitation spectrum of the acceptor, enabling FRET emission to occur when the two dyes are sufficiently close in space. 
+
+A collimated laser beam, matched to the excitation spectrum of the donor, is used to illuminate an extremely dilute solution of these labelled molecules. When a labelled molecule diffuses through the laser beam, the fluorophore is excited and photons are emitted.  Emitted photons are collected, separated from excitation photons, recollimated, then further separated into donor and acceptor wavelengths using a dichroic mirror and directed onto two APDs for collection and analysis (Fig.~\ref{fig:fig1_instrumentation} A, B). 
+
 \paragraph{Alternating Laser Excitation}
-\subsection{Data Analysis}
-\paragraph{Event Selection and Denoising}
-\paragraph{Information Gathering?}
-\subsection{Challenges}
-\paragraph{Improving the Signal}
-\paragraph{Accurate Event Selection}
-\paragraph{Accurate Distance Determination}
 
-\subsection{Advantages of Single Molecule Imaging}
-\section{Single Molecule Fluorescence Microscopy}
-\subsection{Overview}
-\subsection{Confocal Microscopy}
-In a confocal smFRET experiment, biological molecules are labelled with two fluorescent dyes. The emission spectrum of the donor dye ($D$) is chosen to overlap with the excitation spectrum of the acceptor ($A$). When the donor and acceptor are sufficiently close in space, exciting the donor dye results in FRET and fluorescent emission from the acceptor dye. The FRET efficiency, $E$, which describes the proportion of excitation energy transferred from the donor to the acceptor, depends on the distance, $r$ between the two dyes (Eq.~\ref{eq:efficiency}) and $R_0$, the F\"{o}rster distance, a dye dependent constant that describes the dye separation at which 50\% energy transfer is achieved (Fig.~\ref{fig:fig1_instrumentation} C)
-
-\begin{equation}
-E = \frac{1}{1 + (\frac{r}{R_0})^6} 
-\label{eq:efficiency}
-\end{equation}
-
-Consequently, the distance between the two fluorophores can be determined from the ratio of donor and acceptor photons emitted during an excitation event (Eq.~\ref{eq:Eprod}).
-
-Experimentally, a collimated laser beam, is used to illuminate an extremely dilute solution of labelled molecules. When a labelled molecule diffuses through the laser beam, the donor dye is excited and photons are emitted from both donor and acceptor dyes.  Emitted photons are collected through the objective and separated into donor and acceptor streams for collection and analysis (Fig.~\ref{fig:fig1_instrumentation} A, B). 
 
 For a single fluorescent burst, the FRET efficiency, $E$, can be calculated as (Eq~\ref{eq:Eprod}):
 
@@ -253,11 +238,37 @@ E = \frac{n_A}{n_A + \gamma \cdot n_D}
 
 for $n_A$ and $n_D$ detected acceptor and donor photons respectively and $\gamma$ an experimentally determined instrument-dependent correction factor. During the course of a smFRET experiment, several thousand fluorescent bursts are collected and used to construct FRET efficiency histograms. These histograms can be used to identify populations of fluorescent species~\cite{ha96}, typically by fitting multiple gaussian distributions.
 
-\subsection{Total Internal Fluorescence Miroscopy}
+diluted to The emission spectrum of the donor dye ($D$) is chosen to overlap with the excitation spectrum of the acceptor ($A$). When the donor and acceptor are sufficiently close in space, exciting the donor dye results in FRET and fluorescent emission from the acceptor dye. The FRET efficiency, $E$, which describes the proportion of excitation energy transferred from the donor to the acceptor, depends on the distance, $r$ between the two dyes (Eq.~\ref{eq:efficiency}) and $R_0$, the F\"{o}rster distance, a dye dependent constant that describes the dye separation at which 50\% energy transfer is achieved (Fig.~\ref{fig:fig1_instrumentation} C)
 
-\subsection{Epifluorescent Microscopy}
+\begin{equation}
+E = \frac{1}{1 + (\frac{r}{R_0})^6} 
+\label{eq:efficiency}
+\end{equation}
 
-\subsection{Super-Resolution Microscopy}
+Consequently, the distance between the two fluorophores can be determined from the ratio of donor and acceptor photons emitted during an excitation event (Eq.~\ref{eq:Eprod}).
+
+
+\subsection{Data Analysis}
+\paragraph{Event Selection and Denoising}
+\paragraph{Information Gathering?}
+
+\subsection{Advantages over Ensemble Fluorescence Methods}
+\subsection{Challenges}
+\paragraph{Improving the Signal}
+\paragraph{Accurate Event Selection}
+\paragraph{Accurate Distance Determination}
+
+\subsection{Advantages of Single Molecule Imaging}
+
+%\section{Single Molecule Fluorescence Microscopy}
+%\subsection{Overview}
+%\subsection{Confocal Microscopy}
+
+%\subsection{Total Internal Fluorescence Miroscopy}
+
+%\subsection{Epifluorescent Microscopy}
+
+%\subsection{Super-Resolution Microscopy}
 
 \section{Probabilistic Inference and Bayesian Statistics}
 \subsection{Bayesian Statistics}
