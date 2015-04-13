@@ -224,35 +224,52 @@ Thus far, we have given a general overview of the different applications of fluo
 \paragraph{Single Molecule FRET}
 The most common form of confocal single microscopy exploits the phenomenon of FRET (Section~\ref{sect:fret}) for a single molecule FRET (smFRET) experiment. In a single molecule FRET experiment, each molecule is site-specifically labelled with two fluorescent dyes, a donor ($D$) and an acceptor ($A$). The dyes are chosen such that the emission spectrum of the donor overlaps with the excitation spectrum of the acceptor, enabling FRET emission to occur when the two dyes are sufficiently close in space. 
 
-A collimated laser beam, matched to the excitation spectrum of the donor, is used to illuminate an extremely dilute solution of these labelled molecules. When a labelled molecule diffuses through the laser beam, the fluorophore is excited and photons are emitted.  Emitted photons are collected, separated from excitation photons, recollimated, then further separated into donor and acceptor wavelengths using a dichroic mirror and directed onto two APDs for collection and analysis (Fig.~\ref{fig:fig1_instrumentation} A, B). 
+A collimated laser beam, matched to the excitation spectrum of the donor, is used to illuminate an extremely dilute solution of these labelled molecules. When a labelled molecule diffuses through the laser beam, the fluorophore is excited and photons are emitted.  Emitted photons are collected, separated from excitation photons, recollimated, then further separated into donor and acceptor wavelengths using a dichroic mirror and directed onto two APD detectors for collection and analysis (Fig.~\ref{fig:fig1_instrumentation} A, B).
 
-\paragraph{Alternating Laser Excitation}
+In the simplest smFRET experiment, all photons reaching the detectors during data acquisition binned as they are received into time-bins of length similar to the expected dwell-time of a molecule in the confocal volume. Fluorescent events are identified as the time-bins that contain sufficient photons to meet a specified criterion~\cite{weiss00}. Alternatively, to avoid missing or double counting fluorescent events that are split over more than one time-bin, photons can be binned a time-scale much shorter than the typical dwell time. A burst search algorithm~\cite{nir06} is then used to scan the resultant photon stream for bursts of a specified duration and brightness. Details of these two methods of event selection are provided in Chapter~\ref{chap:pyfret}.
 
-
-For a single fluorescent burst, the FRET efficiency, $E$, can be calculated as (Eq~\ref{eq:Eprod}):
+Identified fluorescent events are then used to generate FRET histograms: the FRET efficiency of each event is calculated as described above:
 
 \begin{equation}
 E = \frac{n_A}{n_A + \gamma \cdot n_D}
 \label{eq:Eprod}
 \end{equation} 
 
-for $n_A$ and $n_D$ detected acceptor and donor photons respectively and $\gamma$ an experimentally determined instrument-dependent correction factor. During the course of a smFRET experiment, several thousand fluorescent bursts are collected and used to construct FRET efficiency histograms. These histograms can be used to identify populations of fluorescent species~\cite{ha96}, typically by fitting multiple gaussian distributions.
+Histograms of the observed FRET efficiencies (Fig.~\ref{fig:histogram}) can be fitted with gaussian distributions to calculate approximate intramolecular distances and to identify fluorescent sub-populations that might have been invisible to an ensemble-based technique~\cite{joo08, Walter2008}.
 
-diluted to The emission spectrum of the donor dye ($D$) is chosen to overlap with the excitation spectrum of the acceptor ($A$). When the donor and acceptor are sufficiently close in space, exciting the donor dye results in FRET and fluorescent emission from the acceptor dye. The FRET efficiency, $E$, which describes the proportion of excitation energy transferred from the donor to the acceptor, depends on the distance, $r$ between the two dyes (Eq.~\ref{eq:efficiency}) and $R_0$, the F\"{o}rster distance, a dye dependent constant that describes the dye separation at which 50\% energy transfer is achieved (Fig.~\ref{fig:fig1_instrumentation} C)
+\paragraph{Direct Acceptor Excitation}
+One drawback of the experimental technique summarized above is that the acceptor fluorophore can only be observed indirectly via FRET energy transfer from an excited donor fluorophore. Acceptor photobleaching and imperfect labelling of the analyte molecules can therefore lead to experimental artifacts such as the zero peak (Fig.~\ref{fig:zeropeak}), which complicate or distort downstream analysis. As a consequence, several experimental modifications of the simple FRET experiment have been developed to enable direct observation of the acceptor fluorophore.
 
-\begin{equation}
-E = \frac{1}{1 + (\frac{r}{R_0})^6} 
-\label{eq:efficiency}
-\end{equation}
+One simple modification is Two Colour Coincidence Detection (TCCD)~\cite{orte06, orte10}. In this technique, two collimated, overlapped lasers are used to simultaneously excite both the donor and the acceptor fluorophores, enabling observation of the acceptor fluorophore even when the donor fluorophore is not present or when the inter-fluorophore distance is too great for FRET to occur. TCCD has been used in conjuction with simple FRET to study protein aggregation~\cite{cremades2012} and molecular conformation~\cite{Ye2012}.  
 
-Consequently, the distance between the two fluorophores can be determined from the ratio of donor and acceptor photons emitted during an excitation event (Eq.~\ref{eq:Eprod}).
+A more complex mmodification uses Alternating Laser Exciation (ALEX). In an ALEX experiment the diffusing molecules are excitated by two lasers in rapid alternation~\cite{kapanidis05}. One laser excites the donor fluorophore and the other can directly excite the acceptor fluorophore. The modulation is fast on the timescale of molecular dwell-time, allowing a single fluorescent molecule to receive multiple cycles of donor-acceptor direct excitation. The additional information obtained from direct excitation of the acceptor fluorophore allows fluorescent events originating from improperly labelled molecules to be excluded from further analysis. 
+
+A further modification of this ALEX technique is Periodic Acceptor Excitation (PAX)~\cite{doose07}. PAX is a simplified version of ALEX, in which donor excitation is continuous, but there is rapid modulation of the acceptor excitation power. As in an ALEX experiment, this enables information about the molecular labelling state to be determined, however the experimental setup is simpler as rapid modulation is required for only one of the two lasers used.
 
 
-\subsection{Data Analysis}
-\paragraph{Event Selection and Denoising}
-\paragraph{Information Gathering?}
+%For a single fluorescent burst, the FRET efficiency, $E$, can be calculated as (Eq~\ref{eq:Eprod}):
 
-\subsection{Advantages over Ensemble Fluorescence Methods}
+%\begin{equation}
+%E = \frac{n_A}{n_A + \gamma \cdot n_D}
+%\label{eq:Eprod}
+%\end{equation} 
+
+%for $n_A$ and $n_D$ detected acceptor and donor photons respectively and $\gamma$ an experimentally determined instrument-dependent correction factor. During the course of a smFRET experiment, several thousand fluorescent bursts are collected and used to construct FRET efficiency histograms. These histograms can be used to identify populations of fluorescent species~\cite{ha96}, typically by fitting multiple gaussian distributions.
+
+%diluted to The emission spectrum of the donor dye ($D$) is chosen to overlap with the excitation spectrum of the acceptor ($A$). When the donor and acceptor are sufficiently close in space, exciting the donor dye results in FRET and fluorescent emission from the acceptor dye. The FRET efficiency, $E$, which describes the proportion of excitation energy transferred from the donor to the acceptor, depends on the distance, $r$ between the two dyes (Eq.~\ref{eq:efficiency}) and $R_0$, the F\"{o}rster distance, a dye dependent constant that describes the dye separation at which 50\% energy transfer is achieved (Fig.~\ref{fig:fig1_instrumentation} C)
+
+%\begin{equation}
+%E = \frac{1}{1 + (\frac{r}{R_0})^6} 
+%\label{eq:efficiency}
+%\end{equation}
+
+%Consequently, the distance between the two fluorophores can be determined from the ratio of donor and acceptor photons emitted during an excitation event (Eq.~\ref{eq:Eprod}).
+
+%\subsection{Data Analysis}
+%\paragraph{Event Selection and Denoising}
+%\paragraph{Information Gathering?}
+
+%\subsection{Advantages over Ensemble Fluorescence Methods}
 \subsection{Challenges}
 \paragraph{Improving the Signal}
 \paragraph{Accurate Event Selection}
