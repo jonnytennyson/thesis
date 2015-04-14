@@ -311,13 +311,15 @@ This section introdeces the core concepts of probability theory and relates them
 \subsection{Probability Theory and Probability Distributions}
 Probability theory is the study of stochastic processes and the mathematical functions, termed probability distributions, that describe them. In probability theory, a variable whose value is subject to chance variations is termed a random variable. A discrete random variable, such as the outcome of a die roll or a coin flip, can take one of a fixed number of values and is described by a probability mass function (PMF); a continuous random variable can take any of a continous range of values and is described by a probability density function (PDF). 
 
-In the field of single molecule fluorescence, the number of photons emitted by a fluorophore undergoing continuous excitation can be described as a discrete random variable. It is discrete since the number of photons emitted must be integral: it is unphysical to consider fractions of a photon. Photon emission can therefore be modeled using a discrete probability distribution. The most common choice is the Poisson distribution~\cite{???}, given by the below equation:
+In the field of single molecule fluorescence, the number of photons emitted by a fluorophore undergoing continuous excitation can be described as a discrete random variable. It is discrete since the number of photons emitted must be integral: it is unphysical to consider fractions of a photon. Photon emission can therefore be modeled using a discrete probability distribution. The most common choice is the Poisson distribution~\cite{???}. The Poisson distribution, given by the below equation:
 
 \begin{equation}
 \Pr{X = x} = \frac{\lambda^x \cdot e^{-\lambda}}{x!}
 \label{eq:poisson}
 \end{equation}
  
+for integer values of $x$, describes the probability of a given number of events occurring in a fixed time interval, so is a good model for photon emission. 
+
 
 %The canonical example is the outcome of an experiment in which a fair, six-sided die is rolled once. If we term the final value shown on the die $X$, we can describe the probability distribution over possible values of $X$ as follows:
 
@@ -325,7 +327,42 @@ In the field of single molecule fluorescence, the number of photons emitted by a
 %\Pr(X = x) = \frac{1}{6}, x = 1, 2, ... , 6 
 %\label{eq:prob_die}
 %\end{equation}  
+\subsection{Conditional Probability and Bayes Theorem}
+Conditional probability is the probability that some event occurs, conditioned on the value of some other observation. From set theory, the conditional probability of event A, given event B, written $\Pr(A \mid B)$, is given by: 
+
+\begin{equation}
+\Pr(A \mid B) = \frac{\Pr(A \cup B)}{\Pr(B)}
+\label{eq:conditional}
+\end{equation}
+
+This can be simply rearranged to give an expression for the probability of both events A and B occurring:
+
+\begin{equation}
+\Pr(A \cup B) = \Pr(A \mid B) \cdot \Pr(B) 
+\label{eq:conditional_and}
+\end{equation}
+
+An analagous expression can be derived from the probability of event B given event A:
 
 
+\begin{equation}
+\Pr(A \cup B) = \Pr(B \mid A) \cdot \Pr(A) 
+\label{eq:conditional_and}
+\end{equation}
+
+A simple substitution and rearrangement allows the derivation of Bayes' theorem, which relates the conditional probability $\Pr(A \mid B)$ to the conditional probability $\Pr(B \mid A)$~\cite{barberBRML2012}:
+
+\begin{equation}
+\Pr(A \mid B) = \frac{\Pr(B \mid A) \cdot \Pr(A)}{\Pr(B)} 
+\label{eq:bayes}
+\end{equation}
+ 
 \subsection{Bayesian Statistics}
+Bayes Theorem (Eq.~\ref{eq:bayes}) provides the basis for Bayesian inference -- a method of statistical hypothesis testing. In Bayesian inference, the conditional probability $\Pr(A \mid B)$ is interpreted as a hypothesis, or model, the likelihood of which is evaluated based on observational evidence. Rewriting Eq.~\ref{eq:bayes} as the probability of a specific model given some experimental observations: 
+
+%\begin{equation}
+%\Pr(\text{model} \mid \text{data}) = \frac{\Pr(B \mid \text{model}) \cdot \Pr(A)}{\Pr(B)} 
+%\label{eq:bayes}
+%\end{equation}
+
 \subsection{Sampling Techniques}
