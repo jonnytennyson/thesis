@@ -247,7 +247,16 @@ A more complex mmodification uses Alternating Laser Exciation (ALEX). In an ALEX
 A further modification of this ALEX technique is Periodic Acceptor Excitation (PAX)~\cite{doose07}. PAX is a simplified version of ALEX, in which donor excitation is continuous, but there is rapid modulation of the acceptor excitation power. As in an ALEX experiment, this enables information about the molecular labelling state to be determined, however the experimental setup is simpler as rapid modulation is required for only one of the two lasers used.
 
 \paragraph{Application to Oligomer Sizing}
-As described above, a smFRET experiment is used to obtain information about intramolecular distances. Howerver, single molecule confocal spectroscopy can also be applied to the problem of determining the size and stoichiometry of oligomeric species~\cite{orte10, cremades2012}. In these experiments, individual monomer molecules are labelled with a single fluorophore. Oligomer size and stoichiometry is then calculated by comparing the brightness of fluorescent events with the brightness of a single fluorophore.
+As described above, a smFRET experiment is used to obtain information about intramolecular distances. However, single molecule confocal spectroscopy can also be applied to the problem of determining the size and stoichiometry of oligomeric species~\cite{orte10, cremades2012}. In these experiments, individual monomer molecules are labelled with a single fluorophore. Following some period of time during which the aggregation reaction proceeds, the reaction mixture is diluted to picomolar concentrations and subjected to TCCD illumination.  Oligomer size and stoichiometry is then calculated by comparing the brightness of observed fluorescent events with the brightness of a labelled monomer:
+
+\begin{equation}
+\text{Size} = 2 \cdot \left(\frac{n_D + \gamma^{-1}n_A}{\langle n_{\text{monomer}}\rangle}\right)
+\label{eq:sizing}
+\end{equation}
+
+where $n_D$ and $n_A$ are the number of observed donor and acceptor photons, $\gamma$ is the instrumental gamma-factor described above and $\langle n_{\text{monomer}}\rangle$ the mean number of photons observed in fluoreoscence events from labelled monomeric species.
+
+A further extension of this sizing technique uses microfluidic flow~\cite{horrocks12} combined with increased excitation intensities to increase the data collection rate. Automated dilution can also be used to rapidly dilute analyte solutions by up to six orders of magnitude~\cite{horrocks2013,}. This enables unstable mulitmeric complexes with weaker ($\mu$M) binding constants to be successfully analysed using smFRET before dissociation occurs.  
 
 
 %For a single fluorescent burst, the FRET efficiency, $E$, can be calculated as (Eq~\ref{eq:Eprod}):
@@ -274,13 +283,17 @@ As described above, a smFRET experiment is used to obtain information about intr
 
 %\subsection{Advantages over Ensemble Fluorescence Methods}
 \subsection{Computational Challenges}
-A confocal smFRET experiment, as described above, presents several computational challenges during data analysis. Firstly, it is necessary to be able to accurately identify fluorescent events and to separate them from noise photons. Secondly, where multiple fluorescent populations are present, they must be separated and their intramolecular distances determined. Finally, it is also necessary to 
+A confocal smFRET experiment, as described above, presents several computational challenges during data analysis. Based on an experimentally observed stream of observed photon counts, analysis should be able to determine many properties of the analyte and experiment, such as the number and concentration of fluorescent populations, the intramolecular distances between the dye attachment sites and, in an aggregation experiment, the stoichiometry of a multimeric complex. The following chapter (Chapter~\ref{chap:pyfret}) describes implementation of the most common methods for this form of data analsysis, involving deterministic event selection algorithms, simple subtraction based denoising, and the construction and fitting of FRET histograms to determine the number of fluorescent populations. Similar methods for oligomer sizing are briefly discussed in Chapter~\ref{chap:sizing}. 
 
-\paragraph{Improving the Signal}
-\paragraph{Accurate Event Selection}
-\paragraph{Accurate Distance Determination}
+However, as photon emission by fluorophores is inherently a probabilistic phenomenon, these problems are also well-posed as problems of probabilistic inference: given an observed sequence of fluorescent bursts, what are the most likely properties of the experimental system that generated that dataset. A considerable part of this thesis deals with the application of the tools of probabilistic analysis to the analysis of smFRET data, both to infer intramolecular distances (Chapter~\ref{chap:inference}) and to oligomer sizing (Chapter~\ref{chap:sizing}). Consequently, we now give a brief overview of the research discipline of Bayesian inference and outline the sampling techniques used in this work.  
 
-\subsection{Advantages of Single Molecule Imaging}
+%Firstly, it is necessary to be able to accurately identify fluorescent events and to separate them from noise photons. Secondly, where multiple fluorescent populations are present, they must be separated and their intramolecular distances determined. Finally, it is also necessary to be able to relate the 
+
+%\paragraph{Improving the Signal}
+%\paragraph{Accurate Event Selection}
+%\paragraph{Accurate Distance Determination}
+
+%\subsection{Advantages of Single Molecule Imaging}
 
 %\section{Single Molecule Fluorescence Microscopy}
 %\subsection{Overview}
@@ -293,5 +306,26 @@ A confocal smFRET experiment, as described above, presents several computational
 %\subsection{Super-Resolution Microscopy}
 
 \section{Probabilistic Inference and Bayesian Statistics}
+This section introdeces the core concepts of probability theory and relates them to the analysis of smFRET datasets. We first introduce the concepts of model-based inference and Bayesian statistics. We then demonstrate how these concepts can be used to describe the physical processes underlying a smFRET experiment. We show that this describes a physical model of the smFRET experiment. Next, we introdue the sampling-based techniques that can be used to infer the parameters of these models in order to determine information from the experiments performed.   
+
+\subsection{Probability Theory and Probability Distributions}
+Probability theory is the study of stochastic processes and the mathematical functions, termed probability distributions, that describe them. In probability theory, a variable whose value is subject to chance variations is termed a random variable. A discrete random variable, such as the outcome of a die roll or a coin flip, can take one of a fixed number of values and is described by a probability mass function (PMF); a continuous random variable can take any of a continous range of values and is described by a probability density function (PDF). 
+
+In the field of single molecule fluorescence, the number of photons emitted by a fluorophore undergoing continuous excitation can be described as a discrete random variable. It is discrete since the number of photons emitted must be integral: it is unphysical to consider fractions of a photon. Photon emission can therefore be modeled using a discrete probability distribution. The most common choice is the Poisson distribution~\cite{???}, given by the below equation:
+
+\begin{equation}
+\Pr{X = x} = \frac{\lambda^x \cdot e^{-\lambda}}{x!}
+\label{eq:poisson}
+\end{equation}
+ 
+
+%The canonical example is the outcome of an experiment in which a fair, six-sided die is rolled once. If we term the final value shown on the die $X$, we can describe the probability distribution over possible values of $X$ as follows:
+
+%\begin{equation}
+%\Pr(X = x) = \frac{1}{6}, x = 1, 2, ... , 6 
+%\label{eq:prob_die}
+%\end{equation}  
+
+
 \subsection{Bayesian Statistics}
 \subsection{Sampling Techniques}
