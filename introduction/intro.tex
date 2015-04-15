@@ -358,11 +358,24 @@ A simple substitution and rearrangement allows the derivation of Bayes' theorem,
 \end{equation}
  
 \subsection{Bayesian Statistics}
-Bayes Theorem (Eq.~\ref{eq:bayes}) provides the basis for Bayesian inference -- a method of statistical hypothesis testing. In Bayesian inference, the conditional probability $\Pr(A \mid B)$ is interpreted as a hypothesis, or model, the likelihood of which is evaluated based on observational evidence. Rewriting Eq.~\ref{eq:bayes} as the probability of a specific model given some experimental observations: 
+Bayes Theorem (Eq.~\ref{eq:bayes}) provides the basis for Bayesian inference -- a method of statistical hypothesis testing. In Bayesian inference, the conditional probability $\Pr(A \mid B)$ is interpreted as a hypothesis, or model, the likelihood of which is evaluated based on observational evidence. Rewriting Eq.~\ref{eq:bayes} as the probability of a specific, parametric, model given some experimental observations, 
 
-%\begin{equation}
-%\Pr(\text{model} \mid \text{data}) = \frac{\Pr(B \mid \text{model}) \cdot \Pr(A)}{\Pr(B)} 
-%\label{eq:bayes}
-%\end{equation}
+\begin{equation}
+\Pr(\text{model}|\text{data}) = \frac{\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})}{\Pr(\text{data})} = \frac{\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})}{\int_{\forall \text{parameter values}}\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})} 
+\label{eq:bayes_model}
+\end{equation}
 
-\subsection{Sampling Techniques}
+we see that it is possible to use a forward, generative model of an observed dataset, $\Pr(\text{data}|\text{model})$, coupled with a prior, $\Pr(\text{model})$, that describes appropriate values for the model parameters, to infer the posterior probability, $\Pr(\text{model}|\text{data})$, of the model paramters~\cite{barberBRML2012}. This reltionship, which forms the basis of Bayesian statistics, allows model parameters to be inferred based on observed experimental evidence.
+
+\subsection{Monte Carlo Sampling}
+For an extremely simple model, it may be possible to compute the solution to Eq.~\ref{eq:bayes_model} exactly, by enumerating all possible states of the model. However, computing the normalisation factor in the denominator requires summing over all possible values of parameter of the model. Consequently, it quickly becomes computationally intractable either to derive an analytical expression for the denominator, or to compute it numerically. 
+
+To overcome this issue, sampling methods have been developed, which allow estimation of the distribution of values taken by the model parameters. To estimate the distribution of parameter values, it is sufficient to draw parameter samples distributed proportionally to the posterior distribution, $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$~\cite{hastings70}. The mean, variance and quantiles of these samples can be used to estimate the parameter values.
+
+Monte Carlo Markov chain (MCMC) algorithms are a class of algorithms that facilitate sampling from the posterior probability over the model parameters, $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$. A Markov chain is a memoryless random walk~\cite{Norris1998}, that transitions between different, enumerable, states in a manner that depends only on the state currently occupied. A Markov Chain Monte Carlo algorithm constructs a Markov chain that has as its equilibrium distribution the desired posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$, but which can be easily sampled from~\cite{Smith1993}. Running such a Markov chain for many thousands of iterations allows it to reach equilibrium; once this state has been reached, sampling further values with long inter-sample intervals is equivalent to drawing independent samples of the model parameter values, conditioned on the observed data, allowing inference of the distribution of parameter values. 
+
+The following sections provide a brief overview of some of the most widely used MCMC algorithms.  
+
+\paragraph{Gibbs Sampling}
+\paragraph{Slice Sampling}
+\paragraph{Metropolis Hastings Sampling}
