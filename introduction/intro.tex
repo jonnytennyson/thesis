@@ -149,7 +149,7 @@ where $\phi_D$ and $\phi_A$ are the quantum yields of the donor and acceptor flu
 If we call the ratio $\frac{\phi_D\eta_D}{\phi_A\eta_A}$ $\gamma$, Eq.~\ref{eq:ratio_FRET} can be re-arranged to give:
 
 \begin{equation}
-n_D = n_D - \frac{n_A}{\gamma}
+n_D = n_{DA} - \frac{n_A}{\gamma}
 \label{eq:get_gamma}
 \end{equation}
 
@@ -415,10 +415,34 @@ This is a consideration of particular importance for both Metropolis-Hastings an
 Two further important considerations are the related concepts of burn-in and sample thinning. In MCMC sampling, the Markov chain is typically intialised with random values that result in a model that approximates very poorly the posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$. Hence, in sampling parameters using Markov chain sampling, it is necessary to run the sampler through many sampling iterations before beginning to store parameter estimates, in order to ensure that the initial values have been forgotten and the Markov chain has reached equilibrium. Similarly, once equlibrium has been reached, parameter samples that are drawn in quick succession will be correlated, as the Markov chain explores only slowly the parameter space. Therefore, in order to obtain many independent samples from the stationary distribution, it is important to ``thin'' the samples made by storing samples on only a small fraction of iterations, in order to ensure samples are taken from the whole parameter space.    
 
 \section{Thesis Objectives}
-This thesis describes the development of software for the analysis of fluorescence data. We implement and rigorously evaluate standard algorithms for the analysis of smFRET data. We then describe the implementation and evaluation of novel techniques for the analysis ofsmFRET data using sampling-based probabilistic inference. The primary objectives of this thesis are as follows. 
+This thesis describes the development of software for the analysis of fluorescence data. We implement and rigorously evaluate standard algorithms for the analysis of smFRET data. We then describe the implementation and evaluation of novel techniques for the analysis ofsmFRET data using sampling-based probabilistic inference. Finally, we apply methods of probabiliistic analysis to the proble of error correction in genome assemblies. Although this research was undertaken primarily to explore analysis methodologies appropriate to smFRET data, the methods and implementations described here have found considerable application, both within the Klenerman research group and beyond.
 
-XXX
+The primary objectives of this thesis are as follows:
 
-Each chapter in this thesis is presented in a stand-alone manner, to accurately reflect their relative independence. In each chapter, we first provide a more detailed overview of the specific context within which the research was performed. We then introduce any required theoretical concepts and experimental techniques, before presenting the relevant results and appropriate conclusion.
+\begin{enumerate}
+
+\item To develop open-source software for the analysis of confocal smFRET data and to evaluate the performance of different algorithms for data analysis, in order to facilitate reproducible research practises within the smFRET research community and ensure best-practice data analysis.
+
+\item To develop data analysis tools for confocal smFRET data that use model-based probabilistic inference and to evaluate the performance of these tools.
+
+\item To understand the relationships between oligomer size and photon emission for fluorescently labelled oligomers, in order to improve the algorithms used for determination of oligomer size.
+
+\item To develop and release tools for error correction in \emph{de novo} genome assemblies constructed using reads from fluourescence-based sequencing technologies.    
+
+\end{enumerate}
+
+Each chapter in this thesis is presented in a stand-alone manner, to accurately reflect their relative independence. In each chapter, we first provide a more detailed overview of the specific context within which the research was performed. We then introduce any required theoretical concepts and experimental techniques, before presenting the relevant results and appropriate conclusion. The rest of this thesis is structured as follows.
+
+Chapter~\ref{chap:pyfret} introduces the pyFRET library, which we developed for analysis of confocal smFRET data. We describe the theory and implementation of different analysis algorithms for smFRET datasets. Data from both continuous and alternating excitation experiments are considered. In the second part of Chapter 3, we provide a comprehensive evaluation of different smFRET analysis algorithms, using a combination of simulated and experimental datasets. We benchmark popular analysis techniques, demonstrating their relative utility under different data collection regimes. 
+
+%The software described in this chapter was presented at EuroScipy, a European conference on the development of scientific software, where it received the award for best talk.
+
+Chapter~\ref{chap:inference} considers a Bayesian method for the analysis of data from continuous excitation smFRET datasets. First, we introduce a model-based theory of the smFRET experiment. Then, we describe how this parametric model can be used to infer intramolecular distances and population sizes from time-binned smFRET data. We benchmark our Bayesian analysis technique against thresholding techniques used for time-binned data, showing the superior performance of the inference technique.
+
+Chapter~\ref{chap:sizing} extends this Bayesian analysis to sizing of labelled protein aggregates. We describe how a simplified model can be used to describe photon emission from multiple fluorophores. Using a combination of real and simulated datasets, we then show that this model is degenerate, making inference of aggregate sizes undecidable. We further show that a single emission event has multiple sources of heterogeneity, creating a complex, non-linear relationship between aggregate size and the number of photons emitted in a fluorescent event. Finally, we describe the development and evaluation of a novel excitation regime that mitigates some of these sources of heterogeneity.
+
+Chapter~\ref{chap:illumina}, the final results chapter, is somewhat different. This chapter describes a Bayesian analysis tool for error correction in genome assemblies generated using Illumina Nextera mate pairs. Illumina sequencing technology uses fluorescence emission from multiple fluorophores in its base calling algorithm. However, base calling errors and complex repeat structures can make reassembly of short reads challenging. In this chapter, we introduce NxRepair, an error correction tool that can identify mistakes in {\emph de novo} assemblies of bacterial genomes. We benchmark NxRepair against existing tools, demonstrating its superior performance. Although not specifically related to smFRET data, this tool falls into the remit of this thesis, as it applies similar techniques of inference analysis to a problem encountered in analsis of fluorescence data.
+
+Finally, Chapter~\ref{chap:conclusions} provides the conclusion to the thesis. Here, we summarise the overall contribution of this thesis and relate the work described to its wider research context. We also discuss possible extensions of the research described, indicating future applications of the research. Overall, the work presented in this thesis describes a rigorous evaluation of the analysis methodologies used in an experimental discipline, identifies several shortcomings and implements novel tools to mitigate overcome these issues. We hope that this work proves useful and informative to other researchers working in this field.
 
 
