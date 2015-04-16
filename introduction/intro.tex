@@ -406,6 +406,19 @@ A third method of MCMC sampling is slice sampling. Slice sampling samples approx
 In order to obtain valid estimates of model parameters, several important aspects of the MCMC process must be considered. Firstly, to avoid perturbation of the stationary distribution away from the desired equilibrium distribution (namely the probability distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$), it is necessary that the property of Detailed Balance is maintained~\cite{???}. Detailed Balance refers to the microscopic reversibility of the Markov chain, such that the probability of being in some state $x$ and transitioning to some other state $x'$ must be equal to the probability of being in state $x'$ and transitioning to state $x$:
 
 \begin{equation}
-\Pr(x)\cdot\Pr(x \rightarrow x') = \Pr(x')\cdot\Pr(x' \rightarrow x) 
+\Pr(x)\cdot\Pr(x \rightarrow x') = \Pr(x')\cdot\Pr(x' \rightarrow x)
 \label{eq:balance}
-\end{equation}    
+\end{equation}
+
+This is a consideration of particular importance for both Metropolis-Hastings and Gibbs sampling, where it is important to select proposal distributions such that detailed balance is maintained.
+
+Two further important considerations are the related concepts of burn-in and sample thinning. In MCMC sampling, the Markov chain is typically intialised with random values that result in a model that approximates very poorly the posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$. Hence, in sampling parameters using Markov chain sampling, it is necessary to run the sampler through many sampling iterations before beginning to store parameter estimates, in order to ensure that the initial values have been forgotten and the Markov chain has reached equilibrium. Similarly, once equlibrium has been reached, parameter samples that are drawn in quick succession will be correlated, as the Markov chain explores only slowly the parameter space. Therefore, in order to obtain many independent samples from the stationary distribution, it is important to ``thin'' the samples made by storing samples on only a small fraction of iterations, in order to ensure samples are taken from the whole parameter space.    
+
+\section{Thesis Objectives}
+This thesis describes the development of software for the analysis of fluorescence data. We implement and rigorously evaluate standard algorithms for the analysis of smFRET data. We then describe the implementation and evaluation of novel techniques for the analysis ofsmFRET data using sampling-based probabilistic inference. The primary objectives of this thesis are as follows. 
+
+XXX
+
+Each chapter in this thesis is presented in a stand-alone manner, to accurately reflect their relative independence. In each chapter, we first provide a more detailed overview of the specific context within which the research was performed. We then introduce any required theoretical concepts and experimental techniques, before presenting the relevant results and appropriate conclusion.
+
+
