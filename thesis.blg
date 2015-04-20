@@ -2,42 +2,42 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 Case mismatch error between cite keys Compeau2011 and compeau2011
+---line 526 of file thesis.aux
+ : \citation{Compeau2011
+ :                      }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Compeau2011 and compeau2011
+---line 531 of file thesis.aux
+ : \citation{Compeau2011
+ :                      }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Compeau2011 and compeau2011
 ---line 532 of file thesis.aux
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
-Case mismatch error between cite keys Compeau2011 and compeau2011
----line 537 of file thesis.aux
- : \citation{Compeau2011
- :                      }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys Compeau2011 and compeau2011
----line 538 of file thesis.aux
- : \citation{Compeau2011
- :                      }
-I'm skipping whatever remains of this command
 Case mismatch error between cite keys zerbino2008 and Zerbino2008
----line 546 of file thesis.aux
+---line 540 of file thesis.aux
  : \citation{zerbino2008
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 579 of file thesis.aux
+---line 573 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 586 of file thesis.aux
+---line 580 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 589 of file thesis.aux
+---line 583 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 594 of file thesis.aux
+---line 588 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
