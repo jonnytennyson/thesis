@@ -1,0 +1,113 @@
+\BOOKMARK [0][-]{chapter.1}{Thesis Overview}{}% 1
+\BOOKMARK [1][-]{section.1.1}{General Introduction}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Contributions}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Thesis Overview}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Introduction}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Fluorescence and FRET}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.1}{The Physical Basis of Fluorescence}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.2}{The Physical Basis of FRET}{section.2.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Single Molecule Fluorescence Microscopy}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.3.1}{Techniques of Single Molecule Imaging}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{Fluorophores for Single Molecule Imaging}{section.2.3}% 12
+\BOOKMARK [1][-]{section.2.4}{Confocal Microscopy}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.4.1}{Data Acquisition and Analysis}{section.2.4}% 14
+\BOOKMARK [2][-]{subsection.2.4.2}{Computational Challenges}{section.2.4}% 15
+\BOOKMARK [1][-]{section.2.5}{Probabilistic Inference and Bayesian Statistics}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.5.1}{Probabily Theory}{section.2.5}% 17
+\BOOKMARK [2][-]{subsection.2.5.2}{Monte Carlo Sampling}{section.2.5}% 18
+\BOOKMARK [1][-]{section.2.6}{Thesis Objectives}{chapter.2}% 19
+\BOOKMARK [0][-]{chapter.3}{Analysis Tools for Single Molecule Confocal Microscopy}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{Introduction}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.2.1}{The Single Molecule Fluorescence Experiment}{section.3.2}% 23
+\BOOKMARK [1][-]{section.3.3}{Data Analysis in Confocal smFRET Experiments}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.1}{Continuous Excitation}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.2}{Alternating Laser Excitation}{section.3.3}% 26
+\BOOKMARK [1][-]{section.3.4}{Development of Scientific Software}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.5}{pyFRET: Design and Implementation}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.5.1}{Code Layout and Design}{section.3.5}% 29
+\BOOKMARK [2][-]{subsection.3.5.2}{Simple Event Selection and Denoising}{section.3.5}% 30
+\BOOKMARK [2][-]{subsection.3.5.3}{Burst Search Algorithms}{section.3.5}% 31
+\BOOKMARK [1][-]{section.3.6}{RASP: Recurrence Analysis of Single Particles}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.6.1}{Compatibilities}{section.3.6}% 33
+\BOOKMARK [1][-]{section.3.7}{Experimental Methods}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.7.1}{Benchmarking the Gaussian Fitting Using Simulated Datasets}{section.3.7}% 35
+\BOOKMARK [2][-]{subsection.3.7.2}{Data to Evaluate the Simple Event Selection Algorithms}{section.3.7}% 36
+\BOOKMARK [2][-]{subsection.3.7.3}{Data to Evaluate Event Selection Using the Burst Search Algorithms}{section.3.7}% 37
+\BOOKMARK [2][-]{subsection.3.7.4}{Performance Analysis Using Mixtures of DNA Duplexes}{section.3.7}% 38
+\BOOKMARK [2][-]{subsection.3.7.5}{Testing the RASP Algorithm}{section.3.7}% 39
+\BOOKMARK [1][-]{section.3.8}{Performance Analysis of smFRET Analysis Algorithms}{chapter.3}% 40
+\BOOKMARK [2][-]{subsection.3.8.1}{Evaluating Performance with DNA Duplexes}{section.3.8}% 41
+\BOOKMARK [2][-]{subsection.3.8.2}{Evaluating the Burst Search Algorithms}{section.3.8}% 42
+\BOOKMARK [2][-]{subsection.3.8.3}{Evaluating Performance of the Gaussian Mixture Model}{section.3.8}% 43
+\BOOKMARK [2][-]{subsection.3.8.4}{Benchmarking the RASP Algorithm}{section.3.8}% 44
+\BOOKMARK [1][-]{section.3.9}{Conclusions}{chapter.3}% 45
+\BOOKMARK [1][-]{section.3.10}{Availability and Future Directions}{chapter.3}% 46
+\BOOKMARK [0][-]{chapter.4}{Bayesian Inference of Intramolecular Distances Using Single Molecule FRET}{}% 47
+\BOOKMARK [1][-]{section.4.1}{Overview}{chapter.4}% 48
+\BOOKMARK [1][-]{section.4.2}{Introduction}{chapter.4}% 49
+\BOOKMARK [2][-]{subsection.4.2.1}{A smFRET Experiment}{section.4.2}% 50
+\BOOKMARK [2][-]{subsection.4.2.2}{Approaches to Analysis of smFRET Data}{section.4.2}% 51
+\BOOKMARK [2][-]{subsection.4.2.3}{Model Based Inference}{section.4.2}% 52
+\BOOKMARK [1][-]{section.4.3}{Theory}{chapter.4}% 53
+\BOOKMARK [2][-]{subsection.4.3.1}{A Physical Model of a smFRET Experiment}{section.4.3}% 54
+\BOOKMARK [2][-]{subsection.4.3.2}{Inference of Model Parameters}{section.4.3}% 55
+\BOOKMARK [2][-]{subsection.4.3.3}{The Metropolis-Hastings Algorithm}{section.4.3}% 56
+\BOOKMARK [1][-]{section.4.4}{Experimental Methods}{chapter.4}% 57
+\BOOKMARK [1][-]{section.4.5}{Results}{chapter.4}% 58
+\BOOKMARK [2][-]{subsection.4.5.1}{Justification of the Gamma-Poisson Mixture Model}{section.4.5}% 59
+\BOOKMARK [1][-]{section.4.6}{Conclusions and Future Work}{chapter.4}% 60
+\BOOKMARK [0][-]{chapter.5}{Bayesian Inference of Oligomer Sizes Using Single Molecule FRET}{}% 61
+\BOOKMARK [1][-]{section.5.1}{Overview}{chapter.5}% 62
+\BOOKMARK [1][-]{section.5.2}{Introduction}{chapter.5}% 63
+\BOOKMARK [2][-]{subsection.5.2.1}{Diseases of Protein Aggregation}{section.5.2}% 64
+\BOOKMARK [2][-]{subsection.5.2.2}{Studying Protein Aggregation}{section.5.2}% 65
+\BOOKMARK [2][-]{subsection.5.2.3}{The Relationship Between Size and Photon Emission is Complex}{section.5.2}% 66
+\BOOKMARK [2][-]{subsection.5.2.4}{The Effect of Confocal Excitation Heterogeneity on Photon Emission}{section.5.2}% 67
+\BOOKMARK [2][-]{subsection.5.2.5}{Controlling Confocal Excitation Heterogeneity}{section.5.2}% 68
+\BOOKMARK [2][-]{subsection.5.2.6}{The DNA Holliday Junction as a Model Oligomer}{section.5.2}% 69
+\BOOKMARK [1][-]{section.5.3}{Theory}{chapter.5}% 70
+\BOOKMARK [2][-]{subsection.5.3.1}{A Simple Poisson Model of Oligomer Photon Emission}{section.5.3}% 71
+\BOOKMARK [2][-]{subsection.5.3.2}{A Gamma-Poisson Mixture Model of Oligomer Photon Emission}{section.5.3}% 72
+\BOOKMARK [1][-]{section.5.4}{Experimental Methods}{chapter.5}% 73
+\BOOKMARK [2][-]{subsection.5.4.1}{Labelling of Protein Monomers}{section.5.4}% 74
+\BOOKMARK [2][-]{subsection.5.4.2}{Protein Aggregation Experiments}{section.5.4}% 75
+\BOOKMARK [2][-]{subsection.5.4.3}{Preparation of DNA Holliday Junctions}{section.5.4}% 76
+\BOOKMARK [2][-]{subsection.5.4.4}{Simple FRET Measurements of DNA Holliday Junctions}{section.5.4}% 77
+\BOOKMARK [2][-]{subsection.5.4.5}{Flattening the Confocal Volume Using Acousto-Optic Deflection: A Modified Single Molecule Fluorescence Microscope}{section.5.4}% 78
+\BOOKMARK [2][-]{subsection.5.4.6}{Preparation of Microfluidic Channels}{section.5.4}% 79
+\BOOKMARK [2][-]{subsection.5.4.7}{smFRET Measurements to Determine the Effect of Unequal Excitation on Photon Emission}{section.5.4}% 80
+\BOOKMARK [2][-]{subsection.5.4.8}{Counting Photobleaching Steps Using TIRF Imaging}{section.5.4}% 81
+\BOOKMARK [1][-]{section.5.5}{Results}{chapter.5}% 82
+\BOOKMARK [2][-]{subsection.5.5.1}{The need for a Generative Model}{section.5.5}% 83
+\BOOKMARK [2][-]{subsection.5.5.2}{Understanding the Relationship Between Size and Photon Emission}{section.5.5}% 84
+\BOOKMARK [2][-]{subsection.5.5.3}{Inferring Event Brightness Using the Gamma-Poisson Model}{section.5.5}% 85
+\BOOKMARK [2][-]{subsection.5.5.4}{How Bright Are Holliday Junction Events}{section.5.5}% 86
+\BOOKMARK [2][-]{subsection.5.5.5}{Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}{section.5.5}% 87
+\BOOKMARK [1][-]{section.5.6}{Conclusions}{chapter.5}% 88
+\BOOKMARK [2][-]{subsection.5.6.1}{Complex Relationship between Size and Photon Emission}{section.5.6}% 89
+\BOOKMARK [2][-]{subsection.5.6.2}{Implications for Future Work on Molecular Sizing}{section.5.6}% 90
+\BOOKMARK [0][-]{chapter.6}{Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{}% 91
+\BOOKMARK [1][-]{section.6.1}{Overview}{chapter.6}% 92
+\BOOKMARK [1][-]{section.6.2}{Introduction}{chapter.6}% 93
+\BOOKMARK [2][-]{subsection.6.2.1}{Next-Generation Sequencing Technologies}{section.6.2}% 94
+\BOOKMARK [2][-]{subsection.6.2.2}{De Novo Sequence Assembly}{section.6.2}% 95
+\BOOKMARK [2][-]{subsection.6.2.3}{Paired End Reads and Mate Pair Sequencing}{section.6.2}% 96
+\BOOKMARK [2][-]{subsection.6.2.4}{Evaluating Assembly Quality}{section.6.2}% 97
+\BOOKMARK [2][-]{subsection.6.2.5}{Error Detection Methods}{section.6.2}% 98
+\BOOKMARK [1][-]{section.6.3}{Theory}{chapter.6}% 99
+\BOOKMARK [1][-]{section.6.4}{Experimental Methods}{chapter.6}% 100
+\BOOKMARK [1][-]{section.6.5}{Results}{chapter.6}% 101
+\BOOKMARK [1][-]{section.6.6}{Conclusions}{chapter.6}% 102
+\BOOKMARK [0][-]{chapter.7}{Conclusions and Future Work}{}% 103
+\BOOKMARK [1][-]{section.7.1}{General Conclusions}{chapter.7}% 104
+\BOOKMARK [2][-]{subsection.7.1.1}{pyFRET}{section.7.1}% 105
+\BOOKMARK [2][-]{subsection.7.1.2}{Inference Analysis of smFRET Data}{section.7.1}% 106
+\BOOKMARK [2][-]{subsection.7.1.3}{Inference Analysis of Oligomer Sizing}{section.7.1}% 107
+\BOOKMARK [2][-]{subsection.7.1.4}{NxRepair}{section.7.1}% 108
+\BOOKMARK [1][-]{section.7.2}{Applications and Future Work}{chapter.7}% 109
+\BOOKMARK [2][-]{subsection.7.2.1}{Open Source Software for smFRET}{section.7.2}% 110
+\BOOKMARK [2][-]{subsection.7.2.2}{Inference Analysis of smFRET Data}{section.7.2}% 111
+\BOOKMARK [2][-]{subsection.7.2.3}{Accurate Sizing of Fluorescent Oligomers}{section.7.2}% 112
+\BOOKMARK [2][-]{subsection.7.2.4}{Error Detection in de novo Assemblies}{section.7.2}% 113

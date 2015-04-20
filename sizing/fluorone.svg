@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="fluorone.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.66449955"
+     inkscape:cx="492.92806"
+     inkscape:cy="536.9047"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs4">
+    <filter
+       id="filter6493"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix6495"
+         type="saturate"
+         values="0" />
+    </filter>
+    <filter
+       id="filter6497"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix6499"
+         type="saturate"
+         values="0" />
+    </filter>
+    <filter
+       id="filter6501"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix6503"
+         type="saturate"
+         values="0" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <g
+       transform="translate(51.651084,-116.73114)"
+       id="g4144"
+       style="stroke-linejoin:miter;font-size:12px;stroke-width:1;stroke-opacity:1;fill-opacity:1;stroke-dashoffset:0;stroke:#000000;stroke-linecap:square;stroke-miterlimit:10;font-family:Dialog;stroke-dasharray:none;font-weight:normal;font-style:normal;fill:#000000;">
+      <g
+         id="g4080">
+        <g
+           id="g4082">
+          <polygon
+             style="stroke:none;"
+             points="220,961 189,943 190,942 221,960 "
+             id="polygon4084" />
+          <polygon
+             style="stroke:none;"
+             points="221,954 194,938 195,937 222,953 "
+             id="polygon4086" />
+          <polygon
+             style="stroke:none;"
+             points="191,942 191,906 189,906 189,942 "
+             id="polygon4088" />
+          <polygon
+             style="stroke:none;"
+             points="190,907 221,889 220,888 189,906 "
+             id="polygon4090" />
+          <polygon
+             style="stroke:none;"
+             points="195,913 222,897 221,896 194,912 "
+             id="polygon4092" />
+          <polygon
+             style="stroke:none;"
+             points="220,889 251,907 252,906 221,888 "
+             id="polygon4094" />
+          <polygon
+             style="stroke:none;"
+             points="253,906 253,942 251,942 251,906 "
+             id="polygon4096" />
+          <polygon
+             style="stroke:none;"
+             points="246,909 246,939 244,939 244,909 "
+             id="polygon4098" />
+          <polygon
+             style="stroke:none;"
+             points="252,943 221,961 220,960 251,942 "
+             id="polygon4100" />
+          <polygon
+             style="stroke:none;"
+             points="251,943 282,961 283,960 252,942 "
+             id="polygon4102" />
+          <polygon
+             style="stroke:none;"
+             points="283,961 314,943 313,942 282,960 "
+             id="polygon4104" />
+          <polygon
+             style="stroke:none;"
+             points="281,954 308,938 307,937 280,953 "
+             id="polygon4106" />
+          <polygon
+             style="stroke:none;"
+             points="315,942 315,906 313,906 313,942 "
+             id="polygon4108" />
+          <polygon
+             style="stroke:none;"
+             points="313,907 282,889 283,888 314,906 "
+             id="polygon4110" />
+          <polygon
+             style="stroke:none;"
+             points="283,889 252,907 251,906 282,888 "
+             id="polygon4112" />
+          <polygon
+             style="stroke:none;"
+             points="314,907 345,889 344,888 313,906 "
+             id="polygon4114" />
+          <polygon
+             style="stroke:none;"
+             points="319,913 346,897 345,896 318,912 "
+             id="polygon4116" />
+          <polygon
+             style="stroke:none;"
+             points="344,889 376,907 377,906 345,888 "
+             id="polygon4118" />
+          <polygon
+             style="stroke:none;"
+             points="378,906 378,942 376,942 376,906 "
+             id="polygon4120" />
+          <polygon
+             style="stroke:none;"
+             points="377,943 345,961 344,960 376,942 "
+             id="polygon4122" />
+          <polygon
+             style="stroke:none;"
+             points="371,938 343,954 342,953 370,937 "
+             id="polygon4124" />
+          <polygon
+             style="stroke:none;"
+             points="344,961 313,943 314,942 345,960 "
+             id="polygon4126" />
+          <polygon
+             style="stroke:none;"
+             points="375,905 406,887 405,886 374,904 "
+             id="polygon4128" />
+          <polygon
+             style="stroke:none;"
+             points="378,910 409,892 408,891 377,909 "
+             id="polygon4130" />
+          <rect
+             x="277"
+             y="880"
+             width="13"
+             style="fill:#ffffff;stroke:none;"
+             height="16"
+             id="rect4132" />
+          <text
+             x="279"
+             y="894"
+             style="fill:#ff0000;stroke:none;"
+             xml:space="preserve"
+             id="text4134">O</text>
+          <rect
+             x="402"
+             y="880"
+             width="13"
+             style="fill:#ffffff;stroke:none;"
+             height="16"
+             id="rect4136" />
+          <text
+             x="404"
+             y="894"
+             style="fill:#ff0000;stroke:none;"
+             xml:space="preserve"
+             id="text4138">O</text>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="translate(62.151084,-362.23115)"
+       id="g4488"
+       style="stroke-linejoin:miter;font-size:12px;stroke-width:1;stroke-opacity:1;fill-opacity:1;stroke-dashoffset:0;stroke:#000000;stroke-linecap:square;stroke-miterlimit:10;font-family:Dialog;stroke-dasharray:none;font-weight:normal;font-style:normal;fill:#000000;">
+      <g
+         id="g4354">
+        <g
+           id="g4356">
+          <polygon
+             style="stroke:none;"
+             points="299,878 298,879 266,861 267,860 "
+             id="polygon4358" />
+          <polygon
+             style="stroke:none;"
+             points="293,884 292,885 264,869 265,868 "
+             id="polygon4360" />
+          <polygon
+             style="stroke:none;"
+             points="298,878 300,878 300,914 298,914 "
+             id="polygon4362" />
+          <polygon
+             style="stroke:none;"
+             points="298,878 299,879 330,861 329,860 "
+             id="polygon4364" />
+          <polygon
+             style="stroke:none;"
+             points="266,860 267,861 236,879 235,878 "
+             id="polygon4366" />
+          <polygon
+             style="stroke:none;"
+             points="266,932 267,933 299,915 298,914 "
+             id="polygon4368" />
+          <polygon
+             style="stroke:none;"
+             points="264,925 265,926 293,910 292,909 "
+             id="polygon4370" />
+          <polygon
+             style="stroke:none;"
+             points="299,914 298,915 329,933 330,932 "
+             id="polygon4372" />
+          <polygon
+             style="stroke:none;"
+             points="362,878 361,879 329,861 330,860 "
+             id="polygon4374" />
+          <polygon
+             style="stroke:none;"
+             points="356,884 355,885 327,869 328,868 "
+             id="polygon4376" />
+          <polygon
+             style="stroke:none;"
+             points="204,860 203,861 235,879 236,878 "
+             id="polygon4378" />
+          <polygon
+             style="stroke:none;"
+             points="235,878 237,878 237,914 235,914 "
+             id="polygon4380" />
+          <polygon
+             style="stroke:none;"
+             points="228,881 230,881 230,911 228,911 "
+             id="polygon4382" />
+          <polygon
+             style="stroke:none;"
+             points="236,914 235,915 266,933 267,932 "
+             id="polygon4384" />
+          <polygon
+             style="stroke:none;"
+             points="266,932 268,932 268,969 266,969 "
+             id="polygon4386" />
+          <polygon
+             style="stroke:none;"
+             points="329,932 330,933 362,915 361,914 "
+             id="polygon4388" />
+          <polygon
+             style="stroke:none;"
+             points="327,925 328,926 356,910 355,909 "
+             id="polygon4390" />
+          <polygon
+             style="stroke:none;"
+             points="361,914 363,914 363,878 361,878 "
+             id="polygon4392" />
+          <polygon
+             style="stroke:none;"
+             points="361,878 362,879 393,861 392,860 "
+             id="polygon4394" />
+          <polygon
+             style="stroke:none;"
+             points="203,860 204,861 173,879 172,878 "
+             id="polygon4396" />
+          <polygon
+             style="stroke:none;"
+             points="204,868 205,869 178,885 177,884 "
+             id="polygon4398" />
+          <polygon
+             style="stroke:none;"
+             points="203,932 204,933 236,915 235,914 "
+             id="polygon4400" />
+          <polygon
+             style="stroke:none;"
+             points="266,969 267,970 236,988 235,987 "
+             id="polygon4402" />
+          <polygon
+             style="stroke:none;"
+             points="267,977 268,978 241,994 240,993 "
+             id="polygon4404" />
+          <polygon
+             style="stroke:none;"
+             points="267,969 266,970 298,988 299,987 "
+             id="polygon4406" />
+          <polygon
+             style="stroke:none;"
+             points="393,860 392,861 424,879 425,878 "
+             id="polygon4408" />
+          <polygon
+             style="stroke:none;"
+             points="172,878 174,878 174,914 172,914 "
+             id="polygon4410" />
+          <polygon
+             style="stroke:none;"
+             points="173,878 172,879 141,861 142,860 "
+             id="polygon4412" />
+          <polygon
+             style="stroke:none;"
+             points="173,914 172,915 203,933 204,932 "
+             id="polygon4414" />
+          <polygon
+             style="stroke:none;"
+             points="178,909 177,910 204,926 205,925 "
+             id="polygon4416" />
+          <polygon
+             style="stroke:none;"
+             points="235,987 237,987 237,1023 235,1023 "
+             id="polygon4418" />
+          <polygon
+             style="stroke:none;"
+             points="298,1023 300,1023 300,987 298,987 "
+             id="polygon4420" />
+          <polygon
+             style="stroke:none;"
+             points="291,1020 293,1020 293,990 291,990 "
+             id="polygon4422" />
+          <polygon
+             style="stroke:none;"
+             points="298,987 299,988 330,970 329,969 "
+             id="polygon4424" />
+          <polygon
+             style="stroke:none;"
+             points="424,878 425,879 456,861 455,860 "
+             id="polygon4426" />
+          <polygon
+             style="stroke:none;"
+             points="141,860 143,860 143,824 141,824 "
+             id="polygon4428" />
+          <polygon
+             style="stroke:none;"
+             points="236,1023 235,1024 266,1042 267,1041 "
+             id="polygon4430" />
+          <polygon
+             style="stroke:none;"
+             points="241,1018 240,1019 267,1035 268,1034 "
+             id="polygon4432" />
+          <polygon
+             style="stroke:none;"
+             points="266,1041 267,1042 299,1024 298,1023 "
+             id="polygon4434" />
+          <polygon
+             style="stroke:none;"
+             points="330,969 329,970 361,988 362,987 "
+             id="polygon4436" />
+          <polygon
+             style="stroke:none;"
+             points="326,969 328,969 328,946 326,946 "
+             id="polygon4438" />
+          <polygon
+             style="stroke:none;"
+             points="332,969 334,969 334,946 332,946 "
+             id="polygon4440" />
+          <polygon
+             style="stroke:none;"
+             points="141,824 142,825 173,807 172,806 "
+             id="polygon4442" />
+          <polygon
+             style="stroke:none;"
+             points="172,914 173,915 142,933 141,932 "
+             id="polygon4444" />
+          <polygon
+             style="stroke:none;"
+             points="362,914 361,915 392,933 393,932 "
+             id="polygon4446" />
+          <polygon
+             style="stroke:none;"
+             points="361,987 362,988 393,970 392,969 "
+             id="polygon4448" />
+          <polygon
+             style="stroke:none;"
+             points="393,969 392,970 423,988 424,987 "
+             id="polygon4450" />
+          <rect
+             x="261"
+             y="852"
+             width="13"
+             style="fill:#ffffff;stroke:none;"
+             height="16"
+             id="rect4452" />
+          <rect
+             x="270"
+             y="844"
+             width="11"
+             style="fill:#ffffff;stroke:none;"
+             height="12"
+             id="rect4454" />
+          <text
+             x="263"
+             y="866"
+             style="fill:#ff0000;stroke:none;"
+             xml:space="preserve"
+             id="text4456">O</text>
+          <text
+             x="272"
+             y="854"
+             style="fill:#ff0000;stroke:none;"
+             xml:space="preserve"
+             id="text4458">+</text>
+          <rect
+             x="387"
+             y="852"
+             width="13"
+             style="fill:#ffffff;stroke:none;"
+             height="16"
+             id="rect4460" />
+          <rect
+             x="396"
+             y="852"
+             width="13"
+             style="fill:#ffffff;stroke:none;"
+             height="16"
+             id="rect4462" />
+          <text
+             x="389"
+             y="866"
+             style="fill:#0000ff;stroke:none;"
+             xml:space="preserve"
+             id="text4464">N</text>
+          <text
+             x="398"
+             y="866"
+             style="fill:#0000ff;stroke:none;"
+             xml:space="preserve"
+             id="text4466">H</text>
+          <rect
+             x="136"
+             y="852"
+             width="13"
+             style="fill:#ffffff;stroke:none;"
+             height="16"
+             id="rect4468" />
+          <rect
+             x="127"
+             y="852"
+             width="13"
+             style="fill:#ffffff;stroke:none;"
+             height="16"
+             id="rect4470" />
+          <text
+             x="138"
+             y="866"
+             style="fill:#0000ff;stroke:none;"
+             xml:space="preserve"
+             id="text4472">N</text>
+          <text
+             x="129"
+             y="866"
+             style="fill:#0000ff;stroke:none;"
+             xml:space="preserve"
+             id="text4474">H</text>
+          <rect
+             x="356"
+             y="979"
+             width="13"
+             style="fill:#ffffff;stroke:none;"
+             height="16"
+             id="rect4476" />
+          <text
+             x="358"
+             y="993"
+             style="fill:#ff0000;stroke:none;"
+             xml:space="preserve"
+             id="text4478">O</text>
+          <rect
+             x="324"
+             y="938"
+             width="13"
+             style="fill:#ffffff;stroke:none;"
+             height="16"
+             id="rect4480" />
+          <text
+             x="326"
+             y="952"
+             style="fill:#ff0000;stroke:none;"
+             xml:space="preserve"
+             id="text4482">O</text>
+        </g>
+      </g>
+    </g>
+    <g
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;font-family:Dialog;"
+       id="g4813"
+       transform="translate(53.651084,-682.23115)">
+      <g
+         id="g4815">
+        <polygon
+           id="polygon4817"
+           points="330,871 298,852 299,851 331,870 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4819"
+           points="324,877 296,860 297,859 325,876 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4821"
+           points="332,870 332,906 330,906 330,870 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4823"
+           points="331,871 362,852 361,851 330,870 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4825"
+           points="299,852 268,871 267,870 298,851 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4827"
+           points="299,925 331,907 330,906 298,924 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4829"
+           points="297,918 325,902 324,901 296,917 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4831"
+           points="330,907 361,925 362,924 331,906 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4833"
+           points="393,871 361,852 362,851 394,870 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4835"
+           points="387,877 359,860 360,859 388,876 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4837"
+           points="363,851 363,815 361,815 361,851 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4839"
+           points="235,852 267,871 268,870 236,851 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4841"
+           points="269,870 269,906 267,906 267,870 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4843"
+           points="262,873 262,903 260,903 260,873 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4845"
+           points="267,907 298,925 299,924 268,906 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4847"
+           points="300,924 300,960 298,960 298,924 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4849"
+           points="362,925 394,907 393,906 361,924 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4851"
+           points="360,918 388,902 387,901 359,917 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4853"
+           points="395,906 395,870 393,870 393,906 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4855"
+           points="394,871 425,852 424,851 393,870 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4857"
+           points="363,815 363,779 361,779 361,815 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4859"
+           points="362,813 326,813 326,811 362,811 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4861"
+           points="362,819 326,819 326,817 362,817 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4863"
+           points="362,813 399,813 399,811 362,811 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4865"
+           points="362,819 399,819 399,817 362,817 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4867"
+           points="236,852 205,871 204,870 235,851 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4869"
+           points="237,859 210,876 209,875 236,858 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4871"
+           points="237,851 237,815 235,815 235,851 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4873"
+           points="236,925 268,907 267,906 235,924 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4875"
+           points="299,961 268,980 267,979 298,960 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4877"
+           points="300,968 273,985 272,984 299,967 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4879"
+           points="298,961 330,980 331,979 299,960 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4881"
+           points="206,870 206,906 204,906 204,870 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4883"
+           points="204,871 173,852 174,851 205,870 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4885"
+           points="237,815 237,779 235,779 235,815 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4887"
+           points="236,813 200,813 200,811 236,811 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4889"
+           points="236,819 200,819 200,817 236,817 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4891"
+           points="236,813 273,813 273,811 236,811 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4893"
+           points="236,819 273,819 273,817 236,817 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4895"
+           points="204,907 235,925 236,924 205,906 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4897"
+           points="209,902 236,918 237,917 210,901 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4899"
+           points="269,979 269,1015 267,1015 267,979 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4901"
+           points="332,1015 332,979 330,979 330,1015 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4903"
+           points="325,1012 325,982 323,982 323,1012 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4905"
+           points="331,980 362,961 361,960 330,979 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4907"
+           points="267,1016 298,1034 299,1033 268,1015 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4909"
+           points="272,1011 299,1027 300,1026 273,1010 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4911"
+           points="268,1016 236,1034 235,1033 267,1015 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4913"
+           points="299,1034 331,1016 330,1015 298,1033 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4915"
+           points="361,961 393,980 394,979 362,960 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4917"
+           points="360,960 360,938 358,938 358,960 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4919"
+           points="366,960 366,938 364,938 364,960 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4921"
+           points="235,1034 204,1016 205,1015 236,1033 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4923"
+           points="234,1033 234,1069 232,1069 232,1033 "
+           style="stroke:none;" />
+        <polygon
+           id="polygon4925"
+           points="240,1033 240,1069 238,1069 238,1033 "
+           style="stroke:none;" />
+        <rect
+           id="rect4927"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="843"
+           x="293" />
+        <rect
+           id="rect4929"
+           height="12"
+           style="fill:#ffffff;stroke:none;"
+           width="11"
+           y="835"
+           x="302" />
+        <text
+           id="text4931"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="857"
+           x="295">O</text>
+        <text
+           id="text4933"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="845"
+           x="304">+</text>
+        <rect
+           id="rect4935"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="12"
+           y="807"
+           x="356" />
+        <text
+           id="text4937"
+           xml:space="preserve"
+           style="fill:#b2b200;stroke:none;"
+           y="821"
+           x="358">S</text>
+        <rect
+           id="rect4939"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="843"
+           x="419" />
+        <rect
+           id="rect4941"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="843"
+           x="428" />
+        <rect
+           id="rect4943"
+           height="12"
+           style="fill:#ffffff;stroke:none;"
+           width="9"
+           y="851"
+           x="437" />
+        <text
+           id="text4945"
+           xml:space="preserve"
+           style="fill:#0000ff;stroke:none;"
+           y="857"
+           x="421">N</text>
+        <text
+           id="text4947"
+           xml:space="preserve"
+           style="fill:#0000ff;stroke:none;"
+           y="857"
+           x="430">H</text>
+        <text
+           id="text4949"
+           xml:space="preserve"
+           style="font-size:8.39999961999999911px;fill:#0000ff;stroke:none;"
+           y="861"
+           x="439">2</text>
+        <rect
+           id="rect4951"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="771"
+           x="356" />
+        <rect
+           id="rect4953"
+           height="12"
+           style="fill:#ffffff;stroke:none;"
+           width="7"
+           y="763"
+           x="365" />
+        <text
+           id="text4955"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="785"
+           x="358">O</text>
+        <text
+           id="text4957"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="773"
+           x="367">-</text>
+        <rect
+           id="rect4959"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="807"
+           x="320" />
+        <text
+           id="text4961"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="821"
+           x="322">O</text>
+        <rect
+           id="rect4963"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="807"
+           x="393" />
+        <text
+           id="text4965"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="821"
+           x="395">O</text>
+        <rect
+           id="rect4967"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="12"
+           y="807"
+           x="230" />
+        <text
+           id="text4969"
+           xml:space="preserve"
+           style="fill:#b2b200;stroke:none;"
+           y="821"
+           x="232">S</text>
+        <rect
+           id="rect4971"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="843"
+           x="168" />
+        <rect
+           id="rect4973"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="843"
+           x="154" />
+        <rect
+           id="rect4975"
+           height="12"
+           style="fill:#ffffff;stroke:none;"
+           width="9"
+           y="851"
+           x="163" />
+        <text
+           id="text4977"
+           xml:space="preserve"
+           style="fill:#0000ff;stroke:none;"
+           y="857"
+           x="170">N</text>
+        <text
+           id="text4979"
+           xml:space="preserve"
+           style="fill:#0000ff;stroke:none;"
+           y="857"
+           x="156">H</text>
+        <text
+           id="text4981"
+           xml:space="preserve"
+           style="font-size:8.39999961999999911px;fill:#0000ff;stroke:none;"
+           y="861"
+           x="165">2</text>
+        <rect
+           id="rect4983"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="771"
+           x="230" />
+        <rect
+           id="rect4985"
+           height="12"
+           style="fill:#ffffff;stroke:none;"
+           width="7"
+           y="763"
+           x="239" />
+        <text
+           id="text4987"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="785"
+           x="232">O</text>
+        <text
+           id="text4989"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="773"
+           x="241">-</text>
+        <rect
+           id="rect4991"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="807"
+           x="194" />
+        <text
+           id="text4993"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="821"
+           x="196">O</text>
+        <rect
+           id="rect4995"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="807"
+           x="267" />
+        <text
+           id="text4997"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="821"
+           x="269">O</text>
+        <rect
+           id="rect4999"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="971"
+           x="388" />
+        <rect
+           id="rect5001"
+           height="12"
+           style="fill:#ffffff;stroke:none;"
+           width="7"
+           y="963"
+           x="397" />
+        <text
+           id="text5003"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="985"
+           x="390">O</text>
+        <text
+           id="text5005"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="973"
+           x="399">-</text>
+        <rect
+           id="rect5007"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="930"
+           x="356" />
+        <text
+           id="text5009"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="944"
+           x="358">O</text>
+        <rect
+           id="rect5011"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="1007"
+           x="199" />
+        <rect
+           id="rect5013"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="1007"
+           x="190" />
+        <text
+           id="text5015"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="1021"
+           x="201">O</text>
+        <text
+           id="text5017"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="1021"
+           x="192">H</text>
+        <rect
+           id="rect5019"
+           height="16"
+           style="fill:#ffffff;stroke:none;"
+           width="13"
+           y="1061"
+           x="230" />
+        <text
+           id="text5021"
+           xml:space="preserve"
+           style="fill:#ff0000;stroke:none;"
+           y="1075"
+           x="232">O</text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="101.43125"
+       y="137.38789"
+       id="text6505"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6507"
+         x="101.43125"
+         y="137.38789">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="101.09922"
+       y="797.87616"
+       id="text6509"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6511"
+         x="101.09922"
+         y="797.87616">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="100.83555"
+       y="467.64178"
+       id="text6513"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6515"
+         x="100.83555"
+         y="467.64178">B</tspan></text>
+  </g>
+</svg>

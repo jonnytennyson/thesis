@@ -1,0 +1,963 @@
+\begin{thebibliography}{100}
+
+\bibitem{ha96}
+T.~Ha, T.~Enderle, D.~F. Ogletree, D.~S. Chemla, P.~R. Selvin, and S.~Weiss.
+\newblock {Probing the interaction between two single molecules: Fluorescence
+  resonance energy transfer between a single donor and a single acceptor}.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, {93}({13}):{6264--6268}, {JUN 25}
+  {1996}.
+
+\bibitem{haran03}
+G~Haran.
+\newblock {Single-molecule fluorescence spectroscopy of biomolecular folding}.
+\newblock {\em {J. Phys.: Condens. Matter}}, {15}({32}):{R1291--R1317}, {AUG
+  20} {2003}.
+
+\bibitem{schuler02}
+B.~Schuler, E.~A. Lipman, and W.~A. Eaton.
+\newblock {Probing the free-energy surface for protein folding with
+  single-molecule fluorescence spectroscopy}.
+\newblock {\em {Nature}}, {419}({6908}):{743--747}, {OCT 17} {2002}.
+
+\bibitem{weiss00}
+S~Weiss.
+\newblock {Measuring conformational dynamics of biomolecules by single molecule
+  fluorescence spectroscopy}.
+\newblock {\em {Nat. Struct. Mol. Biol}}, {7}({9}):{724--729}, {SEP} {2000}.
+
+\bibitem{Albani2011}
+J.~R. Albani.
+\newblock {\em Structure and Dynamics of Macromolecules: Absorption and
+  Fluorescence Studies: Absorption and Fluorescence Studies}.
+\newblock Elselvier, Amsterdam, 2011.
+
+\bibitem{Horrocks2014}
+M.~H. Horrocks.
+\newblock {\em Development of single-molecule techniques to study the
+  aggregation of {$\alpha$}-synuclein}.
+\newblock PhD thesis, University of Cambridge, 2014.
+
+\bibitem{forster48}
+T.~Forster.
+\newblock Zweischenmolekulare energiewanderung undfluoreszenz.
+\newblock {\em Annalen der Physik}, 2:55--75, 1948.
+
+\bibitem{Demchenko2008}
+A.~P. Demchenko.
+\newblock {\em Development of single-molecule techniques to study the
+  aggregation of {$\alpha$}-synuclein}.
+\newblock Springer, 2008.
+
+\bibitem{stryer67}
+L.~Stryer and R.~P. Haughland.
+\newblock Energy transfer: a spectroscopic ruler.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 58:719--726, 1967.
+
+\bibitem{horrocks2012}
+M.~H. Horrocks, H.~Li, J.~Shim, R.~T. Ranasinghe, R.~W. Clarke, W.~T.~S. Huck,
+  C.~Abell, and D.~Klenerman.
+\newblock Single molecule fluorescence under conditions of fast flow.
+\newblock {\em Anal. Chem.}, 84:179--185, 2012.
+
+\bibitem{nir06}
+E.~Nir, X.~Michalet, K.~M. Hamadani, T.~A. Laurence, D.~Neuhauser,
+  Y.~Kovchegov, and S.~Weiss.
+\newblock {Shot-noise limited single-molecule FRET histograms: Comparison
+  between theory and experiments}.
+\newblock {\em J. Phys. Chem. B}, {110}({44}):{22103--22124}, {NOV 9} {2006}.
+
+\bibitem{joo08}
+C.~Joo, Balci H., Y.~Ishitsuka, C.~Buranachai, and T.~Ha.
+\newblock Advances in single-molecule fluorescence methods for molecular
+  biology.
+\newblock {\em Annual Reviews of Biochemistry}, 77:51--76, 2008.
+
+\bibitem{Walter2008}
+N.~G. Walter, C.~Y. Huang, A.~J. Manzo, and M.~A. Sobhy.
+\newblock Do-it-yourself guide: how to use the modern single-molecule toolkit.
+\newblock {\em Nat Methods.}, 5:475--489, 2008.
+
+\bibitem{orte06}
+A.~Orte, R.~Clarke, S.~Balasubramanian, and D.~Klenerman.
+\newblock Determination of the fraction and stoichiometry of femtomolar levels
+  of biomolecular complexes in an excess of monomer using single-molecule,
+  two-colour coincidence detection.
+\newblock {\em Analytical Chemistry}, 78:7706--7715, 2006.
+
+\bibitem{orte10}
+A.~Orte, R.~Clarke, and D.~Klenerman.
+\newblock Single-molecule two-colour coincidence detection to probe bimolecular
+  associations.
+\newblock {\em Biochemical Society Transactions}, 38:914--918, 2010.
+
+\bibitem{cremades2012}
+N.~Cremades, S.~I.~A Cohen, E.~Deas, A.~Y. Abramov, A.~Y. Chen, A.~Orte,
+  M.~Sandal, R.~W. Clarke, P.~Dunne, F.~A. Aprile, C.~W. Bertoncini, N.~W.
+  Wood, T.~P.~J. Knowles, C.~M. Dobson, and D.~Klenerman.
+\newblock Direct observation of the interconversion of normal and toxic forms
+  of a-synuclein.
+\newblock {\em Cell}, 149:1048 -- 1059, 2012.
+
+\bibitem{Ye2012}
+Ye~Y., G.~Blaser, M.~H. Horrocks, M.~J. Ruedas-Rama, S.~Ibrahim, A.~A. Zhukov,
+  A.~Orte, D.~Klenerman, S.~E. Jackson, and Komander D.
+\newblock Ubiquitin chain conformation regulates recognition and activity of
+  interacting proteins.
+\newblock {\em Nature}, 492:266--270, 2012.
+
+\bibitem{kapanidis05}
+A.N. Kapanidis, T.A. Laurence, N.K. Lee, E.~Margeat, X.~Kong, and S.~Weiss.
+\newblock Alternating-laser excitation of single molecules.
+\newblock {\em Acc. Chem. Res.}, 38:532--533, 2005.
+
+\bibitem{doose07}
+S.~Doose, M.~Heilemann, X.~Michalet, S.~Weiss, and A.~N. Kapanidis.
+\newblock Periodic acceptor excitation spectroscopy of single molecules.
+\newblock {\em Eur. Biophys. J.}, 36:669--674, 2006.
+
+\bibitem{horrocks12}
+M.~H. Horrocks, H.~Li, J.~Shim, R.~T. Ranasinghe, R.~W. Clarke, W.~T.~S. Huck,
+  C.~Abell, and D.~Klenerman.
+\newblock Single molecule fluorescence under conditions of fast flow.
+\newblock {\em Anal. Chem.}, 84:179--185, 2012.
+
+\bibitem{horrocks2013}
+M.~H. Horrocks, L.~Rajah, P.~J{\"o}nsson, M.~Kjaergaard, M.~Vendruscolo,
+  T.~P.~J. Knowles, and D.~Klenerman.
+\newblock Single-molecule measurements of transient biomolecular complexes
+  through microfluidic dilution.
+\newblock {\em Anal. Chem.}, 85:6855--6859, 2013.
+
+\bibitem{barberBRML2012}
+D.~Barber.
+\newblock {\em {Bayesian Reasoning and Machine Learning}}.
+\newblock {Cambridge University Press}, 2012.
+
+\bibitem{hastings70}
+W.K. Hastings.
+\newblock Monte carlo sampling methods using markov chains and their
+  applications.
+\newblock {\em Biometrika}, 57:97--109, 1970.
+
+\bibitem{Norris1998}
+J.~R. Norris.
+\newblock {\em {Markov chains}}.
+\newblock {Cambridge University Press}, 1998.
+
+\bibitem{Smith1993}
+A.~F.~M. Smith and G.~0. Roberts.
+\newblock Bayesian computation via the gibbs sampler and related markov chain
+  monte carlo method.
+\newblock {\em J. R. Statist. Soc. B}, 55:3--23, 1993.
+
+\bibitem{metropolis53}
+N.~Metropolis, A.~W. Rosenbluth, M.~N. Rosenbluth, A.~H. Teller, and E.~Teller.
+\newblock Equations of state calculations by fast computing machines.
+\newblock {\em Journal of Chemical Physics}, 21:1087--1092, 1953.
+
+\bibitem{chib95}
+S.~Chib and E.~Greenberg.
+\newblock Understanding the metropolis-hastings algorithm.
+\newblock {\em Am. Stat.}, 49:327--335, 1995.
+
+\bibitem{gelman1995}
+A.~Gelman, J.~B. Carlin, H.~S. Stern, and D.~B. Rubin.
+\newblock {\em {Bayesian Data Analysis, Second Edition (Chapman \& Hall/CRC
+  Texts in Statistical Science)}}.
+\newblock Chapman and Hall/CRC, 2003.
+
+\bibitem{Neal2003}
+R.~M. Neal.
+\newblock Slice sampling.
+\newblock {\em Ann. Stat.}, 31:705--767, 2003.
+
+\bibitem{deniz01}
+A.~A. Deniz, T.~A. Lawrence, M.~Dahan, D.~S. Chemla, P.~S. Schultz, and
+  S.~Weiss.
+\newblock Ratiometric single-molecule studies of freely diffusing molecules.
+\newblock {\em Annu. Rev. Phys. Chem.}, 52:233--253, 2001.
+
+\bibitem{gell06}
+C.~Gell, D.~Brockwell, and A.~Smith.
+\newblock {\em Handbook of single molecule fluorescence}.
+\newblock Oxford University Press, Oxford, 2006.
+
+\bibitem{muller05}
+B.~K. Muller, E.~Zaychikov, C.~Brauchle, and D.~C. Lamb.
+\newblock {Pulsed interleaved excitation}.
+\newblock {\em {Biophys. J.}}, {89}({5}):{3508--3522}, {NOV} {2005}.
+
+\bibitem{kudryavtsev2012}
+V.~Kudryavtsev, M.~Sikor, S.~Kalinin, D.~Mokranjac, C.~A.~M. Seidel, and D.~C.
+  Lamb.
+\newblock Combining mfd and pie for accurate single-pair förster resonance
+  energy transfer measurements.
+\newblock {\em ChemPhysChem}, 13:1060--1078, 2012.
+
+\bibitem{eggeling01}
+C.~Eggeling, S.~Berger, L.~Brand, J.R. Fries, J.~Schaffer, A.~Volkmer, and
+  Seidel C.A.M.
+\newblock Data registration and selective single-molecule analysis using
+  multi-parameter fluorescence detection.
+\newblock {\em J. Biotechnol.}, 86:163--180, 2001.
+
+\bibitem{wilson06}
+G.~Wilson.
+\newblock Where's the real bottleneck in scientific computing?
+\newblock {\em American Scientist}, 94:5--6, 2006.
+
+\bibitem{merali10}
+Z.~Merali.
+\newblock Computational science: Error, why scientific programming does not
+  compute.
+\newblock {\em Nature}, 467:775--777, 2010.
+
+\bibitem{mirams13}
+G.~R. Mirams, C.~J. Arthurs, M.~O. Bernabeu, R.~Bordas, J.~Cooper, A.~Corrias,
+  Y.~Davit, S.-J. Dunn, A.~G. Fletcher, D.~G. Harvey, M.~E. Marsh, J.~M.
+  Osborne, P.~Pathmanathan, J.~Pitt-Francis, J.~Southern, N.~Zemzemi, and D.~J.
+  Gavaghan.
+\newblock Chaste: An open source c++ library for computational physiology and
+  biology.
+\newblock {\em PLOS Comp. Biol.}, 9:e1002970-- e1002970, 2013.
+
+\bibitem{sisamakis2010}
+E.~Sisamakis, A.~Valeri, S.~Kalinin, P.~J. Rothwell, and C.~A.~M. Seidel.
+\newblock Accurate single-molecule fret studies using multiparameter
+  fluorescence detection.
+\newblock {\em Methods in Enzymology}, 475:455--514, 2010.
+
+\bibitem{lee06}
+N.~K Lee, A.~N. Kapanidis, Y.~Wang, X.~Michalet, J.~Mukhopadhyay, R.~H.
+  Ebright, and S.~Weiss.
+\newblock Accurate fret measurements within single diffusing biomolecules using
+  alternating-laser excitation.
+\newblock {\em Biophys. J.}, 88:2939--2953, 2006.
+
+\bibitem{numpy11}
+S.~van~der Walt, S.~C. Colbert, and Varoquaux G.
+\newblock The numpy array: A structure for efficient numerical computation.
+\newblock {\em Comput. Sci. Eng.}, 13:9--12, 2011.
+
+\bibitem{hoffmann11}
+A.~Hoffmann, D.~Nettels, J.~Clark, A.~Borgia, S.~E. Radford, J.~Clarke, and
+  Schuler B.
+\newblock Quantifying heterogeneity and conformational dynamics from single
+  molecule fret of diffusing molecules: recurrence analysis of single particles
+  (rasp).
+\newblock {\em Phys Chem Chem Phys}, 13:1857--1871, 2011.
+
+\bibitem{murphy14}
+R.~R. Murphy, G.~Danezis, M.~H. Horrocks, S.~E. Jackson, and D.~Klenerman.
+\newblock Bayesian inference of accurate population sizes and fret efficiencies
+  from single diffusing biomolecules.
+\newblock {\em Anal. Chem. (submitted April 2014)}, 86:8603--8612, 2014.
+
+\bibitem{lee07}
+N.K. Lee, A.N. Kapanidis, H.R. Koh, Y.~Korlann, S.O. Ho, N.~Kim Y.~andGassman,
+  S.K. Kim, and S.~Weiss.
+\newblock Three-color alternating-laser excitation of single molecules:
+  simultaneous monitoring of multiple interactions and distances.
+\newblock {\em Biophys. J.}, 92:303--12, 2007.
+
+\bibitem{rothwell2002}
+P.~J. Rothwell, S.~Berger†, O.~Kensch, S.~Felekyan, M.~Antonik, B.~M. Wöhrl,
+  T.~Restle, R.~S. Goody, and C.~A.~M. Seidel.
+\newblock Multiparameter single-molecule fluorescence spectroscopy reveals
+  heterogeneity of hiv-1 reverse transcriptase:primer/template complexes.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 100:1655--1660, 2002.
+
+\bibitem{schuler05}
+B.~Schuler.
+\newblock Single-molecule fluorescence spectroscopy of protein folding.
+\newblock {\em Chemphyschem}, 6:1206--1220, 2005.
+
+\bibitem{ying00}
+L.~Ying, M.~I. Wallace, S.~Balsubramanian, and D.~Klenerman.
+\newblock Ratiometric analysis of single-molecule fluorescence resonance energy
+  transfer using logical combinations of threshold criteria: a study of 12-mer
+  dna.
+\newblock {\em J. Phys. Chem. B.}, 104:5171--5178, 2000.
+
+\bibitem{kalinin2007}
+S.~Kalinin, S.~Felekyan, M.~Antonik, and C.~A.~M. Seidel.
+\newblock Probability distribution analysis of single-molecule fluorescence
+  anisotropy and resonance energy transfer.
+\newblock {\em J. Phys. Chem. B.}, 111:10253--10262, 2007.
+
+\bibitem{antonik2006}
+M.~Antonik, S.~Felekyan, A.~Gaiduk, and C.~A.~M. Seidel.
+\newblock Separating structural heterogeneities from stochastic variations in
+  fluorescence resonance energy transfer distributions via photon distribution
+  analysis.
+\newblock {\em J. Phys. Chem. B.}, 110:6970--6978, 2006.
+
+\bibitem{santoso10}
+Y.~Santoso, J.~P. Torella, and A.~N. Kapanidis.
+\newblock Characterizing single-molecule fret dynamics with probability
+  distribution analysis.
+\newblock {\em ChemPhysChem}, 11:2209--2219, 2010.
+
+\bibitem{torella11}
+J.~P. Torella, S.~J. Holden, Y.~Santoso, J.~Hohlbein, and A.~N. Kapanidis.
+\newblock Identifying molecular dynamics in single-molecule fret experiments
+  with burst variance analysis.
+\newblock {\em Biophysical Journal}, 107:5058--5063, 2011.
+
+\bibitem{barber12}
+D.~Barber.
+\newblock {\em Bayesian Reasoning and Machine Learning}.
+\newblock Cambridge University Press, Cambridge, UK, 2012.
+
+\bibitem{bayes63}
+T.~Bayes and R.~Price.
+\newblock An essay towards solving a problem in the doctrine of chance. by the
+  late rev. mr. bayes, communicated by mr. price, in a letter to john canton,
+  m. a. and f. r. s.
+\newblock {\em Phil. Trans. R. Soc. London}, 53:370--418, 1763.
+
+\bibitem{mackay03}
+D.~J. MacKay.
+\newblock {\em Information Theory, Inference, and Learning Algorithms}.
+\newblock Cambridge University Press, Cambridge, UK, 2003.
+
+\bibitem{mckinney06}
+S.~A. McKinney, C.~Joo, and T.~Ha.
+\newblock Analysis of single molecule fret trajectories using hidden markov
+  modeling.
+\newblock {\em Biophysical Journal}, 91:1941--1951, 2006.
+
+\bibitem{bronson09}
+J.~E. Bronson, J.~Fei, J.~M. Hofman, R.~N. Gonzalez, and C.~H. Wiggins.
+\newblock Learning rates and states from biophysical time series: A bayesian
+  approach to model selection and single-molecule fret data.
+\newblock {\em Biophys. J.}, 97:3196--3205, 2009.
+
+\bibitem{bronson10}
+J.~E. Bronson, J.~M. Hofman, J.~Fei, R.~L. Gonzales, and C.~H. Wiggins.
+\newblock Graphical models for inferring single molecule dynamics.
+\newblock {\em BMC Bioinformatics}, 11:2--10, 2010.
+
+\bibitem{taylor10}
+J.~N. Taylor, D.~E. Makarov, and C.~F. Landes.
+\newblock Denoising single-molecule fret trajectories with wavelets and
+  bayesian inference.
+\newblock {\em Biophys. J.}, 98:164--173, 2010.
+
+\bibitem{taylor11}
+J.~N. Taylor and C.~F. Landes.
+\newblock Improved resolution of complex single-molecule fret systems via
+  wavelet shrinkage.
+\newblock {\em J. Phys. Chem. B.}, 115:1105--1114, 2011.
+
+\bibitem{uphoff2011}
+S.~Uphoff, K.~Gryte, G.~Evans, and A.~N. Kapanidis.
+\newblock Improved temporal resolution and linked hidden markov modeling for
+  switchable single-molecule fret.
+\newblock {\em ChemPhysChem}, 12:571–579, 2011.
+
+\bibitem{yoon08}
+J.~W. Yoon, A.~Bruckbauer, W.~J. Fitzgerald, and D.~Klenerman.
+\newblock Bayesian inference for improved single molecule fluorescence
+  tracking.
+\newblock {\em Biophys. J.}, 94:4932--4947, 2008.
+
+\bibitem{turkcan12}
+S.~Turkcan, A.~Alexandrou, and J.-B. Masson.
+\newblock A bayesian inference scheme to extract diffusivity and potenetial
+  fields from confined single-molecule trajectories.
+\newblock {\em Biophys. J.}, 102:2288--2298, 2012.
+
+\bibitem{stigler2012}
+J.~Stigler and M.~Rief.
+\newblock Hidden markov analysis of trajectories in single-molecule experiments
+  and the effects of missed events.
+\newblock {\em ChemPhysChem}, 13:1079--1086, 2012.
+
+\bibitem{kugel12}
+W.~Kugel, A.~Muschielok, and J.~Michaelis.
+\newblock Bayesian-inference-based fluorescence correlation spectroscopy and
+  single-molecule burst analysis reveal the influence of dye selection on dna
+  hairpin dynamics.
+\newblock {\em Chemphyschem}, 13:1013--1022, 2011.
+
+\bibitem{guo11}
+S.-M. Guo, J.~He, N.~Monnier, G.~Sun, T.~Wohland, and M.~Bathe.
+\newblock Bayesian approach to the analysis of fluorescence correlation
+  spectroscopy data ii: Application to simulated and in vitro data.
+\newblock {\em Anal. Chem.}, 84:3880--3888, 2011.
+
+\bibitem{he11}
+J.~He, S.-M. Guo, and M.~Bathe.
+\newblock Bayesian approach to the analysis of fluorescence correlation
+  spectroscopy data ii: Theory.
+\newblock {\em Anal. Chem.}, 84:3871--3879, 2011.
+
+\bibitem{guo2014}
+S.-M. Guo, N.~Bag, A.~Mishra, T.~Wohland, and M.~Bathe.
+\newblock Bayesian total internal reflection fluorescence correlation
+  spectroscopy reveals hiapp-induced plasma membrane domain organization in
+  live cells.
+\newblock {\em Biophys. J.}, 106:190--200, 2014.
+
+\bibitem{kou05}
+S.~C. Kou, X.~S. Xie, and J.~S. Liu.
+\newblock {Bayesian analysis of single-molecule experimental data}.
+\newblock {\em {J. R. Stat. Soc.}}, {54}({3}):{469--496}, {2005}.
+
+\bibitem{kalinin2008}
+S.~Kalinin, S.~Felekyan, A.~Valeri, and C.~A.~M. Seidel.
+\newblock Characterizing multiple molecular states in single-molecule
+  multiparameter fluorescence detection by probability distribution analysis.
+\newblock {\em J. Phys. Chem. B.}, 112:8361--8374, 2007.
+
+\bibitem{gopich07}
+I.~V. Gopich and A.~Szabo.
+\newblock Single-molecule fret with diffusion and conformational dynamics.
+\newblock {\em J. Phys. Chem. B.}, 111:12925--12932, 2007.
+
+\bibitem{gopich09}
+I.~V. Gopich and A.~Szabo.
+\newblock Decoding the pattern of photon colors in single-molecule fret.
+\newblock {\em J. Phys. Chem. B}, 113, 2009.
+
+\bibitem{gopich12}
+I.~V. Gopich and A.~Szabo.
+\newblock Theory of the energy transfer efficiency and fluorescence lifetime
+  distribution in single-molecule fret.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 109, 2012.
+
+\bibitem{devore12}
+M.~S. DeVore, S.~F. Gull, and C.~K. Johnson.
+\newblock Classic maximum entropy recovery of the average joint distribution of
+  apparent fret efficiency and fluorescence photons for single-molecule burst
+  measurements.
+\newblock {\em J. Phys. Chem. B.}, 116:4006--4015, 2012.
+
+\bibitem{chung09}
+H.~S Chung, J.~M. Louis, and W.~M. Eaton.
+\newblock Experimental determination of upper bound for transition path times
+  in protein folding from single-molecule photon-by-photon trajectories.
+\newblock {\em Proc. Natl. Acad. Sci. USA.}, 106:11837--11844, 2009.
+
+\bibitem{chen99}
+Y.~Chen, J.~D. Muller, P.~T. So, and E.~Gratton.
+\newblock The photon counting histogram in fluorescence fluctuation
+  spectroscopy.
+\newblock {\em Biophys. J.}, 77:553--567, 1999.
+
+\bibitem{green1995}
+P.~J. Green.
+\newblock Reversible jump markov chain monte carlo computation and bayesian
+  model determination.
+\newblock {\em Biometrika}, 82:711--32, 1995.
+
+\bibitem{holliday1964}
+R.~A. Holliday.
+\newblock A mechanism for gene conversion in fungi.
+\newblock {\em Genet. Res. Camb.}, 5:282 -- 304, 1964.
+
+\bibitem{ueda1993}
+K.~U{\'e}da, H.~Fukushima, E.~Masliah, Y.~Xia, A.~Iwai, M.~Yoshimoto, D.~A.
+  Otero, J.~Kondo, Y.~Ihara, and T.~Saitoh.
+\newblock Molecular cloning of cdna encoding an unrecognized component of
+  amyloid in alzheimer disease.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 90:11282--11286, 1993.
+
+\bibitem{spillantini1997}
+M.~G. Spillantini, M.~L. Schmidt, V.~M.-Y. Lee, T.~Q. Trojanowski, R.~Jakes,
+  and M.~Goedert.
+\newblock {$\alpha$}-synuclein in lewy bodies.
+\newblock {\em Nature}, 388:839--840, 1997.
+
+\bibitem{Noe2004}
+E.~Noe, K.~Marder, K.~L. Bell, D.~M. Jacobs, J.~J. Manly, and Y.~Stern.
+\newblock Comparison of dementia with lewy bodies to alzheimer’s disease and
+  parkinson’s disease with dementia.
+\newblock {\em Mov. Disord.}, 19(1):60--67, 2004.
+
+\bibitem{goedert1989}
+M.~Goedert, M.~G. Spillantini, R.~Jakes, D.~Rutherford, and Crowther~R. A.
+\newblock Multiple isoforms of human microtubule-associated protein tau:
+  sequences and localization in neurofibrillary tangles of alzheimer's disease.
+\newblock {\em Neuron}, 3(4):519--526, 1989.
+
+\bibitem{Gibb1988}
+W.~R. Gibb and A.~J. Lees.
+\newblock The relevance of the lewy body to the pathogenesis of idiopathic
+  parkinson's disease.
+\newblock {\em J. Neurol. Neurosurg. Psychiatry}, 51:745--752, 1988.
+
+\bibitem{Wells1987}
+G.~A. Wells, A.~C. Scott, C.~T. Johnson, R.~F. Gunning, R.~D. Hancock,
+  M.~Jeffrey, M.~Dawson, and R.~Bradley.
+\newblock A novel progressive spongiform encephalopathy in cattle.
+\newblock {\em Vet. Rec.}, 121:419--420, 1987.
+
+\bibitem{Goldfarb1992}
+L.~G. Goldfarb, R.~B. Petersen, M.~Tabaton, P.~Brown, A.~C. LeBlanc,
+  P.~Montagna, P.~Cortelli, J.~Julien, C.~Vital, and W.~W. Pendelbury.
+\newblock Fatal familial insomnia and familial creutzfeldt-jakob disease:
+  disease phenotype determined by a dna polymorphism.
+\newblock {\em Science}, 258:806--808, 1992.
+
+\bibitem{Clark1988}
+A.~Clark, C.~A. Wells, I.~D. Buley, J.~K. Cruickshank, R.~I. Vanhegan, D.~R.
+  Matthews, G.~J. Cooper, R.~R. Holman, and R.~C. Turner.
+\newblock Islet amyloid, increased a-cells, reduced b-cells and exocrine
+  fibrosis: quantitative changes in the pancreas in type 2 diabetes.
+\newblock {\em Diabetes Res.}, 9:151--159, 1988.
+
+\bibitem{Safar1993}
+J.~Safar, P.~P. Roller, D.~C. Gajdusek, and C.~J.~(Jr) Gibbs.
+\newblock Conformational transitions, dissociation, and unfolding of scrapie
+  amyloid (prion) protein.
+\newblock {\em J. Biol. Chem.}, 268:20276--20284, 1993.
+
+\bibitem{Conway1999}
+K.~A. Conway, S.-J. Lee, J.-C. Rochet, T.~T. Ding, R.~E. Williamson, and P.~T.
+  Lansbury.
+\newblock Acceleration of oligomerization, not fibrillization, is a shared
+  property of both α-synuclein mutations linked to early-onset parkinson's
+  disease: Implications for pathogenesis and therapy.
+\newblock {\em Proc. Natl. Acac. Sci. USA}, 97:571--576, 1999.
+
+\bibitem{Haas2007}
+C.~Haass and D.~J. Selkoe.
+\newblock Soluble protein oligomers in neurodegeneration: lessons from the
+  alzheimer's amyloid bold beta-peptide.
+\newblock {\em Nat. Rev. Mol. Cell Biol.}, 8:101--112, 2007.
+
+\bibitem{Muchowski2005}
+P.J. Muchowski and J.~L. Wacker.
+\newblock Modulation of neurodegeneration by molecular chaperones.
+\newblock {\em Nat. Rev. Neurosci.}, 6:11--22, 2005.
+
+\bibitem{Benilova2012}
+I.~Benilova, E.~Karran, and B.~De~Strooper.
+\newblock The toxic a{$\beta$} oligomer and alzheimer's disease: an emperor in
+  need of clothes.
+\newblock {\em Methods Mol. Biol.}, 15:349--357, 2012.
+
+\bibitem{chiti2006}
+F.~Chiti and C.~M. Dobson.
+\newblock Protein misfolding, functional amyloid and human disease.
+\newblock {\em Annu. Rev. Biochem.}, 75:333-- 366, 2006.
+
+\bibitem{knowles2009}
+T.~P.~J. TKnowles, C.~A. Waudby, G.~L. Devlin, S.~I.~A. Cohen, A.~Aguzzi,
+  M.~Vendruscolo, E.~M. Terentjev, M.~E. Welland, and C.~M. Dobson3.
+\newblock An analytical solution to the kinetics of breakable filament
+  assembly.
+\newblock {\em Annu. Rev. Biochem.}, 326:1533 -- 1537, 2009.
+
+\bibitem{cohen2013}
+S.~A.~I. Cohen, S.~Linse, L.~M. Luheshi, E.~Hellstrand, D.~A. White, D.~E.
+  Rajaha, L.and~Otzen, M.~Vendruscolo, C.~M. Dobson, and T.~P.~J. Knowles.
+\newblock Proliferation of amyloid-β42 aggregates occurs through a secondary
+  nucleation mechanism.
+\newblock {\em Proc. Natl. Acac. Sci. USA}, 110:9758 -- 9763, 2013.
+
+\bibitem{meisl2014}
+G.~Meisl, X.~Yang, E.~Hellstrand, B.~Frohm, J.~B. Kirkegaard, S.~I.~A. Cohen,
+  C.~M. Dobson, S.~Linse, and T.~P.~J. Knowles.
+\newblock Differences in nucleation behavior underlie the contrasting
+  aggregation kinetics of the aβ40 and aβ42 peptides.
+\newblock {\em Proc. Natl. Acac. Sci. USA}, 111:9384 -- 9389, 2014.
+
+\bibitem{Dedmon2005}
+M.~D. Dedmon, K.~Lindorff-Larsen, J.~Christodoulou, M.~Vendruscolo, and C.~M.
+  Dobson.
+\newblock Mapping long-range interactions in α-synuclein using spin-label nmr
+  and ensemble molecular dynamics simulations.
+\newblock {\em J. Am. Chem. Soc.}, 127:476--477, 2005.
+
+\bibitem{Gras2011}
+S.~L. Gras, L.~J. Waddington, and K.~N. Goldie.
+\newblock Transmission electron microscopy of amyloid fibrils.
+\newblock {\em Methods Mol Biol.}, 752:197--214, 2011.
+
+\bibitem{Langkilde2009}
+B.~Langkilde, A. E.and~Vestergaard.
+\newblock Methods for structural characterization of prefibrillar intermediates
+  and amyloid fibrils.
+\newblock {\em FEBS Lett.}, 583:2600--2609, 2009.
+
+\bibitem{Cohen2012}
+S.~I. Cohen, M.~Vendruscolo, C.~M. Dobson, and T.~P. Knowles.
+\newblock From macroscopic measurements to microscopic mechanisms of protein
+  aggregation.
+\newblock {\em J. Biol. Chem.}, 421:160--171, 2012.
+
+\bibitem{Schmidt2005}
+S.~D. Schmidt, R.~A. Nixon, and P.~M. Mathews.
+\newblock Elisa method for measurement of amyloid-beta levels.
+\newblock {\em Methods Mol. Biol.}, 299:279--297, 2005.
+
+\bibitem{Murray2003}
+I.~V.~J Murray, B.~I. Giasson, S.~M. Quinn, V.~Koppaka, P.~H. Axelsen,
+  H.~Ischiropoulos, J.~H. Trojanowski, and V.~M.-Y. Lee.
+\newblock Role of {$\alpha$}-synuclein carboxy-terminus on fibril formation in
+  vitro.
+\newblock {\em Methods Mol. Biol.}, 42:8530--8540, 2003.
+
+\bibitem{orte08}
+A.~Orte, N.~R. Birkett, R.~W. Clarke, G.~L. Devlin, C.~M. Dobson, and
+  D.~Klenerman.
+\newblock Direct characterization of amyloidogenic oligomers by single-molecule
+  fluorescence.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 105:14424--14429, 2008.
+
+\bibitem{chen1999}
+Y.~Chen, J.~D. Muller, P.~T.~C. So, and E.~Gratton.
+\newblock The photon counting histogram in fluorescence fluctuation
+  spectroscopy.
+\newblock {\em Biophys. J.}, 77:553 -- 567, 1999.
+
+\bibitem{potter1976}
+H.~Potter and D.~Dressler.
+\newblock On the mechanism of genetic recombination: Electron microscopic
+  observation of recombination intermediates.
+\newblock {\em Proc. Natl. Acac. Sci. USA}, 73:3000 -- 3004, 1976.
+
+\bibitem{mckinney03}
+S.~A. McKinney, A.-C. Declais, D.~M.~J. Lilley, and T.~Ha.
+\newblock Structural dynamics of individual holliday junctions.
+\newblock {\em Nature Structural Biology}, 10:93--97, 2008.
+
+\bibitem{uphoff2010}
+S.~Uphoff, S.~J. Holden, J.~Le~Reste, L. andd~Periz, S.~van~de Linde,
+  M.~Heilmann, and A.~N. Kapanidis.
+\newblock Monitoring multiple distances within a single molecule using
+  switchable fret.
+\newblock {\em Nature Methods}, 7:831 -- 836, 2010.
+
+\bibitem{Hyeon2012}
+C.~Hyeon, J.~Lee, J.~Yoon, S.~Hohng, and D.~Thirumalai.
+\newblock Hidden complexity in the isomerization dynamics of holliday
+  junctions.
+\newblock {\em Nature Chemistry}, 4:904 --914, 2012.
+
+\bibitem{zondervan03}
+R.~Zondervan, F.~Kulzer, S.~B. Orlinskii, and M.~Orrit.
+\newblock Photoblinking of rhodamine 6g in poly(vinyl alcohol): Radical dark
+  state formed through the triplet.
+\newblock {\em J. Phys. Chem. A.}, 107:6770 -- 6776, 2003.
+
+\bibitem{joo2006}
+Joo C., McKinney~S. A., Nakamura M., Rasnik I., Myong S., and Ha~T.
+\newblock Real-time observation of reca filament dynamics with single monomer
+  resolution.
+\newblock {\em Cell}, 126:515--527, 2006.
+
+\bibitem{rasnik2006}
+Rasnik I., McKinney~S. A., and Ha~T.
+\newblock Nonblinking and long-lasting single-molecule fluorescence imaging.
+\newblock {\em Nat. Methods}, 3:891--893, 2006.
+
+\bibitem{aitken2008}
+C.~E. Aitken, R.~A. Marshall, and J.~D. Puglisi.
+\newblock An oxygen scavenging system for improvement of dye stability in
+  single-molecule fluorescence experiments.
+\newblock {\em Biophys. J.}, 94:1826 -- 1835, 2008.
+
+\bibitem{liu2008}
+K.~J. Liu and T.-H. Wang.
+\newblock Cylindrical illumination confocal spectroscopy: Rectifying the
+  limitations of confocal single molecule spectroscopy through one-dimensional
+  beam shaping.
+\newblock {\em Biophys J.}, 95:2964--2975, 2008.
+
+\bibitem{tyagi2014}
+S.~Tyagi, V.~VanDelinder, N.~Banterle, G.~Fuertes, S.~Milles, M.~Agez, and
+  E.~A. Lemke.
+\newblock Continuous throughput and long-term observation of single-molecule
+  fret without immobilization.
+\newblock {\em Nat. Methods}, 11:297--300, 2014.
+
+\bibitem{bentley2008}
+D.~R. Bentley, S.~Balasubramanian, H.~P Swerdlow, G.~P. Smith, J.~Milton,
+  G.~Brown, C, K.~P. Hall, D.~J. Evers, C.~L. Barnes, H.~R. Bignell, J.~M.
+  Boutell, J.~Bryant, R.~J. Carter, K.~Cheetham, R, A.~J. Cox, D.~J. Ellis,
+  M.~R. Flatbush, N.~A. Gormley, S.~J. Humphray, L.~J. Irving, M.~S.
+  Karbelashvili, S.~M. Kirk, H.~Li, X.~Liu, K.~S. Maisinger, L.~J. Murray,
+  B.~Obradovic, T.~Ost, M.~L. Parkinson, M.~R. Pratt, I.~M.~J. Rasolonjatovo,
+  M.T. Reed, R.~Rigatti, C.~Rodighiero, M.~T. Ross, A.~Sabot, S.~V. Sankar,
+  Scally A., G.~P. Schroth, M.~E. Smith, V.~P. Smith, A.~Spiridou, P.~E.
+  Torrance, S.~S. Tzonev, E.~H. Vermaas, K.~Walter, X.~Wu, L.~Zhang, M.~D.
+  Alam, C.~Anastasi, I.~C. Aniebo, D.~M.~D. Bailey, I.~R. Bancarz, S.~Banerjee,
+  S.~G. Barbour, P.~A. Baybayan, V.~A. Benoit, K.~F. Benson, C.~Bevis, P.~J.
+  Black, A.~Boodhun, J.~S. Brennan, J.~A. Bridgham, R.~C. Brown, A.~A. Brown,
+  D.~H. Buermann, A.~A. Bundu, J.~C. Burrows, N.~P. Carter, N.~Castillo,
+  M.~C.~E. Catenazzi, S.~Chang, R.~N. Cooley, N.~R. Crake, O.~O. Dada, K.~D.
+  Diakoumakos, B.~Dominguez-Fernandez, D.~Earnshaw, C.~Egbujor, U, D.~W.
+  Elmore, S.~S. Etchin, M.~R. Ewan, M.~Fedurco, K.~V. Fraser, L. J.
+  andFuentes~Fajardo, W.~S. Furey, D.~George, K.~J. Gietzen, C.~P. Goddard,
+  G.~S. Golda, P.~A. Granieri, D.~E. Green, D.~L. Gustafson, N.~F. Hansen,
+  K.~Harnish, C.~G. Haudenschild, N.~I. Heyer, M.~M. Hims, J.~T. Ho, A.~M.
+  Horgan, K.~Hoschler, S.~Hurwitz, D.~V. Ivanov, M.~Q. Johnson, T.~James,
+  T.~A.~H. Jones, G.-D. Kang, T.~H. Kerelska, A.~D. Kersey, I.~Khrebtukova,
+  Z.~Kindwall, A. P. an~Kingsbury, P.~I. Kokko-Gonzales, A.~Kumar, M.~A.
+  Laurent, C.~T. Lawley, S.~E. Lee, X.~Lee, A.~K. Liao, J.~A. Loch, M.~Lok,
+  S.~Luo, R.~M. Mammen, J.~W. Martin, P.~G. McCauley, P.~McNitt, P.~Mehta,
+  K.~W. Moon, J.~M. Mullens, T.~Newington, Z.~Ning, B.~L. Ng, S.~M. Novo, M.~J.
+  O’Neill, M.~A. Osborne, A.~Osnowski, O.~Ostadan, L.~L. Paraschos,
+  L.~Pickering, A.~C. Pike, A.~C. Pike, D.~C. Pinkard, D.~P. Pliskin,
+  J.~Podhasky, V.~J. Quijano, C.~Raczy, V.~H. Rae, S.~R. Rawlings, A.~C.
+  Rodriguez, P.~M. Roe, J.~Rogers, M.~C. Rogert~Bacigalupo, N.~Romanov,
+  A.~Romieu, R.~K. Roth, N.~J. Rourke, S.~T. Ruediger, E.~Rusman, R.~M.
+  Sanches-Kuiper, M.~R. Schenker, J.~M. Seoane, R.~J. Shaw, M.~K. Shiver, S.~W.
+  Short, N.~L. Sizto, J.~P. Sluis, M.~A. Smith, J.~E.~S. Sohna, E.~J. Spence,
+  K.~Stevens, N.~Sutton, L.~Szajkowski, C.~L. Tregidgo, G.~Turcatti,
+  S.~vandeVondele, Y.~Verhovsky, S.~M. Virk, S.~Wakelin, G.~C. Walcott,
+  G.~Wang, G.~J. Worsley, J.~Yan, L.~Yau, M.~Zuerlein, J.~Rogers, J.~C.
+  Mullikin, M.~E. Hurles, M.~J. McCooke, J.~S. West, F.~L. Oaks, P.~L.
+  Lundberg, D.~Klenerman, R.~Durbin, and A.~J. Smith.
+\newblock Accurate whole human genome sequencing using reversible terminator
+  chemistry.
+\newblock {\em Nature}, 456:53--59, 2008.
+
+\bibitem{nextera2012}
+Illumina.
+\newblock Data procesing of nextera mate pair reads on illumina sequencing
+  platforms.
+\newblock
+  \url{http://www.illumina.com/documents/products/technotes/technote_nextera_matepair_data_processing.pdf},
+  2012.
+\newblock Accessed: 2015-02-05.
+
+\bibitem{sanger1977}
+F.~Sanger, S.~Nicklen, and A.~R. Coulson.
+\newblock Dna sequencing with chain-terminating inhibitors.
+\newblock {\em Proc. Nati. Acad. Sci. USA}, 74:5463--5467, 1977.
+
+\bibitem{metzker2005}
+M.~L. Metzker.
+\newblock Emerging technologies in dna sequencing.
+\newblock {\em Genome Res.}, 15:1767--1776, 2005.
+
+\bibitem{illumina2010}
+Illumina.
+\newblock Illumina sequencing technology.
+\newblock
+  \url{http://www.illumina.com/documents/products/techspotlights/techspotlight_sequencing.pdf},
+  2010.
+\newblock Accessed: 2015-03-25.
+
+\bibitem{Adessi2000}
+C.~Adessi, G.~Matton, G.~Ayala, G.~Turcatti, J.-J. Mermod, P.~Mayer, and
+  E.~Kawashima.
+\newblock Solid phase dna amplification: characterisation of primer attachment
+  and amplification mechanisms.
+\newblock {\em Nucl. Acids Res.}, 28:e87, 2000.
+
+\bibitem{eid2008}
+J.~Eid, A.~Fehr, J.~Gray, K.~Luong, J.~Lyle, G.~Otto, P.~Peluso, D.~Rank,
+  P.~Baybayan, B.~Bettman, A.~Bibillo, K.~Bjornson, B.~Chaudhuri,
+  F.~Christians, R.~Cicero, S.~Clark, R.~Dalal, A.~deWinter, J.~Dixon,
+  M.~Foquet, A.~Gaertner, P.~Hardenbol, C.~Heiner, K.~Hester, D.~Holden,
+  G.~Kearns, X.~Kong, R.~Kuse, Y.~Lacroix, S.~Lin, P.~Lundquist, C.~Ma,
+  P.~Marks, M.~Maxham, D.~Murphy, I.~Park, T.~Pham, M.~Phillips, J.~Roy,
+  R.~Sebra, G.~Shen, J.~Sorenson, A.~Tomaney, K.~Travers, M.~Trulson,
+  J.~Vieceli, J.~Wegener, D.~Wu, A.~Yang, Z.~Zaccarin, P.~Zhao, F.~Zhong,
+  J.~Korlach, and S.~Turner.
+\newblock Real-time dna sequencing from single polymerase molecules.
+\newblock {\em Science}, 323:133--138, 2008.
+
+\bibitem{Levene2003}
+M.~J. Levene, J.~Korlach, W.~Turner, M.~Foquet, H.~G. Craighead, and W.~W.
+  Webb.
+\newblock Zero-mode waveguides for single-molecule analysis at high
+  concentrations.
+\newblock {\em Science}, 299:682--686, 2003.
+
+\bibitem{Roberts2013}
+R.~J. Roberts, M.~O. Carneiro, and M.~C. Schatz.
+\newblock The advantages of smrt sequencing.
+\newblock {\em Genome Biology}, 14:405--409, 2013.
+
+\bibitem{Bayley2014}
+H.~Bayley.
+\newblock Nanopore sequencing: From imagination to reality.
+\newblock {\em Clin. Chem.}, 61:25--31, 2014.
+
+\bibitem{Branton2008}
+D.~Branton, D.~W. Deamer, A.~Marziali, H.~Bayley, S.~A. Benner, T.~Butler,
+  M.~Di~Ventra, S.~Garaj, A.~Hibbs, X.~Huang, S.~B. Jovanovich, K.~Krstic, P,
+  S.~Lindsay, X.~S. Ling, C.~H. Mastrangelo, A.~Meller, J.~S. Oliver, Y.~V.
+  Pershin, M.~Ramsey, R.~Riehn, G.~V. Soni, V.~Tabard-Cossa, M.~Wanunu,
+  M.~Wiggin, and J.~A. Schloss.
+\newblock The potential and challenges of nanopore sequencing.
+\newblock {\em Nature Biotechnol.}, 26:1146--1153, 2008.
+
+\bibitem{Laszlo2014}
+A.~H. Laszlo, I.~M. Derrington, B.~C. Ross, H.~Brinkerhoff, A.~Adey, I.~C.
+  Nova, J.~M. Craig, K.~W. Langford, J.~M. Samson, R.~Daza, K.~Doering,
+  Shendure J., and J.~H. Gundlach.
+\newblock Decoding long nanopore sequencing reads of natural dna.
+\newblock {\em Nature Biotechnol.}, 32:829--833, 2014.
+
+\bibitem{Mikheyev2014}
+A.~S. Mikheyev and M.~M.~Y. Tin.
+\newblock A first look at the oxford nanopore minion sequencer.
+\newblock {\em Mol. Ecol. Resour.}, 14:1097--1102, 2014.
+
+\bibitem{Li2010}
+H.~Li and N.~Homer.
+\newblock A survey of sequence alignment algorithms for next-generation
+  sequencing.
+\newblock {\em Briefings in Bioinformatics}, 11(5):473--483, 2010.
+
+\bibitem{compeau2011}
+P.~E.~C. Compeau, P.~A. Pevzner, and G.~Tesler.
+\newblock How to apply de {Bruijn} graphs to genome assembly.
+\newblock {\em Nature Biotechnol.}, 29:987--991, 2011.
+
+\bibitem{Pevzner2001}
+P.~A. Pevzner, H.~Tang, and M.~S. Waterman.
+\newblock An eulerian path approach to dna fragment assembly.
+\newblock {\em Proc. Natl. Acac. Sci. USA}, 98(17):9748--9753, 2001.
+
+\bibitem{Zerbino2008}
+D.~R. Zerbino and E.~Birney.
+\newblock Velvet: Algorithms for de novo short read assembly using de bruijn
+  graphs.
+\newblock {\em Genome Res.}, 18:821--829, 2008.
+
+\bibitem{Bankevich2012}
+A.~Bankevich, S.~Nurk, D.~Antipov, A.~A. Gurevich, M.~Dvorkin, A.~S. Kulikov,
+  V.~M. Lesin, S.~I. Nikolenko, S.~Pham, A.~D. Prjibelski, A.~V. Pyshkin, A.~V.
+  Sirotkin, N.~Vyahhi, G.~Tesler, M.~A. Alekseyev, and P.~A. Pevzner.
+\newblock {SPAdes}: A new genome assembly algorithm and its applications to
+  single-cell sequencing.
+\newblock {\em J. Comp. Biol.}, 19(5):455--477, 2012.
+
+\bibitem{Li2010_SOAP}
+R.~Li, H.~Zhu, J.~Ruan, W.~Qian, X.~Fang, Z.~Shi, Y.~Li, S.~Li, G.~Shan,
+  K.~Kristiansen, S.~Li, H.~Yang, J.~Wang, and J.~Wang.
+\newblock De novo assembly of human genomes with massively parallel short read
+  sequencing.
+\newblock {\em Genome Res.}, 20(2):265--272, 2010.
+
+\bibitem{hunt2014}
+M.~Hunt, C.~Newbold, M.~Berriman, and T.~D. Otto.
+\newblock A comprehensive evaluation of assembly scaffolding tools.
+\newblock {\em Genome Biol.}, 15:R42, 2014.
+
+\bibitem{edwards1990}
+A.~Edwards, H.~Voss, P.~Rice, A.~Civitello, J.~Stegemann, C.~Schwager,
+  J.~Zimmermann, H.~Erfle, C.~T. Caskey, and W.~Ansorge.
+\newblock Automated dna sequencing of the human hprt locus.
+\newblock {\em Genomics}, 6(4):593--608, 1990.
+
+\bibitem{Miller2010}
+J.~R. Miller, S.~Koren, and G.~Sutton.
+\newblock Assembly algorithms for next-generation sequencing data.
+\newblock {\em Genomics}, 95(6):315--327, 2010.
+
+\bibitem{Gurevich2013}
+A.~Gurevich, V.~Saveliev, N.~Vyahhi, and G.~Tesler.
+\newblock {QUAST}: quality assessment tool for genome assemblies.
+\newblock {\em Bioinformatics}, 29(8):1072--1075, 2013.
+
+\bibitem{Bradnam2013}
+K.R. Bradnam, J.~N. Fass, A.~Alexandrov, P.~Baranay, M.~Bechner, I.~Birol,
+  S.~Boisvert, J.~A. Chapman, G.~Chapuis, R.~Chikhi, H.~Chitsaz, W.~C. Chou,
+  J.~Corbeil, C.~Del~Fabbro, T.~R. Docking, R.~Durbin, Earl D., S.~Emrich,
+  P.~Fedotov, N.~A. Fonseca, G.~Ganapathy, R.~A. Gibbs, S.~Gnerre,
+  E.~Godzaridis, S.~Goldstein, M.~Haimel, G.~Hall, D.~Haussler, J.~B. Hiatt,
+  I.~Y. Ho, J.~Howard, M.~Hunt, S.~D.. Jackman, D.~B. Jaffe, E.~D. Jarvis,
+  H.~Jiang, S.~Kazakov, P.~J. Kersey, J.O. Kitzman, J.R. Knight, S.~Koren,
+  T.~W. Lam, D.~Lavenier, F.~Laviolette, Y.~Li, Z.~Li, B.~Liu, Y.~Liu, R.~Luo,
+  I.~Maccallum, M.D. Macmanes, N.~Maillet, S.~Melnikov, D.~Naquin, Z.~Ning,
+  T.~D. Otto, B.~Paten, O.S. Paulo, A.~M. Phillippy, F.~Pina-Martins, M.~Place,
+  D.~Przybylski, X.~Qin, C.~Qu, F.~J. Ribeiro, S.~Richards, D.~S. Rokhsar,
+  J.~G. Ruby, S.~Scalabrin, M.~C. Schatz, D.~C. Schwartz, A.~Sergushichev,
+  T.~Sharpe, T.~I. Shaw, J.~Shendure, Y.~Shi, J.~T. Simpson, H.~Song,
+  F.~Tsarev, F.~Vezzi, R.~Vicedomini, B.~M. Vieira, J.~Wang, K.~C. Worley,
+  S.~Yin, S.~M. Yiu, J.~Yuan, G.~Zhang, H.~Zhang, S.~Zhou, and I.~F. Korf.
+\newblock Assemblathon 2: evaluating de novo methods of genome assembly in
+  three vertebrate species.
+\newblock {\em Gigascience}, 2(1):10, 2013.
+
+\bibitem{Salzberg2012}
+S.~L. Salzberg, A.~M. Phillippy, A.~Zimin, D.~Puiu, T.~Magoc, S.~Koren, T.~J.
+  Treangen, M.~C. Schatz, A.~L. Delcher, M.~Roberts, G.~Marçais, M.~Pop, and
+  J.~A. Yorke.
+\newblock {GAGE}: A critical evaluation of genome assemblies and assembly
+  algorithms.
+\newblock {\em Genome Res.}, 22(3):557--567, 2012.
+
+\bibitem{Ghodsi2013}
+M.~Ghodsi, C.~M. Hill, I.~Astrovskaya, H.~Lin, and D.~D. Sommer.
+\newblock De novo likelihood-based measures for comparing genome assemblies.
+\newblock {\em BMC Research Notes}, 6:334, 2013.
+
+\bibitem{Coil2014}
+D.~Coil, G.~Jospin, and A.~E. Darling.
+\newblock {A5-miseq}: an updated pipeline to assemble microbial genomes from
+  illumina {MiSeq} data.
+\newblock 2014.
+
+\bibitem{tritt2012}
+A.~Tritt, J.~A. Eisen, M.~Facciotti, and A.~E. Darline.
+\newblock An integrated pipeline for de novo assembly of microbial genomes.
+\newblock {\em PLoS ONE}, 7(9):e42304, 2012.
+
+\bibitem{Hunt2013}
+M.~Hunt, T.~Kikuchi, M.~Sanders, C.~Newbold, M.~Berriman, and T.~D. Otto.
+\newblock {REAPR}: a universal tool for genome assembly evaluation.
+\newblock {\em Genome Biol.}, 14:R47, 2013.
+
+\bibitem{Clark2013}
+S.~C. Clark, R.~Egan, P.~I. Frazier, and Z.~Wang.
+\newblock {ALE}: a generic assembly likelihood evaluation framework for
+  asessing the accuracy of genome and metagenome assemblies.
+\newblock {\em Bioinformatics}, 29(4):435--443, 2013.
+
+\bibitem{pilon2014}
+B.~Walker.
+\newblock Pilon.
+\newblock \url{https://github.com/broadinstitute/pilon/releases}, 2014.
+
+\bibitem{cormen2009}
+T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock MIT Press and McGraw-Hill, 2009.
+
+\bibitem{numpy}
+S.~van~der Walt, S.~C. Colbert, and G.~Varoquaux.
+\newblock The {NumPy} array: A structure for efficient numerical computation.
+\newblock {\em Computing in Science and Engineering}, 13:22--30, 2011.
+
+\bibitem{scipy}
+K.~J. Millman and M.~Aivazis.
+\newblock Python for scientists and engineers.
+\newblock {\em Computing in Science and Engineering}, 13:9--12, 2011.
+
+\bibitem{Hunter2007}
+J.~D. Hunter.
+\newblock Matplotlib: A {2D} graphics environment.
+\newblock {\em Computing In Science and Engineering}, 9(3):90--95, 2007.
+
+\bibitem{li2009}
+H.~Li, B.~Handsaker, A.~Wysoker, T.~Fennell, J.~Ruan, N.~Homer, G.~Marth,
+  G.~Abecasis, R.~Durbin, and 1000 Genome Project Data~Processing Subgroup.
+\newblock The sequence alignment/map format and {SAMtools}.
+\newblock {\em Bioinformatics}, 25(16):2078--2079, 2009.
+
+\bibitem{li2013}
+H.~Li.
+\newblock Aligning sequence reads, clone sequences and assembly contigs with
+  {BWA-MEM}.
+\newblock 2013.
+
+\bibitem{Koren2015}
+S.~Koren and A.~M. Phillippy.
+\newblock ne chromosome, one contig: complete microbial genomes from long-read
+  sequencing and assembly.
+\newblock {\em Curr. Opin. Microbiol.}, 23:110--120, 2015.
+
+\end{thebibliography}

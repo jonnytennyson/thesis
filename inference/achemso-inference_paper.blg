@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: achemso-inference_paper.aux
+The style file: achemso.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: acs-achemso-inference_paper.bib
+Database file #2: achemso-inference_paper.bib
+You've used 52 entries,
+            2478 wiz_defined-function locations,
+            1040 strings with 16002 characters,
+and the built_in function-call counts, 19330 in all, are:
+= -- 1519
+> -- 1183
+< -- 16
++ -- 465
+- -- 413
+* -- 2184
+:= -- 2639
+add.period$ -- 51
+call.type$ -- 52
+change.case$ -- 3
+chr.to.int$ -- 2
+cite$ -- 52
+duplicate$ -- 1024
+empty$ -- 1277
+format.name$ -- 473
+if$ -- 3605
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 328
+num.names$ -- 153
+pop$ -- 97
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 1387
+swap$ -- 1120
+text.length$ -- 102
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 352
+warning$ -- 0
+while$ -- 199
+width$ -- 0
+write$ -- 631

@@ -1,0 +1,9 @@
+\contentsline {section}{Supplementary Theory: Inference of Model Parameters}{2}
+\contentsline {subsection}{Inference of Model Parameters}{2}
+\contentsline {subsection}{The Metropolis-Hastings Algorithm}{6}
+\contentsline {section}{Supplementary Experimental Methods}{8}
+\contentsline {subsection}{DNA Sample Preparation}{8}
+\contentsline {subsection}{Instrumentation}{8}
+\contentsline {subsection}{Thresholding Analysis}{9}
+\contentsline {subsection}{Determining Labelling Efficiency}{10}
+\contentsline {section}{Supplementary Figures}{10}

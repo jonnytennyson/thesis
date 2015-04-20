@@ -1,0 +1,45 @@
+\relax 
+\citation{achemso-control}
+\providecommand{\mciteSetMaxWidth}[3]{\relax}
+\providecommand{\mciteSetMaxCount}[3]{\relax}
+\bibstyle{achemso}
+\@writefile{toc}{\contentsline {section}{Supplementary Theory: Inference of Model Parameters}{2}}
+\@writefile{toc}{\contentsline {subsection}{Inference of Model Parameters}{2}}
+\newlabel{eq:multi_sum}{{1}{2}}
+\newlabel{eq:noise_only}{{2}{2}}
+\newlabel{eq:donor_only}{{3}{3}}
+\newlabel{eq:FRET1}{{4}{3}}
+\newlabel{eq:FRET2}{{5}{3}}
+\newlabel{eq:FRET_single}{{10}{4}}
+\newlabel{eq:FRET_multi}{{11}{4}}
+\newlabel{eq:2ppltn_frac}{{12}{4}}
+\newlabel{eq:multippltn}{{13}{5}}
+\@writefile{toc}{\contentsline {subsection}{The Metropolis-Hastings Algorithm}{6}}
+\@writefile{toc}{\contentsline {section}{Supplementary Experimental Methods}{8}}
+\@writefile{toc}{\contentsline {subsection}{DNA Sample Preparation}{8}}
+\newlabel{subsect:DNA_prep}{{}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces DNA sequences of the donor-labelled strands, where 5 is a deoxy-T nucleotide, labelled with Alexa Fluor\textsuperscript  {\textregistered } 488 at the C6 amino position.\relax }}{8}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:donor}{{1}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Preparing the dual-labelled dsDNA. An acceptor-labelled ssDNA, with the sequence shown was annealed to the indicated donor construct, to yield a dual-labelled construct with the labels separated by the given number of base pairs. In the displayed acceptor-strand sequences, 6 is a deoxy-T nucleotide, labelled with Alexa Fluor\textsuperscript  {\textregistered } 647 at the C6 amino position.\relax }}{8}}
+\newlabel{tab:dsDNA}{{2}{8}}
+\@writefile{toc}{\contentsline {subsection}{Instrumentation}{8}}
+\newlabel{subsect:experimental}{{}{8}}
+\@writefile{toc}{\contentsline {subsection}{Thresholding Analysis}{9}}
+\newlabel{subsect:thresholding}{{}{9}}
+\citation{kapanidis05}
+\citation{kapanidis05}
+\@writefile{toc}{\contentsline {subsection}{Determining Labelling Efficiency}{10}}
+\newlabel{eq:label}{{18}{10}}
+\newlabel{eq:total_events}{{19}{10}}
+\@writefile{toc}{\contentsline {section}{Supplementary Figures}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A typical smFRET experiment. (A) Microscope set-up for smFRET. APD: Avalanche Photodiode. (B) The four possible labelling states for a single molecule in the confocal volume.\relax }}{11}}
+\newlabel{fig:plate_DAG}{{1}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Directed Acyclic Graph illustrating the interrelation of parameters in the inference model. In this notation, circles represent random variables, while squares represent constants. Known or observed values are shaded, while hidden variables are not. For each time bin in a dataset of size N, $f_D$ and $f_A$ are respectively the number of donor and acceptor photons observed; $n_{prot}$ is the number of molecules present in the confocal volume. For each of M molecules present per bin, $c_{D}$ and $c_{A}$ are respectively the number of donor and acceptor photons emitted, $r_{sep}$ is the dye separation interval and $\lambda $ is the emission rate of the donor dye. The global variables $\lambda _{D}$ and $\lambda _{A}$ are the background emission rates of donor and acceptor photons; $\lambda _{prot}$ is the rate of observation of fluorescent molecules; $p_{D}$ and $p_{A}$ are the probability that a molecule carries respectively a donor and an acceptor dye; $\lambda _B$ and $k_D$ are the parameters of the Gamma-distribution, from which the local donor emission rate, $\lambda $ is selected. Each random variable is initialized using a prior selected from a uniform distribution across the indicated ranges. The two known constants $R_0$ and $\gamma $ are the dye-separation for which FRET efficiency is 50 \% and the instrumental $\gamma $-factor discussed above.\relax }}{12}}
+\newlabel{fig:plate_DAG}{{2}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Graph illustrating the convergence of the Metropolis sampler during the initial burn-in period of the sampling. Analysis of the same dataset was initiated using different values of the dye-dye separation from 5 \r A(in blue) to 100 \r A(in red), in steps of 5 \r A. After 500 iterations of the sampler (within the 1000 iterations used in the burn-in period, during which no samples are stored) all initial values have converged on the correct value for the dye-dye separation.\relax }}{13}}
+\newlabel{fig:MC_burnin_convergence}{{3}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Histograms showing the marginal distributions of donor and acceptor photons in a smFRET dataset (1:1 mixture of 4bp and 12 bp DNA duplexes). (A) Marginal distributuon photons in the donor channel. Histogram shows the number of time bins observed to contain this many donor photons. Blue circles show the number of donor photons predicted by our model, using parameters inferred from the dataset using the inference method. (B) Marginal distributuon photons in the acceptor channel. Histogram shows the number of time bins observed to contain this many acceptor photons. Red circles show the number of acceptor photons predicted by our model, using parameters inferred from the dataset.\relax }}{14}}
+\newlabel{fig:marginals}{{4}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Graph illustrating the effect of threshold choice on the number of molecules detected (left) and the calculated FRET efficiency (right) of synthetic datasets with FRET efficiencies of 0.88 (A), 0.66 (B), 0.40 (C), 0.21 (D) and 0.11 (E) respectively. For all FRET efficiencies, the chosen threshold has a large effect on the number of molecules detected. The threshold also influences the calculated FRET efficiency, with the effect being particularly large for the highest FRET efficiencies.\relax }}{15}}
+\newlabel{fig:threshold_effect}{{5}{15}}
