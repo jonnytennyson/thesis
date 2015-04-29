@@ -1,7 +1,7 @@
 \chapter{Introduction}
 \label{chap:intro}
 \section{Introduction}
-This chapter provides a general introduction to the contextual background of the work presented in this thesis. First, we provide a general overview of the physical phenomena of fluorescence and F\"{o}rster resonance energy transfer (FRET). We describe the application of these phenomena to the study of biological molecules and the common experimental and analytical techniques used in these research areas. We then present an overview of techniques of statistical analysis, with a particular focus on model-based Bayesain inference. We present common sampling-based techniques for Bayesian statistical analysis and describe why Bayesian inference is a useful tool in the analysis of single-molecule fluorescence data.
+This chapter provides a general introduction to the contextual background of the work presented in this thesis. First, we provide a general overview of the physical phenomena of fluorescence and F\"{o}rster resonance energy transfer (FRET) and describe how these pheonomena can be applied to the study of biological molecules. We also review the common experimental and analytical techniques used in these research areas. We then present an overview of techniques of statistical analysis, with a particular focus on model-based Bayesain inference. We present common sampling-based techniques for Bayesian statistical analysis and describe why Bayesian inference is a useful tool in the analysis of single-molecule fluorescence data.
 
 \section{Fluorescence and FRET}
 Since FRET was first used to measure the distance between two fluorescent dyes on individual molecules bound to a surface~\cite{ha96}, single-molecule FRET (smFRET) has become a popular tool to investigate the structure and dynamics of biomolecules, both on a surface and diffusing freely in solution~\cite{haran03, schuler02, weiss00}. We open this chapter with a discussion of the physical basis of molecular fluorescence and FRET. We then describe some of the applications of fluorescence in biological research, and describe the constraints and experimental techniques commonly used in single molecule fluorescence microscopy.
@@ -11,7 +11,17 @@ Since FRET was first used to measure the distance between two fluorescent dyes o
 Fluorescence is the physical phenomenon by which a molecule that has absorbed a photon of electromagnetic radiation and which is in an excited state relaxes via non-radiative processes, such as vibrational interactions, rotation and translation in its medium and then  emits a photon, returning to its ground state. Owing to the intramolecular transitions occurring prior to emission, the photon emitted is of a lower energy than the photon absorbed. The difference in energy between the absorbed and emitted photons is termed the Stokes shift (Fig.~\ref{fig:jablonski} B,~\cite{Albani2011}) and is a characteristic of the energy levels available to the excited molecule. 
 
 The typical timescale for a single fluorescence excitation-emission cycle is approximately $10^{-10} - 10^{-7}$ s. This timescale is dominated by the lifetime of the excited state, (typically $10^{-10} - 10^{-7}$ s); photon excitation and emission processes occur on a timescale that is several orders of magniude shorter (absorption $10^{-15}$ s, relaxation $10^{-12} - 10^{-10}$ s).
- 
+
+
+\begin{figure}[!ht]
+   \begin{center}
+      \includegraphics*[clip=true, width=5in]{introduction/jablonski.pdf}
+      \caption{A) Jablonski diagram depicting the possible electronic processes undergone by an excited fluorophore. Solid lines indicate electronic transitions, wavy lines indicate vibrational transitions. Absorption of a high-energy photon promotes an electron from the ground state $\text{S}_0$ to an excited state, typically $\text{S}_1$. Fluorescence emission occurs during the electronic relaxation from $\text{S}_1$ to $\text{S}_0$. Non-radiative relaxation via internal conversion (IC) or other competing processes, such as inter-system crossing (ISC) to the triplet state $\text{T}_1$, reduce the quantum yield. B) Due to fast vibrational relaxation, the fluorescence emission is shifter to longer wavelengths than the absorption (Stokes shift). Figure adapted from~\cite{Horrocks2014}, with permission.}
+      \label{fig:jablonski}
+   \end{center}
+\end{figure}
+
+
 \paragraph{Competing Processes}
 The fluorescence excitation-emission cycle involves transitions between the singlet ground state ($\text{S}_0$) and first excited state ($\text{S}_1$) of the fluorophore (Fig.~\ref{fig:jablonski}). However, other competing, non-radiative processes can occur. Internal conversion -- a non-radiative transition to a lower energy state of the same spin multiplicity -- is possible, although the large energy gap between the $\text{S}_1$ and $\text{S}_0$ states makes it much less frequent than the more accessible fluorescent pathway. A more significant competitor is inter-system crossing, involving a non-radiative transition from the first singlet excited state, $\text{S}_1$ to the first triplet excited state, $\text{T}_1$. Although forbidden by spin selection rules, inter-system crossing is facilitated by spin-orbit coupling, allowing it to compete with fluorescence (rate $10^{-10} - 10^{-8}$ s) as a relaxation pathway.
 
@@ -46,14 +56,6 @@ where $k_f$ and $k_{nr}$ are the rates of fluorescence emission and non-radiativ
 where $n_{\text{emitted}}$ and $n_{\text{absorbed}}$ are respectively the number of emitted and absorbed photons.
 
 The energetic interconversions involved in fluorescence can be summarised using a Jablonski diagram (Fig.~\ref{fig:jablonski}).
-
-\begin{figure}[!ht]
-   \begin{center}
-      %\includegraphics*[clip=true, width=5in]{jablonski.pdf}
-      \caption{A) Jablonski diagram depicting the possible electronic processes undergone by an excited fluorophore. Solid lines indicate electronic transitions, wavy lines indicate vibrational transitions. IC = internal conversion, ISC = intersystem crossing. B) Characteristic times of the processes depicted in the Jablonski diagram. C. Due to fast vibrational relaxation, the fluorescence emission is shifter to longer wavelengths than the absorption (Stokes shift). Figure from~\cite{Horrocks2014}, used with permission.}
-      \label{fig:jablonski}
-   \end{center}
-\end{figure}
 
 \subsection{The Physical Basis of FRET}
 \label{sect:fret}
