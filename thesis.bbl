@@ -25,6 +25,11 @@ S~Weiss.
   fluorescence spectroscopy}.
 \newblock {\em {Nat. Struct. Mol. Biol}}, {7}({9}):{724--729}, {SEP} {2000}.
 
+\bibitem{valeur2001}
+B.~Valeur, editor.
+\newblock {\em {Molecular Fluorescence: Principles and Applications}}.
+\newblock Wiley-VCH, 2001.
+
 \bibitem{Albani2011}
 J.~R. Albani.
 \newblock {\em Structure and Dynamics of Macromolecules: Absorption and
@@ -36,6 +41,17 @@ M.~H. Horrocks.
 \newblock {\em Development of single-molecule techniques to study the
   aggregation of {$\alpha$}-synuclein}.
 \newblock PhD thesis, University of Cambridge, 2014.
+
+\bibitem{spectral}
+Quanta red spectra.
+\newblock
+  \url{http://tools.lifetechnologies.com/content/sfs/gallery/high/QuantaRed-Spectra.jpg}.
+\newblock Accessed: 2015-04-30.
+
+\bibitem{goldbook2006}
+{\em {IUPAC Compendium of Chemical Terminology}}.
+\newblock IUPAC, 2006.
+\newblock Accessed: 2015-04-30.
 
 \bibitem{forster48}
 T.~Forster.

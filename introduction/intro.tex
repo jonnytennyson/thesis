@@ -8,24 +8,30 @@ Since FRET was first used to measure the distance between two fluorescent dyes o
 
 \subsection{The Physical Basis of Fluorescence}
 \paragraph{Fluorescence}
-Fluorescence is the physical phenomenon by which a molecule that has absorbed a photon of electromagnetic radiation and which is in an excited state relaxes via non-radiative processes, such as vibrational interactions, rotation and translation in its medium and then  emits a photon, returning to its ground state. Owing to the intramolecular transitions occurring prior to emission, the photon emitted is of a lower energy than the photon absorbed. The difference in energy between the absorbed and emitted photons is termed the Stokes shift (Fig.~\ref{fig:jablonski} B,~\cite{Albani2011}) and is a characteristic of the energy levels available to the excited molecule. 
+Fluorescence is the physical phenomenon by which a molecule that has absorbed a photon of electromagnetic radiation and which is in an excited state relaxes via non-radiative processes, such as vibrational interactions, rotation and translation in its medium and then  emits a photon, returning to its ground state~\cite{valeur2001}. Typically, a fluorescence excitation-emission cycle involves transitions between the singlet ground state ($\text{S}_0$) and first excited state ($\text{S}_1$) of the fluorophore (Fig.~\ref{fig:jablonski}). Owing to the intramolecular transitions occurring prior to emission, the photon emitted is of a lower energy than the photon absorbed. The difference in energy between the absorbed and emitted photons is termed the Stokes shift (Fig.~\ref{fig:stokes},~\cite{Albani2011}) and is a characteristic of the energy levels available to the excited molecule. 
 
-The typical timescale for a single fluorescence excitation-emission cycle is approximately $10^{-10} - 10^{-7}$ s. This timescale is dominated by the lifetime of the excited state, (typically $10^{-10} - 10^{-7}$ s); photon excitation and emission processes occur on a timescale that is several orders of magniude shorter (absorption $10^{-15}$ s, relaxation $10^{-12} - 10^{-10}$ s).
-
+The typical timescale for a single fluorescence excitation-emission cycle is approximately $10^{-10} - 10^{-7}$ s. This timescale is dominated by the lifetime of the excited state, (typically $10^{-10} - 10^{-7}$ s); photon excitation and emission processes, as well as vibrational transitions, occur on a timescale that is several orders of magniude shorter (absorption $10^{-15}$ s, relaxation $10^{-12} - 10^{-10}$ s).
 
 \begin{figure}[!ht]
    \begin{center}
-      \includegraphics*[clip=true, width=5in]{introduction/jablonski.pdf}
-      \caption{A) Jablonski diagram depicting the possible electronic processes undergone by an excited fluorophore. Solid lines indicate electronic transitions, wavy lines indicate vibrational transitions. Absorption of a high-energy photon promotes an electron from the ground state $\text{S}_0$ to an excited state, typically $\text{S}_1$. Fluorescence emission occurs during the electronic relaxation from $\text{S}_1$ to $\text{S}_0$. Non-radiative relaxation via internal conversion (IC) or other competing processes, such as inter-system crossing (ISC) to the triplet state $\text{T}_1$, reduce the quantum yield. B) Due to fast vibrational relaxation, the fluorescence emission is shifter to longer wavelengths than the absorption (Stokes shift). Figure adapted from~\cite{Horrocks2014}, with permission.}
+      \includegraphics*[clip=true, width=6in]{introduction/jablonski.pdf}
+      \caption{Schematic Jablonski diagram depicting the possible electronic processes undergone by an excited fluorophore. Solid lines indicate electronic transitions, wavy lines indicate vibrational transitions. Absorption of a high-energy photon promotes an electron from the ground state $\text{S}_0$ to an excited state, typically $\text{S}_1$. Fluorescence emission occurs during the electronic relaxation from $\text{S}_1$ to $\text{S}_0$. Non-radiative relaxation via internal conversion (IC) or other competing processes, such as inter-system crossing (ISC) to the triplet state $\text{T}_1$, reduce the quantum yield. Figure adapted from~\cite{Horrocks2014}, with permission.}
       \label{fig:jablonski}
    \end{center}
 \end{figure}
 
+\begin{figure}
+	\begin{center}
+	\includegraphics*[clip=true, width=3in]{introduction/QuantaRed-Spectra.jpg}
+	\caption{The absorption (black line) and emission (red line) spectra for the Quanta Red dye. Due to fast vibrational relaxation, the fluorescence emission is shifter to longer wavelengths than the absorption. This is termed the Stokes shift. Figure from~\cite{spectral}}
+	\label{fig:stokes}
+	\end{center}
+\end{figure}
 
 \paragraph{Competing Processes}
-The fluorescence excitation-emission cycle involves transitions between the singlet ground state ($\text{S}_0$) and first excited state ($\text{S}_1$) of the fluorophore (Fig.~\ref{fig:jablonski}). However, other competing, non-radiative processes can occur. Internal conversion -- a non-radiative transition to a lower energy state of the same spin multiplicity -- is possible, although the large energy gap between the $\text{S}_1$ and $\text{S}_0$ states makes it much less frequent than the more accessible fluorescent pathway. A more significant competitor is inter-system crossing, involving a non-radiative transition from the first singlet excited state, $\text{S}_1$ to the first triplet excited state, $\text{T}_1$. Although forbidden by spin selection rules, inter-system crossing is facilitated by spin-orbit coupling, allowing it to compete with fluorescence (rate $10^{-10} - 10^{-8}$ s) as a relaxation pathway.
+In addition to the $\text{S}_1$ to $\text{S}_0$ transition that results in fluorescence emission, other competing energetic transitions can also occur, resulting in non-radiative relaxation to the ground state $\text{S}_0$, or permanent changes to the electronic structure of the fluorophore (photobleaching). Internal conversion -- a non-radiative transition to a lower energy state of the same spin multiplicity -- is possible, although the large energy gap between the $\text{S}_1$ and $\text{S}_0$ states makes it much less frequent than the more accessible fluorescent pathway. A more significant competitor is inter-system crossing, involving a non-radiative transition from the first singlet excited state, $\text{S}_1$ to the first triplet excited state, $\text{T}_1$. Although forbidden by spin selection rules, inter-system crossing is facilitated by spin-orbit coupling, allowing it to compete with fluorescence (rate $10^{-10} - 10^{-8}$ s) as a relaxation pathway.
 
-From the $\text{T}_1$ state there are several accessible pathways to the ground state ($\text{S}_0$). Phosphorescence is the radiative decay from $\text{T}_1$ to $\text{T}_0$; alternatively, a second inter-system crossing back to $\text{S}_1$, followed by delayed fluorescence emission to reach the $\text{S}_0$ state is more common. As the lifetime of the $\text{T}_1$ state is long (on the order of $10^{-6} - 1$ s), this can be observed as photoblinking.  
+From the $\text{T}_1$ state there are several accessible pathways to the ground state ($\text{S}_0$). Phosphorescence is the radiative decay from $\text{T}_1$ to $\text{T}_0$; alternatively, a second inter-system crossing back to $\text{S}_1$, followed by delayed fluorescence emission to reach the $\text{S}_0$ state is more common. As the lifetime of the $\text{T}_1$ state is long (on the order of $10^{-6} - 1$ s), this can be observed as photoblinking. These two processes are illustrated in Fig.~\ref{fig:jablonski}.  
 
 A third relaxation pathway from the $\text{T}_1$ state is photobleaching. If the fluorophore is in a solution containing dissolved oxygen, the $\text{T}_1$ state can interact with the triplet ground state of molecular oxygen, leading to de-excitation via triplet-triplet annihilation:
 
@@ -38,7 +44,19 @@ The resultant singlet oxygen can then irreversibly oxidise the fluorophore, leav
 
 %Intersystem crossing ($10^{-10} - 10^{-8}$ s) and internal conversion ($10^{-11} - 10^{-9}$ s) are slower processes.
 
-One useful parameter for characterising a fluorophore is its quantum yield, $\phi_f$, the fraction of excited molecules that undergo photon emission to return to the ground state. It is defined as: 
+\paragraph{The Extinction Coefficient and Quantum Yield}
+In choosing a fluorophore for a single molecule fluorescence experiment, it is desirable to maximise the number of successful absorption-emisssion cycles undergone per unit time. Hence, the best fluorophores both absorb many exciting photons, increasing the number of possible cycles, and return to the ground state via fluorescence emission following the majority of excitations, maximising the number of photons actually emitted. Two key parameters that enable quantitative evaluation of fluorescent properties are the molar extinction coefficient, $\epsilon$, and quantum yield, $\phi$. 
+
+The extinction coefficient, $\epsilon$, measures how strongly a fluorophore absorbs light at a given wavelength $\lambda$. It can be calculated for a fluorophore $f$, from the Beer-Lambert law~\cite{goldbook2006} as:
+
+\begin{equation}
+I = I_0 e^{-\epsilon_f l}
+\label{eq:ext_coeff}
+\end{equation}
+
+where for an initial excitation intensity $I_0$, $I$ is the excitation intensity at a distance $l$ into a solution of fluorophore $f$ and $\epsilon_f$ is the extinction coefficient of the fluorophore.
+
+Similarly, the fluorescence quantum yield for fluorophore $f$, $\phi_f$, describes the fraction of photon absorption events that result in emission of a photon. It can be defined as: 
 
 \begin{equation}
 \phi_f = \frac{k_f}{k_f + k_{nr}}
@@ -55,7 +73,7 @@ where $k_f$ and $k_{nr}$ are the rates of fluorescence emission and non-radiativ
 
 where $n_{\text{emitted}}$ and $n_{\text{absorbed}}$ are respectively the number of emitted and absorbed photons.
 
-The energetic interconversions involved in fluorescence can be summarised using a Jablonski diagram (Fig.~\ref{fig:jablonski}).
+%The energetic interconversions involved in fluorescence can be summarised using a Jablonski diagram (Fig.~\ref{fig:jablonski}).
 
 \subsection{The Physical Basis of FRET}
 \label{sect:fret}

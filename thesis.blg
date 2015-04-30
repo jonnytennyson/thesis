@@ -2,37 +2,27 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 Case mismatch error between cite keys Compeau2011 and compeau2011
----line 526 of file thesis.aux
+---line 534 of file thesis.aux
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys Compeau2011 and compeau2011
----line 531 of file thesis.aux
+---line 539 of file thesis.aux
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys Compeau2011 and compeau2011
----line 532 of file thesis.aux
+---line 540 of file thesis.aux
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys zerbino2008 and Zerbino2008
----line 540 of file thesis.aux
+---line 548 of file thesis.aux
  : \citation{zerbino2008
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 573 of file thesis.aux
- : \citation{gurevich2013
- :                       }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 580 of file thesis.aux
- : \citation{gurevich2013
- :                       }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 583 of file thesis.aux
+---line 581 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
@@ -41,14 +31,29 @@ Case mismatch error between cite keys gurevich2013 and Gurevich2013
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
+Case mismatch error between cite keys gurevich2013 and Gurevich2013
+---line 591 of file thesis.aux
+ : \citation{gurevich2013
+ :                       }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys gurevich2013 and Gurevich2013
+---line 596 of file thesis.aux
+ : \citation{gurevich2013
+ :                       }
+I'm skipping whatever remains of this command
 The style file: unsrt.bst
 Database file #1: thesis.bib
-I was expecting a `,' or a `}'---line 211 of file thesis.bib
+I was expecting a `,' or a `}'---line 27 of file thesis.bib
+ :     
+ :     isbn =  {0-19-879285-9}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 236 of file thesis.bib
  :     
  :     doi = {10.1007/978-1-4020-9003-5_3}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 2153 of file thesis.bib
+Repeated entry---line 2178 of file thesis.bib
  : @article{Zerbino2008
  :                     ,
 I'm skipping whatever remains of this entry
@@ -57,47 +62,48 @@ Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "lloydsmith07"
 Warning--I didn't find a database entry for "bliss53"
 Warning--I didn't find a database entry for "blinking"
+Warning--empty author and editor in goldbook2006
 Warning--empty journal in Coil2014
 Warning--empty journal in li2013
-You've used 149 entries,
+You've used 152 entries,
             1791 wiz_defined-function locations,
-            1306 strings with 36721 characters,
-and the built_in function-call counts, 43666 in all, are:
-= -- 3421
-> -- 3276
+            1318 strings with 37042 characters,
+and the built_in function-call counts, 44058 in all, are:
+= -- 3455
+> -- 3283
 < -- 0
-+ -- 1150
-- -- 1001
-* -- 3881
-:= -- 7546
-add.period$ -- 449
-call.type$ -- 149
-change.case$ -- 139
++ -- 1154
+- -- 1002
+* -- 3891
+:= -- 7597
+add.period$ -- 458
+call.type$ -- 152
+change.case$ -- 140
 chr.to.int$ -- 0
-cite$ -- 151
-duplicate$ -- 1332
-empty$ -- 3459
-format.name$ -- 1001
-if$ -- 8934
+cite$ -- 155
+duplicate$ -- 1359
+empty$ -- 3515
+format.name$ -- 1002
+if$ -- 9031
 int.to.chr$ -- 0
-int.to.str$ -- 149
-missing$ -- 154
-newline$ -- 750
-num.names$ -- 149
-pop$ -- 223
+int.to.str$ -- 152
+missing$ -- 156
+newline$ -- 765
+num.names$ -- 151
+pop$ -- 243
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 455
+skip$ -- 463
 stack$ -- 0
 substring$ -- 3564
-swap$ -- 147
+swap$ -- 150
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 398
-width$ -- 152
-write$ -- 1633
-(There were 10 error messages)
+warning$ -- 3
+while$ -- 399
+width$ -- 155
+write$ -- 1662
+(There were 11 error messages)
