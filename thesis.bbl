@@ -70,11 +70,46 @@ L.~Stryer and R.~P. Haughland.
 \newblock {\em Proceedings of the National Academy of Sciences of the United
   States of America}, 58:719--726, 1967.
 
+\bibitem{Michalet2003}
+X.~Michalet, A.~N. Kapanidis, T.~Laurence, F.~Pinaud, S.~Doose, M.~Pflughoefft,
+  and S.~Weiss.
+\newblock The power and prospects of fluorescence microscopies and
+  spectroscopies.
+\newblock {\em Annu. Rev. Biophys. Biomol. Struct.}, 31:161--182, 2003.
+
+\bibitem{Moerner2003}
+W.~E. Moerner and D.~P. Fromm.
+\newblock Methods of single-molecule fluorescence spectroscopy and microscopy.
+\newblock {\em Rev. Sci. Instrum.}, 74:3597--3619, 2003.
+
+\bibitem{Dillingham2008}
+M.~S. Dillingham and M.~I. Wallace.
+\newblock Protein modification for single molecule fluorescence microscopy.
+\newblock {\em Org. Biomol. Chem.}, 6:3031--3037, 2008.
+
+\bibitem{Webb2014}
+D.~J. Webb and C.~M. Brown.
+\newblock Epi-fluorescence microscopy.
+\newblock {\em Methods Mol Biol.}, 931:29--59, 2014.
+
+\bibitem{Wolf1995}
+K.~B. Wolf and G.~Krotzsch.
+\newblock Geometry and dynamics in refracting systems.
+\newblock {\em Eur. J. Phys.}, 16:14--20, 1995.
+
 \bibitem{horrocks2012}
 M.~H. Horrocks, H.~Li, J.~Shim, R.~T. Ranasinghe, R.~W. Clarke, W.~T.~S. Huck,
   C.~Abell, and D.~Klenerman.
 \newblock Single molecule fluorescence under conditions of fast flow.
 \newblock {\em Anal. Chem.}, 84:179--185, 2012.
+
+\bibitem{Brown2008}
+C.~M. Brown, R.~B. Dalal, B.~Hebert, M.~A. Digman, A.~R. Horwitz, and
+  E.~Gratton.
+\newblock Raster image correlation spectroscopy (rics) for measuring fast
+  protein dynamics and concentrations with a commercial laser scanning confocal
+  microscope.
+\newblock {\em J Microsc.}, 229:78--91, 2008.
 
 \bibitem{nir06}
 E.~Nir, X.~Michalet, K.~M. Hamadani, T.~A. Laurence, D.~Neuhauser,
