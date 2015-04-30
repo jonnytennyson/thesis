@@ -45,6 +45,7 @@ The resultant singlet oxygen can then irreversibly oxidise the fluorophore, leav
 %Intersystem crossing ($10^{-10} - 10^{-8}$ s) and internal conversion ($10^{-11} - 10^{-9}$ s) are slower processes.
 
 \paragraph{The Extinction Coefficient and Quantum Yield}
+\label{par:qy}
 In choosing a fluorophore for a single molecule fluorescence experiment, it is desirable to maximise the number of successful absorption-emisssion cycles undergone per unit time. Hence, the best fluorophores both absorb many exciting photons, increasing the number of possible cycles, and return to the ground state via fluorescence emission following the majority of excitations, maximising the number of photons actually emitted. Two key parameters that enable quantitative evaluation of fluorescent properties are the molar extinction coefficient, $\epsilon$, and quantum yield, $\phi$. 
 
 The extinction coefficient, $\epsilon$, measures how strongly a fluorophore absorbs light at a given wavelength $\lambda$. It can be calculated for a fluorophore $f$, from the Beer-Lambert law~\cite{goldbook2006} as:
@@ -236,7 +237,7 @@ Confocal microscopy takes the reduction in excitation volume a further step, min
 \end{figure}
 
 \paragraph{Fluorescence Correlation Spectroscopy}
-Fluorescence Correlation Spectroscopy (FCS) is an extension of the Confocal method described above. In FCS, a higher concentration ($1 - 100$ nM) of analyte solution is used, such that multiple fluorophores occupy the confocal volume an any time. Temporal fluctuations in the detected fluorescence emission can be used to determine physical paramters of the analyte solution, such as molecular concentrations and diffusion constants. These are determined by fitting a fluorescence autocorrelation function (Eq.~\ref{eq:fcs}), 
+Fluorescence Correlation Spectroscopy (FCS)~\cite{Magde1972} is an extension of the Confocal method described above. In FCS, a higher concentration ($1 - 100$ nM) of analyte solution is used, such that multiple fluorophores occupy the confocal volume an any time. Temporal fluctuations in the detected fluorescence emission can be used to determine physical paramters of the analyte solution, such as molecular concentrations and diffusion constants. These are determined by fitting a fluorescence autocorrelation function (Eq.~\ref{eq:fcs}), 
 
 \begin{equation}
 G(\tau) = \frac{\langle \delta F(t) \cdot \delta F(t + \tau)\rangle}{\langle F(t)^2 \rangle}
@@ -252,15 +253,25 @@ G(\tau) = \left( 1 - T + T\exp(\frac{-\tau}{-\tau_T}) \right)\frac{1}{N}\left( \
 
 Here, $N$ is the average number of molecules residing in the confocal volume, $\tau_D$ is the characteristic residence time of the molecules, $\omega$ is the beam-waist and $z_0$ is the length of the measurement volume. The term $\left( 1 - T + T\exp(\frac{-\tau}{-\tau_T}) \right)$ corrects for photoblinking caused by population of the triplet excited state; $T$ is the fraction of molecules occupying the triplet state and $\tau_T$ is the triplet state lifetime.
 
-FCS is used in Fluorescent Cross Correlation Spectroscopy~\cite{???} to determine the stoichiometry of molecular complexes; it is also used to study chemical reaction processes such as protein aggregation~\cite{???} and to study the behaviour of fluorescently labelled molecules inside living cells~\cite{???}. 
+FCS is used in Fluorescent Cross Correlation Spectroscopy~\cite{Bacia2007} to determine the stoichiometry of molecular complexes; it is also used to study chemical reaction processes such as protein aggregation~\cite{Berland1996, Tjernberg1999} and to study the behaviour of fluorescently labelled molecules inside living cells~\cite{Bacia2006}. 
 
 \subsection{Fluorophores for Single Molecule Imaging}
 \label{sect:fluorophores}
 All of the techniques of single molecule fluorescent microscopy described thus far are reliant on the availability of fluorophores that are bright enough that emission from individual fluorophores can be detected against background noise.  This requires the fluorophores to undergo sufficient cycles of excitation and fluorescent emission that a large number of photons can be detected. Several factors affect the suitability of fluorophores for this purpose.
 
-To maximise the number of excitation-emission cycles, a fluorophore should have a high quantum yield, to maximise the number of photons emitted for some number of absorbed photons. The lifetime of the excited state should also be short, to increase the number of excitation-emission cycles per unit time. Furthermore, the fluorophore should have a high extinction coefficient at the excitation wavelength, to maximise the number of photon absorption events. Furthermore, the fluorophore should be resistant to both permanent photobleaching and to transient photoblinking, to prevent premature attenuation of fluorescence emission. These considerations are particularly pertinent for fluorophores used in confocal techniques, where the number of photons observed from each fluorophore is additionally limited by the dwell-time of the molecule in the confocal volume (typically less than 1 ms).
+As described above (Section~\ref{par:qy}), to maximise the number of excitation-emission cycles, a fluorophore should have both a high extinction coefficient and a high quantum yield, to maximise the number of photons emitted per unit time. The lifetime of the excited state should also be short, to increase the number of excitation-emission cycles per unit time. Furthermore, the fluorophore should have a high extinction coefficient at the excitation wavelength, to maximise the number of photon absorption events. Furthermore, the fluorophore should be resistant to both permanent photobleaching and to transient photoblinking, to prevent premature attenuation of fluorescence emission. These considerations are particularly pertinent for fluorophores used in confocal techniques, where the number of photons observed from each fluorophore is additionally limited by the dwell-time of the molecule in the confocal volume (typically less than 1 ms).
 
-Considerable effort has been made to synthesize fluorophores that fulfil these requirements for the excitation wavelengths accessible to single molecule microscopy. Many of the most popular dyes are derived from fluorone (Fig.~\ref{fig:fluorone}): fluorescein, the fluorophore used in the first demonstration of single molecule detection~\cite{???} and the green-excited Rhodamine 6G are both built around fluorone's chromophoric heterocyclic structure; functionalised derivatives of these molecules form the basis of a range of blue- and green-excited fluorophores in the commercial Alexa Fluor and Atto ranges (Fig.~\ref{fig:dyes}). Red-excited fluorophores are typically derived from cyanine structures, although the polymethine backbone makes them susceptible to photobleaching via cis/trans isomerisation. To address this issue, conformationally locked derivatives, such as the commercially available Atto647N, have been developed; however both locked and unlocked cyanine derivatives are prone to photoblinking via population of long-lived triplet states~\cite{???}.
+Considerable effort has been made to synthesize fluorophores that fulfil these requirements for the excitation wavelengths accessible to single molecule microscopy. Many of the most popular dyes are derived from fluorone (Fig.~\ref{fig:fluorone}): fluorescein, the fluorophore used in the first demonstration of single molecule detection~\cite{Sun1997} and the green-excited Rhodamine 6G are both built around fluorone's chromophoric heterocyclic structure; functionalised derivatives of these molecules form the basis of a range of blue- and green-excited fluorophores in the commercial Alexa Fluor and Atto ranges (Fig.~\ref{fig:dyes}). Red-excited fluorophores are typically derived from cyanine structures, although the polymethine backbone makes them susceptible to photobleaching via cis/trans isomerisation. To address this issue, conformationally locked derivatives, such as the commercially available Atto647N, have been developed; however both locked and unlocked cyanine derivatives are prone to photoblinking via population of long-lived triplet states~\cite{zondervan03}.
+
+
+\begin{figure}
+	\begin{center}
+	\includegraphics*[clip=true, width=5in]{introduction/dyes.pdf}
+	\caption{Chemical structures of some common fluorescent dyes. Top row, left to right: fluorone forms the basis of many flurorescnent dyes; fluorescein was used in the first demonstration of single molecule detection; Rhodamine 6G was XXX? Bottom row, left to right: the commercially-available dyes Alexa Fluor 488; Alexa Fluor 647; and the conformationally locked variant Atto 647N.}
+	\label{fig:dyes}
+	\end{center}
+\end{figure}
+
 
 \section{Confocal Microscopy}
 Thus far, we have given a general overview of the different applications of fluorescence in single molecule imaging. Howerver, this thesis primarily focuses on the analysis of data single molecule confocal microscopy. Hence, we shall now give a more detailed description of the challenges and experiemntal methodologies specific to this single molecule imaging technique.

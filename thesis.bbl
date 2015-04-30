@@ -111,6 +111,47 @@ C.~M. Brown, R.~B. Dalal, B.~Hebert, M.~A. Digman, A.~R. Horwitz, and
   microscope.
 \newblock {\em J Microsc.}, 229:78--91, 2008.
 
+\bibitem{Magde1972}
+D.~Magde, E.~Elson, and W.~Webb.
+\newblock Thermodynamic fluctuations in a reacting system: Measurement by
+  fluorescence correlation spectroscopy.
+\newblock {\em Phys. Rev. Lett.}, 29:705--708, 1972.
+
+\bibitem{Bacia2007}
+K.~Bacia and P.~Schwille.
+\newblock Practical guidelines for dual-color fluorescence cross-correlation
+  spectroscopy.
+\newblock {\em Nat. Protoc.}, 2:2842--2856, 2007.
+
+\bibitem{Berland1996}
+K.~M. Berland, P.~T.~C. So, Y.~Chen, W.~W. Mantulin, and E.~Gratton.
+\newblock canning two-photon fluctuation correlation spectroscopy: particle
+  counting measurements for detection of molecular aggregation.
+\newblock {\em Biophys. J.}, 71:410--420, 1996.
+
+\bibitem{Tjernberg1999}
+L.~O. Tjernberg, A.~Pramanik, S.~Bjorling, P.~Thyberg, J.~Thyberg,
+  C.~Nordstedt, K.~D. Berndt, L.~Terenius, and R.~Rigler.
+\newblock Amyloid beta-peptide polymerization studied using fluorescence
+  correlation spectroscopy.
+\newblock {\em Chem. Biol.}, 6:53--62, 1999.
+
+\bibitem{Bacia2006}
+K.~Bacia, S.~A. Kim, and P.~Schwille.
+\newblock Fluorescence cross-correlation spectroscopy in living cells.
+\newblock {\em Nat. Methods}, 3:83--89, 2006.
+
+\bibitem{Sun1997}
+W.-C. Sun, K.~R. Gee, D.~H. Klaubert, and R.~P. Haugland.
+\newblock Synthesis of fluorinated fluoresceins.
+\newblock {\em J. Org. Chem.}, 62:6469--6475, 1997.
+
+\bibitem{zondervan03}
+R.~Zondervan, F.~Kulzer, S.~B. Orlinskii, and M.~Orrit.
+\newblock Photoblinking of rhodamine 6g in poly(vinyl alcohol): Radical dark
+  state formed through the triplet.
+\newblock {\em J. Phys. Chem. A.}, 107:6770 -- 6776, 2003.
+
 \bibitem{nir06}
 E.~Nir, X.~Michalet, K.~M. Hamadani, T.~A. Laurence, D.~Neuhauser,
   Y.~Kovchegov, and S.~Weiss.
@@ -691,12 +732,6 @@ C.~Hyeon, J.~Lee, J.~Yoon, S.~Hohng, and D.~Thirumalai.
   junctions.
 \newblock {\em Nature Chemistry}, 4:904 --914, 2012.
 
-\bibitem{zondervan03}
-R.~Zondervan, F.~Kulzer, S.~B. Orlinskii, and M.~Orrit.
-\newblock Photoblinking of rhodamine 6g in poly(vinyl alcohol): Radical dark
-  state formed through the triplet.
-\newblock {\em J. Phys. Chem. A.}, 107:6770 -- 6776, 2003.
-
 \bibitem{joo2006}
 Joo C., McKinney~S. A., Nakamura M., Rasnik I., Myong S., and Ha~T.
 \newblock Real-time observation of reca filament dynamics with single monomer
@@ -1007,7 +1042,7 @@ H.~Li.
 
 \bibitem{Koren2015}
 S.~Koren and A.~M. Phillippy.
-\newblock ne chromosome, one contig: complete microbial genomes from long-read
+\newblock One chromosome, one contig: complete microbial genomes from long-read
   sequencing and assembly.
 \newblock {\em Curr. Opin. Microbiol.}, 23:110--120, 2015.
 
