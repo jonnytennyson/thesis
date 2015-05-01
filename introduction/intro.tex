@@ -280,7 +280,7 @@ Thus far, we have given a general overview of the different applications of fluo
 \paragraph{Single Molecule FRET}
 The most common form of confocal single microscopy exploits the phenomenon of FRET (Section~\ref{sect:fret}) to determine intramolecular distances in a single molecule FRET (smFRET) experiment. In such an experiment, each molecule is site-specifically labelled with two fluorescent dyes, a donor ($D$) and an acceptor ($A$). The dyes are chosen such that the emission spectrum of the donor overlaps with the excitation spectrum of the acceptor, enabling FRET emission to occur when the two dyes are sufficiently close in space. 
 
-A collimated laser beam, matched to the excitation spectrum of the donor, is used to illuminate an extremely dilute solution of these labelled molecules. When a labelled molecule diffuses through the laser beam, the fluorophore is excited and photons are emitted.  Emitted photons are collected, separated from excitation photons, recollimated, then further separated into donor and acceptor wavelengths using a dichroic mirror and directed onto two APD detectors for collection and analysis (Fig.~\ref{fig:fig1_instrumentation} A, B).
+A collimated laser beam, matched to the excitation spectrum of the donor, is used to illuminate an extremely dilute solution of these labelled molecules. When a labelled molecule diffuses through the laser beam, the fluorophore is excited and photons are emitted.  Emitted photons are collected, separated from excitation photons, recollimated, then further separated into donor and acceptor wavelengths using a dichroic mirror and directed onto two APD detectors for collection and analysis (Fig.~\ref{fig:confocal}).
 
 In the simplest smFRET experiment, all photons reaching the detectors during data acquisition binned as they are received into time-bins of length similar to the expected dwell-time of a molecule in the confocal volume. Fluorescent events are identified as the time-bins that contain sufficient photons to meet a specified criterion~\cite{weiss00}. Alternatively, to avoid missing or double counting fluorescent events that are split over more than one time-bin, photons can be binned a time-scale much shorter than the typical dwell time. A burst search algorithm~\cite{nir06} is then used to scan the resultant photon stream for bursts of a specified duration and brightness. Details of these two methods of event selection are provided in Chapter~\ref{chap:pyfret}.
 
@@ -291,14 +291,22 @@ E = \frac{n_A}{n_A + \gamma \cdot n_D}
 \label{eq:Eprod}
 \end{equation} 
 
-Histograms of the observed FRET efficiencies (Fig.~\ref{fig:histogram}) can be fitted with gaussian distributions to calculate approximate intramolecular distances and to identify conformational sub-populations that might have been invisible to an ensemble-based technique~\cite{joo08, Walter2008}.
+Histograms of the observed FRET efficiencies (Fig.~\ref{fig:histogram} A) can be fitted with gaussian distributions to calculate approximate intramolecular distances and to identify conformational sub-populations that might have been invisible to an ensemble-based technique~\cite{joo08, Walter2008}.
+
+\begin{figure}[!ht]
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{introduction/FRET_AND_zero.pdf}
+      \caption{Example FRET histograms from dual-labelled DNA duplexes. A) Following event selection and FRET Efficiency calculation, a histogram of the FRET efficiencies is prepared and fitted with a gaussian distribution. Parameters of the fit give information about intramolecular distances and population heterogeneity. B) a FRET histogram that contains a zero peak artifact, indicated by the green arrow, caused by improperly labelled molecules or acceptor photobleaching.}
+      \label{fig:histogram}
+   \end{center}
+\end{figure}
 
 \paragraph{Direct Acceptor Excitation}
-One drawback of the experimental technique summarized above is that the acceptor fluorophore can only be observed indirectly via FRET energy transfer from an excited donor fluorophore. Acceptor photobleaching and imperfect labelling of the analyte molecules can therefore lead to experimental artifacts such as the zero peak (Fig.~\ref{fig:zeropeak}), which complicate or distort downstream analysis. As a consequence, several experimental modifications of the simple FRET experiment have been developed to enable direct observation of the acceptor fluorophore.
+One drawback of the experimental technique summarized above is that the acceptor fluorophore can only be observed indirectly via FRET energy transfer from an excited donor fluorophore. Acceptor photobleaching and imperfect labelling of the analyte molecules can therefore lead to experimental artifacts such as the zero peak (Fig.~\ref{fig:histogram} B), which complicate or distort downstream analysis. As a consequence, several experimental modifications of the simple FRET experiment have been developed to enable direct observation of the acceptor fluorophore.
 
-One simple modification is Two Colour Coincidence Detection (TCCD)~\cite{orte06, orte10}. In this technique, two collimated, overlapped lasers are used to simultaneously excite both the donor and the acceptor fluorophores, enabling observation of the acceptor fluorophore even when the donor fluorophore is not present or when the inter-fluorophore distance is too great for FRET to occur. TCCD has been used in conjuction with simple FRET to study protein aggregation~\cite{cremades2012} and molecular conformation~\cite{Ye2012}.  
+One simple modification is Two Colour Coincidence Detection (TCCD)~\cite{orte06, orte10}. In this technique, two collimated, overlapped lasers are used to simultaneously excite both the donor and the acceptor fluorophores, enabling observation of the acceptor fluorophore even when the donor fluorophore is not present or when the inter-fluorophore distance is too great for FRET to occur. TCCD has been used in conjuction with simple FRET to study protein aggregation~\cite{cremades2012} and molecular conformation~\cite{Ye2012}. It is useful for identifying multimeric species, but extracting molecular distance can be challenging, as direct acceptor excitation cannot be simply separated from FRET emission~\cite{orte08_3}.  
 
-A more complex mmodification uses Alternating Laser Exciation (ALEX). In an ALEX experiment the diffusing molecules are excitated by two lasers in rapid alternation~\cite{kapanidis05}. One laser excites the donor fluorophore and the other can directly excite the acceptor fluorophore. The modulation is fast on the timescale of molecular dwell-time, allowing a single fluorescent molecule to receive multiple cycles of donor-acceptor direct excitation. The additional information obtained from direct excitation of the acceptor fluorophore allows fluorescent events originating from improperly labelled molecules to be excluded from further analysis. 
+A more complex modification uses Alternating Laser Exciation (ALEX). In an ALEX experiment the diffusing molecules are excitated by two lasers in rapid alternation~\cite{kapanidis05}. One laser excites the donor fluorophore and the other can directly excite the acceptor fluorophore. The modulation is fast on the timescale of molecular dwell-time, allowing a single fluorescent molecule to receive multiple cycles of both donor excitation and direct acceptor excitation. The additional information obtained from direct excitation of the acceptor fluorophore allows fluorescent events originating from improperly labelled molecules to be excluded from further analysis. 
 
 A further modification of this ALEX technique is Periodic Acceptor Excitation (PAX)~\cite{doose07}. PAX is a simplified version of ALEX, in which donor excitation is continuous, but there is rapid modulation of the acceptor excitation power. As in an ALEX experiment, this enables information about the molecular labelling state to be determined, however the experimental setup is simpler as rapid modulation is required for only one of the two lasers used.
 
@@ -312,7 +320,7 @@ As described above, a smFRET experiment is used to obtain information about intr
 
 where $n_D$ and $n_A$ are the number of observed donor and acceptor photons, $\gamma$ is the instrumental gamma-factor described above and $\langle n_{\text{monomer}}\rangle$ the mean number of photons observed in fluoreoscence events from labelled monomeric species.
 
-A further extension of this sizing technique uses microfluidic flow~\cite{horrocks12} combined with increased excitation intensities to increase the data collection rate. Automated dilution can also be used to rapidly dilute analyte solutions by up to six orders of magnitude~\cite{horrocks2013,}. This enables unstable mulitmeric complexes with weaker ($\mu$M) binding constants to be successfully analysed using smFRET before dissociation occurs.  
+A further extension of this sizing technique uses microfluidic flow~\cite{horrocks12} combined with increased excitation intensities to increase the data collection rate. Automated dilution can also be used to rapidly dilute analyte solutions by up to six orders of magnitude~\cite{horrocks2013}. This enables unstable mulitmeric complexes with weaker binding affinities to be successfully analysed using smFRET before dissociation occurs.  
 
 
 %For a single fluorescent burst, the FRET efficiency, $E$, can be calculated as (Eq~\ref{eq:Eprod}):
@@ -366,16 +374,16 @@ This section introdeces the core concepts of probability theory and relates them
 
 \subsection{Probabily Theory}
 \paragraph{Probabilty}
-Probability theory is the study of stochastic processes and the mathematical functions, termed probability distributions, that describe them. In probability theory, a variable whose value is subject to chance variations is termed a random variable. A discrete random variable, such as the outcome of a die roll or a coin flip, can take one of a fixed number of values and is described by a probability mass function (PMF); a continuous random variable can take any of a continous range of values and is described by a probability density function (PDF). 
+Probability theory is the study of stochastic processes and the mathematical functions, termed probability distributions, that describe them. In probability theory, a variable whose value is subject to chance variations is termed a random variable. A discrete random variable, such as the outcome of a die roll or a coin flip, can take one of a fixed number of values and is described by a probability mass function (PMF); a continuous random variable can take any of a continous range of values and is described by a probability density function (PDF)~\cite{Meester2003, Feller1968}. 
 
-In the field of single molecule fluorescence, the number of photons emitted by a fluorophore undergoing continuous excitation can be described as a discrete random variable. It is discrete since the number of photons emitted must be integral: it is unphysical to consider fractions of a photon. Photon emission can therefore be modeled using a discrete probability distribution. The most common choice is the Poisson distribution~\cite{???}. The Poisson distribution, given by the below equation:
+In the field of single molecule fluorescence, the number of photons emitted by a fluorophore undergoing continuous excitation can be described as a discrete random variable. It is discrete since the number of photons emitted must be integral: it is unphysical to consider fractions of a photon. Photon emission can therefore be modeled using a discrete probability distribution. The most common choice is the Poisson distribution~\cite{chen1999}. The Poisson distribution, given by the below equation~\cite{Meester2003}:
 
 \begin{equation}
-\Pr{X = x} = \frac{\lambda^x \cdot e^{-\lambda}}{x!}
+\Pr(X = x) = \frac{\lambda^x \cdot e^{-\lambda}}{x!}
 \label{eq:poisson}
 \end{equation}
  
-for integer values of $x$, describes the probability of a given number of events occurring in a fixed time interval, so is a good model for photon emission. 
+for random varaible $X$ and integer values of $x$, describes the probability of a given number of events occurring in a fixed time interval, so is a good model for photon emission. 
 
 
 %The canonical example is the outcome of an experiment in which a fair, six-sided die is rolled once. If we term the final value shown on the die $X$, we can describe the probability distribution over possible values of $X$ as follows:
@@ -388,14 +396,14 @@ for integer values of $x$, describes the probability of a given number of events
 Conditional probability is the probability that some event occurs, conditioned on the value of some other observation. From set theory, the conditional probability of event A, given event B, written $\Pr(A \mid B)$, is given by: 
 
 \begin{equation}
-\Pr(A \mid B) = \frac{\Pr(A \cup B)}{\Pr(B)}
+\Pr(A \mid B) = \frac{\Pr(A \cap B)}{\Pr(B)}
 \label{eq:conditional}
 \end{equation}
 
 This can be simply rearranged to give an expression for the probability of both events A and B occurring:
 
 \begin{equation}
-\Pr(A \cup B) = \Pr(A \mid B) \cdot \Pr(B) 
+\Pr(A \cap B) = \Pr(A \mid B) \cdot \Pr(B) 
 \label{eq:conditional_and}
 \end{equation}
 
@@ -403,7 +411,7 @@ An analagous expression can be derived from the probability of event B given eve
 
 
 \begin{equation}
-\Pr(A \cup B) = \Pr(B \mid A) \cdot \Pr(A) 
+\Pr(A \cap B) = \Pr(B \mid A) \cdot \Pr(A) 
 \label{eq:conditional_and}
 \end{equation}
 
@@ -411,30 +419,37 @@ A simple substitution and rearrangement allows the derivation of Bayes' theorem,
 
 \begin{equation}
 \Pr(A \mid B) = \frac{\Pr(B \mid A) \cdot \Pr(A)}{\Pr(B)} 
-\label{eq:bayes}
+\label{eq:bayes_1}
 \end{equation}
  
 \paragraph{Bayesian Statistics}
-Bayes Theorem (Eq.~\ref{eq:bayes}) provides the basis for Bayesian inference -- a method of statistical hypothesis testing. In Bayesian inference, the conditional probability $\Pr(A \mid B)$ is interpreted as a hypothesis, or model, the likelihood of which is evaluated based on observational evidence. Rewriting Eq.~\ref{eq:bayes} as the probability of a specific, parametric, model given some experimental observations, 
+Bayes Theorem (Eq.~\ref{eq:bayes_1}) provides the basis for Bayesian inference -- a method of statistical hypothesis testing. In Bayesian inference, the conditional probability $\Pr(A \mid B)$ is interpreted as a hypothesis, or model, the likelihood of which is evaluated based on observational evidence. Rewriting Eq.~\ref{eq:bayes_1} as the probability of a specific, parametric, model given some experimental observations, 
 
 \begin{equation}
 \Pr(\text{model}|\text{data}) = \frac{\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})}{\Pr(\text{data})} = \frac{\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})}{\int_{\forall \text{parameter values}}\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})} 
 \label{eq:bayes_model}
 \end{equation}
 
-we see that it is possible to use a forward, generative model of an observed dataset, $\Pr(\text{data}|\text{model})$, coupled with a prior, $\Pr(\text{model})$, that describes appropriate values for the model parameters, to infer the posterior probability, $\Pr(\text{model}|\text{data})$, of the model paramters~\cite{barberBRML2012}. This reltionship, which forms the basis of Bayesian statistics, allows model parameters to be inferred based on observed experimental evidence.
+we see that it is possible to use a forward, generative model of an observed dataset, $\Pr(\text{data}|\text{model})$, coupled with a prior, $\Pr(\text{model})$, that describes appropriate values for the model parameters, to infer the posterior probability, $\Pr(\text{model}|\text{data})$, of the model paramters~\cite{barberBRML2012}. This relationship, which forms the basis of Bayesian statistics, allows parameter values of a parametric model to be inferred conditioned on observed experimental evidence~\cite{morris1982}.
 
 \subsection{Monte Carlo Sampling}
 For an extremely simple model, it may be possible to compute the solution to Eq.~\ref{eq:bayes_model} exactly, by enumerating all possible states of the model. However, computing the normalisation factor in the denominator requires summing over all possible values of parameter of the model. Consequently, it quickly becomes computationally intractable either to derive an analytical expression for the denominator, or to compute it numerically. 
 
 To overcome this issue, sampling methods have been developed, which allow estimation of the distribution of values taken by the model parameters. To estimate the distribution of parameter values, it is sufficient to draw parameter samples distributed proportionally to the posterior distribution, $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$~\cite{hastings70}. The mean, variance and quantiles of these samples can be used to estimate the parameter values.
 
-Monte Carlo Markov chain (MCMC) algorithms are a class of algorithms that facilitate sampling from the posterior probability over the model parameters, $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$. A Markov chain is a memoryless random walk~\cite{Norris1998}, that transitions between different, enumerable, states in a manner that depends only on the state currently occupied. A Markov Chain Monte Carlo algorithm constructs a Markov chain that has as its equilibrium distribution the desired posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$, but which can be easily sampled from~\cite{Smith1993}. Running such a Markov chain for many thousands of iterations allows it to reach equilibrium; once this state has been reached, sampling further values with long inter-sample intervals is equivalent to drawing independent samples of the model parameter values, conditioned on the observed data, allowing inference of the distribution of parameter values. 
+Monte Carlo Markov chain (MCMC) algorithms are a class of algorithms that facilitate sampling from the posterior probability over the model parameters, $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$. A Markov chain is a memoryless random walk~\cite{Norris1998}, that transitions between different, enumerable, states in a manner that depends only on the state currently occupied. This is termed the Markov property~\cite{hoel1972}:
+
+\begin{equation}
+\Pr(X_{n+1} = x_{n+1} | X_0 = x_0, \dots, X_n = x_n) = \Pr(X_{n+1} = x_{n+1} | X_n = x_n)
+\label{eq:markov_property}
+\end{equation}
+
+A Markov Chain Monte Carlo algorithm constructs a Markov chain that has as its equilibrium distribution the desired posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$, but from which samples can easily be made~\cite{Smith1993}. Running such a Markov chain for many thousands of iterations allows it to reach equilibrium; once this state has been reached, sampling further values with long inter-sample intervals is equivalent to drawing independent samples of the model parameter values, conditioned on the observed data, allowing inference of the distribution of parameter values. 
 
 The following sections provide a brief overview of some of the most widely used MCMC algorithms.  
 
 \paragraph{Metropolis Hastings Sampling}
-The Metropolis-Hastings algorithm~\cite{hastings70}, an extension of the earlier Metropolis Algorithm~\cite{metropolis53}, is a sampling algorithm for approximating a probability distribution, $\Pr{x}$, by sampling from a distribution, $f(x)$ that is propoprtional to the probability density of $\Pr(x)$. As with all MCMC sampling methods, Metropolis-Hastings sampling iteratively samples parameter values such that, as more samples are made, the distribution $f(x)$ comes to approximate $\Pr(x)$ more and more closely. 
+The Metropolis-Hastings algorithm~\cite{hastings70}, an extension of the earlier Metropolis Algorithm~\cite{metropolis53}, is a sampling algorithm for approximating a probability distribution, $\Pr(x)$, by sampling from a distribution, $f(x)$ that is propoprtional to the probability density of $\Pr(x)$. As with all MCMC sampling methods, Metropolis-Hastings sampling iteratively samples parameter values such that, as more samples are made, the distribution $f(x)$ comes to approximate $\Pr(x)$ more and more closely~\cite{hastings70}. 
 
 At each step of the Metropolis-Hastings algorithm, one of the model parameters, $x^i$ is selected at random and its value modified by a small amount. The probability density $f(x, x^i)$, which is proportional to $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$, is evaluated using both the old and the new value of the parameter $x^i$ and the new parameter value is accepted with probability proportional to the acceptance ratio $\alpha$, defined as~\cite{chib95, barberBRML2012}:
 
@@ -443,7 +458,7 @@ At each step of the Metropolis-Hastings algorithm, one of the model parameters, 
 \label{eq:MH_alpha}
 \end{equation}
 
-$x^i_{\text{new}}$ is always accepted if it improves the probability that the observed dataset was generated by the model parameters including $x^i_{\text{new}}$; accepting $x^i_{\text{new}}$ with some probability even when it makes the models worse prevents the sampler from getting stuck in a local optimum. Sampling in this manner allows the Markov chain to converge towards a better estimates of the model parameter values, by sampling from high-density regions of $\Pr{x}$.
+Using this definition of the acceptance rate, $\alpha$, $x^i_{\text{new}}$ is always accepted if it improves the probability that the observed dataset was generated by the model parameters including $x^i_{\text{new}}$ ($alpha \ge 1$); accepting $x^i_{\text{new}}$ with probability proportional to $\alpha$ ($0 < \alpha < 1$) even when it makes the models worse prevents the sampler from getting stuck in a local optimum. Sampling in this manner allows the Markov chain to converge towards a better estimates of the model parameter values, by sampling from high-density regions of $\Pr{x}$.
 
 \paragraph{Gibbs Sampling}
 Gibbs sampling is a MCMC algorithm that is, in its simplest implementation, closely related to the Metropolis-Hastings algorithm. In Gibbs sampling, starting from a parametric model with a random initialisation of all parameter values, the sampling algorithm cycles through each parameter and draws a new sample value from a probability distribution, $\pi(x)$, conditioned on the current values of all other parameters~\cite{Smith1993}:
@@ -451,27 +466,27 @@ Gibbs sampling is a MCMC algorithm that is, in its simplest implementation, clos
 \begin{equation}
 x_i \sim \pi(x_i \mid x_0, \cdots, x_{i-1}, x_{i+1}, \cdots, x_n)
 \label{eq:gibbs}
-\end{equation} 
+\end{equation}
 
-Multiple iterations of this cycle produces a Markov chain whose stationary distribution, as for other MCMC sampling techinques, is the the desired posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$~\cite{gelman1995}.
+In contrast to the Metropolis Hastings algorithm, where a new sample value is accepted dependent on the value of the acceptance ration, $\alpha$; in Gibbs sampling the new sample value is always accepted~\cite{Casella1992}. Multiple iterations of this cycle produces a Markov chain whose stationary distribution, as for other MCMC sampling techinques, is the the desired posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$~\cite{gelman1995}.
 
 \paragraph{Slice Sampling}
 A third method of MCMC sampling is slice sampling. Slice sampling samples approximates the value of a random variable by sampling points uniformly from the are under the curve of its probability distribution function and then storing the $x$-coordinates of the samples obtained~\cite{Neal2003}. To approximate a univariate random varaible distributed according to some distribution, $f(x)$, the slice sampling algorithm is initialised with a random value of $x$, $x_0$, for which $f(x_0) > 0$. An auxiliary variable, $y$ is then chosen by drawing from the uniform distribution $U(0, f(x_0))$. Drawing a horizontal line across the distribution $f(x)$ at the value $y$ defines a horizontal slice, above which $f(x) > y$. An interval $I = (x_L, x_R)$ is defined such that the horizontal slice lies within $I$ and a new value of x, $x_1$ is chosen by sampling uniformly from $I$. This defines a Markov chain that converges to a uniform distribution over the area under the curve of the desired probability distribution~\cite{Neal2003}. Extensions of the slice sampling procedure to infer the values of multiple parameters can be achieved either by applying the univariate sampling algorithm to each variable in turn; or by sampling directly from the multivariate distribution using hyperrectangles to define the sample space for uniform sampling~\cite{Neal2003}. 
 
 \paragraph{Considerations for MCMC Sampling}
-In order to obtain valid estimates of model parameters, several important aspects of the MCMC process must be considered. Firstly, to avoid perturbation of the stationary distribution away from the desired equilibrium distribution (namely the probability distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$), it is necessary that the property of Detailed Balance is maintained~\cite{???}. Detailed Balance refers to the microscopic reversibility of the Markov chain, such that the probability of being in some state $x$ and transitioning to some other state $x'$ must be equal to the probability of being in state $x'$ and transitioning to state $x$:
+In order to obtain valid estimates of model parameters, several important aspects of the MCMC process must be considered. Firstly, to avoid perturbation of the stationary distribution away from the desired equilibrium distribution (namely the probability distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$), it is necessary that the property of Detailed Balance is maintained~\cite{O'Hagan2004}. Detailed Balance refers to the microscopic reversibility of the Markov chain, such that the probability of being in some state $x$ and transitioning to some other state $x'$ must be equal to the probability of being in state $x'$ and transitioning to state $x$:
 
 \begin{equation}
 \Pr(x)\cdot\Pr(x \rightarrow x') = \Pr(x')\cdot\Pr(x' \rightarrow x)
 \label{eq:balance}
 \end{equation}
 
-This is a consideration of particular importance for both Metropolis-Hastings and Gibbs sampling, where it is important to select proposal distributions such that detailed balance is maintained.
+This consideration is of particular importance for both Metropolis-Hastings and Gibbs sampling, where failure to select proposal distributions such that detailed balance is maintained may lead to the sampler not converging to the correct stationary distribution~\cite{Kelly2011}.
 
-Two further important considerations are the related concepts of burn-in and sample thinning. In MCMC sampling, the Markov chain is typically intialised with random values that result in a model that approximates very poorly the posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$. Hence, in sampling parameters using Markov chain sampling, it is necessary to run the sampler through many sampling iterations before beginning to store parameter estimates, in order to ensure that the initial values have been forgotten and the Markov chain has reached equilibrium. Similarly, once equlibrium has been reached, parameter samples that are drawn in quick succession will be correlated, as the Markov chain explores only slowly the parameter space. Therefore, in order to obtain many independent samples from the stationary distribution, it is important to ``thin'' the samples made by storing samples on only a small fraction of iterations, in order to ensure samples are taken from the whole parameter space.    
+Two further important considerations are the related concepts of burn-in and sample thinning. In MCMC sampling, the Markov chain is typically intialised with random values that result in a model that approximates very poorly the posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$. Hence, in sampling parameters using Markov chain sampling, it is necessary to run the sampler through many sampling iterations before beginning to store parameter estimates, in order to ensure that the initial values have been forgotten and the Markov chain has reached equilibrium. Similarly, once equlibrium has been reached, parameter samples that are drawn in quick succession will be correlated, as the Markov chain explores only slowly the parameter space. Therefore, in order to obtain many independent samples from the stationary distribution, it is important to ``thin'' the samples made by storing samples on only a small fraction of iterations, in order to ensure samples are taken from the whole parameter space and are not correlated with each other~\cite{Casella1992}.    
 
 \section{Thesis Objectives}
-This thesis describes the development of software for the analysis of fluorescence data. We implement and rigorously evaluate standard algorithms for the analysis of smFRET data. We then describe the implementation and evaluation of novel techniques for the analysis ofsmFRET data using sampling-based probabilistic inference. Finally, we apply methods of probabiliistic analysis to the proble of error correction in genome assemblies. Although this research was undertaken primarily to explore analysis methodologies appropriate to smFRET data, the methods and implementations described here have found considerable application, both within the Klenerman research group and beyond.
+This thesis describes the development of software for the analysis of fluorescence data. We implement and rigorously evaluate standard algorithms for the analysis of smFRET data. We then describe the implementation and evaluation of novel techniques for the analysis of smFRET data using sampling-based probabilistic inference. Finally, we apply methods of probabilistic analysis to the problem of error correction in genome assemblies. Although this research was undertaken primarily to explore analysis methodologies appropriate to smFRET data, the methods and implementations described here have found considerable application, both within the Klenerman research group and beyond.
 
 The primary objectives of this thesis are as follows:
 
@@ -487,7 +502,7 @@ The primary objectives of this thesis are as follows:
 
 \end{enumerate}
 
-Each chapter in this thesis is presented in a stand-alone manner, to accurately reflect their relative independence. In each chapter, we first provide a more detailed overview of the specific context within which the research was performed. We then introduce any required theoretical concepts and experimental techniques, before presenting the relevant results and appropriate conclusion. The rest of this thesis is structured as follows.
+Each chapter in this thesis is presented in a stand-alone manner, to accurately reflect their relative independence. In each chapter, we first provide a more detailed overview of the specific context within which the research was performed. We then introduce any required theoretical concepts and experimental techniques, before presenting the relevant results and appropriate conclusions. The rest of this thesis is structured as follows.
 
 Chapter~\ref{chap:pyfret} introduces the pyFRET library, which we developed for analysis of confocal smFRET data. We describe the theory and implementation of different analysis algorithms for smFRET datasets. Data from both continuous and alternating excitation experiments are considered. In the second part of Chapter 3, we provide a comprehensive evaluation of different smFRET analysis algorithms, using a combination of simulated and experimental datasets. We benchmark popular analysis techniques, demonstrating their relative utility under different data collection regimes. 
 
@@ -495,9 +510,9 @@ Chapter~\ref{chap:pyfret} introduces the pyFRET library, which we developed for 
 
 Chapter~\ref{chap:inference} considers a Bayesian method for the analysis of data from continuous excitation smFRET datasets. First, we introduce a model-based theory of the smFRET experiment. Then, we describe how this parametric model can be used to infer intramolecular distances and population sizes from time-binned smFRET data. We benchmark our Bayesian analysis technique against thresholding techniques used for time-binned data, showing the superior performance of the inference technique.
 
-Chapter~\ref{chap:sizing} extends this Bayesian analysis to sizing of labelled protein aggregates. We describe how a simplified model can be used to describe photon emission from multiple fluorophores. Using a combination of real and simulated datasets, we then show that this model is degenerate, making inference of aggregate sizes undecidable. We further show that a single emission event has multiple sources of heterogeneity, creating a complex, non-linear relationship between aggregate size and the number of photons emitted in a fluorescent event. Finally, we describe the development and evaluation of a novel excitation regime that mitigates some of these sources of heterogeneity.
+Chapter~\ref{chap:sizing} extends this Bayesian analysis to sizing of labelled protein aggregates. We describe how a simplified model can be used to describe photon emission from multiple fluorophores. Using a combination of real and simulated datasets, we then show that there is a complex, non-linear relationship between aggregate size and the number of photons emitted in a fluorescent event, making inference of aggregate sizes extremely challenging. We explore the sources of this emission heterogeneity and suggest a novel excitation regime that could mitigate some of these sources of error.
 
-Chapter~\ref{chap:illumina}, the final results chapter, is somewhat different. This chapter describes a Bayesian analysis tool for error correction in genome assemblies generated using Illumina Nextera mate pairs. Illumina sequencing technology uses fluorescence emission from multiple fluorophores in its base calling algorithm. However, base calling errors and complex repeat structures can make reassembly of short reads challenging. In this chapter, we introduce NxRepair, an error correction tool that can identify mistakes in {\emph de novo} assemblies of bacterial genomes. We benchmark NxRepair against existing tools, demonstrating its superior performance. Although not specifically related to smFRET data, this tool falls into the remit of this thesis, as it applies similar techniques of inference analysis to a problem encountered in analsis of fluorescence data.
+Chapter~\ref{chap:illumina}, the final results chapter, is somewhat different. This chapter describes a Bayesian analysis tool for error correction in genome assemblies generated using Illumina Nextera mate pairs. Illumina sequencing technology uses fluorescence emission from multiple fluorophores in its base calling algorithm. However, base calling errors and complex repeat structures can make reassembly of short reads challenging. In this chapter, we introduce NxRepair, an error correction tool that can identify mistakes in \emph{de novo} assemblies of bacterial genomes. We benchmark NxRepair against existing tools, demonstrating its superior performance. Although not specifically related to smFRET data, this tool falls into the remit of this thesis, as it applies similar techniques of probabilistic analysis to a problem encountered in downstream analysis of fluorescence data.
 
 Finally, Chapter~\ref{chap:conclusions} provides the conclusion to the thesis. Here, we summarise the overall contribution of this thesis and relate the work described to its wider research context. We also discuss possible extensions of the research described, indicating future applications of the research. Overall, the work presented in this thesis describes a rigorous evaluation of the analysis methodologies used in an experimental discipline, identifies several shortcomings and implements novel tools to mitigate overcome these issues. We hope that this work proves useful and informative to other researchers working in this field.
 

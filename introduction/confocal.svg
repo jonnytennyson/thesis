@@ -111717,7 +111717,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -112172,6 +112172,6 @@
          id="tspan167078"
          x="980.33331"
          y="642.36218"
-         style="font-size:16px">laser</tspan></text>
+         style="font-size:16px">Laser</tspan></text>
   </g>
 </svg>

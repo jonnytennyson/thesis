@@ -198,6 +198,12 @@ Ye~Y., G.~Blaser, M.~H. Horrocks, M.~J. Ruedas-Rama, S.~Ibrahim, A.~A. Zhukov,
   interacting proteins.
 \newblock {\em Nature}, 492:266--270, 2012.
 
+\bibitem{orte08_3}
+A.~Orte, R.~W. Clarke, and D.~Klenerman.
+\newblock Fluorescence coincidence spectroscopy for single-molecule
+  fluorescence energy-transfer measurements.
+\newblock {\em Analytical Chemistry}, 80:8389--8397, 2008.
+
 \bibitem{kapanidis05}
 A.N. Kapanidis, T.A. Laurence, N.K. Lee, E.~Margeat, X.~Kong, and S.~Weiss.
 \newblock Alternating-laser excitation of single molecules.
@@ -221,10 +227,31 @@ M.~H. Horrocks, L.~Rajah, P.~J{\"o}nsson, M.~Kjaergaard, M.~Vendruscolo,
   through microfluidic dilution.
 \newblock {\em Anal. Chem.}, 85:6855--6859, 2013.
 
+\bibitem{Meester2003}
+R.~Meester.
+\newblock {\em A Natural Introduction to Probability Theory}.
+\newblock Springer, 2003.
+
+\bibitem{Feller1968}
+W.~Feller.
+\newblock {\em An introduction to probability theory and its applications}.
+\newblock Wiley, third edition, 1968.
+
+\bibitem{chen1999}
+Y.~Chen, J.~D. Muller, P.~T.~C. So, and E.~Gratton.
+\newblock The photon counting histogram in fluorescence fluctuation
+  spectroscopy.
+\newblock {\em Biophys. J.}, 77:553 -- 567, 1999.
+
 \bibitem{barberBRML2012}
 D.~Barber.
 \newblock {\em {Bayesian Reasoning and Machine Learning}}.
 \newblock {Cambridge University Press}, 2012.
+
+\bibitem{morris1982}
+C.~N. Morris.
+\newblock Parametric empirical bayes inference: Theory and applications.
+\newblock {\em J. Am. Statist. Assoc.}, 78:57 -- 55, 1982.
 
 \bibitem{hastings70}
 W.K. Hastings.
@@ -236,6 +263,11 @@ W.K. Hastings.
 J.~R. Norris.
 \newblock {\em {Markov chains}}.
 \newblock {Cambridge University Press}, 1998.
+
+\bibitem{hoel1972}
+P.~G. Hoel, S.~C. Port, and C.~J. Stone.
+\newblock {\em {Introduction to Stochastic Processes}}.
+\newblock Houghton Mifflin Company, 1972.
 
 \bibitem{Smith1993}
 A.~F.~M. Smith and G.~0. Roberts.
@@ -253,6 +285,11 @@ S.~Chib and E.~Greenberg.
 \newblock Understanding the metropolis-hastings algorithm.
 \newblock {\em Am. Stat.}, 49:327--335, 1995.
 
+\bibitem{Casella1992}
+G.~Casella and E.~I. George.
+\newblock Explaining the gibbs sampler.
+\newblock {\em Journal of Molecular Biology}, 46:167--174, 1992.
+
 \bibitem{gelman1995}
 A.~Gelman, J.~B. Carlin, H.~S. Stern, and D.~B. Rubin.
 \newblock {\em {Bayesian Data Analysis, Second Edition (Chapman \& Hall/CRC
@@ -263,6 +300,17 @@ A.~Gelman, J.~B. Carlin, H.~S. Stern, and D.~B. Rubin.
 R.~M. Neal.
 \newblock Slice sampling.
 \newblock {\em Ann. Stat.}, 31:705--767, 2003.
+
+\bibitem{O'Hagan2004}
+A.~O'Hagan and J.~Forster.
+\newblock {\em {Kendall's Advanced Theory of Statistics, Volume 2B: Bayesian
+  Inference.}}
+\newblock OUP, 2004.
+
+\bibitem{Kelly2011}
+F.~P. Kelly.
+\newblock {\em {Reversibility and Stochastic Networks}}.
+\newblock OUP, 2011.
 
 \bibitem{deniz01}
 A.~A. Deniz, T.~A. Lawrence, M.~Dahan, D.~S. Chemla, P.~S. Schultz, and
@@ -701,12 +749,6 @@ A.~Orte, N.~R. Birkett, R.~W. Clarke, G.~L. Devlin, C.~M. Dobson, and
   fluorescence.
 \newblock {\em Proceedings of the National Academy of Sciences of the United
   States of America}, 105:14424--14429, 2008.
-
-\bibitem{chen1999}
-Y.~Chen, J.~D. Muller, P.~T.~C. So, and E.~Gratton.
-\newblock The photon counting histogram in fluorescence fluctuation
-  spectroscopy.
-\newblock {\em Biophys. J.}, 77:553 -- 567, 1999.
 
 \bibitem{potter1976}
 H.~Potter and D.~Dressler.
