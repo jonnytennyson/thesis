@@ -8,8 +8,6 @@ The contributions of this chapter are twofold. Firstly, pyFRET is the first open
 \section{Introduction}
 \subsection{The Single Molecule Fluorescence Experiment}
 
-XXX Note: a lot of this will be moved to  the introduction chapter ... XXX
-
 As described in Chapter~\ref{chap:intro}, in a confocal smFRET experiment, molecules are labelled with two fluorescent dyes. The emission spectrum of the donor dye ($D$) is chosen to overlap with the excitation spectrum of the acceptor ($A$). When the donor and acceptor are sufficiently close in space, exciting the donor dye results in FRET and fluorescent emission from the acceptor dye. The FRET efficiency, $E$, which describes the proportion of excitation energy transferred from the donor to the acceptor, depends on the distance, $r$ between the two dyes (Eq.~\ref{eq:efficiency}) and $R_0$, the F\"{o}rster distance, a dye dependent constant that describes the dye separation at which 50\% energy transfer is achieved (Fig.~\ref{fig:fig1_instrumentation} C)
 
 \begin{equation}
@@ -40,37 +38,11 @@ E = \frac{n_A}{n_A + \gamma \cdot n_D}
 for $n_A$ and $n_D$ detected acceptor and donor photons respectively and $\gamma$ an experimentally determined instrument-dependent correction factor. During the course of a smFRET experiment, several thousand fluorescent bursts are collected and used to construct FRET efficiency histograms, which cab then be used to identify populations of fluorescent species~\cite{ha96}.
 
 \section{Data Analysis in Confocal smFRET Experiments}
-Analysis of smFRET data involves several computational challenges. Firstly, photons emitted by a fluorescent molecule diffusing through the excitation volume must be identified against a noisy background. Secondly, identified bursts must be denoised, including removal of background auto-fluorescence and donor-acceptor crosstalk. Fluorescent bursts that are distorted by photobleaching or other photophysical artifacts should be identified and excluded. Multiple methods of burst selection and analysis have been developed and applied to the analysis of smFRET data~\cite{weiss00, deniz01, gell06, nir06, kapanidis05, muller05, doose07, kudryavtsev2012, eggeling01}. However, software for analysis of smFRET data has thus far been developed on an ad hoc basis, with individual groups preparing and maintaining their own analysis scripts, leading to problems typical of research programming projects~\cite{wilson06, merali10}. 
+Analysis of smFRET data involves several computational challenges. Firstly, photons emitted by a fluorescent molecule diffusing through the excitation volume must be identified against a noisy background. Secondly, identified bursts must be denoised, including removal of background auto-fluorescence and donor-acceptor crosstalk. Fluorescent bursts that are distorted by photobleaching or other photophysical artifacts should be identified and excluded. Multiple methods of burst selection and analysis have been developed and applied to the analysis of smFRET data~\cite{weiss00, deniz01, gell06, nir06, kapanidis05, muller05, doose07, kudryavtsev2012, eggeling01}. However, software for analysis of smFRET data has thus far been developed on an ad hoc basis, with individual groups preparing and maintaining their own analysis scripts, leading to problems typical of research programming projects~\cite{wilson06, merali10}.
 
-\subsection{Continuous Excitation}
-\paragraph{Time-binned Data}
-In the most simple smFRET experiment, fluorescently labelled molecules are excited by a laser that will excite the donor dye; all photons reaching the detectors during data acquisition binned as they are received into time-bins of length similar to the expected dwell-time of a molecule in the confocal volume (for freely diffusing molecules, a bin-time of 1 ms is typically used). Event selection then simply involves identifying time-bins that contain sufficient photons to meet a specified criterion. Two thresholding criteria are in common use. AND thresholding selects time bins for which $n_D > T_D$ AND $n_A > T_A$ for $n_D$ and $n_A$ photons in the donor and acceptor channels respectively, and $T_D$ and $T_A$ the donor and acceptor thresholds. In a similar manner, SUM thresholding considers the sum of photons observed in the donor and acceptor channels, selecting time bins for which $n_D + n_A > T$.
+\subsection{Development of Scientific Software}
 
-\paragraph{Fluorescent Burst Data}
-Although using time-bins that are matched to the dwell-time of molecules in the confocal volume is simple, it is not ideal, as some bursts will be split over several bins, so may be counted as separate events, or not considered for analysis. More sophisticated event selection algorithms, typically called burst search algorithms~\cite{nir06}, bin photons on a time-scale much shorter than the typical dwell time in the confocal volume and then scan the resultant photon stream for bursts of a specified duration and brightness. pyFRET implements both All Photons Burst Search (APBS) and a Dual Channel Burst Search (DCBS) algorithms for both ALEX data and for simple FRET data, as originally described~\cite{nir06}.
-
-In APBS burst search for FRET data, photons from both donor and acceptor channels are considered together. A burst is defined according to three constants: $T$, the averaging window; $M$, the minimum number of photons within window $T$; and $L$, the minimum total number of photons required for an identified burst to be retained. These three values are used in a two-step process for burst identification.
-
-Firstly, ``the start (respectively, the end) of a potential burst is detected when the number of photons in the averaging window of duration T is larger (respectively, smaller) than the minimum number of photons M."~\cite{nir06}.
-
-The DCBS burst search is similar, but considers the donor and acceptor channels separately. For a burst to be accepted in DCBS, both channels must simultaneoulsy meet the running sum criterion, allowing exclusion of single colour bursts and bursts where one fluorophore bleaches.
-
-\subsection{Alternating Laser Excitation}
-\paragraph{Time-binned Data}
-A more sophisticated smFRET experiment uses Alternating Laser Excitation (ALEX) during data acquisition. In this method, the diffusing fluorescent molecules are subjected to excitation from both two lasers in rapid alternation~\cite{kapanidis05}. One laser excites the donor fluorophore and the other can directly excite the acceptor fluorophore. The alternation of the laser excitation is fast on the timescale of molecular dwell-time in the confocal volume, allowing a single fluorescent molecule to receive multiple cycles of donor-acceptor direct excitation.
-
-Instead of the two photon streams -- donor and acceptor photons -- observed in a simple smFRET experiment, in a confocal ALEX experiment, there are four streams: $F_{D_{ex}}^{D_{em}}$, $F_{D_{ex}}^{A_{em}}$, $F_{A_{ex}}^{D_{em}}$, $F_{A_{ex}}^{A_{em}}$. $F_{D_{ex}}^{D_{em}}$ and $F_{D_{ex}}^{A_{em}}$, respectively donor and acceptor emission during donor excitation, are analogous to the two original donor and acceptor photon streams in a smFRET experiment. $F_{A_{ex}}^{A_{em}}$ records acceptor emission during direct acceptor excitation, whilst $F_{A_{ex}}^{D_{em}}$ records donor emission during acceptor excitation. The presence of these extra channels provides additional information about the labelling state of molecules giving rise to fluorescent bursts, allowing exclusion of bursts from molecules lacking one of the FRET labels and bursts where one of the labels was bleached. Selection based on direct excitation of both fluorophores also removes the biases caused by simple AND or SUM thresholding. 
-
-\paragraph{Fluorescent Burst Data}
-The burst search algorithms implemented for ALEX data work in a similar manner. In the ALEX APBS method, bursts are identified by considering the total number of fluorescent photons $F_{total} = F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} + F_{A_{ex}}^{A_{em}}$ in each time bin. Bursts are identified where the running sum (calculated using the  $F_{total}$ photon stream) in the averaging window $T$ exceeds $M$. The DCBS method considers donor excitation photons $F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}}$ separately from photons emitted during direct acceptor excitation $F_{donor} = F_{A_{ex}}^{A_{em}}$, requiring that the running sum exceeds $M$ for both $F_{donor}$ and $F_{A_{ex}}^{A_{em}}$.
-
-
-% simple interface for data analysis
-% tools for burst selection, denoising, analsysis, visualisation
-% short but contains all key methodologies  
-\section{Development of Scientific Software}
-
-A lot has been written concerning the development and maintenance of software used by academic researchers. Compared with code written by professional software engineers, scientists are often described as writing poor quality code that is inefficient, badly documented and difficult to use. Software for smFRET analysis has historically experienced several of these issues, which has slowed innovation in the field.
+A lot has been written concerning the development and maintenance of software used by academic researchers~\cite{wilson06, merali10}. Compared with code written by professional software engineers, scientists are often described as writing poor quality code that is inefficient, badly documented and difficult to use. Software for smFRET analysis has historically experienced several of these issues, which has slowed innovation in the field.
 
 % Problems with the lack of open source software and collaboration: Keep for now as want to restructure this section
 % - poorly maintained code
@@ -84,28 +56,56 @@ A lot has been written concerning the development and maintenance of software us
 
 %Firstly: reinventing the wheel
 
-Firstly, smFRET software used by different research groups often requires ``reinventing the wheel"~\cite{mirams13}. Within smFRET research groups, programming ability is not a standard skill, despite the need for sophisticated data analysis and use of custom data collection hardware. It is common for researchers with programming skills to maintain their own series of data-analysis scripts which may be wholly dependent on particular hardware tools or analysis packages. Other researchers, who may lack the skills to maintain and develop even simple scripts, are dependent on black-box techniques provided by their colleagues. Consequently, data analysis is dependent on scripts written and maintained by just a few researchers. Loss of programming expertise when these team members leave can result in significant difficulties for the remaining group members, who are then dependent on poorly documented code that they do not fully understand how to use. Furthermore, the lack of available open source software often requires new researchers in the field of smFRET to completely reimplement standard analysis techniques in order to become independently productive.    
+Firstly, smFRET software used by different research groups often requires ``reinventing the wheel"~\cite{mirams13}. Within smFRET research groups, programming ability is not a standard skill, despite the need for sophisticated data analysis and use of custom data collection hardware. It is common for researchers with programming skills to maintain their own series of data-analysis scripts which may be wholly dependent on particular hardware tools or analysis packages. Other researchers, who may lack the skills to maintain and develop even simple scripts, are dependent on these black-box techniques provided by their colleagues. Consequently, data analysis is dependent on scripts written and maintained by just a few researchers. Loss of programming expertise when these team members leave can result in significant difficulties for the remaining group members, who are then dependent on poorly documented code that they do not fully understand how to use. Furthermore, the lack of available open source software often requires new researchers in the field of smFRET to completely reimplement standard analysis techniques in order to become independently productive.    
 
 %Secondly: productivity
-Secondly, the need for many researchers to develop and maintain their own analyis tools has significant impact on research productivity. The requirement to reimplement standard analysis techniques consumes valuable time that could better be used in experimental research or in developing and benchmarking improved analysis tools. Furthermore, most researchers have no formal training in software engineering, with the result that analysis software can vary hugely in quality and is frequently poorly documented and maintained, making it difficult for other researchers to understand and use. New analysis scipts are often added in an ad hoc manner, with the result that straighforward tasks are performed using an unweildy mess of spaghetti code, transforming simple modifications into complex undertakings requring significant time investmenent. Poorly maintained code adds an additional barrier to open sharing of resources as groups are embarrassed to share low-quality software.  
+Secondly, the need for many researchers to develop and maintain their own analyis tools has significant impact on research productivity. The requirement to reimplement standard analysis techniques consumes valuable time that could better be used in experimental research or in developing and benchmarking improved analysis tools. Furthermore, most researchers have no formal training in software engineering, with the result that analysis software can vary hugely in quality and is frequently poorly documented and maintained, making it difficult for other researchers to understand and use. New analysis scipts are often added in an ad hoc manner, transforming simple modifications into complex undertakings requring significant time investmenent. Poorly maintained code and undocumented code adds an additional barrier to open sharing of resources.  
 
 % Finally: reproducibility
 Finally, there is the issue of research reproducibility. Different research groups use widely differing tools to complete relatively similar tasks. New methods of data collection and analysis are frequently developed~\cite{kapanidis05, nir06, sisamakis2010}. However, when software is not released to the community, it is difficult for researchers, who must often implement poorly described methodologies entirely from scratch, to verify results or to adopt new techniques in their own research. As a consequence, new techniques are poorly benchmarked, making it difficult to understand whether a new analysis adds quality or merely complexity, whilst adoption of useful new methods is relatively slow. These three issues of productivity, reliability and reproducibility, all linked to the problem of poorly maintained softwared and lack of software development skills, are now becoming a key bottleneck in smFRET research.  
 
+\subsection{Continuous Excitation}
+\paragraph{Time-binned Data}
+In the most simple smFRET experiment, fluorescently labelled molecules are excited by a laser that will excite the donor dye; all photons reaching the detectors during data acquisition binned as they are received into time-bins of length similar to the expected dwell-time of a molecule in the confocal volume (for small, freely diffusing molecules, a bin-time of 1 ms is typically used). Event selection then simply involves identifying time-bins that contain sufficient photons to meet a specified criterion. Two thresholding criteria are in common use. AND thresholding selects time bins for which $n_D > T_D$ AND $n_A > T_A$ for $n_D$ and $n_A$ photons in the donor and acceptor channels respectively, and $T_D$ and $T_A$ the donor and acceptor thresholds. In a similar manner, SUM thresholding considers the sum of photons observed in the donor and acceptor channels, selecting time bins for which $n_D + n_A > T$.
+
+\paragraph{Fluorescent Burst Data}
+Although using time-bins that are matched to the dwell-time of molecules in the confocal volume is simple, it is not ideal, as some bursts will be split over several bins, so may be counted as separate events, or not considered for analysis. More sophisticated event selection algorithms, typically called burst search algorithms~\cite{nir06}, bin photons on a time-scale much shorter than the typical dwell time in the confocal volume and then scan the resultant photon stream for bursts of a specified duration and brightness. pyFRET implements both All Photons Burst Search (APBS) and a Dual Channel Burst Search (DCBS) algorithms both for ALEX data and for simple FRET data, as originally described~\cite{nir06}.
+
+In APBS burst search for FRET data, photons from both donor and acceptor channels are considered together. A burst is defined according to three constants: $T$, the averaging window; $M$, the minimum number of photons within window $T$; and $L$, the minimum total number of photons required for an identified burst to be retained. These three values are used in a two-step process for burst identification.
+
+Firstly, ``the start (respectively, the end) of a potential burst is detected when the number of photons in the averaging window of duration T is larger (respectively, smaller) than the minimum number of photons M."~\cite{nir06}.
+
+The DCBS burst search is similar, but considers the donor and acceptor channels separately. For a burst to be accepted in DCBS, both channels must simultaneoulsy meet the running sum criterion, allowing exclusion of single colour bursts and bursts where one fluorophore bleaches.
+
+\subsection{Alternating Laser Excitation}
+\paragraph{Time-binned Data}
+A more sophisticated smFRET experiment uses Alternating Laser Excitation (ALEX) during data acquisition. In this method, the diffusing fluorescent molecules are subjected to excitation from both two lasers in rapid alternation~\cite{kapanidis05}. One laser excites the donor fluorophore and the other can directly excite the acceptor fluorophore. The alternation of the laser excitation is fast on the timescale of molecular dwell-time in the confocal volume, allowing a single fluorescent molecule to receive multiple cycles of donor-acceptor direct excitation.
+
+Instead of the two photon streams -- donor and acceptor photons -- observed in a simple smFRET experiment, in a confocal ALEX experiment, there are four streams: $F_{D_{ex}}^{D_{em}}$, $F_{D_{ex}}^{A_{em}}$, $F_{A_{ex}}^{D_{em}}$ and $F_{A_{ex}}^{A_{em}}$. $F_{D_{ex}}^{D_{em}}$ and $F_{D_{ex}}^{A_{em}}$, respectively donor and acceptor emission during donor excitation, are analogous to the two original donor and acceptor photon streams in a smFRET experiment. $F_{A_{ex}}^{A_{em}}$ records acceptor emission during direct acceptor excitation, whilst $F_{A_{ex}}^{D_{em}}$ records donor emission during acceptor excitation. Initial event selection is performed based on the number of photons observed during both donor excitation and acceptor excitation: $F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} > T_{D_{ex}}$ AND $F_{A_{ex}}^{A_{em}} > T_{A_{ex}}$ for threshold $T_{D_{ex}}$ during donor excitation and $T_{A_{ex}}$ during acceptor excitation provides an equivalent to AND thresholding; $F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} + F_{A_{ex}}^{A_{em}} > T$ for overall threshold $T$ is analogous to SUM thresholding. Performing event selection in this manner, based on direct excitation of both fluorophores, should remove the biases caused by simple AND or SUM thresholding. The presence of these extra channels also provides additional information about the labelling state of molecules giving rise to fluorescent bursts, allowing calculation of an emission stoichiometry, $S$:
+
+\begin{equation}
+S = \frac{F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}}}{F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} + F_{A_{ex}}^{A_{em}}}
+\label{eq:stoichiometry}
+\end{equation}
+
+Values of $S$  that are very close to one or very close to zero, indicate presence of only the donor or acceptor fluorophore respectively, so can be excluded from further analysis using a second event selection criterion: $S_{min} < S < S_{max}$. 
+
+\paragraph{Fluorescent Burst Data}
+The burst search algorithms implemented for ALEX data work in a similar manner to those implemented for simple FRET data. In the ALEX APBS method, bursts are identified by considering the total number of fluorescent photons $F_{total} = F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} + F_{A_{ex}}^{A_{em}}$ in each time bin. Bursts are identified where the running sum (calculated using the  $F_{total}$ photon stream) in the averaging window $T$ exceeds the threshold $M$. The DCBS method considers donor excitation photons $F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}}$ separately from photons emitted during direct acceptor excitation $F_{donor} = F_{A_{ex}}^{A_{em}}$, requiring that the running sum exceeds $M$ for both $F_{donor}$ and $F_{A_{ex}}^{A_{em}}$.
 
 \section{pyFRET: Design and Implementation}
-This cahpter presents pyFRET, an open-source python library, for the analysis of smFRET data. To our knowledge, this is the first open source software ever released by the smFRET research community. pyFRET is a small library that provides a toolkit facilitating all key steps in analysis of smFRET data: burst selection; cross-talk subtraction and burst denoising; data visualisation; and construction and simple fitting of FRET efficiency histograms. In providing this toolkit to the smFRET research community, we hope to facilitate the wider adoption of smFRET techniques in biological research as well as providing a framework for open communication about and sharing of data analysis tools.
+This chpter presents pyFRET, an open-source library, written in the python programming language, for the analysis of smFRET data. To our knowledge, this is the first open source software ever released by the smFRET research community. pyFRET is a small library that provides a toolkit facilitating all key steps in analysis of smFRET data: burst selection; cross-talk subtraction and burst denoising; data visualisation; and construction and simple fitting of FRET efficiency histograms. In providing this toolkit to the smFRET research community, we hope to facilitate the wider adoption of smFRET techniques in biological research as well as providing a framework for open communication about and sharing of data analysis tools.
 
 \subsection{Code Layout and Design}
-pyFRET provides four key data structures (classes) for manipulation of smFRET data. The FRET data object describes two fluorescence channels, corresponding to time-bins containing photons collected from donor (the donor channel, $D$) and acceptor (the acceptor channel, $A$) fluorophores. The ALEX data object describes four fluorescence channels, corresponding to the four temporal states in a smFRET experiment using Alternating Laser Excitation (ALEX), namely the donor channel when the donor laser is switched on ($D_D$); the donor channel when the acceptor laser is switched on ($D_A$); the acceptor channel when the donor laser is on ($A_D$); and the acceptor channel when the acceptor laser is on ($A_A$). These data channels are implemented as numpy arrays, allowing efficient computations and selection operations. The data structure can readily be expanded to include data from more detectors, which is needed in e.g. three-colour or anisotropy measurements.
+pyFRET provides four key data structures (classes) for manipulation of smFRET data. The FRET data object describes two fluorescence channels, corresponding to time-bins containing photons collected from donor (the donor channel, $D$) and acceptor (the acceptor channel, $A$) fluorophores. The ALEX data object describes four fluorescence channels, corresponding to the four temporal states in a smFRET experiment using Alternating Laser Excitation (ALEX), namely the donor channel when the donor laser is switched on ($D_D$); the donor channel when the acceptor laser is switched on ($D_A$); the acceptor channel when the donor laser is on ($A_D$); and the acceptor channel when the acceptor laser is on ($A_A$). These data channels are implemented as numpy arrays~\cite{numpy}, allowing efficient computations and selection operations. The data structure can readily be expanded to include data from more detectors, which is needed in e.g. three-colour or anisotropy measurements.
 
-Two similar classes are used for fluorescence bursts identified using the burst search algorithms. In addition to the donor and acceptor channels, the FRET bursts class type holds three additional arrays, giving the first and last bin of each burst, and the duration of each burst. These three new attributes are similarly present in the ALEX bursts object, in addition to the four fluorescent channels in the ALEX data object. In addition to the methods present for the simple FRET and ALEX objects, the burst data objects also implement methods to plot burst duration and to analyse recurrent bursts (RASP). 
+Two similar classes are used for fluorescence bursts identified using the burst search algorithms. In addition to the donor and acceptor channels, the FRET bursts class type holds three additional arrays, giving the first and last bin of each burst, and the duration of each burst. These three new attributes are similarly present in the ALEX bursts object, in addition to the four fluorescent channels in the ALEX data object. In addition to the methods present for the simple FRET and ALEX objects, the burst data objects also implement methods to plot burst duration and to analyse recurrent bursts (RASP)~\cite{hoffmann11}. 
 
 The data analysis workflow is illustrated in Fig.~\ref{fig:fig2_workflow} Following initialization of data objects, a single line of code performs background subtraction, event selection, cross-talk correction and calculation of the FRET efficiency. Likewise, simple but high-quality figures (see Fig.~\ref{fig:fig3_sample_results} for examples) can be generated in a single step.
 
 \begin{figure}[!ht]
    \begin{center}
-      \includegraphics*[clip=true, width=6in]{pyFRET/workflow_new.pdf}
+      \includegraphics*[clip=true, width=6in]{pyFRET/workflow.pdf}
       \caption{{\bf Typical workflow for data analysis using pyFRET.}}
       \label{fig:fig2_workflow}
    \end{center}
@@ -119,6 +119,8 @@ The data analysis workflow is illustrated in Fig.~\ref{fig:fig2_workflow} Follow
    \end{center}
 \end{figure}
 
+\subsection{Dependencies}
+In addition to the numpy arrays used for efficient data processing, pyFRET uses several other python modules to enable efficient data analysis. Specifically, we use matplotlib~\cite{Hunter2007} for plotting and data visualisation; whilst gaussian fitting of the FRET histograms is implemented using scikit-learn~\cite{sklearn}. These dependencies are available for free anonymous download for all platforms (see Section~\ref{sect:availability}). We used the free Anaconda package bundle (\url{https://store.continuum.io/cshop/anaconda/}) to install these dependencies. Detailed installation instructions can be found in the pyFRET documentation (\url{http://pyfret.readthedocs.org/en/latest/tutorial.html#installing-pyfret}).
 
 \subsection{Simple Event Selection and Denoising}
 \paragraph{FRET Data}
@@ -161,7 +163,7 @@ This is the simplest method for event selection and denoising. However, it has s
 pyFRET implements ALEX event selection as described in the original publication~\cite{lee06}. In brief, bursts are initially selected using a selection criterion based on the total number of photons emitted during donor and acceptor excitation:
  $F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} > T_D$ AND $F_{A_{ex}}^{A_{em}} > T_A$.
 
- Following this initial event selection, a second selection step is performed, based on the ratio of photons emitted during donor and acceptor excitation periods. The photon stoichiometry, $S$ is calculated for each burst as:
+Following this initial event selection, a second selection step is performed, based on the ratio of photons emitted during donor and acceptor excitation periods. The photon stoichiometry, $S$ is calculated for each burst as:
 
 \begin{equation}
 S = \frac{F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}}}{F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} + F_{A_{ex}}^{A_{em}}}
@@ -185,15 +187,15 @@ filename = "scatter_plot"
 ALEX_data.scatter_hist(S_min, S_max, gamma=g_factor, save=True, filepath=filepath, imgname=filename, imgtype="png")
 \end{lstlisting}
 
-Example ALEX analysis scripts can be found in the supplementary information.
+Example ALEX analysis scripts can be found in the iPython notebooks available online (\url{???}).
 
 \subsection{Burst Search Algorithms}
-pyFRET implements busrt search algorithms for both continuous excitation and ALEX experiemnts. As described above, to use a burst search algorithm effectively, phtotons must be binned into time-bins of duration much shorter than the average dwell time of a molecule in the confocal volume. Bursts are first identified through an initial scan of the burst stream, to identify windows in which the number of photons observed exceeds some threshold. In pyFRET, this initial search is performed using the convolve method from numpy~\cite{numpy11} to provide a running sum across windows of $T$ time-bins. Following initial burst identification, a burst is retained if it contains more than $L$ photons~\cite{nir06}.
+pyFRET implements busrt search algorithms for both continuous excitation and ALEX experiments. As described above, to use a burst search algorithm effectively, photons must be binned into time-bins of duration much shorter than the average dwell time of a molecule in the confocal volume. Bursts are first identified through an initial scan of the burst stream, to identify windows in which the number of photons observed exceeds the threshold $M$. In pyFRET, this initial search is performed using the convolve method from numpy~\cite{numpy11} to provide a running sum across windows of $T$ time-bins. Following initial burst identification, a burst is retained if it contains more than $L$ photons~\cite{nir06}.
 
 Example code for running a burst search algorithm is shown below:
 
 \begin{lstlisting}
-# Burst search using FRET data
+# Burst search using FRET burst data
 
 # required parameters
 T = 50             # time window (bins)
@@ -204,10 +206,24 @@ L = 60             # second threshold
 bursts_APBS = FRET_data.APBS(T, M, L)
 \end{lstlisting}
 
-\section{RASP: Recurrence Analysis of Single Particles}
-A recent innovation in confocal smFRET is Recurrence Analysis of Single Particles (RASP)~\cite{hoffmann11}. RASP exploits the fact that fluorescent bursts occurring close in time are more likely to be come from the same molecule diffusing back through the confocal volume than from an independent molecule. This can be used to determine interconversion kinetics and to test whether broad peaks in the E histogram derive from overlapping static populations.
+The procedure for running a burst search algorithm on ALEX data is precisely analogous:
 
-RASP is a two-step process. First, initial bursts ($b_1$) with a FRET efficiency $E_{b1}$ within some defined range $\Delta(E_{b1})$ are identified. Secondly, bursts ($b_2$) occurring within a time interval (called the recurrence interval) $T = (t_1, t_2)$ of $b_1$ are identified. Analysis of the distribution of FRET efficiencies in $b_2$, the population of recurrent bursts, provides information about the interconversion rate between subpopulations. The rates constants of interconversion can be extracted by fitting the relative subpopulations as a function of interval time.
+\begin{lstlisting}
+# Burst search using ALEX burst data
+
+# required parameters
+T = 50             # time window (bins)
+M = 50             # first threshold
+L = 60             # second threshold
+
+# calling APBS algorithm
+bursts_APBS = ALEX_data.APBS(T, M, L)
+\end{lstlisting}
+
+\section{RASP: Recurrence Analysis of Single Particles}
+A recent innovation in confocal smFRET is Recurrence Analysis of Single Particles (RASP)~\cite{hoffmann11}. RASP exploits the fact that fluorescent bursts occurring close in time are more likely to be from the same molecule diffusing back through the confocal volume than from a newly observed molecule. This can be used to determine interconversion kinetics and to test whether broad peaks in the FRET histogram derive from overlapping static populations.
+
+RASP is a two-step process. First, initial bursts ($b_1$) with a FRET efficiency $E_{b1}$ within some defined range $\Delta(E_{b1})$ are identified. Secondly, bursts ($b_2$) occurring within a time interval (called the recurrence interval) $T = (t_1, t_2)$ of $b_1$ are identified. Analysis of the distribution of FRET efficiencies in $b_2$, the population of recurrent bursts, provides information about the interconversion rate between subpopulations. The rate constants of interconversion can be extracted by fitting the relative subpopulations as a function of the recurrence interval $T$.
 
 pyFRET implements RASP using array masking, to allow efficient selection of relevant bursts. RASP can be called in a single step from a FRET bursts or ALEX bursts object, and a loop can readily be made to repeat the process at different time intervals:
 
@@ -231,11 +247,13 @@ recurrent_bursts.build_histogram(filepath, csvname, gamma=g_factor)
 \end{lstlisting} 
 
 \subsection{Compatibilities}
-pyFRET is written in Python. Both python 2 (v2.7) and python 3 (v3.3) are supported. pyFRET requires four further python libraries, namely numpy and scipy for data manipulation, matplotlib for data visualisation and scikit-learn for peak fitting. We recommend using the free Anaconda package bundle (\url{https://store.continuum.io/cshop/anaconda/}) to install these dependencies. Detailed installation instructions can be found in the pyFRET documentation (\url{http://pyfret.readthedocs.org/en/latest/tutorial.html#installing-pyfret}). pyFRET was written and tested in a Linux environment. However, it was written to be platform independent and has also been used successfully on both Apple and Windows machines.
+pyFRET is written in Python. Both python 2 (v2.7) and python 3 (v3.3) are supported. pyFRET requires four further python libraries, namely numpy and scipy for data manipulation, matplotlib for data visualisation and scikit-learn for peak fitting.  pyFRET was written and tested in a Linux environment. However, it was written to be platform independent and has also been used successfully on both iOS and Windows computers.
 
-The lack of Open Source software in the smFRET community has led to a proliferation of esoteric file-types used for data collection and storage. To make pyFRET as usable as possible for a wide range of smFRET researchers, we provide file parsers for simple .csv and .txt file formats, as well as our custom binary format. The pyFRET data structures can be initialised using simple python arrays of time-binned photons, for users whose file format is not currently supported. The tutorial and supplementary information provide example scripts for parsing common filetypes into pyFRET objects.
+The lack of Open Source software in the smFRET community has led to a proliferation of esoteric file-types used for data collection and storage. To make pyFRET as usable as possible for a wide range of smFRET researchers, we provide file parsers for simple .csv and .txt file formats, as well as the custom binary format used in the Klenerman group. The pyFRET data structures can be initialised using simple python arrays of time-binned photons, for users whose file format is not currently supported. The tutorial provides example scripts for parsing common filetypes into pyFRET objects.
 
 \section{Experimental Methods}
+In order to effectively 
+
 \subsection{Benchmarking the Gaussian Fitting Using Simulated Datasets}
 To test the ability of the fitting algorithms to distinguish fluorescent populations with similar FRET efficiencies, we generated simulated datasets consisting of mixtures of FRET bursts with a known FRET efficiency and population size. These bursts were then fitted using pyFRET's two component mixture model and the results compared to the known input FRET efficiencies and population sizes. The python script used to generate and fit these datasets can be found XXXX. 
 
@@ -446,6 +464,7 @@ We benchmarked RASP using data collected from a 1:1 mixture of 6 bp (high FRET) 
 In this chapter, we presented pyFRET, a versatile open source library for analysis of smFRET data. In addition to demonstrating the usage of our event selection and fitting algorithms, we also thoroughly evaluated their performance. We note that even the sophisticated burst search algorithms are not able to overcome the biases introduced through event selection in simple FRET datasets. ALEX data collection, on the other hand, does not suffer from these biases, so is able to analyse a wide variety of smFRET datasets with considerable accuracy. Furthermore, the burst search algorithms, especially when combined with ALEX data collection, are robust to changes in the values of parameters T, L and M, ensuring that conclusions drawn from smFRET data are not influenced by the thresholding parameters used. We hope that the evaluations and the pyFRET library will be of use to many researchers in the smFRET research field. 
  
 \section{Availability and Future Directions}
+\label{sect:availability}
 pyFRET is available to download from PyPI under an open source BSD licence from the Python Package Index (\url{https://pypi.python.org/pypi/pyfret0.1.0}). Documentation can also be found here, whilst a more extensive tutorial, including example scripts, can be found on our website (\url{http://rrm33.user.srcf.net/}).
 
 The data and scripts used to showcase and evaluate pyFRET can be found in iPython notebooks XXX.

@@ -37,36 +37,37 @@
 \contentsline {section}{\numberline {2.2}Introduction}{36}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}The Single Molecule Fluorescence Experiment}{36}{subsection.2.2.1}
 \contentsline {section}{\numberline {2.3}Data Analysis in Confocal smFRET Experiments}{37}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Continuous Excitation}{38}{subsection.2.3.1}
-\contentsline {paragraph}{Time-binned Data}{38}{section*.23}
-\contentsline {paragraph}{Fluorescent Burst Data}{38}{section*.24}
-\contentsline {subsection}{\numberline {2.3.2}Alternating Laser Excitation}{39}{subsection.2.3.2}
-\contentsline {paragraph}{Time-binned Data}{39}{section*.25}
-\contentsline {paragraph}{Fluorescent Burst Data}{39}{section*.26}
-\contentsline {section}{\numberline {2.4}Development of Scientific Software}{40}{section.2.4}
-\contentsline {section}{\numberline {2.5}pyFRET: Design and Implementation}{41}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Code Layout and Design}{41}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Simple Event Selection and Denoising}{42}{subsection.2.5.2}
-\contentsline {paragraph}{FRET Data}{42}{section*.27}
-\contentsline {paragraph}{ALEX Data}{44}{section*.28}
-\contentsline {subsection}{\numberline {2.5.3}Burst Search Algorithms}{45}{subsection.2.5.3}
-\contentsline {section}{\numberline {2.6}RASP: Recurrence Analysis of Single Particles}{46}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Compatibilities}{47}{subsection.2.6.1}
-\contentsline {section}{\numberline {2.7}Experimental Methods}{48}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Benchmarking the Gaussian Fitting Using Simulated Datasets}{48}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Data to Evaluate the Simple Event Selection Algorithms}{48}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}Data to Evaluate Event Selection Using the Burst Search Algorithms}{49}{subsection.2.7.3}
-\contentsline {subsection}{\numberline {2.7.4}Performance Analysis Using Mixtures of DNA Duplexes}{50}{subsection.2.7.4}
-\contentsline {subsection}{\numberline {2.7.5}Testing the RASP Algorithm}{50}{subsection.2.7.5}
-\contentsline {section}{\numberline {2.8}Performance Analysis of smFRET Analysis Algorithms}{51}{section.2.8}
-\contentsline {subsection}{\numberline {2.8.1}Evaluating Performance with DNA Duplexes}{51}{subsection.2.8.1}
+\contentsline {subsection}{\numberline {2.3.1}Development of Scientific Software}{38}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Continuous Excitation}{39}{subsection.2.3.2}
+\contentsline {paragraph}{Time-binned Data}{39}{section*.23}
+\contentsline {paragraph}{Fluorescent Burst Data}{39}{section*.24}
+\contentsline {subsection}{\numberline {2.3.3}Alternating Laser Excitation}{40}{subsection.2.3.3}
+\contentsline {paragraph}{Time-binned Data}{40}{section*.25}
+\contentsline {paragraph}{Fluorescent Burst Data}{41}{section*.26}
+\contentsline {section}{\numberline {2.4}pyFRET: Design and Implementation}{41}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Code Layout and Design}{41}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Dependencies}{43}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Simple Event Selection and Denoising}{44}{subsection.2.4.3}
+\contentsline {paragraph}{FRET Data}{44}{section*.27}
+\contentsline {paragraph}{ALEX Data}{45}{section*.28}
+\contentsline {subsection}{\numberline {2.4.4}Burst Search Algorithms}{46}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}RASP: Recurrence Analysis of Single Particles}{47}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Compatibilities}{48}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.6}Experimental Methods}{48}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Benchmarking the Gaussian Fitting Using Simulated Datasets}{48}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Data to Evaluate the Simple Event Selection Algorithms}{49}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Data to Evaluate Event Selection Using the Burst Search Algorithms}{49}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Performance Analysis Using Mixtures of DNA Duplexes}{50}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.5}Testing the RASP Algorithm}{51}{subsection.2.6.5}
+\contentsline {section}{\numberline {2.7}Performance Analysis of smFRET Analysis Algorithms}{51}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Evaluating Performance with DNA Duplexes}{51}{subsection.2.7.1}
 \contentsline {paragraph}{Simple Algorithms}{51}{section*.29}
-\contentsline {paragraph}{Burst Search Algorithms}{51}{section*.30}
-\contentsline {subsection}{\numberline {2.8.2}Evaluating the Burst Search Algorithms}{52}{subsection.2.8.2}
-\contentsline {subsection}{\numberline {2.8.3}Evaluating Performance of the Gaussian Mixture Model}{57}{subsection.2.8.3}
-\contentsline {subsection}{\numberline {2.8.4}Benchmarking the RASP Algorithm}{59}{subsection.2.8.4}
-\contentsline {section}{\numberline {2.9}Conclusions}{59}{section.2.9}
-\contentsline {section}{\numberline {2.10}Availability and Future Directions}{61}{section.2.10}
+\contentsline {paragraph}{Burst Search Algorithms}{52}{section*.30}
+\contentsline {subsection}{\numberline {2.7.2}Evaluating the Burst Search Algorithms}{52}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Evaluating Performance of the Gaussian Mixture Model}{58}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Benchmarking the RASP Algorithm}{60}{subsection.2.7.4}
+\contentsline {section}{\numberline {2.8}Conclusions}{62}{section.2.8}
+\contentsline {section}{\numberline {2.9}Availability and Future Directions}{62}{section.2.9}
 \contentsline {chapter}{\numberline {3}Bayesian Inference of Intramolecular Distances Using Single Molecule FRET}{63}{chapter.3}
 \contentsline {section}{\numberline {3.1}Overview}{63}{section.3.1}
 \contentsline {section}{\numberline {3.2}Introduction}{64}{section.3.2}

@@ -368,6 +368,24 @@ E.~Sisamakis, A.~Valeri, S.~Kalinin, P.~J. Rothwell, and C.~A.~M. Seidel.
   fluorescence detection.
 \newblock {\em Methods in Enzymology}, 475:455--514, 2010.
 
+\bibitem{numpy}
+S.~van~der Walt, S.~C. Colbert, and G.~Varoquaux.
+\newblock The {NumPy} array: A structure for efficient numerical computation.
+\newblock {\em Computing in Science and Engineering}, 13:22--30, 2011.
+
+\bibitem{hoffmann11}
+A.~Hoffmann, D.~Nettels, J.~Clark, A.~Borgia, S.~E. Radford, J.~Clarke, and
+  Schuler B.
+\newblock Quantifying heterogeneity and conformational dynamics from single
+  molecule fret of diffusing molecules: recurrence analysis of single particles
+  (rasp).
+\newblock {\em Phys Chem Chem Phys}, 13:1857--1871, 2011.
+
+\bibitem{Hunter2007}
+J.~D. Hunter.
+\newblock Matplotlib: A {2D} graphics environment.
+\newblock {\em Computing In Science and Engineering}, 9(3):90--95, 2007.
+
 \bibitem{lee06}
 N.~K Lee, A.~N. Kapanidis, Y.~Wang, X.~Michalet, J.~Mukhopadhyay, R.~H.
   Ebright, and S.~Weiss.
@@ -379,14 +397,6 @@ N.~K Lee, A.~N. Kapanidis, Y.~Wang, X.~Michalet, J.~Mukhopadhyay, R.~H.
 S.~van~der Walt, S.~C. Colbert, and Varoquaux G.
 \newblock The numpy array: A structure for efficient numerical computation.
 \newblock {\em Comput. Sci. Eng.}, 13:9--12, 2011.
-
-\bibitem{hoffmann11}
-A.~Hoffmann, D.~Nettels, J.~Clark, A.~Borgia, S.~E. Radford, J.~Clarke, and
-  Schuler B.
-\newblock Quantifying heterogeneity and conformational dynamics from single
-  molecule fret of diffusing molecules: recurrence analysis of single particles
-  (rasp).
-\newblock {\em Phys Chem Chem Phys}, 13:1857--1871, 2011.
 
 \bibitem{murphy14}
 R.~R. Murphy, G.~Danezis, M.~H. Horrocks, S.~E. Jackson, and D.~Klenerman.
@@ -1055,20 +1065,10 @@ T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein.
 \newblock {\em Introduction to Algorithms}.
 \newblock MIT Press and McGraw-Hill, 2009.
 
-\bibitem{numpy}
-S.~van~der Walt, S.~C. Colbert, and G.~Varoquaux.
-\newblock The {NumPy} array: A structure for efficient numerical computation.
-\newblock {\em Computing in Science and Engineering}, 13:22--30, 2011.
-
 \bibitem{scipy}
 K.~J. Millman and M.~Aivazis.
 \newblock Python for scientists and engineers.
 \newblock {\em Computing in Science and Engineering}, 13:9--12, 2011.
-
-\bibitem{Hunter2007}
-J.~D. Hunter.
-\newblock Matplotlib: A {2D} graphics environment.
-\newblock {\em Computing In Science and Engineering}, 9(3):90--95, 2007.
 
 \bibitem{li2009}
 H.~Li, B.~Handsaker, A.~Wysoker, T.~Fennell, J.~Ruan, N.~Homer, G.~Marth,

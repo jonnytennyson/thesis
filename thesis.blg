@@ -2,42 +2,42 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 Case mismatch error between cite keys Compeau2011 and compeau2011
----line 557 of file thesis.aux
+---line 565 of file thesis.aux
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys Compeau2011 and compeau2011
----line 562 of file thesis.aux
+---line 570 of file thesis.aux
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys Compeau2011 and compeau2011
----line 563 of file thesis.aux
+---line 571 of file thesis.aux
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys zerbino2008 and Zerbino2008
----line 571 of file thesis.aux
+---line 579 of file thesis.aux
  : \citation{zerbino2008
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 604 of file thesis.aux
- : \citation{gurevich2013
- :                       }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 611 of file thesis.aux
- : \citation{gurevich2013
- :                       }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 614 of file thesis.aux
+---line 612 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
 ---line 619 of file thesis.aux
+ : \citation{gurevich2013
+ :                       }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys gurevich2013 and Gurevich2013
+---line 622 of file thesis.aux
+ : \citation{gurevich2013
+ :                       }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys gurevich2013 and Gurevich2013
+---line 627 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
@@ -52,6 +52,7 @@ Repeated entry---line 2339 of file thesis.bib
  : @article{Zerbino2008
  :                     ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "sklearn"
 Warning--I didn't find a database entry for "lloydsmith07"
 Warning--I didn't find a database entry for "bliss53"
 Warning--I didn't find a database entry for "???"
@@ -61,7 +62,7 @@ Warning--empty journal in Coil2014
 Warning--empty journal in li2013
 You've used 172 entries,
             1791 wiz_defined-function locations,
-            1435 strings with 40070 characters,
+            1436 strings with 40077 characters,
 and the built_in function-call counts, 48664 in all, are:
 = -- 3878
 > -- 3502
