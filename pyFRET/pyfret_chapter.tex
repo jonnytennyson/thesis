@@ -120,7 +120,7 @@ The data analysis workflow is illustrated in Fig.~\ref{fig:fig2_workflow} Follow
 \end{figure}
 
 \subsection{Dependencies}
-In addition to the numpy arrays used for efficient data processing, pyFRET uses several other python modules to enable efficient data analysis. Specifically, we use matplotlib~\cite{Hunter2007} for plotting and data visualisation; whilst gaussian fitting of the FRET histograms is implemented using scikit-learn~\cite{sklearn}. These dependencies are available for free anonymous download for all platforms (see Section~\ref{sect:availability}). We used the free Anaconda package bundle (\url{https://store.continuum.io/cshop/anaconda/}) to install these dependencies. Detailed installation instructions can be found in the pyFRET documentation (\url{http://pyfret.readthedocs.org/en/latest/tutorial.html#installing-pyfret}).
+In addition to the numpy arrays used for efficient data processing, pyFRET uses several other python modules to enable efficient data analysis. Specifically, we use matplotlib~\cite{Hunter2007} for plotting and data visualisation; whilst gaussian fitting of the FRET histograms is implemented using scikit-learn~\cite{scikit-learn}. These dependencies are available for free anonymous download for all platforms (see Section~\ref{sect:availability}). We used the free Anaconda package bundle (\url{https://store.continuum.io/cshop/anaconda/}) to install these dependencies. Detailed installation instructions can be found in the pyFRET documentation (\url{http://pyfret.readthedocs.org/en/latest/tutorial.html#installing-pyfret}).
 
 \subsection{Simple Event Selection and Denoising}
 \paragraph{FRET Data}
@@ -252,49 +252,44 @@ pyFRET is written in Python. Both python 2 (v2.7) and python 3 (v3.3) are suppor
 The lack of Open Source software in the smFRET community has led to a proliferation of esoteric file-types used for data collection and storage. To make pyFRET as usable as possible for a wide range of smFRET researchers, we provide file parsers for simple .csv and .txt file formats, as well as the custom binary format used in the Klenerman group. The pyFRET data structures can be initialised using simple python arrays of time-binned photons, for users whose file format is not currently supported. The tutorial provides example scripts for parsing common filetypes into pyFRET objects.
 
 \section{Experimental Methods}
-In order to effectively 
+In order to effectively evaluate the performance of the pyFRET library, we generated some simulated data with known parameters.  We also collected some smFRET data under various different excitation and data collection regimes. We then analysed the datasets using pyFRET and compared the results. The following section describes the experimental protocols used in the generation of simulated datasets and the methods used in the collection and analysis of smFRET data. 
 
 \subsection{Benchmarking the Gaussian Fitting Using Simulated Datasets}
-To test the ability of the fitting algorithms to distinguish fluorescent populations with similar FRET efficiencies, we generated simulated datasets consisting of mixtures of FRET bursts with a known FRET efficiency and population size. These bursts were then fitted using pyFRET's two component mixture model and the results compared to the known input FRET efficiencies and population sizes. The python script used to generate and fit these datasets can be found XXXX. 
+To test the ability of the fitting algorithms to distinguish fluorescent populations with similar FRET efficiencies, we generated simulated datasets consisting of mixtures of FRET bursts with a known FRET efficiency and population size. These bursts were then fitted using pyFRET's two component mixture model and the results compared to the known input FRET efficiencies and population sizes. The python script used to generate and fit these datasets can be found in the online repository. 
 
 \subsection{Data to Evaluate the Simple Event Selection Algorithms}
 We tested the pyFRET library using DNA duplexes dual-labelled with Alexa Fluor 488 and Alexa Fluor 647. The duplex sequences and labelling sites are shown in Tables~\ref{tab:donor} and~\ref{tab:acceptors}. Labelled duplexes were diluted to a concentration of 50 pM in TEN buffer (10 mM Tris, 1mM EDTA, 100 mM Nacl), pH 8.0, containing 0.0001 \% Tween-20. FRET data were collected for 15 minutes using continuous excitation at 488 nm at a power of 80 mW. Collected photons were binned online in intervals of 1 ms and stored in files of 10000 bins. To process the data, AND thresholding was performed using thresholds $N_D = 10$ and $N_A = 10$. SUM thresholding used a threshold $N = 20$. For FRET efficiency calculation the $\gamma$-factor was 0.95.
 
-ALEX data were collected for 15 minutes using alternating excitation at 488 and 640 nm, with respective laser powers of 80 and 70 mW, and a modulation rate of 0.1 ms, a dead-time of 0.1 $\mu$s and a delay compensation of 3 $\mu$s. ALEX data were then binned in intervals of 1 ms. The scripts and configuration files used to analyse these data using pyFRET can be found XXX.
+ALEX data were collected for 15 minutes using alternating excitation at 488 and 640 nm, with respective laser powers of 80 and 70 mW, and a modulation rate of 0.1 ms, a dead-time of 0.1 $\mu$s and a delay compensation of 3 $\mu$s. ALEX data were then binned in intervals of 1 ms. The scripts and configuration files used to analyse these data using pyFRET can be found in the online repository.
 
 \begin{table}[!ht]
 \caption{
-\bf{Donor DNA Sequence}}
+{\bf{Donor DNA Sequence}} DNA sequence of the donor-labelled strand, where {\bf 5} is a deoxy-T nucleotide, labelled with Alexa Fluor 488 at the C6 amino position.}
 \begin{tabular}{|l|l|}
 \hline
 Construct & Sequence \\
 \hline
-Donor & TACTGCCTTTCTGTATCGC{\bf 5}TATCGCGTAGTTACCTGCCTTGCATAGCCACTCATAGCCT \\
+Donor & \footnotesize{TACTGCCTTTCTGTATCGC{\bf 5}TATCGCGTAGTTACCTGCCTTGCATAGCCACTCATAGCCT} \\
 \hline
 \end{tabular}
-\begin{flushleft}
-DNA sequence of the donor-labelled strand, where {\bf 5} is a deoxy-T nucleotide, labelled with Alexa Fluor 488 at the C6 amino position.
-\end{flushleft}
-\label{tab:donor}
+\label{tab:donor_1}
 \end{table}
 
 \begin{table}[!ht]
 \caption{
-\bf{Acceptor DNA Sequences}}
+{\bf{Acceptor DNA Sequences}}. Preparing the dual-labelled dsDNA. An acceptor-labelled ssDNA, with the sequence shown was annealed to the indicated donor construct, to yield a dual-labelled construct with the labels separated by the given number of base pairs. In the displayed acceptor-strand sequences, {\bf 6} is a deoxy-T nucleotide, labelled with Alexa Fluor 647 at the C6 amino position.
+}
 \begin{tabular}{|l|l|}
 \hline
 Separation / bp & Acceptor Sequence \\
 \hline
-4 & AGGCTATGAGTGGCTATGCAAGGCAGGTAACTACGCGATAAGCGA\bf{6} \\
-6 & AGGCTATGAGTGGCTATGCAAGGCAGGTAACTACGCGATAAGCGATA\bf{6} \\
-8 & AGGCTATGAGTGGCTATGCAAGGCAGGTAACTACGCGATAAGCGATACA\bf{6} \\
-10 & AGGCTATGAGTGGCTATGCAAGGCAGGTAACTACGCGATAAGCGATACAGA\bf{6} \\
-12 & AGGCTATGAGTGGCTATGCAAGGCAGGTAACTACGCGATAAGCGATACAGAAA\bf{6} \\
+4 & \footnotesize{AGGCTATGAGTGGCTATGCAAGGCAGGTAACTACGCGATAAGCGA\bf{6}} \\
+6 & \footnotesize{AGGCTATGAGTGGCTATGCAAGGCAGGTAACTACGCGATAAGCGATA\bf{6}} \\
+8 & \footnotesize{AGGCTATGAGTGGCTATGCAAGGCAGGTAACTACGCGATAAGCGATACA\bf{6}} \\
+10 & \footnotesize{AGGCTATGAGTGGCTATGCAAGGCAGGTAACTACGCGATAAGCGATACAGA\bf{6}} \\
+12 & \footnotesize{AGGCTATGAGTGGCTATGCAAGGCAGGTAACTACGCGATAAGCGATACAGAAA\bf{6}} \\
 \hline
 \end{tabular}
-\begin{flushleft}
-Preparing the dual-labelled dsDNA. An acceptor-labelled ssDNA, with the sequence shown was annealed to the indicated donor construct, to yield a dual-labelled construct with the labels separated by the given number of base pairs. In the displayed acceptor-strand sequences, {\bf 6} is a deoxy-T nucleotide, labelled with Alexa Fluor 647 at the C6 amino position.
-\end{flushleft}
 \label{tab:acceptors}
 \end{table}
 
@@ -306,7 +301,7 @@ To evaluate the effect of bin-time on performance of the burst search algorithms
 Unless otherwise specified, DCBS was carried out using parameters $T = 20$ bins, $L = 10$ and $M = 10$; APBS was carried out using parameters $T = 20$ bins, $L = 20$ and $M = 20$.
 
 \subsection{Performance Analysis Using Mixtures of DNA Duplexes}
-To test the accuracy of the burst search algorithms, we collected ALEX data from mixtures of two DNA duplexes at known concentration ratios. The 4, 8 and 12 bp duplexes were used. Samples were prepared containing a mixture of two duplexes in TEN buffer with a total DNA concentration of 80 pM, divided in either a 3 : 1 ratio (high concentration 60 pM, low concentration 20 pM) or a 1 : 1 ratio (both components 40 pM). Data were collected under ALEX excitation for 10 minutes, using 50 $\mu$s time-bins as described above. The data were later re-binned into 1 ms time-bins, to compare performance of burst search and simple thresholding in separating the two populations.  
+To test the accuracy of the burst search algorithms, we collected ALEX data from mixtures of two DNA duplexes at known concentration ratios. The 4, 8 and 12 bp duplexes were used (see Table~\ref{tab:acceptors}). Samples were prepared containing a mixture of two duplexes in TEN buffer with a total DNA concentration of 80 pM, divided in either a 3 : 1 ratio (high concentration 60 pM, low concentration 20 pM) or a 1 : 1 ratio (both components 40 pM). Data were collected under ALEX excitation for 10 minutes, using 50 $\mu$s time-bins as described above. The data were later re-binned into 1 ms time-bins, to compare performance of burst search and simple thresholding in separating the two populations.  
 
 
 \subsection{Testing the RASP Algorithm}
@@ -314,7 +309,7 @@ To test the RASP Algorithm, a 1:1 mixture of 6 bp and 12 bp duplex was prepared 
 
 \begin{table}[!ht]
 \caption{
-\bf{RASP Parameters}}
+{\bf{RASP Parameters}}. Parameters used in RASP analysis of the 6 bp duplex - 12 bp duplex mixture.}
 \begin{tabular}{|l|l|}
 \hline
 Parameter & Value \\
@@ -327,17 +322,16 @@ $E_{max}$ & 0.85 \\
 $\Delta$T & 1 ms \\
 \hline
 \end{tabular}
-\begin{flushleft}
-Parameters used in RASP analysis of the 6 bp duplex - 12 bp duplex mixture.
-\end{flushleft}
+
 \label{tab:RASP}
 \end{table}
 
 \section{Performance Analysis of smFRET Analysis Algorithms}
+To evaluate the performance of the smFRET analysis algorithms, we used experimental datasets collected as described above. The following sections describe the data analysis pathway using pyFRET and present the results of pyFRET analysis. We also provide a comparison of the performance of different algorithms on smFRET data collected from the same DNA constructs but under different excitation and photon collection regimes.
 
 \subsection{Evaluating Performance with DNA Duplexes}
 \paragraph{Simple Algorithms}
-We tested the pyFRET library using DNA duplexes dual-labelled with Alexa Fluor 488 and Alexa Fluor 647. The duplex sequences, dye attachment sites and dye-dye separations are shown in Tables~\ref{tab:donor} and~\ref{tab:acceptors}. Event selection and denoising, calculation of FRET efficiency and the plotting and fitting of FRET efficiency histograms were performed using pyFRET. The results, shown in Fig.~\ref{fig:fig4_AND_plots} for FRET data and Fig.~\ref{fig:fig5_ALEX_plots}, demonstrate that even using the simplest event selection and denoising techniques, pyFRET is able to effectively fit histograms from single FRET populations (Fig.~\ref{fig:fig4_AND_plots} and Fig.~\ref{fig:fig5_ALEX_plots} A - E), to reproduce the characteristic sigmoidal FRET efficiency curve (Fig.~\ref{fig:fig4_AND_plots} and Fig.~\ref{fig:fig5_ALEX_plots} F).
+We tested the pyFRET library using DNA duplexes dual-labelled with Alexa Fluor 488 and Alexa Fluor 647. The duplex sequences, dye attachment sites and dye-dye separations are shown in Tables~\ref{tab:donor_1} and~\ref{tab:acceptors}. Event selection and denoising, calculation of FRET efficiency and the plotting and fitting of FRET efficiency histograms were performed using pyFRET. The results, shown in Fig.~\ref{fig:fig4_AND_plots} for FRET data analysed using AND thresholding, and Fig.~\ref{fig:fig5_ALEX_plots} for ALEX data, demonstrate that even using the simplest event selection and denoising techniques, pyFRET is able to effectively fit histograms from single fluorescent populations (Fig.~\ref{fig:fig4_AND_plots} and Fig.~\ref{fig:fig5_ALEX_plots} A - E), to reproduce the characteristic sigmoidal FRET efficiency curve (Fig.~\ref{fig:fig4_AND_plots} and Fig.~\ref{fig:fig5_ALEX_plots} F). However, as can be seen from Fig.~\ref{fig:fig6_Eplots} C), where the FRET efficiency curves from four different analysis algorithms are overlaid, the simple FRET analysis results in a flattened curve, caused by the bias towards events with intermediate FRET efficiencies displayed by the simple AND thresholding algorithm. 
 
 \begin{figure}[!ht]
    \begin{center}
@@ -362,7 +356,7 @@ We tested the pyFRET burst search algorithms using data collected from the same 
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{pyFRET/burst_search.pdf}
-      \caption{{\bf Testing the burst search algorithms.} A) Fitted FRET histograms from DCBS on FRET data. B) Fitted FRET histograms from APBS on ALEX data. C) Fitted FRET histograms from DCBS on ALEX data. In A-C histograms from left to right are derived from 12 bp, 10 bp, 8 bp, 6 bp and 4 bp duplexes respectively. Histograms from APBS on FRET data are not shown, as the large zero peak hampers gaussian fitting when the FRET efficiency is low.}
+      \caption{{\bf Testing the burst search algorithms.} A) Fitted FRET histograms from DCBS on FRET data. B) Fitted FRET histograms from APBS on ALEX data. C) Fitted FRET histograms from DCBS on ALEX data. In A-C histograms from left to right are collected from 12 bp, 10 bp, 8 bp, 6 bp and 4 bp duplexes respectively. Histograms from APBS on FRET data are not shown, as the large zero peak hampers gaussian fitting when the FRET efficiency is low.}
       \label{fig:burst_search}
    \end{center}
 \end{figure}
@@ -379,12 +373,12 @@ We tested the pyFRET burst search algorithms using data collected from the same 
 \subsection{Evaluating the Burst Search Algorithms}
 In addition to demonstrating the functionality of the burst search algorithms, we have performed a comprehensive analysis of the impact of bin-time, threshold and detection window on the performance of the burst search algorithms. To our knowledge, this is the first time that such an analysis has been performed, and hence provides useful insight to other researchers depending on the performance of these algorithms.
 
-Burst search algorithms were developed as an improvement to the simple thresholding technique, designed to reduce inaccuracies caused by photobleaching and by long bursts being split over multiple time-bins. To assess the improvement in data quality as a result of using the burst search algorithm, we collected data from the 6 bp duplex using time-bins of 10 $\mu$s, which could then be re-binned into longer time-bins for comparative analysis. Analysis was performed using both APBS and DCBS burst search algorithms on FRET data. For APBS, thresholds of $M=20$ and $L=20$ were used; the thresholds used for DCBS were $M = 10$ and $L = 10$. As the bin-time was varied, the minimum burst duration $T$, given in number of bins, was also varied, to keep the minimum burst duration to a constant time of 1 ms. The bin lengths and their corresponding value of T are shown in Table~\ref{tab:bin-times}. The results, shown in Fig.~\ref{fig:fig7_binning} A (DCBS) and B (APBS) are surprising. When the minimum time-interval for burst detection is not varied, the performance of the algorithm is essentially unaffected by the bin-times used: for both APBS and DCBS algorithms, the resultant FRET efficiency histograms are extremely similar, whether many short bins or a few long bins are searched.
+Burst search algorithms were developed as an improvement to the simple thresholding technique, designed to reduce inaccuracies caused by photobleaching and by long bursts being split over multiple time-bins. To assess the improvement in data quality as a result of using the burst search algorithm, we collected data from the 6 bp duplex using short time-bins of 10 $\mu$s, which could then be re-binned into longer time-bins for comparative analysis. Analysis was performed using both APBS and DCBS burst search algorithms on FRET data. For APBS, thresholds of $M=20$ and $L=20$ were used; the thresholds used for DCBS were $M = 10$ and $L = 10$. As the bin-time was varied, the minimum burst duration $T$, given in number of bins, was also varied, to keep the minimum burst duration to a constant time of 1 ms. The bin lengths and their corresponding value of T are shown in Table~\ref{tab:bin-times}. The results, shown in Fig.~\ref{fig:fig7_binning} A (DCBS) and B (APBS) are surprising. When the minimum time-interval for burst detection is not varied, the performance of the algorithm is essentially unaffected by the bin-times used: for both APBS and DCBS algorithms, the resultant FRET efficiency histograms are extremely similar, whether many short bins or a few long bins are searched.
 
 
 \begin{table}[!ht]
 \caption{
-\bf{Bin-times}}
+{\bf{Bin-times}.} Bin lengths and the corresponding minimum burst duration used to evaluate the effect of bin-time on burst search performance.}
 \begin{tabular}{|l|l|}
 \hline
 Bin-time / $\mu$s & T / bins \\
@@ -398,8 +392,7 @@ Bin-time / $\mu$s & T / bins \\
 1000 & 1\\
 \hline
 \end{tabular}
-\begin{flushleft}
-Bin lengths and the corresponding minimum burst duration used to evaluate the effect of bin-time on burst search performance.\end{flushleft}
+
 \label{tab:bin-times}
 \end{table}
 
@@ -418,14 +411,16 @@ Finally, we evaluated the effect of the thresholds M and L on the performance of
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{pyFRET/heatmaps.pdf}
-      \caption{{\bf Heatmaps showing the effect on calculated FRET efficiency and peak area of varying the burst search thresholds L and M.} A) Calculated FRET efficiency from DCBS analysis of FRET data. B) Calculated FRET efficiency from DCBS analysis of ALEX data. Missing values in B) are the result of two few events being retained for a gaussian fit to be performed. C) Calculated peak area from DCBS analysis of FRET data. D) Calculated FRET efficiency from DCBS analysis of ALEX data.}
+      \caption{{\bf Heatmaps showing the effect on calculated FRET efficiency and peak area of varying the burst search thresholds L and M.} A) Calculated FRET efficiency from DCBS analysis of FRET data. B) Calculated FRET efficiency from DCBS analysis of ALEX data. Missing values in B) are the result of insufficient events being retained for a gaussian fit to be performed. C) Calculated peak area from DCBS analysis of FRET data. D) Calculated FRET efficiency from DCBS analysis of ALEX data.}
       \label{fig:fig8_heatmaps}
    \end{center}
 \end{figure}
 
 We note that, when used on FRET data, the APBS and DCBS burst search algorithms perform in an analogous manner to simple AND and SUM thresholding. Consequently, they retain the well-known disadvantages of these thresholding methods~\cite{murphy14}: specifically, APBS retains a zero-peak caused by donor-only labelled molecules, whereas DCBS is biased against extreme FRET efficiencies, distorting the FRET efficiency histogram. ALEX data does not display these biases, as the direct excitation of both fluorophores allows events to be selected independently of their FRET efficiencies. The effect of these biases in analysis of simple FRET data can be seen in Fig.~\ref{fig:fig6_Eplots} C, which overlays the calculated FRET efficiency curves for DCBS analysis of FRET and ALEX data. The curves for both AND-thresholded FRET data and DCBS burst selection of FRET data are distorted towards intermediate FRET efficiencies; ALEX data does not show this distortion. Consequently, ALEX is a superior technique and should be used when available.
 
-\subsection{Evaluating Performance of the Gaussian Mixture Model}
+\subsection{Evaluating the Gaussian Fitting}
+As part of pyFRET, we used the gaussian mixture model implemented in scikit-learn~\cite{scikit-learn} to fit the FRET histograms with one or more gaussian distributions. The fits shown in the preceeding figures use this mixture model. However, we also wanted to understand the limitations of the fitting method and to demarcate the conditions under which multiple fluorescent populations could not be effectively distinguished using pyFRET. 
+
 We used a combination of simulated and experimental data to benchmark the performance of the Gaussian fitting method when presented with multiple FRET populations. Firstly, we simulated FRET bursts drawn from a mixture of two FRET populations, with mean FRET efficiencies ranging from 0.1 to 0.9. These bursts were fitted with a two component Gaussian mixture model and the fits and FRET histograms overlaid. Example fits, shown in Fig.~\ref{fig:fig_benchmarking} A and B, demonstrate that where peaks are well separated (Fig.~\ref{fig:fig_benchmarking} A), they are correctly distinguished by the fitting protocol. However, when there is significant overlap between the FRET peaks (Fig.~\ref{fig:fig_benchmarking} B), there is insufficient information to distinguish the two populations, so the two gaussians converge to very similar means, whose values lie in between the true mean values. This is an inherent problem with fitting multiple gaussians to peaks that are poorly resolved, and is thus not a problem specific to the fitting procedure.
 
 \begin{figure}[!ht]
@@ -436,7 +431,7 @@ We used a combination of simulated and experimental data to benchmark the perfor
    \end{center}
 \end{figure}
 
-To further quantify the limits of the fitting performance on two population mixtures, we quantified the discrepancy between the true and calculated FRET efficiencies for all peaks fitted, then plotted this discrepancy as a function of the FRET efficiency of the partner peak. The results are shown in Fig.~\ref{fig:fig_benchmarking} C and D. When the two peaks have extremely similar mean FRET efficiencies, the fitting algorithm cannot effectively distinguish them, so both calculated values are distorted towards an intermediate value. However, when the two peaks are well separated, both peaks are fitted correctly, independent of the mean of the partner peak.
+To further quantify the limits of the fitting performance on two population mixtures, we quantified the discrepancy between the true and calculated FRET efficiencies for all peaks fitted from our simulated datasets, then plotted this discrepancy as a function of the FRET efficiency of the partner peak. The results are shown in Fig.~\ref{fig:fig_benchmarking} C and D. When the two peaks have extremely similar mean FRET efficiencies, the fitting algorithm cannot effectively distinguish them, so both calculated values are distorted towards an intermediate value. However, when the two peaks are well separated, both peaks are fitted correctly, independent of the mean of the partner peak.
 
 Finally, we evaluated the performance of the gaussian fitting on experimental datasets, consisting of a two-component mixture of DNA duplexes. Three duplexes were used for this experiment, namely the duplexes with a 4, 6 and 12 bp dye-dye separation, corresponding to a high-, intermediate- and low-FRET species respectively. The duplexes were mixed in either a 1:3 or 1:1 concentration ratio for data collection using ALEX excitation. We compared the performance of the DCBS algorithm with the simple ALEX event selection on long time bins. Identified bursts were fitted with a two-component mixture of gaussians. The resulting FRET efficiencies and fractional peak areas, shown in Fig.~\ref{fig:ratios} show that DCBS (Fig.~\ref{fig:ratios} A and B) considerably outperforms a simple threshold (Fig.~\ref{fig:ratios} C and D). Whereas DCBS can reliably identify three separate FRET efficiencies (Fig.~\ref{fig:ratios} A) and concentrations (Fig.~\ref{fig:ratios} B), independent of the concentration or FRET efficiency of the partner duplex, the FRET efficiencies (Fig.~\ref{fig:ratios} C) and concentrations (Fig.~\ref{fig:ratios} D) identified by simple ALEX analysis of long time bins are distorted by the partner peak values. Concentrations in this experiment is a proxy for the relative population of states in typical smFRET experiment. Consequently, we conclude that the performance of the gaussian fits are only as good as the prior event selection, and that burst search across short bins outperforms simple thresholding on long bins.
 
