@@ -37,10 +37,10 @@
 \BOOKMARK [1][-]{section.2.7}{Performance Analysis of smFRET Analysis Algorithms}{chapter.2}% 37
 \BOOKMARK [2][-]{subsection.2.7.1}{Evaluating Performance with DNA Duplexes}{section.2.7}% 38
 \BOOKMARK [2][-]{subsection.2.7.2}{Evaluating the Burst Search Algorithms}{section.2.7}% 39
-\BOOKMARK [2][-]{subsection.2.7.3}{Evaluating Performance of the Gaussian Mixture Model}{section.2.7}% 40
+\BOOKMARK [2][-]{subsection.2.7.3}{Evaluating the Gaussian Fitting}{section.2.7}% 40
 \BOOKMARK [2][-]{subsection.2.7.4}{Benchmarking the RASP Algorithm}{section.2.7}% 41
-\BOOKMARK [1][-]{section.2.8}{Conclusions}{chapter.2}% 42
-\BOOKMARK [1][-]{section.2.9}{Availability and Future Directions}{chapter.2}% 43
+\BOOKMARK [1][-]{section.2.8}{Availability and Future Directions}{chapter.2}% 42
+\BOOKMARK [1][-]{section.2.9}{Conclusions}{chapter.2}% 43
 \BOOKMARK [0][-]{chapter.3}{Bayesian Inference of Intramolecular Distances Using Single Molecule FRET}{}% 44
 \BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 45
 \BOOKMARK [1][-]{section.3.2}{Introduction}{chapter.3}% 46

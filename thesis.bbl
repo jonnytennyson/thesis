@@ -386,6 +386,13 @@ J.~D. Hunter.
 \newblock Matplotlib: A {2D} graphics environment.
 \newblock {\em Computing In Science and Engineering}, 9(3):90--95, 2007.
 
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
+
 \bibitem{lee06}
 N.~K Lee, A.~N. Kapanidis, Y.~Wang, X.~Michalet, J.~Mukhopadhyay, R.~H.
   Ebright, and S.~Weiss.
@@ -403,6 +410,31 @@ R.~R. Murphy, G.~Danezis, M.~H. Horrocks, S.~E. Jackson, and D.~Klenerman.
 \newblock Bayesian inference of accurate population sizes and fret efficiencies
   from single diffusing biomolecules.
 \newblock {\em Anal. Chem. (submitted April 2014)}, 86:8603--8612, 2014.
+
+\bibitem{kalinin2007}
+S.~Kalinin, S.~Felekyan, M.~Antonik, and C.~A.~M. Seidel.
+\newblock Probability distribution analysis of single-molecule fluorescence
+  anisotropy and resonance energy transfer.
+\newblock {\em J. Phys. Chem. B.}, 111:10253--10262, 2007.
+
+\bibitem{antonik2006}
+M.~Antonik, S.~Felekyan, A.~Gaiduk, and C.~A.~M. Seidel.
+\newblock Separating structural heterogeneities from stochastic variations in
+  fluorescence resonance energy transfer distributions via photon distribution
+  analysis.
+\newblock {\em J. Phys. Chem. B.}, 110:6970--6978, 2006.
+
+\bibitem{santoso10}
+Y.~Santoso, J.~P. Torella, and A.~N. Kapanidis.
+\newblock Characterizing single-molecule fret dynamics with probability
+  distribution analysis.
+\newblock {\em ChemPhysChem}, 11:2209--2219, 2010.
+
+\bibitem{torella11}
+J.~P. Torella, S.~J. Holden, Y.~Santoso, J.~Hohlbein, and A.~N. Kapanidis.
+\newblock Identifying molecular dynamics in single-molecule fret experiments
+  with burst variance analysis.
+\newblock {\em Biophysical Journal}, 107:5058--5063, 2011.
 
 \bibitem{lee07}
 N.K. Lee, A.N. Kapanidis, H.R. Koh, Y.~Korlann, S.O. Ho, N.~Kim Y.~andGassman,
@@ -429,31 +461,6 @@ L.~Ying, M.~I. Wallace, S.~Balsubramanian, and D.~Klenerman.
   transfer using logical combinations of threshold criteria: a study of 12-mer
   dna.
 \newblock {\em J. Phys. Chem. B.}, 104:5171--5178, 2000.
-
-\bibitem{kalinin2007}
-S.~Kalinin, S.~Felekyan, M.~Antonik, and C.~A.~M. Seidel.
-\newblock Probability distribution analysis of single-molecule fluorescence
-  anisotropy and resonance energy transfer.
-\newblock {\em J. Phys. Chem. B.}, 111:10253--10262, 2007.
-
-\bibitem{antonik2006}
-M.~Antonik, S.~Felekyan, A.~Gaiduk, and C.~A.~M. Seidel.
-\newblock Separating structural heterogeneities from stochastic variations in
-  fluorescence resonance energy transfer distributions via photon distribution
-  analysis.
-\newblock {\em J. Phys. Chem. B.}, 110:6970--6978, 2006.
-
-\bibitem{santoso10}
-Y.~Santoso, J.~P. Torella, and A.~N. Kapanidis.
-\newblock Characterizing single-molecule fret dynamics with probability
-  distribution analysis.
-\newblock {\em ChemPhysChem}, 11:2209--2219, 2010.
-
-\bibitem{torella11}
-J.~P. Torella, S.~J. Holden, Y.~Santoso, J.~Hohlbein, and A.~N. Kapanidis.
-\newblock Identifying molecular dynamics in single-molecule fret experiments
-  with burst variance analysis.
-\newblock {\em Biophysical Journal}, 107:5058--5063, 2011.
 
 \bibitem{barber12}
 D.~Barber.
