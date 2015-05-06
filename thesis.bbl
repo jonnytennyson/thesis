@@ -604,6 +604,18 @@ Y.~Chen, J.~D. Muller, P.~T. So, and E.~Gratton.
   spectroscopy.
 \newblock {\em Biophys. J.}, 77:553--567, 1999.
 
+\bibitem{lloydsmith07}
+J.~O. Lloyd-Smith.
+\newblock Maximum likelihood estimation of the negative binomial dispersion
+  parameter for highly overdispersed data, with applications to infectious
+  diseases.
+\newblock {\em PLOS ONE}, 2:e180, 2007.
+
+\bibitem{bliss53}
+C.~I. Bliss and R.~A. Fisher.
+\newblock Fitting the negative binomial distribution to biological data.
+\newblock {\em Biometrics}, 9:176--200, 1953.
+
 \bibitem{green1995}
 P.~J. Green.
 \newblock Reversible jump markov chain monte carlo computation and bayesian

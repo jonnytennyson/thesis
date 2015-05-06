@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  5 MAY 2015 18:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  6 MAY 2015 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -580,12 +580,12 @@ Package pdftex.def Info: introduction/FRET_AND_zero.pdf used on input line 298.
 (pdftex.def)             Requested size: 433.62pt x 170.48431pt.
  [24 <./introduction/FRET_AND_zero.pdf>]
 [25] [26] [27]
-Overfull \hbox (4.06836pt too wide) detected at line 431
+Overfull \hbox (4.06836pt too wide) detected at line 432
 [] []\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j[]\OT1/cmr/m/n/12 ) = [] = []
  []
 
 
-Overfull \hbox (25.92877pt too wide) in paragraph at lines 433--434
+Overfull \hbox (25.92877pt too wide) in paragraph at lines 434--435
 []\OT1/cmr/m/n/12 we see that it is pos-si-ble to use a for-ward, gen-er-a-tive
  model of an ob-served dataset, $[]([]\OMS/cmsy/m/n/12 j[]\OT1/cmr/m/n/12 )$,
  []
@@ -758,279 +758,263 @@ d.pdf>] [70 <./inference/thresholding_real.pdf> <./inference/thresholding_real_
 low.pdf>] [71
 
 ] [72]
-Overfull \hbox (4.50822pt too wide) in paragraph at lines 150--151
+Overfull \hbox (4.50822pt too wide) in paragraph at lines 151--152
 \OT1/cmr/m/n/12 tics are well es-tab-lished for anal-y-sis of sm-FRET data col-
 lected from im-mo-bilised molecules [[],
  []
 
-[73] [74] <inference/fig1_intro_graphs.pdf, id=20040, 404.712pt x 281.05pt>
+[73] [74] <inference/fig1_intro_graphs.pdf, id=20041, 404.712pt x 281.05pt>
 File: inference/fig1_intro_graphs.pdf Graphic file (type pdf)
 
 <use inference/fig1_intro_graphs.pdf>
-Package pdftex.def Info: inference/fig1_intro_graphs.pdf used on input line 189
+Package pdftex.def Info: inference/fig1_intro_graphs.pdf used on input line 198
 .
 (pdftex.def)             Requested size: 433.62pt x 301.14078pt.
 
-<inference/fig2_model_flow_diagram.pdf, id=20042, 192.72pt x 192.72pt>
+<inference/fig2_model_flow_diagram.pdf, id=20043, 192.72pt x 192.72pt>
 File: inference/fig2_model_flow_diagram.pdf Graphic file (type pdf)
 
 <use inference/fig2_model_flow_diagram.pdf>
 Package pdftex.def Info: inference/fig2_model_flow_diagram.pdf used on input li
-ne 198.
+ne 207.
 (pdftex.def)             Requested size: 234.87749pt x 234.87689pt.
 
-<inference/S2_plate_DAG_model.pdf, id=20044, 192.72pt x 144.54pt>
+<inference/S2_plate_DAG_model.pdf, id=20045, 192.72pt x 144.54pt>
 File: inference/S2_plate_DAG_model.pdf Graphic file (type pdf)
 
 <use inference/S2_plate_DAG_model.pdf>
-Package pdftex.def Info: inference/S2_plate_DAG_model.pdf used on input line 20
-6.
+Package pdftex.def Info: inference/S2_plate_DAG_model.pdf used on input line 21
+5.
 (pdftex.def)             Requested size: 234.87749pt x 176.15767pt.
  [75
 
 ] [76 <./inference/fig1_intro_graphs.pdf>] [77 <./inference/fig2_model_flow_dia
 gram.pdf>]
-Overfull \hbox (0.79288pt too wide) in paragraph at lines 242--243
+Overfull \hbox (0.79288pt too wide) in paragraph at lines 252--253
 []\OT1/cmr/m/n/12 Each molecule present may be in one of four la-belling states
 : un-la-belled, donor-only, acceptor-
  []
 
-
-Package natbib Warning: Citation `lloydsmith07' on page 78 undefined on input l
-ine 255.
-
-
-Package natbib Warning: Citation `bliss53' on page 78 undefined on input line 2
-55.
-
-
-Package natbib Warning: Citation `lloydsmith07' on page 78 undefined on input l
-ine 255.
-
-[78] [79]
-<inference/marginal_distributions.pdf, id=32388, 845.04686pt x 385.44pt>
+[78] [79] [80]
+<inference/marginal_distributions.pdf, id=32404, 845.04686pt x 385.44pt>
 File: inference/marginal_distributions.pdf Graphic file (type pdf)
 
 <use inference/marginal_distributions.pdf>
 Package pdftex.def Info: inference/marginal_distributions.pdf used on input lin
-e 293.
+e 304.
 (pdftex.def)             Requested size: 433.62pt x 197.78336pt.
- [80] [81 <./inference/S2_plate_DAG_model.pdf>] [82 <./inference/marginal_distr
-ibutions.pdf>]
-Overfull \hbox (75.49617pt too wide) in paragraph at lines 306--307
-\OT1/cmr/m/n/12 prob-a-bil-ity dis-tri-bu-tion over the pa-ram-e-ters given the
- ob-ser-va-tions, namely $[][\OML/cmm/m/it/12 ^^U[]; ^^U[]; ^^U[]; ^^U[]; E\OMS
-/cmsy/m/n/12 j\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f[]; f[]\OT1/cmr/m/n/12 )[]]$
- []
-
-[83
+ [81] [82 <./inference/S2_plate_DAG_model.pdf>] [83 <./inference/marginal_distr
+ibutions.pdf>] [84
 
 ]
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 32
-8.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 33
+9.
 
 
-Overfull \hbox (4.60756pt too wide) in paragraph at lines 340--341
+Overfull \hbox (4.60756pt too wide) in paragraph at lines 351--352
 []\OT1/cmr/m/n/12 where $(\OML/cmm/m/it/12 f[]; f[]\OT1/cmr/m/n/12 )[]$ is the 
 $\OML/cmm/m/it/12 i$\OT1/cmr/m/n/12 th pair of ob-ser-va-tions in the dataset a
 nd $[][[]]$, $[][[]]$,
  []
 
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 34
-4.
-
-[84]
+[85]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 35
-4.
+5.
 
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 36
+5.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 37
+4.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 39
 3.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 38
-2.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 39
-9.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 39
-9.
-
-[85]
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 40
-9.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 40
-9.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 41
+0.
 
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 41
-4.
-
-LaTeX Font Info:    Calculating math sizes for size <> on input line 417.
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 417.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 417.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 417.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 417.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 417.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 417.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 417.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 417.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 417.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 43
-8.
-
-
-Overfull \hbox (3.15692pt too wide) detected at line 443
-[][] []
- []
+0.
 
 [86]
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 44
-8.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 42
+0.
 
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 42
+0.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 42
+5.
+
+LaTeX Font Info:    Calculating math sizes for size <> on input line 428.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
+(Font)              size <5> substituted on input line 428.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 428.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 428.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
+(Font)              size <5> substituted on input line 428.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
+(Font)              size <5> substituted on input line 428.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
+(Font)              size <5> substituted on input line 428.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
+(Font)              size <5> substituted on input line 428.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 428.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 428.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 44
+9.
+
+
+Overfull \hbox (3.15692pt too wide) detected at line 454
+[][] []
+ []
+
+[87]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 45
-6.
+9.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 477.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 46
+7.
+
+[88]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 488.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 477.
- [87]
-Overfull \hbox (23.66783pt too wide) in paragraph at lines 492--493
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 488.
+ [89]
+Overfull \hbox (23.66783pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/12 Python. Code is avail-able on-line ([]$\OT1/cmtt/m/n/12 https :
  / / bitbucket . org / rebecca _ roisin / fret-[]inference$[]\OT1/cmr/m/n/12 ).
  
  []
 
-[88] <inference/S3_samples_summary_rsep.pdf, id=34913, 578.16pt x 433.62pt>
+<inference/S3_samples_summary_rsep.pdf, id=34930, 578.16pt x 433.62pt>
 File: inference/S3_samples_summary_rsep.pdf Graphic file (type pdf)
 
 <use inference/S3_samples_summary_rsep.pdf>
 Package pdftex.def Info: inference/S3_samples_summary_rsep.pdf used on input li
-ne 502.
+ne 514.
 (pdftex.def)             Requested size: 361.34999pt x 271.01183pt.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 513.
+LaTeX Warning: Command \r invalid in math mode on input line 526.
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 525.
-[89] [90 <./inference/S3_samples_summary_rsep.pdf>]
-Overfull \hbox (51.4456pt too wide) in paragraph at lines 549--562
-[][] 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 537.
+[90] [91 <./inference/S3_samples_summary_rsep.pdf>]
+Overfull \hbox (5.14423pt too wide) in paragraph at lines 544--552
+[][]
  []
 
-[91] [92] [93]
-<inference/fig3_benchmark_synthetic.pdf, id=34992, 404.712pt x 232.87pt>
+[92] [93] [94] [95]
+<inference/fig3_benchmark_synthetic.pdf, id=35015, 404.712pt x 232.87pt>
 File: inference/fig3_benchmark_synthetic.pdf Graphic file (type pdf)
 
 <use inference/fig3_benchmark_synthetic.pdf>
 Package pdftex.def Info: inference/fig3_benchmark_synthetic.pdf used on input l
-ine 614.
+ine 626.
 (pdftex.def)             Requested size: 433.62pt x 249.51665pt.
- [94] [95 <./inference/fig3_benchmark_synthetic.pdf>]
-<inference/summary_threshold_E_population.pdf, id=35380, 597.50786pt x 845.0468
+
+<inference/summary_threshold_E_population.pdf, id=35022, 597.50786pt x 845.0468
 6pt>
 File: inference/summary_threshold_E_population.pdf Graphic file (type pdf)
  <use inference/summary_threshold_E_population.pdf>
 Package pdftex.def Info: inference/summary_threshold_E_population.pdf used on i
-nput line 626.
+nput line 638.
 (pdftex.def)             Requested size: 397.48499pt x 562.15543pt.
 
 
-LaTeX Warning: Float too large for page by 37.15895pt on input line 630.
+LaTeX Warning: Float too large for page by 37.15895pt on input line 642.
 
-<inference/fig4_synthetic.pdf, id=35383, 404.712pt x 281.05pt>
+[96] [97 <./inference/fig3_benchmark_synthetic.pdf>] [98 <./inference/summary_t
+hreshold_E_population.pdf>]
+<inference/fig4_synthetic.pdf, id=35451, 404.712pt x 281.05pt>
 File: inference/fig4_synthetic.pdf Graphic file (type pdf)
 
 <use inference/fig4_synthetic.pdf>
-Package pdftex.def Info: inference/fig4_synthetic.pdf used on input line 637.
+Package pdftex.def Info: inference/fig4_synthetic.pdf used on input line 649.
 (pdftex.def)             Requested size: 361.34999pt x 250.9485pt.
 
-<inference/fig5_labelled_multi_fig.pdf, id=35385, 404.712pt x 289.08pt>
+<inference/fig5_labelled_multi_fig.pdf, id=35453, 404.712pt x 289.08pt>
 File: inference/fig5_labelled_multi_fig.pdf Graphic file (type pdf)
 
 <use inference/fig5_labelled_multi_fig.pdf>
 Package pdftex.def Info: inference/fig5_labelled_multi_fig.pdf used on input li
-ne 647.
+ne 659.
 (pdftex.def)             Requested size: 433.62pt x 328.19603pt.
- [96] [97 <./inference/summary_threshold_E_population.pdf>] [98 <./inference/fi
-g4_synthetic.pdf>] [99 <./inference/fig5_labelled_multi_fig.pdf>]
-<inference/fig6_single_ppltn.pdf, id=36118, 192.72pt x 144.54pt>
+ [99] [100 <./inference/fig4_synthetic.pdf>] [101 <./inference/fig5_labelled_mu
+lti_fig.pdf>]
+<inference/fig6_single_ppltn.pdf, id=36143, 192.72pt x 144.54pt>
 File: inference/fig6_single_ppltn.pdf Graphic file (type pdf)
 
 <use inference/fig6_single_ppltn.pdf>
-Package pdftex.def Info: inference/fig6_single_ppltn.pdf used on input line 685
+Package pdftex.def Info: inference/fig6_single_ppltn.pdf used on input line 697
 .
-(pdftex.def)             Requested size: 433.62pt x 325.21416pt.
- [100] [101] [102 <./inference/fig6_single_ppltn.pdf>] <inference/fig7_all_rati
-os.pdf, id=36230, 404.712pt x 289.08pt>
+(pdftex.def)             Requested size: 289.07999pt x 216.80943pt.
+ [102] [103 <./inference/fig6_single_ppltn.pdf>] <inference/fig7_all_ratios.pdf
+, id=36250, 404.712pt x 289.08pt>
 File: inference/fig7_all_ratios.pdf Graphic file (type pdf)
 
 <use inference/fig7_all_ratios.pdf>
-Package pdftex.def Info: inference/fig7_all_ratios.pdf used on input line 700.
+Package pdftex.def Info: inference/fig7_all_ratios.pdf used on input line 712.
 (pdftex.def)             Requested size: 361.34999pt x 258.11847pt.
- [103] [104 <./inference/fig7_all_ratios.pdf>] <inference/poisson_vs_gp.pdf, id
-=37133, 1197.98236pt x 922.6505pt>
+
+<inference/poisson_vs_gp.pdf, id=36256, 1197.98236pt x 922.6505pt>
 File: inference/poisson_vs_gp.pdf Graphic file (type pdf)
 
 <use inference/poisson_vs_gp.pdf>
-Package pdftex.def Info: inference/poisson_vs_gp.pdf used on input line 713.
+Package pdftex.def Info: inference/poisson_vs_gp.pdf used on input line 726.
 (pdftex.def)             Requested size: 361.34999pt x 278.2896pt.
- [105 <./inference/poisson_vs_gp.pdf>]
-[106] [107]) (/home/rebecca/Documents/repos/thesis/sizing/sizing_chapter.tex
-[108]
+ [104] [105 <./inference/fig7_all_ratios.pdf>] [106 <./inference/poisson_vs_gp.
+pdf>] [107] [108])
+(/home/rebecca/Documents/repos/thesis/sizing/sizing_chapter.tex [109]
 Chapter 4.
-[109
+[110
 
-] [110]
+] [111]
 
-LaTeX Warning: Reference `fig:aggregation_pathwaysXXX' on page 111 undefined on
+LaTeX Warning: Reference `fig:aggregation_pathwaysXXX' on page 112 undefined on
  input line 33.
 
-[111] <sizing/tht_fig.pdf, id=40113, 255.2676pt x 262.30281pt>
+[112] <sizing/tht_fig.pdf, id=40131, 255.2676pt x 262.30281pt>
 File: sizing/tht_fig.pdf Graphic file (type pdf)
 
 <use sizing/tht_fig.pdf>
@@ -1042,37 +1026,37 @@ Overfull \hbox (2.77115pt too wide) in paragraph at lines 50--50
  Com-
  []
 
-[112] [113 <./sizing/tht_fig.pdf>]
+[113] [114 <./sizing/tht_fig.pdf>]
 
-LaTeX Warning: Reference `fig:power_fluorescence' on page 114 undefined on inpu
+LaTeX Warning: Reference `fig:power_fluorescence' on page 115 undefined on inpu
 t line 65.
 
-[114]
+[115]
 
-LaTeX Warning: Reference `fig:beam_profile' on page 115 undefined on input line
+LaTeX Warning: Reference `fig:beam_profile' on page 116 undefined on input line
  67.
 
 
-Package natbib Warning: Citation `???' on page 115 undefined on input line 67.
+Package natbib Warning: Citation `???' on page 116 undefined on input line 67.
 
 
-LaTeX Warning: Reference `fig:uniform_excitation' on page 115 undefined on inpu
+LaTeX Warning: Reference `fig:uniform_excitation' on page 116 undefined on inpu
 t line 70.
 
 
-Package natbib Warning: Citation `???' on page 115 undefined on input line 72.
+Package natbib Warning: Citation `???' on page 116 undefined on input line 72.
 
 
-Package natbib Warning: Citation `???' on page 115 undefined on input line 72.
+Package natbib Warning: Citation `???' on page 116 undefined on input line 72.
 
-[115] <sizing/holliday_junction.pdf, id=40170, 969.63457pt x 969.63414pt>
+[116] <sizing/holliday_junction.pdf, id=40188, 969.63457pt x 969.63414pt>
 File: sizing/holliday_junction.pdf Graphic file (type pdf)
 
 <use sizing/holliday_junction.pdf>
 Package pdftex.def Info: sizing/holliday_junction.pdf used on input line 82.
 (pdftex.def)             Requested size: 433.62pt x 433.60898pt.
 
-<sizing/holliday_junction_labelling.pdf, id=40172, 2790.425pt x 2874.74pt>
+<sizing/holliday_junction_labelling.pdf, id=40190, 2790.425pt x 2874.74pt>
 File: sizing/holliday_junction_labelling.pdf Graphic file (type pdf)
 
 <use sizing/holliday_junction_labelling.pdf>
@@ -1081,34 +1065,34 @@ ine 90.
 (pdftex.def)             Requested size: 433.62pt x 446.7206pt.
 
 
-LaTeX Warning: Reference `fig:oligomers' on page 116 undefined on input line 10
+LaTeX Warning: Reference `fig:oligomers' on page 117 undefined on input line 10
 3.
 
-[116] [117 <./sizing/holliday_junction.pdf>] [118 <./sizing/holliday_junction_l
+[117] [118 <./sizing/holliday_junction.pdf>] [119 <./sizing/holliday_junction_l
 abelling.pdf>]
 
-Package natbib Warning: Citation `???' on page 119 undefined on input line 118.
+Package natbib Warning: Citation `???' on page 120 undefined on input line 118.
 
 
-[119]
+[120]
 Overfull \hbox (3.60442pt too wide) in paragraph at lines 128--128
 []\OT1/cmr/bx/n/14.4 A Gamma-Poisson Mix-ture Model of Oligomer Pho-ton Emis-
  []
 
-[120]
+[121]
 Overfull \hbox (11.12814pt too wide) in paragraph at lines 156--158
  []\OT1/cmr/bx/n/12 Holliday Junc-tion Prepa-ra-tion[] \OT1/cmr/m/it/12 Hol-l-i
 -day Junc-tion pu-rifi-ca-tion was car-ried out by Vladimi-
  []
 
-[121]
+[122]
 Overfull \hbox (10.14203pt too wide) in paragraph at lines 178--180
  []\OT1/cmr/bx/n/12 Holliday Junc-tion Pu-rifi-ca-tion[] \OT1/cmr/m/it/12 Hol-l
 -i-day Junc-tion pu-rifi-ca-tion was car-ried out by Vladimi-
  []
 
-[122] [123] [124] [125]
-<sizing/poisson_size_photons.pdf, id=40254, 1172.38pt x 450.12453pt>
+[123] [124] [125] [126]
+<sizing/poisson_size_photons.pdf, id=40273, 1172.38pt x 450.12453pt>
 File: sizing/poisson_size_photons.pdf Graphic file (type pdf)
 
 <use sizing/poisson_size_photons.pdf>
@@ -1117,7 +1101,7 @@ Package pdftex.def Info: sizing/poisson_size_photons.pdf used on input line 220
 (pdftex.def)             Requested size: 433.62pt x 166.48164pt.
 
 <sizing/True_vs_Measured_oligomer_events_uniform_poisson_100000_hist.pdf, id=40
-256, 578.16pt x 433.62pt>
+275, 578.16pt x 433.62pt>
 File: sizing/True_vs_Measured_oligomer_events_uniform_poisson_100000_hist.pdf G
 raphic file (type pdf)
 
@@ -1126,7 +1110,7 @@ Package pdftex.def Info: sizing/True_vs_Measured_oligomer_events_uniform_poisso
 n_100000_hist.pdf used on input line 229.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/gamma_poisson_size_photons.pdf, id=40261, 1172.38pt x 449.68pt>
+<sizing/gamma_poisson_size_photons.pdf, id=40280, 1172.38pt x 449.68pt>
 File: sizing/gamma_poisson_size_photons.pdf Graphic file (type pdf)
 
 <use sizing/gamma_poisson_size_photons.pdf>
@@ -1134,7 +1118,7 @@ Package pdftex.def Info: sizing/gamma_poisson_size_photons.pdf used on input li
 ne 239.
 (pdftex.def)             Requested size: 433.62pt x 166.31723pt.
 
-<sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf, id=40263, 578
+<sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf, id=40282, 578
 .16pt x 433.62pt>
 File: sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf Graphic f
 ile (type pdf)
@@ -1143,24 +1127,24 @@ ile (type pdf)
 Package pdftex.def Info: sizing/True_vs_Measured_oligomer_events_uniform_100000
 _hist.pdf used on input line 247.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
- [126]
-[127 <./sizing/poisson_size_photons.pdf> <./sizing/True_vs_Measured_oligomer_ev
-ents_uniform_poisson_100000_hist.pdf>] [128 <./sizing/gamma_poisson_size_photon
-s.pdf>] [129 <./sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf
+ [127]
+[128 <./sizing/poisson_size_photons.pdf> <./sizing/True_vs_Measured_oligomer_ev
+ents_uniform_poisson_100000_hist.pdf>] [129 <./sizing/gamma_poisson_size_photon
+s.pdf>] [130 <./sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf
 >]
 Overfull \hbox (3.03406pt too wide) in paragraph at lines 266--267
 []\OT1/cmr/m/n/12 This com-par-i-son raises two im-por-tant points. Firstly, th
 e emis-sion be-haviour of our oligomeric
  []
 
-[130] <sizing/Holliday_Junctions.pdf, id=40502, 578.16pt x 433.62pt>
+[131] <sizing/Holliday_Junctions.pdf, id=40521, 578.16pt x 433.62pt>
 File: sizing/Holliday_Junctions.pdf Graphic file (type pdf)
 
 <use sizing/Holliday_Junctions.pdf>
 Package pdftex.def Info: sizing/Holliday_Junctions.pdf used on input line 272.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/poisson_oligomers_log.pdf, id=40504, 578.16pt x 433.62pt>
+<sizing/poisson_oligomers_log.pdf, id=40523, 578.16pt x 433.62pt>
 File: sizing/poisson_oligomers_log.pdf Graphic file (type pdf)
 
 <use sizing/poisson_oligomers_log.pdf>
@@ -1168,7 +1152,7 @@ Package pdftex.def Info: sizing/poisson_oligomers_log.pdf used on input line 28
 0.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/gamma_poisson_oligomers_log.pdf, id=40506, 578.16pt x 433.62pt>
+<sizing/gamma_poisson_oligomers_log.pdf, id=40525, 578.16pt x 433.62pt>
 File: sizing/gamma_poisson_oligomers_log.pdf Graphic file (type pdf)
 
 <use sizing/gamma_poisson_oligomers_log.pdf>
@@ -1181,10 +1165,10 @@ Overfull \hbox (1.2029pt too wide) in paragraph at lines 295--295
  
  []
 
-[131 <./sizing/Holliday_Junctions.pdf>] [132 <./sizing/poisson_oligomers_log.pd
-f>] [133 <./sizing/gamma_poisson_oligomers_log.pdf>]
+[132 <./sizing/Holliday_Junctions.pdf>] [133 <./sizing/poisson_oligomers_log.pd
+f>] [134 <./sizing/gamma_poisson_oligomers_log.pdf>]
 
-LaTeX Warning: Reference `tab:inferred_values' on page 134 undefined on input l
+LaTeX Warning: Reference `tab:inferred_values' on page 135 undefined on input l
 ine 298.
 
 
@@ -1193,29 +1177,29 @@ Overfull \hbox (9.89694pt too wide) in paragraph at lines 298--299
 own size (from monomers to tetramers)
  []
 
-<sizing/divergence.pdf, id=40626, 578.16pt x 433.62pt>
+<sizing/divergence.pdf, id=40644, 578.16pt x 433.62pt>
 File: sizing/divergence.pdf Graphic file (type pdf)
 
 <use sizing/divergence.pdf>
 Package pdftex.def Info: sizing/divergence.pdf used on input line 341.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/oligomer_marginals.pdf, id=40628, 1172.38pt x 494.73425pt>
+<sizing/oligomer_marginals.pdf, id=40646, 1172.38pt x 494.73425pt>
 File: sizing/oligomer_marginals.pdf Graphic file (type pdf)
 
 <use sizing/oligomer_marginals.pdf>
 Package pdftex.def Info: sizing/oligomer_marginals.pdf used on input line 349.
 (pdftex.def)             Requested size: 433.62pt x 182.98087pt.
- [134] [135 <./sizing/divergence.pdf>]
-[136 <./sizing/oligomer_marginals.pdf>]
-<sizing/Convergence.pdf, id=41508, 578.16pt x 433.62pt>
+ [135] [136 <./sizing/divergence.pdf>]
+[137 <./sizing/oligomer_marginals.pdf>]
+<sizing/Convergence.pdf, id=41527, 578.16pt x 433.62pt>
 File: sizing/Convergence.pdf Graphic file (type pdf)
 
 <use sizing/Convergence.pdf>
 Package pdftex.def Info: sizing/Convergence.pdf used on input line 363.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
- [137 <./sizing/Convergence.pdf>]
-<sizing/HJ_overlays.pdf, id=41552, 1172.38pt x 491.21931pt>
+ [138 <./sizing/Convergence.pdf>]
+<sizing/HJ_overlays.pdf, id=41570, 1172.38pt x 491.21931pt>
 File: sizing/HJ_overlays.pdf Graphic file (type pdf)
 
 <use sizing/HJ_overlays.pdf>
@@ -1223,57 +1207,57 @@ Package pdftex.def Info: sizing/HJ_overlays.pdf used on input line 376.
 (pdftex.def)             Requested size: 433.62pt x 181.68083pt.
 
 
-LaTeX Warning: Reference `tab:vary_Rblue' on page 138 undefined on input line 3
+LaTeX Warning: Reference `tab:vary_Rblue' on page 139 undefined on input line 3
 82.
 
-[138 <./sizing/HJ_overlays.pdf>]
-<sizing/varying_R_blue.pdf, id=41585, 578.16pt x 433.62pt>
+[139 <./sizing/HJ_overlays.pdf>]
+<sizing/varying_R_blue.pdf, id=41603, 578.16pt x 433.62pt>
 File: sizing/varying_R_blue.pdf Graphic file (type pdf)
 
 <use sizing/varying_R_blue.pdf>
 Package pdftex.def Info: sizing/varying_R_blue.pdf used on input line 389.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/vary_Rblue.pdf, id=41587, 1186.0529pt x 898.68573pt>
+<sizing/vary_Rblue.pdf, id=41605, 1186.0529pt x 898.68573pt>
 File: sizing/vary_Rblue.pdf Graphic file (type pdf)
 
 <use sizing/vary_Rblue.pdf>
 Package pdftex.def Info: sizing/vary_Rblue.pdf used on input line 397.
 (pdftex.def)             Requested size: 433.62pt x 328.55922pt.
- [139 <./sizing/varying_R_blue.pdf>] [140 <./sizing/vary_Rblue.pdf>]
+ [140 <./sizing/varying_R_blue.pdf>] [141 <./sizing/vary_Rblue.pdf>]
 
-LaTeX Warning: Reference `fig:photobleaching' on page 141 undefined on input li
+LaTeX Warning: Reference `fig:photobleaching' on page 142 undefined on input li
 ne 429.
 
 
-LaTeX Warning: Reference `tab:photobleaching' on page 141 undefined on input li
+LaTeX Warning: Reference `tab:photobleaching' on page 142 undefined on input li
 ne 429.
 
 
-LaTeX Warning: Reference `fig:blinking' on page 141 undefined on input line 429
+LaTeX Warning: Reference `fig:blinking' on page 142 undefined on input line 429
 .
 
 
-Package natbib Warning: Citation `blinking' on page 141 undefined on input line
+Package natbib Warning: Citation `blinking' on page 142 undefined on input line
  429.
 
 
-LaTeX Warning: Reference `A1_blinking_video' on page 141 undefined on input lin
+LaTeX Warning: Reference `A1_blinking_video' on page 142 undefined on input lin
 e 429.
 
-[141] [142] <sizing/fluorone.pdf, id=43478, 350.43507pt x 629.15048pt>
+[142] [143] <sizing/fluorone.pdf, id=43497, 350.43507pt x 629.15048pt>
 File: sizing/fluorone.pdf Graphic file (type pdf)
 
 <use sizing/fluorone.pdf>
 Package pdftex.def Info: sizing/fluorone.pdf used on input line 445.
 (pdftex.def)             Requested size: 289.07999pt x 519.03635pt.
 )
-(/home/rebecca/Documents/repos/thesis/illumina/illumina_chapter.tex [143]
-[144 <./sizing/fluorone.pdf>] [145]
+(/home/rebecca/Documents/repos/thesis/illumina/illumina_chapter.tex [144]
+[145 <./sizing/fluorone.pdf>] [146]
 Chapter 5.
-[146
+[147
 
-] <illumina/sanger.pdf, id=43524, 1712.45473pt x 1551.40994pt>
+] <illumina/sanger.pdf, id=43542, 1712.45473pt x 1551.40994pt>
 File: illumina/sanger.pdf Graphic file (type pdf)
 
 <use illumina/sanger.pdf>
@@ -1281,11 +1265,11 @@ Package pdftex.def Info: illumina/sanger.pdf used on input line 16.
 (pdftex.def)             Requested size: 375.80544pt x 340.45903pt.
 
 
-LaTeX Warning: Reference `fig:terminator' on page 147 undefined on input line 2
+LaTeX Warning: Reference `fig:terminator' on page 148 undefined on input line 2
 2.
 
-[147] [148 <./illumina/sanger.pdf>]
-<illumina/illumina_sequencing.jpg, id=43556, 216.81pt x 204.16275pt>
+[148] [149 <./illumina/sanger.pdf>]
+<illumina/illumina_sequencing.jpg, id=43575, 216.81pt x 204.16275pt>
 File: illumina/illumina_sequencing.jpg Graphic file (type jpg)
 
 <use illumina/illumina_sequencing.jpg>
@@ -1298,12 +1282,12 @@ Overfull \hbox (15.01875pt too wide) in paragraph at lines 33--34
 12 Al-though Il-lu-mina does not use sin-gle molecule
  []
 
-[149] [150 <./illumina/illumina_sequencing.jpg>]
+[150] [151 <./illumina/illumina_sequencing.jpg>]
 
-Package natbib Warning: Citation `Compeau2011' on page 151 undefined on input l
+Package natbib Warning: Citation `Compeau2011' on page 152 undefined on input l
 ine 42.
 
-[151] <illumina/de_bruijn.pdf, id=43602, 1313.68893pt x 542.33794pt>
+[152] <illumina/de_bruijn.pdf, id=43620, 1313.68893pt x 542.33794pt>
 File: illumina/de_bruijn.pdf Graphic file (type pdf)
 
 <use illumina/de_bruijn.pdf>
@@ -1311,50 +1295,50 @@ Package pdftex.def Info: illumina/de_bruijn.pdf used on input line 48.
 (pdftex.def)             Requested size: 375.80544pt x 155.14719pt.
 
 
-Package natbib Warning: Citation `Compeau2011' on page 152 undefined on input l
+Package natbib Warning: Citation `Compeau2011' on page 153 undefined on input l
 ine 49.
 
 
-Package natbib Warning: Citation `Compeau2011' on page 152 undefined on input l
+Package natbib Warning: Citation `Compeau2011' on page 153 undefined on input l
 ine 49.
 
 
-LaTeX Warning: Reference `fig:tangle' on page 152 undefined on input line 56.
+LaTeX Warning: Reference `fig:tangle' on page 153 undefined on input line 56.
 
-[152 <./illumina/de_bruijn.pdf>]
+[153 <./illumina/de_bruijn.pdf>]
 
-Package natbib Warning: Citation `zerbino2008' on page 153 undefined on input l
+Package natbib Warning: Citation `zerbino2008' on page 154 undefined on input l
 ine 68.
 
-[153] [154] <illumina/fig1_nxrepair.pdf, id=43664, 864.48692pt x 277.08688pt>
+[154] [155] <illumina/fig1_nxrepair.pdf, id=43683, 864.48692pt x 277.08688pt>
 File: illumina/fig1_nxrepair.pdf Graphic file (type pdf)
 
 <use illumina/fig1_nxrepair.pdf>
 Package pdftex.def Info: illumina/fig1_nxrepair.pdf used on input line 80.
 (pdftex.def)             Requested size: 375.80544pt x 120.4557pt.
- [155 <./illumina/fig1_nxrepair.pdf>] [156
+ [156 <./illumina/fig1_nxrepair.pdf>] [157
 
 ]
-[157] <illumina/spanning.pdf, id=44972, 1430.30577pt x 308.13841pt>
+[158] <illumina/spanning.pdf, id=44990, 1430.30577pt x 308.13841pt>
 File: illumina/spanning.pdf Graphic file (type pdf)
 
 <use illumina/spanning.pdf>
 Package pdftex.def Info: illumina/spanning.pdf used on input line 138.
 (pdftex.def)             Requested size: 375.80544pt x 80.96042pt.
- [158 <./illumina/spanning.pdf>] [159] [160]
+ [159 <./illumina/spanning.pdf>] [160] [161]
 
-Package natbib Warning: Citation `gurevich2013' on page 161 undefined on input 
+Package natbib Warning: Citation `gurevich2013' on page 162 undefined on input 
 line 197.
 
-[161] <illumina/allROC.pdf, id=45037, 578.16pt x 433.62pt>
+[162] <illumina/allROC.pdf, id=45055, 578.16pt x 433.62pt>
 File: illumina/allROC.pdf Graphic file (type pdf)
 
 <use illumina/allROC.pdf>
 Package pdftex.def Info: illumina/allROC.pdf used on input line 218.
 (pdftex.def)             Requested size: 375.80544pt x 281.84966pt.
- [162 <./illumina/allROC.pdf>]
+ [163 <./illumina/allROC.pdf>]
 
-Package natbib Warning: Citation `gurevich2013' on page 163 undefined on input 
+Package natbib Warning: Citation `gurevich2013' on page 164 undefined on input 
 line 230.
 
 
@@ -1375,20 +1359,20 @@ Underfull \hbox (badness 1472) in paragraph at lines 258--259
  []
 
 
-Package natbib Warning: Citation `gurevich2013' on page 163 undefined on input 
+Package natbib Warning: Citation `gurevich2013' on page 164 undefined on input 
 line 268.
 
-[163] [164]
+[164] [165]
 
-Package natbib Warning: Citation `gurevich2013' on page 165 undefined on input 
+Package natbib Warning: Citation `gurevich2013' on page 166 undefined on input 
 line 272.
 
-[165]
+[166]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 282.
 
-[166]
+[167]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1396,18 +1380,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 382.
 
-) (/home/rebecca/Documents/repos/thesis/conclusions/conclusions.tex [167]
-[168] [169] [170]
+) (/home/rebecca/Documents/repos/thesis/conclusions/conclusions.tex [168]
+[169] [170] [171]
 Chapter 6.
-[171
+[172
 
-] [172] [173] [174] [175]) (./thesis.bbl [176] [177
+] [173] [174] [175] [176]) (./thesis.bbl [177] [178
 
-] [178] [179] [180]
+] [179] [180] [181]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 
-[181] [182]
+[182] [183]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -1419,41 +1403,42 @@ Underfull \hbox (badness 6268) in paragraph at lines 454--457
  pro-tein fold-ing.
  []
 
-[183]
+[184]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- [184] [185]
+ [185] [186]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [186]
+ [187]
 Missing character: There is no Î in font cmr12!
 Missing character: There is no ± in font cmr12!
 Missing character: There is no Î in font cmr12!
 Missing character: There is no ² in font cmr12!
+ [188]
 Missing character: There is no Î in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Î in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Î in font cmr12!
 Missing character: There is no ± in font cmr12!
- [187] [188]
+ [189]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [189] [190] [191] [192]
+ [190] [191] [192] [193]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no § in font cmr12!
- [193])
+ [194])
 
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-[194]
+[195]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
@@ -1474,10 +1459,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 10428 strings out of 495028
- 154591 string characters out of 6181496
- 288075 words of memory out of 5000000
- 12625 multiletter control sequences out of 15000+600000
+ 10441 strings out of 495028
+ 154822 string characters out of 6181496
+ 288066 words of memory out of 5000000
+ 12634 multiletter control sequences out of 15000+600000
  17861 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  29i,16n,40p,3281b,1733s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1503,10 +1488,10 @@ lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 t12.pfb>
-Output written on thesis.pdf (196 pages, 9678389 bytes).
+Output written on thesis.pdf (197 pages, 9683839 bytes).
 PDF statistics:
- 45523 PDF objects out of 45951 (max. 8388607)
- 30612 compressed objects within 307 object streams
- 795 named destinations out of 1000 (max. 500000)
+ 45542 PDF objects out of 45951 (max. 8388607)
+ 30630 compressed objects within 307 object streams
+ 799 named destinations out of 1000 (max. 500000)
  1483 words of extra memory for PDF output out of 10000 (max. 10000000)
 
