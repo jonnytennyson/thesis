@@ -2,7 +2,12 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 Case mismatch error between cite keys Compeau2011 and compeau2011
----line 572 of file thesis.aux
+---line 571 of file thesis.aux
+ : \citation{Compeau2011
+ :                      }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Compeau2011 and compeau2011
+---line 576 of file thesis.aux
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
@@ -11,44 +16,34 @@ Case mismatch error between cite keys Compeau2011 and compeau2011
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
-Case mismatch error between cite keys Compeau2011 and compeau2011
----line 578 of file thesis.aux
- : \citation{Compeau2011
- :                      }
-I'm skipping whatever remains of this command
 Case mismatch error between cite keys zerbino2008 and Zerbino2008
----line 586 of file thesis.aux
+---line 585 of file thesis.aux
  : \citation{zerbino2008
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 619 of file thesis.aux
+---line 618 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 626 of file thesis.aux
+---line 625 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 629 of file thesis.aux
+---line 628 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 634 of file thesis.aux
+---line 633 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
 The style file: unsrt.bst
 Database file #1: thesis.bib
-I was expecting a `,' or a `}'---line 411 of file thesis.bib
- :     
- :     doi = {10.1007/978-1-4020-9003-5_3}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 2369 of file thesis.bib
+Repeated entry---line 2377 of file thesis.bib
  : @article{Zerbino2008
  :                     ,
 I'm skipping whatever remains of this entry
@@ -57,45 +52,45 @@ Warning--I didn't find a database entry for "blinking"
 Warning--empty author and editor in goldbook2006
 Warning--empty journal in Coil2014
 Warning--empty journal in li2013
-You've used 175 entries,
+You've used 176 entries,
             1791 wiz_defined-function locations,
-            1448 strings with 40719 characters,
-and the built_in function-call counts, 49511 in all, are:
-= -- 3944
-> -- 3564
+            1455 strings with 40900 characters,
+and the built_in function-call counts, 49777 in all, are:
+= -- 3970
+> -- 3575
 < -- 0
-+ -- 1257
-- -- 1082
-* -- 4282
-:= -- 8494
-add.period$ -- 527
-call.type$ -- 175
-change.case$ -- 159
++ -- 1261
+- -- 1085
+* -- 4303
+:= -- 8536
+add.period$ -- 530
+call.type$ -- 176
+change.case$ -- 160
 chr.to.int$ -- 0
-cite$ -- 178
-duplicate$ -- 1571
-empty$ -- 4023
-format.name$ -- 1082
-if$ -- 10200
+cite$ -- 179
+duplicate$ -- 1580
+empty$ -- 4048
+format.name$ -- 1085
+if$ -- 10257
 int.to.chr$ -- 0
-int.to.str$ -- 175
-missing$ -- 184
-newline$ -- 880
-num.names$ -- 174
-pop$ -- 295
+int.to.str$ -- 176
+missing$ -- 185
+newline$ -- 885
+num.names$ -- 175
+pop$ -- 296
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 535
+skip$ -- 538
 stack$ -- 0
-substring$ -- 4007
-swap$ -- 173
+substring$ -- 4038
+swap$ -- 174
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 457
-width$ -- 178
-write$ -- 1911
-(There were 10 error messages)
+while$ -- 460
+width$ -- 179
+write$ -- 1922
+(There were 9 error messages)
