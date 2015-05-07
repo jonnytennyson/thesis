@@ -30,6 +30,7 @@ In both Alzheimer's Disease and Parkinson's Disease, the protein aggregates, whe
 The role that amyloidosis plays in neurodegenerative disease is currently not well understood. Heritable mutations, such as the A30P and A53T mutations found in $\alpha$-synculein, which predispose the peptide to aggregate formation in vitro~\cite{Conway1999} are associated with early onset disease. However, it is curently unknown whether there is a common mechanism of cytotoxicity associated with the structurally similar oligomeric species found in various diseases of protien aggregation,~\cite{Haas2007}; whether the accumulation of amyloid aggregate overwhelms the cellular degradation and molecular chaperone pathways~\cite{Muchowski2005}, or whether the mechanisms of toxicity are complex and disease specific~\cite{Benilova2012}.      
 
 \subsection{Studying Protein Aggregation}
+\label{subect:aggregation}
 As a consequence, understanding the chemical pathway of protein aggregation, particularly of disease-associated peptides such as A${\beta}$ and $\alpha$-synculein, is of considerable biological interest. Current understanding is that aggregation follows a ``nucleated growth" mechanism~\cite{chiti2006}. Under the nucleated growth mechanism, there is an initial lag phase, during which a few protein molecules convert from their native structure to an aggregation nucleus. Following their formation, fibril growth occurs rapidly via polmerisation from these molecular seeds (see Fig.~\ref{fig:aggregation_pathways}). Analytical solution of the kinetic equations of aggregation suggests that secondary nucleation via templating dominates the rate of aggregation~\cite{knowles2009}. This theoretical result has been used to explain the differing experimentally observed aggregation rates of the two amyloidogenic peptides A$\beta$-40 and A$\beta$-42~\cite{cohen2013, meisl2014}.
 
 \begin{figure}
@@ -69,7 +70,7 @@ This research provides a fascinating insight into the biophysical changes that o
 
 for $I_D$ and $I_A$ the intensities (number of photons) in the donor and acceptor channels respectively, $\gamma$ the instrumental gamma factor and $I_{\text{monomer}}$ monomer event brightness, determined from fluorescent bursts that consisted of photons of a single colour only by selecting events for which $I_D \geq T_D$ but $I_A < T_A$.
 
-However, as described in the previous chapter, not all fluorescently labelled molecules passing through the confocal volume result in emission of the same number of photons. Multiple factors, including the confocal dwell time, the pathway taken through the gaussian laser beam and the effect of photobleaching during excitation result in broadening of the photon emission distribution becoming super-poissonian. The emision behaviour is well-approximated by a gamma-Poisson mixture model~\cite{chen1999}, as we use in our inference-based analysis tool~\cite{murphy14}. Single molecule fluorescence studies of oligomeric species are subject to similar behaviours, meaning that the relationship between oligomer size and burst brightness is complex and non-linear. 
+However, as described in the previous chapter (Section~\ref{subsec:justification}), not all fluorescently labelled molecules passing through the confocal volume result in emission of the same number of photons. Multiple factors, including the confocal dwell time, the pathway taken through the gaussian laser beam and the effect of photobleaching during excitation result in broadening of the photon emission distribution becoming super-poissonian. The emision behaviour is well-approximated by a gamma-Poisson mixture model~\cite{chen1999}, as we use in our inference-based analysis tool~\cite{murphy14}. Single molecule fluorescence studies of oligomeric species are subject to similar behaviours, meaning that the relationship between oligomer size and burst brightness is complex and non-linear. 
 
 %The rest of this chapter describes our attempts to improve our understanding of this relationship, using a combination of simple simulations and experimental observations of model oligomers of known size. This chapter presents results in two main areas. Firstly, we describe a number of simple simulations modeling smFRET experiments on oligomers of known size, or in mixures of known size distribution. We show that when the emission rate is assumed to be poisson, the number of emitted photons is a good metric for oligomer size. However, when the emission rate is over-dispersed, the number of photons emitted is no longer dominated by the number of fluorophores present, so is a bad measure of oligomer size. We next show, through comparison of simulations with experimental data from single colour single molecule fluorescence experiments on model oligomers of known size, that the photon emission distribution is indeed over-dispersed. Further, we show that our model of the emission process unfortunately cannot be used to reliably infer the oligomer size distribution, with the result that we cannot accurately determine oligomer size from the number of observed photons.
 
@@ -91,11 +92,11 @@ However, as described in the previous chapter, not all fluorescently labelled mo
 
 
 \subsection{The DNA Holliday Junction as a Model Oligomer}
-For our model oligomer, we used the DNA Holliday Junction~\cite{holliday1964}. The Holliday Junction is a four-way structure that is observed biologically during DNA recombination~\cite{potter1976}. Synthetic Holliday junctions can be prepared using four partially complementary strands of DNA (Fig.~\ref{fig:holliday_junction}) and have frequently been used to study junction dynamics using single molecule fluorescence~\cite{mckinney03, uphoff2010, Hyeon2012}. These synthetic structures provide an ideal model for small oligomers in fluorescence studies, as each strand can be independently labelled with a fluorescent dye prior to construction of the junction, enabling precise control of the number of fluorescent dyes present (Fig.~\ref{fig:holliday_junction_labelling}). We prepared synthetic Holliday junctions labelled with between one and four fluorescent dyes as described below. The sequences of the four arms used are shown in Table~\ref{tab:table1_DNAsequences} These synthetic species were then used in single molecule fluorescence studies to probe the relationship between oligomer size and photon emisson.
+To understand the relationship between the number of fluorescent labels and the number of emitted photons and hence to evaluate the accuracy of oligomer sizing using single molecule fluorescence, it was necessary to have access to synthetic oligomers carrying a known number of fluorescent labels. For this model oligomer, we used the DNA Holliday Junction~\cite{holliday1964}. The Holliday Junction is a four-way structure that is observed biologically during DNA recombination~\cite{potter1976}. Synthetic Holliday junctions can be prepared using four partially complementary strands of DNA (Fig.~\ref{fig:holliday_junction}) and have frequently been used to study junction dynamics using single molecule fluorescence~\cite{mckinney03, uphoff2010, Hyeon2012}. These synthetic structures provide an ideal model for small oligomers in fluorescence studies, as each strand can be independently labelled with a fluorescent dye prior to construction of the junction, enabling precise control of the number of fluorescent dyes present (Fig.~\ref{fig:holliday_junction_labelling}). We prepared synthetic Holliday junctions labelled with between one and four fluorescent dyes as described below. The sequences of the four arms used are shown in Table~\ref{tab:table1_DNAsequences} These synthetic species were then used in single molecule fluorescence studies to probe the relationship between oligomer size and photon emisson.
 
 \begin{figure}
    \begin{center}
-      \includegraphics*[clip=true, width=6in]{sizing/holliday_junction.pdf}
+      \includegraphics*[clip=true, width=3in]{sizing/holliday_junction.pdf}
       \caption{Schematic of a synthetic Holliday junction. The four arms, named B, H, R and X are shown in red, blue, yellow and green respectively.}
       \label{fig:holliday_junction}
    \end{center}
@@ -103,7 +104,7 @@ For our model oligomer, we used the DNA Holliday Junction~\cite{holliday1964}. T
 
 \begin{figure}
    \begin{center}
-      \includegraphics*[clip=true, width=6in]{sizing/holliday_junction_labelling.pdf}
+      \includegraphics*[clip=true, width=4in]{sizing/holliday_junction_labelling.pdf}
       \caption{Schematic showing the four labelling states of our synthetic Holliday Junction construct. Shown clockwise from top left: The monomer model has only Arm B labelled (top left); the dimer has both arms B and X labelled (top right); the trimer model has labels on arms B, H and R (bottom right); in the tetramer model all four arms are labelled (bottom left).}
       \label{fig:holliday_junction_labelling}
    \end{center}
@@ -116,7 +117,15 @@ This section describes the extension of our generative model of the smFRET exper
 For simplicity, we consider only molecules labelled with a single dye type (experimentally, either Alexa Fluor 488 or Alexa Fluor 647), allowing FRET effects to be ignored. Several other assumptions are also made, namely that the relative concentration of oligomeric species is modelled by a geometric distribution and that all monomers carry a fluorescent dye (a labellling efficiency of 100\%.) Further, we consider only events binned on the order of the dwell time in the confocal volume and do not explicitly consider either the effect of photobleaching partway through a bin or changes in the dwell time caused by slower diffusion of larger molecules. Details of the model, and the roles of these assumptions are given below.
 
 \subsection{A Simple Poisson Model of Oligomer Photon Emission}
-In the simplest fluorescence experiment from an oligomeric species, the fluorescently-labelled oligomers diffuse freely through the confocla detection volume.  When a molecule diffuses into the confocal volume, the laser excites the attached fluorophore(s) and photons are emitted (Fig.~\ref{fig:oligomers}. Typically, both donor and acceptor fluorophores would be used to allowing identification of oligomeric species based on the presence of coincident donor and acceptor bursts. However, we consider a simplified experiment in which monomers are labelled with one dye type only. This enables us to ignore the effect of FRET on the number of photons observed and to consider only the total number of photons emitted in a burst. We also assume full labelling of monomers (100 \% labelling efficiency), so that the number of fluorophore present is equivalent to the oligomer size (in monomers). Under these conditions, we expect intuitively that the number of emitted photons increases with the number of fluorophores present. As for dual-labelled monomers, we consider photons binned into time-bins of length on the order of the dwell time in the confocal volume; we expect the great majority of time-bins to contain noise photons only.
+In the simplest fluorescence experiment from an oligomeric species, the fluorescently-labelled oligomers diffuse freely through the confocla detection volume.  When a molecule diffuses into the confocal volume, the laser excites the attached fluorophore(s) and photons are emitted (Fig.~\ref{fig:oligomers}. Typically, both donor and acceptor fluorophores would be used to allowing identification of oligomeric species based on the presence of coincident donor and acceptor bursts. However, we consider a simplified experiment in which monomers are labelled with one dye type only. This enables us to ignore the effect of FRET on the number of photons observed and to consider only the total number of photons emitted in a burst. We also assume full labelling of monomers (100 \% labelling efficiency), so that the number of fluorophores present is equivalent to the oligomer size (in monomers). Under these conditions, we expect intuitively that the number of emitted photons increases with the number of fluorophores present. As for dual-labelled monomers, we consider photons binned into time-bins of length on the order of the dwell time in the confocal volume; we expect the great majority of time-bins to contain noise photons only.
+
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/multimer_emission.pdf}
+      \caption{Schematic showing the problem of determining oligomer size from the number of observed photons. A) If we observe an average of 10 photons when a monomer diffuses through the confocal volume, how many more should we expect if a tetramer takes the same pathway through the confocal volume? B) Possible relationships between the number of fluorophores and the average number of photons observed. If there is a linear relationship (blue line) then we expect a tetramer to emit an average of 40 photons; if the relationship is not linear, we may expect fewer photons (red and green lines).}
+      \label{fig:oligomers}
+   \end{center}
+\end{figure}
 
 We model this simple experiment as a sequence of measurements ($f_D$) of the number of photons observed in the fluorescence emission channel. Each time-bin is treated as an independent and identically distributed sample from a set of random variables describing the dataset. Each data point ($f_D$) in the data stream is the sum of noise photons and, where an oligomer is present, some photons from a fluorescent event. 
 
@@ -131,7 +140,7 @@ n_{\text{prot}} \sim \text{Poisson}(n_{\text{prot}}; \lambda_{\text{prot}}) = \f
 \label{eq:nprot}
 \end{equation}
 
-However, now we must also consider the oligomer size. In the absence of evidence to the contrary, we assume that fluorophores on an oligomer are non-interacting, such that each fluorophore is excited independently and does not experience quenching effects from the proximity of other fluorophores. We begin with a simple, purely poisson model of oligomer fluorescence. We model each fluorophores as displaying poisson emission with rate parameter $\lambda$. As the sum of poisson random variables is itself a poisson random variable~\cite{???}, an oligomer of size $n$ can be described as having an emission rate of $n \cdot \lambda$. Therefore, the dditional photons present in a time-bin contributued by an oligomer of size $n$ is given by:
+However, now we must also consider the oligomer size. In the absence of evidence to the contrary, we assume that fluorophores on an oligomer are non-interacting, such that each fluorophore is excited independently and does not experience quenching effects from the proximity of other fluorophores. We begin with a simple, purely poisson model of oligomer fluorescence. We model each fluorophores as displaying poisson emission with rate parameter $\lambda$. As the sum of poisson random variables is itself a poisson random variable~\cite{Lehmann1986}, an oligomer of size $n$ can be described as having an emission rate of $n \cdot \lambda$. Therefore, the dditional photons present in a time-bin contributued by an oligomer of size $n$ is given by:
 
 \begin{equation}
 c_D \sim \text{Poisson}(c_D; n \cdot \lambda)
@@ -146,7 +155,7 @@ The previous section described a simple poisson model of photon emission from la
 
 The system modelled is equivalent to that described in the previous section. The noise distribution and probability of confocal volume occupancy are unchanged. However, now we choose to include over-dipsersion in our model of fluorophore excitation, by drawing event specific emission parameters from a gamma distribution, moving from a single-step model of emission to a two stage emission process. 
 
-Firstly, given that a fluorescently labelled molecule is present in the confocal volume, we determine a rate of donor emission, $\lambda$for monomers in that specific molecule as a random sample from a gamma distribution with shape parameter $k_D$ and mean $\lambda_B$ (Eq.~\ref{eq:gamma_size}). This captures the variation in the number of photons emitted by a molecule as a result of the diffusion path taken through the confocal volume and the effect of individual fluorophores photobleaching partway through an observation.
+Firstly, given that a fluorescently labelled molecule is present in the confocal volume, we determine a rate of donor emission, $\lambda$ for monomers in that specific molecule as a random sample from a gamma distribution with shape parameter $k_D$ and mean $\lambda_B$ (Eq.~\ref{eq:gamma_size}). This captures the variation in the number of photons emitted by a molecule as a result of the diffusion path taken through the confocal volume and the effect of individual fluorophores photobleaching partway through an observation.
 
 \begin{equation}
 \lambda \sim \text{Gamma}(\lambda; k_D, \theta) =  \frac{1}{\Gamma(k_D) \theta^{k_D}} \lambda^{(k_D - 1)} e^{-\frac{\lambda}{\theta}} \quad\text{ for } \theta = \lambda_B / k_D
@@ -165,8 +174,8 @@ and the total number of observed photons, $f_D$ is then the sum $n_D + c_D$. Not
 The rest of this chapter describes the comparison of simulated datasets generated using these two models with real data from model oligomers of known size and from true protein aggregation experiments with unknown oligomer size distributions. In the next section, we summarize the experimental techniques used to collect single molecule fluorescence data from aggregation timecourses; the preparation of labelled Holliday Junctions as model oligomers; and the modification of the confocal excitation set-up to modify the confocal excitation field. 
 
 \section{Experimental Methods}
-\subsection{Labelling of Protein Monomers}
-\subsection{Protein Aggregation Experiments}
+%\subsection{Labelling of Protein Monomers}
+%\subsection{Protein Aggregation Experiments}
 \subsection{Preparation of DNA Holliday Junctions}
 \paragraph{Holliday Junction Preparation}
 \emph{Holliday Junction purification was carried out by Vladimiras Oleinikovas under the supervision of the author.}
@@ -174,6 +183,7 @@ Four oligonucleotides labeled at the 5-prime end by the fluorescent dye Alexa Fl
 
 \begin{center}
 \begin{table}[!ht]
+\caption{DNA sequences of the four arms of the Holliday Junction. Each sequence is shown in the 3' - 5' direction/ {\bf 5} is a maleimide linkage to Alexa Fluor 488, present in the fluorescently labelled DNA strands, but absent in their unlabelled partners.}
 %\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
 \begin{tabular}{|l|l|}
 \hline
@@ -183,7 +193,6 @@ H & CCGTAGCAGCGAGAGCGGTGGG{\bf 5} \\
 R & CCCACCGCTCTTCTCAACTGGG{\bf 5} \\
 X & CCCAGTTGAGAGCTTGCTAGGG{\bf 5} \\ \hline
 \end{tabular}
-\caption{DNA sequences of the four arms of the Holliday Junction. Each sequence is shown in the 3' - 5' direction/ {\bf 5} is a maleimide linkage to Alexa Fluor 488, present in the fluorescently labelled DNA strands, but absent in their unlabelled partners.}
 \label{tab:table1_DNAsequences}
 %\end{adjustwidth}
 \end{table}
@@ -192,24 +201,24 @@ X & CCCAGTTGAGAGCTTGCTAGGG{\bf 5} \\ \hline
 
 \paragraph{Holliday Junction Purification}
 \emph{Holliday Junction purification was carried out by Vladimiras Oleinikovas under the supervision of the author.}
-After annealing, the Holliday Junctionss were purified from the reaction mixture using gel electrophoresis on an 8\% TBE acrylamide gel in TBE buffer (Novex, Life Technologies Ltd.). The complete Holliday Junction was identified by visualising the bands using low intensity (PMT 300V) excitation at 526 nm (XXX CHECK THIS WIH VLADAS) and comparison with a 10 bp DNA ladder. The band corresponding to the complete Holliday Junction was cut from the gel and eluted into 200 $\mu$L of Tris buffer by passive difusion overnight. Holliday Junctions were then stored in the dark at 4$\circ$C until required.
+After annealing, the Holliday Junctionss were purified from the reaction mixture using gel electrophoresis on an 8\% TBE acrylamide gel in TBE buffer (Novex, Life Technologies Ltd.). The complete Holliday Junction was identified by visualising the bands using low intensity (PMT 300V) excitation at 526 nm and comparison with a 10 bp DNA ladder. The band corresponding to the complete Holliday Junction was cut from the gel and eluted into 200 $\mu$L of Tris buffer by passive difusion overnight. Holliday Junctions were then stored in the dark at 4$\circ$C until required.
 
 \subsection{Simple FRET Measurements of DNA Holliday Junctions}
 Labelled Holliday Junctions were diluted to a concentration of 50 pM in TEN buffer (10 mM Tris, 1mM EDTA, 100 mM Nacl), pH 8.0, containing 0.01 \% Tween-20. FRET data were collected for 15 minutes using continuous excitation at 488 nm at a power of 80 mW. Collected photons were binned online in intervals of 1 ms and stored in files of 10000 bins. 
 
-\subsection{Flattening the Confocal Volume Using Acousto-Optic Deflection: A Modified Single Molecule Fluorescence Microscope}
+%\subsection{Flattening the Confocal Volume Using Acousto-Optic Deflection: A Modified Single Molecule Fluorescence Microscope}
 The microscope used for experiments into the effet of unequal excitation was similar to that described in previous chapters. However, a number of modifications were used to allow alteration of the detection volume. Firslty, a voltage controlled oscillator (DRFA10Y-B-0, PhotonLines) was coupled via an RF amplifier (AMPA-B-30, PhotonLines) to an acousto-optic modulator (MT80-A1-VIS, AA Optolectronincs). The modulator was placed in the beam path of the 488 nm laser () and a triangular wave, provided using a signal generator (), was used to deflect the beam in the transverse direction at a speed of 100 kHz. Modifying the amplitude of the wave allowed the degree of deflection to be precisely controlled. This enabled us to quantify the effect of unequal excitation power on the photon emission distribution. The AO modulator deflects only the first harmonic of the 488 nm laser, which is spatially separated from the zeroth and other order beams. Consequently, we direct only this beam into the back port of an inverted microscope (Nikon Eclipse Ti-U). This harmonic corresponds to approximately 10 \% of the total power output of the laser.
 
-\subsection{Preparation of Microfluidic Channels}
-\paragraph{Preparation of the Master Plate}
-\emph{Master Plate preparation was carried out by Mathew Horrocks. His master plates were used with permission.}
-Master plates for the microfluidic devices were prepared by spin-coating SU-8 2025 photoresist (MicroChem) onto silicon wafer (diameter: 76.2 mm, Compart Technology Ltd.) at 800 rpm for 5 s followed by ramping to 3000 rpm at an acceleration of 300 rpm$s^{-1}$ for 60 s to give a final film thickness of 25 $\mu$m. After spinning, the wafer was prebaked (1 min at 65 $^{\circ}$C, then 3 min at 95 $^{\circ}$C and finally 1 min at 65 $^{\circ}$C), and then exposed to UV light through the mask on a mask aligner (MJB4, SUSS Microtec). After postbaking and development,the master was hard-baked for 60 s at 170 $^{\circ}$C.
+%\subsection{Preparation of Microfluidic Channels}
+%\paragraph{Preparation of the Master Plate}
+%\emph{Master Plate preparation was carried out by Mathew Horrocks. His master plates were used with permission.}
+%Master plates for the microfluidic devices were prepared by spin-coating SU-8 2025 photoresist (MicroChem) onto silicon wafer (diameter: 76.2 mm, Compart Technology Ltd.) at 800 rpm for 5 s followed by ramping to 3000 rpm at an acceleration of 300 rpm$s^{-1}$ for 60 s to give a final film thickness of 25 $\mu$m. After spinning, the wafer was prebaked (1 min at 65 $^{\circ}$C, then 3 min at 95 $^{\circ}$C and finally 1 min at 65 $^{\circ}$C), and then exposed to UV light through the mask on a mask aligner (MJB4, SUSS Microtec). After postbaking and development,the master was hard-baked for 60 s at 170 $^{\circ}$C.
 
-\paragraph{Preparation of Individual Devices}
-A 10:1 (w/w) ratio of PDMS and curing agent (Sylgard 184, Dow Corning) was prepared and poured over the master, degassed and then baked overnight at 75 $^{\circ}$C. The devices were cut and peeled off the master. Individual devices were prepared by slicing the PDMS into sections containing approximately six microfluidic channels, punching inlet and outlet holes for each channel using a biopsy punch, and then plasma bonding the PDMS onto plasma-cleaned microscope slides by exposure to oxygen plasma for 7 s (DienerFemto plasma asher), sealing to a glass microscope slide and baking overnight at 75 $^{\circ}$C. The resultant microfluidic channels had a width of approximately 1o0 $\mu$m and a height of approximately 25 $\mu$m.
+%\paragraph{Preparation of Individual Devices}
+%A 10:1 (w/w) ratio of PDMS and curing agent (Sylgard 184, Dow Corning) was prepared and poured over the master, degassed and then baked overnight at 75 $^{\circ}$C. The devices were cut and peeled off the master. Individual devices were prepared by slicing the PDMS into sections containing approximately six microfluidic channels, punching inlet and outlet holes for each channel using a biopsy punch, and then plasma bonding the PDMS onto plasma-cleaned microscope slides by exposure to oxygen plasma for 7 s (DienerFemto plasma asher), sealing to a glass microscope slide and baking overnight at 75 $^{\circ}$C. The resultant microfluidic channels had a width of approximately 1o0 $\mu$m and a height of approximately 25 $\mu$m.
 
-\subsection{smFRET Measurements to Determine the Effect of Unequal Excitation on Photon Emission}
-Labelled Holliday Junctions were diluted to a concentration of 50 pM in TEN buffer (10 mM Tris, 1mM EDTA, 100 mM Nacl), pH 8.0, containing 0.01 \% Tween-20. This solution was flowed at a speed of 5 mm s$^{-1}$ through the confocal excitation volume using a microfluidic channel. Flow rate and direction was controlled using a peristaltic pump (???) The size of the confocal volume was varied between a diffraction-limited spot and a XXX mm line by varying the amplitude (pk-pk) of the ennervating triangular wave between 0 V and 5 V. Data were collected for XX minutes, using a total laser power of YY mW, corresponding to an excitation laser power (first harmonic) of 5-XXX? mW. Detected photons were binned online into time-bins of YYY $\mu$s and stored in files of 10000 bins.   
+%\subsection{smFRET Measurements to Determine the Effect of Unequal Excitation on Photon Emission}
+%Labelled Holliday Junctions were diluted to a concentration of 50 pM in TEN buffer (10 mM Tris, 1mM EDTA, 100 mM Nacl), pH 8.0, containing 0.01 \% Tween-20. This solution was flowed at a speed of 5 mm s$^{-1}$ through the confocal excitation volume using a microfluidic channel. Flow rate and direction was controlled using a peristaltic pump (???) The size of the confocal volume was varied between a diffraction-limited spot and a XXX mm line by varying the amplitude (pk-pk) of the ennervating triangular wave between 0 V and 5 V. Data were collected for XX minutes, using a total laser power of YY mW, corresponding to an excitation laser power (first harmonic) of 5-XXX? mW. Detected photons were binned online into time-bins of YYY $\mu$s and stored in files of 10000 bins.   
 
 \subsection{Counting Photobleaching Steps Using TIRF Imaging}
 
@@ -220,7 +229,7 @@ The major results of this chapter are now presented. Firstly, we show that the r
 % this needs to be said more formally
 To open the results section of this chapter, we present a justification for taking a model-based approach to studying aggregation. It is clear that there are many unknowns and many simplifications in our models. Here, we present some simple simulations to demonstrate the importance of understanding the processes underlying fluorescent emission. Although it is true that our models contain simplifications, it is also true that any method of analsing experimental data contains simplifications and assumptions about the structure of those data. In the case of oligomer sizing experiments, these assumptions are often not made explicit, but are based on fluorophores demontsrating poissonian emission behaviour. Here, we compare the performance of this data analysis methodology, using datasets simulated using both the poisson model of emission behaviour, and the gamma-poisson mixture model. We show that the assumptions made in the data analysis workflow do not hold when the photon emission distribution is overdispersed, leading to calculated oligomer size distributions that are both quantitatively and qualitatively incorrect. 
 
-The largest assumption made in prior work to determine oligomer sizes using single molecule fluorescence is that there is a linear relationship between oligomer size and photon emission. In prior work~\cite{cremades2012}, oligomers were identified by using the AND criterion on time-binnned TCCD data (see introductionXXX and chapterXXX for details) to select time-bins that exceeded some thresholds $T_D$ and $T_A$ in the donor and acceptor channels respectively. Following event selection, the approximate size of each identified oligomer was calculated using the relationship:
+The largest assumption made in prior work to determine oligomer sizes using single molecule fluorescence is that there is a linear relationship between oligomer size and photon emission. In prior work~\cite{cremades2012}, oligomers were identified by using the AND criterion on time-binnned TCCD data (see Section~\ref{subect:aggregation} for details) to select time-bins that exceeded some thresholds $T_D$ and $T_A$ in the donor and acceptor channels respectively. Following event selection, the approximate size of each identified oligomer was calculated using the relationship:
 
 \begin{equation}
 \text{size} = \frac{2\cdot I_D + \gamma^{-1} I_A}{I_{\text{monomer}}}
@@ -229,7 +238,14 @@ The largest assumption made in prior work to determine oligomer sizes using sing
 
 where $I_D$ and $I_A$ are the intensities (number of photons) in the donor and acceptor channels respectively, $\gamma$ is the instrumental gamma factor and $I_{\text{monomer}}$ is the mean brighness of monomer events (selected by identifying events for which $I_D \geq T_D$ but $I_A < T_A$). This means that the calculated oligomer size is simply the oserved event brightness divided by the mean event brightness for monomer events.
 
-Fig.~\ref{fig:poisson_size_photons} shows the expected emission distributions from small oligomers of various sizes, when emission behaviour is purely poisson. This simple simulation ignores contributions from noise and assumes a mean monomer emission of 10 photons. The code used to generate these data can be found in Appendix XXX. As seen from this figure, when the emission behaviour is purely poisson, there are clear, distinct peaks in photon emission frequency for each oligomer size. As a consequence, using Eq.~\ref{eq:size_linear} to estimate the oligomer size gives approximately accurate results. We simulated oligomer emission events, sampling a uniform distribution of sizes with a monomer monomer brightness of $I_{\text{monomer}} = 10$. Event selection was performed using $T_D = 10$ and $T_A = 10$ and the remaining events wer sized, according to Eq.~\ref{eq:size_linear}. The results, shown in Fig.~\ref{fig:poisson_size_photons_uniform} show that, apart from at the very ends of the size distribution, the calculated size distribution (blue curve) is an excellent approximation of the true size distribution (grey histogram).        
+Fig.~\ref{fig:poisson_size_photons} shows the expected emission distributions from small oligomers of various sizes, when emission behaviour is purely poisson. This simple simulation ignores contributions from noise and assumes a mean monomer emission of 10 photons. The code used to generate these data can be found in Appendix XXX. As seen from this figure, when the emission behaviour is purely poisson, there are clear, distinct peaks in photon emission frequency for each oligomer size. As a consequence, using Eq.~\ref{eq:size_linear} to estimate the oligomer size gives approximately accurate results. We simulated oligomer emission events, sampling a uniform distribution of sizes with a monomer monomer brightness of $I_{\text{monomer}} = 10$. As we consider only single-colour excitation and emission, event selection was performed using $T_D = 10$ only and the identified fluorescent events were sized according to a simplified version of Eq.~\ref{eq:size_linear}:
+
+\begin{equation}
+\text{size} = \frac{I_D}{I_{\text{monomer}}}
+\label{eq:size_linear_simple}
+\end{equation}
+
+The results, shown in Fig.~\ref{fig:poisson_size_photons_uniform} show that, apart from at the very ends of the size distribution, the calculated size distribution (blue curve) is an excellent approximation of the true size distribution (grey histogram).        
 
 \begin{figure}
    \begin{center}
@@ -308,13 +324,16 @@ Secondly, as the gamma-poisson mixture model appears to better approximate the e
    \end{center}
 \end{figure}
 
+\clearpage
+
 \subsection{Inferring Event Brightness Using the Gamma-Poisson Model}
 The previous section described comparing experimental data from model oligomers of known sizes with simulated datasets. We showed that poisson emission is an extremely poor model of the behaviour of fluorescently labelled oligomers in a single molecule fluorescence experiment. In this section, we use our Metropolis-Hasting sampler, described in Chapter~\autoref{chap:inference} to infer the parameters of our gamma-poisson mixture model, conditioned on single molecule datasets. We first present parameter inference on datasets simulated using this model, demonstrating effective performance. We then present the results of parameter inference conditioned on experimental datasets, showing that our lack of knowledge of key model parameters means that the model is underspecified, making accurate parameter inference difficult.
 
-We simulated four datasets, consisting of oligomers of known size (from monomers to tetramers) using the parameters shown in Table~\ref{tab:oligomer_params}. Then, we used the Metropolis Hastings sampler to infer the mean oligomer and noise emission rates, as well as the oligomer concentration. The initial values used are shown in Table~\ref{tab:initial_values}; the inferred values are shown in Fig.~\ref{tab:inferred_values}. Two example fits are shown inf Fig.~\ref{fig:hist_fit}
+We simulated four datasets, consisting of oligomers of known size (from monomers to tetramers) using the parameters shown in Table~\ref{tab:oligomer_params}. Then, we used the Metropolis Hastings sampler to infer the mean oligomer and noise emission rates, as well as the oligomer concentration. The initial values used are shown in Table~\ref{tab:initial_values}; the inferred values are shown in Fig.~\ref{fig:gamma_poisson_oligomers}. Two example fits are shown in Fig.~\ref{fig:hist_fit_trimer}
 
 \begin{center}
 \begin{table}[!ht]
+\caption{Parameters used in simulating emission datasets for oligomers of known size.}
 %\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
 \begin{tabular}{|l|l|}
 \hline
@@ -329,7 +348,6 @@ $R_{\text{blue}}$ & 1.0\\
 $\gamma_{\text{ins}}$ & 1.0\\
 $n_{\text{samples}}$ & 10000\\ \hline
 \end{tabular}
-\caption{Parameters used in simulating emission datasets for oligomers of known size.}
 \label{tab:oligomer_params}
 %\end{adjustwidth}
 \end{table}
@@ -337,6 +355,7 @@ $n_{\text{samples}}$ & 10000\\ \hline
 
 \begin{center}
 \begin{table}[!ht]
+\caption{Initial values used in inferring  oligomers of known size.}
 %\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
 \begin{tabular}{|l|l|}
 \hline
@@ -346,7 +365,6 @@ $\lambda_{\text{NB}}$ & 1.0\\
 $\lambda_{\text{DB}}$ & 20.0\\
 \hline
 \end{tabular}
-\caption{Initial values used in inferring  oligomers of known size.}
 \label{tab:initial_values}
 %\end{adjustwidth}
 \end{table}
@@ -364,15 +382,15 @@ $\lambda_{\text{DB}}$ & 20.0\\
    \begin{center}
       \includegraphics*[clip=true, width=6in]{sizing/oligomer_marginals.pdf}
       \caption{Histograms of photon emission distributions for simulated a) monomers and b) trimers. The overlaid blue circles show the  number of photons predicted by the gamma-poisson mixture model, using parameters inferred from the dataset using the Metropolis sampler.}
-      \label{fig:hist_fit}
+      \label{fig:hist_fit_trimer}
    \end{center}
 \end{figure}
 
-The results are mixed. Although inference performs well for small oligomers (monomers and dimers), when the mean event brightness is ver high, the true value of $\lambda_{\text{DB}}$ is underestimated. Despite the considerable error, this still produces expected emission frequencies that are a good approximation of the true distribution (compare the histogram and the overlaid blue circles in Fig.~\ref{fig:hist_fit} B). The likely cause of this estimation error is the overdispersal. In these simulations, the value of $R_{\text{blue}}$, the overdispersal parameter was 1.0. This produces an extremely broad distribution: in particular, for high mean values $\lambda_{\text{DB}}$, the distribution has a very long tail and the modal observed value is far from the mean of the distribution. As a consequence of this, the possible range of parameters values that provide a good fit to the observed data is very wide and the stationary distribution is broad and flat, allowing many values of $\lambda_{\text{DB}}$ to provide a good approximation of the dataset.
+The results are mixed. Although inference performs well for small oligomers (monomers and dimers), when the mean event brightness is very high (pure trimer and pure tetramer simulations), the true value of $\lambda_{\text{DB}}$ is underestimated. Despite the considerable error, this still produces expected emission frequencies that are a good approximation of the true distribution (compare the histogram and the overlaid blue circles in Fig.~\ref{fig:hist_fit_trimer} B). The likely cause of this estimation error is the overdispersal. In these simulations, the value of $R_{\text{blue}}$, the overdispersal parameter was 1.0. This produces an extremely broad distribution: in particular, for high mean values $\lambda_{\text{DB}}$, the distribution has a very long tail and the modal observed value is far from the mean of the distribution. As a consequence of this, the possible range of parameters values that provide a good fit to the observed data is very wide and the stationary distribution is broad and flat, allowing many values of $\lambda_{\text{DB}}$ to provide a good approximation of the dataset.
 
-It should be noted that this poor performance is not caused by the sampler not converging. As can be seen from the tight error bars in Fig.~\ref{fig:gamma_poisson_oligomers}, the accepted samples are drawn from a small range of values. Furthermore, the initial conditions do not affect the final value reached by the sampler: although a longer burn-in phase is required when the sampler is initialised using values far from the true parameter values, sampling converges to the same (incorrect) values~\ref{fig:convergence}.
+It should be noted that this poor performance is not caused by the sampler not converging. As can be seen from the tight error bars in Fig.~\ref{fig:gamma_poisson_oligomers}, the accepted samples are drawn from a small range of values. Furthermore, the initial conditions do not affect the final value reached by the sampler: although a longer burn-in phase is required when the sampler is initialised using values far from the true parameter values, sampling converges to the same (incorrect) values (Fig.~\ref{fig:convergence}).
 
-This performance is disappointing. The datasets we have simulated are a greatly simplified approximation of a true single molecule fluorescence dataset from a protein aggregation experiment: they contain ``oligomers" of only a single size, many sources of error, such as cross-talk, are entirely neglected and all model parameters are known. Despite knowing that the model for which we are inferring parameters is precisely the model that generated our datasets, we are unable to recover the correct parameter values. This suggests that our model-based approach will struggle similarly to extract meaningful parameters from experimental datasets. Our attempt to do so is summarised in the next section.
+This performance is disappointing. The datasets we have simulated are a greatly simplified approximation of a true single molecule fluorescence dataset from a protein aggregation experiment: they contain ``oligomers" of only a single size; many sources of error, such as cross-talk, are entirely neglected and all model parameters are known. Despite knowing that the model for which we are inferring parameters is precisely the model that generated our datasets, we are unable to recover the correct parameter values. This suggests that our model-based approach will struggle similarly to extract meaningful parameters from experimental datasets. Our attempt to do so is summarised in the next section.
 
 \begin{figure}
    \begin{center}
@@ -395,7 +413,7 @@ Fig.~\ref{fig:HJ_sim_overlay} A and B show emission distribution histograms for 
    \end{center}
 \end{figure}
 
-The most likely source of this discrepancy is incorrect parameterisation of the gamma-poisson mixture distribution. This occurs because the true values of several parameters of this distribution are unknown. In particular, in our simulations, we assume that the overdispersal parameter, $R_{\text{blue}}$, is 1.0. However, for expermimental data, this parameter is unknown. By comparison of datasets simulated using different values of $R_{\text{blue}}$ with experimental data, it is possible to estimate what the experimental value of $R_{\text{blue}}$ is (Fig.~\ref{fig:R_blue}). Unfortunately, however, the parameter inference is extremely sensitive to the value of $R_{\text{blue}}$ (see Fig.~\ref{fig:vary_Rblue} and Table~\ref{tab:vary_Rblue}), meaning that without a good estimate of this value, it is very difficult to infer physically meaningful values.
+The most likely source of this discrepancy is incorrect parameterisation of the gamma-poisson mixture distribution. This occurs because the true values of several parameters of this distribution are unknown. In particular, in our simulations, we assume that the overdispersal parameter, $R_{\text{blue}}$, is 1.0. However, for expermimental data, this parameter is unknown. By comparison of datasets simulated using different values of $R_{\text{blue}}$ with experimental data, it is possible to estimate the experimental value of $R_{\text{blue}}$ (Fig.~\ref{fig:R_blue}). Unfortunately, however, the parameter inference is extremely sensitive to the value of $R_{\text{blue}}$ (see Fig.~\ref{fig:vary_Rblue} and Table~\ref{tab:R_blue}), meaning that without a good estimate of this value, it is very difficult to infer physically meaningful values.
 
 To overcome this issue, we attempted to co-infer $R_{\text{blue}}$ along with other model parameters, by allowing it to become a variable rather than a constant in our model. Unfortunately, this was also unsuccessful, as the model converges to extremely low values of $R_{\text{blue}}$, for which the inferred oligomer concentration is concommitantly unphysically high and the mean event brightness very low (Table~\ref{tab:R_blue}). 
 
@@ -418,6 +436,7 @@ To overcome this issue, we attempted to co-infer $R_{\text{blue}}$ along with ot
 
 \begin{center}
 \begin{table}
+\caption{Inferred parameter values conditioned on a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text{blue}}$. At low values of $R_{\text{blue}}$, overfiting occurs and the inferred parameters are unphysical. When we try to infer the value of $R_{\text{blue}}$ (bottom row), the data is also overfitted.}
 %\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
 \begin{tabular}{|l|l|l|l|}
 \hline
@@ -428,7 +447,6 @@ To overcome this issue, we attempted to co-infer $R_{\text{blue}}$ along with ot
 2.0 & 0.48	& 0.035	& 15.193 \\
 inferred = 0.029 & 0.44 & 1.006 & 0.591\\ \hline
 \end{tabular}
-\caption{Inferred parameter values conditioned on a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text{blue}}$. At low values of $R_{\text{blue}}$, overfiting occurs and the inferred parameters are unphysical. When we try to infer the value of $R_{\text{blue}}$ (bottom row), the data is also overfitted.}
 \label{tab:R_blue}
 %\end{adjustwidth}
 \end{table}

@@ -2,27 +2,32 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 Case mismatch error between cite keys Compeau2011 and compeau2011
----line 571 of file thesis.aux
+---line 568 of file thesis.aux
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys Compeau2011 and compeau2011
----line 576 of file thesis.aux
+---line 573 of file thesis.aux
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys Compeau2011 and compeau2011
----line 577 of file thesis.aux
+---line 574 of file thesis.aux
  : \citation{Compeau2011
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys zerbino2008 and Zerbino2008
----line 585 of file thesis.aux
+---line 582 of file thesis.aux
  : \citation{zerbino2008
  :                      }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 618 of file thesis.aux
+---line 615 of file thesis.aux
+ : \citation{gurevich2013
+ :                       }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys gurevich2013 and Gurevich2013
+---line 622 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
@@ -32,65 +37,59 @@ Case mismatch error between cite keys gurevich2013 and Gurevich2013
  :                       }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 628 of file thesis.aux
- : \citation{gurevich2013
- :                       }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 633 of file thesis.aux
+---line 630 of file thesis.aux
  : \citation{gurevich2013
  :                       }
 I'm skipping whatever remains of this command
 The style file: unsrt.bst
 Database file #1: thesis.bib
-Repeated entry---line 2377 of file thesis.bib
+Repeated entry---line 2386 of file thesis.bib
  : @article{Zerbino2008
  :                     ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "???"
 Warning--I didn't find a database entry for "blinking"
 Warning--empty author and editor in goldbook2006
 Warning--empty journal in Coil2014
 Warning--empty journal in li2013
-You've used 176 entries,
+You've used 177 entries,
             1791 wiz_defined-function locations,
-            1455 strings with 40900 characters,
-and the built_in function-call counts, 49777 in all, are:
-= -- 3970
-> -- 3575
+            1461 strings with 40990 characters,
+and the built_in function-call counts, 49927 in all, are:
+= -- 3983
+> -- 3579
 < -- 0
-+ -- 1261
-- -- 1085
-* -- 4303
-:= -- 8536
-add.period$ -- 530
-call.type$ -- 176
++ -- 1263
+- -- 1086
+* -- 4307
+:= -- 8560
+add.period$ -- 533
+call.type$ -- 177
 change.case$ -- 160
 chr.to.int$ -- 0
-cite$ -- 179
-duplicate$ -- 1580
-empty$ -- 4048
-format.name$ -- 1085
-if$ -- 10257
+cite$ -- 180
+duplicate$ -- 1590
+empty$ -- 4067
+format.name$ -- 1086
+if$ -- 10293
 int.to.chr$ -- 0
-int.to.str$ -- 176
-missing$ -- 185
-newline$ -- 885
-num.names$ -- 175
-pop$ -- 296
+int.to.str$ -- 177
+missing$ -- 187
+newline$ -- 890
+num.names$ -- 176
+pop$ -- 302
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 538
+skip$ -- 540
 stack$ -- 0
 substring$ -- 4038
-swap$ -- 174
+swap$ -- 175
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 460
-width$ -- 179
-write$ -- 1922
+while$ -- 461
+width$ -- 180
+write$ -- 1933
 (There were 9 error messages)
