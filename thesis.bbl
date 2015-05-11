@@ -906,6 +906,19 @@ M.~L. Metzker.
 \newblock Emerging technologies in dna sequencing.
 \newblock {\em Genome Res.}, 15:1767--1776, 2005.
 
+\bibitem{Smith1985}
+L.~M. Smith, S.~Fung, M.~W. Hunkapiller, T.~J. Hunkapiller, and L.~E. Hood.
+\newblock The synthesis of oligonucleotides containing an aliphatic amino group
+  at the 5' terminus: synthesis of fluorescent dna primers for use in dna
+  sequence analysis.
+\newblock {\em Nucleic Acids Res.}, 13:2399--2412, 1985.
+
+\bibitem{Smith1986}
+L.~M. Smith, J.~Z. Sanders, R.~J. Kaiser, P.~Hughes, C.~Dodd, C.~R. Connell,
+  C.~Heiner, S.~B. Kent, and L.~E. Hood.
+\newblock Fluorescence detection in automated dna sequence analysis.
+\newblock {\em Nature}, 321:674--679, 1986.
+
 \bibitem{illumina2010}
 Illumina.
 \newblock Illumina sequencing technology.
@@ -920,6 +933,12 @@ C.~Adessi, G.~Matton, G.~Ayala, G.~Turcatti, J.-J. Mermod, P.~Mayer, and
 \newblock Solid phase dna amplification: characterisation of primer attachment
   and amplification mechanisms.
 \newblock {\em Nucl. Acids Res.}, 28:e87, 2000.
+
+\bibitem{Chen2013}
+F.~Chen, M.~Dong, M.~Ge, L.~Zhu, L.~Ren, G.~Liu, and R.~Mu.
+\newblock The history and advances of reversible terminators used in new
+  generations of sequencing technology.
+\newblock {\em Genomics Proteomics Bioinformatics}, 11:34--40, 2013.
 
 \bibitem{eid2008}
 J.~Eid, A.~Fehr, J.~Gray, K.~Luong, J.~Lyle, G.~Otto, P.~Peluso, D.~Rank,
@@ -978,7 +997,7 @@ H.~Li and N.~Homer.
   sequencing.
 \newblock {\em Briefings in Bioinformatics}, 11(5):473--483, 2010.
 
-\bibitem{compeau2011}
+\bibitem{Compeau2011}
 P.~E.~C. Compeau, P.~A. Pevzner, and G.~Tesler.
 \newblock How to apply de {Bruijn} graphs to genome assembly.
 \newblock {\em Nature Biotechnol.}, 29:987--991, 2011.
@@ -1019,6 +1038,12 @@ A.~Edwards, H.~Voss, P.~Rice, A.~Civitello, J.~Stegemann, C.~Schwager,
   J.~Zimmermann, H.~Erfle, C.~T. Caskey, and W.~Ansorge.
 \newblock Automated dna sequencing of the human hprt locus.
 \newblock {\em Genomics}, 6(4):593--608, 1990.
+
+\bibitem{medvedev2011}
+P.~Medvedev, S.~Pham, M.~Chaisson, G.~Tesler, and P.~Pevzner.
+\newblock Paired de {Bruijn} graphs: A novel approach for incorporating mate
+  pair information into genome assemblers.
+\newblock {\em J Comput Biol.}, 18(11):1625--1634, 2011.
 
 \bibitem{Miller2010}
 J.~R. Miller, S.~Koren, and G.~Sutton.
@@ -1089,6 +1114,12 @@ S.~C. Clark, R.~Egan, P.~I. Frazier, and Z.~Wang.
 B.~Walker.
 \newblock Pilon.
 \newblock \url{https://github.com/broadinstitute/pilon/releases}, 2014.
+
+\bibitem{Leys2013}
+C.~Leys, C.~Ley, O.~Klein, P.~Bernard, and L.~Licata.
+\newblock Detecting outliers: Do not use standard deviation around the mean,
+  use absolute deviation around the median.
+\newblock {\em J. Exp. Soc. Psychol.}, 49(4):764--766, 2013.
 
 \bibitem{cormen2009}
 T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein.

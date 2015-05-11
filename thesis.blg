@@ -1,95 +1,51 @@
 This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
-Case mismatch error between cite keys Compeau2011 and compeau2011
----line 568 of file thesis.aux
- : \citation{Compeau2011
- :                      }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys Compeau2011 and compeau2011
----line 573 of file thesis.aux
- : \citation{Compeau2011
- :                      }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys Compeau2011 and compeau2011
----line 574 of file thesis.aux
- : \citation{Compeau2011
- :                      }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys zerbino2008 and Zerbino2008
----line 582 of file thesis.aux
- : \citation{zerbino2008
- :                      }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 615 of file thesis.aux
- : \citation{gurevich2013
- :                       }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 622 of file thesis.aux
- : \citation{gurevich2013
- :                       }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 625 of file thesis.aux
- : \citation{gurevich2013
- :                       }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys gurevich2013 and Gurevich2013
----line 630 of file thesis.aux
- : \citation{gurevich2013
- :                       }
-I'm skipping whatever remains of this command
 The style file: unsrt.bst
 Database file #1: thesis.bib
-Repeated entry---line 2386 of file thesis.bib
- : @article{Zerbino2008
- :                     ,
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "blinking"
 Warning--empty author and editor in goldbook2006
 Warning--empty journal in Coil2014
 Warning--empty journal in li2013
-You've used 177 entries,
+You've used 182 entries,
             1791 wiz_defined-function locations,
-            1461 strings with 40990 characters,
-and the built_in function-call counts, 49927 in all, are:
-= -- 3983
-> -- 3579
+            1492 strings with 42192 characters,
+and the built_in function-call counts, 51403 in all, are:
+= -- 4105
+> -- 3682
 < -- 0
-+ -- 1263
-- -- 1086
-* -- 4307
-:= -- 8560
-add.period$ -- 533
-call.type$ -- 177
-change.case$ -- 160
++ -- 1299
+- -- 1117
+* -- 4442
+:= -- 8810
+add.period$ -- 548
+call.type$ -- 182
+change.case$ -- 165
 chr.to.int$ -- 0
-cite$ -- 180
-duplicate$ -- 1590
-empty$ -- 4067
-format.name$ -- 1086
-if$ -- 10293
+cite$ -- 185
+duplicate$ -- 1635
+empty$ -- 4186
+format.name$ -- 1117
+if$ -- 10596
 int.to.chr$ -- 0
-int.to.str$ -- 177
-missing$ -- 187
-newline$ -- 890
-num.names$ -- 176
-pop$ -- 302
+int.to.str$ -- 182
+missing$ -- 192
+newline$ -- 915
+num.names$ -- 181
+pop$ -- 307
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 540
+skip$ -- 555
 stack$ -- 0
-substring$ -- 4038
-swap$ -- 175
+substring$ -- 4169
+swap$ -- 180
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 461
-width$ -- 180
-write$ -- 1933
-(There were 9 error messages)
+while$ -- 476
+width$ -- 185
+write$ -- 1988
+(There were 4 warnings)

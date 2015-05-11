@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  7 MAY 2015 14:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  11 MAY 2015 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -369,6 +369,9 @@ LaTeX Warning: Label `eq:size_linear' multiply defined.
 
 LaTeX Warning: Label `fig:gamma_poisson_oligomers' multiply defined.
 
+
+LaTeX Warning: Label `fig:de-bruijn' multiply defined.
+
 )
 \openout1 = `thesis.aux'.
 
@@ -519,14 +522,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 Chapter 1.
 [9
 
-] <introduction/jablonski.pdf, id=587, 777.65378pt x 544.10687pt>
+] <introduction/jablonski.pdf, id=632, 777.65378pt x 544.10687pt>
 File: introduction/jablonski.pdf Graphic file (type pdf)
 
 <use introduction/jablonski.pdf>
 Package pdftex.def Info: introduction/jablonski.pdf used on input line 17.
 (pdftex.def)             Requested size: 433.62pt x 303.40259pt.
 
-<introduction/QuantaRed-Spectra.jpg, id=591, 263.48438pt x 186.6975pt>
+<introduction/QuantaRed-Spectra.jpg, id=636, 263.48438pt x 186.6975pt>
 File: introduction/QuantaRed-Spectra.jpg Graphic file (type jpg)
 
 <use introduction/QuantaRed-Spectra.jpg>
@@ -535,60 +538,60 @@ Package pdftex.def Info: introduction/QuantaRed-Spectra.jpg used on input line
 (pdftex.def)             Requested size: 216.81pt x 153.63135pt.
  [10] [11 <./introduction/jablonski.pdf>] [12 <./introduction/QuantaRed-Spectra
 .jpg>] [13] [14] [15] [16]
-<introduction/epi.pdf, id=704, 404.70187pt x 572.1492pt>
+<introduction/epi.pdf, id=749, 404.70187pt x 572.1492pt>
 File: introduction/epi.pdf Graphic file (type pdf)
 
 <use introduction/epi.pdf>
-Package pdftex.def Info: introduction/epi.pdf used on input line 196.
+Package pdftex.def Info: introduction/epi.pdf used on input line 197.
 (pdftex.def)             Requested size: 144.54pt x 204.34972pt.
  [17 <./introduction/epi.pdf>]
-Overfull \hbox (20.86455pt too wide) in paragraph at lines 205--206
+Overfull \hbox (20.86455pt too wide) in paragraph at lines 206--207
  []\OT1/cmr/bx/n/12 Total In-ter-nal Flu-o-res-cence Mi-croscopy[] \OT1/cmr/m/n
 /12 To-tal In-ter-nal Flu-o-res-cence Mi-croscopy (TIRFM)
  []
 
-<introduction/tirf.pdf, id=739, 1275.74223pt x 607.27493pt>
+<introduction/tirf.pdf, id=784, 1275.74223pt x 607.27493pt>
 File: introduction/tirf.pdf Graphic file (type pdf)
 
 <use introduction/tirf.pdf>
-Package pdftex.def Info: introduction/tirf.pdf used on input line 209.
+Package pdftex.def Info: introduction/tirf.pdf used on input line 210.
 (pdftex.def)             Requested size: 433.62pt x 206.40587pt.
  [18 <./introduction/tirf.pdf>]
-<introduction/confocal.pdf, id=783, 416.0553pt x 554.0673pt>
+<introduction/confocal.pdf, id=829, 416.0553pt x 554.0673pt>
 File: introduction/confocal.pdf Graphic file (type pdf)
 
 <use introduction/confocal.pdf>
-Package pdftex.def Info: introduction/confocal.pdf used on input line 233.
+Package pdftex.def Info: introduction/confocal.pdf used on input line 234.
 (pdftex.def)             Requested size: 289.07999pt x 384.9869pt.
 
-Overfull \hbox (18.38675pt too wide) in paragraph at lines 240--241
+Overfull \hbox (18.38675pt too wide) in paragraph at lines 241--242
  []\OT1/cmr/bx/n/12 Fluorescence Cor-re-la-tion Spec-troscopy[] \OT1/cmr/m/n/12
  Flu-o-res-cence Cor-re-la-tion Spec-troscopy (FCS) [[]]
  []
 
 [19] [20 <./introduction/confocal.pdf>] [21]
-<introduction/dyes.pdf, id=847, 1075.61847pt x 595.023pt>
+<introduction/dyes.pdf, id=892, 1075.61847pt x 595.023pt>
 File: introduction/dyes.pdf Graphic file (type pdf)
 
 <use introduction/dyes.pdf>
-Package pdftex.def Info: introduction/dyes.pdf used on input line 269.
+Package pdftex.def Info: introduction/dyes.pdf used on input line 270.
 (pdftex.def)             Requested size: 361.34999pt x 199.89912pt.
  [22] [23 <./introduction/dyes.pdf>]
-<introduction/FRET_AND_zero.pdf, id=880, 552.73242pt x 217.3122pt>
+<introduction/FRET_AND_zero.pdf, id=925, 552.73242pt x 217.3122pt>
 File: introduction/FRET_AND_zero.pdf Graphic file (type pdf)
 
 <use introduction/FRET_AND_zero.pdf>
-Package pdftex.def Info: introduction/FRET_AND_zero.pdf used on input line 298.
+Package pdftex.def Info: introduction/FRET_AND_zero.pdf used on input line 299.
 
 (pdftex.def)             Requested size: 433.62pt x 170.48431pt.
  [24 <./introduction/FRET_AND_zero.pdf>]
 [25] [26] [27]
-Overfull \hbox (4.06836pt too wide) detected at line 432
+Overfull \hbox (4.06836pt too wide) detected at line 433
 [] []\OT1/cmr/m/n/12 ([]\OMS/cmsy/m/n/12 j[]\OT1/cmr/m/n/12 ) = [] = []
  []
 
 
-Overfull \hbox (25.92877pt too wide) in paragraph at lines 434--435
+Overfull \hbox (25.92877pt too wide) in paragraph at lines 435--436
 []\OT1/cmr/m/n/12 we see that it is pos-si-ble to use a for-ward, gen-er-a-tive
  model of an ob-served dataset, $[]([]\OMS/cmsy/m/n/12 j[]\OT1/cmr/m/n/12 )$,
  []
@@ -598,7 +601,7 @@ Overfull \hbox (25.92877pt too wide) in paragraph at lines 434--435
 Chapter 2.
 [35
 
-] <pyFRET/Fig1_schematic.pdf, id=1348, 411.46555pt x 283.10143pt>
+] <pyFRET/Fig1_schematic.pdf, id=1394, 411.46555pt x 283.10143pt>
 File: pyFRET/Fig1_schematic.pdf Graphic file (type pdf)
 
 <use pyFRET/Fig1_schematic.pdf>
@@ -617,14 +620,14 @@ Overfull \hbox (6.73691pt too wide) in paragraph at lines 82--83
 d, the dif-fus-ing flu-o-res-cent molecules
  []
 
-[40] [41] <pyFRET/workflow.pdf, id=1469, 1002.05176pt x 487.60593pt>
+[40] [41] <pyFRET/workflow.pdf, id=1515, 1002.05176pt x 487.60593pt>
 File: pyFRET/workflow.pdf Graphic file (type pdf)
 
 <use pyFRET/workflow.pdf>
 Package pdftex.def Info: pyFRET/workflow.pdf used on input line 108.
 (pdftex.def)             Requested size: 433.62pt x 211.0057pt.
 
-<pyFRET/6bp_example.pdf, id=1471, 583.03845pt x 512.69113pt>
+<pyFRET/6bp_example.pdf, id=1517, 583.03845pt x 512.69113pt>
 File: pyFRET/6bp_example.pdf Graphic file (type pdf)
 
 <use pyFRET/6bp_example.pdf>
@@ -652,63 +655,63 @@ Overfull \hbox (28.81392pt too wide) in paragraph at lines 282--294
 [][]
  []
 
-[49] [50] [51] <pyFRET/FRET_AND.pdf, id=2137, 824.79565pt x 420.42783pt>
+[49] [50] [51] <pyFRET/FRET_AND.pdf, id=2182, 824.79565pt x 420.42783pt>
 File: pyFRET/FRET_AND.pdf Graphic file (type pdf)
 
 <use pyFRET/FRET_AND.pdf>
 Package pdftex.def Info: pyFRET/FRET_AND.pdf used on input line 338.
 (pdftex.def)             Requested size: 433.62pt x 221.02943pt.
 
-<pyFRET/FRET_ALEX.pdf, id=2139, 845.04686pt x 597.50786pt>
+<pyFRET/FRET_ALEX.pdf, id=2184, 845.04686pt x 597.50786pt>
 File: pyFRET/FRET_ALEX.pdf Graphic file (type pdf)
 
 <use pyFRET/FRET_ALEX.pdf>
 Package pdftex.def Info: pyFRET/FRET_ALEX.pdf used on input line 346.
 (pdftex.def)             Requested size: 433.62pt x 306.60312pt.
 
-<pyFRET/burst_search.pdf, id=2143, 3031.9793pt x 1627.26169pt>
+<pyFRET/burst_search.pdf, id=2188, 3031.9793pt x 1627.26169pt>
 File: pyFRET/burst_search.pdf Graphic file (type pdf)
 
 <use pyFRET/burst_search.pdf>
 Package pdftex.def Info: pyFRET/burst_search.pdf used on input line 358.
 (pdftex.def)             Requested size: 433.62pt x 232.70659pt.
 
-<pyFRET/Bp_vs_E.pdf, id=2145, 1798.72pt x 478.00066pt>
+<pyFRET/Bp_vs_E.pdf, id=2190, 1798.72pt x 478.00066pt>
 File: pyFRET/Bp_vs_E.pdf Graphic file (type pdf)
 
 <use pyFRET/Bp_vs_E.pdf>
 Package pdftex.def Info: pyFRET/Bp_vs_E.pdf used on input line 367.
 (pdftex.def)             Requested size: 433.62pt x 115.23305pt.
  [52] [53 <./pyFRET/FRET_AND.pdf>] [54 <./pyFRET/FRET_ALEX.pdf>] <pyFRET/window
-_effect.pdf, id=3710, 1782.66pt x 933.07237pt>
+_effect.pdf, id=3755, 1782.66pt x 933.07237pt>
 File: pyFRET/window_effect.pdf Graphic file (type pdf)
 
 <use pyFRET/window_effect.pdf>
 Package pdftex.def Info: pyFRET/window_effect.pdf used on input line 403.
 (pdftex.def)             Requested size: 433.62pt x 226.9603pt.
  [55 <./pyFRET/burst_search.pdf> <./pyFRET/Bp_vs_E.pdf>] <pyFRET/heatmaps.pdf, 
-id=6151, 1223.03679pt x 924.74623pt>
+id=6196, 1223.03679pt x 924.74623pt>
 File: pyFRET/heatmaps.pdf Graphic file (type pdf)
 
 <use pyFRET/heatmaps.pdf>
 Package pdftex.def Info: pyFRET/heatmaps.pdf used on input line 413.
 (pdftex.def)             Requested size: 433.62pt x 327.85684pt.
  [56] [57 <./pyFRET/window_effect.pdf>] [58 <./pyFRET/heatmaps.pdf>] <pyFRET/be
-nchmarking.pdf, id=10470, 1180.41pt x 924.26917pt>
+nchmarking.pdf, id=10516, 1180.41pt x 924.26917pt>
 File: pyFRET/benchmarking.pdf Graphic file (type pdf)
 
 <use pyFRET/benchmarking.pdf>
 Package pdftex.def Info: pyFRET/benchmarking.pdf used on input line 428.
 (pdftex.def)             Requested size: 433.62pt x 339.52028pt.
 
-<pyFRET/ratios.pdf, id=10480, 1180.41pt x 936.30498pt>
+<pyFRET/ratios.pdf, id=10526, 1180.41pt x 936.30498pt>
 File: pyFRET/ratios.pdf Graphic file (type pdf)
  <use pyFRET/ratios.pdf>
 Package pdftex.def Info: pyFRET/ratios.pdf used on input line 440.
 (pdftex.def)             Requested size: 433.62pt x 343.94151pt.
 
 [59] [60 <./pyFRET/benchmarking.pdf>] [61 <./pyFRET/ratios.pdf>]
-<pyFRET/RASP_performance.pdf, id=12566, 578.16pt x 433.62pt>
+<pyFRET/RASP_performance.pdf, id=12612, 578.16pt x 433.62pt>
 File: pyFRET/RASP_performance.pdf Graphic file (type pdf)
 
 <use pyFRET/RASP_performance.pdf>
@@ -719,7 +722,7 @@ Package pdftex.def Info: pyFRET/RASP_performance.pdf used on input line 452.
 Chapter 3.
 [64
 
-] <inference/S1_diagram_scheme.pdf, id=12632, 404.712pt x 281.05pt>
+] <inference/S1_diagram_scheme.pdf, id=12677, 404.712pt x 281.05pt>
 File: inference/S1_diagram_scheme.pdf Graphic file (type pdf)
 
 <use inference/S1_diagram_scheme.pdf>
@@ -727,7 +730,7 @@ Package pdftex.def Info: inference/S1_diagram_scheme.pdf used on input line 19.
 
 (pdftex.def)             Requested size: 361.34999pt x 250.9485pt.
  [65] [66]
-<inference/thresholding_idealised.pdf, id=12667, 1750.54pt x 459.32213pt>
+<inference/thresholding_idealised.pdf, id=12712, 1750.54pt x 459.32213pt>
 File: inference/thresholding_idealised.pdf Graphic file (type pdf)
 
 <use inference/thresholding_idealised.pdf>
@@ -735,7 +738,7 @@ Package pdftex.def Info: inference/thresholding_idealised.pdf used on input lin
 e 40.
 (pdftex.def)             Requested size: 433.62pt x 113.77194pt.
 
-<inference/thresholding_real.pdf, id=12669, 1750.54pt x 459.32213pt>
+<inference/thresholding_real.pdf, id=12714, 1750.54pt x 459.32213pt>
 File: inference/thresholding_real.pdf Graphic file (type pdf)
 
 <use inference/thresholding_real.pdf>
@@ -743,7 +746,7 @@ Package pdftex.def Info: inference/thresholding_real.pdf used on input line 48.
 
 (pdftex.def)             Requested size: 433.62pt x 113.77194pt.
 
-<inference/thresholding_real_low.pdf, id=12671, 1750.54pt x 459.32213pt>
+<inference/thresholding_real_low.pdf, id=12716, 1750.54pt x 459.32213pt>
 File: inference/thresholding_real_low.pdf Graphic file (type pdf)
 
 <use inference/thresholding_real_low.pdf>
@@ -766,7 +769,7 @@ Overfull \hbox (4.50822pt too wide) in paragraph at lines 151--152
 lected from im-mo-bilised molecules [[],
  []
 
-[73] [74] <inference/fig1_intro_graphs.pdf, id=20004, 404.712pt x 281.05pt>
+[73] [74] <inference/fig1_intro_graphs.pdf, id=20049, 404.712pt x 281.05pt>
 File: inference/fig1_intro_graphs.pdf Graphic file (type pdf)
 
 <use inference/fig1_intro_graphs.pdf>
@@ -774,7 +777,7 @@ Package pdftex.def Info: inference/fig1_intro_graphs.pdf used on input line 198
 .
 (pdftex.def)             Requested size: 433.62pt x 301.14078pt.
 
-<inference/fig2_model_flow_diagram.pdf, id=20006, 192.72pt x 192.72pt>
+<inference/fig2_model_flow_diagram.pdf, id=20051, 192.72pt x 192.72pt>
 File: inference/fig2_model_flow_diagram.pdf Graphic file (type pdf)
 
 <use inference/fig2_model_flow_diagram.pdf>
@@ -782,7 +785,7 @@ Package pdftex.def Info: inference/fig2_model_flow_diagram.pdf used on input li
 ne 207.
 (pdftex.def)             Requested size: 234.87749pt x 234.87689pt.
 
-<inference/S2_plate_DAG_model.pdf, id=20008, 192.72pt x 144.54pt>
+<inference/S2_plate_DAG_model.pdf, id=20053, 192.72pt x 144.54pt>
 File: inference/S2_plate_DAG_model.pdf Graphic file (type pdf)
 
 <use inference/S2_plate_DAG_model.pdf>
@@ -799,7 +802,7 @@ Overfull \hbox (0.79288pt too wide) in paragraph at lines 252--253
  []
 
 [78] [79] [80]
-<inference/marginal_distributions.pdf, id=32367, 845.04686pt x 385.44pt>
+<inference/marginal_distributions.pdf, id=32412, 845.04686pt x 385.44pt>
 File: inference/marginal_distributions.pdf Graphic file (type pdf)
 
 <use inference/marginal_distributions.pdf>
@@ -929,7 +932,7 @@ Overfull \hbox (23.66783pt too wide) in paragraph at lines 504--505
  
  []
 
-<inference/S3_samples_summary_rsep.pdf, id=34892, 578.16pt x 433.62pt>
+<inference/S3_samples_summary_rsep.pdf, id=34938, 578.16pt x 433.62pt>
 File: inference/S3_samples_summary_rsep.pdf Graphic file (type pdf)
 
 <use inference/S3_samples_summary_rsep.pdf>
@@ -948,7 +951,7 @@ Overfull \hbox (5.14423pt too wide) in paragraph at lines 544--552
  []
 
 [92] [93] [94] [95]
-<inference/fig3_benchmark_synthetic.pdf, id=34978, 404.712pt x 232.87pt>
+<inference/fig3_benchmark_synthetic.pdf, id=35023, 404.712pt x 232.87pt>
 File: inference/fig3_benchmark_synthetic.pdf Graphic file (type pdf)
 
 <use inference/fig3_benchmark_synthetic.pdf>
@@ -956,7 +959,7 @@ Package pdftex.def Info: inference/fig3_benchmark_synthetic.pdf used on input l
 ine 626.
 (pdftex.def)             Requested size: 433.62pt x 249.51665pt.
 
-<inference/summary_threshold_E_population.pdf, id=34985, 597.50786pt x 845.0468
+<inference/summary_threshold_E_population.pdf, id=35030, 597.50786pt x 845.0468
 6pt>
 File: inference/summary_threshold_E_population.pdf Graphic file (type pdf)
  <use inference/summary_threshold_E_population.pdf>
@@ -969,14 +972,14 @@ LaTeX Warning: Float too large for page by 37.15895pt on input line 642.
 
 [96] [97 <./inference/fig3_benchmark_synthetic.pdf>] [98 <./inference/summary_t
 hreshold_E_population.pdf>]
-<inference/fig4_synthetic.pdf, id=35414, 404.712pt x 281.05pt>
+<inference/fig4_synthetic.pdf, id=35459, 404.712pt x 281.05pt>
 File: inference/fig4_synthetic.pdf Graphic file (type pdf)
 
 <use inference/fig4_synthetic.pdf>
 Package pdftex.def Info: inference/fig4_synthetic.pdf used on input line 649.
 (pdftex.def)             Requested size: 361.34999pt x 250.9485pt.
 
-<inference/fig5_labelled_multi_fig.pdf, id=35416, 404.712pt x 289.08pt>
+<inference/fig5_labelled_multi_fig.pdf, id=35461, 404.712pt x 289.08pt>
 File: inference/fig5_labelled_multi_fig.pdf Graphic file (type pdf)
 
 <use inference/fig5_labelled_multi_fig.pdf>
@@ -985,7 +988,7 @@ ne 659.
 (pdftex.def)             Requested size: 433.62pt x 328.19603pt.
  [99] [100 <./inference/fig4_synthetic.pdf>] [101 <./inference/fig5_labelled_mu
 lti_fig.pdf>]
-<inference/fig6_single_ppltn.pdf, id=36106, 192.72pt x 144.54pt>
+<inference/fig6_single_ppltn.pdf, id=36151, 192.72pt x 144.54pt>
 File: inference/fig6_single_ppltn.pdf Graphic file (type pdf)
 
 <use inference/fig6_single_ppltn.pdf>
@@ -993,14 +996,14 @@ Package pdftex.def Info: inference/fig6_single_ppltn.pdf used on input line 697
 .
 (pdftex.def)             Requested size: 289.07999pt x 216.80943pt.
  [102] [103 <./inference/fig6_single_ppltn.pdf>] <inference/fig7_all_ratios.pdf
-, id=36212, 404.712pt x 289.08pt>
+, id=36258, 404.712pt x 289.08pt>
 File: inference/fig7_all_ratios.pdf Graphic file (type pdf)
 
 <use inference/fig7_all_ratios.pdf>
 Package pdftex.def Info: inference/fig7_all_ratios.pdf used on input line 712.
 (pdftex.def)             Requested size: 361.34999pt x 258.11847pt.
 
-<inference/poisson_vs_gp.pdf, id=36218, 1197.98236pt x 922.6505pt>
+<inference/poisson_vs_gp.pdf, id=36264, 1197.98236pt x 922.6505pt>
 File: inference/poisson_vs_gp.pdf Graphic file (type pdf)
 
 <use inference/poisson_vs_gp.pdf>
@@ -1012,13 +1015,13 @@ pdf>] [107] [108])
 Chapter 4.
 [110
 
-] [111] <sizing/AmyloidMechanisms.jpg, id=40069, 963.6pt x 722.7pt>
+] [111] <sizing/AmyloidMechanisms.jpg, id=40114, 963.6pt x 722.7pt>
 File: sizing/AmyloidMechanisms.jpg Graphic file (type jpg)
 
 <use sizing/AmyloidMechanisms.jpg>
 Package pdftex.def Info: sizing/AmyloidMechanisms.jpg used on input line 38.
 (pdftex.def)             Requested size: 433.62pt x 325.21199pt.
- [112] [113 <./sizing/AmyloidMechanisms.jpg>] <sizing/tht_fig.pdf, id=40107, 25
+ [112] [113 <./sizing/AmyloidMechanisms.jpg>] <sizing/tht_fig.pdf, id=40152, 25
 5.2676pt x 262.30281pt>
 File: sizing/tht_fig.pdf Graphic file (type pdf)
 
@@ -1032,14 +1035,14 @@ Overfull \hbox (2.77115pt too wide) in paragraph at lines 60--60
  []
 
 [114] [115 <./sizing/tht_fig.pdf>]
-<sizing/holliday_junction.pdf, id=40153, 969.63457pt x 969.63414pt>
+<sizing/holliday_junction.pdf, id=40199, 969.63457pt x 969.63414pt>
 File: sizing/holliday_junction.pdf Graphic file (type pdf)
 
 <use sizing/holliday_junction.pdf>
 Package pdftex.def Info: sizing/holliday_junction.pdf used on input line 99.
 (pdftex.def)             Requested size: 216.81pt x 216.79709pt.
 
-<sizing/holliday_junction_labelling.pdf, id=40155, 2790.425pt x 2874.74pt>
+<sizing/holliday_junction_labelling.pdf, id=40201, 2790.425pt x 2874.74pt>
 File: sizing/holliday_junction_labelling.pdf Graphic file (type pdf)
 
 <use sizing/holliday_junction_labelling.pdf>
@@ -1048,7 +1051,7 @@ ine 107.
 (pdftex.def)             Requested size: 289.07999pt x 297.7991pt.
  [116] [117 <./sizing/holliday_junction.pdf>] [118 <./sizing/holliday_junction_
 labelling.pdf>]
-<sizing/multimer_emission.pdf, id=40191, 2009.81848pt x 940.92213pt>
+<sizing/multimer_emission.pdf, id=40236, 2009.81848pt x 940.92213pt>
 File: sizing/multimer_emission.pdf Graphic file (type pdf)
 
 <use sizing/multimer_emission.pdf>
@@ -1072,7 +1075,7 @@ Overfull \hbox (10.14203pt too wide) in paragraph at lines 203--205
  []
 
 [123] [124] [125]
-<sizing/poisson_size_photons.pdf, id=40279, 1172.38pt x 450.12453pt>
+<sizing/poisson_size_photons.pdf, id=40324, 1172.38pt x 450.12453pt>
 File: sizing/poisson_size_photons.pdf Graphic file (type pdf)
 
 <use sizing/poisson_size_photons.pdf>
@@ -1081,7 +1084,7 @@ Package pdftex.def Info: sizing/poisson_size_photons.pdf used on input line 252
 (pdftex.def)             Requested size: 433.62pt x 166.48164pt.
 
 <sizing/True_vs_Measured_oligomer_events_uniform_poisson_100000_hist.pdf, id=40
-281, 578.16pt x 433.62pt>
+326, 578.16pt x 433.62pt>
 File: sizing/True_vs_Measured_oligomer_events_uniform_poisson_100000_hist.pdf G
 raphic file (type pdf)
 
@@ -1090,7 +1093,7 @@ Package pdftex.def Info: sizing/True_vs_Measured_oligomer_events_uniform_poisso
 n_100000_hist.pdf used on input line 261.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/gamma_poisson_size_photons.pdf, id=40286, 1172.38pt x 449.68pt>
+<sizing/gamma_poisson_size_photons.pdf, id=40331, 1172.38pt x 449.68pt>
 File: sizing/gamma_poisson_size_photons.pdf Graphic file (type pdf)
 
 <use sizing/gamma_poisson_size_photons.pdf>
@@ -1098,7 +1101,7 @@ Package pdftex.def Info: sizing/gamma_poisson_size_photons.pdf used on input li
 ne 271.
 (pdftex.def)             Requested size: 433.62pt x 166.31723pt.
 
-<sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf, id=40288, 578
+<sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf, id=40333, 578
 .16pt x 433.62pt>
 File: sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf Graphic f
 ile (type pdf)
@@ -1116,14 +1119,14 @@ Overfull \hbox (3.03406pt too wide) in paragraph at lines 298--299
 e emis-sion be-haviour of our oligomeric
  []
 
-[130] <sizing/Holliday_Junctions.pdf, id=40525, 578.16pt x 433.62pt>
+[130] <sizing/Holliday_Junctions.pdf, id=40570, 578.16pt x 433.62pt>
 File: sizing/Holliday_Junctions.pdf Graphic file (type pdf)
 
 <use sizing/Holliday_Junctions.pdf>
 Package pdftex.def Info: sizing/Holliday_Junctions.pdf used on input line 304.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/poisson_oligomers_log.pdf, id=40527, 578.16pt x 433.62pt>
+<sizing/poisson_oligomers_log.pdf, id=40572, 578.16pt x 433.62pt>
 File: sizing/poisson_oligomers_log.pdf Graphic file (type pdf)
 
 <use sizing/poisson_oligomers_log.pdf>
@@ -1131,7 +1134,7 @@ Package pdftex.def Info: sizing/poisson_oligomers_log.pdf used on input line 31
 2.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/gamma_poisson_oligomers_log.pdf, id=40529, 578.16pt x 433.62pt>
+<sizing/gamma_poisson_oligomers_log.pdf, id=40574, 578.16pt x 433.62pt>
 File: sizing/gamma_poisson_oligomers_log.pdf Graphic file (type pdf)
 
 <use sizing/gamma_poisson_oligomers_log.pdf>
@@ -1151,14 +1154,14 @@ Overfull \hbox (9.89694pt too wide) in paragraph at lines 332--333
 own size (from monomers to tetramers)
  []
 
-<sizing/divergence.pdf, id=40650, 578.16pt x 433.62pt>
+<sizing/divergence.pdf, id=40696, 578.16pt x 433.62pt>
 File: sizing/divergence.pdf Graphic file (type pdf)
 
 <use sizing/divergence.pdf>
 Package pdftex.def Info: sizing/divergence.pdf used on input line 375.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/oligomer_marginals.pdf, id=40652, 1172.38pt x 494.73425pt>
+<sizing/oligomer_marginals.pdf, id=40698, 1172.38pt x 494.73425pt>
 File: sizing/oligomer_marginals.pdf Graphic file (type pdf)
 
 <use sizing/oligomer_marginals.pdf>
@@ -1168,28 +1171,28 @@ Package pdftex.def Info: sizing/oligomer_marginals.pdf used on input line 383.
 
 ] [135 <./sizing/divergence.pdf>]
 [136 <./sizing/oligomer_marginals.pdf>]
-<sizing/Convergence.pdf, id=41531, 578.16pt x 433.62pt>
+<sizing/Convergence.pdf, id=41576, 578.16pt x 433.62pt>
 File: sizing/Convergence.pdf Graphic file (type pdf)
 
 <use sizing/Convergence.pdf>
 Package pdftex.def Info: sizing/Convergence.pdf used on input line 397.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
  [137 <./sizing/Convergence.pdf>]
-<sizing/HJ_overlays.pdf, id=41576, 1172.38pt x 491.21931pt>
+<sizing/HJ_overlays.pdf, id=41622, 1172.38pt x 491.21931pt>
 File: sizing/HJ_overlays.pdf Graphic file (type pdf)
 
 <use sizing/HJ_overlays.pdf>
 Package pdftex.def Info: sizing/HJ_overlays.pdf used on input line 410.
 (pdftex.def)             Requested size: 433.62pt x 181.68083pt.
  [138 <./sizing/HJ_overlays.pdf>]
-<sizing/varying_R_blue.pdf, id=41608, 578.16pt x 433.62pt>
+<sizing/varying_R_blue.pdf, id=41654, 578.16pt x 433.62pt>
 File: sizing/varying_R_blue.pdf Graphic file (type pdf)
 
 <use sizing/varying_R_blue.pdf>
 Package pdftex.def Info: sizing/varying_R_blue.pdf used on input line 423.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/vary_Rblue.pdf, id=41610, 1186.0529pt x 898.68573pt>
+<sizing/vary_Rblue.pdf, id=41656, 1186.0529pt x 898.68573pt>
 File: sizing/vary_Rblue.pdf Graphic file (type pdf)
 
 <use sizing/vary_Rblue.pdf>
@@ -1216,7 +1219,7 @@ Package natbib Warning: Citation `blinking' on page 142 undefined on input line
 LaTeX Warning: Reference `A1_blinking_video' on page 142 undefined on input lin
 e 463.
 
-[142] [143] <sizing/fluorone.pdf, id=43508, 350.43507pt x 629.15048pt>
+[142] [143] <sizing/fluorone.pdf, id=43553, 350.43507pt x 629.15048pt>
 File: sizing/fluorone.pdf Graphic file (type pdf)
 
 <use sizing/fluorone.pdf>
@@ -1228,141 +1231,126 @@ Package pdftex.def Info: sizing/fluorone.pdf used on input line 479.
 Chapter 5.
 [147
 
-] <illumina/sanger.pdf, id=43553, 1712.45473pt x 1551.40994pt>
+] <illumina/sanger.pdf, id=43602, 1712.45473pt x 1551.40994pt>
 File: illumina/sanger.pdf Graphic file (type pdf)
 
 <use illumina/sanger.pdf>
-Package pdftex.def Info: illumina/sanger.pdf used on input line 16.
+Package pdftex.def Info: illumina/sanger.pdf used on input line 15.
 (pdftex.def)             Requested size: 375.80544pt x 340.45903pt.
+ [148] [149 <./illumina/sanger.pdf>]
+<illumina/illumina_linker.pdf, id=43637, 984.24855pt x 304.60686pt>
+File: illumina/illumina_linker.pdf Graphic file (type pdf)
 
+<use illumina/illumina_linker.pdf>
+Package pdftex.def Info: illumina/illumina_linker.pdf used on input line 24.
+(pdftex.def)             Requested size: 375.80544pt x 116.3049pt.
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ² in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ² in font cmr12!
 
-LaTeX Warning: Reference `fig:terminator' on page 148 undefined on input line 2
-2.
-
-[148] [149 <./illumina/sanger.pdf>]
-<illumina/illumina_sequencing.jpg, id=43587, 216.81pt x 204.16275pt>
+<illumina/illumina_sequencing.jpg, id=43641, 216.81pt x 204.16275pt>
 File: illumina/illumina_sequencing.jpg Graphic file (type jpg)
 
 <use illumina/illumina_sequencing.jpg>
-Package pdftex.def Info: illumina/illumina_sequencing.jpg used on input line 27
+Package pdftex.def Info: illumina/illumina_sequencing.jpg used on input line 32
 .
 (pdftex.def)             Requested size: 375.80544pt x 353.92879pt.
 
-Overfull \hbox (15.01875pt too wide) in paragraph at lines 33--34
+Overfull \hbox (15.01875pt too wide) in paragraph at lines 38--39
  []\OT1/cmr/bx/n/12 Single Molecule Se-quenc-ing Tech-nolo-gies[] \OT1/cmr/m/n/
 12 Al-though Il-lu-mina does not use sin-gle molecule
  []
 
-[150] [151 <./illumina/illumina_sequencing.jpg>]
-
-Package natbib Warning: Citation `Compeau2011' on page 152 undefined on input l
-ine 42.
-
-[152] <illumina/de_bruijn.pdf, id=43631, 1313.68893pt x 542.33794pt>
+[150 <./illumina/illumina_linker.pdf>] [151 <./illumina/illumina_sequencing.jpg
+>] [152] <illumina/de_bruijn.pdf, id=43691, 1313.68893pt x 542.33794pt>
 File: illumina/de_bruijn.pdf Graphic file (type pdf)
 
 <use illumina/de_bruijn.pdf>
-Package pdftex.def Info: illumina/de_bruijn.pdf used on input line 48.
+Package pdftex.def Info: illumina/de_bruijn.pdf used on input line 50.
 (pdftex.def)             Requested size: 375.80544pt x 155.14719pt.
+ [153 <./illumina/de_bruijn.pdf>]
 
+LaTeX Warning: Reference `fig:tangle' on page 154 undefined on input line 57.
 
-Package natbib Warning: Citation `Compeau2011' on page 153 undefined on input l
-ine 49.
+<illumina/de_bruijn_tangle.pdf, id=43721, 1162.60875pt x 527.8322pt>
+File: illumina/de_bruijn_tangle.pdf Graphic file (type pdf)
 
-
-Package natbib Warning: Citation `Compeau2011' on page 153 undefined on input l
-ine 49.
-
-
-LaTeX Warning: Reference `fig:tangle' on page 153 undefined on input line 56.
-
-[153 <./illumina/de_bruijn.pdf>]
-
-Package natbib Warning: Citation `zerbino2008' on page 154 undefined on input l
-ine 68.
-
-[154] [155] <illumina/fig1_nxrepair.pdf, id=43694, 864.48692pt x 277.08688pt>
+<use illumina/de_bruijn_tangle.pdf>
+Package pdftex.def Info: illumina/de_bruijn_tangle.pdf used on input line 60.
+(pdftex.def)             Requested size: 375.80544pt x 170.61722pt.
+ [154 <./illumina/de_bruijn_tangle.pdf>]
+[155] [156] <illumina/fig1_nxrepair.pdf, id=43781, 864.48692pt x 277.08688pt>
 File: illumina/fig1_nxrepair.pdf Graphic file (type pdf)
 
 <use illumina/fig1_nxrepair.pdf>
-Package pdftex.def Info: illumina/fig1_nxrepair.pdf used on input line 80.
+Package pdftex.def Info: illumina/fig1_nxrepair.pdf used on input line 89.
 (pdftex.def)             Requested size: 375.80544pt x 120.4557pt.
- [156 <./illumina/fig1_nxrepair.pdf>] [157
+ [157 <./illumina/fig1_nxrepair.pdf>] [158
 
 ]
-[158] <illumina/spanning.pdf, id=45001, 1430.30577pt x 308.13841pt>
+[159] <illumina/spanning.pdf, id=45085, 1430.30577pt x 308.13841pt>
 File: illumina/spanning.pdf Graphic file (type pdf)
 
 <use illumina/spanning.pdf>
-Package pdftex.def Info: illumina/spanning.pdf used on input line 138.
+Package pdftex.def Info: illumina/spanning.pdf used on input line 150.
 (pdftex.def)             Requested size: 375.80544pt x 80.96042pt.
- [159 <./illumina/spanning.pdf>] [160] [161]
-
-Package natbib Warning: Citation `gurevich2013' on page 162 undefined on input 
-line 197.
-
-[162] <illumina/allROC.pdf, id=45066, 578.16pt x 433.62pt>
+ [160 <./illumina/spanning.pdf>] [161] [162]
+[163] <illumina/allROC.pdf, id=45149, 578.16pt x 433.62pt>
 File: illumina/allROC.pdf Graphic file (type pdf)
 
 <use illumina/allROC.pdf>
-Package pdftex.def Info: illumina/allROC.pdf used on input line 218.
+Package pdftex.def Info: illumina/allROC.pdf used on input line 238.
 (pdftex.def)             Requested size: 375.80544pt x 281.84966pt.
- [163 <./illumina/allROC.pdf>]
-
-Package natbib Warning: Citation `gurevich2013' on page 164 undefined on input 
-line 230.
-
-
-Overfull \hbox (48.94524pt too wide) in paragraph at lines 238--239
+ [164] [165 <./illumina/allROC.pdf>]
+Overfull \hbox (48.94524pt too wide) in paragraph at lines 258--259
 []\OT1/cmtt/m/n/12 bwa mem sample/scaffolds.fasta -p bacteria.fastq.gz | samtoo
 ls view -bS - | samtools
  []
 
 
-Overfull \hbox (64.01224pt too wide) in paragraph at lines 244--245
+Overfull \hbox (64.01224pt too wide) in paragraph at lines 264--265
 []\OT1/cmtt/m/n/12 python nxrepair.py sample.bam sample/scaffolds.fasta sample[
 ]scores.csv sample[]new.fasta
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 258--259
+Underfull \hbox (badness 1472) in paragraph at lines 279--280
 []\OT1/cmr/m/n/12 Prior prob-a-bil-ity that the in-sert size is
  []
 
-
-Package natbib Warning: Citation `gurevich2013' on page 164 undefined on input 
-line 268.
-
-[164] [165]
-
-Package natbib Warning: Citation `gurevich2013' on page 166 undefined on input 
-line 272.
-
-[166]
+[166] [167]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 282.
+               Default added (so using `tbp') on input line 302.
 
-[167]
+[168]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 382.
+               Default added (so using `tbp') on input line 402.
 
-) (/home/rebecca/Documents/repos/thesis/conclusions/conclusions.tex [168]
-[169] [170] [171]
+
+Overfull \hbox (14.41013pt too wide) in paragraph at lines 406--428
+ [] 
+ []
+
+) (/home/rebecca/Documents/repos/thesis/conclusions/conclusions.tex [169]
+[170] [171] [172]
 Chapter 6.
-[172
+[173
 
-] [173] [174] [175] [176]) (./thesis.bbl [177] [178
+] [174] [175] [176] [177]) (./thesis.bbl [178] [179
 
-] [179] [180] [181]
+] [180] [181] [182]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 
-[182] [183]
+[183] [184]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -1374,48 +1362,48 @@ Underfull \hbox (badness 6268) in paragraph at lines 454--457
  pro-tein fold-ing.
  []
 
-[184]
+[185]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- [185] [186]
+ [186] [187]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [187]
-Missing character: There is no Î in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no Î in font cmr12!
-Missing character: There is no ² in font cmr12!
  [188]
 Missing character: There is no Î in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no Î in font cmr12!
+Missing character: There is no ² in font cmr12!
+ [189]
+Missing character: There is no Î in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Î in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Î in font cmr12!
 Missing character: There is no ± in font cmr12!
- [189]
+ [190]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [190] [191] [192] [193]
+ [191] [192] [193] [194]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no § in font cmr12!
- [194])
+ [195])
 
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-[195]
+[196]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A1C3507419FEF0C415B01A7AEE59984B;8401.
+(rerunfilecheck)             Checksum: 0B43B8F962D63AA23EC02B5B6265F72A;9119.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1430,10 +1418,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 10443 strings out of 495028
- 155001 string characters out of 6181496
- 288848 words of memory out of 5000000
- 12637 multiletter control sequences out of 15000+600000
+ 10486 strings out of 495028
+ 155899 string characters out of 6181496
+ 289552 words of memory out of 5000000
+ 12669 multiletter control sequences out of 15000+600000
  17861 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  29i,16n,40p,3281b,1733s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1459,10 +1447,10 @@ lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 t12.pfb>
-Output written on thesis.pdf (197 pages, 10169119 bytes).
+Output written on thesis.pdf (198 pages, 10279838 bytes).
 PDF statistics:
- 45552 PDF objects out of 45951 (max. 8388607)
- 30628 compressed objects within 307 object streams
- 796 named destinations out of 1000 (max. 500000)
- 1449 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 45634 PDF objects out of 45951 (max. 8388607)
+ 30700 compressed objects within 307 object streams
+ 805 named destinations out of 1000 (max. 500000)
+ 1531 words of extra memory for PDF output out of 10000 (max. 10000000)
 

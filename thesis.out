@@ -87,17 +87,26 @@
 \BOOKMARK [2][-]{subsection.5.2.4}{Evaluating Assembly Quality}{section.5.2}% 87
 \BOOKMARK [2][-]{subsection.5.2.5}{Error Detection Methods}{section.5.2}% 88
 \BOOKMARK [1][-]{section.5.3}{Theory}{chapter.5}% 89
-\BOOKMARK [1][-]{section.5.4}{Experimental Methods}{chapter.5}% 90
-\BOOKMARK [1][-]{section.5.5}{Results}{chapter.5}% 91
-\BOOKMARK [1][-]{section.5.6}{Conclusions}{chapter.5}% 92
-\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 93
-\BOOKMARK [1][-]{section.6.1}{General Conclusions}{chapter.6}% 94
-\BOOKMARK [2][-]{subsection.6.1.1}{pyFRET}{section.6.1}% 95
-\BOOKMARK [2][-]{subsection.6.1.2}{Inference Analysis of smFRET Data}{section.6.1}% 96
-\BOOKMARK [2][-]{subsection.6.1.3}{Inference Analysis of Oligomer Sizing}{section.6.1}% 97
-\BOOKMARK [2][-]{subsection.6.1.4}{NxRepair}{section.6.1}% 98
-\BOOKMARK [1][-]{section.6.2}{Applications and Future Work}{chapter.6}% 99
-\BOOKMARK [2][-]{subsection.6.2.1}{Open Source Software for smFRET}{section.6.2}% 100
-\BOOKMARK [2][-]{subsection.6.2.2}{Inference Analysis of smFRET Data}{section.6.2}% 101
-\BOOKMARK [2][-]{subsection.6.2.3}{Accurate Sizing of Fluorescent Oligomers}{section.6.2}% 102
-\BOOKMARK [2][-]{subsection.6.2.4}{Error Detection in de novo Assemblies}{section.6.2}% 103
+\BOOKMARK [2][-]{subsection.5.3.1}{Statistical Analysis of Mate Pair Insert Sizes}{section.5.3}% 90
+\BOOKMARK [2][-]{subsection.5.3.2}{Global Assembly Parameters}{section.5.3}% 91
+\BOOKMARK [2][-]{subsection.5.3.3}{Interval Tree Construction}{section.5.3}% 92
+\BOOKMARK [2][-]{subsection.5.3.4}{Misassembly Location and Contig Breaking}{section.5.3}% 93
+\BOOKMARK [2][-]{subsection.5.3.5}{Availability and Dependencies}{section.5.3}% 94
+\BOOKMARK [1][-]{section.5.4}{Experimental Methods}{chapter.5}% 95
+\BOOKMARK [2][-]{subsection.5.4.1}{Data}{section.5.4}% 96
+\BOOKMARK [2][-]{subsection.5.4.2}{Performance Optimisation}{section.5.4}% 97
+\BOOKMARK [2][-]{subsection.5.4.3}{Workflow Pipeline}{section.5.4}% 98
+\BOOKMARK [1][-]{section.5.5}{Results}{chapter.5}% 99
+\BOOKMARK [2][-]{subsection.5.5.1}{Performance}{section.5.5}% 100
+\BOOKMARK [1][-]{section.5.6}{Conclusions}{chapter.5}% 101
+\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 102
+\BOOKMARK [1][-]{section.6.1}{General Conclusions}{chapter.6}% 103
+\BOOKMARK [2][-]{subsection.6.1.1}{pyFRET}{section.6.1}% 104
+\BOOKMARK [2][-]{subsection.6.1.2}{Inference Analysis of smFRET Data}{section.6.1}% 105
+\BOOKMARK [2][-]{subsection.6.1.3}{Inference Analysis of Oligomer Sizing}{section.6.1}% 106
+\BOOKMARK [2][-]{subsection.6.1.4}{NxRepair}{section.6.1}% 107
+\BOOKMARK [1][-]{section.6.2}{Applications and Future Work}{chapter.6}% 108
+\BOOKMARK [2][-]{subsection.6.2.1}{Open Source Software for smFRET}{section.6.2}% 109
+\BOOKMARK [2][-]{subsection.6.2.2}{Inference Analysis of smFRET Data}{section.6.2}% 110
+\BOOKMARK [2][-]{subsection.6.2.3}{Accurate Sizing of Fluorescent Oligomers}{section.6.2}% 111
+\BOOKMARK [2][-]{subsection.6.2.4}{Error Detection in de novo Assemblies}{section.6.2}% 112
