@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  11 MAY 2015 15:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  11 MAY 2015 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1200,45 +1200,37 @@ Package pdftex.def Info: sizing/vary_Rblue.pdf used on input line 431.
 (pdftex.def)             Requested size: 433.62pt x 328.55922pt.
  [139] [140 <./sizing/varying_R_blue.pdf>] [141 <./sizing/vary_Rblue.pdf>]
 
-LaTeX Warning: Reference `fig:photobleaching' on page 142 undefined on input li
-ne 463.
-
-
-LaTeX Warning: Reference `tab:photobleaching' on page 142 undefined on input li
-ne 463.
-
-
 LaTeX Warning: Reference `fig:blinking' on page 142 undefined on input line 463
 .
 
+<sizing/results-holidayjunctions.pdf, id=43542, 817.0525pt x 574.145pt>
+File: sizing/results-holidayjunctions.pdf Graphic file (type pdf)
 
-Package natbib Warning: Citation `blinking' on page 142 undefined on input line
- 463.
-
-
-LaTeX Warning: Reference `A1_blinking_video' on page 142 undefined on input lin
-e 463.
-
-[142] [143] <sizing/fluorone.pdf, id=43553, 350.43507pt x 629.15048pt>
+<use sizing/results-holidayjunctions.pdf>
+Package pdftex.def Info: sizing/results-holidayjunctions.pdf used on input line
+ 467.
+(pdftex.def)             Requested size: 361.34999pt x 253.92117pt.
+ [142] [143 <./sizing/results-holidayjunctions.pdf>] [144]
+<sizing/fluorone.pdf, id=43574, 350.43507pt x 629.15048pt>
 File: sizing/fluorone.pdf Graphic file (type pdf)
 
 <use sizing/fluorone.pdf>
-Package pdftex.def Info: sizing/fluorone.pdf used on input line 479.
+Package pdftex.def Info: sizing/fluorone.pdf used on input line 487.
 (pdftex.def)             Requested size: 289.07999pt x 519.03635pt.
 )
-(/home/rebecca/Documents/repos/thesis/illumina/illumina_chapter.tex [144]
-[145 <./sizing/fluorone.pdf>] [146]
+(/home/rebecca/Documents/repos/thesis/illumina/illumina_chapter.tex [145]
+[146 <./sizing/fluorone.pdf>] [147]
 Chapter 5.
-[147
+[148
 
-] <illumina/sanger.pdf, id=43602, 1712.45473pt x 1551.40994pt>
+] <illumina/sanger.pdf, id=43623, 1712.45473pt x 1551.40994pt>
 File: illumina/sanger.pdf Graphic file (type pdf)
 
 <use illumina/sanger.pdf>
 Package pdftex.def Info: illumina/sanger.pdf used on input line 15.
 (pdftex.def)             Requested size: 375.80544pt x 340.45903pt.
- [148] [149 <./illumina/sanger.pdf>]
-<illumina/illumina_linker.pdf, id=43637, 984.24855pt x 304.60686pt>
+ [149] [150 <./illumina/sanger.pdf>]
+<illumina/illumina_linker.pdf, id=43658, 984.24855pt x 304.60686pt>
 File: illumina/illumina_linker.pdf Graphic file (type pdf)
 
 <use illumina/illumina_linker.pdf>
@@ -1251,7 +1243,7 @@ Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ² in font cmr12!
 
-<illumina/illumina_sequencing.jpg, id=43641, 216.81pt x 204.16275pt>
+<illumina/illumina_sequencing.jpg, id=43662, 216.81pt x 204.16275pt>
 File: illumina/illumina_sequencing.jpg Graphic file (type jpg)
 
 <use illumina/illumina_sequencing.jpg>
@@ -1264,47 +1256,47 @@ Overfull \hbox (15.01875pt too wide) in paragraph at lines 38--39
 12 Al-though Il-lu-mina does not use sin-gle molecule
  []
 
-[150 <./illumina/illumina_linker.pdf>] [151 <./illumina/illumina_sequencing.jpg
->] [152] <illumina/de_bruijn.pdf, id=43691, 1313.68893pt x 542.33794pt>
+[151 <./illumina/illumina_linker.pdf>] [152 <./illumina/illumina_sequencing.jpg
+>] [153] <illumina/de_bruijn.pdf, id=43712, 1313.68893pt x 542.33794pt>
 File: illumina/de_bruijn.pdf Graphic file (type pdf)
 
 <use illumina/de_bruijn.pdf>
 Package pdftex.def Info: illumina/de_bruijn.pdf used on input line 50.
 (pdftex.def)             Requested size: 375.80544pt x 155.14719pt.
- [153 <./illumina/de_bruijn.pdf>]
+ [154 <./illumina/de_bruijn.pdf>]
 
-LaTeX Warning: Reference `fig:tangle' on page 154 undefined on input line 57.
+LaTeX Warning: Reference `fig:tangle' on page 155 undefined on input line 57.
 
-<illumina/de_bruijn_tangle.pdf, id=43721, 1162.60875pt x 527.8322pt>
+<illumina/de_bruijn_tangle.pdf, id=43743, 1162.60875pt x 527.8322pt>
 File: illumina/de_bruijn_tangle.pdf Graphic file (type pdf)
 
 <use illumina/de_bruijn_tangle.pdf>
 Package pdftex.def Info: illumina/de_bruijn_tangle.pdf used on input line 60.
 (pdftex.def)             Requested size: 375.80544pt x 170.61722pt.
- [154 <./illumina/de_bruijn_tangle.pdf>]
-[155] [156] <illumina/fig1_nxrepair.pdf, id=43781, 864.48692pt x 277.08688pt>
+ [155 <./illumina/de_bruijn_tangle.pdf>]
+[156] [157] <illumina/fig1_nxrepair.pdf, id=43802, 864.48692pt x 277.08688pt>
 File: illumina/fig1_nxrepair.pdf Graphic file (type pdf)
 
 <use illumina/fig1_nxrepair.pdf>
 Package pdftex.def Info: illumina/fig1_nxrepair.pdf used on input line 89.
 (pdftex.def)             Requested size: 375.80544pt x 120.4557pt.
- [157 <./illumina/fig1_nxrepair.pdf>] [158
+ [158 <./illumina/fig1_nxrepair.pdf>] [159
 
 ]
-[159] <illumina/spanning.pdf, id=45085, 1430.30577pt x 308.13841pt>
+[160] <illumina/spanning.pdf, id=45107, 1430.30577pt x 308.13841pt>
 File: illumina/spanning.pdf Graphic file (type pdf)
 
 <use illumina/spanning.pdf>
 Package pdftex.def Info: illumina/spanning.pdf used on input line 150.
 (pdftex.def)             Requested size: 375.80544pt x 80.96042pt.
- [160 <./illumina/spanning.pdf>] [161] [162]
-[163] <illumina/allROC.pdf, id=45149, 578.16pt x 433.62pt>
+ [161 <./illumina/spanning.pdf>] [162] [163]
+[164] <illumina/allROC.pdf, id=45170, 578.16pt x 433.62pt>
 File: illumina/allROC.pdf Graphic file (type pdf)
 
 <use illumina/allROC.pdf>
 Package pdftex.def Info: illumina/allROC.pdf used on input line 238.
 (pdftex.def)             Requested size: 375.80544pt x 281.84966pt.
- [164] [165 <./illumina/allROC.pdf>]
+ [165] [166 <./illumina/allROC.pdf>]
 Overfull \hbox (48.94524pt too wide) in paragraph at lines 258--259
 []\OT1/cmtt/m/n/12 bwa mem sample/scaffolds.fasta -p bacteria.fastq.gz | samtoo
 ls view -bS - | samtools
@@ -1321,12 +1313,12 @@ Underfull \hbox (badness 1472) in paragraph at lines 279--280
 []\OT1/cmr/m/n/12 Prior prob-a-bil-ity that the in-sert size is
  []
 
-[166] [167]
+[167] [168]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 302.
 
-[168]
+[169]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1339,18 +1331,18 @@ Overfull \hbox (14.41013pt too wide) in paragraph at lines 406--428
  [] 
  []
 
-) (/home/rebecca/Documents/repos/thesis/conclusions/conclusions.tex [169]
-[170] [171] [172]
+) (/home/rebecca/Documents/repos/thesis/conclusions/conclusions.tex [170]
+[171] [172] [173]
 Chapter 6.
-[173
+[174
 
-] [174] [175] [176] [177]) (./thesis.bbl [178] [179
+] [175] [176] [177] [178]) (./thesis.bbl [179] [180
 
-] [180] [181] [182]
+] [181] [182] [183]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 
-[183] [184]
+[184] [185]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no   in font cmr12!
@@ -1362,44 +1354,42 @@ Underfull \hbox (badness 6268) in paragraph at lines 454--457
  pro-tein fold-ing.
  []
 
-[185]
+[186]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- [186] [187]
+ [187] [188]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [188]
-Missing character: There is no Î in font cmr12!
-Missing character: There is no ± in font cmr12!
-Missing character: There is no Î in font cmr12!
-Missing character: There is no ² in font cmr12!
  [189]
 Missing character: There is no Î in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no Î in font cmr12!
+Missing character: There is no ² in font cmr12!
+ [190]
+Missing character: There is no Î in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Î in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Î in font cmr12!
 Missing character: There is no ± in font cmr12!
- [190]
+ [191]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [191] [192] [193] [194]
+ [192] [193] [194] [195]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no § in font cmr12!
- [195])
-
-Package natbib Warning: There were undefined citations.
-
+ [196])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-[196]
+ [197]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
- (./thesis.aux)
+
+(./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
@@ -1418,10 +1408,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 10486 strings out of 495028
- 155899 string characters out of 6181496
- 289552 words of memory out of 5000000
- 12669 multiletter control sequences out of 15000+600000
+ 10490 strings out of 495028
+ 156056 string characters out of 6181496
+ 289868 words of memory out of 5000000
+ 12670 multiletter control sequences out of 15000+600000
  17861 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  29i,16n,40p,3281b,1733s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1447,10 +1437,10 @@ lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 t12.pfb>
-Output written on thesis.pdf (198 pages, 10279838 bytes).
+Output written on thesis.pdf (199 pages, 10283376 bytes).
 PDF statistics:
- 45634 PDF objects out of 45951 (max. 8388607)
- 30700 compressed objects within 307 object streams
- 805 named destinations out of 1000 (max. 500000)
- 1531 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 45657 PDF objects out of 45951 (max. 8388607)
+ 30719 compressed objects within 308 object streams
+ 807 named destinations out of 1000 (max. 500000)
+ 1542 words of extra memory for PDF output out of 10000 (max. 10000000)
 

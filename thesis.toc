@@ -118,43 +118,43 @@
 \contentsline {subsection}{\numberline {4.5.3}Inferring Event Brightness Using the Gamma-Poisson Model}{134}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}How Bright Are Holliday Junction Events}{138}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}{142}{subsection.4.5.5}
-\contentsline {section}{\numberline {4.6}Conclusions}{143}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Complex Relationship between Size and Photon Emission}{143}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Implications for Future Work on Molecular Sizing}{143}{subsection.4.6.2}
-\contentsline {chapter}{\numberline {5}Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{147}{chapter.5}
-\contentsline {section}{\numberline {5.1}Overview}{147}{section.5.1}
-\contentsline {section}{\numberline {5.2}Introduction}{148}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Next-Generation Sequencing Technologies}{148}{subsection.5.2.1}
-\contentsline {paragraph}{Illumina Sequencing Technology}{148}{section*.60}
-\contentsline {paragraph}{Single Molecule Sequencing Technologies}{150}{section*.61}
-\contentsline {subsection}{\numberline {5.2.2}De Novo Sequence Assembly}{152}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Paired End Reads and Mate Pair Sequencing}{154}{subsection.5.2.3}
-\contentsline {paragraph}{Paired End and Single End Reads}{154}{section*.62}
-\contentsline {paragraph}{Mate Pair Sequening}{155}{section*.63}
-\contentsline {subsection}{\numberline {5.2.4}Evaluating Assembly Quality}{155}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Error Detection Methods}{156}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Theory}{158}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Statistical Analysis of Mate Pair Insert Sizes}{158}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Global Assembly Parameters}{160}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Interval Tree Construction}{161}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Misassembly Location and Contig Breaking}{162}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Availability and Dependencies}{163}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Experimental Methods}{163}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Data}{163}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Performance Optimisation}{164}{subsection.5.4.2}
-\contentsline {paragraph}{Profiling}{165}{section*.65}
-\contentsline {subsection}{\numberline {5.4.3}Workflow Pipeline}{165}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}Results}{166}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Performance}{169}{subsection.5.5.1}
-\contentsline {section}{\numberline {5.6}Conclusions}{169}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{173}{chapter.6}
-\contentsline {section}{\numberline {6.1}General Conclusions}{173}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}pyFRET}{173}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Inference Analysis of smFRET Data}{174}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Inference Analysis of Oligomer Sizing}{175}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}NxRepair}{175}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}Applications and Future Work}{176}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Open Source Software for smFRET}{176}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Inference Analysis of smFRET Data}{177}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Accurate Sizing of Fluorescent Oligomers}{177}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Error Detection in \emph {de novo} Assemblies}{178}{subsection.6.2.4}
+\contentsline {section}{\numberline {4.6}Conclusions}{144}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Complex Relationship between Size and Photon Emission}{144}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Implications for Future Work on Molecular Sizing}{144}{subsection.4.6.2}
+\contentsline {chapter}{\numberline {5}Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{148}{chapter.5}
+\contentsline {section}{\numberline {5.1}Overview}{148}{section.5.1}
+\contentsline {section}{\numberline {5.2}Introduction}{149}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Next-Generation Sequencing Technologies}{149}{subsection.5.2.1}
+\contentsline {paragraph}{Illumina Sequencing Technology}{149}{section*.60}
+\contentsline {paragraph}{Single Molecule Sequencing Technologies}{151}{section*.61}
+\contentsline {subsection}{\numberline {5.2.2}De Novo Sequence Assembly}{153}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Paired End Reads and Mate Pair Sequencing}{155}{subsection.5.2.3}
+\contentsline {paragraph}{Paired End and Single End Reads}{155}{section*.62}
+\contentsline {paragraph}{Mate Pair Sequening}{156}{section*.63}
+\contentsline {subsection}{\numberline {5.2.4}Evaluating Assembly Quality}{156}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Error Detection Methods}{157}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Theory}{159}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Statistical Analysis of Mate Pair Insert Sizes}{159}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Global Assembly Parameters}{161}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Interval Tree Construction}{162}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Misassembly Location and Contig Breaking}{163}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Availability and Dependencies}{164}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Experimental Methods}{164}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Data}{164}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Performance Optimisation}{165}{subsection.5.4.2}
+\contentsline {paragraph}{Profiling}{166}{section*.65}
+\contentsline {subsection}{\numberline {5.4.3}Workflow Pipeline}{166}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}Results}{167}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Performance}{170}{subsection.5.5.1}
+\contentsline {section}{\numberline {5.6}Conclusions}{170}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{174}{chapter.6}
+\contentsline {section}{\numberline {6.1}General Conclusions}{174}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}pyFRET}{174}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Inference Analysis of smFRET Data}{175}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Inference Analysis of Oligomer Sizing}{176}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}NxRepair}{176}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Applications and Future Work}{177}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Open Source Software for smFRET}{177}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Inference Analysis of smFRET Data}{178}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Accurate Sizing of Fluorescent Oligomers}{178}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Error Detection in \emph {de novo} Assemblies}{179}{subsection.6.2.4}
