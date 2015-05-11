@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  11 MAY 2015 16:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  11 MAY 2015 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1075,46 +1075,47 @@ Overfull \hbox (10.14203pt too wide) in paragraph at lines 203--205
  []
 
 [123] [124] [125]
-<sizing/poisson_size_photons.pdf, id=40324, 1172.38pt x 450.12453pt>
+<sizing/poisson_size_photons.pdf, id=40323, 1172.38pt x 450.12453pt>
 File: sizing/poisson_size_photons.pdf Graphic file (type pdf)
 
 <use sizing/poisson_size_photons.pdf>
-Package pdftex.def Info: sizing/poisson_size_photons.pdf used on input line 252
+Package pdftex.def Info: sizing/poisson_size_photons.pdf used on input line 254
 .
 (pdftex.def)             Requested size: 433.62pt x 166.48164pt.
 
 <sizing/True_vs_Measured_oligomer_events_uniform_poisson_100000_hist.pdf, id=40
-326, 578.16pt x 433.62pt>
+325, 578.16pt x 433.62pt>
 File: sizing/True_vs_Measured_oligomer_events_uniform_poisson_100000_hist.pdf G
 raphic file (type pdf)
 
 <use sizing/True_vs_Measured_oligomer_events_uniform_poisson_100000_hist.pdf>
 Package pdftex.def Info: sizing/True_vs_Measured_oligomer_events_uniform_poisso
-n_100000_hist.pdf used on input line 261.
+n_100000_hist.pdf used on input line 263.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/gamma_poisson_size_photons.pdf, id=40331, 1172.38pt x 449.68pt>
+<sizing/gamma_poisson_size_photons.pdf, id=40330, 1172.38pt x 449.68pt>
 File: sizing/gamma_poisson_size_photons.pdf Graphic file (type pdf)
 
 <use sizing/gamma_poisson_size_photons.pdf>
 Package pdftex.def Info: sizing/gamma_poisson_size_photons.pdf used on input li
-ne 271.
+ne 273.
 (pdftex.def)             Requested size: 433.62pt x 166.31723pt.
 
-<sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf, id=40333, 578
+<sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf, id=40332, 578
 .16pt x 433.62pt>
 File: sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf Graphic f
 ile (type pdf)
 
 <use sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf>
 Package pdftex.def Info: sizing/True_vs_Measured_oligomer_events_uniform_100000
-_hist.pdf used on input line 279.
+_hist.pdf used on input line 281.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
- [126 <./sizing/poisson_size_photons.pdf>] [127 <./sizing/True_vs_Measured_olig
-omer_events_uniform_poisson_100000_hist.pdf>] [128 <./sizing/gamma_poisson_size
-_photons.pdf>] [129 <./sizing/True_vs_Measured_oligomer_events_uniform_100000_h
-ist.pdf>]
-Overfull \hbox (3.03406pt too wide) in paragraph at lines 298--299
+ [126]
+[127 <./sizing/poisson_size_photons.pdf> <./sizing/True_vs_Measured_oligomer_ev
+ents_uniform_poisson_100000_hist.pdf>] [128 <./sizing/gamma_poisson_size_photon
+s.pdf>] [129 <./sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf
+>]
+Overfull \hbox (3.03406pt too wide) in paragraph at lines 300--301
 []\OT1/cmr/m/n/12 This com-par-i-son raises two im-por-tant points. Firstly, th
 e emis-sion be-haviour of our oligomeric
  []
@@ -1123,7 +1124,7 @@ e emis-sion be-haviour of our oligomeric
 File: sizing/Holliday_Junctions.pdf Graphic file (type pdf)
 
 <use sizing/Holliday_Junctions.pdf>
-Package pdftex.def Info: sizing/Holliday_Junctions.pdf used on input line 304.
+Package pdftex.def Info: sizing/Holliday_Junctions.pdf used on input line 306.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
 <sizing/poisson_oligomers_log.pdf, id=40572, 578.16pt x 433.62pt>
@@ -1131,7 +1132,7 @@ File: sizing/poisson_oligomers_log.pdf Graphic file (type pdf)
 
 <use sizing/poisson_oligomers_log.pdf>
 Package pdftex.def Info: sizing/poisson_oligomers_log.pdf used on input line 31
-2.
+4.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
 <sizing/gamma_poisson_oligomers_log.pdf, id=40574, 578.16pt x 433.62pt>
@@ -1139,17 +1140,17 @@ File: sizing/gamma_poisson_oligomers_log.pdf Graphic file (type pdf)
 
 <use sizing/gamma_poisson_oligomers_log.pdf>
 Package pdftex.def Info: sizing/gamma_poisson_oligomers_log.pdf used on input l
-ine 321.
+ine 323.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
  [131 <./sizing/Holliday_Junctions.pdf>] [132 <./sizing/poisson_oligomers_log.p
 df>] [133 <./sizing/gamma_poisson_oligomers_log.pdf>]
-Overfull \hbox (1.2029pt too wide) in paragraph at lines 329--329
+Overfull \hbox (1.2029pt too wide) in paragraph at lines 331--331
 []\OT1/cmr/bx/n/14.4 Inferring Event Bright-ness Us-ing the Gamma-Poisson Model
  
  []
 
 
-Overfull \hbox (9.89694pt too wide) in paragraph at lines 332--333
+Overfull \hbox (9.89694pt too wide) in paragraph at lines 334--335
 []\OT1/cmr/m/n/12 We sim-u-lated four datasets, con-sist-ing of oligomers of kn
 own size (from monomers to tetramers)
  []
@@ -1158,14 +1159,14 @@ own size (from monomers to tetramers)
 File: sizing/divergence.pdf Graphic file (type pdf)
 
 <use sizing/divergence.pdf>
-Package pdftex.def Info: sizing/divergence.pdf used on input line 375.
+Package pdftex.def Info: sizing/divergence.pdf used on input line 377.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
 <sizing/oligomer_marginals.pdf, id=40698, 1172.38pt x 494.73425pt>
 File: sizing/oligomer_marginals.pdf Graphic file (type pdf)
 
 <use sizing/oligomer_marginals.pdf>
-Package pdftex.def Info: sizing/oligomer_marginals.pdf used on input line 383.
+Package pdftex.def Info: sizing/oligomer_marginals.pdf used on input line 385.
 (pdftex.def)             Requested size: 433.62pt x 182.98087pt.
  [134
 
@@ -1175,32 +1176,32 @@ Package pdftex.def Info: sizing/oligomer_marginals.pdf used on input line 383.
 File: sizing/Convergence.pdf Graphic file (type pdf)
 
 <use sizing/Convergence.pdf>
-Package pdftex.def Info: sizing/Convergence.pdf used on input line 397.
+Package pdftex.def Info: sizing/Convergence.pdf used on input line 399.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
  [137 <./sizing/Convergence.pdf>]
 <sizing/HJ_overlays.pdf, id=41622, 1172.38pt x 491.21931pt>
 File: sizing/HJ_overlays.pdf Graphic file (type pdf)
 
 <use sizing/HJ_overlays.pdf>
-Package pdftex.def Info: sizing/HJ_overlays.pdf used on input line 410.
+Package pdftex.def Info: sizing/HJ_overlays.pdf used on input line 412.
 (pdftex.def)             Requested size: 433.62pt x 181.68083pt.
  [138 <./sizing/HJ_overlays.pdf>]
 <sizing/varying_R_blue.pdf, id=41654, 578.16pt x 433.62pt>
 File: sizing/varying_R_blue.pdf Graphic file (type pdf)
 
 <use sizing/varying_R_blue.pdf>
-Package pdftex.def Info: sizing/varying_R_blue.pdf used on input line 423.
+Package pdftex.def Info: sizing/varying_R_blue.pdf used on input line 425.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
 <sizing/vary_Rblue.pdf, id=41656, 1186.0529pt x 898.68573pt>
 File: sizing/vary_Rblue.pdf Graphic file (type pdf)
 
 <use sizing/vary_Rblue.pdf>
-Package pdftex.def Info: sizing/vary_Rblue.pdf used on input line 431.
+Package pdftex.def Info: sizing/vary_Rblue.pdf used on input line 433.
 (pdftex.def)             Requested size: 433.62pt x 328.55922pt.
  [139] [140 <./sizing/varying_R_blue.pdf>] [141 <./sizing/vary_Rblue.pdf>]
 
-LaTeX Warning: Reference `fig:blinking' on page 142 undefined on input line 463
+LaTeX Warning: Reference `fig:blinking' on page 142 undefined on input line 465
 .
 
 <sizing/results-holidayjunctions.pdf, id=43542, 817.0525pt x 574.145pt>
@@ -1208,14 +1209,14 @@ File: sizing/results-holidayjunctions.pdf Graphic file (type pdf)
 
 <use sizing/results-holidayjunctions.pdf>
 Package pdftex.def Info: sizing/results-holidayjunctions.pdf used on input line
- 467.
+ 469.
 (pdftex.def)             Requested size: 361.34999pt x 253.92117pt.
  [142] [143 <./sizing/results-holidayjunctions.pdf>] [144]
 <sizing/fluorone.pdf, id=43574, 350.43507pt x 629.15048pt>
 File: sizing/fluorone.pdf Graphic file (type pdf)
 
 <use sizing/fluorone.pdf>
-Package pdftex.def Info: sizing/fluorone.pdf used on input line 487.
+Package pdftex.def Info: sizing/fluorone.pdf used on input line 489.
 (pdftex.def)             Requested size: 289.07999pt x 519.03635pt.
 )
 (/home/rebecca/Documents/repos/thesis/illumina/illumina_chapter.tex [145]
@@ -1437,7 +1438,7 @@ lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 t12.pfb>
-Output written on thesis.pdf (199 pages, 10283376 bytes).
+Output written on thesis.pdf (199 pages, 10284145 bytes).
 PDF statistics:
  45657 PDF objects out of 45951 (max. 8388607)
  30719 compressed objects within 308 object streams

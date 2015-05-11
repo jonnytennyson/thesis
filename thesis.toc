@@ -112,7 +112,7 @@
 \contentsline {paragraph}{Holliday Junction Purification}{123}{section*.59}
 \contentsline {subsection}{\numberline {4.4.2}Simple FRET Measurements of DNA Holliday Junctions}{124}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Counting Photobleaching Steps Using TIRF Imaging}{124}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Results}{124}{section.4.5}
+\contentsline {section}{\numberline {4.5}Results}{125}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}The need for a Generative Model}{125}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Understanding the Relationship Between Size and Photon Emission}{128}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Inferring Event Brightness Using the Gamma-Poisson Model}{134}{subsection.4.5.3}
