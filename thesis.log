@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  22 MAY 2015 12:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  22 MAY 2015 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1206,23 +1206,28 @@ File: sizing/vary_Rblue.pdf Graphic file (type pdf)
 Package pdftex.def Info: sizing/vary_Rblue.pdf used on input line 432.
 (pdftex.def)             Requested size: 433.62pt x 328.55922pt.
  [142] [143 <./sizing/varying_R_blue.pdf>] [144 <./sizing/vary_Rblue.pdf>]
-
-LaTeX Warning: Reference `fig:blinking' on page 145 undefined on input line 464
-.
-
-<sizing/results-holidayjunctions.pdf, id=43947, 817.0525pt x 574.145pt>
+<sizing/results-holidayjunctions.pdf, id=43948, 817.0525pt x 574.145pt>
 File: sizing/results-holidayjunctions.pdf Graphic file (type pdf)
 
 <use sizing/results-holidayjunctions.pdf>
 Package pdftex.def Info: sizing/results-holidayjunctions.pdf used on input line
  468.
 (pdftex.def)             Requested size: 361.34999pt x 253.92117pt.
- [145] [146 <./sizing/results-holidayjunctions.pdf>] [147]
-<sizing/fluorone.pdf, id=43978, 350.43507pt x 629.15048pt>
+
+<sizing/blinking_trajectories.pdf, id=43950, 1172.38pt x 449.68pt>
+File: sizing/blinking_trajectories.pdf Graphic file (type pdf)
+
+<use sizing/blinking_trajectories.pdf>
+Package pdftex.def Info: sizing/blinking_trajectories.pdf used on input line 47
+6.
+(pdftex.def)             Requested size: 361.34999pt x 138.59654pt.
+ [145] [146 <./sizing/results-holidayjunctions.pdf> <./sizing/blinking_trajecto
+ries.pdf>] [147]
+<sizing/fluorone.pdf, id=43997, 350.43507pt x 629.15048pt>
 File: sizing/fluorone.pdf Graphic file (type pdf)
 
 <use sizing/fluorone.pdf>
-Package pdftex.def Info: sizing/fluorone.pdf used on input line 488.
+Package pdftex.def Info: sizing/fluorone.pdf used on input line 496.
 (pdftex.def)             Requested size: 289.07999pt x 519.03635pt.
 )
 (/home/rebecca/Documents/repos/thesis/illumina/illumina_chapter.tex [148]
@@ -1230,14 +1235,14 @@ Package pdftex.def Info: sizing/fluorone.pdf used on input line 488.
 Chapter 5.
 [151
 
-] <illumina/sanger.pdf, id=44027, 1712.45473pt x 1551.40994pt>
+] <illumina/sanger.pdf, id=44047, 1712.45473pt x 1551.40994pt>
 File: illumina/sanger.pdf Graphic file (type pdf)
 
 <use illumina/sanger.pdf>
 Package pdftex.def Info: illumina/sanger.pdf used on input line 15.
 (pdftex.def)             Requested size: 375.80544pt x 340.45903pt.
  [152] [153 <./illumina/sanger.pdf>]
-<illumina/illumina_linker.pdf, id=44062, 984.24855pt x 304.60686pt>
+<illumina/illumina_linker.pdf, id=44081, 984.24855pt x 304.60686pt>
 File: illumina/illumina_linker.pdf Graphic file (type pdf)
 
 <use illumina/illumina_linker.pdf>
@@ -1250,7 +1255,7 @@ Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ² in font cmr12!
 
-<illumina/illumina_sequencing.jpg, id=44066, 216.81pt x 204.16275pt>
+<illumina/illumina_sequencing.jpg, id=44085, 216.81pt x 204.16275pt>
 File: illumina/illumina_sequencing.jpg Graphic file (type jpg)
 
 <use illumina/illumina_sequencing.jpg>
@@ -1264,7 +1269,7 @@ Overfull \hbox (15.01875pt too wide) in paragraph at lines 38--39
  []
 
 [154 <./illumina/illumina_linker.pdf>] [155 <./illumina/illumina_sequencing.jpg
->] [156] <illumina/de_bruijn.pdf, id=44117, 1313.68893pt x 542.33794pt>
+>] [156] <illumina/de_bruijn.pdf, id=44136, 1313.68893pt x 542.33794pt>
 File: illumina/de_bruijn.pdf Graphic file (type pdf)
 
 <use illumina/de_bruijn.pdf>
@@ -1274,14 +1279,14 @@ Package pdftex.def Info: illumina/de_bruijn.pdf used on input line 50.
 
 LaTeX Warning: Reference `fig:tangle' on page 158 undefined on input line 57.
 
-<illumina/de_bruijn_tangle.pdf, id=44147, 1162.60875pt x 527.8322pt>
+<illumina/de_bruijn_tangle.pdf, id=44166, 1162.60875pt x 527.8322pt>
 File: illumina/de_bruijn_tangle.pdf Graphic file (type pdf)
 
 <use illumina/de_bruijn_tangle.pdf>
 Package pdftex.def Info: illumina/de_bruijn_tangle.pdf used on input line 60.
 (pdftex.def)             Requested size: 375.80544pt x 170.61722pt.
  [158 <./illumina/de_bruijn_tangle.pdf>]
-[159] [160] <illumina/fig1_nxrepair.pdf, id=44206, 864.48692pt x 277.08688pt>
+[159] [160] <illumina/fig1_nxrepair.pdf, id=44225, 864.48692pt x 277.08688pt>
 File: illumina/fig1_nxrepair.pdf Graphic file (type pdf)
 
 <use illumina/fig1_nxrepair.pdf>
@@ -1290,14 +1295,14 @@ Package pdftex.def Info: illumina/fig1_nxrepair.pdf used on input line 89.
  [161 <./illumina/fig1_nxrepair.pdf>] [162
 
 ]
-[163] <illumina/spanning.pdf, id=45511, 1430.30577pt x 308.13841pt>
+[163] <illumina/spanning.pdf, id=45530, 1430.30577pt x 308.13841pt>
 File: illumina/spanning.pdf Graphic file (type pdf)
 
 <use illumina/spanning.pdf>
 Package pdftex.def Info: illumina/spanning.pdf used on input line 150.
 (pdftex.def)             Requested size: 375.80544pt x 80.96042pt.
  [164 <./illumina/spanning.pdf>] [165] [166]
-[167] <illumina/allROC.pdf, id=45575, 578.16pt x 433.62pt>
+[167] <illumina/allROC.pdf, id=45594, 578.16pt x 433.62pt>
 File: illumina/allROC.pdf Graphic file (type pdf)
 
 <use illumina/allROC.pdf>
@@ -1418,10 +1423,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 10509 strings out of 495028
- 156364 string characters out of 6181496
- 290583 words of memory out of 5000000
- 12681 multiletter control sequences out of 15000+600000
+ 10515 strings out of 495028
+ 156547 string characters out of 6181496
+ 290730 words of memory out of 5000000
+ 12685 multiletter control sequences out of 15000+600000
  17861 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  29i,16n,40p,3281b,1733s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1447,10 +1452,10 @@ lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 t12.pfb>
-Output written on thesis.pdf (203 pages, 9870592 bytes).
+Output written on thesis.pdf (203 pages, 9883355 bytes).
 PDF statistics:
- 46065 PDF objects out of 55141 (max. 8388607)
- 30995 compressed objects within 310 object streams
- 814 named destinations out of 1000 (max. 500000)
- 1553 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46085 PDF objects out of 55141 (max. 8388607)
+ 31008 compressed objects within 311 object streams
+ 815 named destinations out of 1000 (max. 500000)
+ 1564 words of extra memory for PDF output out of 10000 (max. 10000000)
 
