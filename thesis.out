@@ -53,60 +53,62 @@
 \BOOKMARK [2][-]{subsection.3.3.3}{The Metropolis-Hastings Algorithm}{section.3.3}% 53
 \BOOKMARK [1][-]{section.3.4}{Experimental Methods}{chapter.3}% 54
 \BOOKMARK [1][-]{section.3.5}{Results}{chapter.3}% 55
-\BOOKMARK [2][-]{subsection.3.5.1}{Justification of the Gamma-Poisson Mixture Model}{section.3.5}% 56
-\BOOKMARK [1][-]{section.3.6}{Conclusions and Future Work}{chapter.3}% 57
-\BOOKMARK [0][-]{chapter.4}{Bayesian Inference of Oligomer Sizes Using Single Molecule FRET}{}% 58
-\BOOKMARK [1][-]{section.4.1}{Overview}{chapter.4}% 59
-\BOOKMARK [1][-]{section.4.2}{Introduction}{chapter.4}% 60
-\BOOKMARK [2][-]{subsection.4.2.1}{Diseases of Protein Aggregation}{section.4.2}% 61
-\BOOKMARK [2][-]{subsection.4.2.2}{Studying Protein Aggregation}{section.4.2}% 62
-\BOOKMARK [2][-]{subsection.4.2.3}{The Relationship Between Size and Photon Emission is Complex}{section.4.2}% 63
-\BOOKMARK [2][-]{subsection.4.2.4}{The DNA Holliday Junction as a Model Oligomer}{section.4.2}% 64
-\BOOKMARK [1][-]{section.4.3}{Theory}{chapter.4}% 65
-\BOOKMARK [2][-]{subsection.4.3.1}{A Simple Poisson Model of Oligomer Photon Emission}{section.4.3}% 66
-\BOOKMARK [2][-]{subsection.4.3.2}{A Gamma-Poisson Mixture Model of Oligomer Photon Emission}{section.4.3}% 67
-\BOOKMARK [1][-]{section.4.4}{Experimental Methods}{chapter.4}% 68
-\BOOKMARK [2][-]{subsection.4.4.1}{Preparation of DNA Holliday Junctions}{section.4.4}% 69
-\BOOKMARK [2][-]{subsection.4.4.2}{Simple FRET Measurements of DNA Holliday Junctions}{section.4.4}% 70
-\BOOKMARK [2][-]{subsection.4.4.3}{Counting Photobleaching Steps Using TIRF Imaging}{section.4.4}% 71
-\BOOKMARK [1][-]{section.4.5}{Results}{chapter.4}% 72
-\BOOKMARK [2][-]{subsection.4.5.1}{The need for a Generative Model}{section.4.5}% 73
-\BOOKMARK [2][-]{subsection.4.5.2}{Understanding the Relationship Between Size and Photon Emission}{section.4.5}% 74
-\BOOKMARK [2][-]{subsection.4.5.3}{Inferring Event Brightness Using the Gamma-Poisson Model}{section.4.5}% 75
-\BOOKMARK [2][-]{subsection.4.5.4}{How Bright Are Holliday Junction Events}{section.4.5}% 76
-\BOOKMARK [2][-]{subsection.4.5.5}{Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}{section.4.5}% 77
-\BOOKMARK [1][-]{section.4.6}{Conclusions}{chapter.4}% 78
-\BOOKMARK [2][-]{subsection.4.6.1}{Complex Relationship between Size and Photon Emission}{section.4.6}% 79
-\BOOKMARK [2][-]{subsection.4.6.2}{Implications for Future Work on Molecular Sizing}{section.4.6}% 80
-\BOOKMARK [0][-]{chapter.5}{Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{}% 81
-\BOOKMARK [1][-]{section.5.1}{Overview}{chapter.5}% 82
-\BOOKMARK [1][-]{section.5.2}{Introduction}{chapter.5}% 83
-\BOOKMARK [2][-]{subsection.5.2.1}{Next-Generation Sequencing Technologies}{section.5.2}% 84
-\BOOKMARK [2][-]{subsection.5.2.2}{De Novo Sequence Assembly}{section.5.2}% 85
-\BOOKMARK [2][-]{subsection.5.2.3}{Paired End Reads and Mate Pair Sequencing}{section.5.2}% 86
-\BOOKMARK [2][-]{subsection.5.2.4}{Evaluating Assembly Quality}{section.5.2}% 87
-\BOOKMARK [2][-]{subsection.5.2.5}{Error Detection Methods}{section.5.2}% 88
-\BOOKMARK [1][-]{section.5.3}{Theory}{chapter.5}% 89
-\BOOKMARK [2][-]{subsection.5.3.1}{Statistical Analysis of Mate Pair Insert Sizes}{section.5.3}% 90
-\BOOKMARK [2][-]{subsection.5.3.2}{Global Assembly Parameters}{section.5.3}% 91
-\BOOKMARK [2][-]{subsection.5.3.3}{Interval Tree Construction}{section.5.3}% 92
-\BOOKMARK [2][-]{subsection.5.3.4}{Misassembly Location and Contig Breaking}{section.5.3}% 93
-\BOOKMARK [2][-]{subsection.5.3.5}{Availability and Dependencies}{section.5.3}% 94
-\BOOKMARK [1][-]{section.5.4}{Experimental Methods}{chapter.5}% 95
-\BOOKMARK [2][-]{subsection.5.4.1}{Data}{section.5.4}% 96
-\BOOKMARK [2][-]{subsection.5.4.2}{Performance Optimisation}{section.5.4}% 97
-\BOOKMARK [2][-]{subsection.5.4.3}{Workflow Pipeline}{section.5.4}% 98
-\BOOKMARK [1][-]{section.5.5}{Results}{chapter.5}% 99
-\BOOKMARK [2][-]{subsection.5.5.1}{Performance}{section.5.5}% 100
-\BOOKMARK [1][-]{section.5.6}{Conclusions}{chapter.5}% 101
-\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 102
-\BOOKMARK [1][-]{section.6.1}{General Conclusions}{chapter.6}% 103
-\BOOKMARK [2][-]{subsection.6.1.1}{pyFRET}{section.6.1}% 104
-\BOOKMARK [2][-]{subsection.6.1.2}{Inference Analysis of smFRET Data}{section.6.1}% 105
-\BOOKMARK [2][-]{subsection.6.1.3}{Inference Analysis of Oligomer Sizing}{section.6.1}% 106
-\BOOKMARK [2][-]{subsection.6.1.4}{NxRepair}{section.6.1}% 107
-\BOOKMARK [1][-]{section.6.2}{Applications and Future Work}{chapter.6}% 108
-\BOOKMARK [2][-]{subsection.6.2.1}{Open Source Software for smFRET}{section.6.2}% 109
-\BOOKMARK [2][-]{subsection.6.2.2}{Inference Analysis of smFRET Data}{section.6.2}% 110
-\BOOKMARK [2][-]{subsection.6.2.3}{Accurate Sizing of Fluorescent Oligomers}{section.6.2}% 111
-\BOOKMARK [2][-]{subsection.6.2.4}{Error Detection in de novo Assemblies}{section.6.2}% 112
+\BOOKMARK [2][-]{subsection.3.5.1}{Validation using Simulated Data}{section.3.5}% 56
+\BOOKMARK [2][-]{subsection.3.5.2}{Application to Experimental Data}{section.3.5}% 57
+\BOOKMARK [2][-]{subsection.3.5.3}{Justification of the Gamma-Poisson Mixture Model}{section.3.5}% 58
+\BOOKMARK [1][-]{section.3.6}{Conclusions and Future Work}{chapter.3}% 59
+\BOOKMARK [0][-]{chapter.4}{Bayesian Inference of Oligomer Sizes Using Single Molecule FRET}{}% 60
+\BOOKMARK [1][-]{section.4.1}{Overview}{chapter.4}% 61
+\BOOKMARK [1][-]{section.4.2}{Introduction}{chapter.4}% 62
+\BOOKMARK [2][-]{subsection.4.2.1}{Diseases of Protein Aggregation}{section.4.2}% 63
+\BOOKMARK [2][-]{subsection.4.2.2}{Studying Protein Aggregation}{section.4.2}% 64
+\BOOKMARK [2][-]{subsection.4.2.3}{The Relationship Between Size and Photon Emission is Complex}{section.4.2}% 65
+\BOOKMARK [2][-]{subsection.4.2.4}{The DNA Holliday Junction as a Model Oligomer}{section.4.2}% 66
+\BOOKMARK [1][-]{section.4.3}{Theory}{chapter.4}% 67
+\BOOKMARK [2][-]{subsection.4.3.1}{A Simple Poisson Model of Oligomer Photon Emission}{section.4.3}% 68
+\BOOKMARK [2][-]{subsection.4.3.2}{A Gamma-Poisson Mixture Model of Oligomer Photon Emission}{section.4.3}% 69
+\BOOKMARK [1][-]{section.4.4}{Experimental Methods}{chapter.4}% 70
+\BOOKMARK [2][-]{subsection.4.4.1}{Preparation of DNA Holliday Junctions}{section.4.4}% 71
+\BOOKMARK [2][-]{subsection.4.4.2}{Simple FRET Measurements of DNA Holliday Junctions}{section.4.4}% 72
+\BOOKMARK [2][-]{subsection.4.4.3}{Counting Photobleaching Steps Using TIRF Imaging}{section.4.4}% 73
+\BOOKMARK [1][-]{section.4.5}{Results}{chapter.4}% 74
+\BOOKMARK [2][-]{subsection.4.5.1}{The need for a Generative Model}{section.4.5}% 75
+\BOOKMARK [2][-]{subsection.4.5.2}{Understanding the Relationship Between Size and Photon Emission}{section.4.5}% 76
+\BOOKMARK [2][-]{subsection.4.5.3}{Inferring Event Brightness Using the Gamma-Poisson Model}{section.4.5}% 77
+\BOOKMARK [2][-]{subsection.4.5.4}{How Bright Are Holliday Junction Events}{section.4.5}% 78
+\BOOKMARK [2][-]{subsection.4.5.5}{Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}{section.4.5}% 79
+\BOOKMARK [1][-]{section.4.6}{Conclusions}{chapter.4}% 80
+\BOOKMARK [2][-]{subsection.4.6.1}{Complex Relationship between Size and Photon Emission}{section.4.6}% 81
+\BOOKMARK [2][-]{subsection.4.6.2}{Implications for Future Work on Molecular Sizing}{section.4.6}% 82
+\BOOKMARK [0][-]{chapter.5}{Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{}% 83
+\BOOKMARK [1][-]{section.5.1}{Overview}{chapter.5}% 84
+\BOOKMARK [1][-]{section.5.2}{Introduction}{chapter.5}% 85
+\BOOKMARK [2][-]{subsection.5.2.1}{Next-Generation Sequencing Technologies}{section.5.2}% 86
+\BOOKMARK [2][-]{subsection.5.2.2}{De Novo Sequence Assembly}{section.5.2}% 87
+\BOOKMARK [2][-]{subsection.5.2.3}{Paired End Reads and Mate Pair Sequencing}{section.5.2}% 88
+\BOOKMARK [2][-]{subsection.5.2.4}{Evaluating Assembly Quality}{section.5.2}% 89
+\BOOKMARK [2][-]{subsection.5.2.5}{Error Detection Methods}{section.5.2}% 90
+\BOOKMARK [1][-]{section.5.3}{Theory}{chapter.5}% 91
+\BOOKMARK [2][-]{subsection.5.3.1}{Statistical Analysis of Mate Pair Insert Sizes}{section.5.3}% 92
+\BOOKMARK [2][-]{subsection.5.3.2}{Global Assembly Parameters}{section.5.3}% 93
+\BOOKMARK [2][-]{subsection.5.3.3}{Interval Tree Construction}{section.5.3}% 94
+\BOOKMARK [2][-]{subsection.5.3.4}{Misassembly Location and Contig Breaking}{section.5.3}% 95
+\BOOKMARK [2][-]{subsection.5.3.5}{Availability and Dependencies}{section.5.3}% 96
+\BOOKMARK [1][-]{section.5.4}{Experimental Methods}{chapter.5}% 97
+\BOOKMARK [2][-]{subsection.5.4.1}{Data}{section.5.4}% 98
+\BOOKMARK [2][-]{subsection.5.4.2}{Performance Optimisation}{section.5.4}% 99
+\BOOKMARK [2][-]{subsection.5.4.3}{Workflow Pipeline}{section.5.4}% 100
+\BOOKMARK [1][-]{section.5.5}{Results}{chapter.5}% 101
+\BOOKMARK [2][-]{subsection.5.5.1}{Performance}{section.5.5}% 102
+\BOOKMARK [1][-]{section.5.6}{Conclusions}{chapter.5}% 103
+\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 104
+\BOOKMARK [1][-]{section.6.1}{General Conclusions}{chapter.6}% 105
+\BOOKMARK [2][-]{subsection.6.1.1}{pyFRET}{section.6.1}% 106
+\BOOKMARK [2][-]{subsection.6.1.2}{Inference Analysis of smFRET Data}{section.6.1}% 107
+\BOOKMARK [2][-]{subsection.6.1.3}{Inference Analysis of Oligomer Sizing}{section.6.1}% 108
+\BOOKMARK [2][-]{subsection.6.1.4}{NxRepair}{section.6.1}% 109
+\BOOKMARK [1][-]{section.6.2}{Applications and Future Work}{chapter.6}% 110
+\BOOKMARK [2][-]{subsection.6.2.1}{Open Source Software for smFRET}{section.6.2}% 111
+\BOOKMARK [2][-]{subsection.6.2.2}{Inference Analysis of smFRET Data}{section.6.2}% 112
+\BOOKMARK [2][-]{subsection.6.2.3}{Accurate Sizing of Fluorescent Oligomers}{section.6.2}% 113
+\BOOKMARK [2][-]{subsection.6.2.4}{Error Detection in de novo Assemblies}{section.6.2}% 114

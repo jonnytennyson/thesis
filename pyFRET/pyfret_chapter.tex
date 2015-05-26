@@ -66,6 +66,7 @@ Finally, there is the issue of research reproducibility. Different research grou
 
 \subsection{Continuous Excitation}
 \paragraph{Time-binned Data.}
+\label{par:time-binned_data}
 In the most simple smFRET experiment, fluorescently labelled molecules are excited by a laser that will excite the donor dye; all photons reaching the detectors during data acquisition binned as they are received into time-bins of length similar to the expected dwell-time of a molecule in the confocal volume (for small, freely diffusing molecules, a bin-time of 1 ms is typically used). Event selection then simply involves identifying time-bins that contain sufficient photons to meet a specified criterion. Two thresholding criteria are in common use. AND thresholding selects time bins for which $n_D > T_D$ AND $n_A > T_A$ for $n_D$ and $n_A$ photons in the donor and acceptor channels respectively, and $T_D$ and $T_A$ the donor and acceptor thresholds. In a similar manner, SUM thresholding considers the sum of photons observed in the donor and acceptor channels, selecting time bins for which $n_D + n_A > T$.
 
 \paragraph{Fluorescent Burst Data.}

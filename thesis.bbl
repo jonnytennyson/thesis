@@ -623,6 +623,11 @@ C.~I. Bliss and R.~A. Fisher.
 \newblock Fitting the negative binomial distribution to biological data.
 \newblock {\em Biometrics}, 9:176--200, 1953.
 
+\bibitem{Buntine1994}
+W.~L. Buntine.
+\newblock Operations for learning with graphical models.
+\newblock {\em Journal of Artificial Intelligence Research}, 2:159--225, 1994.
+
 \bibitem{green1995}
 P.~J. Green.
 \newblock Reversible jump markov chain monte carlo computation and bayesian

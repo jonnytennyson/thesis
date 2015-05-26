@@ -187,6 +187,7 @@
 \citation{nir06}
 \citation{nir06}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Continuous Excitation}{39}{subsection.2.3.2}}
+\newlabel{par:time-binned_data}{{2.3.2}{39}{Time-binned Data}{section*.22}{}}
 \@writefile{toc}{\contentsline {paragraph}{Time-binned Data.}{39}{section*.22}}
 \@writefile{toc}{\contentsline {paragraph}{Fluorescent Burst Data.}{39}{section*.23}}
 \citation{nir06}
@@ -281,7 +282,7 @@
 \citation{schuler05}
 \citation{deniz01,gell06,ying00}
 \citation{nir06}
-\@writefile{toc}{\contentsline {paragraph}{The Data}{69}{section*.31}}
+\@writefile{toc}{\contentsline {paragraph}{The Data.}{69}{section*.31}}
 \citation{nir06}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Approaches to Analysis of smFRET Data}{70}{subsection.3.2.2}}
 \@writefile{toc}{\contentsline {paragraph}{Event Selection: Thresholding}{70}{section*.32}}
@@ -311,7 +312,7 @@
 \citation{mackay03}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Model Based Inference}{75}{subsection.3.2.3}}
 \newlabel{sect:model_based_inference}{{3.2.3}{75}{Model Based Inference}{subsection.3.2.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Bayesian Inference}{75}{section*.36}}
+\@writefile{toc}{\contentsline {paragraph}{Bayesian Inference.}{75}{section*.36}}
 \newlabel{eq:conditional}{{3.7}{75}{Bayesian Inference}{equation.3.2.7}{}}
 \newlabel{eq:bayes_law}{{3.8}{75}{Bayesian Inference}{equation.3.2.8}{}}
 \citation{mckinney06,bronson09,bronson10,taylor10,taylor11,uphoff2011}
@@ -344,14 +345,15 @@
 \citation{lloydsmith07,bliss53}
 \citation{lloydsmith07}
 \newlabel{eq:gamma}{{3.15}{82}{A Physical Model of a smFRET Experiment}{equation.3.3.15}{}}
+\citation{Buntine1994}
 \citation{hastings70}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Directed Acyclic Graph illustrating the interrelation of parameters in the inference model. In this notation, circles represent random variables, while squares represent constants. Known or observed values are shaded, while hidden variables are not. For each time bin in a dataset of size N, $f_D$ and $f_A$ are respectively the number of donor and acceptor photons observed; $n_{prot}$ is the number of molecules present in the confocal volume. For each of M molecules present per bin, $c_{D}$ and $c_{A}$ are respectively the number of donor and acceptor photons emitted, $r_{sep}$ is the dye separation interval and $\lambda $ is the emission rate of the donor dye. The global variables $\lambda _{D}$ and $\lambda _{A}$ are the background emission rates of donor and acceptor photons; $\lambda _{prot}$ is the rate of observation of fluorescent molecules; $p_{D}$ and $p_{A}$ are the probability that a molecule carries respectively a donor and an acceptor dye; $\lambda _B$ and $k_D$ are the parameters of the Gamma-distribution, from which the local donor emission rate, $\lambda $ is selected. Each random variable is initialized using a prior selected from a uniform distribution across the indicated ranges. The two known constants $R_0$ and $\gamma $ are the dye-separation for which FRET efficiency is 50 \% and the instrumental $\gamma $-factor discussed above.}}{85}{figure.3.7}}
 \newlabel{fig:plate_DAG}{{3.7}{85}{Directed Acyclic Graph illustrating the interrelation of parameters in the inference model. In this notation, circles represent random variables, while squares represent constants. Known or observed values are shaded, while hidden variables are not. For each time bin in a dataset of size N, $f_D$ and $f_A$ are respectively the number of donor and acceptor photons observed; $n_{prot}$ is the number of molecules present in the confocal volume. For each of M molecules present per bin, $c_{D}$ and $c_{A}$ are respectively the number of donor and acceptor photons emitted, $r_{sep}$ is the dye separation interval and $\lambda $ is the emission rate of the donor dye. The global variables $\lambda _{D}$ and $\lambda _{A}$ are the background emission rates of donor and acceptor photons; $\lambda _{prot}$ is the rate of observation of fluorescent molecules; $p_{D}$ and $p_{A}$ are the probability that a molecule carries respectively a donor and an acceptor dye; $\lambda _B$ and $k_D$ are the parameters of the Gamma-distribution, from which the local donor emission rate, $\lambda $ is selected. Each random variable is initialized using a prior selected from a uniform distribution across the indicated ranges. The two known constants $R_0$ and $\gamma $ are the dye-separation for which FRET efficiency is 50 \% and the instrumental $\gamma $-factor discussed above}{figure.3.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Histograms showing the marginal distributions of donor and acceptor photons in a smFRET dataset (1:1 mixture of 4bp and 12 bp DNA duplexes). (A) Marginal distributuon photons in the donor channel. Histogram shows the number of time bins observed to contain this many donor photons. Blue circles show the number of donor photons predicted by our model, using parameters inferred from the dataset using the inference method. (B) Marginal distributuon photons in the acceptor channel. Histogram shows the number of time bins observed to contain this many acceptor photons. Red circles show the number of acceptor photons predicted by our model, using parameters inferred from the dataset.}}{86}{figure.3.8}}
 \newlabel{fig:marginals}{{3.8}{86}{Histograms showing the marginal distributions of donor and acceptor photons in a smFRET dataset (1:1 mixture of 4bp and 12 bp DNA duplexes). (A) Marginal distributuon photons in the donor channel. Histogram shows the number of time bins observed to contain this many donor photons. Blue circles show the number of donor photons predicted by our model, using parameters inferred from the dataset using the inference method. (B) Marginal distributuon photons in the acceptor channel. Histogram shows the number of time bins observed to contain this many acceptor photons. Red circles show the number of acceptor photons predicted by our model, using parameters inferred from the dataset}{figure.3.8}{}}
+\citation{hastings70}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Inference of Model Parameters}{87}{subsection.3.3.2}}
 \newlabel{eq:bayes}{{3.20}{87}{Inference of Model Parameters}{equation.3.3.20}{}}
-\citation{hastings70}
 \citation{metropolis53}
 \citation{hastings70}
 \citation{chib95}
@@ -367,56 +369,58 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}The Metropolis-Hastings Algorithm}{92}{subsection.3.3.3}}
 \citation{deniz01}
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}Experimental Methods}{93}{section.3.4}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces {\bf  {Parameters}} used in the generation of synthetic data.}}{93}{table.3.1}}
+\newlabel{tab:shared}{{3.1}{93}{{\bf {Parameters}} used in the generation of synthetic data}{table.3.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Graph illustrating the convergence of the Metropolis sampler during the initial burn-in period of the sampling. Analysis of the same dataset was initiated using different values of the dye-dye separation from 5 \r A(in blue) to 100 \r A(in red), in steps of 5 \r A. After 500 iterations of the sampler (within the 1000 iterations used in the burn-in period, during which no samples are stored) all initial values have converged on the correct value for the dye-dye separation.}}{94}{figure.3.9}}
 \newlabel{fig:MC_burnin_convergence}{{3.9}{94}{Graph illustrating the convergence of the Metropolis sampler during the initial burn-in period of the sampling. Analysis of the same dataset was initiated using different values of the dye-dye separation from 5 \AA (in blue) to 100 \AA (in red), in steps of 5 \AA . After 500 iterations of the sampler (within the 1000 iterations used in the burn-in period, during which no samples are stored) all initial values have converged on the correct value for the dye-dye separation}{figure.3.9}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces {\bf  {Parameters}} used in the generation of synthetic data.}}{95}{table.3.1}}
-\newlabel{tab:shared}{{3.1}{95}{{\bf {Parameters}} used in the generation of synthetic data}{table.3.1}{}}
 \newlabel{subsect:DNA_prep}{{3.4}{95}{DNA Sample Preparation}{section*.41}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces {\bf  {DNA sequence}} of the donor-labelled strands, where \textbf  {5} is a deoxy-T nucleotide, labelled with Alexa Fluor\textsuperscript  {\textregistered } 488 at the C6 amino position.}}{95}{table.3.2}}
 \newlabel{tab:donor}{{3.2}{95}{{\bf {DNA sequence}} of the donor-labelled strands, where \textbf {5} is a deoxy-T nucleotide, labelled with Alexa Fluor\textsuperscript {\textregistered } 488 at the C6 amino position}{table.3.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces {\bf  {Preparing the dual-labelled dsDNA.}} An acceptor-labelled ssDNA, with the sequence shown was annealed to the donor construct described in Table S1, to yield a dual-labelled construct with the labels separated by the given number of base pairs. In the displayed acceptor-strand sequences, \textbf  {6} is a deoxy-T nucleotide, labelled with Alexa Fluor\textsuperscript  {\textregistered } 647 at the C6 amino position.}}{95}{table.3.3}}
 \newlabel{tab:dsDNA}{{3.3}{95}{{\bf {Preparing the dual-labelled dsDNA.}} An acceptor-labelled ssDNA, with the sequence shown was annealed to the donor construct described in Table S1, to yield a dual-labelled construct with the labels separated by the given number of base pairs. In the displayed acceptor-strand sequences, \textbf {6} is a deoxy-T nucleotide, labelled with Alexa Fluor\textsuperscript {\textregistered } 647 at the C6 amino position}{table.3.3}{}}
-\newlabel{subsect:experimental}{{3.4}{96}{Instrumentation}{section*.42}{}}
+\newlabel{subsect:experimental}{{3.4}{95}{Instrumentation}{section*.42}{}}
 \newlabel{subsect:thresholding}{{3.4}{96}{Thresholding Analysis}{section*.43}{}}
+\newlabel{eq:label}{{3.38}{96}{Determining Labelling Efficiency}{equation.3.4.38}{}}
 \citation{kapanidis05}
-\newlabel{eq:label}{{3.38}{97}{Determining Labelling Efficiency}{equation.3.4.38}{}}
 \newlabel{eq:total_events}{{3.39}{97}{Determining Labelling Efficiency}{equation.3.4.39}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.5}Results}{97}{section.3.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Validation of inference technique using realistic simulated datasets. (A) Inferred FRET efficiency plotted against dye-dye distance. (B) Inferred FRET efficiency plotted against calculated FRET efficiency. (C) Mean inferred FRET efficiency plotted against dataset size, for synthetic datasets with a dye-dye distance of 60 \r A. (D) Inferred population size plotted against actual population size for synthetic datasets with a dye-dye distance of 60 \r A. (E) Error in inferred FRET efficiency plotted against the mean value of background noise. The indicated mean noise was used in both the donor and the acceptor channels. The synthetic datasets used a dye-dye distance of 60 \r A. (F) Error in inferred FRET efficiency plotted against the rate of observation of labelled molecules, for synthetic datasets with a dye-dye distance of 60 \r A. All data points on all plots (A-F) were created using 10 synthetic datasets, generated independently from the same starting parameters. These datasets were analysed independently using the inference method, generating 98 accepted samples per dataset. Shown are the mean values of all accepted samples. The error bars are the values of the highest and the lowest accepted sample values, corresponding to a confidence interval within which the real value lies with probability $>$ 99\%.}}{100}{figure.3.10}}
-\newlabel{fig:fig3_benchmark_synthetic}{{3.10}{100}{Validation of inference technique using realistic simulated datasets. (A) Inferred FRET efficiency plotted against dye-dye distance. (B) Inferred FRET efficiency plotted against calculated FRET efficiency. (C) Mean inferred FRET efficiency plotted against dataset size, for synthetic datasets with a dye-dye distance of 60 \AA . (D) Inferred population size plotted against actual population size for synthetic datasets with a dye-dye distance of 60 \AA . (E) Error in inferred FRET efficiency plotted against the mean value of background noise. The indicated mean noise was used in both the donor and the acceptor channels. The synthetic datasets used a dye-dye distance of 60 \AA . (F) Error in inferred FRET efficiency plotted against the rate of observation of labelled molecules, for synthetic datasets with a dye-dye distance of 60 \AA . All data points on all plots (A-F) were created using 10 synthetic datasets, generated independently from the same starting parameters. These datasets were analysed independently using the inference method, generating 98 accepted samples per dataset. Shown are the mean values of all accepted samples. The error bars are the values of the highest and the lowest accepted sample values, corresponding to a confidence interval within which the real value lies with probability $>$ 99\%}{figure.3.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Validation using Simulated Data}{97}{subsection.3.5.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Validation of inference technique using realistic simulated datasets. (A) Inferred FRET efficiency plotted against dye-dye distance. (B) Inferred FRET efficiency plotted against calculated FRET efficiency. (C) Mean inferred FRET efficiency plotted against dataset size, for synthetic datasets with a dye-dye distance of 60 \r A. (D) Inferred population size plotted against actual population size for synthetic datasets with a dye-dye distance of 60 \r A. (E) Error in inferred FRET efficiency plotted against the mean value of background noise. The indicated mean noise was used in both the donor and the acceptor channels. The synthetic datasets used a dye-dye distance of 60 \r A. (F) Error in inferred FRET efficiency plotted against the rate of observation of labelled molecules, for synthetic datasets with a dye-dye distance of 60 \r A. All data points on all plots (A-F) were created using 10 synthetic datasets, generated independently from the same starting parameters. These datasets were analysed independently using the inference method, generating 98 accepted samples per dataset. Shown are the mean values of all accepted samples. The error bars are the values of the highest and the lowest accepted sample values, corresponding to a confidence interval within which the real value lies with probability $>$ 99\%.}}{99}{figure.3.10}}
+\newlabel{fig:fig3_benchmark_synthetic}{{3.10}{99}{Validation of inference technique using realistic simulated datasets. (A) Inferred FRET efficiency plotted against dye-dye distance. (B) Inferred FRET efficiency plotted against calculated FRET efficiency. (C) Mean inferred FRET efficiency plotted against dataset size, for synthetic datasets with a dye-dye distance of 60 \AA . (D) Inferred population size plotted against actual population size for synthetic datasets with a dye-dye distance of 60 \AA . (E) Error in inferred FRET efficiency plotted against the mean value of background noise. The indicated mean noise was used in both the donor and the acceptor channels. The synthetic datasets used a dye-dye distance of 60 \AA . (F) Error in inferred FRET efficiency plotted against the rate of observation of labelled molecules, for synthetic datasets with a dye-dye distance of 60 \AA . All data points on all plots (A-F) were created using 10 synthetic datasets, generated independently from the same starting parameters. These datasets were analysed independently using the inference method, generating 98 accepted samples per dataset. Shown are the mean values of all accepted samples. The error bars are the values of the highest and the lowest accepted sample values, corresponding to a confidence interval within which the real value lies with probability $>$ 99\%}{figure.3.10}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Graph illustrating the effect of threshold choice on the number of molecules detected (left) and the calculated FRET efficiency (right) of synthetic datasets with FRET efficiencies of 0.88 (A), 0.66 (B), 0.40 (C), 0.21 (D) and 0.11 (E) respectively. For all FRET efficiencies, the chosen threshold has a large effect on the number of molecules detected. The threshold also influences the calculated FRET efficiency, with the effect being particularly large for the highest FRET efficiencies.}}{101}{figure.3.11}}
 \newlabel{fig:threshold_effect}{{3.11}{101}{Graph illustrating the effect of threshold choice on the number of molecules detected (left) and the calculated FRET efficiency (right) of synthetic datasets with FRET efficiencies of 0.88 (A), 0.66 (B), 0.40 (C), 0.21 (D) and 0.11 (E) respectively. For all FRET efficiencies, the chosen threshold has a large effect on the number of molecules detected. The threshold also influences the calculated FRET efficiency, with the effect being particularly large for the highest FRET efficiencies}{figure.3.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Comparison of the inference technique with thresholding-based methodologies. In all plots (A and B), values shown are from 10 datasets generated independently from the same parameters. For thresholding analsyes, error bars represent the standard deviation in the calculated mean from 10 independent datasets. For the inference technique, error bars are the values of the highest and the lowest accepted sample values, corresponding to a confidence interval within which the real value lies with probability $>$ 99\%. (A - top) FRET efficiencies calculated for a series of simulated datasets using the inference methodologies and the AND and SUM thresholding techniques. Orange triangles are the inferred values, open black circles show AND thresholding, red circles show SUM thresholding. (A - middle, bottom) The effect of FRET efficiency on calculated population size. Orange triangles (middle) are the inferred values; open black circles and closed red circles (bottom) are values calculated using AND and SUM thresholding respectively. (B) The effect of FRET efficiency on calculated population size, as calculated using AND (top) and SUM (middle) thresholding and the inference method (bottom). The calculated population size is plotted against the value used in data generation. Open black circles, orange triangles (point up), red circles, green crosses and blue triangles (point down) correspond to FRET efficiencies of 0.88, 0.66, 0.40, 0.21 and 0.11 respectively.}}{103}{figure.3.12}}
-\newlabel{fig:fig4_synthetic_AndSumInfer}{{3.12}{103}{Comparison of the inference technique with thresholding-based methodologies. In all plots (A and B), values shown are from 10 datasets generated independently from the same parameters. For thresholding analsyes, error bars represent the standard deviation in the calculated mean from 10 independent datasets. For the inference technique, error bars are the values of the highest and the lowest accepted sample values, corresponding to a confidence interval within which the real value lies with probability $>$ 99\%. (A - top) FRET efficiencies calculated for a series of simulated datasets using the inference methodologies and the AND and SUM thresholding techniques. Orange triangles are the inferred values, open black circles show AND thresholding, red circles show SUM thresholding. (A - middle, bottom) The effect of FRET efficiency on calculated population size. Orange triangles (middle) are the inferred values; open black circles and closed red circles (bottom) are values calculated using AND and SUM thresholding respectively. (B) The effect of FRET efficiency on calculated population size, as calculated using AND (top) and SUM (middle) thresholding and the inference method (bottom). The calculated population size is plotted against the value used in data generation. Open black circles, orange triangles (point up), red circles, green crosses and blue triangles (point down) correspond to FRET efficiencies of 0.88, 0.66, 0.40, 0.21 and 0.11 respectively}{figure.3.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Comparison of inference and thresholding analysis on datasets generated to simulate mixtures of fluorescent species. Calculated population size is plotted against calculated FRET efficiency. (A) Idealised situation, in which all FRET efficiencies and population sizes are inferred correctly. (B) Results of analysis using the inference method. (C) Analysis using SUM thresholding. (D) Analysis using AND thresholding. In all panels A - D, graphs in the left hand column are coloured according to FRET efficiency: blue crosses (+) , green circles, orange crosses (x), red triangles (point down) and black triangles (point up) represent FRET efficiencies of 0.11, 0.21, 0.40, 0.66 and 0.88 respectively. Graphs in the right hand column are coloured according to population size: orange crosses, red triangles (point down) and black triangles (point up) represent respectively the large, medium and small population sizes.}}{104}{figure.3.13}}
-\newlabel{fig:fig5_synthetic_multi}{{3.13}{104}{Comparison of inference and thresholding analysis on datasets generated to simulate mixtures of fluorescent species. Calculated population size is plotted against calculated FRET efficiency. (A) Idealised situation, in which all FRET efficiencies and population sizes are inferred correctly. (B) Results of analysis using the inference method. (C) Analysis using SUM thresholding. (D) Analysis using AND thresholding. In all panels A - D, graphs in the left hand column are coloured according to FRET efficiency: blue crosses (+) , green circles, orange crosses (x), red triangles (point down) and black triangles (point up) represent FRET efficiencies of 0.11, 0.21, 0.40, 0.66 and 0.88 respectively. Graphs in the right hand column are coloured according to population size: orange crosses, red triangles (point down) and black triangles (point up) represent respectively the large, medium and small population sizes}{figure.3.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Comparison of the inference technique with thresholding-based methodologies. In all plots (A and B), values shown are from 10 datasets generated independently from the same parameters. For thresholding analsyes, error bars represent the standard deviation in the calculated mean from 10 independent datasets. For the inference technique, error bars are the values of the highest and the lowest accepted sample values, corresponding to a confidence interval within which the real value lies with probability $>$ 99\%. (A - top) FRET efficiencies calculated for a series of simulated datasets using the inference methodologies and the AND and SUM thresholding techniques. Orange triangles are the inferred values, open black circles show AND thresholding, red circles show SUM thresholding. (A - middle, bottom) The effect of FRET efficiency on calculated population size. Orange triangles (middle) are the inferred values; open black circles and closed red circles (bottom) are values calculated using AND and SUM thresholding respectively. (B) The effect of FRET efficiency on calculated population size, as calculated using AND (top) and SUM (middle) thresholding and the inference method (bottom). The calculated population size is plotted against the value used in data generation. Open black circles, orange triangles (point up), red circles, green crosses and blue triangles (point down) correspond to FRET efficiencies of 0.88, 0.66, 0.40, 0.21 and 0.11 respectively.}}{102}{figure.3.12}}
+\newlabel{fig:fig4_synthetic_AndSumInfer}{{3.12}{102}{Comparison of the inference technique with thresholding-based methodologies. In all plots (A and B), values shown are from 10 datasets generated independently from the same parameters. For thresholding analsyes, error bars represent the standard deviation in the calculated mean from 10 independent datasets. For the inference technique, error bars are the values of the highest and the lowest accepted sample values, corresponding to a confidence interval within which the real value lies with probability $>$ 99\%. (A - top) FRET efficiencies calculated for a series of simulated datasets using the inference methodologies and the AND and SUM thresholding techniques. Orange triangles are the inferred values, open black circles show AND thresholding, red circles show SUM thresholding. (A - middle, bottom) The effect of FRET efficiency on calculated population size. Orange triangles (middle) are the inferred values; open black circles and closed red circles (bottom) are values calculated using AND and SUM thresholding respectively. (B) The effect of FRET efficiency on calculated population size, as calculated using AND (top) and SUM (middle) thresholding and the inference method (bottom). The calculated population size is plotted against the value used in data generation. Open black circles, orange triangles (point up), red circles, green crosses and blue triangles (point down) correspond to FRET efficiencies of 0.88, 0.66, 0.40, 0.21 and 0.11 respectively}{figure.3.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Comparison of inference and thresholding analysis on datasets generated to simulate mixtures of fluorescent species. Calculated population size is plotted against calculated FRET efficiency. (A) Idealised situation, in which all FRET efficiencies and population sizes are inferred correctly. (B) Results of analysis using the inference method. (C) Analysis using SUM thresholding. (D) Analysis using AND thresholding. In all panels A - D, graphs in the left hand column are coloured according to FRET efficiency: blue crosses (+) , green circles, orange crosses (x), red triangles (point down) and black triangles (point up) represent FRET efficiencies of 0.11, 0.21, 0.40, 0.66 and 0.88 respectively. Graphs in the right hand column are coloured according to population size: orange crosses, red triangles (point down) and black triangles (point up) represent respectively the large, medium and small population sizes.}}{103}{figure.3.13}}
+\newlabel{fig:fig5_synthetic_multi}{{3.13}{103}{Comparison of inference and thresholding analysis on datasets generated to simulate mixtures of fluorescent species. Calculated population size is plotted against calculated FRET efficiency. (A) Idealised situation, in which all FRET efficiencies and population sizes are inferred correctly. (B) Results of analysis using the inference method. (C) Analysis using SUM thresholding. (D) Analysis using AND thresholding. In all panels A - D, graphs in the left hand column are coloured according to FRET efficiency: blue crosses (+) , green circles, orange crosses (x), red triangles (point down) and black triangles (point up) represent FRET efficiencies of 0.11, 0.21, 0.40, 0.66 and 0.88 respectively. Graphs in the right hand column are coloured according to population size: orange crosses, red triangles (point down) and black triangles (point up) represent respectively the large, medium and small population sizes}{figure.3.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Application to Experimental Data}{104}{subsection.3.5.2}}
 \@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces FRET efficiencies and population observation rates used in the generation of simulated datasets with two fluorescent populations.}}{105}{table.3.4}}
 \newlabel{tab:rates}{{3.4}{105}{FRET efficiencies and population observation rates used in the generation of simulated datasets with two fluorescent populations}{table.3.4}{}}
+\citation{chen99}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Results of AND, SUM and inference analysis of smFRET data from single populations of dual-labelled dsDNA. Orange triangles, black squares and red circles show respectively the results of the AND, SUM and inference based analyses. Error bars show the standard deviation of three independent repeats.}}{106}{figure.3.14}}
 \newlabel{fig:fig6_real_single}{{3.14}{106}{Results of AND, SUM and inference analysis of smFRET data from single populations of dual-labelled dsDNA. Orange triangles, black squares and red circles show respectively the results of the AND, SUM and inference based analyses. Error bars show the standard deviation of three independent repeats}{figure.3.14}{}}
-\citation{chen99}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Justification of the Gamma-Poisson Mixture Model}{107}{subsection.3.5.1}}
-\newlabel{subsec:justification}{{3.5.1}{107}{Justification of the Gamma-Poisson Mixture Model}{subsection.3.5.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces Analysis of a mixture of two populations of dual-labelled dsDNA, showing the calculated population sizes and FRET efficiencies. Three different DNA strands were used, with dye attachment sites separated by 4, 10 and 12 bp, corresponding to FRET Efficiencies of 0.79, 0.36 and 0.28 respectively as calculated using the inference method. Two DNA duplexes were combined to give a total DNA concentration of 80 pM, using either 20 pM (low concentration) of one duplex and 60 pM (high concentration) of the other duplex, or 40 pM (intermediate concentration) of both duplexes. Black triangles (point up), red triangles (point down) and orange crosses represent the low, intermediate and high concentrations of DNA respectively. A - C: Inference analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. D - F: AND analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. G - J: SUM analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. Red squares represent the higher-FRET species in a mixture; black circles represent the lower-FRET duplex. Open shapes correspond to a concentration of 60 pM (high), whereas filled shapes correspond to a concentration of 20 pM (low). Half-filled shapes correspond to the intermediate duplex concentration of 40 pM. In J, SUM analysis was not able to resolve two peaks, so a single gaussian was fitted. The single peak area and FRET efficiency are shown with orange triangles. Error bars represent the standard deviation of three independent experiments, except in the case of the 3:1 4 bp : 10 bp mixture, where one repeat was excluded, due to an incorrect concentration of the 4 bp duplex being used.}}{108}{figure.3.15}}
-\newlabel{fig:fig7_real_multi_free}{{3.15}{108}{Analysis of a mixture of two populations of dual-labelled dsDNA, showing the calculated population sizes and FRET efficiencies. Three different DNA strands were used, with dye attachment sites separated by 4, 10 and 12 bp, corresponding to FRET Efficiencies of 0.79, 0.36 and 0.28 respectively as calculated using the inference method. Two DNA duplexes were combined to give a total DNA concentration of 80 pM, using either 20 pM (low concentration) of one duplex and 60 pM (high concentration) of the other duplex, or 40 pM (intermediate concentration) of both duplexes. Black triangles (point up), red triangles (point down) and orange crosses represent the low, intermediate and high concentrations of DNA respectively. A - C: Inference analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. D - F: AND analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. G - J: SUM analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. Red squares represent the higher-FRET species in a mixture; black circles represent the lower-FRET duplex. Open shapes correspond to a concentration of 60 pM (high), whereas filled shapes correspond to a concentration of 20 pM (low). Half-filled shapes correspond to the intermediate duplex concentration of 40 pM. In J, SUM analysis was not able to resolve two peaks, so a single gaussian was fitted. The single peak area and FRET efficiency are shown with orange triangles. Error bars represent the standard deviation of three independent experiments, except in the case of the 3:1 4 bp : 10 bp mixture, where one repeat was excluded, due to an incorrect concentration of the 4 bp duplex being used}{figure.3.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces Analysis of an experimental dataset with a 6bp dye-separation distance, using a gamma-poisson mixture model (A, B) and a simple poisson model (C, D). When the simple poisson model is used, the shape of the inferred photon emission distribution (blue and red circles) for both donor (C) and acceptor (D) photons is heavily influenced by the shape of the poisson distribution and does not reflect the true photon distribtuion (grey histogram). In contrast, when a gamma-poisson mixture model is used, the shape of the inferred photon emission distribution (blue and red circles) for both donor (C) and acceptor (D) photons is much closer to the true emission distributions (grey histogram).}}{109}{figure.3.16}}
-\newlabel{fig:super_poisson}{{3.16}{109}{Analysis of an experimental dataset with a 6bp dye-separation distance, using a gamma-poisson mixture model (A, B) and a simple poisson model (C, D). When the simple poisson model is used, the shape of the inferred photon emission distribution (blue and red circles) for both donor (C) and acceptor (D) photons is heavily influenced by the shape of the poisson distribution and does not reflect the true photon distribtuion (grey histogram). In contrast, when a gamma-poisson mixture model is used, the shape of the inferred photon emission distribution (blue and red circles) for both donor (C) and acceptor (D) photons is much closer to the true emission distributions (grey histogram)}{figure.3.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces Analysis of a mixture of two populations of dual-labelled dsDNA, showing the calculated population sizes and FRET efficiencies. Three different DNA strands were used, with dye attachment sites separated by 4, 10 and 12 bp, corresponding to FRET Efficiencies of 0.79, 0.36 and 0.28 respectively as calculated using the inference method. Two DNA duplexes were combined to give a total DNA concentration of 80 pM, using either 20 pM (low concentration) of one duplex and 60 pM (high concentration) of the other duplex, or 40 pM (intermediate concentration) of both duplexes. Black triangles (point up), red triangles (point down) and orange crosses represent the low, intermediate and high concentrations of DNA respectively. A - C: Inference analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. D - F: AND analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. G - J: SUM analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. Red squares represent the higher-FRET species in a mixture; black circles represent the lower-FRET duplex. Open shapes correspond to a concentration of 60 pM (high), whereas filled shapes correspond to a concentration of 20 pM (low). Half-filled shapes correspond to the intermediate duplex concentration of 40 pM. In J, SUM analysis was not able to resolve two peaks, so a single gaussian was fitted. The single peak area and FRET efficiency are shown with orange triangles. Error bars represent the standard deviation of three independent experiments, except in the case of the 3:1 4 bp : 10 bp mixture, where one repeat was excluded, due to an incorrect concentration of the 4 bp duplex being used.}}{107}{figure.3.15}}
+\newlabel{fig:fig7_real_multi_free}{{3.15}{107}{Analysis of a mixture of two populations of dual-labelled dsDNA, showing the calculated population sizes and FRET efficiencies. Three different DNA strands were used, with dye attachment sites separated by 4, 10 and 12 bp, corresponding to FRET Efficiencies of 0.79, 0.36 and 0.28 respectively as calculated using the inference method. Two DNA duplexes were combined to give a total DNA concentration of 80 pM, using either 20 pM (low concentration) of one duplex and 60 pM (high concentration) of the other duplex, or 40 pM (intermediate concentration) of both duplexes. Black triangles (point up), red triangles (point down) and orange crosses represent the low, intermediate and high concentrations of DNA respectively. A - C: Inference analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. D - F: AND analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. G - J: SUM analysis of 4 and 10 bp, 4 and 12 bp, and 10 and 12 bp mixtures respectively. Red squares represent the higher-FRET species in a mixture; black circles represent the lower-FRET duplex. Open shapes correspond to a concentration of 60 pM (high), whereas filled shapes correspond to a concentration of 20 pM (low). Half-filled shapes correspond to the intermediate duplex concentration of 40 pM. In J, SUM analysis was not able to resolve two peaks, so a single gaussian was fitted. The single peak area and FRET efficiency are shown with orange triangles. Error bars represent the standard deviation of three independent experiments, except in the case of the 3:1 4 bp : 10 bp mixture, where one repeat was excluded, due to an incorrect concentration of the 4 bp duplex being used}{figure.3.15}{}}
 \citation{mackay03}
 \citation{mckinney06,bronson09,bronson10,taylor10,taylor11}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Conclusions and Future Work}{110}{section.3.6}}
-\@writefile{toc}{\contentsline {paragraph}{Extension to ALEX Data}{110}{section*.51}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Justification of the Gamma-Poisson Mixture Model}{108}{subsection.3.5.3}}
+\newlabel{subsec:justification}{{3.5.3}{108}{Justification of the Gamma-Poisson Mixture Model}{subsection.3.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Conclusions and Future Work}{108}{section.3.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces Analysis of an experimental dataset with a 6bp dye-separation distance, using a gamma-poisson mixture model (A, B) and a simple poisson model (C, D). When the simple poisson model is used, the shape of the inferred photon emission distribution (blue and red circles) for both donor (C) and acceptor (D) photons is heavily influenced by the shape of the poisson distribution and does not reflect the true photon distribtuion (grey histogram). In contrast, when a gamma-poisson mixture model is used, the shape of the inferred photon emission distribution (blue and red circles) for both donor (C) and acceptor (D) photons is much closer to the true emission distributions (grey histogram).}}{109}{figure.3.16}}
+\newlabel{fig:super_poisson}{{3.16}{109}{Analysis of an experimental dataset with a 6bp dye-separation distance, using a gamma-poisson mixture model (A, B) and a simple poisson model (C, D). When the simple poisson model is used, the shape of the inferred photon emission distribution (blue and red circles) for both donor (C) and acceptor (D) photons is heavily influenced by the shape of the poisson distribution and does not reflect the true photon distribtuion (grey histogram). In contrast, when a gamma-poisson mixture model is used, the shape of the inferred photon emission distribution (blue and red circles) for both donor (C) and acceptor (D) photons is much closer to the true emission distributions (grey histogram)}{figure.3.16}{}}
 \citation{nir06}
 \citation{green1995}
-\@writefile{toc}{\contentsline {paragraph}{Extension to Photon Arrival Times}{111}{section*.52}}
-\@writefile{toc}{\contentsline {paragraph}{Extension to Inference of Fluorescent Populations}{111}{section*.53}}
-\@writefile{toc}{\contentsline {paragraph}{Extension to Oligomer Sizing}{111}{section*.54}}
-\@writefile{toc}{\contentsline {paragraph}{Conclusion}{112}{section*.55}}
+\@writefile{toc}{\contentsline {paragraph}{Extension to ALEX Data}{110}{section*.49}}
+\@writefile{toc}{\contentsline {paragraph}{Extension to Photon Arrival Times}{110}{section*.50}}
+\@writefile{toc}{\contentsline {paragraph}{Extension to Inference of Fluorescent Populations}{111}{section*.51}}
+\@writefile{toc}{\contentsline {paragraph}{Extension to Oligomer Sizing}{111}{section*.52}}
+\@writefile{toc}{\contentsline {paragraph}{Conclusion}{111}{section*.53}}
 \citation{holliday1964}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Bayesian Inference of Oligomer Sizes Using Single Molecule FRET}{113}{chapter.4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Bayesian Inference of Oligomer Sizes Using Single Molecule FRET}{112}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:sizing}{{4}{113}{Bayesian Inference of Oligomer Sizes Using Single Molecule FRET}{chapter.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Overview}{113}{section.4.1}}
+\newlabel{chap:sizing}{{4}{112}{Bayesian Inference of Oligomer Sizes Using Single Molecule FRET}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Overview}{112}{section.4.1}}
 \citation{ueda1993}
 \citation{spillantini1997}
 \citation{Noe2004}
@@ -428,8 +432,8 @@
 \citation{Goldfarb1992}
 \citation{Clark1988}
 \citation{Safar1993}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Introduction}{114}{section.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Diseases of Protein Aggregation}{114}{subsection.4.2.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Introduction}{113}{section.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Diseases of Protein Aggregation}{113}{subsection.4.2.1}}
 \citation{Conway1999}
 \citation{Haas2007}
 \citation{Muchowski2005}
@@ -444,113 +448,113 @@
 \citation{Gras2011}
 \citation{Langkilde2009}
 \citation{Cohen2012}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Studying Protein Aggregation}{115}{subsection.4.2.2}}
-\newlabel{subect:aggregation}{{4.2.2}{115}{Studying Protein Aggregation}{subsection.4.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Studying Protein Aggregation}{114}{subsection.4.2.2}}
+\newlabel{subect:aggregation}{{4.2.2}{114}{Studying Protein Aggregation}{subsection.4.2.2}{}}
 \citation{Cohen2012}
 \citation{Cohen2012}
 \citation{Schmidt2005}
 \citation{Lashuel2002,Murray2003}
 \citation{orte08,cremades2012}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Schematic showing the main stages in an amyloid proliferation cycle. Figure adapted from\nobreakspace  {}\cite  {knowles2009}.}}{116}{figure.4.1}}
-\newlabel{fig:aggregation_pathways}{{4.1}{116}{Schematic showing the main stages in an amyloid proliferation cycle. Figure adapted from~\cite {knowles2009}}{figure.4.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Using smFRET to Identify Oligomers}{116}{section*.56}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces ThT fluorescence is used to follow the kinetics of amyloid formation. A) The molecular structure of ThT. When free in solution, rotation around the central bond between the benzylamine and benzathiol rings within the molecule enables twisted intramolecular charge transfer in the excited state, and a low quantum yield. On binding to extended beta-sheet structures, the rotation is prevented and the fluorescence quantum yield increases significantly. B) Using ThT fluorescence to track the kinetics of amyloid formation reveals a characteristic sigmoidal curve, displaying an initial lag phase, followed by a rapid growth phase that plateaus once the aggregation reaction reaches equilibrium. B) is adapted from \cite  {Cohen2012}.}}{117}{figure.4.2}}
-\newlabel{fig:ThT}{{4.2}{117}{ThT fluorescence is used to follow the kinetics of amyloid formation. A) The molecular structure of ThT. When free in solution, rotation around the central bond between the benzylamine and benzathiol rings within the molecule enables twisted intramolecular charge transfer in the excited state, and a low quantum yield. On binding to extended beta-sheet structures, the rotation is prevented and the fluorescence quantum yield increases significantly. B) Using ThT fluorescence to track the kinetics of amyloid formation reveals a characteristic sigmoidal curve, displaying an initial lag phase, followed by a rapid growth phase that plateaus once the aggregation reaction reaches equilibrium. B) is adapted from \cite {Cohen2012}}{figure.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Schematic showing the main stages in an amyloid proliferation cycle. Figure adapted from\nobreakspace  {}\cite  {knowles2009}.}}{115}{figure.4.1}}
+\newlabel{fig:aggregation_pathways}{{4.1}{115}{Schematic showing the main stages in an amyloid proliferation cycle. Figure adapted from~\cite {knowles2009}}{figure.4.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Using smFRET to Identify Oligomers}{115}{section*.54}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces ThT fluorescence is used to follow the kinetics of amyloid formation. A) The molecular structure of ThT. When free in solution, rotation around the central bond between the benzylamine and benzathiol rings within the molecule enables twisted intramolecular charge transfer in the excited state, and a low quantum yield. On binding to extended beta-sheet structures, the rotation is prevented and the fluorescence quantum yield increases significantly. B) Using ThT fluorescence to track the kinetics of amyloid formation reveals a characteristic sigmoidal curve, displaying an initial lag phase, followed by a rapid growth phase that plateaus once the aggregation reaction reaches equilibrium. B) is adapted from \cite  {Cohen2012}.}}{116}{figure.4.2}}
+\newlabel{fig:ThT}{{4.2}{116}{ThT fluorescence is used to follow the kinetics of amyloid formation. A) The molecular structure of ThT. When free in solution, rotation around the central bond between the benzylamine and benzathiol rings within the molecule enables twisted intramolecular charge transfer in the excited state, and a low quantum yield. On binding to extended beta-sheet structures, the rotation is prevented and the fluorescence quantum yield increases significantly. B) Using ThT fluorescence to track the kinetics of amyloid formation reveals a characteristic sigmoidal curve, displaying an initial lag phase, followed by a rapid growth phase that plateaus once the aggregation reaction reaches equilibrium. B) is adapted from \cite {Cohen2012}}{figure.4.2}{}}
 \citation{orte08}
 \citation{chen1999}
 \citation{murphy14}
 \citation{holliday1964}
 \citation{potter1976}
 \citation{mckinney03,uphoff2010,Hyeon2012}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}The Relationship Between Size and Photon Emission is Complex}{118}{subsection.4.2.3}}
-\newlabel{eq:size_linear}{{4.1}{118}{The Relationship Between Size and Photon Emission is Complex}{equation.4.2.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Schematic of a synthetic Holliday junction. The four arms, named B, H, R and X are shown in red, blue, yellow and green respectively.}}{119}{figure.4.3}}
-\newlabel{fig:holliday_junction}{{4.3}{119}{Schematic of a synthetic Holliday junction. The four arms, named B, H, R and X are shown in red, blue, yellow and green respectively}{figure.4.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}The DNA Holliday Junction as a Model Oligomer}{119}{subsection.4.2.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Schematic showing the four labelling states of our synthetic Holliday Junction construct. Shown clockwise from top left: The monomer model has only Arm B labelled (top left); the dimer has both arms B and X labelled (top right); the trimer model has labels on arms B, H and R (bottom right); in the tetramer model all four arms are labelled (bottom left).}}{120}{figure.4.4}}
-\newlabel{fig:holliday_junction_labelling}{{4.4}{120}{Schematic showing the four labelling states of our synthetic Holliday Junction construct. Shown clockwise from top left: The monomer model has only Arm B labelled (top left); the dimer has both arms B and X labelled (top right); the trimer model has labels on arms B, H and R (bottom right); in the tetramer model all four arms are labelled (bottom left)}{figure.4.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Theory}{121}{section.4.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}A Simple Poisson Model of Oligomer Photon Emission}{121}{subsection.4.3.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Schematic showing the problem of determining oligomer size from the number of observed photons. A) If we observe an average of 10 photons when a monomer diffuses through the confocal volume, how many more should we expect if a tetramer takes the same pathway through the confocal volume? B) Possible relationships between the number of fluorophores and the average number of photons observed. If there is a linear relationship (blue line) then we expect a tetramer to emit an average of 40 photons; if the relationship is not linear, we may expect fewer photons (red and green lines).}}{122}{figure.4.5}}
-\newlabel{fig:oligomers}{{4.5}{122}{Schematic showing the problem of determining oligomer size from the number of observed photons. A) If we observe an average of 10 photons when a monomer diffuses through the confocal volume, how many more should we expect if a tetramer takes the same pathway through the confocal volume? B) Possible relationships between the number of fluorophores and the average number of photons observed. If there is a linear relationship (blue line) then we expect a tetramer to emit an average of 40 photons; if the relationship is not linear, we may expect fewer photons (red and green lines)}{figure.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}The Relationship Between Size and Photon Emission is Complex}{117}{subsection.4.2.3}}
+\newlabel{eq:size_linear}{{4.1}{117}{The Relationship Between Size and Photon Emission is Complex}{equation.4.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Schematic of a synthetic Holliday junction. The four arms, named B, H, R and X are shown in red, blue, yellow and green respectively.}}{118}{figure.4.3}}
+\newlabel{fig:holliday_junction}{{4.3}{118}{Schematic of a synthetic Holliday junction. The four arms, named B, H, R and X are shown in red, blue, yellow and green respectively}{figure.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}The DNA Holliday Junction as a Model Oligomer}{118}{subsection.4.2.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Schematic showing the four labelling states of our synthetic Holliday Junction construct. Shown clockwise from top left: The monomer model has only Arm B labelled (top left); the dimer has both arms B and X labelled (top right); the trimer model has labels on arms B, H and R (bottom right); in the tetramer model all four arms are labelled (bottom left).}}{119}{figure.4.4}}
+\newlabel{fig:holliday_junction_labelling}{{4.4}{119}{Schematic showing the four labelling states of our synthetic Holliday Junction construct. Shown clockwise from top left: The monomer model has only Arm B labelled (top left); the dimer has both arms B and X labelled (top right); the trimer model has labels on arms B, H and R (bottom right); in the tetramer model all four arms are labelled (bottom left)}{figure.4.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Theory}{120}{section.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}A Simple Poisson Model of Oligomer Photon Emission}{120}{subsection.4.3.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Schematic showing the problem of determining oligomer size from the number of observed photons. A) If we observe an average of 10 photons when a monomer diffuses through the confocal volume, how many more should we expect if a tetramer takes the same pathway through the confocal volume? B) Possible relationships between the number of fluorophores and the average number of photons observed. If there is a linear relationship (blue line) then we expect a tetramer to emit an average of 40 photons; if the relationship is not linear, we may expect fewer photons (red and green lines).}}{121}{figure.4.5}}
+\newlabel{fig:oligomers}{{4.5}{121}{Schematic showing the problem of determining oligomer size from the number of observed photons. A) If we observe an average of 10 photons when a monomer diffuses through the confocal volume, how many more should we expect if a tetramer takes the same pathway through the confocal volume? B) Possible relationships between the number of fluorophores and the average number of photons observed. If there is a linear relationship (blue line) then we expect a tetramer to emit an average of 40 photons; if the relationship is not linear, we may expect fewer photons (red and green lines)}{figure.4.5}{}}
 \citation{Lehmann1986}
 \citation{murphy14}
-\newlabel{eq:nprot}{{4.3}{123}{A Simple Poisson Model of Oligomer Photon Emission}{equation.4.3.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}A Gamma-Poisson Mixture Model of Oligomer Photon Emission}{124}{subsection.4.3.2}}
-\newlabel{eq:gamma_size}{{4.5}{124}{A Gamma-Poisson Mixture Model of Oligomer Photon Emission}{equation.4.3.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Experimental Methods}{125}{section.4.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Preparation of DNA Holliday Junctions}{125}{subsection.4.4.1}}
-\@writefile{toc}{\contentsline {paragraph}{Holliday Junction Preparation}{125}{section*.57}}
-\@writefile{toc}{\contentsline {paragraph}{Holliday Junction Purification}{125}{section*.58}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces DNA sequences of the four arms of the Holliday Junction. Each sequence is shown in the 3' - 5' direction/ {\bf  5} is a maleimide linkage to Alexa Fluor 488, present in the fluorescently labelled DNA strands, but absent in their unlabelled partners.}}{126}{table.4.1}}
-\newlabel{tab:table1_DNAsequences}{{4.1}{126}{DNA sequences of the four arms of the Holliday Junction. Each sequence is shown in the 3' - 5' direction/ {\bf 5} is a maleimide linkage to Alexa Fluor 488, present in the fluorescently labelled DNA strands, but absent in their unlabelled partners}{table.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Simple FRET Measurements of DNA Holliday Junctions}{126}{subsection.4.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Counting Photobleaching Steps Using TIRF Imaging}{127}{subsection.4.4.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Results}{127}{section.4.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}The need for a Generative Model}{127}{subsection.4.5.1}}
+\newlabel{eq:nprot}{{4.3}{122}{A Simple Poisson Model of Oligomer Photon Emission}{equation.4.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}A Gamma-Poisson Mixture Model of Oligomer Photon Emission}{123}{subsection.4.3.2}}
+\newlabel{eq:gamma_size}{{4.5}{123}{A Gamma-Poisson Mixture Model of Oligomer Photon Emission}{equation.4.3.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Experimental Methods}{124}{section.4.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Preparation of DNA Holliday Junctions}{124}{subsection.4.4.1}}
+\@writefile{toc}{\contentsline {paragraph}{Holliday Junction Preparation}{124}{section*.55}}
+\@writefile{toc}{\contentsline {paragraph}{Holliday Junction Purification}{124}{section*.56}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces DNA sequences of the four arms of the Holliday Junction. Each sequence is shown in the 3' - 5' direction/ {\bf  5} is a maleimide linkage to Alexa Fluor 488, present in the fluorescently labelled DNA strands, but absent in their unlabelled partners.}}{125}{table.4.1}}
+\newlabel{tab:table1_DNAsequences}{{4.1}{125}{DNA sequences of the four arms of the Holliday Junction. Each sequence is shown in the 3' - 5' direction/ {\bf 5} is a maleimide linkage to Alexa Fluor 488, present in the fluorescently labelled DNA strands, but absent in their unlabelled partners}{table.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Simple FRET Measurements of DNA Holliday Junctions}{125}{subsection.4.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Counting Photobleaching Steps Using TIRF Imaging}{126}{subsection.4.4.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Results}{126}{section.4.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}The need for a Generative Model}{126}{subsection.4.5.1}}
 \citation{cremades2012}
-\newlabel{eq:size_linear}{{4.7}{128}{The need for a Generative Model}{equation.4.5.7}{}}
-\newlabel{eq:size_linear_simple}{{4.8}{128}{The need for a Generative Model}{equation.4.5.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Simulating oligomer photon emission using the simple poisson model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for simple poisson emission. b) The same distributions as in a), plotted using a logarithmic scale.}}{129}{figure.4.6}}
-\newlabel{fig:poisson_size_photons}{{4.6}{129}{Simulating oligomer photon emission using the simple poisson model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for simple poisson emission. b) The same distributions as in a), plotted using a logarithmic scale}{figure.4.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces True and calculated oligomer sizes for data simulated using poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) closely approximates the true size distribution (grey histogram).}}{130}{figure.4.7}}
-\newlabel{fig:poisson_size_photons_uniform}{{4.7}{130}{True and calculated oligomer sizes for data simulated using poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) closely approximates the true size distribution (grey histogram)}{figure.4.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Simulating oligomer photon emission using the gamma-poisson mixure model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for gamma-poisson emission. b) The same distributions as in a), plotted using a logarithmic scale to show emission detail.}}{131}{figure.4.8}}
-\newlabel{fig:gamma_poisson_size_photons}{{4.8}{131}{Simulating oligomer photon emission using the gamma-poisson mixure model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for gamma-poisson emission. b) The same distributions as in a), plotted using a logarithmic scale to show emission detail}{figure.4.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Understanding the Relationship Between Size and Photon Emission}{131}{subsection.4.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces True and calculated oligomer sizes for data simulated using gamma-poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) is an extremely poor approximation of the true size distribution (grey histogram).}}{132}{figure.4.9}}
-\newlabel{fig:gamma_poisson_size_photons_uniform}{{4.9}{132}{True and calculated oligomer sizes for data simulated using gamma-poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) is an extremely poor approximation of the true size distribution (grey histogram)}{figure.4.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Histograms of experimental photon emission distributions for labelled Holliday Junctions. All time-bins are shown. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively.}}{134}{figure.4.10}}
-\newlabel{fig:HJ_oligomers}{{4.10}{134}{Histograms of experimental photon emission distributions for labelled Holliday Junctions. All time-bins are shown. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively}{figure.4.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Histograms of photon emission distributions for model oligomers simulated using a pure poisson model. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively.}}{135}{figure.4.11}}
-\newlabel{fig:poisson_oligomers}{{4.11}{135}{Histograms of photon emission distributions for model oligomers simulated using a pure poisson model. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively}{figure.4.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Histograms of photon emission distributions for model oligomers simulated using a gamma-poisson mixture model. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively.}}{136}{figure.4.12}}
-\newlabel{fig:gamma_poisson_oligomers}{{4.12}{136}{Histograms of photon emission distributions for model oligomers simulated using a gamma-poisson mixture model. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively}{figure.4.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Inferring Event Brightness Using the Gamma-Poisson Model}{137}{subsection.4.5.3}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Parameters used in simulating emission datasets for oligomers of known size.}}{137}{table.4.2}}
-\newlabel{tab:oligomer_params}{{4.2}{137}{Parameters used in simulating emission datasets for oligomers of known size}{table.4.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Plot of inferred vs true values of $\lambda _{\text  {DB}}$. The dashed line shows the expected trend, but the inferred values are underestimated for high values of $\lambda _{\text  {DB}}$. Error bars show the standard deviation of 100 samples.}}{138}{figure.4.13}}
-\newlabel{fig:gamma_poisson_oligomers}{{4.13}{138}{Plot of inferred vs true values of $\lambda _{\text {DB}}$. The dashed line shows the expected trend, but the inferred values are underestimated for high values of $\lambda _{\text {DB}}$. Error bars show the standard deviation of 100 samples}{figure.4.13}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Initial values used in inferring oligomers of known size.}}{139}{table.4.3}}
-\newlabel{tab:initial_values}{{4.3}{139}{Initial values used in inferring oligomers of known size}{table.4.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Histograms of photon emission distributions for simulated a) monomers and b) trimers. The overlaid blue circles show the number of photons predicted by the gamma-poisson mixture model, using parameters inferred from the dataset using the Metropolis sampler.}}{139}{figure.4.14}}
-\newlabel{fig:hist_fit_trimer}{{4.14}{139}{Histograms of photon emission distributions for simulated a) monomers and b) trimers. The overlaid blue circles show the number of photons predicted by the gamma-poisson mixture model, using parameters inferred from the dataset using the Metropolis sampler}{figure.4.14}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces Convergence of the inferred value of $\lambda _{\text  {DB}}$ during burn-in for simulations of the trimeric oligomer. The black dashed line represents the true value of $\lambda _{\text  {DB}}$.}}{140}{figure.4.15}}
-\newlabel{fig:convergence}{{4.15}{140}{Convergence of the inferred value of $\lambda _{\text {DB}}$ during burn-in for simulations of the trimeric oligomer. The black dashed line represents the true value of $\lambda _{\text {DB}}$}{figure.4.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Overlays of simulated and experimental photon emission distributions for a) monomer and c) trimer oligomers. The blue histograms display experimental data from the Holliday Junction model oligomers. The green histograms display data from simulations using the gamma-poisson mixture model.}}{141}{figure.4.16}}
-\newlabel{fig:HJ_sim_overlay}{{4.16}{141}{Overlays of simulated and experimental photon emission distributions for a) monomer and c) trimer oligomers. The blue histograms display experimental data from the Holliday Junction model oligomers. The green histograms display data from simulations using the gamma-poisson mixture model}{figure.4.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}How Bright Are Holliday Junction Events}{141}{subsection.4.5.4}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Inferred parameter values conditioned on a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text  {blue}}$. At low values of $R_{\text  {blue}}$, overfiting occurs and the inferred parameters are unphysical. When we try to infer the value of $R_{\text  {blue}}$ (bottom row), the data is also overfitted.}}{142}{table.4.4}}
-\newlabel{tab:R_blue}{{4.4}{142}{Inferred parameter values conditioned on a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text {blue}}$. At low values of $R_{\text {blue}}$, overfiting occurs and the inferred parameters are unphysical. When we try to infer the value of $R_{\text {blue}}$ (bottom row), the data is also overfitted}{table.4.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Photon emission distributions for datasets simulated with different values of the overdispersion parameter $R_{\text  {blue}}$. The values used are shown in the legend. For high values of $R_{\text  {blue}}$, the degree of overdispersal is small, and the fluorescence emission distribution resembles a pure poisson distribuion (black histogram). For small values of $R_{\text  {blue}}$, the amount of overdispersal is much greater and the tail of the distribution is lengthened (green histogram).}}{143}{figure.4.17}}
-\newlabel{fig:R_blue}{{4.17}{143}{Photon emission distributions for datasets simulated with different values of the overdispersion parameter $R_{\text {blue}}$. The values used are shown in the legend. For high values of $R_{\text {blue}}$, the degree of overdispersal is small, and the fluorescence emission distribution resembles a pure poisson distribuion (black histogram). For small values of $R_{\text {blue}}$, the amount of overdispersal is much greater and the tail of the distribution is lengthened (green histogram)}{figure.4.17}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.18}{\ignorespaces Fitting a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text  {blue}}$: a) $R_{\text  {blue}}$ = 0.1, b) $R_{\text  {blue}}$ = 0.5. c) $R_{\text  {blue}}$ = 1.0, d) $R_{\text  {blue}}$ = 2.0. Although the data superficially seems better fitted when $R_{\text  {blue}}$ is smaller, low values of $R_{\text  {blue}}$ overfit random variations and produce unphysical parameter values (see Table\nobreakspace  {}\ref  {tab:R_blue}).}}{144}{figure.4.18}}
-\newlabel{fig:vary_Rblue}{{4.18}{144}{Fitting a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text {blue}}$: a) $R_{\text {blue}}$ = 0.1, b) $R_{\text {blue}}$ = 0.5. c) $R_{\text {blue}}$ = 1.0, d) $R_{\text {blue}}$ = 2.0. Although the data superficially seems better fitted when $R_{\text {blue}}$ is smaller, low values of $R_{\text {blue}}$ overfit random variations and produce unphysical parameter values (see Table~\ref {tab:R_blue})}{figure.4.18}{}}
+\newlabel{eq:size_linear}{{4.7}{127}{The need for a Generative Model}{equation.4.5.7}{}}
+\newlabel{eq:size_linear_simple}{{4.8}{127}{The need for a Generative Model}{equation.4.5.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Simulating oligomer photon emission using the simple poisson model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for simple poisson emission. b) The same distributions as in a), plotted using a logarithmic scale.}}{128}{figure.4.6}}
+\newlabel{fig:poisson_size_photons}{{4.6}{128}{Simulating oligomer photon emission using the simple poisson model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for simple poisson emission. b) The same distributions as in a), plotted using a logarithmic scale}{figure.4.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces True and calculated oligomer sizes for data simulated using poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) closely approximates the true size distribution (grey histogram).}}{129}{figure.4.7}}
+\newlabel{fig:poisson_size_photons_uniform}{{4.7}{129}{True and calculated oligomer sizes for data simulated using poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) closely approximates the true size distribution (grey histogram)}{figure.4.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Simulating oligomer photon emission using the gamma-poisson mixure model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for gamma-poisson emission. b) The same distributions as in a), plotted using a logarithmic scale to show emission detail.}}{130}{figure.4.8}}
+\newlabel{fig:gamma_poisson_size_photons}{{4.8}{130}{Simulating oligomer photon emission using the gamma-poisson mixure model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for gamma-poisson emission. b) The same distributions as in a), plotted using a logarithmic scale to show emission detail}{figure.4.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Understanding the Relationship Between Size and Photon Emission}{130}{subsection.4.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces True and calculated oligomer sizes for data simulated using gamma-poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) is an extremely poor approximation of the true size distribution (grey histogram).}}{131}{figure.4.9}}
+\newlabel{fig:gamma_poisson_size_photons_uniform}{{4.9}{131}{True and calculated oligomer sizes for data simulated using gamma-poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) is an extremely poor approximation of the true size distribution (grey histogram)}{figure.4.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Histograms of experimental photon emission distributions for labelled Holliday Junctions. All time-bins are shown. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively.}}{133}{figure.4.10}}
+\newlabel{fig:HJ_oligomers}{{4.10}{133}{Histograms of experimental photon emission distributions for labelled Holliday Junctions. All time-bins are shown. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively}{figure.4.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Histograms of photon emission distributions for model oligomers simulated using a pure poisson model. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively.}}{134}{figure.4.11}}
+\newlabel{fig:poisson_oligomers}{{4.11}{134}{Histograms of photon emission distributions for model oligomers simulated using a pure poisson model. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively}{figure.4.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Histograms of photon emission distributions for model oligomers simulated using a gamma-poisson mixture model. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively.}}{135}{figure.4.12}}
+\newlabel{fig:gamma_poisson_oligomers}{{4.12}{135}{Histograms of photon emission distributions for model oligomers simulated using a gamma-poisson mixture model. Data from monomer, dimer, trimer and tetramer models are show in dark blue, green, red and cyan respectively}{figure.4.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Inferring Event Brightness Using the Gamma-Poisson Model}{136}{subsection.4.5.3}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Parameters used in simulating emission datasets for oligomers of known size.}}{136}{table.4.2}}
+\newlabel{tab:oligomer_params}{{4.2}{136}{Parameters used in simulating emission datasets for oligomers of known size}{table.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Plot of inferred vs true values of $\lambda _{\text  {DB}}$. The dashed line shows the expected trend, but the inferred values are underestimated for high values of $\lambda _{\text  {DB}}$. Error bars show the standard deviation of 100 samples.}}{137}{figure.4.13}}
+\newlabel{fig:gamma_poisson_oligomers}{{4.13}{137}{Plot of inferred vs true values of $\lambda _{\text {DB}}$. The dashed line shows the expected trend, but the inferred values are underestimated for high values of $\lambda _{\text {DB}}$. Error bars show the standard deviation of 100 samples}{figure.4.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Initial values used in inferring oligomers of known size.}}{138}{table.4.3}}
+\newlabel{tab:initial_values}{{4.3}{138}{Initial values used in inferring oligomers of known size}{table.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Histograms of photon emission distributions for simulated a) monomers and b) trimers. The overlaid blue circles show the number of photons predicted by the gamma-poisson mixture model, using parameters inferred from the dataset using the Metropolis sampler.}}{138}{figure.4.14}}
+\newlabel{fig:hist_fit_trimer}{{4.14}{138}{Histograms of photon emission distributions for simulated a) monomers and b) trimers. The overlaid blue circles show the number of photons predicted by the gamma-poisson mixture model, using parameters inferred from the dataset using the Metropolis sampler}{figure.4.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces Convergence of the inferred value of $\lambda _{\text  {DB}}$ during burn-in for simulations of the trimeric oligomer. The black dashed line represents the true value of $\lambda _{\text  {DB}}$.}}{139}{figure.4.15}}
+\newlabel{fig:convergence}{{4.15}{139}{Convergence of the inferred value of $\lambda _{\text {DB}}$ during burn-in for simulations of the trimeric oligomer. The black dashed line represents the true value of $\lambda _{\text {DB}}$}{figure.4.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Overlays of simulated and experimental photon emission distributions for a) monomer and c) trimer oligomers. The blue histograms display experimental data from the Holliday Junction model oligomers. The green histograms display data from simulations using the gamma-poisson mixture model.}}{140}{figure.4.16}}
+\newlabel{fig:HJ_sim_overlay}{{4.16}{140}{Overlays of simulated and experimental photon emission distributions for a) monomer and c) trimer oligomers. The blue histograms display experimental data from the Holliday Junction model oligomers. The green histograms display data from simulations using the gamma-poisson mixture model}{figure.4.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}How Bright Are Holliday Junction Events}{140}{subsection.4.5.4}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Inferred parameter values conditioned on a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text  {blue}}$. At low values of $R_{\text  {blue}}$, overfiting occurs and the inferred parameters are unphysical. When we try to infer the value of $R_{\text  {blue}}$ (bottom row), the data is also overfitted.}}{141}{table.4.4}}
+\newlabel{tab:R_blue}{{4.4}{141}{Inferred parameter values conditioned on a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text {blue}}$. At low values of $R_{\text {blue}}$, overfiting occurs and the inferred parameters are unphysical. When we try to infer the value of $R_{\text {blue}}$ (bottom row), the data is also overfitted}{table.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Photon emission distributions for datasets simulated with different values of the overdispersion parameter $R_{\text  {blue}}$. The values used are shown in the legend. For high values of $R_{\text  {blue}}$, the degree of overdispersal is small, and the fluorescence emission distribution resembles a pure poisson distribuion (black histogram). For small values of $R_{\text  {blue}}$, the amount of overdispersal is much greater and the tail of the distribution is lengthened (green histogram).}}{142}{figure.4.17}}
+\newlabel{fig:R_blue}{{4.17}{142}{Photon emission distributions for datasets simulated with different values of the overdispersion parameter $R_{\text {blue}}$. The values used are shown in the legend. For high values of $R_{\text {blue}}$, the degree of overdispersal is small, and the fluorescence emission distribution resembles a pure poisson distribuion (black histogram). For small values of $R_{\text {blue}}$, the amount of overdispersal is much greater and the tail of the distribution is lengthened (green histogram)}{figure.4.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.18}{\ignorespaces Fitting a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text  {blue}}$: a) $R_{\text  {blue}}$ = 0.1, b) $R_{\text  {blue}}$ = 0.5. c) $R_{\text  {blue}}$ = 1.0, d) $R_{\text  {blue}}$ = 2.0. Although the data superficially seems better fitted when $R_{\text  {blue}}$ is smaller, low values of $R_{\text  {blue}}$ overfit random variations and produce unphysical parameter values (see Table\nobreakspace  {}\ref  {tab:R_blue}).}}{143}{figure.4.18}}
+\newlabel{fig:vary_Rblue}{{4.18}{143}{Fitting a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text {blue}}$: a) $R_{\text {blue}}$ = 0.1, b) $R_{\text {blue}}$ = 0.5. c) $R_{\text {blue}}$ = 1.0, d) $R_{\text {blue}}$ = 2.0. Although the data superficially seems better fitted when $R_{\text {blue}}$ is smaller, low values of $R_{\text {blue}}$ overfit random variations and produce unphysical parameter values (see Table~\ref {tab:R_blue})}{figure.4.18}{}}
 \citation{zondervan03}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.5}Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}{145}{subsection.4.5.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.19}{\ignorespaces Photobleaching analysis of the Holliday Junction oligomer models. Although the mean number of photobleaching steps observed does increase with the number of attached dyes, there is considerable heterogeneity. \emph  {This figure was prepared by Kristina A. Ganzinger and used with permission}.}}{146}{figure.4.19}}
-\newlabel{fig:photobleaching}{{4.19}{146}{Photobleaching analysis of the Holliday Junction oligomer models. Although the mean number of photobleaching steps observed does increase with the number of attached dyes, there is considerable heterogeneity. \emph {This figure was prepared by Kristina A. Ganzinger and used with permission}}{figure.4.19}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.20}{\ignorespaces Two example photon emission trajectories from monomer Holliday Junctions that show reversible photoblinking behaviour.}}{146}{figure.4.20}}
-\newlabel{fig:blinking}{{4.20}{146}{Two example photon emission trajectories from monomer Holliday Junctions that show reversible photoblinking behaviour}{figure.4.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.5}Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}{144}{subsection.4.5.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.19}{\ignorespaces Photobleaching analysis of the Holliday Junction oligomer models. Although the mean number of photobleaching steps observed does increase with the number of attached dyes, there is considerable heterogeneity. \emph  {This figure was prepared by Kristina A. Ganzinger and used with permission}.}}{145}{figure.4.19}}
+\newlabel{fig:photobleaching}{{4.19}{145}{Photobleaching analysis of the Holliday Junction oligomer models. Although the mean number of photobleaching steps observed does increase with the number of attached dyes, there is considerable heterogeneity. \emph {This figure was prepared by Kristina A. Ganzinger and used with permission}}{figure.4.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.20}{\ignorespaces Two example photon emission trajectories from monomer Holliday Junctions that show reversible photoblinking behaviour.}}{145}{figure.4.20}}
+\newlabel{fig:blinking}{{4.20}{145}{Two example photon emission trajectories from monomer Holliday Junctions that show reversible photoblinking behaviour}{figure.4.20}{}}
 \citation{zondervan03}
 \citation{zondervan03}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusions}{147}{section.4.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Complex Relationship between Size and Photon Emission}{147}{subsection.4.6.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Implications for Future Work on Molecular Sizing}{147}{subsection.4.6.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusions}{146}{section.4.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Complex Relationship between Size and Photon Emission}{146}{subsection.4.6.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Implications for Future Work on Molecular Sizing}{146}{subsection.4.6.2}}
 \citation{joo2006}
 \citation{rasnik2006}
 \citation{aitken2008}
 \citation{liu2008}
 \citation{tyagi2014}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.21}{\ignorespaces The chemical structures of A) the para isomer of Alexa Fluor 488 and B) Rhodamine 6G are very similar. Both are derived from the flurone ring system shown in C).}}{149}{figure.4.21}}
-\newlabel{fig:fluorone}{{4.21}{149}{The chemical structures of A) the para isomer of Alexa Fluor 488 and B) Rhodamine 6G are very similar. Both are derived from the flurone ring system shown in C)}{figure.4.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.21}{\ignorespaces The chemical structures of A) the para isomer of Alexa Fluor 488 and B) Rhodamine 6G are very similar. Both are derived from the flurone ring system shown in C).}}{148}{figure.4.21}}
+\newlabel{fig:fluorone}{{4.21}{148}{The chemical structures of A) the para isomer of Alexa Fluor 488 and B) Rhodamine 6G are very similar. Both are derived from the flurone ring system shown in C)}{figure.4.21}{}}
 \citation{bentley2008}
 \citation{nextera2012}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{151}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{150}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:illumina}{{5}{151}{Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Overview}{151}{section.5.1}}
+\newlabel{chap:illumina}{{5}{150}{Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Overview}{150}{section.5.1}}
 \citation{sanger1977}
 \citation{sanger1977}
 \citation{metzker2005}
@@ -558,11 +562,11 @@
 \citation{Smith1986}
 \citation{illumina2010}
 \citation{Adessi2000}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Introduction}{152}{section.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Next-Generation Sequencing Technologies}{152}{subsection.5.2.1}}
-\@writefile{toc}{\contentsline {paragraph}{Illumina Sequencing Technology}{152}{section*.59}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Schematic of Sanger Sequencing using terminator chemistry. Left: sequencing on a four-lane gel. Four lanes represent sequencing mixtures containing different ddNTPs. Right: Sanger sequencing in a single lane using fluorescently labelled ddNTPs. Middle: the corresponding DNA sequence.}}{153}{figure.5.1}}
-\newlabel{fig:sanger}{{5.1}{153}{Schematic of Sanger Sequencing using terminator chemistry. Left: sequencing on a four-lane gel. Four lanes represent sequencing mixtures containing different ddNTPs. Right: Sanger sequencing in a single lane using fluorescently labelled ddNTPs. Middle: the corresponding DNA sequence}{figure.5.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Introduction}{151}{section.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Next-Generation Sequencing Technologies}{151}{subsection.5.2.1}}
+\@writefile{toc}{\contentsline {paragraph}{Illumina Sequencing Technology}{151}{section*.57}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Schematic of Sanger Sequencing using terminator chemistry. Left: sequencing on a four-lane gel. Four lanes represent sequencing mixtures containing different ddNTPs. Right: Sanger sequencing in a single lane using fluorescently labelled ddNTPs. Middle: the corresponding DNA sequence.}}{152}{figure.5.1}}
+\newlabel{fig:sanger}{{5.1}{152}{Schematic of Sanger Sequencing using terminator chemistry. Left: sequencing on a four-lane gel. Four lanes represent sequencing mixtures containing different ddNTPs. Right: Sanger sequencing in a single lane using fluorescently labelled ddNTPs. Middle: the corresponding DNA sequence}{figure.5.1}{}}
 \citation{Chen2013}
 \citation{Chen2013}
 \citation{bentley2008}
@@ -570,11 +574,11 @@
 \citation{eid2008}
 \citation{Levene2003}
 \citation{Roberts2013}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces A modified nucleotide showing Illumina terminator chemistry. The 3'-hydroxyl group is reversibly blocked by the 3′-O-azidomethy terminator (red atoms), whilst the fluorescent indicator dye can be reversibly cleaved from the modified DNA base at the bond indicated by the arrow. Figure adapted from\nobreakspace  {}\cite  {Chen2013}}}{154}{figure.5.2}}
-\newlabel{fig:terminator}{{5.2}{154}{A modified nucleotide showing Illumina terminator chemistry. The 3'-hydroxyl group is reversibly blocked by the 3′-O-azidomethy terminator (red atoms), whilst the fluorescent indicator dye can be reversibly cleaved from the modified DNA base at the bond indicated by the arrow. Figure adapted from~\cite {Chen2013}}{figure.5.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Single Molecule Sequencing Technologies}{154}{section*.60}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Sequencing by synthesis. A) DNA fragments are generated and joined to a pair of oligonucleotides. The ligated products are amplified using two oligonucleotide primers, resulting in double-stranded blunt-ended material with a different adaptor sequence on either end. B) DNA fragments are denatured and single strands are annealed to complementary oligonucleotides on the flow-cell surface. A new strand is copied from the original strand in an extension reaction; the original strand is then removed by denaturation. Multiple cycles of annealing, extension and denaturation in isothermal conditions result in cluster growth. C) The DNA in each cluster is linearized by cleavage within one adaptor sequence and denatured, generating single-stranded templates. D) Long-range paired-end sample preparation. The ends of each long fragment are tagged by incorporation of biotinylated (B) nucleotide and then circularized, forming a junction between the two ends. Circularized DNA is randomly fragmented and the biotinylated junction fragments are recovered and used as starting material in the standard sample preparation procedure. Figure and (adapted) caption from\nobreakspace  {}\cite  {bentley2008}.}}{155}{figure.5.3}}
-\newlabel{fig:illumina}{{5.3}{155}{Sequencing by synthesis. A) DNA fragments are generated and joined to a pair of oligonucleotides. The ligated products are amplified using two oligonucleotide primers, resulting in double-stranded blunt-ended material with a different adaptor sequence on either end. B) DNA fragments are denatured and single strands are annealed to complementary oligonucleotides on the flow-cell surface. A new strand is copied from the original strand in an extension reaction; the original strand is then removed by denaturation. Multiple cycles of annealing, extension and denaturation in isothermal conditions result in cluster growth. C) The DNA in each cluster is linearized by cleavage within one adaptor sequence and denatured, generating single-stranded templates. D) Long-range paired-end sample preparation. The ends of each long fragment are tagged by incorporation of biotinylated (B) nucleotide and then circularized, forming a junction between the two ends. Circularized DNA is randomly fragmented and the biotinylated junction fragments are recovered and used as starting material in the standard sample preparation procedure. Figure and (adapted) caption from~\cite {bentley2008}}{figure.5.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces A modified nucleotide showing Illumina terminator chemistry. The 3'-hydroxyl group is reversibly blocked by the 3′-O-azidomethy terminator (red atoms), whilst the fluorescent indicator dye can be reversibly cleaved from the modified DNA base at the bond indicated by the arrow. Figure adapted from\nobreakspace  {}\cite  {Chen2013}}}{153}{figure.5.2}}
+\newlabel{fig:terminator}{{5.2}{153}{A modified nucleotide showing Illumina terminator chemistry. The 3'-hydroxyl group is reversibly blocked by the 3′-O-azidomethy terminator (red atoms), whilst the fluorescent indicator dye can be reversibly cleaved from the modified DNA base at the bond indicated by the arrow. Figure adapted from~\cite {Chen2013}}{figure.5.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Single Molecule Sequencing Technologies}{153}{section*.58}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Sequencing by synthesis. A) DNA fragments are generated and joined to a pair of oligonucleotides. The ligated products are amplified using two oligonucleotide primers, resulting in double-stranded blunt-ended material with a different adaptor sequence on either end. B) DNA fragments are denatured and single strands are annealed to complementary oligonucleotides on the flow-cell surface. A new strand is copied from the original strand in an extension reaction; the original strand is then removed by denaturation. Multiple cycles of annealing, extension and denaturation in isothermal conditions result in cluster growth. C) The DNA in each cluster is linearized by cleavage within one adaptor sequence and denatured, generating single-stranded templates. D) Long-range paired-end sample preparation. The ends of each long fragment are tagged by incorporation of biotinylated (B) nucleotide and then circularized, forming a junction between the two ends. Circularized DNA is randomly fragmented and the biotinylated junction fragments are recovered and used as starting material in the standard sample preparation procedure. Figure and (adapted) caption from\nobreakspace  {}\cite  {bentley2008}.}}{154}{figure.5.3}}
+\newlabel{fig:illumina}{{5.3}{154}{Sequencing by synthesis. A) DNA fragments are generated and joined to a pair of oligonucleotides. The ligated products are amplified using two oligonucleotide primers, resulting in double-stranded blunt-ended material with a different adaptor sequence on either end. B) DNA fragments are denatured and single strands are annealed to complementary oligonucleotides on the flow-cell surface. A new strand is copied from the original strand in an extension reaction; the original strand is then removed by denaturation. Multiple cycles of annealing, extension and denaturation in isothermal conditions result in cluster growth. C) The DNA in each cluster is linearized by cleavage within one adaptor sequence and denatured, generating single-stranded templates. D) Long-range paired-end sample preparation. The ends of each long fragment are tagged by incorporation of biotinylated (B) nucleotide and then circularized, forming a junction between the two ends. Circularized DNA is randomly fragmented and the biotinylated junction fragments are recovered and used as starting material in the standard sample preparation procedure. Figure and (adapted) caption from~\cite {bentley2008}}{figure.5.3}{}}
 \citation{Bayley2014}
 \citation{Branton2008}
 \citation{Laszlo2014}
@@ -583,20 +587,20 @@
 \citation{Compeau2011}
 \citation{Pevzner2001}
 \citation{Zerbino2008}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}De Novo Sequence Assembly}{156}{subsection.5.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}De Novo Sequence Assembly}{155}{subsection.5.2.2}}
 \citation{Zerbino2008,Bankevich2012,Li2010_SOAP}
 \citation{Compeau2011}
 \citation{Compeau2011}
 \citation{hunt2014}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces De Bruijn graph assembly from $k$-mers. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers. Figure adapted from\nobreakspace  {}\cite  {Compeau2011}.}}{157}{figure.5.4}}
-\newlabel{fig:de-bruijn}{{5.4}{157}{De Bruijn graph assembly from $k$-mers. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers. Figure adapted from~\cite {Compeau2011}}{figure.5.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces De Bruijn graph assembly from $k$-mers. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers. Figure adapted from\nobreakspace  {}\cite  {Compeau2011}.}}{156}{figure.5.4}}
+\newlabel{fig:de-bruijn}{{5.4}{156}{De Bruijn graph assembly from $k$-mers. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers. Figure adapted from~\cite {Compeau2011}}{figure.5.4}{}}
 \citation{Compeau2011}
 \citation{Compeau2011}
 \citation{edwards1990}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces A se Bruijn graph with repeats. The larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph. Figure adapted from\nobreakspace  {}\cite  {Compeau2011}.}}{158}{figure.5.5}}
-\newlabel{fig:de-bruijn}{{5.5}{158}{A se Bruijn graph with repeats. The larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph. Figure adapted from~\cite {Compeau2011}}{figure.5.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Paired End Reads and Mate Pair Sequencing}{158}{subsection.5.2.3}}
-\@writefile{toc}{\contentsline {paragraph}{Paired End and Single End Reads}{158}{section*.61}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces A se Bruijn graph with repeats. The larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph. Figure adapted from\nobreakspace  {}\cite  {Compeau2011}.}}{157}{figure.5.5}}
+\newlabel{fig:de-bruijn}{{5.5}{157}{A se Bruijn graph with repeats. The larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph. Figure adapted from~\cite {Compeau2011}}{figure.5.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Paired End Reads and Mate Pair Sequencing}{157}{subsection.5.2.3}}
+\@writefile{toc}{\contentsline {paragraph}{Paired End and Single End Reads}{157}{section*.59}}
 \citation{medvedev2011,Bankevich2012}
 \citation{nextera2012}
 \citation{medvedev2011,Bankevich2012}
@@ -605,8 +609,8 @@
 \citation{Gurevich2013}
 \citation{Bradnam2013}
 \citation{Salzberg2012}
-\@writefile{toc}{\contentsline {paragraph}{Mate Pair Sequening}{159}{section*.62}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Evaluating Assembly Quality}{159}{subsection.5.2.4}}
+\@writefile{toc}{\contentsline {paragraph}{Mate Pair Sequening}{158}{section*.60}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Evaluating Assembly Quality}{158}{subsection.5.2.4}}
 \citation{Ghodsi2013}
 \citation{Coil2014,tritt2012}
 \citation{Hunt2013}
@@ -614,81 +618,81 @@
 \citation{pilon2014}
 \citation{Bankevich2012}
 \citation{tritt2012}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}Error Detection Methods}{160}{subsection.5.2.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Using NxRepair to remove large misassemblies. (A) Alignment of the \textit  {de novo} assembly of the M. tuberculosis genome to its reference genome. The assembly contains several large misassemblies. (B) A plot of NxRepair's support metric against scaffold position for the assembly. Low support for the assembly is identified in three regions of a contig. (C) Breaking the contigs at the identified positions resolves the most significant misassemblies. In (A) and (C), horizontal lines demarcate the scaffold boundaries.}}{161}{figure.5.6}}
-\newlabel{fig:NxRepair}{{5.6}{161}{Using NxRepair to remove large misassemblies. (A) Alignment of the \textit {de novo} assembly of the M. tuberculosis genome to its reference genome. The assembly contains several large misassemblies. (B) A plot of NxRepair's support metric against scaffold position for the assembly. Low support for the assembly is identified in three regions of a contig. (C) Breaking the contigs at the identified positions resolves the most significant misassemblies. In (A) and (C), horizontal lines demarcate the scaffold boundaries}{figure.5.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Theory}{162}{section.5.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Statistical Analysis of Mate Pair Insert Sizes}{162}{subsection.5.3.1}}
-\newlabel{sect:illumina_theory}{{5.3.1}{162}{Statistical Analysis of Mate Pair Insert Sizes}{subsection.5.3.1}{}}
-\newlabel{eq:posterior}{{5.1}{163}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.1}{}}
-\newlabel{eq:C}{{5.3}{163}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.3}{}}
-\newlabel{eq:contigD}{{5.4}{163}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Schematic illustrating mate pairs spanning a selected region. The upper read pair (green) spans the indicated region, as both reads align entirely outside of the region $[i-W, i+W]$. The lower read pair (cyan) do not span the indicated region, as the left-hand read overlaps the target area. }}{164}{figure.5.7}}
-\newlabel{fig:spanning}{{5.7}{164}{Schematic illustrating mate pairs spanning a selected region. The upper read pair (green) spans the indicated region, as both reads align entirely outside of the region $[i-W, i+W]$. The lower read pair (cyan) do not span the indicated region, as the left-hand read overlaps the target area}{figure.5.7}{}}
-\newlabel{eq:zscore}{{5.5}{164}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Global Assembly Parameters}{164}{subsection.5.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}Error Detection Methods}{159}{subsection.5.2.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Using NxRepair to remove large misassemblies. (A) Alignment of the \textit  {de novo} assembly of the M. tuberculosis genome to its reference genome. The assembly contains several large misassemblies. (B) A plot of NxRepair's support metric against scaffold position for the assembly. Low support for the assembly is identified in three regions of a contig. (C) Breaking the contigs at the identified positions resolves the most significant misassemblies. In (A) and (C), horizontal lines demarcate the scaffold boundaries.}}{160}{figure.5.6}}
+\newlabel{fig:NxRepair}{{5.6}{160}{Using NxRepair to remove large misassemblies. (A) Alignment of the \textit {de novo} assembly of the M. tuberculosis genome to its reference genome. The assembly contains several large misassemblies. (B) A plot of NxRepair's support metric against scaffold position for the assembly. Low support for the assembly is identified in three regions of a contig. (C) Breaking the contigs at the identified positions resolves the most significant misassemblies. In (A) and (C), horizontal lines demarcate the scaffold boundaries}{figure.5.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Theory}{161}{section.5.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Statistical Analysis of Mate Pair Insert Sizes}{161}{subsection.5.3.1}}
+\newlabel{sect:illumina_theory}{{5.3.1}{161}{Statistical Analysis of Mate Pair Insert Sizes}{subsection.5.3.1}{}}
+\newlabel{eq:posterior}{{5.1}{162}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.1}{}}
+\newlabel{eq:C}{{5.3}{162}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.3}{}}
+\newlabel{eq:contigD}{{5.4}{162}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Schematic illustrating mate pairs spanning a selected region. The upper read pair (green) spans the indicated region, as both reads align entirely outside of the region $[i-W, i+W]$. The lower read pair (cyan) do not span the indicated region, as the left-hand read overlaps the target area. }}{163}{figure.5.7}}
+\newlabel{fig:spanning}{{5.7}{163}{Schematic illustrating mate pairs spanning a selected region. The upper read pair (green) spans the indicated region, as both reads align entirely outside of the region $[i-W, i+W]$. The lower read pair (cyan) do not span the indicated region, as the left-hand read overlaps the target area}{figure.5.7}{}}
+\newlabel{eq:zscore}{{5.5}{163}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Global Assembly Parameters}{163}{subsection.5.3.2}}
 \citation{Leys2013}
 \citation{cormen2009}
-\newlabel{eq:global}{{5.6}{165}{Global Assembly Parameters}{equation.5.3.6}{}}
-\newlabel{eq:mad_to_sigma}{{5.7}{165}{Global Assembly Parameters}{equation.5.3.7}{}}
-\newlabel{eq:k_scale}{{5.8}{165}{Global Assembly Parameters}{equation.5.3.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Interval Tree Construction}{165}{subsection.5.3.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Misassembly Location and Contig Breaking}{166}{subsection.5.3.4}}
+\newlabel{eq:global}{{5.6}{164}{Global Assembly Parameters}{equation.5.3.6}{}}
+\newlabel{eq:mad_to_sigma}{{5.7}{164}{Global Assembly Parameters}{equation.5.3.7}{}}
+\newlabel{eq:k_scale}{{5.8}{164}{Global Assembly Parameters}{equation.5.3.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Interval Tree Construction}{164}{subsection.5.3.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Misassembly Location and Contig Breaking}{165}{subsection.5.3.4}}
 \citation{numpy}
 \citation{scipy}
 \citation{Hunter2007}
 \citation{li2009}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}Availability and Dependencies}{167}{subsection.5.3.5}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Experimental Methods}{167}{section.5.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Data}{167}{subsection.5.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}Availability and Dependencies}{166}{subsection.5.3.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Experimental Methods}{166}{section.5.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Data}{166}{subsection.5.4.1}}
 \citation{Gurevich2013}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Performance Optimisation}{168}{subsection.5.4.2}}
-\newlabel{eq:found}{{5.9}{168}{ROC Plots}{equation.5.4.9}{}}
-\newlabel{eq:tpr}{{5.10}{168}{ROC Plots}{equation.5.4.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Performance Optimisation}{167}{subsection.5.4.2}}
+\newlabel{eq:found}{{5.9}{167}{ROC Plots}{equation.5.4.9}{}}
+\newlabel{eq:tpr}{{5.10}{167}{ROC Plots}{equation.5.4.10}{}}
 \citation{Bankevich2012}
 \citation{Gurevich2013}
 \citation{li2013}
 \citation{li2009}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces ROC plots for the seven genomes containing misassemblies.}}{169}{figure.5.8}}
-\newlabel{fig:ROCs}{{5.8}{169}{ROC plots for the seven genomes containing misassemblies}{figure.5.8}{}}
-\@writefile{toc}{\contentsline {paragraph}{Profiling}{169}{section*.64}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Workflow Pipeline}{169}{subsection.5.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces ROC plots for the seven genomes containing misassemblies.}}{168}{figure.5.8}}
+\newlabel{fig:ROCs}{{5.8}{168}{ROC plots for the seven genomes containing misassemblies}{figure.5.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Profiling}{168}{section*.62}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Workflow Pipeline}{168}{subsection.5.4.3}}
 \citation{Gurevich2013}
 \citation{Bankevich2012}
 \citation{li2013}
 \citation{Gurevich2013}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Results}{170}{section.5.5}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces NxRepair Parameters }}{171}{table.5.1}}
-\newlabel{tab:parameters}{{5.1}{171}{NxRepair Parameters}{table.5.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Results}{169}{section.5.5}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces NxRepair Parameters }}{170}{table.5.1}}
+\newlabel{tab:parameters}{{5.1}{170}{NxRepair Parameters}{table.5.1}{}}
 \citation{tritt2012}
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Number of large misassemblies and NGA50 as reported by QUAST before (left) and after correction by NxRepair (middle) and A5qc (right). }}{173}{table.5.2}}
-\newlabel{tab:improvement}{{5.2}{173}{Number of large misassemblies and NGA50 as reported by QUAST before (left) and after correction by NxRepair (middle) and A5qc (right)}{table.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Performance}{173}{subsection.5.5.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Conclusions}{173}{section.5.6}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces NxRepair performance analysis. }}{174}{table.5.3}}
-\newlabel{tab:performance}{{5.3}{174}{NxRepair performance analysis}{table.5.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Summary of bacteria analysed and the relevant NCBI information on their reference genomes. There were two repeats of each strain. All 18 samples were prepared with the Nextera mate pair protocol and sequenced in a single MiSeq run using $2 \times 151$ bp reads. The untrimmed reads we used as input to NxTrim (3.9Gbp in all) are available from BaseSpace via \url  {https://basespace.illumina.com/s/TXv32Ve6wTl9}.}}{175}{table.5.4}}
-\newlabel{data-description}{{5.4}{175}{Summary of bacteria analysed and the relevant NCBI information on their reference genomes. There were two repeats of each strain. All 18 samples were prepared with the Nextera mate pair protocol and sequenced in a single MiSeq run using $2 \times 151$ bp reads. The untrimmed reads we used as input to NxTrim (3.9Gbp in all) are available from BaseSpace via \url {https://basespace.illumina.com/s/TXv32Ve6wTl9}}{table.5.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces Yield in bp, mean base quality and average read length after adapter removal, as well as the raw NGA50 score prior to NxRepair analysis for all genomes analysed.}}{176}{table.5.5}}
-\newlabel{tab:yield}{{5.5}{176}{Yield in bp, mean base quality and average read length after adapter removal, as well as the raw NGA50 score prior to NxRepair analysis for all genomes analysed}{table.5.5}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{177}{chapter.6}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Number of large misassemblies and NGA50 as reported by QUAST before (left) and after correction by NxRepair (middle) and A5qc (right). }}{172}{table.5.2}}
+\newlabel{tab:improvement}{{5.2}{172}{Number of large misassemblies and NGA50 as reported by QUAST before (left) and after correction by NxRepair (middle) and A5qc (right)}{table.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Performance}{172}{subsection.5.5.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Conclusions}{172}{section.5.6}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces NxRepair performance analysis. }}{173}{table.5.3}}
+\newlabel{tab:performance}{{5.3}{173}{NxRepair performance analysis}{table.5.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Summary of bacteria analysed and the relevant NCBI information on their reference genomes. There were two repeats of each strain. All 18 samples were prepared with the Nextera mate pair protocol and sequenced in a single MiSeq run using $2 \times 151$ bp reads. The untrimmed reads we used as input to NxTrim (3.9Gbp in all) are available from BaseSpace via \url  {https://basespace.illumina.com/s/TXv32Ve6wTl9}.}}{174}{table.5.4}}
+\newlabel{data-description}{{5.4}{174}{Summary of bacteria analysed and the relevant NCBI information on their reference genomes. There were two repeats of each strain. All 18 samples were prepared with the Nextera mate pair protocol and sequenced in a single MiSeq run using $2 \times 151$ bp reads. The untrimmed reads we used as input to NxTrim (3.9Gbp in all) are available from BaseSpace via \url {https://basespace.illumina.com/s/TXv32Ve6wTl9}}{table.5.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces Yield in bp, mean base quality and average read length after adapter removal, as well as the raw NGA50 score prior to NxRepair analysis for all genomes analysed.}}{175}{table.5.5}}
+\newlabel{tab:yield}{{5.5}{175}{Yield in bp, mean base quality and average read length after adapter removal, as well as the raw NGA50 score prior to NxRepair analysis for all genomes analysed}{table.5.5}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{176}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:conclusions}{{6}{177}{Conclusions and Future Work}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}General Conclusions}{177}{section.6.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}pyFRET}{177}{subsection.6.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Inference Analysis of smFRET Data}{178}{subsection.6.1.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Inference Analysis of Oligomer Sizing}{179}{subsection.6.1.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}NxRepair}{179}{subsection.6.1.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Applications and Future Work}{180}{section.6.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Open Source Software for smFRET}{180}{subsection.6.2.1}}
+\newlabel{chap:conclusions}{{6}{176}{Conclusions and Future Work}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}General Conclusions}{176}{section.6.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}pyFRET}{176}{subsection.6.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Inference Analysis of smFRET Data}{177}{subsection.6.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Inference Analysis of Oligomer Sizing}{178}{subsection.6.1.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}NxRepair}{178}{subsection.6.1.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Applications and Future Work}{179}{section.6.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Open Source Software for smFRET}{179}{subsection.6.2.1}}
 \citation{green1995}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Inference Analysis of smFRET Data}{181}{subsection.6.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}Accurate Sizing of Fluorescent Oligomers}{181}{subsection.6.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Inference Analysis of smFRET Data}{180}{subsection.6.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}Accurate Sizing of Fluorescent Oligomers}{180}{subsection.6.2.3}}
 \citation{Koren2015}
 \bibstyle{unsrt}
 \bibdata{thesis}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}Error Detection in \emph  {de novo} Assemblies}{182}{subsection.6.2.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}Error Detection in \emph  {de novo} Assemblies}{181}{subsection.6.2.4}}
 \bibcite{ha96}{{1}{}{{}}{{}}}
 \bibcite{haran03}{{2}{}{{}}{{}}}
 \bibcite{schuler02}{{3}{}{{}}{{}}}
@@ -794,85 +798,86 @@
 \bibcite{chen99}{{103}{}{{}}{{}}}
 \bibcite{lloydsmith07}{{104}{}{{}}{{}}}
 \bibcite{bliss53}{{105}{}{{}}{{}}}
-\bibcite{green1995}{{106}{}{{}}{{}}}
-\bibcite{holliday1964}{{107}{}{{}}{{}}}
-\bibcite{ueda1993}{{108}{}{{}}{{}}}
-\bibcite{spillantini1997}{{109}{}{{}}{{}}}
-\bibcite{Noe2004}{{110}{}{{}}{{}}}
-\bibcite{goedert1989}{{111}{}{{}}{{}}}
-\bibcite{Gibb1988}{{112}{}{{}}{{}}}
-\bibcite{Serpell2000}{{113}{}{{}}{{}}}
-\bibcite{Wells1987}{{114}{}{{}}{{}}}
-\bibcite{Goldfarb1992}{{115}{}{{}}{{}}}
-\bibcite{Clark1988}{{116}{}{{}}{{}}}
-\bibcite{Safar1993}{{117}{}{{}}{{}}}
-\bibcite{Conway1999}{{118}{}{{}}{{}}}
-\bibcite{Haas2007}{{119}{}{{}}{{}}}
-\bibcite{Muchowski2005}{{120}{}{{}}{{}}}
-\bibcite{Benilova2012}{{121}{}{{}}{{}}}
-\bibcite{chiti2006}{{122}{}{{}}{{}}}
-\bibcite{knowles2009}{{123}{}{{}}{{}}}
-\bibcite{Knowles2011}{{124}{}{{}}{{}}}
-\bibcite{cohen2013}{{125}{}{{}}{{}}}
-\bibcite{meisl2014}{{126}{}{{}}{{}}}
-\bibcite{Dedmon2005}{{127}{}{{}}{{}}}
-\bibcite{Gras2011}{{128}{}{{}}{{}}}
-\bibcite{Langkilde2009}{{129}{}{{}}{{}}}
-\bibcite{Cohen2012}{{130}{}{{}}{{}}}
-\bibcite{Schmidt2005}{{131}{}{{}}{{}}}
-\bibcite{Lashuel2002}{{132}{}{{}}{{}}}
-\bibcite{Murray2003}{{133}{}{{}}{{}}}
-\bibcite{orte08}{{134}{}{{}}{{}}}
-\bibcite{potter1976}{{135}{}{{}}{{}}}
-\bibcite{mckinney03}{{136}{}{{}}{{}}}
-\bibcite{uphoff2010}{{137}{}{{}}{{}}}
-\bibcite{Hyeon2012}{{138}{}{{}}{{}}}
-\bibcite{Lehmann1986}{{139}{}{{}}{{}}}
-\bibcite{joo2006}{{140}{}{{}}{{}}}
-\bibcite{rasnik2006}{{141}{}{{}}{{}}}
-\bibcite{aitken2008}{{142}{}{{}}{{}}}
-\bibcite{liu2008}{{143}{}{{}}{{}}}
-\bibcite{tyagi2014}{{144}{}{{}}{{}}}
-\bibcite{bentley2008}{{145}{}{{}}{{}}}
-\bibcite{nextera2012}{{146}{}{{}}{{}}}
-\bibcite{sanger1977}{{147}{}{{}}{{}}}
-\bibcite{metzker2005}{{148}{}{{}}{{}}}
-\bibcite{Smith1985}{{149}{}{{}}{{}}}
-\bibcite{Smith1986}{{150}{}{{}}{{}}}
-\bibcite{illumina2010}{{151}{}{{}}{{}}}
-\bibcite{Adessi2000}{{152}{}{{}}{{}}}
-\bibcite{Chen2013}{{153}{}{{}}{{}}}
-\bibcite{eid2008}{{154}{}{{}}{{}}}
-\bibcite{Levene2003}{{155}{}{{}}{{}}}
-\bibcite{Roberts2013}{{156}{}{{}}{{}}}
-\bibcite{Bayley2014}{{157}{}{{}}{{}}}
-\bibcite{Branton2008}{{158}{}{{}}{{}}}
-\bibcite{Laszlo2014}{{159}{}{{}}{{}}}
-\bibcite{Mikheyev2014}{{160}{}{{}}{{}}}
-\bibcite{Li2010}{{161}{}{{}}{{}}}
-\bibcite{Compeau2011}{{162}{}{{}}{{}}}
-\bibcite{Pevzner2001}{{163}{}{{}}{{}}}
-\bibcite{Zerbino2008}{{164}{}{{}}{{}}}
-\bibcite{Bankevich2012}{{165}{}{{}}{{}}}
-\bibcite{Li2010_SOAP}{{166}{}{{}}{{}}}
-\bibcite{hunt2014}{{167}{}{{}}{{}}}
-\bibcite{edwards1990}{{168}{}{{}}{{}}}
-\bibcite{medvedev2011}{{169}{}{{}}{{}}}
-\bibcite{Miller2010}{{170}{}{{}}{{}}}
-\bibcite{Gurevich2013}{{171}{}{{}}{{}}}
-\bibcite{Bradnam2013}{{172}{}{{}}{{}}}
-\bibcite{Salzberg2012}{{173}{}{{}}{{}}}
-\bibcite{Ghodsi2013}{{174}{}{{}}{{}}}
-\bibcite{Coil2014}{{175}{}{{}}{{}}}
-\bibcite{tritt2012}{{176}{}{{}}{{}}}
-\bibcite{Hunt2013}{{177}{}{{}}{{}}}
-\bibcite{Clark2013}{{178}{}{{}}{{}}}
-\bibcite{pilon2014}{{179}{}{{}}{{}}}
-\bibcite{Leys2013}{{180}{}{{}}{{}}}
-\bibcite{cormen2009}{{181}{}{{}}{{}}}
-\bibcite{numpy}{{182}{}{{}}{{}}}
-\bibcite{scipy}{{183}{}{{}}{{}}}
-\bibcite{li2009}{{184}{}{{}}{{}}}
-\bibcite{li2013}{{185}{}{{}}{{}}}
-\bibcite{Koren2015}{{186}{}{{}}{{}}}
+\bibcite{Buntine1994}{{106}{}{{}}{{}}}
+\bibcite{green1995}{{107}{}{{}}{{}}}
+\bibcite{holliday1964}{{108}{}{{}}{{}}}
+\bibcite{ueda1993}{{109}{}{{}}{{}}}
+\bibcite{spillantini1997}{{110}{}{{}}{{}}}
+\bibcite{Noe2004}{{111}{}{{}}{{}}}
+\bibcite{goedert1989}{{112}{}{{}}{{}}}
+\bibcite{Gibb1988}{{113}{}{{}}{{}}}
+\bibcite{Serpell2000}{{114}{}{{}}{{}}}
+\bibcite{Wells1987}{{115}{}{{}}{{}}}
+\bibcite{Goldfarb1992}{{116}{}{{}}{{}}}
+\bibcite{Clark1988}{{117}{}{{}}{{}}}
+\bibcite{Safar1993}{{118}{}{{}}{{}}}
+\bibcite{Conway1999}{{119}{}{{}}{{}}}
+\bibcite{Haas2007}{{120}{}{{}}{{}}}
+\bibcite{Muchowski2005}{{121}{}{{}}{{}}}
+\bibcite{Benilova2012}{{122}{}{{}}{{}}}
+\bibcite{chiti2006}{{123}{}{{}}{{}}}
+\bibcite{knowles2009}{{124}{}{{}}{{}}}
+\bibcite{Knowles2011}{{125}{}{{}}{{}}}
+\bibcite{cohen2013}{{126}{}{{}}{{}}}
+\bibcite{meisl2014}{{127}{}{{}}{{}}}
+\bibcite{Dedmon2005}{{128}{}{{}}{{}}}
+\bibcite{Gras2011}{{129}{}{{}}{{}}}
+\bibcite{Langkilde2009}{{130}{}{{}}{{}}}
+\bibcite{Cohen2012}{{131}{}{{}}{{}}}
+\bibcite{Schmidt2005}{{132}{}{{}}{{}}}
+\bibcite{Lashuel2002}{{133}{}{{}}{{}}}
+\bibcite{Murray2003}{{134}{}{{}}{{}}}
+\bibcite{orte08}{{135}{}{{}}{{}}}
+\bibcite{potter1976}{{136}{}{{}}{{}}}
+\bibcite{mckinney03}{{137}{}{{}}{{}}}
+\bibcite{uphoff2010}{{138}{}{{}}{{}}}
+\bibcite{Hyeon2012}{{139}{}{{}}{{}}}
+\bibcite{Lehmann1986}{{140}{}{{}}{{}}}
+\bibcite{joo2006}{{141}{}{{}}{{}}}
+\bibcite{rasnik2006}{{142}{}{{}}{{}}}
+\bibcite{aitken2008}{{143}{}{{}}{{}}}
+\bibcite{liu2008}{{144}{}{{}}{{}}}
+\bibcite{tyagi2014}{{145}{}{{}}{{}}}
+\bibcite{bentley2008}{{146}{}{{}}{{}}}
+\bibcite{nextera2012}{{147}{}{{}}{{}}}
+\bibcite{sanger1977}{{148}{}{{}}{{}}}
+\bibcite{metzker2005}{{149}{}{{}}{{}}}
+\bibcite{Smith1985}{{150}{}{{}}{{}}}
+\bibcite{Smith1986}{{151}{}{{}}{{}}}
+\bibcite{illumina2010}{{152}{}{{}}{{}}}
+\bibcite{Adessi2000}{{153}{}{{}}{{}}}
+\bibcite{Chen2013}{{154}{}{{}}{{}}}
+\bibcite{eid2008}{{155}{}{{}}{{}}}
+\bibcite{Levene2003}{{156}{}{{}}{{}}}
+\bibcite{Roberts2013}{{157}{}{{}}{{}}}
+\bibcite{Bayley2014}{{158}{}{{}}{{}}}
+\bibcite{Branton2008}{{159}{}{{}}{{}}}
+\bibcite{Laszlo2014}{{160}{}{{}}{{}}}
+\bibcite{Mikheyev2014}{{161}{}{{}}{{}}}
+\bibcite{Li2010}{{162}{}{{}}{{}}}
+\bibcite{Compeau2011}{{163}{}{{}}{{}}}
+\bibcite{Pevzner2001}{{164}{}{{}}{{}}}
+\bibcite{Zerbino2008}{{165}{}{{}}{{}}}
+\bibcite{Bankevich2012}{{166}{}{{}}{{}}}
+\bibcite{Li2010_SOAP}{{167}{}{{}}{{}}}
+\bibcite{hunt2014}{{168}{}{{}}{{}}}
+\bibcite{edwards1990}{{169}{}{{}}{{}}}
+\bibcite{medvedev2011}{{170}{}{{}}{{}}}
+\bibcite{Miller2010}{{171}{}{{}}{{}}}
+\bibcite{Gurevich2013}{{172}{}{{}}{{}}}
+\bibcite{Bradnam2013}{{173}{}{{}}{{}}}
+\bibcite{Salzberg2012}{{174}{}{{}}{{}}}
+\bibcite{Ghodsi2013}{{175}{}{{}}{{}}}
+\bibcite{Coil2014}{{176}{}{{}}{{}}}
+\bibcite{tritt2012}{{177}{}{{}}{{}}}
+\bibcite{Hunt2013}{{178}{}{{}}{{}}}
+\bibcite{Clark2013}{{179}{}{{}}{{}}}
+\bibcite{pilon2014}{{180}{}{{}}{{}}}
+\bibcite{Leys2013}{{181}{}{{}}{{}}}
+\bibcite{cormen2009}{{182}{}{{}}{{}}}
+\bibcite{numpy}{{183}{}{{}}{{}}}
+\bibcite{scipy}{{184}{}{{}}{{}}}
+\bibcite{li2009}{{185}{}{{}}{{}}}
+\bibcite{li2013}{{186}{}{{}}{{}}}
+\bibcite{Koren2015}{{187}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers

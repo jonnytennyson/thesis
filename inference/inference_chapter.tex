@@ -24,14 +24,14 @@ As described in the previous chapter, smFRET experiments rely on the phenomenon 
 
 In this chapter, we consider only experiments in which diffusing molecules are subject to continuous illumination from a single laser that excites the donor dye. More sophisticated experimental techniques have been developed. For example, ALEX excitation~\cite{kapanidis05, lee07} and Pulsed Interleaved Excitation (PIE)~\cite{muller05, kudryavtsev2012} use rapid alternation of the exciting wavelength to directly excite both the donor and the acceptor fluorophores, allowing specific identification of correctly labelled fluorescent molecules. Similary, Multi-Paramater Fluorescence Detection (MFD)~\cite{sisamakis2010, rothwell2002} separates photons based on both their wavelength and their polarisation, allowing concommitant separation of molecules based on their fluorescence anisotropy. We chose to focus on only the simple case of continuous excitation of the donor dye for two reasons. Firstly, in developing and evaluating a model-based analysis, it is advantageous to focus on the simplest incarnation of a problem. This enables us to quickly identify the key parts of the model necessary to accurately describe the data observed, without requiring huge computational complexity in order to model all features. Secondly, this is the type of experiment that is most commonly performed in our research environment. Consequently, we wished to make a tool that would be directly applicable to the types of experimental data that we encounter in our research. For similar reasons, we choose to consider only time-binned datasets, for which photons have been grouped into time-bins of length comparable to the dwell-time in the confocal volume, rather than considering the more sophisticated burst-search approaches that are popular elsewhere~\cite{nir06}. 
 
-\paragraph{The Data}
+\paragraph{The Data.}
 As described above, in a basic smFRET experiment, fluorescently-labelled molecules in dilute solution diffuse freely through a laser beam focused with a high aperture objective onto a diffraction-limited focal point~\cite{schuler05}.  When a molecule diffuses into the confocal volume, the laser excites the donor fluorophore and photons are emitted. These experiments yield bursts of donor and acceptor fluorescence, caused by diffusion of a labelled molecule through the excitation volume, against a background of low to zero fluorescence detection. The majority of bins ($>$ 95\%) contain only background noise; the rest contain both background noise and photons from fluorescent bursts (Fig.~\ref{fig:figure_diagram_scheme} C-D). Consequently, the raw data from a confocal smFRET experiment consists of two lists of integers, corresponding to donor and acceptor photon counts. A typical experiment, lasting a minimum of 10 minutes, will consist of at least six million time-bins; many datasets contain upwards of 30 million time-bins, most of which contain only noise photons. 
 
 Aside from the delicate experimental apparatus, one of the key challenges in smFRET experiments is therefore the selection of photon bursts originating from flourescent excitation events, and the accurate denoising of these identified bursts by removal of background contributions. The following section describes this analytical challenge in detail and explains why simple thresholding approaches are not appropriate to accurately select fluorescent events.
 
 \subsection{Approaches to Analysis of smFRET Data}
 \paragraph{Event Selection: Thresholding}
-Analysing a smFRET dataset has two main challenges: identifying fluorescent events and separating the fluorescence emission contribution from noise photons. We call these two steps event selection and event denoising. Event selection is typically achieved by applying a photon count threshold to the time-bins and retaining as fluorescent events only the time-bins for which that threshold is exceeded~\cite{deniz01, gell06, ying00}. AND thresholding applies a threshold across both donor and acceptor time-bins: $n_D > T_D$ AND $n_A > T_A$; SUM thresholding applies a threshold to the sum of the photons observed in the donor and acceptor time-bins: $n_D  + n_A > T$, for $n_D$ and  $n_A$ donor and acceptor photon counts; and $T_D$, $T_A$, and $T$ the photon count thresholds applied to the donor channel, acceptor channel and total photon counts respectively. We note that, as described in the previous chapter, the APBS and DCBS burst search algorithms~\cite{nir06}, as applied to simple FRET data, are analagous to SUM and AND thresholding respectively.
+Analysing a smFRET dataset has two main challenges: identifying fluorescent events and separating the fluorescence emission contribution from noise photons. We call these two steps event selection and event denoising. As described in Section~\ref{par:time-binned_data}, event selection is typically achieved by applying a photon count threshold to the time-bins and retaining as fluorescent events only the time-bins for which that threshold is exceeded~\cite{deniz01, gell06, ying00}. AND thresholding applies a threshold across both donor and acceptor time-bins: $n_D > T_D$ AND $n_A > T_A$; SUM thresholding applies a threshold to the sum of the photons observed in the donor and acceptor time-bins: $n_D  + n_A > T$, for $n_D$ and  $n_A$ donor and acceptor photon counts; and $T_D$, $T_A$, and $T$ the photon count thresholds applied to the donor channel, acceptor channel and total photon counts respectively. We note that, as described in the previous chapter, the APBS and DCBS burst search algorithms~\cite{nir06}, as applied to simple FRET data, are analagous to SUM and AND thresholding respectively.
 
 These thresholding-based approaches to event selection rely on the assumption that fluorescence events and background events are linearly separable, allowing application of a simple threshold to effectively isolate the fluorescent events (Fig.~\ref{fig:simulationscatter}). However, when data from a smFRET experiment are examined in close detail, it is clear that this is not the case. Fig.~\ref{fig:scatterDA} (A) shows the raw data from a typical smFRET experiment, plotted as a two-dimensional scatter-plot. Unlike the idealised dataset illustrated in Fig.~\ref{fig:simulationscatter}, in the real dataset there is no clear separation between signal and noise. Consequently, no threshold can accurately separate true events from noise. This problem is exacerbated at very high and very low FRET efficiencies, where thresholds not only remove a large fraction of fluorescent bursts, but do so in a manner that will distort the resulting FRET histogram (Fig.~\ref{fig:lowFRET}).
 
@@ -123,8 +123,8 @@ Despite its sophisticated treatment of noise photons in determining the underlyi
 \label{sect:model_based_inference}
 As an alternative to the thresholding analyses described above, we would like to use a model-based inference method for analysis of smFRET data. This would enable simultaneous inference of all useful parameters -- such as population sizes, FRET efficiencies and mean noise levels -- directly from the raw smFRET dataset, without requiring multiple event selection and denoising steps. The following sections provide an overview of Bayesian statistics and describe analysis of smFRET data in terms of a model-based inference problem. 
 
-\paragraph{Bayesian Inference}
-Model-based Bayesian inference is a probabilistic method~\cite{barber12} that uses conditional probabilities based on Bayes' Theorem~\cite{bayes63} to assess the likelihood that a series of observations were generated by a given model~\cite{mackay03}. Bayes' Rule (Eq.~\ref{eq:bayes_law}) derives the posterior probability of some event $A$ given some observed event $B$,  by linking their conditional probabilities, $\Pr(A|B)$ and $\Pr(B|A)$: 
+\paragraph{Bayesian Inference.}
+As described in Section~\ref{sect:bayes_infer}, model-based Bayesian inference is a probabilistic method~\cite{barber12} that uses conditional probabilities based on Bayes' Theorem~\cite{bayes63} to assess the likelihood that a series of observations were generated by a given model~\cite{mackay03}. Bayes' Rule (Eq.~\ref{eq:bayes_law}) derives the posterior probability of some event $A$ given some observed event $B$,  by linking their conditional probabilities, $\Pr(A|B)$ and $\Pr(B|A)$: 
 
 \begin{equation}
 \begin{aligned}
@@ -212,7 +212,7 @@ As described in Chapter~\ref{chap:pyfret}, these experiments yield bursts of don
 
 \begin{figure}[b]
    \begin{center}
-      \includegraphics*[width=3.25in]{inference/S2_plate_DAG_model.pdf}
+      \includegraphics*[width=5in]{inference/S2_plate_DAG_model.pdf}
       \caption{Directed Acyclic Graph illustrating the interrelation of parameters in the inference model.  In this notation, circles represent random variables, while squares represent constants.  Known or observed values are shaded, while hidden variables are not.  For each time bin in a dataset of size N, $f_D$ and $f_A$ are respectively the number of donor and acceptor photons observed; $n_{prot}$ is the number of molecules present in the confocal volume.  For each of M molecules present per bin, $c_{D}$ and $c_{A}$ are respectively the number of donor and acceptor photons emitted, $r_{sep}$ is the dye separation interval and $\lambda$ is the emission rate of the donor dye.  The global variables $\lambda_{D}$ and $\lambda_{A}$ are the background emission rates of donor and acceptor photons; $\lambda_{prot}$ is the rate of observation of fluorescent molecules; $p_{D}$ and $p_{A}$ are the probability that a molecule carries respectively a donor and an acceptor dye; $\lambda_B$ and $k_D$ are the parameters of the Gamma-distribution, from which the local donor emission rate, $\lambda$ is selected.  Each random variable is initialized using a prior selected from a uniform distribution across the indicated ranges.  The two known constants $R_0$ and $\gamma$ are the dye-separation for which FRET efficiency is 50 \% and the instrumental $\gamma$-factor discussed above.}
       \label{fig:plate_DAG}
    \end{center}
@@ -225,13 +225,13 @@ The number of noise photons is drawn from a Poisson distribution with rate param
 \begin{equation}
 n_{D} \sim \text{Poisson}(n_{D}; \lambda_{D}) = \frac{\lambda_{D}^{n_{D}}}{n_{D}!}e^{-\lambda_{D}}
 \qquad
-n_{A} \sim \text{Poisson}(n_{A}; \lambda_{A}) = \frac{\lambda_{A}^{n_{A}}}{n_{A}!}e^{-\lambda_{A}}
+n_{A} \sim \text{Poisson}(n_{A}; \lambda_{A}) = \frac{\lambda_{A}^{n_{A}}}{n_{A}!}e^{-\lambda_{A}}.
 \end{equation}
 % Typical values for a FRET experiment are  $\lambda_D = 0.7$ and  $\lambda_A = 0.5$
 
 In addition to noise, each observation may contain photons from one or more fluorescent molecules. For a dataset with a single fluorescent population, the number of molecules present in the excitation volume, $n_{\text{prot}}$ follows a Poisson distribution with rate parameter $\lambda_{\text{prot}}$:
 \begin{equation}
-n_{\text{prot}} \sim \text{Poisson}(n_{\text{prot}}; \lambda_{\text{prot}}) = \frac{\lambda_{\text{prot}}^{n_{\text{prot}}}}{n_{\text{prot}}!}e^{-\lambda_{\text{prot}}}
+n_{\text{prot}} \sim \text{Poisson}(n_{\text{prot}}; \lambda_{\text{prot}}) = \frac{\lambda_{\text{prot}}^{n_{\text{prot}}}}{n_{\text{prot}}!}e^{-\lambda_{\text{prot}}}.
 \label{eq:nprot}
 \end{equation}
 
@@ -244,7 +244,7 @@ n_{\text{prot1}} \sim \text{Poisson}(n_{\text{prot1}}; \lambda_{\text{prot1}}) =
 \end{equation}
 and
 \begin{equation}
-n_{\text{prot2}} \sim \text{Poisson}(n_{\text{prot2}}; \lambda_{\text{prot2}}) = \frac{\lambda_{\text{prot2}}^{n_{\text{prot2}}}}{n_{\text{prot2}}!}e^{-\lambda_{\text{prot2}}}
+n_{\text{prot2}} \sim \text{Poisson}(n_{\text{prot2}}; \lambda_{\text{prot2}}) = \frac{\lambda_{\text{prot2}}^{n_{\text{prot2}}}}{n_{\text{prot2}}!}e^{-\lambda_{\text{prot2}}}.
 \end{equation}
 
 As before, most bins contain no fluorescent molecules ($n_{\text{prot2}} = n_{\text{prot2}} = 0$), but multiple occupancy can be modelled when $n_{\text{prot2}} + n_{\text{prot2}} >1$. Note that we are using $n_{\text{prot}}$ as the confocal occupation parameter to reflect the common usage of smFRET to study protein dynamics and for continuity with Chapter~\ref{chap:sizing} which discusses protein aggregation; this of course does not preclude use of the model for systems involving DNA or other (biological) molecules.
@@ -255,7 +255,7 @@ An unlabelled or acceptor-only labelled molecule is not excited, so only backgro
 
 When a donor dye is present, excitation potentially results in emission. This is modelled in two stages: first, a rate of donor emission, $\lambda$, is determined for the specific molecule as a random sample from a gamma distribution with shape parameter $k_D$ and mean $\lambda_B$ (Eq.~\ref{eq:gamma}). This captures the variation in the number of photons emitted by a molecule as a result of the diffusion path taken through the confocal volume and the effect of donor photobleaching partway through an observation.
 \begin{equation}
-\lambda \sim \text{Gamma}(\lambda; k_D, \theta) =  \frac{1}{\Gamma(k_D) \theta^{k_D}} \lambda^{(k_D - 1)} e^{-\frac{\lambda}{\theta}} \quad\text{ for } \theta = \lambda_B / k_D
+\lambda \sim \text{Gamma}(\lambda; k_D, \theta) =  \frac{1}{\Gamma(k_D) \theta^{k_D}} \lambda^{(k_D - 1)} e^{-\frac{\lambda}{\theta}} \quad\text{ for } \theta = \lambda_B / k_D ,
 \label{eq:gamma}
 \end{equation} 
 where $\Gamma$ is the Gamma function. 
@@ -266,7 +266,7 @@ The choice of a gamma-poisson mixture model to describe the fluorescence emissio
 
 If only the donor dye is present, additional photons are observed in the donor channel only. These are drawn from a Poisson distribution with rate parameter $\lambda$, where $\lambda$ is determined uniquely for each molecule using Eq.~\ref{eq:gamma}. The number of additional photons is then $c_D$:
 \begin{equation}
-c_D \sim \text{Poisson}(c_{D}; \lambda). 
+c_D \sim \text{Poisson}(c_{D}; \lambda)
 \end{equation}
 
 and the total observed photons in the donor channel, $f_D$ is the sum of noise and fluorescence photons, namely $n_D + c_D$; in the acceptor channel only noise photons, $n_A$, are observed.
@@ -280,12 +280,12 @@ The total number of photons in the donor and acceptor channels are thus $f_D = n
 
 For two populations, molecules from different populations exhibit different FRET efficiencies: respectively $E_1$ for the first population and $E_2$ for the second. This gives donor and acceptor emission rates, respectively $c_{D1}$ and $c_{A1}$, from the first fluorescent population to be:
 \begin{equation}
- c_{D1} \sim \text{Poisson}(c_{D1}; \lambda(1-E_1)) \qquad \text{and} \qquad c_{A1} \sim \text{Poisson}(c_{A1}; \gamma \lambda E_1) 
+ c_{D1} \sim \text{Poisson}(c_{D1}; \lambda(1-E_1)) \qquad \text{and} \qquad c_{A1} \sim \text{Poisson}(c_{A1}; \gamma \lambda E_1). 
 \end{equation}
 
 Similarly, for the second population, $c_{D2}$ and $c_{A2}$, are given by
 \begin{equation}
- c_{D2} \sim \text{Poisson}(c_{D2}; \lambda(1-E_2)) \qquad \text{and} \qquad c_{A2} \sim \text{Poisson}(c_{A2}; \gamma \lambda E_2) 
+ c_{D2} \sim \text{Poisson}(c_{D2}; \lambda(1-E_2)) \qquad \text{and} \qquad c_{A2} \sim \text{Poisson}(c_{A2}; \gamma \lambda E_2). 
 \end{equation}
 
 For simplicity, leakage and direct excitation are not currently considered, either for the single population case, or for multiple populations. However, these can be added to the model without introducing further complexity. Bleaching of the acceptor fluorophore partway through a bin is also not considered. 
@@ -294,7 +294,7 @@ The total number of photons is then given by the sum of photons from all fluores
 
 This process is then repeated for each time-bin in a dataset. This gives two data streams of integer photon counts -- corresponding to the donor and acceptor channels in a FRET experiment -- representing background noise alone or a combination of noise and excitation events.
 
-This mathematical model describes a Bayesian belief network and is shown as a directed acyclic graph in standard plate notation in Fig.~\ref{fig:plate_DAG}. It can be used, with appropriate parameters (see Table~\ref{tab:shared}), to generate synthetic data. Comparison of these synthetic photon streams with experimental data reveals an excellent replication of all aspects of the experimental data (see Fig.~\ref{fig:marginals}), suggesting that, despite its many simplifications, such as the neglect of direct excitation and leakage effects, this model captures the most important features sufficient to analyse the FRET process. In the following section, we describe our custom-built inference algorithm, based on MCMC Metropolis sampling~\cite{hastings70}, which can be used to infer values for all relevant physical parameters of the model.
+This mathematical model describes a Bayesian belief network and is shown as a directed acyclic graph in standard plate notation~\cite{Buntine1994} in Fig.~\ref{fig:plate_DAG}. It can be used, with appropriate parameters (see Table~\ref{tab:shared}), to generate synthetic data. Comparison of these synthetic photon streams with experimental data reveals an excellent replication of all aspects of the experimental data (see Fig.~\ref{fig:marginals}), suggesting that, despite its many simplifications, such as the neglect of direct excitation and leakage effects, this model captures the most important features sufficient to analyse the FRET process. In the following section, we describe our custom-built inference algorithm, based on MCMC Metropolis sampling~\cite{hastings70}, which can be used to infer values for all relevant physical parameters of the model.
 
 %This model can be used, with appropriate parameters (see Table~\ref{tab:shared}), to generate synthetic data. Comparison of these synthetic photon streams with experimental data reveals an excellent replication of all aspects of the experimental data (see Supplementary Material, Fig. S4), suggesting that, despite its many simplifications, such as the neglect of direct excitation and leakage effects, this model captures the most important features sufficient to analyse the FRET process. 
 
@@ -314,7 +314,7 @@ Our key innovation is the use of Bayesian model-based multi-variate statistical 
 
 Estimating the parameters of a complex model given some experimental observations is a typical inference problem. In a smFRET experiment, we want to determine the concentrations of the fluorescently labelled species and their respective inter-dye distances given some experimental data. We would also to know other associated parameters, such as the rate of noise emission in each channel and the average brightness of fluorescent events. These values are described explicitly as parameters in the generative model. However, due to noise or a small amount of data, as well as the co-dependence of all observations on all parameters, it is difficult to determine the values of these parameters directly from observations. Consequently, a different strategy must be applied and probabilistic inference provides a solution.
 
-Using probability theory this inference problem is expressed as determining the conditional probability distribution over the parameters given the observations, namely $$\Pr[\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E | (f_D, f_A)_n]$$ for a smFRET dataset with $n$ time-bins, as described in Section~\ref{subsect:model}. As described above (Section~\ref{sect:model_based_inference}), given a generative model of the experiment that describes the probability of generating certain observations given known parameters, namely $\Pr[\text{Obs.} | \text{Par.}]$, we can apply Bayes' theorem (Eq.~\ref{eq:model_probability}) to derive the required distribution over the parameters of our model:
+Using probability theory this inference problem is expressed as determining the conditional probability distribution over the parameters given the observations, namely $$\Pr[\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E | (f_D, f_A)_n]$$ for a smFRET dataset with $n$ time-bins, as described in Section~\ref{subsect:model}. As described above (Section~\ref{sect:model_based_inference}), given a generative model of the experiment that describes the probability of generating certain observations given known parameters, we can apply Bayes' theorem (Eq.~\ref{eq:model_probability}) to derive the required distribution over the parameters of our model:
 
 \begin{multline}
 \Pr[\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E | (f_D, f_A)_n] = \\ = \frac{\Pr[(f_D, f_A)_n |\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E] \cdot \Pr[\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E]}
@@ -433,14 +433,14 @@ for a molecule labelled with both donor and acceptor dyes.  The donor-only proba
 %&\cdot\frac{(\lambda (1-E_2)+\lambda_{D})^{-f_D}e^{-(\lambda(1-E_2)+\lambda_{D})}}{f_D!}\frac{(\lambda E_2 \gamma + \lambda_{A})^{-f_A}e^{-(\lambda E_2 \gamma+\lambda_{A})}}{f_A!}\lambda^{k_D-1}\frac{e^{-\frac{\lambda}{\theta}}}{\theta^{k_D}\Gamma(k_D)} \, d\lambda
  
 
-where the two terms $\Pr[(f_D, f_A)_i | \lambda, E_1, \gamma, \lambda_{D}, \lambda_{A}]$ and $\Pr[(f_D, f_A)_i | \lambda, E_2, \gamma, \lambda_{D}, \lambda_{A}]$ can be determined as for the single population case using eqn~\ref{eq:FRET_single} and $P_1$ and $P_2$, given by Eqn.~\ref{eq:2ppltn_frac} below, describe the relative sizes of the two fluorescent populations.
+where the two terms $\Pr[(f_D, f_A)_i | \lambda, E_1, \gamma, \lambda_{D}, \lambda_{A}]$ and $\Pr[(f_D, f_A)_i | \lambda, E_2, \gamma, \lambda_{D}, \lambda_{A}]$ can be determined as for the single population case using Eq.~\ref{eq:FRET_single} and $P_1$ and $P_2$, given by Eqn.~\ref{eq:2ppltn_frac} below, describe the relative sizes of the two fluorescent populations.
 
 \begin{equation}
-P_1 = \frac{\lambda E_1}{\lambda E_1 + \lambda E_2} \qquad P_2 = \frac{\lambda E_2}{\lambda E_1 + \lambda E_2}
+P_1 = \frac{\lambda E_1}{\lambda E_1 + \lambda E_2}~~\text{and}~~P_2 = \frac{\lambda E_2}{\lambda E_1 + \lambda E_2},
 \label{eq:2ppltn_frac}
 \end{equation}
 
-These integrals are computed numerically.  
+which are computed numerically.  
 
 Finally, the $Pr[\text{multiple events}]$ term represents a simplification of the inference process compared with the forward model.  Whereas the generative process explicitly modelled  multiple occupancy of the excitation volume; in the inference process, parameters are inferred assuming only a single protein is present in the confocal volume.  In the single-population case, the potential to observe multiple proteins in the excitation volume at the same time is collapsed into a single negative binomial term, with a single averaged parameter:
 
@@ -469,12 +469,12 @@ p_2 = \frac{\lambda_{\text{prot}}^2}{2!}e^{-\lambda_{\text{prot}}} \qquad
 p_3 = \frac{\lambda_{\text{prot}}^3}{3!}e^{-\lambda_{\text{prot}}} ,
 \end{equation}
 
-In the multiple population case, accounting for multiple occupancy is made more complex by the potential for molecules in different states to co-occupy the confocal volume. For this reason, co-occupancy by up to four molecules is treated explicitly. The mean number of photons expected from two, three or four fluorescent molecules, in all possible labelling and configurational states is calculated. These values are then used to calculate a total mean for multiple occupancy events, which is used as above in eqn~(\ref{eq:multippltn}). 
+In the multiple population case, accounting for multiple occupancy is made more complex by the potential for molecules in different states to co-occupy the confocal volume. For this reason, co-occupancy by up to four molecules is treated explicitly. The mean number of photons expected from two, three or four fluorescent molecules, in all possible labelling and configurational states is calculated. These values are then used to calculate a total mean for multiple occupancy events, which is used as above in Eq.~\ref{eq:multippltn}. 
 
-The total probability that the pair of datapoints $f_D, f_A$ was generated by a certain set of parameters is than computed using Equation~\ref{eq:multi_sum}. The probability that the whole dataset was generated by a those parameters is then the product:
+The total probability that the pair of datapoints $f_D, f_A$ was generated by a certain set of parameters is then computed using Equation~\ref{eq:multi_sum}. The probability that the whole dataset was generated by a those parameters is the product:
 \begin{equation}
 %\footnotesize
-\Pr[\text{Obs.}|\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E, p_D, p_A] = \prod_i \Pr[(f_D, f_A)_i |\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E, p_D, p_A]
+\Pr[\text{Obs.}|\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E, p_D, p_A] = \prod_i \Pr[(f_D, f_A)_i |\lambda_D, \lambda_A, \lambda_{\text{prot}}, \lambda_B, E, p_D, p_A].
 \end{equation}
 
 %The priors can be neglected as they are all uniform distributions over some space (Fig.~S\ref{fig:plate_DAG}).
@@ -500,13 +500,13 @@ where $\Pr(\text{Obs.} | x'$) and $\Pr(\text{Obs.} | x)$ are the total probabili
 
 
 \section{Experimental Methods}
-\subsection*{Generation of Simulated Data}
+\paragraph*{Generation of Simulated Data}
 Simulated datasets were generated using the model described above, using code written in Python. Code is available online (\url{https://bitbucket.org/rebecca_roisin/fret-inference}). 
 
-\subsection*{smFRET measurements}
+\paragraph*{smFRET measurements}
 Single-molecule data were collected using a custom built system (see XXX introduction). Details of the instrumentation and DNA duplex preparation are described below. Data were collected for 30 minutes at room temperature using a 1 ms bin time, in frames of 10000 bins.
 
-\subsection*{Analysis of single-molecule FRET data}
+\paragraph*{Analysis of single-molecule FRET data}
 Thresholding-based data-analysis was carried out in the standard manner~\cite{deniz01}.  For the inference process, data were fitted in a single step. Raw data, prior to any denoising or event selection steps, were analysed using the Metropolis sampling process described above. Sampling occurred in two steps. First, two approximate samples were generated, with a burn-in of 3000 iterations and 1000 iterations between samples. Then, 100 further samples were made, with a burn-in of 1000 iterations and 100 iterations between samples. For all analyses, the initial parameters shown in Table~\ref{tab:shared} were used. The outcome of the inference was not sensitive to initial conditions (see Fig.~\ref{fig:MC_burnin_convergence}).  
 
 \begin{figure}
@@ -532,7 +532,7 @@ Thresholding-based data-analysis was carried out in the standard manner~\cite{de
 \end{table} 
 \end{center}
 
-\subsection*{DNA Sample Preparation}
+\paragraph*{DNA Sample Preparation}
 \label{subsect:DNA_prep}
 Single-stranded DNA labelled with either Alexa Fluor\textsuperscript{\textregistered} 488 or Alexa Fluor\textsuperscript{\textregistered} 647 were purchased from Sigma.  Two 488-labelled donor sequences were used, whose sequences are shown in Table~\ref{tab:donor}.  These were annealed to one of the five 647-labelled acceptor sequences shown in Table~\ref{tab:dsDNA}.  Annealing was performed by mixing an aliquot of donor sequence with a 1.1 molar excess of acceptor sequence and heating to 90$^{\circ}$ for 30 minutes, then cooling gradually to room temperature over a period of three hours.  The final concentration of dsDNA was 2 $\mu$M. For smFRET measurements, a total dsDNA concentration of 60 pM was used. 
 
@@ -576,17 +576,17 @@ Donor & \scriptsize{TACTGCCTTTCTGTATCGC\textbf{5}TATCGCGTAGTTACCTGCCTTGCATAGCCAC
 \end{table} 
 \end{center} 
  
-\subsection*{Instrumentation}
+\paragraph*{Instrumentation}
 \label{subsect:experimental}
 A Gaussian laser beam of wavelength 488 nm (Qioptiq) and 75 $\mu$W power was directed \emph{via} a fibre-optic cable (iFLEX Viper) into the back port of an inverted microscope (Nikon Eclipse TE2000-U). The beam was focused 5 $\mu$m into 350 $\mu$L of the sample in a 0.6 mL Laboratory Tek chambered cover slide (Scientific Laboratory Suppliers Ltd., Surrey, UK) through a high numerical aperture oil immersion objective (Appochromat 60 x, NA 1.40 Nikon). Sample fluorescence was collected by the same objective and imaged onto a 50 $\mu$m pinhole (Melles Griot) to exclude out of focus fluorescence. Donor and acceptor photons were then separated using a dichroic mirror (58DRLP, Omega Optical Filters).
 
 Donor fluorescence was filtered by long-pass and band-pass filters (510ALP and 535AF45, Omega Optical Filters), then focused onto an avalanche photodiode (APD, SPCM AQ-161, EG\&G, Canada).  Acceptor fluorescence was similarly filtered using both long pass and band-pass filters (565ALP and 695AF55, Omega Optical Filters) before being focused on a second APD device (SPCM AQR-141, EG\&G, Canada).  Outputs from the two APDs were coupled to a PC-implemented Fluorescence Correlation Card (FPGA Celoxica RC10). The cross-talk from the donor to the acceptor channel has been found to be 3\%, the acceptor-to-donor cross-talk is negligible.
 
-\subsection*{Thresholding Analysis}
+\paragraph*{Thresholding Analysis}
 \label{subsect:thresholding}
 For AND thresholding, time-bins were denoised by subtraction of an averaged autofluorescence value for each channel and for cross-talk by subtraction of 3 \% of the donor channel value from the acceptor channel. Time-bins containing fluorescent events were identified using the criterion $n_D > 10$ and $n_A > 10$ for $n_D$ and $n_A$ photons in the donor and acceptor channels respectively. The FRET efficiency for each selected event was then calculated using an instrumental $\gamma$-factor of 1.0. Frequency histograms were then constructed of the calculated FRET efficiencies and fitted with a single Gaussian (for single fluorescent species) or two Gaussains (for two fluorescent species). The mean of the fit was taken to be the mean FRET efficiency of the species and the area under the curve was taken to be proportional to the population size. For SUM thresholding, denoised time-bins were selected if $n_D + n_A > 20$. FRET Efficiency histograms were constructed and then fitted. If the data peaks were well separated from the zero peak, the zero peak was not fitted and one or two Gaussians were used as above to fit the histogram. If the data peaks were not distinct from the zero peak, an additional Gaussian was used to fit the zero-peak. Fitting was carried out using graphical fitting software (Origin 8.1 from OriginLab). 
 
-\subsection*{Determining Labelling Efficiency}
+\paragraph*{Determining Labelling Efficiency}
 To determine the fraction of labelled DNA molecules, an alternating laser excitation (ALEX) method was used over a data collection period of 10 minutes. The fraction of donor-labelled molecules and acceptor-labelled molecules, $fr_D$ and $fr_A$, equivalent to $p_D$ and $p_A$ were found by calculating the ratios:
 \begin{equation}
 fr_D = \frac{n_{\text{donor}}}{n_{\text{total}}} \qquad fr_A = \frac{n_{\text{acceptor}}}{n_{\text{total}}}
@@ -606,8 +606,8 @@ For these ALEX measurements, a bin time of 1 ms was used, with 10 laser modulati
 
 
 \section{Results}
-\subsection*{Validation using Simulated Data}
-\subsubsection*{Single fluorescent species}
+\subsection{Validation using Simulated Data}
+\paragraph*{Single fluorescent species}
 
 %use a table to give the parameters used in the data generation! 
 
@@ -652,7 +652,7 @@ A second illustration of this effect is shown in Fig.~\ref{fig:fig4_synthetic_An
    \end{center}
 \end{figure} 
 
-\subsubsection*{Multiple fluorescent species}
+\paragraph*{Multiple fluorescent species}
 
 \begin{figure}
    \begin{center}
@@ -689,8 +689,8 @@ So far, we have considered simulated datasets containing a single fluorescent po
 \end{table} 
 \end{center}
 
-\subsection*{Application to Experimental Data}
-\subsubsection*{DNA Duplexes}
+\subsection{Application to Experimental Data}
+\paragraph*{DNA Duplexes}
 
 \begin{figure}
    \begin{center}
@@ -702,7 +702,7 @@ So far, we have considered simulated datasets containing a single fluorescent po
 
 As a first test of the inference technique on experimental data, we determined the FRET efficiencies and population sizes of freely diffusing DNA duplexes labelled with the FRET pair of dyes Alexa Fluor\textsuperscript{\textregistered} 488 and Alexa Fluor\textsuperscript{\textregistered} 647. We also analysed these data using AND and SUM thresholding. We used a series of different DNA sequences, with dye attachment sites separated by between 4 and 12 base-pairs. As the separation between the dye attachment sites increases, the FRET efficiency is expected to decrease in a sigmoidal manner. As Fig.~\ref{fig:fig6_real_single} shows, all three analysis methods reproduce this curve. The discrepancies between these curves are interesting. AND thresholding shows a somewhat squashed curve -- with FRET efficiencies of the species with the highest FRET calculated to be lower than calculated by other methods and the species with the lowest FRET efficiencies calculated to have a slightly higher FRET efficiency than by other methods. This is explained by the bias towards intermediate-FRET species that results from the AND criterion. In contrast, both SUM thresholding and the inference process produce a smooth curve without demonstrating this bias. 
 
-\subsubsection*{Mixtures of DNA Duplexes}
+\paragraph*{Mixtures of DNA Duplexes}
 Finally, we applied two-population inference to mixtures of two DNA duplexes, combined, as in the synthetic examples, in an equimolar ratio (intermediate concentration), or with a three-fold excess of one duplex (high and low concentrations). We used a high- (4 bp separation), an intermediate- (10 bp separation) and a low-FRET duplex (12 bp separation). The datasets were also analysed using both AND and SUM thresholding. The results are displayed in Fig.~\ref{fig:fig7_real_multi_free}). 
 
 Here, inference (Fig.~\ref{fig:fig7_real_multi_free} A - C) performs very well. In all three cases, the correct FRET efficiency was inferred, and a monotonic increase in event rate is seen between low, intermediate and high concentrations of duplex. In contrast, the thresholding analyses perform very poorly. FRET efficiencies calculated using AND thresholding (Fig.~\ref{fig:fig7_real_multi_free} D - F) are squashed towards intermediate FRET efficiencies. This also distorts the event distribution, meaning that the population sizes are inaccurately estimated. Similarly, although SUM thresholding (Fig.~\ref{fig:fig7_real_multi_free} G - J) accurately measures FRET efficiencies for two of the mixtures, it is unable to resolve the 10 bp - 12 bp mixture, so only a single fluorescent population can be resolved (Fig.~\ref{fig:fig7_real_multi_free} J) . Furthermore, SUM thresholding also distorts the population sizes, with populations of low FRET species (10 bp and 12 bp dupelexes) being significantly overestimated, owing to zero-peak contributions. Consequently, inference analysis emerges as the most reliable method to analyse mixtures of fluorescent species. Note however, that even the inference method cannot fully resolve the the 10 bp - 12 bp mixture. Although population sizes are correctly inferred, the two FRET efficiencies are compressed towards each other, suggesting that the two species are difficult to distinguish. This indicates a resolution limit of approximately 5 \AA~for the inference method.    
