@@ -374,10 +374,10 @@ E.~Sisamakis, A.~Valeri, S.~Kalinin, P.~J. Rothwell, and C.~A.~M. Seidel.
   fluorescence detection.
 \newblock {\em Methods in Enzymology}, 475:455--514, 2010.
 
-\bibitem{numpy}
-S.~van~der Walt, S.~C. Colbert, and G.~Varoquaux.
-\newblock The {NumPy} array: A structure for efficient numerical computation.
-\newblock {\em Computing in Science and Engineering}, 13:22--30, 2011.
+\bibitem{vanRossum1995}
+G.~van Rossum.
+\newblock {\em Python tutorial, Technical Report CS-R9526}.
+\newblock Centrum voor Wiskunde en Informatica (CWI), Amsterdam, 1995.
 
 \bibitem{hoffmann11}
 A.~Hoffmann, D.~Nettels, J.~Clark, A.~Borgia, S.~E. Radford, J.~Clarke, and
@@ -406,16 +406,17 @@ N.~K Lee, A.~N. Kapanidis, Y.~Wang, X.~Michalet, J.~Mukhopadhyay, R.~H.
   alternating-laser excitation.
 \newblock {\em Biophys. J.}, 88:2939--2953, 2006.
 
-\bibitem{numpy11}
-S.~van~der Walt, S.~C. Colbert, and Varoquaux G.
-\newblock The numpy array: A structure for efficient numerical computation.
-\newblock {\em Comput. Sci. Eng.}, 13:9--12, 2011.
-
 \bibitem{murphy14}
 R.~R. Murphy, G.~Danezis, M.~H. Horrocks, S.~E. Jackson, and D.~Klenerman.
 \newblock Bayesian inference of accurate population sizes and fret efficiencies
   from single diffusing biomolecules.
 \newblock {\em Anal. Chem. (submitted April 2014)}, 86:8603--8612, 2014.
+
+\bibitem{Guoshen2012}
+Y.~Guoshen.
+\newblock Solving inverse problems with piecewise linear estimators: From
+  gaussian mixture models to structured sparsity.
+\newblock {\em IEEE Transs. Image Process}, 21:2481--2499, 2012.
 
 \bibitem{kalinin2007}
 S.~Kalinin, S.~Felekyan, M.~Antonik, and C.~A.~M. Seidel.
@@ -1142,6 +1143,11 @@ C.~Leys, C.~Ley, O.~Klein, P.~Bernard, and L.~Licata.
 T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein.
 \newblock {\em Introduction to Algorithms}.
 \newblock MIT Press and McGraw-Hill, 2009.
+
+\bibitem{numpy}
+S.~van~der Walt, S.~C. Colbert, and G.~Varoquaux.
+\newblock The {NumPy} array: A structure for efficient numerical computation.
+\newblock {\em Computing in Science and Engineering}, 13:22--30, 2011.
 
 \bibitem{scipy}
 K.~J. Millman and M.~Aivazis.

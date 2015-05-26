@@ -38,16 +38,16 @@
 \contentsline {section}{\numberline {2.3}Data Analysis in Confocal smFRET Experiments}{37}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Development of Scientific Software}{38}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Continuous Excitation}{39}{subsection.2.3.2}
-\contentsline {paragraph}{Time-binned Data}{39}{section*.22}
-\contentsline {paragraph}{Fluorescent Burst Data}{39}{section*.23}
+\contentsline {paragraph}{Time-binned Data.}{39}{section*.22}
+\contentsline {paragraph}{Fluorescent Burst Data.}{39}{section*.23}
 \contentsline {subsection}{\numberline {2.3.3}Alternating Laser Excitation}{40}{subsection.2.3.3}
-\contentsline {paragraph}{Time-binned Data}{40}{section*.24}
+\contentsline {paragraph}{Time-binned Data.}{40}{section*.24}
 \contentsline {paragraph}{Fluorescent Burst Data}{41}{section*.25}
 \contentsline {section}{\numberline {2.4}pyFRET: Design and Implementation}{41}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Code Layout and Design}{41}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Dependencies}{43}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Simple Event Selection and Denoising}{44}{subsection.2.4.3}
-\contentsline {paragraph}{FRET Data}{44}{section*.26}
+\contentsline {paragraph}{FRET Data.}{44}{section*.26}
 \contentsline {paragraph}{ALEX Data}{45}{section*.27}
 \contentsline {subsection}{\numberline {2.4.4}Burst Search Algorithms}{46}{subsection.2.4.4}
 \contentsline {section}{\numberline {2.5}RASP: Recurrence Analysis of Single Particles}{47}{section.2.5}
@@ -60,10 +60,10 @@
 \contentsline {subsection}{\numberline {2.6.5}Testing the RASP Algorithm}{51}{subsection.2.6.5}
 \contentsline {section}{\numberline {2.7}Performance Analysis of smFRET Analysis Algorithms}{52}{section.2.7}
 \contentsline {subsection}{\numberline {2.7.1}Evaluating Performance with DNA Duplexes}{52}{subsection.2.7.1}
-\contentsline {paragraph}{Simple Algorithms}{52}{section*.28}
-\contentsline {paragraph}{Burst Search Algorithms}{52}{section*.29}
+\contentsline {paragraph}{Simple Algorithms.}{52}{section*.28}
+\contentsline {paragraph}{Burst Search Algorithm.s}{52}{section*.29}
 \contentsline {subsection}{\numberline {2.7.2}Evaluating the Burst Search Algorithms}{53}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}Evaluating the Gaussian Fitting}{57}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.3}Evaluating Gaussian Fitting}{57}{subsection.2.7.3}
 \contentsline {subsection}{\numberline {2.7.4}Benchmarking the RASP Algorithm}{64}{subsection.2.7.4}
 \contentsline {section}{\numberline {2.8}Availability and Future Directions}{64}{section.2.8}
 \contentsline {section}{\numberline {2.9}Conclusions}{65}{section.2.9}
