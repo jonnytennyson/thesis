@@ -146,11 +146,22 @@ W.-C. Sun, K.~R. Gee, D.~H. Klaubert, and R.~P. Haugland.
 \newblock Synthesis of fluorinated fluoresceins.
 \newblock {\em J. Org. Chem.}, 62:6469--6475, 1997.
 
+\bibitem{Ranasinghe2011}
+R.~T. Ranasinghe and T.~Brown.
+\newblock Ultrasensitive fluorescence-based methods for nucleic acid detection:
+  towards amplification-free genetic analysis.
+\newblock {\em Chem. Commun.}, 47:3717--3735, 2011.
+
 \bibitem{zondervan03}
 R.~Zondervan, F.~Kulzer, S.~B. Orlinskii, and M.~Orrit.
 \newblock Photoblinking of rhodamine 6g in poly(vinyl alcohol): Radical dark
   state formed through the triplet.
 \newblock {\em J. Phys. Chem. A.}, 107:6770 -- 6776, 2003.
+
+\bibitem{Shera1990}
+E.~B. Shera, N.~K. Seitzinger, L.~M. Davis, R.~A. Keller, and S.~A. Soper.
+\newblock Detection of single fluorescent molecules.
+\newblock {\em Chem. Phys. Lett.}, 174:553--557, 1990.
 
 \bibitem{nir06}
 E.~Nir, X.~Michalet, K.~M. Hamadani, T.~A. Laurence, D.~Neuhauser,
@@ -295,11 +306,6 @@ A.~Gelman, J.~B. Carlin, H.~S. Stern, and D.~B. Rubin.
 \newblock {\em {Bayesian Data Analysis, Second Edition (Chapman \& Hall/CRC
   Texts in Statistical Science)}}.
 \newblock Chapman and Hall/CRC, 2003.
-
-\bibitem{Neal2003}
-R.~M. Neal.
-\newblock Slice sampling.
-\newblock {\em Ann. Stat.}, 31:705--767, 2003.
 
 \bibitem{O'Hagan2004}
 A.~O'Hagan and J.~Forster.

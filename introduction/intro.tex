@@ -1,13 +1,14 @@
 \chapter{Introduction}
 \label{chap:intro}
 \section{Introduction}
-This chapter provides a general introduction to the contextual background of the work presented in this thesis. First, we provide a general overview of the physical phenomena of fluorescence and F\"{o}rster resonance energy transfer (FRET) and describe how these pheonomena can be applied to the study of biological molecules. We also review the common experimental and analytical techniques used in these research areas. We then present an overview of techniques of statistical analysis, with a particular focus on model-based Bayesain inference. We present common sampling-based techniques for Bayesian statistical analysis and describe why Bayesian inference is a useful tool in the analysis of single-molecule fluorescence data.
+This chapter provides a general introduction to the work presented in this thesis. First, we provide a general overview of the physical phenomena of fluorescence and F\"{o}rster resonance energy transfer (FRET) and describe how these pheonomena can be applied to the study of biological molecules. We also review the common experimental and analytical techniques used in these research areas. We then present an overview of techniques of statistical analysis, with a particular focus on model-based Bayesain inference. We present common sampling-based techniques for Bayesian statistical analysis and describe why Bayesian inference is a useful tool in the analysis of single-molecule fluorescence data.
 
 \section{Fluorescence and FRET}
 Since FRET was first used to measure the distance between two fluorescent dyes on individual molecules bound to a surface~\cite{ha96}, single-molecule FRET (smFRET) has become a popular tool to investigate the structure and dynamics of biomolecules, both on a surface and diffusing freely in solution~\cite{haran03, schuler02, weiss00}. We open this chapter with a discussion of the physical basis of molecular fluorescence and FRET. We then describe some of the applications of fluorescence in biological research, and describe the constraints and experimental techniques commonly used in single molecule fluorescence microscopy.
 
 \subsection{The Physical Basis of Fluorescence}
 \paragraph{Fluorescence}
+\label{sect:fluorescence}
 Fluorescence is the physical phenomenon by which a molecule that has absorbed a photon of electromagnetic radiation and which is in an excited state relaxes via non-radiative processes, such as vibrational interactions, rotation and translation in its medium and then  emits a photon, returning to its ground state~\cite{valeur2001}. Typically, a fluorescence excitation-emission cycle involves transitions between the singlet ground state ($\text{S}_0$) and first excited state ($\text{S}_1$) of the fluorophore (Fig.~\ref{fig:jablonski}). Owing to the intramolecular transitions occurring prior to emission, the photon emitted is of a lower energy than the photon absorbed. The difference in energy between the absorbed and emitted photons is termed the Stokes shift (Fig.~\ref{fig:stokes},~\cite{Albani2011}) and is a characteristic of the energy levels available to the excited molecule. 
 
 The typical timescale for a single fluorescence excitation-emission cycle is approximately $10^{-10} - 10^{-7}$ s. This timescale is dominated by the lifetime of the excited state, (typically $10^{-10} - 10^{-7}$ s); photon excitation and emission processes, as well as vibrational transitions, occur on a timescale that is several orders of magniude shorter (absorption $10^{-15}$ s, relaxation $10^{-12} - 10^{-10}$ s).
@@ -23,7 +24,7 @@ The typical timescale for a single fluorescence excitation-emission cycle is app
 \begin{figure}
 	\begin{center}
 	\includegraphics*[clip=true, width=3in]{introduction/QuantaRed-Spectra.jpg}
-	\caption{The absorption (black line) and emission (red line) spectra for the Quanta Red dye. Due to fast vibrational relaxation, the fluorescence emission is shifter to longer wavelengths than the absorption. This is termed the Stokes shift. Figure from~\cite{spectral}}
+	\caption{The absorption (black line) and emission (red line) spectra for the Quanta Red dye. Due to fast vibrational relaxation, the fluorescence emission is shifted to longer wavelengths than the absorption. This is termed the Stokes shift. Figure from~\cite{spectral}}
 	\label{fig:stokes}
 	\end{center}
 \end{figure}
@@ -36,7 +37,7 @@ From the $\text{T}_1$ state there are several accessible pathways to the ground 
 A third relaxation pathway from the $\text{T}_1$ state is photobleaching. If the fluorophore is in a solution containing dissolved oxygen, the $\text{T}_1$ state can interact with the triplet ground state of molecular oxygen, leading to de-excitation via triplet-triplet annihilation:
 
 \begin{equation}
-^3\text{T}_1 + ^3\text{O}_2 \longrightarrow ^1\text{S}_0 + ^3\text{O}_2
+^3\text{T}_1 + ^3\text{O}_2 \longrightarrow ^1\text{S}_0 + ^3\text{O}_2.
 \label{eq:blinking1}
 \end{equation} 
 
@@ -44,14 +45,14 @@ The resultant singlet oxygen can then irreversibly oxidise the fluorophore, leav
 
 %Intersystem crossing ($10^{-10} - 10^{-8}$ s) and internal conversion ($10^{-11} - 10^{-9}$ s) are slower processes.
 
-\paragraph{The Extinction Coefficient and Quantum Yield}
+\paragraph{The Extinction Coefficient and Quantum Yield.}
 \label{par:qy}
 In choosing a fluorophore for a single molecule fluorescence experiment, it is desirable to maximise the number of successful absorption-emisssion cycles undergone per unit time. Hence, the best fluorophores both absorb many exciting photons, increasing the number of possible cycles, and return to the ground state via fluorescence emission following the majority of excitations, maximising the number of photons actually emitted. Two key parameters that enable quantitative evaluation of fluorescent properties are the molar extinction coefficient, $\epsilon$, and quantum yield, $\phi$. 
 
 The extinction coefficient, $\epsilon$, measures how strongly a fluorophore absorbs light at a given wavelength $\lambda$. It can be calculated for a fluorophore $f$, from the Beer-Lambert law~\cite{goldbook2006} as:
 
 \begin{equation}
-I = I_0 e^{-\epsilon_f l}
+I = I_0 e^{-\epsilon_f l},
 \label{eq:ext_coeff}
 \end{equation}
 
@@ -60,7 +61,7 @@ where for an initial excitation intensity $I_0$, $I$ is the excitation intensity
 Similarly, the fluorescence quantum yield for fluorophore $f$, $\phi_f$, describes the fraction of photon absorption events that result in emission of a photon. It can be defined as: 
 
 \begin{equation}
-\phi_f = \frac{k_f}{k_f + k_{nr}}
+\phi_f = \frac{k_f}{k_f + k_{nr}},
 \label{eq:quantum_yield}
 \end{equation}
 
@@ -78,35 +79,35 @@ where $n_{\text{emitted}}$ and $n_{\text{absorbed}}$ are respectively the number
 
 \subsection{The Physical Basis of FRET}
 \label{sect:fret}
-\paragraph{F\"{o}rster Resonance Energy Transfer}
+\paragraph{F\"{o}rster Resonance Energy Transfer.}
 F\"{o}rster resonance energy transfer (FRET) is a non-radiative energy transfer process that can occur between chromophoric molecules~\cite{forster48}. The degree of energy transfer, E, is dependent on the fluorophore distance, varying inversely with the sixth power of the dye-dye distance, $r$: 
 
 \begin{equation}
-E = \frac{1}{1+ (\frac{r}{R_0})^6}
+E = \frac{1}{1+ (\frac{r}{R_0})^6},
 \label{eq:FRET_d}
 \end{equation}
 
 where, $R_0$ is the F\"{o}rster distance, a dye-dependent constant that defines the dye-dye distance for which the energetic transfer efficiency is 50 \%. $R_0$ is defined, for a donor (D) and acceptor (A) fluorophore pair, by their degree of spectral overlap and their relative orientation:
 
 \begin{equation}
-R_0 = \sqrt[\leftroot{-2}\uproot{2}6]{\frac{9000\phi_D\ln(10)\kappa^2J(\lambda)}{128\pi^2n^4N_A}}
+R_0 = \sqrt[\leftroot{-2}\uproot{2}6]{\frac{9000\phi_D\ln(10)\kappa^2J(\lambda)}{128\pi^2n^4N_A}}.
 \label{eq:R_0}
 \end{equation}
 
-Here, $\phi_D$ is the quantum yield of the donor fluorophore, $\kappa$ is the dipole orientation factor, $N_A$ is Avogadro's number, n is the refractive index of the medium, and $J(\lambda)$ is the spectral overlap integral:
+Here, $\phi_D$ is the quantum yield of the donor fluorophore, $\kappa$ is the dipole orientation factor, $N_A$ is Avogadro's number, $n$ is the refractive index of the medium, and $J(\lambda)$ is the spectral overlap integral:
 
 \begin{equation}
-J(\lambda) = \int f_D(\lambda)\epsilon_A(\lambda)\lambda^4\,d\lambda
+J(\lambda) = \int f_D(\lambda)\epsilon_A(\lambda)\lambda^4\,d\lambda,
 \label{eq:J}
 \end{equation}
 
 where $f_D(\lambda)$ and $\epsilon_A(\lambda)$ are respectively the normalised emission spectrum of the donor and the molar extinction coefficient of the acceptor at wavelength $\lambda$. The dipole orientation factor, $\kappa^2$ is typically assumed to be $\frac{2}{3}$, the value observed if both dyes are freely rotating and hence can be assumed to be isotropically oriented during the lifetime of the $\text{S}_1$ excited state~\cite{Demchenko2008}.
 
-\paragraph{Deriving the FRET Equation}
+\paragraph{Deriving the FRET Equation.}
 The distance dependence of the energy transfer allows FRET to be used as a ``molecular ruler"~\cite{stryer67}, to determine intramolecular distances. For a given FRET enrgy transfer event, the FRET Efficiency, $E$, defined with respect to the intramolecular distance $r$ in Eq.~\ref{eq:FRET_d}, is given ratiometrically by:
 
 \begin{equation}
-E = \frac{n_A}{\gamma \cdot n_D + n_A}
+E = \frac{n_A}{\gamma \cdot n_D + n_A},
 \label{eq:FRET_E}
 \end{equation}
 
@@ -115,33 +116,33 @@ where $n_A$ and $n_D$ are the number of observed photons emitted by the acceptor
 As defined above, the quantum yield of a (donor) fluorophore is given by the ratio of the rates of decay from the excited state $\text{S}_1$ via radiative and non-radiative processes: 
 
 \begin{equation}
-\phi_D = \frac{k_f}{k_f + k_{nr}}
+\phi_D = \frac{k_f}{k_f + k_{nr}}.
 \label{eq:quantum_yield_donor}
 \end{equation}
 
 Similar ratios can be used to describe the quantum yield of a donor fluorophore that can undergo FRET energy transfer (Eq.~\ref{eq:quantum_yield_donor_FRET}) and the FRET efficiency (Eq.~\ref{eq:FRET_ratio}):
 
 \begin{equation}
-\phi_{DA} = \frac{k_f}{k_f + k_{nr} + k_{ET}}
+\phi_{DA} = \frac{k_f}{k_f + k_{nr} + k_{ET}},
 \label{eq:quantum_yield_donor_FRET}
 \end{equation}
 
 \begin{equation}
-E = \frac{k_{ET}}{k_f + k_{nr} + k_{ET}}
+E = \frac{k_{ET}}{k_f + k_{nr} + k_{ET}},
 \label{eq:FRET_ratio}
 \end{equation}
 
 where $k_{ET}$, the rate constant for the FRET energy transfer process, is given by:
 
 \begin{equation}
-k_{ET} = \frac{1}{t_D} \left(\frac{R_0}{r}\right)^6
+k_{ET} = \frac{1}{t_D} \left(\frac{R_0}{r}\right)^6,
 \label{eq:k_ET}
 \end{equation}
 
 and $t_D$ is the lifetime of the excited state in the absence of an acceptor fluorophore: 
 
 \begin{equation}
-t_D = \frac{1}{k_{f} + k_{nr}}
+t_D = \frac{1}{k_{f} + k_{nr}}.
 \label{eq:ex_lifetime}
 \end{equation}
 
@@ -149,8 +150,7 @@ Combining Equations~\ref{eq:quantum_yield_donor},~\ref{eq:quantum_yield_donor_FR
 
 \begin{equation}
 \begin{split}
-E &= 1 - \frac{k_{f} + k_{nr}}{k_f + k_{nr} + k_{ET}} \\ 
-&= 1 - \frac{\phi_{DA}}{\phi_{D}} \\
+E &= 1 - \frac{k_{f} + k_{nr}}{k_f + k_{nr} + k_{ET}} = 1 - \frac{\phi_{DA}}{\phi_{D}} \\
 &= 1 - \frac{n_{DA}}{n_{D}}
 \label{eq:FRET_ratio_2}
 \end{split}
@@ -161,13 +161,13 @@ where $n_{DA}$ and $n_D$ are respectively the number of observed photons emitted
 In the presence of a FRET acceptor, it is not possible to directly observe $n_D$. However, this can be derived from the number of photons observed to be emitted by the acceptor fluorophore, $n_A$. The difference in the number of photons emitted by the donor in the presence and absence of the acceptor is $n_D - n_{DA}$. This is related to the number of photons emitted by the acceptor, $n_A$, as follows:
 
 \begin{equation}
-\frac{n_D - n_{DA}}{n_A} = \frac{\phi_D\eta_D}{\phi_A\eta_A}
+\frac{n_D - n_{DA}}{n_A} = \frac{\phi_D\eta_D}{\phi_A\eta_A},
 \label{eq:ratio_FRET}
 \end{equation}
 
 where $\phi_D$ and $\phi_A$ are the quantum yields of the donor and acceptor fluorophores respectively, and $\eta_D$ and $\eta_A$ are the respective instrumental detection efficiencies of donor and acceptor photons.
 
-If we call the ratio $\frac{\phi_D\eta_D}{\phi_A\eta_A}$ $\gamma$, Eq.~\ref{eq:ratio_FRET} can be re-arranged to give:
+If we denote the ratio $\frac{\phi_D\eta_D}{\phi_A\eta_A}$ as $\gamma$, Eq.~\ref{eq:ratio_FRET} can be re-arranged as:
 
 \begin{equation}
 n_D = n_{DA} - \frac{n_A}{\gamma}
@@ -185,24 +185,24 @@ Advances in the fields of optical microscopy, fluorophore synthesis and data ana
 %Fluorescence can be used simply to gain information about cellular organisation and molecular localisations; for example by fluorescently labelling specific cellular structures with organic dyes and then imaging planes of the entire cell to identify  
 \subsection{Techniques of Single Molecule Imaging}
 \label{subsect:techniques}
-The greatest challenge in single molecule microscopy is to be able to detect dim fluorescence emission from individual molecules against a background of photon emission from other sources, such as Raman scattering by solution molecules and residual fluorescence from solution impurities~\cite{Moerner2003}. Consequently, a large amount of work has been done to maximise the signal-to-noise ratio (SNR) of fluorescent emission data. This ratio can be optimised from both ends; namely maximising the signal and minimising the background noise. Maximising the signal involves the development and selection of fluorophores that achieve many fluorescent emission cycles during an excitation event. This is discussed in Section~\ref{sect:fluorophores}. 
+The greatest challenge in single molecule microscopy is to be able to detect dim fluorescence emission from individual molecules against a background of photon emission from other sources, such as Raman scattering by solution molecules and residual fluorescence from solution impurities~\cite{Moerner2003}. Consequently, a large amount of work has gone into maximizing the signal-to-noise ratio (SNR) of fluorescent emission data. This ratio can be optimised from both ends; namely maximising the signal and minimising the background noise. Maximising the signal involves the development and selection of fluorophores that achieve many fluorescent emission cycles during an excitation event. This is discussed in Section~\ref{sect:fluorophores}. 
 
 An effective way to minimize the background noise is to reduce the emission detection volume; as the number of photons detected from irrelevant species will be reduced with a smaller detection volume, whereas detection of photons from a single fluorophore of interest within the detection volume will be unaffected~\cite{Dillingham2008}. Single molecule fluorescence techniques can hence be characterised based on their method of detection volume reduction: Wide-field techniques, including Epifluorescence Microscopy and Total Internal Fluorescence Microscopy (TIRFM) illuminate and collect data from a wide image plane with a large area but minimal depth; by contrast confocal microscopy techniques attempt to collect data from the smallest detection volume possible -- a voxel of volume approximately 1 fL. These techniques and the optical geometry required for successful data collection, are summarized below. 
 
-\paragraph{Epifluorescence Microscopy}
+\paragraph{Epifluorescence Microscopy.}
 The simplest geometry for single molecule fluorescence detection is epifluorescence microscopy (Fig.~\ref{fig:epi}). In an epifluorescence microscope monochromatic, collimated light is focused into the back apperture of an objective lens with a high Numerical Aperture (N.A.). A large volume of the fluorescently labelled sample, which is placed above the objective, is illuminated; emitted photons are collected through the same objective. Fluorescence emission is separated from excitation light using various filters before being focused onto a charge coupled device (CCD) camera which generates a current at each pixel proportional to the intensity of incident light.
 
 \begin{figure}
 	\begin{center}
-	\includegraphics*[clip=true, width=2in]{introduction/epi.pdf}
-	\caption{Schematic of an epifluorescence microscope. Laser light is focused into a sample using an objective lens with a high N.A. Emitted fluorescence is captured using the same objective, separated from reflected exciting photons using a dichroic mirror and directed onto a CCD.}
+	\includegraphics*[clip=true, width=1.5in]{introduction/epi.pdf}
+	\caption{Schematic of an epifluorescence microscope. Laser light is focused into a sample using an objective lens with a high N.A. Emitted fluorescence is captured using the same objective, separated from reflected exciting photons using a dichroic mirror and directed onto a charge coupled device (CCD).}
 	\label{fig:epi}
 	\end{center}
 \end{figure}
 
 The principal advantage of epifluorescent illumination, in addition to its ease of set-up, is the large illumination area. The detection volume is typically seveal microns in diameter, allowing multiple emitters to be imaged at the same time and to be tracked across multiple image frames~\cite{Webb2014}. However, because the depth of the illumination volume in epifluorescence microscopy is relatively large, the SNR is quite low: many molecules at different depths into the sample volume are illuminated, resulting in a large amount of out-of-focus fluorescence reaching the CCD camera. Consequently, although epifluorescence microscopes are the most commonly used variant of the fluorescence microscope, they are less useful for single molecule detection, as the SNR is too low to efficiently resolve fluorescence emission from individual molecules.
 
-\paragraph{Total Internal Fluorescence Microscopy}
+\paragraph{Total Internal Fluorescence Microscopy.}
 Total Internal Fluorescence Microscopy (TIRFM) (Fig.~\ref{fig:TIRF} A) uses a similar optical geometry to epifluorescence microscopy: as in epifluorescence imaging, the sample is illuminated via the back port of an objective and fluorescence emission is collected via the same objective and focused onto a CCD camera. Howerver, TIRFM exploits the phenomenon of Total Internal Reflection (TIR) to reduce the depth of the illumination volume and hence increase the SNR.
 
 \begin{figure}
@@ -218,15 +218,15 @@ TIR occurs when a light wave passing through a medium with refractive index $n_1
 The critical angle, $\theta_c$ is determined using Snell's Law~\cite{Wolf1995} using the ratio of the refractive indices $n_1$ and $n_2$:
 
 \begin{equation}
-\theta_c = \sin^{-1}\left(\frac{n_2}{n_1}\right)
+\theta_c = \sin^{-1}\left(\frac{n_2}{n_1}\right).
 \label{eq:snell}
 \end{equation}
 
-For a typical borosilicate coverslide ($n = 1.518$) in contact with water ($n = 1.33$), a TIRF angle of $61.2^{\circ}$ is required, enabling fluorescence excitation to be limited to a depth of $\sim 100$ nm. The narrow excitation depth of TIRFM allows all of the advantages of epifluorescence (specifically large excitation area and particle tracking), but increases the SNR sufficiently that fluorescence emission from individual molecules can be effectively resolved.
+For a typical borosilicate coverslide ($n = 1.518$) in contact with water ($n = 1.33$), a TIRF angle of $61.2^{\circ}$ is required, enabling fluorescence excitation to be limited to a depth of $\sim 100$ nm. The narrow excitation depth of TIRFM allows all of the advantages of epifluorescence, such as large excitation area and particle tracking, but increases the SNR sufficiently that fluorescence emission from individual molecules can be effectively resolved.
 
 %\paragraph{Super-Resolution Microscopy}
 \paragraph{Confocal Microscopy}
-Confocal microscopy takes the reduction in excitation volume a further step, minimizing the detection volume in all dimensions and collecting fluorescence emission from a solution volume of $\sim 1$ fL. In confocal microscopy (Fig.~\ref{fig:confocal}), a collimated laser beam is focused through an infinity corrected objective with a high N.A. onto a diffraction limited spot (diameter $> 1 \mu$m) a few microns into the sample volume. Fluorescence emission from the sample is collected and recollimated by the same objective, passed through a dichroic mirror to remove reflected incident light and then directed through a small aperture pinhole (diameter $50 - 100 \mu$m) placed in the conjugate focal plane to remove out-of-focus fluorescence. The remaining photons are directed onto an Avalanche Photodiode (APD) detector, which can detect individual photons with nanosecond resolution. To enable detection of fluorescence from individual fluorescent molecules, analyte solutions are used at extremely low concentrations (typically $10 - 100$ pM), such that the probability of more than one molecule occupying the confocal volume simultaneously is extremely small. Single molecule confocal microscopy is typically used in this manner to image labelled molecules diffusing freely in solution~\cite{weiss00} or flowed rapidly through the exciting laser beam~\cite{horrocks2012}; in conjunction with a moveable sample stage or movable laser mount, it can also be used to image surfaces and surface-tethered molecules~\cite{Brown2008}. 
+Confocal microscopy takes the reduction in excitation volume a further step, minimizing the detection volume in all dimensions and collecting fluorescence emission from a solution volume of $\sim 1$ fL. In confocal microscopy (Fig.~\ref{fig:confocal}), a collimated laser beam is focused through an infinity corrected objective with a high Numerical Aperture (NA) onto a diffraction limited spot (diameter $> 1 \mu$m) a few microns into the sample volume. Fluorescence emission from the sample is collected and recollimated by the same objective, passed through a dichroic mirror to remove reflected incident light and then directed through a small aperture pinhole (diameter $50 \mu$m - $100 \mu$m) placed in the conjugate focal plane to remove out-of-focus fluorescence. The remaining photons are directed onto an Avalanche Photodiode (APD) detector, which can detect individual photons with nanosecond resolution. To enable detection of fluorescence from individual fluorescent molecules, analyte solutions are used at extremely low concentrations (typically $10$ pM - $100$ pM), such that the probability of more than one molecule occupying the confocal volume simultaneously is extremely small. Single molecule confocal microscopy is typically used in this manner to image labelled molecules diffusing freely in solution~\cite{weiss00} or flowed rapidly through the exciting laser beam~\cite{horrocks2012}; in conjunction with a moveable sample stage or movable laser mount, it can also be used to image surfaces and surface-tethered molecules~\cite{Brown2008}. 
 
 
 \begin{figure}
@@ -237,18 +237,18 @@ Confocal microscopy takes the reduction in excitation volume a further step, min
 	\end{center}
 \end{figure}
 
-\paragraph{Fluorescence Correlation Spectroscopy}
-Fluorescence Correlation Spectroscopy (FCS)~\cite{Magde1972} is an extension of the Confocal method described above. In FCS, a higher concentration ($1 - 100$ nM) of analyte solution is used, such that multiple fluorophores occupy the confocal volume an any time. Temporal fluctuations in the detected fluorescence emission can be used to determine physical paramters of the analyte solution, such as molecular concentrations and diffusion constants. These are determined by fitting a fluorescence autocorrelation function (Eq.~\ref{eq:fcs}), 
+\paragraph{Fluorescence Correlation Spectroscopy.}
+Fluorescence Correlation Spectroscopy (FCS)~\cite{Magde1972} is an extension of the Confocal method described above. In FCS, a higher concentration ($1$ nM - $100$ nM) of analyte solution is used, such that multiple fluorophores occupy the confocal volume an any time. Temporal fluctuations in the detected fluorescence emission can be used to determine physical parameters of the analyte solution, such as molecular concentrations and diffusion constants. These are determined by fitting a fluorescence autocorrelation function (Eq.~\ref{eq:fcs}), 
 
 \begin{equation}
-G(\tau) = \frac{\langle \delta F(t) \cdot \delta F(t + \tau)\rangle}{\langle F(t)^2 \rangle}
+G(\tau) = \frac{\langle \delta F(t) \cdot \delta F(t + \tau)\rangle}{\langle F(t)^2 \rangle},
 \label{eq:fcs}
 \end{equation}   
 
 where  $F(t)$ and $\delta F(t)$ are the absolute fluorescence intensity and the fluctuation about the mean intensity at a time t, respectively, using a three-dimensional diffusion model corrected for photoblinking effects (Eq.~\ref{eq:diffusion}): 
 
 \begin{equation}
-G(\tau) = \left( 1 - T + T\exp(\frac{-\tau}{-\tau_T}) \right)\frac{1}{N}\left( \frac{1}{1 + \frac{\tau}{\tau_T}} \right)\left( \frac{1}{1 + (\frac{\omega}{z_0})^2}\frac{t}{\tau_D}\right)^{0.5}
+G(\tau) = \left( 1 - T + T\exp(\frac{-\tau}{-\tau_T}) \right)\frac{1}{N}\left( \frac{1}{1 + \frac{\tau}{\tau_T}} \right)\left( \frac{1}{1 + (\frac{\omega}{z_0})^2}\frac{t}{\tau_D}\right)^{0.5}.
 \label{eq:diffusion}
 \end{equation}   
 
@@ -262,13 +262,13 @@ All of the techniques of single molecule fluorescent microscopy described thus f
 
 As described above (Section~\ref{par:qy}), to maximise the number of excitation-emission cycles, a fluorophore should have both a high extinction coefficient and a high quantum yield, to maximise the number of photons emitted per unit time. The lifetime of the excited state should also be short, to increase the number of excitation-emission cycles per unit time. Furthermore, the fluorophore should have a high extinction coefficient at the excitation wavelength, to maximise the number of photon absorption events. Furthermore, the fluorophore should be resistant to both permanent photobleaching and to transient photoblinking, to prevent premature attenuation of fluorescence emission. These considerations are particularly pertinent for fluorophores used in confocal techniques, where the number of photons observed from each fluorophore is additionally limited by the dwell-time of the molecule in the confocal volume (typically less than 1 ms).
 
-Considerable effort has been made to synthesize fluorophores that fulfil these requirements for the excitation wavelengths accessible to single molecule microscopy. Many of the most popular dyes are derived from fluorone (Fig.~\ref{fig:fluorone}): fluorescein, the fluorophore used in the first demonstration of single molecule detection~\cite{Sun1997} and the green-excited Rhodamine 6G are both built around fluorone's chromophoric heterocyclic structure; functionalised derivatives of these molecules form the basis of a range of blue- and green-excited fluorophores in the commercial Alexa Fluor and Atto ranges (Fig.~\ref{fig:dyes}). Red-excited fluorophores are typically derived from cyanine structures, although the polymethine backbone makes them susceptible to photobleaching via cis/trans isomerisation. To address this issue, conformationally locked derivatives, such as the commercially available Atto647N, have been developed; however both locked and unlocked cyanine derivatives are prone to photoblinking via population of long-lived triplet states~\cite{zondervan03}.
+Considerable effort has gone into synthesizing fluorophores that fulfil these requirements for the excitation wavelengths accessible to single molecule microscopy. Many of the most popular dyes are derived from fluorone (Fig.~\ref{fig:fluorone}): fluorescein, the fluorophore used in the first demonstration of single molecule detection~\cite{Sun1997} and the green-excited Rhodamine 6G are both built around fluorone's chromophoric heterocyclic structure; functionalised derivatives of these molecules form the basis of a range of blue- and green-excited fluorophores in the commercial Alexa Fluor and Atto ranges (Fig.~\ref{fig:dyes},~\cite{Ranasinghe2011}). Red-excited fluorophores are typically derived from cyanine structures, although the polymethine backbone makes them susceptible to photobleaching via cis/trans isomerisation. To address this issue, conformationally locked derivatives, such as the commercially available Atto647N, have been developed; however both locked and unlocked cyanine derivatives are prone to photoblinking via population of long-lived triplet states~\cite{zondervan03}.
 
 
 \begin{figure}
 	\begin{center}
 	\includegraphics*[clip=true, width=5in]{introduction/dyes.pdf}
-	\caption{Chemical structures of some common fluorescent dyes. Top row, left to right: fluorone forms the basis of many flurorescnent dyes; fluorescein was used in the first demonstration of single molecule detection; Rhodamine 6G was XXX? Bottom row, left to right: the commercially-available dyes Alexa Fluor 488; Alexa Fluor 647; and the conformationally locked variant Atto 647N.}
+	\caption{Chemical structures of some common fluorescent dyes. Top row, left to right: fluorone forms the basis of many flurorescnent dyes; fluorescein was used in the first demonstration of single molecule detection of a fluorescently-labeled molecule; Rhodamine 6G was the first individual fluorophore to be observed in solution~\cite{Shera1990} Bottom row, left to right: the commercially-available dyes Alexa Fluor 488; Alexa Fluor 647; and the conformationally locked variant Atto 647N.}
 	\label{fig:dyes}
 	\end{center}
 \end{figure}
@@ -283,7 +283,7 @@ The most common form of confocal single microscopy exploits the phenomenon of FR
 
 A collimated laser beam, matched to the excitation spectrum of the donor, is used to illuminate an extremely dilute solution of these labelled molecules. When a labelled molecule diffuses through the laser beam, the fluorophore is excited and photons are emitted.  Emitted photons are collected, separated from excitation photons, recollimated, then further separated into donor and acceptor wavelengths using a dichroic mirror and directed onto two APD detectors for collection and analysis (Fig.~\ref{fig:confocal}).
 
-In the simplest smFRET experiment, all photons reaching the detectors during data acquisition binned as they are received into time-bins of length similar to the expected dwell-time of a molecule in the confocal volume. Fluorescent events are identified as the time-bins that contain sufficient photons to meet a specified criterion~\cite{weiss00}. Alternatively, to avoid missing or double counting fluorescent events that are split over more than one time-bin, photons can be binned a time-scale much shorter than the typical dwell time. A burst search algorithm~\cite{nir06} is then used to scan the resultant photon stream for bursts of a specified duration and brightness. Details of these two methods of event selection are provided in Chapter~\ref{chap:pyfret}.
+In the simplest smFRET experiment, all photons reaching the detectors during data acquisition are binned as they are received into time-bins of length similar to the expected dwell-time of a molecule in the confocal volume. Fluorescent events are identified as the time-bins that contain sufficient photons to meet a specified criterion~\cite{weiss00}. Alternatively, to avoid missing or double counting fluorescent events that are split over more than one time-bin, photons can be binned a time-scale much shorter than the typical dwell time. A burst search algorithm~\cite{nir06} is then used to scan the resultant photon stream for bursts of a specified duration and brightness. Details of these two methods of event selection are provided in Chapter~\ref{chap:pyfret}.
 
 Identified fluorescent events are then used to generate FRET histograms: the FRET efficiency of each event is calculated as described above:
 
@@ -302,20 +302,20 @@ Histograms of the observed FRET efficiencies (Fig.~\ref{fig:histogram} A) can be
    \end{center}
 \end{figure}
 
-\paragraph{Direct Acceptor Excitation}
+\paragraph{Direct Acceptor Excitation.}
 One drawback of the experimental technique summarized above is that the acceptor fluorophore can only be observed indirectly via FRET energy transfer from an excited donor fluorophore. Acceptor photobleaching and imperfect labelling of the analyte molecules can therefore lead to experimental artifacts such as the zero peak (Fig.~\ref{fig:histogram} B), which complicate or distort downstream analysis. As a consequence, several experimental modifications of the simple FRET experiment have been developed to enable direct observation of the acceptor fluorophore.
 
 One simple modification is Two Colour Coincidence Detection (TCCD)~\cite{orte06, orte10}. In this technique, two collimated, overlapped lasers are used to simultaneously excite both the donor and the acceptor fluorophores, enabling observation of the acceptor fluorophore even when the donor fluorophore is not present or when the inter-fluorophore distance is too great for FRET to occur. TCCD has been used in conjuction with simple FRET to study protein aggregation~\cite{cremades2012} and molecular conformation~\cite{Ye2012}. It is useful for identifying multimeric species, but extracting molecular distance can be challenging, as direct acceptor excitation cannot be simply separated from FRET emission~\cite{orte08_3}.  
 
-A more complex modification uses Alternating Laser Exciation (ALEX). In an ALEX experiment the diffusing molecules are excitated by two lasers in rapid alternation~\cite{kapanidis05}. One laser excites the donor fluorophore and the other can directly excite the acceptor fluorophore. The modulation is fast on the timescale of molecular dwell-time, allowing a single fluorescent molecule to receive multiple cycles of both donor excitation and direct acceptor excitation. The additional information obtained from direct excitation of the acceptor fluorophore allows fluorescent events originating from improperly labelled molecules to be excluded from further analysis. 
+A more complex modification uses Alternating Laser Excitation (ALEX). In an ALEX experiment the diffusing molecules are excitated by two lasers in rapid alternation~\cite{kapanidis05}. One laser excites the donor fluorophore and the other can directly excite the acceptor fluorophore. The modulation is fast on the timescale of molecular dwell-time, allowing a single fluorescent molecule to receive multiple cycles of both donor excitation and direct acceptor excitation. The additional information obtained from direct excitation of the acceptor fluorophore allows fluorescent events originating from improperly labelled molecules to be excluded from further analysis. 
 
 A further modification of this ALEX technique is Periodic Acceptor Excitation (PAX)~\cite{doose07}. PAX is a simplified version of ALEX, in which donor excitation is continuous, but there is rapid modulation of the acceptor excitation power. As in an ALEX experiment, this enables information about the molecular labelling state to be determined, however the experimental setup is simpler as rapid modulation is required for only one of the two lasers used.
 
-\paragraph{Application to Oligomer Sizing}
+\paragraph{Application to Oligomer Sizing.}
 As described above, a smFRET experiment is used to obtain information about intramolecular distances. However, single molecule confocal spectroscopy can also be applied to the problem of determining the size and stoichiometry of oligomeric species~\cite{orte10, cremades2012}. In these experiments, individual monomer molecules are labelled with a single fluorophore. Following some period of time during which the aggregation reaction proceeds, the reaction mixture is diluted to picomolar concentrations and subjected to TCCD illumination.  Oligomer size and stoichiometry is then calculated by comparing the brightness of observed fluorescent events with the brightness of a labelled monomer:
 
 \begin{equation}
-\text{Size} = 2 \cdot \left(\frac{n_D + \gamma^{-1}n_A}{\langle n_{\text{monomer}}\rangle}\right)
+\text{Size} = 2 \cdot \left(\frac{n_D + \gamma^{-1}n_A}{\langle n_{\text{monomer}}\rangle}\right),
 \label{eq:sizing}
 \end{equation}
 
@@ -350,7 +350,7 @@ A further extension of this sizing technique uses microfluidic flow~\cite{horroc
 \subsection{Computational Challenges}
 A confocal smFRET experiment, as described above, presents several computational challenges during data analysis. Based on an experimentally observed stream of observed photon counts, analysis should be able to determine many properties of the analyte and experiment, such as the number and concentration of fluorescent populations, the intramolecular distances between the dye attachment sites and, in an aggregation experiment, the stoichiometry of a multimeric complex. The following chapter (Chapter~\ref{chap:pyfret}) describes implementation of the most common methods for this form of data analsysis, involving deterministic event selection algorithms, simple subtraction based denoising, and the construction and fitting of FRET histograms to determine the number of fluorescent populations. Similar methods for oligomer sizing are briefly discussed in Chapter~\ref{chap:sizing}. 
 
-However, as photon emission by fluorophores is inherently a probabilistic phenomenon, these problems are also well-posed as problems of probabilistic inference: given an observed sequence of fluorescent bursts, what are the most likely properties of the experimental system that generated that dataset. A considerable part of this thesis deals with the application of the tools of probabilistic analysis to the analysis of smFRET data, both to infer intramolecular distances (Chapter~\ref{chap:inference}) and to oligomer sizing (Chapter~\ref{chap:sizing}). Consequently, we now give a brief overview of the research discipline of Bayesian inference and outline the sampling techniques used in this work.  
+However, as photon emission by fluorophores is inherently a probabilistic phenomenon, these problems are also well-posed as problems of probabilistic inference: given an observed sequence of fluorescent bursts, what are the most likely properties of the experimental system that generated the observations. A considerable part of this thesis deals with the application of the tools of probabilistic modeling to the analysis of smFRET data, both to infer intramolecular distances (Chapter~\ref{chap:inference}) and to oligomer sizing (Chapter~\ref{chap:sizing}). Consequently, we now give a brief overview of Bayesian inference methods and outline the Monte Carlo sampling techniques used in this work.  
 
 %Firstly, it is necessary to be able to accurately identify fluorescent events and to separate them from noise photons. Secondly, where multiple fluorescent populations are present, they must be separated and their intramolecular distances determined. Finally, it is also necessary to be able to relate the 
 
@@ -372,20 +372,20 @@ However, as photon emission by fluorophores is inherently a probabilistic phenom
 
 \section{Probabilistic Inference and Bayesian Statistics}
 \label{sect:bayes_infer}
-This section introdeces the core concepts of probability theory and relates them to the analysis of smFRET datasets. We first introduce the concepts of model-based inference and Bayesian statistics. We then demonstrate how these concepts can be used to describe the physical processes underlying a smFRET experiment. We show that this describes a physical model of the smFRET experiment. Next, we introdue the sampling-based techniques that can be used to infer the parameters of these models in order to determine information from the experiments performed.   
+This section introduces the core concepts of probability theory and relates them to the analysis of smFRET datasets. We first introduce the concepts of model-based inference and Bayesian statistics. We then demonstrate how these concepts can be used to describe the physical processes underlying a smFRET experiment. We show that this describes a physical model of the smFRET experiment. Next, we introduce the sampling-based techniques that can be used to infer the parameters of these models in order to determine information from the experiments performed.   
 
-\subsection{Probabily Theory}
-\paragraph{Probabilty}
-Probability theory is the study of stochastic processes and the mathematical functions, termed probability distributions, that describe them. In probability theory, a variable whose value is subject to chance variations is termed a random variable. A discrete random variable, such as the outcome of a die roll or a coin flip, can take one of a fixed number of values and is described by a probability mass function (PMF); a continuous random variable can take any of a continous range of values and is described by a probability density function (PDF)~\cite{Meester2003, Feller1968}. 
+\subsection{Probability Theory}
+\paragraph{Probabilty.}
+Probability theory is the study of stochastic processes and the mathematical functions, termed probability distributions, that describe them. In probability theory, a variable whose value is subject to chance variations is termed a random variable. A discrete random variable, such as the outcome of a die roll or a coin flip, can take one of a countable number of values and is described by a probability mass function (PMF); a continuous random variable can take any numerical value in an interval (or collection of intervals) and is described by a probability density function (PDF)~\cite{Meester2003, Feller1968}. 
 
-In the field of single molecule fluorescence, the number of photons emitted by a fluorophore undergoing continuous excitation can be described as a discrete random variable. It is discrete since the number of photons emitted must be integral: it is unphysical to consider fractions of a photon. Photon emission can therefore be modeled using a discrete probability distribution. The most common choice is the Poisson distribution~\cite{chen1999}. The Poisson distribution, given by the below equation~\cite{Meester2003}:
+In the field of single molecule fluorescence, the number of photons emitted by a fluorophore undergoing continuous excitation can be modelled as a discrete random variable. It is discrete since the number of photons emitted must be integral: it is unphysical to consider fractions of a photon. Photon emission can therefore be modeled using a discrete probability distribution. The most common choice is the Poisson distribution~\cite{chen1999}. The Poisson distribution PMF, given by the below equation~\cite{Meester2003}:
 
 \begin{equation}
-\Pr(X = x) = \frac{\lambda^x \cdot e^{-\lambda}}{x!}
+\Pr(X = x) = \frac{\lambda^x \cdot e^{-\lambda}}{x!},
 \label{eq:poisson}
 \end{equation}
  
-for random varaible $X$ and integer values of $x$, describes the probability of a given number of events occurring in a fixed time interval, so is a good model for photon emission. 
+for random varaible $X$ and integer values of $x$, describes the probability of a given number of events occurring in a fixed time interval. Hence, this is a good model for photon emission, where each time a fluorophore is excited it has some probability of returning to the ground state via a radiative decay mechanism (Section~\ref{sect:fluorescence}), resulting in emission of a photon. 
 
 
 %The canonical example is the outcome of an experiment in which a fair, six-sided die is rolled once. If we term the final value shown on the die $X$, we can describe the probability distribution over possible values of $X$ as follows:
@@ -394,22 +394,22 @@ for random varaible $X$ and integer values of $x$, describes the probability of 
 %\Pr(X = x) = \frac{1}{6}, x = 1, 2, ... , 6 
 %\label{eq:prob_die}
 %\end{equation}  
-\paragraph{Conditional Probability and Bayes Theorem}
+\paragraph{Conditional Probability and Bayes Theorem.}
 Conditional probability is the probability that some event occurs, conditioned on the value of some other observation. From set theory, the conditional probability of event A, given event B, written $\Pr(A \mid B)$, is given by: 
 
 \begin{equation}
-\Pr(A \mid B) = \frac{\Pr(A \cap B)}{\Pr(B)}
+\Pr(A \mid B) = \frac{\Pr(A \cap B)}{\Pr(B)},
 \label{eq:conditional}
 \end{equation}
 
-This can be simply rearranged to give an expression for the probability of both events A and B occurring:
+ where $\Pr(A \cap B)$ is the joint probability of events A and B. This can be simply rearranged to give an expression for the probability of both events A and B occurring:
 
 \begin{equation}
 \Pr(A \cap B) = \Pr(A \mid B) \cdot \Pr(B) 
 \label{eq:conditional_and}
 \end{equation}
 
-An analagous expression can be derived from the probability of event B given event A:
+An analogous expression can be derived from the probability of event B given event A:
 
 
 \begin{equation}
@@ -417,7 +417,7 @@ An analagous expression can be derived from the probability of event B given eve
 \label{eq:conditional_and}
 \end{equation}
 
-A simple substitution and rearrangement allows the derivation of Bayes' theorem, which relates the conditional probability $\Pr(A \mid B)$ to the conditional probability $\Pr(B \mid A)$~\cite{barberBRML2012}:
+A simple substitution and rearrangement yields Bayes' theorem, which relates the conditional probability $\Pr(A \mid B)$ to the conditional probability $\Pr(B \mid A)$~\cite{barberBRML2012}:
 
 \begin{equation}
 \Pr(A \mid B) = \frac{\Pr(B \mid A) \cdot \Pr(A)}{\Pr(B)} 
@@ -428,41 +428,41 @@ A simple substitution and rearrangement allows the derivation of Bayes' theorem,
 Bayes Theorem (Eq.~\ref{eq:bayes_1}) provides the basis for Bayesian inference -- a method of statistical hypothesis testing. In Bayesian inference, the conditional probability $\Pr(A \mid B)$ is interpreted as a hypothesis, or model, the likelihood of which is evaluated based on observational evidence. Rewriting Eq.~\ref{eq:bayes_1} as the probability of a specific, parametric, model given some experimental observations, 
 
 \begin{equation}
-\Pr(\text{model}|\text{data}) = \frac{\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})}{\Pr(\text{data})} = \frac{\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})}{\int_{\forall \text{parameter values}}\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})} 
+\Pr(\text{model}|\text{data}) = \frac{\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})}{\Pr(\text{data})} = \frac{\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})}{\int_{\text{model}}\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})} 
 \label{eq:bayes_model}
 \end{equation}
 
-we see that it is possible to use a forward, generative model of an observed dataset, $\Pr(\text{data}|\text{model})$, coupled with a prior, $\Pr(\text{model})$, that describes appropriate values for the model parameters, to infer the posterior probability, $\Pr(\text{model}|\text{data})$, of the model paramters~\cite{barberBRML2012}. This relationship, which forms the basis of Bayesian statistics, allows parameter values of a parametric model to be inferred conditioned on observed experimental evidence~\cite{morris1982}.
+we see that it is possible to use a forward, generative model of an observed dataset, $\Pr(\text{data}|\text{model})$, coupled with a prior, $\Pr(\text{model})$, that describes appropriate values for the model parameters, to infer the posterior probability, $\Pr(\text{model}|\text{data})$, of the model paramters~\cite{barberBRML2012}. Here, the denominator, $\Pr(\text{data})$, provides a normalization to ensure that the area of the event space is precisely $1.0$. This relationship between the prior and posterior probability distributions, which forms the basis of Bayesian statistics, allows parameter values of a parametric model to be inferred conditioned on observed experimental evidence~\cite{morris1982}.
 
 \subsection{Monte Carlo Sampling}
-For an extremely simple model, it may be possible to compute the solution to Eq.~\ref{eq:bayes_model} exactly, by enumerating all possible states of the model. However, computing the normalisation factor in the denominator requires summing over all possible values of parameter of the model. Consequently, it quickly becomes computationally intractable either to derive an analytical expression for the denominator, or to compute it numerically. 
+For extremely simple models, it may be possible to compute the solution to Eq.~\ref{eq:bayes_model} exactly, by enumerating all possible states of the model. However, computing the normalisation factor in the denominator requires integrating over all possible values of parameter of the model. Consequently, it is computationally intractable either to derive an analytical expression for the denominator, or to compute it numerically for complex models. 
 
-To overcome this issue, sampling methods have been developed, which allow estimation of the distribution of values taken by the model parameters. To estimate the distribution of parameter values, it is sufficient to draw parameter samples distributed proportionally to the posterior distribution, $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$~\cite{hastings70}. The mean, variance and quantiles of these samples can be used to estimate the parameter values.
+To overcome this, sampling methods have been developed, to estimate aspects of the posterior distribution of model parameters. To estimate the distribution of parameter values, it is sufficient to draw parameter samples distributed proportionally to the unnormalized likelihood, $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$~\cite{hastings70}. The mean, variance and quantiles of these samples can be used to estimate the parameter values.
 
-Monte Carlo Markov chain (MCMC) algorithms are a class of algorithms that facilitate sampling from the posterior probability over the model parameters, $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$. A Markov chain is a memoryless random walk~\cite{Norris1998}, that transitions between different, enumerable, states in a manner that depends only on the state currently occupied. This is termed the Markov property~\cite{hoel1972}:
+Markov chain Monte Carlo (MCMC) algorithms are a class of algorithms that facilitate sampling from the posterior probability over the model parameters, $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$. A Markov chain is a memoryless random walk~\cite{Norris1998}, that transitions between states in a manner that depends only on the state currently occupied. This is termed the Markov property~\cite{hoel1972}:
 
 \begin{equation}
 \Pr(X_{n+1} = x_{n+1} | X_0 = x_0, \dots, X_n = x_n) = \Pr(X_{n+1} = x_{n+1} | X_n = x_n)
 \label{eq:markov_property}
 \end{equation}
 
-A Markov Chain Monte Carlo algorithm constructs a Markov chain that has as its equilibrium distribution the desired posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$, but from which samples can easily be made~\cite{Smith1993}. Running such a Markov chain for many thousands of iterations allows it to reach equilibrium; once this state has been reached, sampling further values with long inter-sample intervals is equivalent to drawing independent samples of the model parameter values, conditioned on the observed data, allowing inference of the distribution of parameter values. 
+A Markov Chain Monte Carlo algorithm constructs a Markov chain that converges to the desired posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$ as its equilibrium distribution. The Marko chain is selected so that samples of the parameter values can easily be made~\cite{Smith1993}. A long walk on such a Markov chain produces a sample drawn from the posterior distribution; once this state has been reached, sampling further values with long inter-sample intervals is equivalent to drawing independent samples of the model parameter values, conditioned on the observed data, allowing inference of the distribution of parameter values. 
 
 The following sections provide a brief overview of some of the most widely used MCMC algorithms.  
 
-\paragraph{Metropolis Hastings Sampling}
-The Metropolis-Hastings algorithm~\cite{hastings70}, an extension of the earlier Metropolis Algorithm~\cite{metropolis53}, is a sampling algorithm for approximating a probability distribution, $\Pr(x)$, by sampling from a distribution, $f(x)$ that is propoprtional to the probability density of $\Pr(x)$. As with all MCMC sampling methods, Metropolis-Hastings sampling iteratively samples parameter values such that, as more samples are made, the distribution $f(x)$ comes to approximate $\Pr(x)$ more and more closely~\cite{hastings70}. 
+\paragraph{Metropolis Hastings Sampling.}
+The Metropolis-Hastings algorithm~\cite{hastings70}, an extension of the earlier Metropolis Algorithm~\cite{metropolis53}, is a sampling algorithm for approximating a probability distribution, $\Pr(x)$, by sampling from a likelihood, $f(x)$ that is propoprtional to the probability density of $\Pr(x)$. As with all MCMC sampling methods, Metropolis-Hastings iteratively samples parameter values such that, as more samples are produced, the distribution $f(x)$ converges towards the posterior distribution $\Pr(x)$~\cite{hastings70}. 
 
-At each step of the Metropolis-Hastings algorithm, one of the model parameters, $x^i$ is selected at random and its value modified by a small amount. The probability density $f(x, x^i)$, which is proportional to $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$, is evaluated using both the old and the new value of the parameter $x^i$ and the new parameter value is accepted with probability proportional to the acceptance ratio $\alpha$, defined as~\cite{chib95, barberBRML2012}:
+At each step of the Metropolis-Hastings algorithm, one or more of the model parameters, $x^i$ is selected at random and its value modified by a small amount. The probability density $f(x, x^i)$, which is proportional to $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$, is evaluated using both the old and the new value of the parameter $x^i$ and the new parameter value is accepted with probability proportional to the acceptance ratio $\alpha$, defined as~\cite{chib95, barberBRML2012}:
 
 \begin{equation}
 \alpha =  \frac{f(x, x^i_{\text{new}})}{f(x, x^i_{\text{old}})} \sim \frac{\Pr(\text{data}|\text{model}, x^i_{\text{new}}) \cdot \Pr(\text{model}, x^i_{\text{new}})}{\Pr(\text{data}|\text{model}, x^i_{\text{old}}) \cdot \Pr(\text{model}, x^i_{\text{old}})}
 \label{eq:MH_alpha}
 \end{equation}
 
-Using this definition of the acceptance rate, $\alpha$, $x^i_{\text{new}}$ is always accepted if it improves the probability that the observed dataset was generated by the model parameters including $x^i_{\text{new}}$ ($alpha \ge 1$); accepting $x^i_{\text{new}}$ with probability proportional to $\alpha$ ($0 < \alpha < 1$) even when it makes the models worse prevents the sampler from getting stuck in a local optimum. Sampling in this manner allows the Markov chain to converge towards a better estimates of the model parameter values, by sampling from high-density regions of $\Pr{x}$.
+Using this definition of the acceptance rate, $\alpha$, $x^i_{\text{new}}$ is always accepted if it improves the probability that the observed dataset was generated by the model parameters including $x^i_{\text{new}}$ ($\alpha \ge 1$); accepting $x^i_{\text{new}}$ with probability proportional to $\alpha$ ($0 < \alpha < 1$) even when it makes the model a worse approximation is necessary for the sampler to converge accurately on the posterior distribution, as it ensures that detailed balance is maintained (see Section~\ref{par:balance}) and prevents the sampler from getting stuck in a local optimum. Sampling in this manner allows the Markov chain to converge towards a better estimates of the model parameter values, by sampling from high-density regions of $\Pr(x)$.
 
-\paragraph{Gibbs Sampling}
+\paragraph{Gibbs Sampling.}
 Gibbs sampling is a MCMC algorithm that is, in its simplest implementation, closely related to the Metropolis-Hastings algorithm. In Gibbs sampling, starting from a parametric model with a random initialisation of all parameter values, the sampling algorithm cycles through each parameter and draws a new sample value from a probability distribution, $\pi(x)$, conditioned on the current values of all other parameters~\cite{Smith1993}:
 
 \begin{equation}
@@ -472,10 +472,11 @@ x_i \sim \pi(x_i \mid x_0, \cdots, x_{i-1}, x_{i+1}, \cdots, x_n)
 
 In contrast to the Metropolis Hastings algorithm, where a new sample value is accepted dependent on the value of the acceptance ration, $\alpha$; in Gibbs sampling the new sample value is always accepted~\cite{Casella1992}. Multiple iterations of this cycle produces a Markov chain whose stationary distribution, as for other MCMC sampling techinques, is the the desired posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$~\cite{gelman1995}.
 
-\paragraph{Slice Sampling}
-A third method of MCMC sampling is slice sampling. Slice sampling samples approximates the value of a random variable by sampling points uniformly from the are under the curve of its probability distribution function and then storing the $x$-coordinates of the samples obtained~\cite{Neal2003}. To approximate a univariate random varaible distributed according to some distribution, $f(x)$, the slice sampling algorithm is initialised with a random value of $x$, $x_0$, for which $f(x_0) > 0$. An auxiliary variable, $y$ is then chosen by drawing from the uniform distribution $U(0, f(x_0))$. Drawing a horizontal line across the distribution $f(x)$ at the value $y$ defines a horizontal slice, above which $f(x) > y$. An interval $I = (x_L, x_R)$ is defined such that the horizontal slice lies within $I$ and a new value of x, $x_1$ is chosen by sampling uniformly from $I$. This defines a Markov chain that converges to a uniform distribution over the area under the curve of the desired probability distribution~\cite{Neal2003}. Extensions of the slice sampling procedure to infer the values of multiple parameters can be achieved either by applying the univariate sampling algorithm to each variable in turn; or by sampling directly from the multivariate distribution using hyperrectangles to define the sample space for uniform sampling~\cite{Neal2003}. 
+%\paragraph{Slice Sampling}
+%A third method of MCMC sampling is slice sampling. Slice sampling samples approximates the value of a random variable by sampling points uniformly from the are under the curve of its probability distribution function and then storing the $x$-coordinates of the samples obtained~\cite{Neal2003}. To approximate a univariate random varaible distributed according to some distribution, $f(x)$, the slice sampling algorithm is initialised with a random value of $x$, $x_0$, for which $f(x_0) > 0$. An auxiliary variable, $y$ is then chosen by drawing from the uniform distribution $U(0, f(x_0))$. Drawing a horizontal line across the distribution $f(x)$ at the value $y$ defines a horizontal slice, above which $f(x) > y$. An interval $I = (x_L, x_R)$ is defined such that the horizontal slice lies within $I$ and a new value of x, $x_1$ is chosen by sampling uniformly from $I$. This defines a Markov chain that converges to a uniform distribution over the area under the curve of the desired probability distribution~\cite{Neal2003}. Extensions of the slice sampling procedure to infer the values of multiple parameters can be achieved either by applying the univariate sampling algorithm to each variable in turn; or by sampling directly from the multivariate distribution using hyperrectangles to define the sample space for uniform sampling~\cite{Neal2003}. 
 
-\paragraph{Considerations for MCMC Sampling}
+\paragraph{Considerations for MCMC Sampling.}
+\label{par:balance}
 In order to obtain valid estimates of model parameters, several important aspects of the MCMC process must be considered. Firstly, to avoid perturbation of the stationary distribution away from the desired equilibrium distribution (namely the probability distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$), it is necessary that the property of Detailed Balance is maintained~\cite{O'Hagan2004}. Detailed Balance refers to the microscopic reversibility of the Markov chain, such that the probability of being in some state $x$ and transitioning to some other state $x'$ must be equal to the probability of being in state $x'$ and transitioning to state $x$:
 
 \begin{equation}
@@ -483,9 +484,9 @@ In order to obtain valid estimates of model parameters, several important aspect
 \label{eq:balance}
 \end{equation}
 
-This consideration is of particular importance for both Metropolis-Hastings and Gibbs sampling, where failure to select proposal distributions such that detailed balance is maintained may lead to the sampler not converging to the correct stationary distribution~\cite{Kelly2011}.
+This consideration is of particular importance for simple Metropolis sampling, where failure to select proposal distributions such that detailed balance is maintained may lead to the sampler not converging to the correct stationary distribution~\cite{Kelly2011}.
 
-Two further important considerations are the related concepts of burn-in and sample thinning. In MCMC sampling, the Markov chain is typically intialised with random values that result in a model that approximates very poorly the posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$. Hence, in sampling parameters using Markov chain sampling, it is necessary to run the sampler through many sampling iterations before beginning to store parameter estimates, in order to ensure that the initial values have been forgotten and the Markov chain has reached equilibrium. Similarly, once equlibrium has been reached, parameter samples that are drawn in quick succession will be correlated, as the Markov chain explores only slowly the parameter space. Therefore, in order to obtain many independent samples from the stationary distribution, it is important to ``thin'' the samples made by storing samples on only a small fraction of iterations, in order to ensure samples are taken from the whole parameter space and are not correlated with each other~\cite{Casella1992}.    
+Two further important considerations are the related concepts of burn-in and sample thinning. In MCMC sampling, the Markov chain is typically intialised with random values that result in a model that approximates very poorly the posterior distribution $\Pr(\text{data}|\text{model}) \cdot \Pr(\text{model})$. Hence, in sampling parameters using Markov chain sampling, it is necessary to run the sampler through many sampling iterations before beginning to store parameter estimates, in order to ensure that the initial values have been ``forgotten" and the Markov chain has reached equilibrium. Similarly, once equlibrium has been reached, parameter samples that are drawn in quick succession will be correlated, as the Markov chain explores only slowly the parameter space. Therefore, in order to obtain many independent samples from the stationary distribution, it is important to ``thin'' the samples made by storing samples on only a small fraction of iterations, in order to ensure samples are not correlated with each other~\cite{Casella1992}.    
 
 \section{Thesis Objectives}
 This thesis describes the development of software for the analysis of fluorescence data. We implement and rigorously evaluate standard algorithms for the analysis of smFRET data. We then describe the implementation and evaluation of novel techniques for the analysis of smFRET data using sampling-based probabilistic inference. Finally, we apply methods of probabilistic analysis to the problem of error correction in genome assemblies. Although this research was undertaken primarily to explore analysis methodologies appropriate to smFRET data, the methods and implementations described here have found considerable application, both within the Klenerman research group and beyond.
@@ -494,7 +495,9 @@ The primary objectives of this thesis are as follows:
 
 \begin{enumerate}
 
-\item To develop open-source software for the analysis of confocal smFRET data and to evaluate the performance of different algorithms for data analysis, in order to facilitate reproducible research practises within the smFRET research community and ensure best-practice data analysis.
+\item To implement and evaluate the performance of different literature algorithms for smFRET data analysis, in order to determine the most effective analysis tools.
+
+\item To develop a physical model of the smFRET emission process that can be used in probabilistic inference on smFRET datasets.
 
 \item To develop data analysis tools for confocal smFRET data that use model-based probabilistic inference and to evaluate the performance of these tools.
 
@@ -510,11 +513,11 @@ Chapter~\ref{chap:pyfret} introduces the pyFRET library, which we developed for 
 
 %The software described in this chapter was presented at EuroScipy, a European conference on the development of scientific software, where it received the award for best talk.
 
-Chapter~\ref{chap:inference} considers a Bayesian method for the analysis of data from continuous excitation smFRET datasets. First, we introduce a model-based theory of the smFRET experiment. Then, we describe how this parametric model can be used to infer intramolecular distances and population sizes from time-binned smFRET data. We benchmark our Bayesian analysis technique against thresholding techniques used for time-binned data, showing the superior performance of the inference technique.
+Chapter~\ref{chap:inference} considers a Bayesian inference method for the analysis of data from continuous excitation smFRET datasets. First, we introduce a model of the physical processes involved in the smFRET experiment. Then, we describe how this parametric model can be used to infer intramolecular distances and population sizes from time-binned smFRET data. We benchmark our Bayesian analysis technique against thresholding techniques used for time-binned data, showing the superior performance of the inference technique.
 
 Chapter~\ref{chap:sizing} extends this Bayesian analysis to sizing of labelled protein aggregates. We describe how a simplified model can be used to describe photon emission from multiple fluorophores. Using a combination of real and simulated datasets, we then show that there is a complex, non-linear relationship between aggregate size and the number of photons emitted in a fluorescent event, making inference of aggregate sizes extremely challenging. We explore the sources of this emission heterogeneity and suggest a novel excitation regime that could mitigate some of these sources of error.
 
-Chapter~\ref{chap:illumina}, the final results chapter, is somewhat different. This chapter describes a Bayesian analysis tool for error correction in genome assemblies generated using Illumina Nextera mate pairs. Illumina sequencing technology uses fluorescence emission from multiple fluorophores in its base calling algorithm. However, base calling errors and complex repeat structures can make reassembly of short reads challenging. In this chapter, we introduce NxRepair, an error correction tool that can identify mistakes in \emph{de novo} assemblies of bacterial genomes. We benchmark NxRepair against existing tools, demonstrating its superior performance. Although not specifically related to smFRET data, this tool falls into the remit of this thesis, as it applies similar techniques of probabilistic analysis to a problem encountered in downstream analysis of fluorescence data.
+Chapter~\ref{chap:illumina}, the final results chapter, is somewhat different. This chapter describes an analysis tool for error correction in genome assemblies generated using Illumina Nextera mate pairs. Illumina sequencing technology uses fluorescence emission from multiple fluorophores in its base calling algorithm. However, base calling errors and complex repeat structures can make reassembly of short reads challenging. In this chapter, we introduce NxRepair, an error correction tool that can identify mistakes in \emph{de novo} assemblies of bacterial genomes. We benchmark NxRepair against existing tools, demonstrating its superior performance. Although not specifically related to smFRET data, this tool falls into the remit of this thesis, as it applies similar techniques of probabilistic analysis to a problem encountered in downstream analysis of fluorescence data.
 
 Finally, Chapter~\ref{chap:conclusions} provides the conclusion to the thesis. Here, we summarise the overall contribution of this thesis and relate the work described to its wider research context. We also discuss possible extensions of the research described, indicating future applications of the research. Overall, the work presented in this thesis describes a rigorous evaluation of the analysis methodologies used in an experimental discipline, identifies several shortcomings and implements novel tools to mitigate overcome these issues. We hope that this work proves useful and informative to other researchers working in this field.
 
