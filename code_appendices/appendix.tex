@@ -1,0 +1,550 @@
+\chapter{pyFRET: Code Samples}
+\label{app:code_samples}
+
+Here we provide the code used in Chapter~\ref{chap:pyfret} to implement different methods of evaluating smFRET data from both FRET and ALEX datasets.
+
+\section{Burst Search Algorithms}
+\label{app:burst_search}
+\subsection{FRET Data}
+Using both the APBS and DCBS burst search algorithms is straightforward with pyFRET. Here, we give an example script to evaluate FRET data using APBS.
+
+\begin{Verbatim}[commandchars=\\\{\}, fontsize=\scriptsize]
+       \PY{k+kn}{from} \PY{n+nn}{pyfret} \PY{k+kn}{import} \PY{n}{pyFRET} \PY{k}{as} \PY{n}{pft}
+       \PY{k+kn}{import} \PY{n+nn}{os}
+       
+       \PY{c}{\PYZsh{} get data}
+       \PY{n}{duplexes} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{12}\PY{p}{]}
+       \PY{k}{for} \PY{n}{d} \PY{o+ow}{in} \PY{n}{duplexes}\PY{p}{:}
+       
+           \PY{n}{dup} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{bp}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{d}
+           
+           \PY{n}{my\PYZus{}directory} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{FRET\PYZus{}bursts}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{dup}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{FRET}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+           \PY{n}{list\PYZus{}of\PYZus{}files} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+           \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{600}\PY{p}{)}\PY{p}{:}
+               \PY{n}{list\PYZus{}of\PYZus{}files}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{DNA}\PY{l+s+si}{\PYZpc{}04d}\PY{l+s}{.dat}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{i}\PY{p}{)}
+           \PY{n}{data} \PY{o}{=} \PY{n}{pft}\PY{o}{.}\PY{n}{parse\PYZus{}bin}\PY{p}{(}\PY{n}{my\PYZus{}directory}\PY{p}{,} \PY{n}{list\PYZus{}of\PYZus{}files}\PY{p}{)}
+       
+           \PY{n}{T} \PY{o}{=} \PY{l+m+mi}{20} \PY{c}{\PYZsh{} window size}
+           \PY{n}{M} \PY{o}{=} \PY{l+m+mi}{20} \PY{c}{\PYZsh{} threshold in summed quantity}
+           \PY{n}{L} \PY{o}{=} \PY{l+m+mi}{20} \PY{c}{\PYZsh{} total burst size}
+       
+           \PY{n}{bursts} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{APBS}\PY{p}{(}\PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}bckd}\PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}crosstalk}\PY{p}{(}\PY{l+m+mf}{0.05}\PY{p}{,} \PY{l+m+mf}{0.03}\PY{p}{)}
+           \PY{n}{results\PYZus{}directory} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZdq{}}
+           \PY{n}{im\PYZus{}name} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{hist\PYZus{}FRET\PYZus{}APBS\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}T=20\PYZus{}M=10\PYZus{}L=10}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{dup}
+           \PY{n}{gauss\PYZus{}name} \PY{o}{=} \PY{n+nb+bp}{None}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{build\PYZus{}histogram}\PY{p}{(}\PY{n}{results\PYZus{}directory}\PY{p}{,} 
+                                  \PY{l+s}{\PYZdq{}}\PY{l+s}{hist\PYZus{}FRET\PYZus{}APBS\PYZus{}6\PYZus{}M=10\PYZus{}L=10}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                  \PY{n}{image} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                  \PY{n}{imgname} \PY{o}{=} \PY{n}{im\PYZus{}name}\PY{p}{,} 
+                                  \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{pdf}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                  \PY{n}{gauss} \PY{o}{=} \PY{n+nb+bp}{False}\PY{p}{,} 
+                                  \PY{n}{gaussname} \PY{o}{=} \PY{n}{gauss\PYZus{}name}\PY{p}{)}
+\end{Verbatim}
+
+A similar script can be used to evaluat the same data using the DCBS algorithm:
+
+\begin{Verbatim}[commandchars=\\\{\}, fontsize=\scriptsize]
+       \PY{k+kn}{from} \PY{n+nn}{pyfret} \PY{k+kn}{import} \PY{n}{pyFRET} \PY{k}{as} \PY{n}{pft}
+       \PY{k+kn}{import} \PY{n+nn}{os}
+       
+       \PY{c}{\PYZsh{} get data}
+       \PY{n}{duplexes} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{12}\PY{p}{]}
+       \PY{k}{for} \PY{n}{d} \PY{o+ow}{in} \PY{n}{duplexes}\PY{p}{:}
+       
+           \PY{n}{dup} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{bp}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{d}
+           
+           \PY{n}{my\PYZus{}directory} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{FRET\PYZus{}bursts}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{dup}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{FRET}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+           \PY{n}{list\PYZus{}of\PYZus{}files} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+           \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{600}\PY{p}{)}\PY{p}{:}
+               \PY{n}{list\PYZus{}of\PYZus{}files}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{DNA}\PY{l+s+si}{\PYZpc{}04d}\PY{l+s}{.dat}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{i}\PY{p}{)}
+           \PY{n}{data} \PY{o}{=} \PY{n}{pft}\PY{o}{.}\PY{n}{parse\PYZus{}bin}\PY{p}{(}\PY{n}{my\PYZus{}directory}\PY{p}{,} \PY{n}{list\PYZus{}of\PYZus{}files}\PY{p}{)}
+       
+           \PY{n}{T} \PY{o}{=} \PY{l+m+mi}{20} \PY{c}{\PYZsh{} window size}
+           \PY{n}{M} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} threshold in summed quantity}
+           \PY{n}{L} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} total burst size}
+       
+           \PY{n}{bursts} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{DCBS}\PY{p}{(}\PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}bckd}\PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}crosstalk}\PY{p}{(}\PY{l+m+mf}{0.05}\PY{p}{,} \PY{l+m+mf}{0.03}\PY{p}{)}
+           \PY{n}{results\PYZus{}directory} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZdq{}}
+           \PY{n}{im\PYZus{}name} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{hist\PYZus{}FRET\PYZus{}DCBS\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}T=20\PYZus{}M=10\PYZus{}L=10}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{dup}
+           \PY{n}{gauss\PYZus{}name} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{gaussfit\PYZus{}FRET\PYZus{}DCBS\PYZus{}6\PYZus{}M=10\PYZus{}L=10}\PY{l+s}{\PYZdq{}}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{build\PYZus{}histogram}\PY{p}{(}\PY{n}{results\PYZus{}directory}\PY{p}{,} 
+                                  \PY{l+s}{\PYZdq{}}\PY{l+s}{hist\PYZus{}FRET\PYZus{}DCBS\PYZus{}6\PYZus{}M=10\PYZus{}L=10}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                  \PY{n}{image} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                  \PY{n}{imgname} \PY{o}{=} \PY{n}{im\PYZus{}name}\PY{p}{,} 
+                                  \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{png}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                  \PY{n}{gauss} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                  \PY{n}{gaussname} \PY{o}{=} \PY{n}{gauss\PYZus{}name}\PY{p}{)}
+\end{Verbatim}
+
+\subsection{ALEX Data}
+A similar analysis can be performed on ALEX data using either APBS:
+
+\begin{Verbatim}[commandchars=\\\{\}, fontsize=\scriptsize]
+       \PY{k+kn}{from} \PY{n+nn}{pyfret} \PY{k+kn}{import} \PY{n}{pyALEX} \PY{k}{as} \PY{n}{pyx}
+       \PY{k+kn}{import} \PY{n+nn}{os}
+       
+       \PY{c}{\PYZsh{} get data}
+       \PY{n}{duplexes} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{12}\PY{p}{]}
+       \PY{k}{for} \PY{n}{d} \PY{o+ow}{in} \PY{n}{duplexes}\PY{p}{:}
+           \PY{n}{dup} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{bp}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{d}
+       
+           \PY{n}{my\PYZus{}directory} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{ALEX\PYZus{}bursts}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{dup}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{ALEX}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+           \PY{n}{list\PYZus{}of\PYZus{}files} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+           
+           \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{600}\PY{p}{)}\PY{p}{:}
+               \PY{n}{list\PYZus{}of\PYZus{}files}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{DNA}\PY{l+s+si}{\PYZpc{}04d}\PY{l+s}{.dat}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}}\PY{k}{i}\PY{p}{)}
+           \PY{n}{data} \PY{o}{=} \PY{n}{pyx}\PY{o}{.}\PY{n}{parse\PYZus{}bin}\PY{p}{(}\PY{n}{my\PYZus{}directory}\PY{p}{,} \PY{n}{list\PYZus{}of\PYZus{}files}\PY{p}{)}
+       
+           \PY{c}{\PYZsh{} run burst search}
+           \PY{n}{T} \PY{o}{=} \PY{l+m+mi}{20} \PY{c}{\PYZsh{} window size}
+           \PY{n}{M} \PY{o}{=} \PY{l+m+mi}{20} \PY{c}{\PYZsh{} threshold in summed quantity}
+           \PY{n}{L} \PY{o}{=} \PY{l+m+mi}{20} \PY{c}{\PYZsh{} total burst size}
+       
+           \PY{n}{bursts} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{APBS}\PY{p}{(}\PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}
+           \PY{n}{E} \PY{o}{=} \PY{n}{bursts}\PY{o}{.}\PY{n}{proximity\PYZus{}ratio}\PY{p}{(}\PY{n}{gamma}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{)}
+           \PY{n}{S\PYZus{}min} \PY{o}{=} \PY{l+m+mf}{0.1}
+           \PY{n}{S\PYZus{}max} \PY{o}{=} \PY{l+m+mf}{0.9}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}bckd}\PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}crosstalk}\PY{p}{(}\PY{l+m+mf}{0.05}\PY{p}{,} \PY{l+m+mf}{0.03}\PY{p}{)}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{scatter\PYZus{}hist}\PY{p}{(}\PY{n}{S\PYZus{}min}\PY{p}{,} 
+                               \PY{n}{S\PYZus{}max}\PY{p}{,} 
+                               \PY{n}{gamma}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{,} 
+                               \PY{n}{save}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,} \PY{n}{filepath}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                               \PY{n}{imgname}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{scatter\PYZus{}ALEX\PYZus{}APBS\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}T=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}M=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}L=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{dup}\PY{p}{,} \PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}\PY{p}{,} 
+                               \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{png}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{build\PYZus{}histogram}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                  \PY{l+s}{\PYZdq{}}\PY{l+s}{hist\PYZus{}ALEX\PYZus{}APBS\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}T=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}M=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}L=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{dup}\PY{p}{,} \PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}\PY{p}{,} 
+                                  \PY{n}{image} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                  \PY{n}{imgname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{hist\PYZus{}ALEX\PYZus{}APBS\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}T=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}M=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}L=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{dup}\PY{p}{,} \PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}\PY{p}{,} 
+                                  \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{pdf}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                  \PY{n}{gauss} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                  \PY{n}{gaussname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{gaussfit\PYZus{}APBS\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}T=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}M=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}L=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{dup}\PY{p}{,} \PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+or DCBS:
+
+\begin{Verbatim}[commandchars=\\\{\}, fontsize=\scriptsize]
+\PY{k+kn}{from} \PY{n+nn}{pyfret} \PY{k+kn}{import} \PY{n}{pyALEX} \PY{k}{as} \PY{n}{pyx}
+       \PY{k+kn}{import} \PY{n+nn}{os}
+       
+       \PY{c}{\PYZsh{} get data}
+       \PY{n}{duplexes} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{12}\PY{p}{]}
+       \PY{k}{for} \PY{n}{d} \PY{o+ow}{in} \PY{n}{duplexes}\PY{p}{:}
+           \PY{n}{dup} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{bp}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{d}
+       
+           \PY{n}{my\PYZus{}directory} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{ALEX\PYZus{}bursts}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{dup}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{ALEX}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+           \PY{n}{list\PYZus{}of\PYZus{}files} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+           
+           \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{600}\PY{p}{)}\PY{p}{:}
+               \PY{n}{list\PYZus{}of\PYZus{}files}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{DNA}\PY{l+s+si}{\PYZpc{}04d}\PY{l+s}{.dat}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}}\PY{k}{i}\PY{p}{)}
+           \PY{n}{data} \PY{o}{=} \PY{n}{pyx}\PY{o}{.}\PY{n}{parse\PYZus{}bin}\PY{p}{(}\PY{n}{my\PYZus{}directory}\PY{p}{,} \PY{n}{list\PYZus{}of\PYZus{}files}\PY{p}{)}
+       
+           \PY{c}{\PYZsh{} run burst search}
+           \PY{n}{T} \PY{o}{=} \PY{l+m+mi}{20} \PY{c}{\PYZsh{} window size}
+           \PY{n}{M} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} threshold in summed quantity}
+           \PY{n}{L} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} total burst size}
+       
+           \PY{n}{bursts} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{DCBS}\PY{p}{(}\PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}
+           \PY{n}{E} \PY{o}{=} \PY{n}{bursts}\PY{o}{.}\PY{n}{proximity\PYZus{}ratio}\PY{p}{(}\PY{n}{gamma}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{)}
+           \PY{n}{S\PYZus{}min} \PY{o}{=} \PY{l+m+mf}{0.1}
+           \PY{n}{S\PYZus{}max} \PY{o}{=} \PY{l+m+mf}{0.9}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}bckd}\PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}crosstalk}\PY{p}{(}\PY{l+m+mf}{0.05}\PY{p}{,} \PY{l+m+mf}{0.03}\PY{p}{)}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{scatter\PYZus{}hist}\PY{p}{(}\PY{n}{S\PYZus{}min}\PY{p}{,} 
+                               \PY{n}{S\PYZus{}max}\PY{p}{,} 
+                               \PY{n}{gamma}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{,} 
+                               \PY{n}{save}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,} 
+                               \PY{n}{filepath}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                               \PY{n}{imgname}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{scatter\PYZus{}ALEX\PYZus{}DCBS\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}T=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}M=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}L=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{dup}\PY{p}{,} \PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}\PY{p}{,} 
+                               \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{png}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+           \PY{n}{bursts}\PY{o}{.}\PY{n}{build\PYZus{}histogram}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                  \PY{l+s}{\PYZdq{}}\PY{l+s}{hist\PYZus{}ALEX\PYZus{}DCBS\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}T=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}M=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}L=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{dup}\PY{p}{,} \PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}\PY{p}{,} 
+                                  \PY{n}{image} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} \PY{n}{imgname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{hist\PYZus{}ALEX\PYZus{}DCBS\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}T=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}M=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}L=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{dup}\PY{p}{,} \PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}\PY{p}{,} 
+                                  \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{pdf}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                  \PY{n}{gauss} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                  \PY{n}{gaussname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{gaussfit\PYZus{}DCBS\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}T=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}M=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}L=}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{dup}\PY{p}{,} \PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+
+\section{Determining Accurate Concentrations}
+\subsection{Testing the Gaussian Mixture Model}
+\label{app:code_samples_GMM}
+To test the gaussian fitting, we simulated multiple idealised datasets formed from a mixture of two gaussian distributions and fitted them using a two-component mixture model:
+
+\begin{Verbatim}[commandchars=\\\{\}, fontsize=\scriptsize]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{from} \PY{n+nn}{sklearn} \PY{k+kn}{import} \PY{n}{mixture}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{from} \PY{n+nn}{scipy} \PY{k+kn}{import} \PY{n}{stats}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{csv}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib.colors} \PY{k+kn}{as} \PY{n+nn}{colors}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib.cm} \PY{k+kn}{as} \PY{n+nn}{cmx}
+        \PY{o}{\PYZpc{}}\PY{k}{matplotlib} \PY{n}{inline}
+        
+        \PY{k}{def} \PY{n+nf}{fit\PYZus{}mixture}\PY{p}{(}\PY{n}{data}\PY{p}{,} \PY{n}{v1}\PY{p}{,} \PY{n}{v2}\PY{p}{,} \PY{n}{ncomp}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{,} \PY{n}{doplot}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{)}\PY{p}{:}
+            \PY{n}{data} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+            \PY{n}{clf} \PY{o}{=} \PY{n}{mixture}\PY{o}{.}\PY{n}{GMM}\PY{p}{(}\PY{n}{n\PYZus{}components}\PY{o}{=}\PY{n}{ncomp}\PY{p}{,} \PY{n}{covariance\PYZus{}type}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{full}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+            \PY{n}{clf}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{data}\PY{p}{)}
+            \PY{n}{ml} \PY{o}{=} \PY{n}{clf}\PY{o}{.}\PY{n}{means\PYZus{}}
+            \PY{n}{wl} \PY{o}{=} \PY{n}{clf}\PY{o}{.}\PY{n}{weights\PYZus{}}
+            \PY{n}{cl} \PY{o}{=} \PY{n}{clf}\PY{o}{.}\PY{n}{covars\PYZus{}}
+            \PY{n}{ms} \PY{o}{=} \PY{p}{[}\PY{n}{m}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{m} \PY{o+ow}{in} \PY{n}{ml}\PY{p}{]}
+            \PY{n}{cs} \PY{o}{=} \PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{c}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)} \PY{k}{for} \PY{n}{c} \PY{o+ow}{in} \PY{n}{cl}\PY{p}{]}
+            \PY{n}{ws} \PY{o}{=} \PY{p}{[}\PY{n}{w} \PY{k}{for} \PY{n}{w} \PY{o+ow}{in} \PY{n}{wl}\PY{p}{]}
+            \PY{k}{if} \PY{n}{doplot} \PY{o}{==} \PY{n+nb+bp}{True}\PY{p}{:}
+                \PY{n}{histo} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{data}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.50}\PY{p}{,} \PY{l+m+mf}{1.5}\PY{p}{,} \PY{l+m+mf}{0.02}\PY{p}{)}\PY{p}{,} \PY{n}{normed}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}
+                \PY{k}{for} \PY{n}{w}\PY{p}{,} \PY{n}{m}\PY{p}{,} \PY{n}{c} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{ws}\PY{p}{,} \PY{n}{ms}\PY{p}{,} \PY{n}{cs}\PY{p}{)}\PY{p}{:}
+                    \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{histo}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{w}\PY{o}{*}\PY{n}{matplotlib}\PY{o}{.}\PY{n}{mlab}\PY{o}{.}\PY{n}{normpdf}\PY{p}{(}\PY{n}{histo}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{m}\PY{p}{,}\PY{n}{c}\PY{p}{)}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{)}
+                \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{E}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}
+                \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Normalized Frequency}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}
+                \PY{n}{plt}\PY{o}{.}\PY{n}{xticks}\PY{p}{(}\PY{n}{size}\PY{o}{=}\PY{l+m+mi}{16}\PY{p}{)}
+                \PY{n}{plt}\PY{o}{.}\PY{n}{yticks}\PY{p}{(}\PY{n}{size}\PY{o}{=}\PY{l+m+mi}{16}\PY{p}{)}
+                \PY{n}{plt}\PY{o}{.}\PY{n}{savefig}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{multi\PYZus{}gauss\PYZus{}0p5\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{.pdf}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{v1}\PY{p}{,} \PY{n}{v2}\PY{p}{)}\PY{p}{)}
+                \PY{n}{plt}\PY{o}{.}\PY{n}{cla}\PY{p}{(}\PY{p}{)}
+                \PY{n}{plt}\PY{o}{.}\PY{n}{clf}\PY{p}{(}\PY{p}{)}
+                \PY{n}{plt}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+            \PY{k}{return} \PY{n}{ms}\PY{p}{,} \PY{n}{cs}\PY{p}{,} \PY{n}{ws}
+        
+        \PY{k}{def} \PY{n+nf}{make\PYZus{}data}\PY{p}{(}\PY{n}{P1}\PY{p}{,} \PY{n}{E1}\PY{p}{)}\PY{p}{:}
+            \PY{n}{brightness\PYZus{}1} \PY{o}{=} \PY{n}{stats}\PY{o}{.}\PY{n}{norm}\PY{o}{.}\PY{n}{rvs}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+m+mi}{50}\PY{p}{,} \PY{n}{scale}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{n}{P1}\PY{p}{)}
+            \PY{n}{b\PYZus{}don\PYZus{}1} \PY{o}{=} \PY{n}{brightness\PYZus{}1}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{n}{E1}\PY{p}{)}
+            \PY{n}{b\PYZus{}acc\PYZus{}1} \PY{o}{=} \PY{n}{brightness\PYZus{}1}\PY{o}{*}\PY{n}{E1}
+            \PY{n}{don} \PY{o}{=} \PY{n}{stats}\PY{o}{.}\PY{n}{poisson}\PY{o}{.}\PY{n}{rvs}\PY{p}{(}\PY{n}{b\PYZus{}don\PYZus{}1}\PY{p}{)}
+            \PY{n}{acc} \PY{o}{=} \PY{n}{stats}\PY{o}{.}\PY{n}{poisson}\PY{o}{.}\PY{n}{rvs}\PY{p}{(}\PY{n}{b\PYZus{}acc\PYZus{}1}\PY{p}{)}
+            \PY{n}{x1} \PY{o}{=} \PY{n}{acc}\PY{o}{.}\PY{n}{astype}\PY{p}{(}\PY{n+nb}{float}\PY{p}{)} \PY{o}{/} \PY{p}{(}\PY{n}{acc} \PY{o}{+} \PY{n}{don}\PY{p}{)}
+            \PY{k}{return} \PY{n}{x1}
+        
+        \PY{k}{def} \PY{n+nf}{run}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+            \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{testing\PYZus{}gaussfit\PYZus{}redo.csv}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{w}\PY{l+s}{\PYZdq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+                \PY{n}{f}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{E1,P1,E2,P2,M1,S1,W1,M2,S2,W2}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+                \PY{k}{for} \PY{n}{E1} \PY{o+ow}{in} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{1.0}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}\PY{p}{:}
+                    \PY{k}{for} \PY{n}{E2} \PY{o+ow}{in} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{1.0}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}\PY{p}{:}
+                        \PY{n}{P1} \PY{o}{=} \PY{l+m+mi}{5000}
+                        \PY{c}{\PYZsh{}for P1 in np.arange(1000, 10000, 1000):}
+                        \PY{n}{P2} \PY{o}{=} \PY{l+m+mi}{10000} \PY{o}{\PYZhy{}} \PY{n}{P1} 
+                        \PY{n}{x1} \PY{o}{=} \PY{n}{make\PYZus{}data}\PY{p}{(}\PY{n}{P1}\PY{p}{,} \PY{n}{E1}\PY{p}{)}
+                        \PY{n}{x2} \PY{o}{=} \PY{n}{make\PYZus{}data}\PY{p}{(}\PY{n}{P2}\PY{p}{,} \PY{n}{E2}\PY{p}{)}
+                        \PY{n}{data} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{hstack}\PY{p}{(}\PY{p}{(}\PY{n}{x1}\PY{p}{,} \PY{n}{x2}\PY{p}{)}\PY{p}{)}
+                        \PY{n}{ms}\PY{p}{,} \PY{n}{cs}\PY{p}{,} \PY{n}{ws} \PY{o}{=} \PY{n}{fit\PYZus{}mixture}\PY{p}{(}\PY{n}{data}\PY{p}{,} \PY{n}{E1}\PY{p}{,} \PY{n}{E2}\PY{p}{,} \PY{n}{ncomp}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{,} \PY{n}{doplot}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}
+                        \PY{n}{f}\PY{o}{.}\PY{n}{write}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{,}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{,}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{,}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{,}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{,}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{,}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{,}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{,}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{,}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{E1}\PY{p}{,} \PY{n}{P1}\PY{p}{,} \PY{n}{E2}\PY{p}{,} \PY{n}{P2}\PY{p}{,} \PY{n}{ms}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{cs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{ws}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{ms}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{cs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{ws}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+        
+        \PY{k}{def} \PY{n+nf}{main}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+            \PY{n}{run}\PY{p}{(}\PY{p}{)}
+            
+        
+        \PY{k}{if} \PY{n}{\PYZus{}\PYZus{}name\PYZus{}\PYZus{}} \PY{o}{==} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZus{}\PYZus{}main\PYZus{}\PYZus{}}\PY{l+s}{\PYZdq{}}\PY{p}{:}
+            \PY{n}{main}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+\subsection{ALEX Data}
+\label{app:code_samples_ALEX_mix}
+To compare the ability of simple thresholding and burst search algorithms to accurately determine the relative concentrations of a two component mixture from ALEX data, we analysed several datasets using the DCBS burst search algorithm:
+
+\begin{Verbatim}[commandchars=\\\{\}, fontsize=\scriptsize]
+        \PY{k+kn}{from} \PY{n+nn}{pyfret} \PY{k+kn}{import} \PY{n}{pyALEX} \PY{k}{as} \PY{n}{pft}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{os}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}
+        
+        \PY{n}{font} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s}{\PYZsq{}}\PY{l+s}{size}\PY{l+s}{\PYZsq{}}   \PY{p}{:} \PY{l+m+mi}{20}\PY{p}{\PYZcb{}}
+        
+        \PY{n}{matplotlib}\PY{o}{.}\PY{n}{rc}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{font}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{o}{*}\PY{o}{*}\PY{n}{font}\PY{p}{)}
+
+       \PY{n}{dirs} \PY{o}{=} \PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{4and8}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{4and12}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{8and12}\PY{l+s}{\PYZdq{}}\PY{p}{]}
+       \PY{n}{ratios} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{]}
+       \PY{k}{for} \PY{n}{d} \PY{o+ow}{in} \PY{n}{dirs}\PY{p}{:}
+           \PY{k}{for} \PY{n}{r} \PY{o+ow}{in} \PY{n}{ratios}\PY{p}{:}      
+               \PY{n}{list\PYZus{}of\PYZus{}files} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+               \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{360}\PY{p}{)}\PY{p}{:}
+                   \PY{n}{list\PYZus{}of\PYZus{}files}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{DNA}\PY{l+s+si}{\PYZpc{}04d}\PY{l+s}{.dat}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{i}\PY{p}{)}
+               \PY{n}{my\PYZus{}dir} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n+nb}{str}\PY{p}{(}\PY{n}{r}\PY{p}{)}\PY{p}{)}
+               \PY{n}{data} \PY{o}{=} \PY{n}{pft}\PY{o}{.}\PY{n}{parse\PYZus{}bin}\PY{p}{(}\PY{n}{my\PYZus{}dir}\PY{p}{,} \PY{n}{list\PYZus{}of\PYZus{}files}\PY{p}{)}
+           
+               \PY{n}{T} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} window size}
+               \PY{n}{M} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} threshold in summed quantity}
+               \PY{n}{L} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} total burst size}
+                   
+               \PY{c}{\PYZsh{} run burst search}
+       
+               \PY{n}{bursts} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{DCBS}\PY{p}{(}\PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}
+               \PY{n}{E} \PY{o}{=} \PY{n}{bursts}\PY{o}{.}\PY{n}{proximity\PYZus{}ratio}\PY{p}{(}\PY{n}{gamma}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{)}
+               \PY{n}{S\PYZus{}min} \PY{o}{=} \PY{l+m+mf}{0.1}
+               \PY{n}{S\PYZus{}max} \PY{o}{=} \PY{l+m+mf}{0.9}
+               \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}bckd}\PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}
+               \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}crosstalk}\PY{p}{(}\PY{l+m+mf}{0.05}\PY{p}{,} \PY{l+m+mf}{0.03}\PY{p}{)}
+               \PY{n}{bursts}\PY{o}{.}\PY{n}{scatter\PYZus{}hist}\PY{p}{(}\PY{n}{S\PYZus{}min}\PY{p}{,} 
+                                   \PY{n}{S\PYZus{}max}\PY{p}{,} 
+                                   \PY{n}{gamma}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{,} 
+                                   \PY{n}{save}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,} 
+                                   \PY{n}{filepath}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{results}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                   \PY{n}{imgname}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{DNA\PYZus{}scatter\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                   \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{pdf}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+               \PY{n}{bursts}\PY{o}{.}\PY{n}{build\PYZus{}histogram}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{results}\PY{l+s}{\PYZdq{}}\PY{p}{,}
+                                      \PY{l+s}{\PYZdq{}}\PY{l+s}{DNA\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                      \PY{n}{image} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                      \PY{n}{imgname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{DNA\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                      \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{pdf}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                      \PY{n}{gauss} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                      \PY{n}{gaussname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{gaussfit\PYZus{}DNA\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                      \PY{n}{n\PYZus{}gauss}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+
+We then re-binned the data and into long time bins and re-analysed using simple AND thresholding:
+
+\begin{Verbatim}[commandchars=\\\{\}, fontsize=\scriptsize]
+        \PY{k+kn}{from} \PY{n+nn}{pyfret} \PY{k+kn}{import} \PY{n}{pyALEX} \PY{k}{as} \PY{n}{pyx}
+        \PY{k+kn}{from} \PY{n+nn}{pyfret} \PY{k+kn}{import} \PY{n}{pyFRET} \PY{k}{as} \PY{n}{pft}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{os}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}
+        
+        \PY{n}{font} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s}{\PYZsq{}}\PY{l+s}{size}\PY{l+s}{\PYZsq{}}   \PY{p}{:} \PY{l+m+mi}{20}\PY{p}{\PYZcb{}}
+        \PY{n}{matplotlib}\PY{o}{.}\PY{n}{rc}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{font}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{o}{*}\PY{o}{*}\PY{n}{font}\PY{p}{)}
+
+        \PY{k}{def} \PY{n+nf}{re\PYZus{}bin\PYZus{}ALEX}\PY{p}{(}\PY{n}{D\PYZus{}D}\PY{p}{,} \PY{n}{D\PYZus{}A}\PY{p}{,} \PY{n}{A\PYZus{}D}\PY{p}{,} \PY{n}{A\PYZus{}A}\PY{p}{,} \PY{n}{factor}\PY{p}{)}\PY{p}{:}
+            \PY{c}{\PYZsh{} ugly function to group bins}
+            \PY{n}{length} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{D\PYZus{}D}\PY{p}{)}
+            \PY{n}{new\PYZus{}DD} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+            \PY{n}{new\PYZus{}DA} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+            \PY{n}{new\PYZus{}AD} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+            \PY{n}{new\PYZus{}AA} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+            \PY{n}{count} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{n}{c\PYZus{}dd} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{n}{c\PYZus{}da} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{n}{c\PYZus{}ad} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{n}{c\PYZus{}aa} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{length}\PY{p}{)}\PY{p}{:}
+                \PY{n}{c\PYZus{}dd} \PY{o}{+}\PY{o}{=} \PY{n}{D\PYZus{}D}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                \PY{n}{c\PYZus{}da} \PY{o}{+}\PY{o}{=} \PY{n}{D\PYZus{}A}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                \PY{n}{c\PYZus{}ad} \PY{o}{+}\PY{o}{=} \PY{n}{A\PYZus{}D}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                \PY{n}{c\PYZus{}aa} \PY{o}{+}\PY{o}{=} \PY{n}{A\PYZus{}A}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                \PY{n}{count} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+                \PY{k}{if} \PY{p}{(}\PY{n}{count} \PY{o}{\PYZpc{}} \PY{n}{factor}\PY{p}{)} \PY{o}{==} \PY{l+m+mi}{0}\PY{p}{:}
+                    \PY{n}{new\PYZus{}DD}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{c\PYZus{}dd}\PY{p}{)}
+                    \PY{n}{new\PYZus{}DA}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{c\PYZus{}da}\PY{p}{)}
+                    \PY{n}{new\PYZus{}AD}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{c\PYZus{}ad}\PY{p}{)}
+                    \PY{n}{new\PYZus{}AA}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{c\PYZus{}aa}\PY{p}{)}
+                    \PY{n}{c\PYZus{}dd} \PY{o}{=} \PY{l+m+mi}{0}
+                    \PY{n}{c\PYZus{}da} \PY{o}{=} \PY{l+m+mi}{0}
+                    \PY{n}{c\PYZus{}ad} \PY{o}{=} \PY{l+m+mi}{0}
+                    \PY{n}{c\PYZus{}aa} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{n}{my\PYZus{}data} \PY{o}{=} \PY{n}{pyx}\PY{o}{.}\PY{n}{ALEX\PYZus{}data}\PY{p}{(}\PY{n}{new\PYZus{}DD}\PY{p}{,} \PY{n}{new\PYZus{}DA}\PY{p}{,} \PY{n}{new\PYZus{}AD}\PY{p}{,} \PY{n}{new\PYZus{}AA}\PY{p}{)}
+            \PY{k}{return} \PY{n}{my\PYZus{}data}
+
+       \PY{n}{dirs} \PY{o}{=} \PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{4and8}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{4and12}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{8and12}\PY{l+s}{\PYZdq{}}\PY{p}{]}
+       \PY{n}{ratios} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{]}
+       \PY{k}{for} \PY{n}{d} \PY{o+ow}{in} \PY{n}{dirs}\PY{p}{:}
+           \PY{k}{for} \PY{n}{r} \PY{o+ow}{in} \PY{n}{ratios}\PY{p}{:}      
+               \PY{n}{list\PYZus{}of\PYZus{}files} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+               \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{360}\PY{p}{)}\PY{p}{:}
+                   \PY{n}{list\PYZus{}of\PYZus{}files}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{DNA}\PY{l+s+si}{\PYZpc{}04d}\PY{l+s}{.dat}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{i}\PY{p}{)}
+               \PY{n}{my\PYZus{}dir} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n+nb}{str}\PY{p}{(}\PY{n}{r}\PY{p}{)}\PY{p}{)}
+               \PY{n}{data} \PY{o}{=} \PY{n}{pyx}\PY{o}{.}\PY{n}{parse\PYZus{}bin}\PY{p}{(}\PY{n}{my\PYZus{}dir}\PY{p}{,} \PY{n}{list\PYZus{}of\PYZus{}files}\PY{p}{)}
+       
+               \PY{n}{n\PYZus{}bins} \PY{o}{=} \PY{l+m+mi}{20}
+               \PY{n}{ALEX\PYZus{}data} \PY{o}{=} \PY{n}{re\PYZus{}bin\PYZus{}ALEX}\PY{p}{(}\PY{n}{data}\PY{o}{.}\PY{n}{D\PYZus{}D}\PY{p}{,} \PY{n}{data}\PY{o}{.}\PY{n}{D\PYZus{}A}\PY{p}{,} \PY{n}{data}\PY{o}{.}\PY{n}{A\PYZus{}D}\PY{p}{,} \PY{n}{data}\PY{o}{.}\PY{n}{A\PYZus{}A}\PY{p}{,} \PY{n}{n\PYZus{}bins}\PY{p}{)}
+               
+                   
+               \PY{n}{T} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} window size}
+               \PY{n}{M} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} threshold in summed quantity}
+               \PY{n}{L} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} total burst size}
+                   
+               \PY{c}{\PYZsh{} run thresholding}
+               \PY{c}{\PYZsh{} parameters}
+               \PY{n}{auto\PYZus{}dd} \PY{o}{=} \PY{l+m+mf}{0.1}
+               \PY{n}{auto\PYZus{}da} \PY{o}{=} \PY{l+m+mf}{0.1}
+               \PY{n}{auto\PYZus{}ad} \PY{o}{=} \PY{l+m+mf}{0.1}
+               \PY{n}{auto\PYZus{}aa} \PY{o}{=} \PY{l+m+mf}{0.1}
+               
+               \PY{n}{T\PYZus{}don} \PY{o}{=} \PY{l+m+mi}{10}
+               \PY{n}{T\PYZus{}acc} \PY{o}{=} \PY{l+m+mi}{10}
+               
+               \PY{n}{lk} \PY{o}{=} \PY{l+m+mf}{0.05}
+               \PY{n}{dr} \PY{o}{=} \PY{l+m+mf}{0.03}
+               
+               \PY{n}{ALEX\PYZus{}data}\PY{o}{.}\PY{n}{subtract\PYZus{}bckd}\PY{p}{(}\PY{n}{auto\PYZus{}dd}\PY{p}{,} \PY{n}{auto\PYZus{}da}\PY{p}{,} \PY{n}{auto\PYZus{}ad}\PY{p}{,} \PY{n}{auto\PYZus{}aa}\PY{p}{)}
+               \PY{n}{ALEX\PYZus{}data}\PY{o}{.}\PY{n}{thresholder}\PY{p}{(}\PY{n}{T\PYZus{}don}\PY{p}{,} \PY{n}{T\PYZus{}acc}\PY{p}{)}
+               \PY{n}{ALEX\PYZus{}data}\PY{o}{.}\PY{n}{subtract\PYZus{}crosstalk}\PY{p}{(}\PY{n}{lk}\PY{p}{,} \PY{n}{dr}\PY{p}{)}
+       
+               \PY{c}{\PYZsh{} make plots}
+       
+               \PY{n}{S\PYZus{}min} \PY{o}{=} \PY{l+m+mf}{0.1}
+               \PY{n}{S\PYZus{}max} \PY{o}{=} \PY{l+m+mf}{0.9}
+               \PY{n}{ALEX\PYZus{}data}\PY{o}{.}\PY{n}{subtract\PYZus{}bckd}\PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}
+               \PY{n}{ALEX\PYZus{}data}\PY{o}{.}\PY{n}{subtract\PYZus{}crosstalk}\PY{p}{(}\PY{l+m+mf}{0.05}\PY{p}{,} \PY{l+m+mf}{0.03}\PY{p}{)}
+               \PY{n}{ALEX\PYZus{}data}\PY{o}{.}\PY{n}{scatter\PYZus{}hist}\PY{p}{(}\PY{n}{S\PYZus{}min}\PY{p}{,} 
+                                      \PY{n}{S\PYZus{}max}\PY{p}{,} 
+                                      \PY{n}{gamma}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{,} 
+                                      \PY{n}{save}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,} 
+                                      \PY{n}{filepath}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{results}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                      \PY{n}{imgname}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{DNA\PYZus{}scatter\PYZus{}simpleALEX\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                      \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{pdf}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+               \PY{n}{ALEX\PYZus{}data}\PY{o}{.}\PY{n}{build\PYZus{}histogram}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{results}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                         \PY{l+s}{\PYZdq{}}\PY{l+s}{DNA\PYZus{}simpleALEX\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                         \PY{n}{image} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                         \PY{n}{imgname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{DNA\PYZus{}simpleALEX\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                         \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{pdf}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                         \PY{n}{gauss} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                         \PY{n}{gaussname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{gaussfit\PYZus{}DNA\PYZus{}simpleALEX\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                         \PY{n}{n\PYZus{}gauss}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+
+\subsection{FRET Data}
+\label{app:code_samples_FRET_mix}
+We performed a similar analysis using the FRET channels of these datasets to compare the performance of DCBS burst search and simple thresholding on FRET data.
+
+The code for DCBS analysis is as follows:
+
+\begin{Verbatim}[commandchars=\\\{\}, fontsize=\scriptsize]
+       \PY{k+kn}{from} \PY{n+nn}{pyfret} \PY{k+kn}{import} \PY{n}{pyALEX} \PY{k}{as} \PY{n}{pyx}
+       \PY{k+kn}{from} \PY{n+nn}{pyfret} \PY{k+kn}{import} \PY{n}{pyFRET} \PY{k}{as} \PY{n}{pft}
+       \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}
+       \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
+       \PY{k+kn}{import} \PY{n+nn}{os}
+       \PY{k+kn}{import} \PY{n+nn}{matplotlib}
+       
+       \PY{n}{font} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s}{\PYZsq{}}\PY{l+s}{size}\PY{l+s}{\PYZsq{}}   \PY{p}{:} \PY{l+m+mi}{20}\PY{p}{\PYZcb{}}
+       
+       \PY{n}{matplotlib}\PY{o}{.}\PY{n}{rc}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{font}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{o}{*}\PY{o}{*}\PY{n}{font}\PY{p}{)}
+
+       \PY{n}{dirs} \PY{o}{=} \PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{4and8}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{4and12}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{8and12}\PY{l+s}{\PYZdq{}}\PY{p}{]}
+       \PY{n}{ratios} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{]}
+       \PY{k}{for} \PY{n}{d} \PY{o+ow}{in} \PY{n}{dirs}\PY{p}{:}
+           \PY{k}{for} \PY{n}{r} \PY{o+ow}{in} \PY{n}{ratios}\PY{p}{:}      
+               \PY{n}{list\PYZus{}of\PYZus{}files} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+               \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{360}\PY{p}{)}\PY{p}{:}
+                   \PY{n}{list\PYZus{}of\PYZus{}files}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{DNA}\PY{l+s+si}{\PYZpc{}04d}\PY{l+s}{.dat}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{i}\PY{p}{)}
+               \PY{n}{my\PYZus{}dir} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n+nb}{str}\PY{p}{(}\PY{n}{r}\PY{p}{)}\PY{p}{)}
+               \PY{n}{ALEX\PYZus{}data} \PY{o}{=} \PY{n}{pyx}\PY{o}{.}\PY{n}{parse\PYZus{}bin}\PY{p}{(}\PY{n}{my\PYZus{}dir}\PY{p}{,} \PY{n}{list\PYZus{}of\PYZus{}files}\PY{p}{)}
+               
+               \PY{n}{data} \PY{o}{=} \PY{n}{pft}\PY{o}{.}\PY{n}{FRET\PYZus{}data}\PY{p}{(}\PY{n}{ALEX\PYZus{}data}\PY{o}{.}\PY{n}{D\PYZus{}D}\PY{p}{,} \PY{n}{ALEX\PYZus{}data}\PY{o}{.}\PY{n}{A\PYZus{}D}\PY{p}{)}
+                   
+               \PY{n}{T} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} window size}
+               \PY{n}{M} \PY{o}{=} \PY{l+m+mi}{6} \PY{c}{\PYZsh{} threshold in summed quantity}
+               \PY{n}{L} \PY{o}{=} \PY{l+m+mi}{6} \PY{c}{\PYZsh{} total burst size}
+                   
+               \PY{c}{\PYZsh{} run burst search}
+       
+               \PY{n}{bursts} \PY{o}{=} \PY{n}{data}\PY{o}{.}\PY{n}{DCBS}\PY{p}{(}\PY{n}{T}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{L}\PY{p}{)}
+               \PY{n}{E} \PY{o}{=} \PY{n}{bursts}\PY{o}{.}\PY{n}{proximity\PYZus{}ratio}\PY{p}{(}\PY{n}{gamma}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{)}
+               \PY{n}{S\PYZus{}min} \PY{o}{=} \PY{l+m+mf}{0.1}
+               \PY{n}{S\PYZus{}max} \PY{o}{=} \PY{l+m+mf}{0.9}
+               \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}bckd}\PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}
+               \PY{n}{bursts}\PY{o}{.}\PY{n}{subtract\PYZus{}crosstalk}\PY{p}{(}\PY{l+m+mf}{0.05}\PY{p}{,} \PY{l+m+mf}{0.03}\PY{p}{)}
+               \PY{n}{bursts}\PY{o}{.}\PY{n}{build\PYZus{}histogram}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{results}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                      \PY{l+s}{\PYZdq{}}\PY{l+s}{FRET\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}}\PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                      \PY{n}{gamma}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{,} 
+                                      \PY{n}{bin\PYZus{}min}\PY{o}{=}\PY{l+m+mf}{0.0}\PY{p}{,} 
+                                      \PY{n}{bin\PYZus{}max}\PY{o}{=}\PY{l+m+mf}{1.0}\PY{p}{,} 
+                                      \PY{n}{bin\PYZus{}width}\PY{o}{=}\PY{l+m+mf}{0.02}\PY{p}{,} 
+                                      \PY{n}{image} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                      \PY{n}{imgname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{DNA\PYZus{}FRET\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}}\PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                      \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{png}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                      \PY{n}{gauss} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                      \PY{n}{gaussname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{gaussfit\PYZus{}FRET\PYZus{}DNA\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                      \PY{n}{n\PYZus{}gauss}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+               
+\end{Verbatim}
+
+Re-binning the FRET data and the analysing using simple AND thresholding is performed as follows:
+
+\begin{Verbatim}[commandchars=\\\{\}, fontsize=\scriptsize]
+        \PY{k+kn}{from} \PY{n+nn}{pyfret} \PY{k+kn}{import} \PY{n}{pyALEX} \PY{k}{as} \PY{n}{pyx}
+        \PY{k+kn}{from} \PY{n+nn}{pyfret} \PY{k+kn}{import} \PY{n}{pyFRET} \PY{k}{as} \PY{n}{pft}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{os}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}
+        
+        \PY{n}{font} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s}{\PYZsq{}}\PY{l+s}{size}\PY{l+s}{\PYZsq{}}   \PY{p}{:} \PY{l+m+mi}{20}\PY{p}{\PYZcb{}}
+        
+        \PY{n}{matplotlib}\PY{o}{.}\PY{n}{rc}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{font}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{o}{*}\PY{o}{*}\PY{n}{font}\PY{p}{)}
+
+            \PY{k}{def} \PY{n+nf}{re\PYZus{}bin\PYZus{}ALEX}\PY{p}{(}\PY{n}{D\PYZus{}D}\PY{p}{,} \PY{n}{D\PYZus{}A}\PY{p}{,} \PY{n}{A\PYZus{}D}\PY{p}{,} \PY{n}{A\PYZus{}A}\PY{p}{,} \PY{n}{factor}\PY{p}{)}\PY{p}{:}
+            \PY{c}{\PYZsh{} ugly function to group bins}
+            \PY{n}{length} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{D\PYZus{}D}\PY{p}{)}
+            \PY{n}{new\PYZus{}DD} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+            \PY{n}{new\PYZus{}DA} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+            \PY{n}{new\PYZus{}AD} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+            \PY{n}{new\PYZus{}AA} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+            \PY{n}{count} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{n}{c\PYZus{}dd} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{n}{c\PYZus{}da} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{n}{c\PYZus{}ad} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{n}{c\PYZus{}aa} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{length}\PY{p}{)}\PY{p}{:}
+                \PY{n}{c\PYZus{}dd} \PY{o}{+}\PY{o}{=} \PY{n}{D\PYZus{}D}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                \PY{n}{c\PYZus{}da} \PY{o}{+}\PY{o}{=} \PY{n}{D\PYZus{}A}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                \PY{n}{c\PYZus{}ad} \PY{o}{+}\PY{o}{=} \PY{n}{A\PYZus{}D}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                \PY{n}{c\PYZus{}aa} \PY{o}{+}\PY{o}{=} \PY{n}{A\PYZus{}A}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                \PY{n}{count} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+                \PY{k}{if} \PY{p}{(}\PY{n}{count} \PY{o}{\PYZpc{}} \PY{n}{factor}\PY{p}{)} \PY{o}{==} \PY{l+m+mi}{0}\PY{p}{:}
+                    \PY{n}{new\PYZus{}DD}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{c\PYZus{}dd}\PY{p}{)}
+                    \PY{n}{new\PYZus{}DA}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{c\PYZus{}da}\PY{p}{)}
+                    \PY{n}{new\PYZus{}AD}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{c\PYZus{}ad}\PY{p}{)}
+                    \PY{n}{new\PYZus{}AA}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{c\PYZus{}aa}\PY{p}{)}
+                    \PY{n}{c\PYZus{}dd} \PY{o}{=} \PY{l+m+mi}{0}
+                    \PY{n}{c\PYZus{}da} \PY{o}{=} \PY{l+m+mi}{0}
+                    \PY{n}{c\PYZus{}ad} \PY{o}{=} \PY{l+m+mi}{0}
+                    \PY{n}{c\PYZus{}aa} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{n}{my\PYZus{}data} \PY{o}{=} \PY{n}{pyx}\PY{o}{.}\PY{n}{ALEX\PYZus{}data}\PY{p}{(}\PY{n}{new\PYZus{}DD}\PY{p}{,} \PY{n}{new\PYZus{}DA}\PY{p}{,} \PY{n}{new\PYZus{}AD}\PY{p}{,} \PY{n}{new\PYZus{}AA}\PY{p}{)}
+            \PY{k}{return} \PY{n}{my\PYZus{}data}
+
+       \PY{n}{dirs} \PY{o}{=} \PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{4and8}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{4and12}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{8and12}\PY{l+s}{\PYZdq{}}\PY{p}{]}
+       \PY{n}{ratios} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{]}
+       \PY{k}{for} \PY{n}{d} \PY{o+ow}{in} \PY{n}{dirs}\PY{p}{:}
+           \PY{k}{for} \PY{n}{r} \PY{o+ow}{in} \PY{n}{ratios}\PY{p}{:}      
+               \PY{n}{list\PYZus{}of\PYZus{}files} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+               \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{360}\PY{p}{)}\PY{p}{:}
+                   \PY{n}{list\PYZus{}of\PYZus{}files}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{DNA}\PY{l+s+si}{\PYZpc{}04d}\PY{l+s}{.dat}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{i}\PY{p}{)}
+               \PY{n}{my\PYZus{}dir} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n+nb}{str}\PY{p}{(}\PY{n}{r}\PY{p}{)}\PY{p}{)}
+               \PY{n}{data} \PY{o}{=} \PY{n}{pyx}\PY{o}{.}\PY{n}{parse\PYZus{}bin}\PY{p}{(}\PY{n}{my\PYZus{}dir}\PY{p}{,} \PY{n}{list\PYZus{}of\PYZus{}files}\PY{p}{)}
+       
+               \PY{n}{n\PYZus{}bins} \PY{o}{=} \PY{l+m+mi}{20}
+               \PY{n}{ALEX\PYZus{}data} \PY{o}{=} \PY{n}{re\PYZus{}bin\PYZus{}ALEX}\PY{p}{(}\PY{n}{data}\PY{o}{.}\PY{n}{D\PYZus{}D}\PY{p}{,} \PY{n}{data}\PY{o}{.}\PY{n}{D\PYZus{}A}\PY{p}{,} \PY{n}{data}\PY{o}{.}\PY{n}{A\PYZus{}D}\PY{p}{,} \PY{n}{data}\PY{o}{.}\PY{n}{A\PYZus{}A}\PY{p}{,} \PY{n}{n\PYZus{}bins}\PY{p}{)}
+               \PY{n}{FRET\PYZus{}data} \PY{o}{=} \PY{n}{pft}\PY{o}{.}\PY{n}{FRET\PYZus{}data}\PY{p}{(}\PY{n}{ALEX\PYZus{}data}\PY{o}{.}\PY{n}{D\PYZus{}D}\PY{p}{,} \PY{n}{ALEX\PYZus{}data}\PY{o}{.}\PY{n}{A\PYZus{}D}\PY{p}{)}
+               
+               \PY{n}{T} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} window size}
+               \PY{n}{M} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} threshold in summed quantity}
+               \PY{n}{L} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{} total burst size}
+                   
+               \PY{c}{\PYZsh{} run thresholding}
+               \PY{c}{\PYZsh{} parameters}
+               \PY{n}{auto\PYZus{}dd} \PY{o}{=} \PY{l+m+mf}{0.1}
+               \PY{n}{auto\PYZus{}da} \PY{o}{=} \PY{l+m+mf}{0.1}
+               \PY{n}{auto\PYZus{}ad} \PY{o}{=} \PY{l+m+mf}{0.1}
+               \PY{n}{auto\PYZus{}aa} \PY{o}{=} \PY{l+m+mf}{0.1}
+               
+               \PY{n}{T\PYZus{}don} \PY{o}{=} \PY{l+m+mi}{6}
+               \PY{n}{T\PYZus{}acc} \PY{o}{=} \PY{l+m+mi}{6}
+               
+               \PY{n}{lk} \PY{o}{=} \PY{l+m+mf}{0.05}
+               \PY{n}{dr} \PY{o}{=} \PY{l+m+mf}{0.03}
+               
+               \PY{n}{FRET\PYZus{}data}\PY{o}{.}\PY{n}{subtract\PYZus{}bckd}\PY{p}{(}\PY{n}{auto\PYZus{}dd}\PY{p}{,} \PY{n}{auto\PYZus{}ad}\PY{p}{)}
+               \PY{n}{FRET\PYZus{}data}\PY{o}{.}\PY{n}{threshold\PYZus{}AND}\PY{p}{(}\PY{n}{T\PYZus{}don}\PY{p}{,} \PY{n}{T\PYZus{}acc}\PY{p}{)}
+               \PY{n}{FRET\PYZus{}data}\PY{o}{.}\PY{n}{subtract\PYZus{}crosstalk}\PY{p}{(}\PY{n}{lk}\PY{p}{,} \PY{n}{dr}\PY{p}{)}
+       
+               \PY{c}{\PYZsh{} make plots}
+               \PY{n}{FRET\PYZus{}data}\PY{o}{.}\PY{n}{build\PYZus{}histogram}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{results}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                         \PY{l+s}{\PYZdq{}}\PY{l+s}{FRET\PYZus{}simple\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}}\PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                         \PY{n}{gamma}\PY{o}{=}\PY{l+m+mf}{0.95}\PY{p}{,} 
+                                         \PY{n}{bin\PYZus{}min}\PY{o}{=}\PY{l+m+mf}{0.0}\PY{p}{,} 
+                                         \PY{n}{bin\PYZus{}max}\PY{o}{=}\PY{l+m+mf}{1.0}\PY{p}{,} 
+                                         \PY{n}{bin\PYZus{}width}\PY{o}{=}\PY{l+m+mf}{0.02}\PY{p}{,} 
+                                         \PY{n}{image} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                         \PY{n}{imgname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{DNA\PYZus{}FRET\PYZus{}simple\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}}\PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                         \PY{n}{imgtype}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{png}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                                         \PY{n}{gauss} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{,} 
+                                         \PY{n}{gaussname} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{gaussfit\PYZus{}FRET\PYZus{}simple\PYZus{}DNA\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{r}\PY{p}{)}\PY{p}{,} 
+                                         \PY{n}{n\PYZus{}gauss}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+               
+\end{Verbatim}

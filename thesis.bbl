@@ -359,21 +359,6 @@ Z.~Merali.
   compute.
 \newblock {\em Nature}, 467:775--777, 2010.
 
-\bibitem{mirams13}
-G.~R. Mirams, C.~J. Arthurs, M.~O. Bernabeu, R.~Bordas, J.~Cooper, A.~Corrias,
-  Y.~Davit, S.-J. Dunn, A.~G. Fletcher, D.~G. Harvey, M.~E. Marsh, J.~M.
-  Osborne, P.~Pathmanathan, J.~Pitt-Francis, J.~Southern, N.~Zemzemi, and D.~J.
-  Gavaghan.
-\newblock Chaste: An open source c++ library for computational physiology and
-  biology.
-\newblock {\em PLOS Comp. Biol.}, 9:e1002970-- e1002970, 2013.
-
-\bibitem{sisamakis2010}
-E.~Sisamakis, A.~Valeri, S.~Kalinin, P.~J. Rothwell, and C.~A.~M. Seidel.
-\newblock Accurate single-molecule fret studies using multiparameter
-  fluorescence detection.
-\newblock {\em Methods in Enzymology}, 475:455--514, 2010.
-
 \bibitem{vanRossum1995}
 G.~van Rossum.
 \newblock {\em Python tutorial, Technical Report CS-R9526}.
@@ -386,25 +371,6 @@ A.~Hoffmann, D.~Nettels, J.~Clark, A.~Borgia, S.~E. Radford, J.~Clarke, and
   molecule fret of diffusing molecules: recurrence analysis of single particles
   (rasp).
 \newblock {\em Phys Chem Chem Phys}, 13:1857--1871, 2011.
-
-\bibitem{Hunter2007}
-J.~D. Hunter.
-\newblock Matplotlib: A {2D} graphics environment.
-\newblock {\em Computing In Science and Engineering}, 9(3):90--95, 2007.
-
-\bibitem{scikit-learn}
-F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
-  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
-  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
-\newblock Scikit-learn: Machine learning in {P}ython.
-\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
-
-\bibitem{lee06}
-N.~K Lee, A.~N. Kapanidis, Y.~Wang, X.~Michalet, J.~Mukhopadhyay, R.~H.
-  Ebright, and S.~Weiss.
-\newblock Accurate fret measurements within single diffusing biomolecules using
-  alternating-laser excitation.
-\newblock {\em Biophys. J.}, 88:2939--2953, 2006.
 
 \bibitem{murphy14}
 R.~R. Murphy, G.~Danezis, M.~H. Horrocks, S.~E. Jackson, and D.~Klenerman.
@@ -449,6 +415,12 @@ N.K. Lee, A.N. Kapanidis, H.R. Koh, Y.~Korlann, S.O. Ho, N.~Kim Y.~andGassman,
 \newblock Three-color alternating-laser excitation of single molecules:
   simultaneous monitoring of multiple interactions and distances.
 \newblock {\em Biophys. J.}, 92:303--12, 2007.
+
+\bibitem{sisamakis2010}
+E.~Sisamakis, A.~Valeri, S.~Kalinin, P.~J. Rothwell, and C.~A.~M. Seidel.
+\newblock Accurate single-molecule fret studies using multiparameter
+  fluorescence detection.
+\newblock {\em Methods in Enzymology}, 475:455--514, 2010.
 
 \bibitem{rothwell2002}
 P.~J. Rothwell, S.~Berger†, O.~Kensch, S.~Felekyan, M.~Antonik, B.~M. Wöhrl,
@@ -1159,6 +1131,11 @@ K.~J. Millman and M.~Aivazis.
 \newblock Python for scientists and engineers.
 \newblock {\em Computing in Science and Engineering}, 13:9--12, 2011.
 
+\bibitem{Hunter2007}
+J.~D. Hunter.
+\newblock Matplotlib: A {2D} graphics environment.
+\newblock {\em Computing In Science and Engineering}, 9(3):90--95, 2007.
+
 \bibitem{li2009}
 H.~Li, B.~Handsaker, A.~Wysoker, T.~Fennell, J.~Ruan, N.~Homer, G.~Marth,
   G.~Abecasis, R.~Durbin, and 1000 Genome Project Data~Processing Subgroup.
@@ -1176,5 +1153,28 @@ S.~Koren and A.~M. Phillippy.
 \newblock One chromosome, one contig: complete microbial genomes from long-read
   sequencing and assembly.
 \newblock {\em Curr. Opin. Microbiol.}, 23:110--120, 2015.
+
+\bibitem{mirams13}
+G.~R. Mirams, C.~J. Arthurs, M.~O. Bernabeu, R.~Bordas, J.~Cooper, A.~Corrias,
+  Y.~Davit, S.-J. Dunn, A.~G. Fletcher, D.~G. Harvey, M.~E. Marsh, J.~M.
+  Osborne, P.~Pathmanathan, J.~Pitt-Francis, J.~Southern, N.~Zemzemi, and D.~J.
+  Gavaghan.
+\newblock Chaste: An open source c++ library for computational physiology and
+  biology.
+\newblock {\em PLOS Comp. Biol.}, 9:e1002970-- e1002970, 2013.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
+
+\bibitem{lee06}
+N.~K Lee, A.~N. Kapanidis, Y.~Wang, X.~Michalet, J.~Mukhopadhyay, R.~H.
+  Ebright, and S.~Weiss.
+\newblock Accurate fret measurements within single diffusing biomolecules using
+  alternating-laser excitation.
+\newblock {\em Biophys. J.}, 88:2939--2953, 2006.
 
 \end{thebibliography}

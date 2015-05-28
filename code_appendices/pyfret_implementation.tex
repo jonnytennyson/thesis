@@ -1,0 +1,162 @@
+\chapter{pyFRET: Implementation Details}
+\label{app:implementation}
+
+\section{Development of Scientific Software}
+
+A lot has been written concerning the development and maintenance of software used by academic researchers~\cite{wilson06, merali10}. Compared with code written by professional software engineers, scientists are often described as writing poor quality code that is inefficient, badly documented and difficult to use. Software for smFRET analysis has historically experienced several of these issues, which has slowed innovation in the field.
+
+% Problems with the lack of open source software and collaboration: Keep for now as want to restructure this section
+% - poorly maintained code
+% - code that is not reused
+% - difficult to adopt new techniques as code must be implemented from scratch
+% - difficult to reproduce others' results -- no access to analysis methods
+% - difficult for new groups to be established as new code must be written to reimplement basic analysis techniques
+% - results beween groups not comparable
+% - unclear how other groups performed analysis
+% - data analysis seen as secondary to experimental techniques, but methods of anlaysis can significantly alter expt outcomes, often disregarded in papers.
+
+%Firstly: reinventing the wheel
+
+Firstly, smFRET software used by different research groups often requires ``reinventing the wheel"~\cite{mirams13}. Within smFRET research groups, programming ability is not a standard skill, despite the need for sophisticated data analysis and use of custom data collection hardware. It is common for researchers with programming skills to maintain their own series of data-analysis scripts which may be wholly dependent on particular hardware tools or analysis packages. Other researchers, who may lack the skills to maintain and develop even simple scripts, are dependent on these black-box techniques provided by their colleagues. Consequently, data analysis is dependent on scripts written and maintained by just a few researchers. Loss of programming expertise when these team members leave can result in significant difficulties for the remaining group members, who are then dependent on poorly documented code that they do not fully understand how to use. Furthermore, the lack of available open source software often requires new researchers in the field of smFRET to completely reimplement standard analysis techniques in order to become independently productive.    
+
+%Secondly: productivity
+Secondly, the need for many researchers to develop and maintain their own analyis tools has significant impact on research productivity. The requirement to reimplement standard analysis techniques consumes valuable time that could better be used in experimental research or in developing and benchmarking improved analysis tools. Furthermore, most researchers have no formal training in software engineering, with the result that analysis software can vary hugely in quality and is frequently poorly documented and maintained, making it difficult for other researchers to understand and use. New analysis scipts are often added in an ad hoc manner, transforming simple modifications into complex undertakings requring significant time investmenent. Poorly maintained code and undocumented code adds an additional barrier to open sharing of resources.  
+
+% Finally: reproducibility
+Finally, there is the issue of research reproducibility. Different research groups use widely differing tools to complete relatively similar tasks. New methods of data collection and analysis are frequently developed~\cite{kapanidis05, nir06, sisamakis2010}. However, when software is not released to the community, it is difficult for researchers, who must often implement poorly described methodologies entirely from scratch, to verify results or to adopt new techniques in their own research. As a consequence, new techniques are poorly benchmarked, making it difficult to understand whether a new analysis adds quality or merely complexity, whilst adoption of useful new methods is relatively slow. These three issues of productivity, reliability and reproducibility, all linked to the problem of poorly maintained softwared and lack of software development skills, are now becoming a key bottleneck in smFRET research.  
+
+
+\section{pyFRET: Code Structure and Implementation Details}
+\subsection{Dependencies}
+In addition to the numpy arrays used for efficient data processing, pyFRET uses several other python modules to enable efficient data analysis. Specifically, we use matplotlib~\cite{Hunter2007} for plotting and data visualisation; whilst gaussian fitting of the FRET histograms is implemented using scikit-learn~\cite{scikit-learn}. 
+
+%These dependencies are available for free anonymous download for all platforms (see Section~\ref{sect:availability}). We used the free Anaconda package bundle (\url{https://store.continuum.io/cshop/anaconda/}) to install these dependencies. Detailed installation instructions can be found in the pyFRET documentation (\url{http://pyfret.readthedocs.org/en/latest/tutorial.html#installing-pyfret}).
+
+\subsection{Simple Event Selection and Denoising}
+\paragraph{FRET Data.}
+As described above, the most straighforward method of smFRET data analysis of data from a continuous excitation experiement uses time-binned data and simply selects time-bins where the photon count exceeds some stated threshold. This threshold can be over  both the donor and acceptor channels (AND thresholding) or over the sum of photons in both donor and acceptor channels. These thresholding techniques can be implemented using a single call to a pyFRET function: 
+
+\begin{lstlisting}
+# Simple thresholding
+
+# define thresholds
+Td = 20  # donor threshold
+Ta = 20  # acceptor threshold
+T = 50   # combined threshold
+
+# AND thresholding
+data.threshold_AND(Td, Ta)
+
+# SUM thresholding
+data.threshold_SUM(T)
+\end{lstlisting}
+
+Following event selection, a simple method of denoising is to subtract from each selected event the average background autofluorescence observed in each channel and the average cross-talk between the two channels:
+
+\begin{lstlisting}
+# Simple denoising
+
+# removing autofluorescence
+auto_donor = 0.5     # donor autofluorescence
+auto_acceptor = 0.3  # acceptor autofluorescence
+my_data.subtract_bckd(auto_donor, auto_acceptor)
+
+# removing cross-talk
+cross_DtoA = 0.05   # fractional cross-talk from donor to acceptor
+cross_AtoD = 0.01   # fractional cross-talk from acceptor to donor
+my_data.subtract_crosstalk(cross_DtoA, cross_AtoD)
+\end{lstlisting}
+
+This is the simplest method for event selection and denoising. However, it has several limitations. In particular, simple subtraction of constant values can lead to unphysical artifacts such as negative and fractional photon counts. Furthermore, the simple thresholding criteria for event selection are known to be biased~\cite{nir06}, so can distort downstream data analysis. 
+
+\paragraph{ALEX Data}
+pyFRET implements ALEX event selection as described in the original publication~\cite{lee06}. In brief, bursts are initially selected using a selection criterion based on the total number of photons emitted during donor and acceptor excitation:
+ $F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} > T_D$ AND $F_{A_{ex}}^{A_{em}} > T_A$.
+
+Following this initial event selection, a second selection step is performed, based on the ratio of photons emitted during donor and acceptor excitation periods. The photon stoichiometry, $S$ is calculated for each burst as:
+
+\begin{equation}
+S = \frac{F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}}}{F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} + F_{A_{ex}}^{A_{em}}}
+\label{eq:Eprod_ALEX}
+\end{equation}
+
+Events for which the stoichiometry is either very close to one or very close to zero, indicating presence of only the donor or acceptor fluorophore respectively can be excluded using a second event selection criterion: $S_{min} < S < S_{max}$
+
+Following event selection, remaining bursts can be corrected for photon leakage and direct excitation contributions. A two-dimensional scatter plot of FRET efficiency $E$ and stoichiometery $S$ is then produced, including one-dimensional histograms of both $E$ and $S$. 
+
+pyFRET allows each of these steps to be performed separately, however they can also be combined into a single step combining event selection, denoising, FRET efficiency calculation and plotting:
+
+\begin{lstlisting}
+# Simple ALEX analysis
+
+g_factor = 0.95 # instrumental gamma factor
+S_min = 0.2     # min accepted value of S
+S_max = 0.8     # max accepted value of S
+filepath = "path\to\my\file"
+filename = "scatter_plot"
+ALEX_data.scatter_hist(S_min, S_max, gamma=g_factor, save=True, filepath=filepath, imgname=filename, imgtype="png")
+\end{lstlisting}
+
+Example ALEX analysis scripts can be found in Appendix~\ref{app:code_samples}.
+
+\subsection{Burst Search Algorithms}
+pyFRET implements busrt search algorithms for both continuous excitation and ALEX experiments. As described above, to use a burst search algorithm effectively, photons must be binned into time-bins of duration much shorter than the average dwell time of a molecule in the confocal volume. Bursts are first identified through an initial scan of the burst stream, to identify windows in which the number of photons observed exceeds the threshold $M$. In pyFRET, this initial search is performed by convolving the photon stream counts to provide a running sum across windows of $T$ time-bins. Following initial burst identification, a burst is retained if it contains more than $L$ photons~\cite{nir06}.
+
+Example code for running a burst search algorithm is shown below:
+
+\begin{lstlisting}
+# Burst search using FRET burst data
+
+# required parameters
+T = 50             # time window (bins)
+M = 50             # first threshold
+L = 60             # second threshold
+
+# calling APBS algorithm
+bursts_APBS = FRET_data.APBS(T, M, L)
+\end{lstlisting}
+
+The procedure for running a burst search algorithm on ALEX data is precisely analogous:
+
+\begin{lstlisting}
+# Burst search using ALEX burst data
+
+# required parameters
+T = 50             # time window (bins)
+M = 50             # first threshold
+L = 60             # second threshold
+
+# calling APBS algorithm
+bursts_APBS = ALEX_data.APBS(T, M, L)
+\end{lstlisting}
+
+\section{RASP: Recurrence Analysis of Single Particles}
+A recent innovation in confocal smFRET is Recurrence Analysis of Single Particles (RASP)~\cite{hoffmann11}. RASP exploits the fact that fluorescent bursts occurring close in time are more likely to be from the same molecule diffusing back through the confocal volume than from a newly observed molecule. This can be used to determine interconversion kinetics and to test whether broad peaks in the FRET histogram derive from overlapping static populations.
+
+RASP is a two-step process. First, initial bursts ($b_1$) with a FRET efficiency $E_{b1}$ within some defined range $\Delta(E_{b1})$ are identified. Secondly, bursts ($b_2$) occurring within a time interval (called the recurrence interval) $T = (t_1, t_2)$ of $b_1$ are identified. Analysis of the distribution of FRET efficiencies in $b_2$, the population of recurrent bursts, provides information about the interconversion rate between subpopulations. The rate constants of interconversion can be extracted by fitting the relative subpopulations as a function of the recurrence interval $T$.
+
+pyFRET implements RASP using array masking, to allow efficient selection of relevant bursts. RASP can be called in a single step from a FRET bursts or ALEX bursts object, and a loop can readily be made to repeat the process at different time intervals:
+
+\begin{lstlisting}
+# RASP
+
+# initial E range: 0.4 < E < 0.6
+Emin = 0.4
+Emax = 0.6
+
+# Time interval for re-occurrence
+# given in number of bins
+Tmin = 1000
+Tmax = 10000
+
+# selecting re-occurring bursts
+recurrent_bursts = bursts_APBS.RASP(Emin, Emax, Tmin, Tmax)
+
+# histogram of re-occurring bursts
+recurrent_bursts.build_histogram(filepath, csvname, gamma=g_factor)
+\end{lstlisting} 
+
+\subsection{Compatibilities}
+pyFRET is written in Python. Both python 2 (v2.7) and python 3 (v3.3) are supported. pyFRET requires four further python libraries, namely numpy and scipy for data manipulation, matplotlib for data visualisation and scikit-learn for peak fitting.  pyFRET was written and tested in a Linux environment. However, it was written to be platform independent and has also been used successfully on both iOS and Windows computers.
+
+The lack of open source software in the smFRET community has led to a proliferation of esoteric file-types used for data collection and storage. To make pyFRET as usable as possible for a wide range of smFRET researchers, we provide file parsers for simple .csv and .txt file formats, as well as the custom binary format used in the Klenerman group. The pyFRET data structures can be initialised using simple python arrays of time-binned photons, for users whose file format is not currently supported. The tutorial provides example scripts for parsing common filetypes into pyFRET objects.
