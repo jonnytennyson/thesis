@@ -374,9 +374,9 @@ A.~Hoffmann, D.~Nettels, J.~Clark, A.~Borgia, S.~E. Radford, J.~Clarke, and
 
 \bibitem{murphy14}
 R.~R. Murphy, G.~Danezis, M.~H. Horrocks, S.~E. Jackson, and D.~Klenerman.
-\newblock Bayesian inference of accurate population sizes and fret efficiencies
-  from single diffusing biomolecules.
-\newblock {\em Anal. Chem. (submitted April 2014)}, 86:8603--8612, 2014.
+\newblock Bayesian inference of accurate population sizes and {FRET}
+  efficiencies from single diffusing biomolecules.
+\newblock {\em Anal. Chem.}, 86:8603--8612, 2014.
 
 \bibitem{Guoshen2012}
 Y.~Guoshen.
@@ -882,6 +882,13 @@ D.~R. Bentley, S.~Balasubramanian, H.~P Swerdlow, G.~P. Smith, J.~Milton,
   chemistry.
 \newblock {\em Nature}, 456:53--59, 2008.
 
+\bibitem{murphy2015}
+R.~R. Murphy, J.~O'Connell, O.~Schulz-Trieglaff, and A.~J. Cox.
+\newblock Nxrepair: Error correction in de novo sequence assembly using nextera
+  mate pairs.
+\newblock {\em PeerJ}, 2015.
+\newblock {\emph{in press}}.
+
 \bibitem{nextera2012}
 Illumina.
 \newblock Data procesing of nextera mate pair reads on illumina sequencing
@@ -1176,5 +1183,12 @@ N.~K Lee, A.~N. Kapanidis, Y.~Wang, X.~Michalet, J.~Mukhopadhyay, R.~H.
 \newblock Accurate fret measurements within single diffusing biomolecules using
   alternating-laser excitation.
 \newblock {\em Biophys. J.}, 88:2939--2953, 2006.
+
+\bibitem{murphy2015_2}
+R.~R. Murphy, M.~Kjaegaard, S.~E. Jackson, and D.~Klenerman.
+\newblock pyfret: An open-source python library for analysis of single molecule
+  fluorescence data.
+\newblock {\em PLoS Com. Biol.}, 2015.
+\newblock {\emph{submitted July 2015}}.
 
 \end{thebibliography}

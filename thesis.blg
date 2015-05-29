@@ -6,45 +6,45 @@ Database file #1: thesis.bib
 Warning--empty author and editor in goldbook2006
 Warning--empty journal in Coil2014
 Warning--empty journal in li2013
-You've used 187 entries,
+You've used 189 entries,
             1791 wiz_defined-function locations,
-            1526 strings with 43166 characters,
-and the built_in function-call counts, 52576 in all, are:
-= -- 4216
-> -- 3728
+            1535 strings with 43527 characters,
+and the built_in function-call counts, 52940 in all, are:
+= -- 4244
+> -- 3756
 < -- 0
-+ -- 1317
-- -- 1130
-* -- 4522
-:= -- 8998
-add.period$ -- 563
-call.type$ -- 187
-change.case$ -- 169
++ -- 1327
+- -- 1138
+* -- 4542
+:= -- 9068
+add.period$ -- 571
+call.type$ -- 189
+change.case$ -- 171
 chr.to.int$ -- 0
-cite$ -- 190
-duplicate$ -- 1681
-empty$ -- 4302
-format.name$ -- 1130
-if$ -- 10849
+cite$ -- 192
+duplicate$ -- 1697
+empty$ -- 4330
+format.name$ -- 1138
+if$ -- 10925
 int.to.chr$ -- 0
-int.to.str$ -- 187
-missing$ -- 198
-newline$ -- 940
-num.names$ -- 186
-pop$ -- 318
+int.to.str$ -- 189
+missing$ -- 200
+newline$ -- 952
+num.names$ -- 188
+pop$ -- 322
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 571
+skip$ -- 577
 stack$ -- 0
 substring$ -- 4284
-swap$ -- 185
+swap$ -- 187
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 489
-width$ -- 190
-write$ -- 2042
+while$ -- 491
+width$ -- 192
+write$ -- 2066
 (There were 3 warnings)

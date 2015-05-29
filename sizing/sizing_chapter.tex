@@ -143,6 +143,7 @@ However, now we must also consider the oligomer size. In the absence of evidence
 
 \begin{equation}
 c_D \sim \text{Poisson}(c_D; n \cdot \lambda)
+\label{eq:n_photons}
 \end{equation} 
 
 The total number observed photons in that time bin, $f_D$, is then the sum $n_D + c_D$.
@@ -418,7 +419,6 @@ The most likely source of this discrepancy is incorrect parameterisation of the 
 
 To overcome this issue, we attempted to co-infer $R_{\text{blue}}$ along with other model parameters, by allowing it to become a variable rather than a constant in our model. Unfortunately, this was also unsuccessful, as the model converges to extremely low values of $R_{\text{blue}}$, for which the inferred oligomer concentration is concommitantly unphysically high and the mean event brightness very low (Table~\ref{tab:R_blue}). 
 
-
 \begin{figure}
    \begin{center}
       \includegraphics*[clip=true, width=6in]{sizing/varying_R_blue.pdf}
@@ -455,7 +455,14 @@ inferred = 0.029 & 0.44 & 1.006 & 0.591\\ \hline
 
 This poor behaviour is caused by overfitting. There is insufficient information in the datasets to distinguish between a solution with many molecules each of which emit only a few photons and a model in which few molecules emit many photons in each rare excitation event. Moreover, a model in which there are multiple dim emitters in the confocal volume at any one time gives greater flexibility to exactly fit small, variations in the observed emission distributions. As a result, dim emitters are preferred as they allow the model to more closely approximate this random noise, resulting in clearly incorrect  and unphysical fits.
 
-This has considerable implications for our ability to fit oligomer data using the Metropolis sampler, as the results of sampling are extremely dependent on the value of the overdispersion parameter $R_{\text{blue}}$, which we are not able to infer accurately. Consequently, extension of the inference tool to oligomer sizing is unsuccessful. There is insufficient information obtained from an experiment to accurately calculate the mean event emission brightness or to separate the noise and fluorescence emission distributions, even for molecules carrying a known, uniform number of fluorophores. However, as we have shown (Fig.~\ref{fig:gamma_poisson_size_photons_uniform}), the degree of overdispersal means that simple thresholding analyses are also entirely inappropriate to accurately calculate oligomer size distributions. To obtain accurate size information from a single molecule fluorescence experiment, it is necessary to reduce the sources of heterogeneity, so that photon emission can be well approximated using a pure poisson distribution (Fig.~\ref{fig:poisson_size_photons_uniform}). The following section describes our attempts to understand sources of emission overdispersal. The chapter concludes with a discussion of possible methods to reduce this heterogeneity.   
+It should be noted that this is not a limitation of the Metropolis-Hastings sampling method. Rather, it reveals a fundamental indistinguishability between different models of oligomer emission behaviour. If we consider the probability mass function for photon emission (Eq.~\ref{eq:n_photons}), we see that the emission parameter is the product $n \cdot \lambda$. These two values are not independent. If we substitue certain values of $n$, such as $n = \frac{\varphi}{\lambda}$, into Eq.~\ref{eq:n_photons} we can see that the two values cancel each other out, leaving
+
+\begin{equation}
+c_D \sim \text{Poisson}(c_D; \frac{\varphi}{\lambda} \cdot \lambda) = \frac{(\frac{\varphi}{\lambda} \cdot \lambda)^k \cdot e^{\frac{\varphi}{\lambda} \cdot \lambda}}{k!} = \frac{\varphi^{k} \cdot e^{-\varphi}}{k!}.
+\label{eq:n_photons_2}
+\end{equation}  
+
+This has considerable implications for our ability to fit oligomer data using the Metropolis-Hastings sampler or any other inference method. In the best case, we can only infer the value of the parameter $\varphi = n \cdot \lambda$; it is not possible to be more specific about the values of $n$ and $\lambda$ themselves. Furthermore, the results of sampling are extremely dependent on the value of the overdispersion parameter $R_{\text{blue}}$, which we are not able to infer accurately. Consequently, extension of the inference tool to oligomer sizing is unsuccessful. There is insufficient information obtained from an experiment to accurately calculate the mean event emission brightness or to separate the noise and fluorescence emission distributions, even for molecules carrying a known, uniform number of fluorophores. However, as we have shown (Fig.~\ref{fig:gamma_poisson_size_photons_uniform}), the degree of overdispersal means that simple thresholding analyses are also entirely inappropriate to accurately calculate oligomer size distributions. To obtain accurate size information from a single molecule fluorescence experiment, it is necessary to reduce the sources of heterogeneity, so that photon emission can be well approximated using a pure poisson distribution (Fig.~\ref{fig:poisson_size_photons_uniform}). The following section describes our attempts to understand sources of emission overdispersal. The chapter concludes with a discussion of possible methods to reduce this heterogeneity.   
 
 %\subsection{Attempting to Remove Sources of Heterogeneity}
 \subsection{Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}
