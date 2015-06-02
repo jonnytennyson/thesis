@@ -1,12 +1,12 @@
-\chapter{Analysis Tools for Single Molecule Confocal Microscopy}
+\chapter{Analysis Tools for single-molecule Confocal Microscopy}
 \label{chap:pyfret}
 \section{Overview}
-This chapter describes the development of pyFRET, an open source library of analysis tools for confocal single molecule spectroscopy. The chaper is structured as follows. Firstly, we describe the analysis algorithms supported by pyFRET, including their theoretical basis and programmatic implementation. Then we compare the performance of different analysis techniques, as implemented using pyFRET, to understand their strengths. 
+This chapter describes the development of pyFRET, an open source library of analysis tools for confocal single-molecule spectroscopy. The chaper is structured as follows. Firstly, we describe the analysis algorithms supported by pyFRET, including their theoretical basis and programmatic implementation. Then we compare the performance of different analysis techniques, as implemented using pyFRET, to understand their strengths. 
 
 The contributions of this chapter are twofold. Firstly, pyFRET is the first open source software released for smFRET data analysis. This is important as open software facilitates effective benchmarking and comparison of different analysis methods. Secondly, we present the first detailed comparison of different analysis techniques for confocal smFRET. The data collection and analysis methods used by different research groups are currently highly heterogeneous, so this comparison makes an important contribution to our understanding of the best available techniques to use for accuarate evaluation of smFRET data.  
 
 \section{Introduction}
-\subsection{The Single Molecule Fluorescence Experiment}
+\subsection{The single-molecule Fluorescence Experiment}
 
 As described in Chapter~\ref{chap:intro}, in a confocal smFRET experiment, molecules are labelled with two fluorescent dyes. The emission spectrum of the donor dye ($D$) is chosen to overlap with the excitation spectrum of the acceptor ($A$). When the donor and acceptor are sufficiently close in space, exciting the donor dye results in FRET and fluorescent emission from the acceptor dye. The FRET efficiency, $E$, which describes the proportion of excitation energy transferred from the donor to the acceptor, depends on the distance, $r$ between the two dyes (Eq.~\ref{eq:efficiency}) and $R_0$, the F\"{o}rster distance, a dye dependent constant that describes the dye separation at which 50\% energy transfer is achieved (Fig.~\ref{fig:fig1_instrumentation} C)
 
