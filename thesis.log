@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  4 JUN 2015 19:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  5 JUN 2015 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1477,10 +1477,10 @@ msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on thesis.pdf (220 pages, 9945375 bytes).
+Output written on thesis.pdf (220 pages, 9945648 bytes).
 PDF statistics:
- 46314 PDF objects out of 55141 (max. 8388607)
- 31193 compressed objects within 312 object streams
+ 46315 PDF objects out of 55141 (max. 8388607)
+ 31194 compressed objects within 312 object streams
  854 named destinations out of 1000 (max. 500000)
  1695 words of extra memory for PDF output out of 10000 (max. 10000000)
 

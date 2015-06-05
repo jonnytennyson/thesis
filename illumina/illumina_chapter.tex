@@ -248,7 +248,7 @@ Performance analysis was performed on a single core with 8 GB RAM available. Run
 
 \texttt{spades.py -k 21,33,55,77 -t 4 \\ --hqmp1-12 bacteria.fastq.gz  --hqmp1-fr -o assembly}
 
-The initial assembly quality was evaluated using QUAST~\cite{Gurevich2013} (version 2.3, see~\url{XX}) to align the \textit{de novo} assembly to a reference genome:
+The initial assembly quality was evaluated using QUAST~\cite{Gurevich2013} (version 2.3, see~\url{http://bioinf.spbau.ru/quast}) to align the \textit{de novo} assembly to a reference genome:
 
 \texttt{python quast.py -o results\_sample -t 16 \\  -R ref/reference.fna sample\_new.fasta }
 
