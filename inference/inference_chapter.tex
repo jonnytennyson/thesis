@@ -516,7 +516,7 @@ where the transition probabilities  $Q(x' | x)$ and $Q(x | x')$ are respectively
 Simulated datasets were generated using the model described above, using code written in Python. Code is available online (\url{https://bitbucket.org/rebecca_roisin/fret-inference}). 
 
 \paragraph*{smFRET measurements}
-Single-molecule data were collected using a custom built system (see XXX introduction). Details of the instrumentation and DNA duplex preparation are described below. Data were collected for 30 minutes at room temperature using a 1 ms bin time, in frames of 10000 bins.
+Single-molecule data were collected using a custom built system (see Section~\ref{sect:instrumentation}). Details of the instrumentation and DNA duplex preparation are described below. Data were collected for 30 minutes at room temperature using a 1 ms bin time, in frames of 10000 bins.
 
 \paragraph*{Analysis of single-molecule FRET data}
 Thresholding-based data-analysis was carried out in the standard manner~\cite{deniz01}.  For the inference process, data were fitted in a single step. Raw data, prior to any denoising or event selection steps, were analysed using the Metropolis sampling process described above. Sampling occurred in two steps. First, two approximate samples were generated, with a burn-in of 3000 iterations and 1000 iterations between samples. Then, 100 further samples were made, with a burn-in of 1000 iterations and 100 iterations between samples. For all analyses, the initial parameters shown in Table~\ref{tab:shared} were used. The outcome of the inference was not sensitive to initial conditions (see Fig.~\ref{fig:MC_burnin_convergence}).  

@@ -1,7 +1,7 @@
 \chapter{Probabilistic Inference for Error Detection in De Novo Genome Assemblies}
 \label{chap:illumina}
 \section{Overview}
-This chapter presents results in a different research domain than the previous three chapters. Instead of confocal single-molecule  fluorescence, here we consider gene sequencing using Illumina's fluorescence-based sequencing technology~\cite{bentley2008}. We describe the development and evaluation of an error detection tool, NxRepair~\cite{murphy2015}, designed to locate and correct misassemblies in \textit{de novo} assemblies of bacterial genomes constructed using Illumina Nextera mate pair~\cite{nextera2012} sequencing. In a \textit{de novo} sequence assembly, scaffolding errors and incorrect repeat disambiguation during \textit{de novo} assembly can result in large scale misassemblies in draft genomes. Nextera mate pair sequencing data provide additional information to resolve assembly ambiguities and prevent these errors. However, despite this additional information, mistakes can still occur. We show, through comparison with matched refernence genomes, that the NxRepair tool can quantitatively improve the quality of \textit{de novo} assemblies and that it outperforms other error detection tools in identifying large-scale misassemblies.
+This chapter presents results in a different research domain than the previous three chapters. Instead of confocal single-molecule  fluorescence, here we consider gene sequencing using Illumina's fluorescence-based sequencing technology~\cite{bentley2008}. We describe the development and evaluation of an error detection tool, NxRepair~\cite{murphy2015}, designed to locate and correct misassemblies in \textit{de novo} assemblies of bacterial genomes constructed using Illumina Nextera mate pair~\cite{nextera2012} sequencing. In a \textit{de novo} sequence assembly, scaffolding errors and incorrect repeat disambiguation during \textit{de novo} assembly can result in large scale misassemblies in draft genomes. Nextera mate pair sequencing data provide additional information to resolve assembly ambiguities and prevent these errors. However, despite this additional information, mistakes can still occur. We show, through comparison with matched refernence genomes, that the NxRepair tool can quantitatively improve the quality of \textit{de novo} assemblies and that it outperforms other error detection tools in identifying large-scale misassemblies. The work presented here was completed during an internship at Illumina Cambridge.
 
 This chapter opens with a brief overview of sequencing technologies and their relationship to fluorescence microscopy. We then introduce the problem of \textit{de novo} genome assembly and discuss prior methods for error detection in genome assemblies. Following this introduction, we describe the development of our NxRepair tool, which uses a probabilistic analysis to identify regions of a \textit{de novo} assembly that have a high probability of containing an error. Finally, we evaluate the performance of NxRepair on a series of nine bacterial genomes. We show that NxRepair can identify and correct large scaffolding errors, without use of a reference sequence, resulting in quantitative improvements in the assembly quality. We close this chapter by discussing the potential applicatons of this tool, but also the limitations of this approach to error detection. NxRepair can be downloaded from GitHub; a tutorial and user documentation are also available.
  
@@ -26,7 +26,7 @@ The most popular, and best known, NGS technology is Illumina's sequencing by syn
 \label{fig:terminator}
 \end{figure*}  
 
-This is a fluorescence based imaging technique. However, there are several major differences between this sequencing process and the single-molecule confocal experiments described in the previous chapters. Firstly, rather than freely diffusing molecules imaged by a laser beam, the fluorescently labelled sequences are tethered to the flow-cell base and imaged using multiple cameras and epifluorescent illumination (see Section~\ref{subsect:techniques}). Secondly, unlike in a smFRET experiment, the imaging step does not attempt to distinguish individual fluorophores against a noisy background signal. Instead, the clustering step prior to imaging produces multiple, spatially localised copies of the same DNA sequence, hugely amplifying the available fluorescent signal. 
+Illumina's sequencing technology is a fluorescence based imaging technique. However, there are several major differences between this sequencing process and the single-molecule confocal experiments described in the previous chapters. Firstly, rather than freely diffusing molecules imaged by a laser beam, the fluorescently labelled sequences are tethered to the flow-cell base and imaged using multiple cameras and epifluorescent illumination (see Section~\ref{subsect:techniques}). Secondly, unlike in a smFRET experiment, the imaging step does not attempt to distinguish individual fluorophores against a noisy background signal. Instead, the clustering step prior to imaging produces multiple, spatially localised copies of the same DNA sequence, hugely amplifying the available fluorescent signal. 
 
 \begin{figure*}
 \centerline{\includegraphics[width=0.8\textwidth]{illumina/illumina_sequencing.jpg}}
@@ -44,11 +44,11 @@ As described above, Illumina NGS produces reads of length 151 or 251 bases. Even
 
 \textit{De novo} assembly is the construction of a long, contiguous genomic sequence from short DNA reads, without using a reference genome. The most popular method of \textit{de novo} assembly contstructs a de Bruijn overlap graph~\cite{Compeau2011} from even shorter fragments, termed $k$-mers, generated by fragmenting the short reads, then traverses this graph to reconstruct the genome sequence. De Bruijn graph traversal as a method of assembly was proposed as early as 2001~\cite{Pevzner2001}; however the method only gained popularity once the first de Bruijn assemblers were released~\cite{Zerbino2008}. In the simplest case, the graph is constructed from single end reads. However, with only single end reads, disambiguating repeat regions, which tangle the de Bruijn graph, remains challenging. 
 
-In de Bruijn graph assembly, the sequencing reads are subdivided into all possilbe shorter reads of length $k$, termed $k$-mers. A $k$-mer is described as having a prefix (the first $k - 1$ nucleotides) and a suffix (the last $k - 1$ nucleotides). A graph is then constructed, in which observed prefixes and suffixes are represented as nodes; a directed edge is drawn between two nodes if the $k$-mer representing that prefix-suffix pair is present in the sequencing data (Fig.~\ref{fig:de-bruijn}). The challenge of constructing the \textit{de novo} assembly is then addressed by constructing a continuous path through the resulting de Bruijn graph, in which every edge is visited. Such a path is termed an Eulerian cycle; efficient algorithms exist to find such cycles and many have been implemented for the \textit{de novo} assembly application~\cite{Zerbino2008, Bankevich2012, Li2010_SOAP}. 
+In de Bruijn graph assembly, the sequencing reads are subdivided into all possible shorter reads of length $k$, termed $k$-mers. A $k$-mer is described as having a prefix (the first $k - 1$ nucleotides) and a suffix (the last $k - 1$ nucleotides). A graph is then constructed, in which observed prefixes and suffixes are represented as nodes; a directed edge is drawn between two nodes if the $k$-mer representing that prefix-suffix pair is present in the sequencing data (Fig.~\ref{fig:de-bruijn}). The challenge of constructing the \textit{de novo} assembly is then addressed by constructing a continuous path through the resulting de Bruijn graph, in which every edge is visited. Such a path is termed an Eulerian cycle; efficient algorithms exist to find such cycles and many have been implemented for the \textit{de novo} assembly application~\cite{Zerbino2008, Bankevich2012, Li2010_SOAP}. 
 
 \begin{figure*}
 \centerline{\includegraphics[width=0.8\textwidth]{illumina/de_bruijn.pdf}}
-\caption{De Bruijn graph assembly from $k$-mers. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers. Figure adapted from~\cite{Compeau2011}.}
+\caption{De Bruijn graph assembly from $k$-mers. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers.}
 \label{fig:de-bruijn}
 \end{figure*}
 
@@ -58,7 +58,7 @@ One important challenge that is not resolved by de Bruijn graph assembly is the 
 
 \begin{figure*}
 \centerline{\includegraphics[width=0.8\textwidth]{illumina/de_bruijn_tangle.pdf}}
-\caption{A se Bruijn graph with repeats. The larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph. Figure adapted from~\cite{Compeau2011}.}
+\caption{A se Bruijn graph with repeats. The larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph.}
 \label{fig:tangle}
 \end{figure*}
 
@@ -111,7 +111,7 @@ We define a latent indicator variable $X_l\in\{0,1\}$ for each pair of reads, $l
 
 where $Y_l$ is the insert size of read pair $l$, $\pi_k$ is the user defined prior probability of class $k$ and $\pi_1 + \pi_0 = 1$. The default value of $\pi_0$ is 0.01 (see Table~\ref{tab:parameters}), meaning that in the absence of any insert size information, 99 \% of read pairs are expected to arise from the null distribution.  
 
-Within each window, the total support for a correct assembly at position $i$ can be calculated as:
+Within each window, the total support, $D_i$ for a correct assembly at position $i$ can be calculated as:
 
 \begin{equation}
 D_i = \sum_{l=1}^N P(X_l=1|Y_l)\cdot C_l
@@ -130,7 +130,7 @@ where the summation is over all read pairs aligning across position $i$ and $C_l
 
 Within each contig, the contig assembly support mean $\mu_D$ and variance $s_D$ are calculated from all reads aligning to the contig,
 \begin{equation}
-\hat{\mu}_D = \frac{\sum_{l=1}^N D_l}{N} \qquad s_D = \frac{\sum_{l=1}^N \sqrt{(D_l - \hat{\mu})^2}}{N}
+\mu_D = \frac{\sum_{l=1}^N D_l}{N} \qquad s_D = \frac{\sum_{l=1}^N \sqrt{(D_l - \hat{\mu})^2}}{N}
 \label{eq:contigD}
 \end{equation}
 
@@ -144,7 +144,7 @@ z_l = \frac{D_l - \hat{\mu}_D}{s_D}
 
 The Z-score is sensitive both to local changes in the insert size distribution, and to large variations in the number of correctly aligned mate pairs, for example caused by a large number of reads with a mate aligning to a different contig. This ensures that NxRepair can identify misassemblies occurring both within and between contigs.  
 
-A misassembly is identified if $z_l < T$ for a user-defined threshold $T$ (default value -4). This threshold describes the number of standard deviations below the mean assembly support that is required to identify an anomaly. The default value of -4 will flag only positions whose assembly support is less than four standard deviations below the mean level of support.
+A misassembly is identified if $z_l < T$ for a user-defined threshold $T$ (default value -4). This threshold describes the number of standard deviations below the mean assembly support that is required to identify an anomaly. The default value of -4 will flag only positions whose assembly support is less than four standard deviations below the mean level of support. Optimisation of the default threshold value is described in Section~\ref{sect:optimisation}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{illumina/spanning.pdf}}
@@ -159,7 +159,7 @@ NxRepair identifies misassemblies by identifying regions where the mate pair ins
 \label{eq:global}
 \end{equation}
 
-where $\text{median}_l(Y_l)$ is the median insert size of reads with correct pairing behaviour and $|Y_m - \text{median}_l(Y_l)|$ is the absolute value of the residual from the median of the $m$th on $N$ reads. The standard deviation was then calculated by scaling the MAD using:
+where $\text{median}_l(Y_l)$ is the median insert size of reads with correct pairing behaviour and $|Y_m - \text{median}_l(Y_l)|$ is the absolute value of the residual from the median of the $m$th on $N$ reads. The standard deviation, $\hat{\sigma}$, was then calculated by scaling the MAD using:
 
 \begin{equation}
 \hat{\sigma} = K \cdot \text{MAD}
@@ -177,10 +177,10 @@ and $\phi^{-1}$ is the quantile function~\cite{Leys2013}
 
 The $\text{MAD}$ is a robust estimator for the standard deviation, as it is not sensitive to outliers, such as the long tail of the mate pair insert size distribution. Using the MAD as an estimator prevents over-estimating the variance of the insert size, allowing anomalously large insert sizes to be correctly identified.
 
-These were then used as the parameters of the null distribution, as described above (Section~\ref{sect:illumina_theory}.
+These were then used as the parameters of the null distribution, as described above (Section~\ref{sect:illumina_theory}).
 
 \subsection{Interval Tree Construction}
-To facilitate rapid lookup of mate pair properties, we construct an interval tree~\cite{cormen2009} for each contig in the \textit{de novo} assembly. An interval tree is a data structure that facilitates $O(\text{log} n + m)$ lookup of intervals that span a given point or interval, for $n$ total entries and $m$ spanning entries. The interval tree contains the start and end positions of each mate pair aligned to that contig, as well as a flag variable indicating whether that mate pair had correct strand and pairing orientation. Mate pairs where the two reads align to different contigs were excluded. Mapping quality is currently not considered at this stage - reads are retained regardless of mapq score. For each position $i$ for which the Z-score is to be calculated, the tree is queried with a start position $i-W$ and end position $i+W$, to retrieve read pairs spanning the interval between positions $i-W$ and $i+W$ (exclusive). The insert sizes of retrieved read pairs are then used to calculate the Z-score for position $i$. This allows NxRepair to rapidly query positions across a contig to discover the insert size distribution at the queried position. Use of the interval tree significantly increases the efficiency of Z-score calculation, as each pair of reads is fetched only once in order to build the tree. All relevant parameters are then stored in the tree for rapid look-up when a position is queried. This has several advantages. Firstly, it is significantly faster than fetching reads only when a position is queried. Secondly, it is more space efficient than a frequency array of all positions on all contigs but does not lose any information about the exact alignment positions. Finally, once construction of the tree is complete, multiple passes across a contig (for example with different spatial resolutions, or using different window sizes) can rapidly be made using the same tree.      
+To facilitate rapid lookup of mate pair properties, we construct an interval tree~\cite{cormen2009} for each contig in the \textit{de novo} assembly. An interval tree is a data structure that facilitates $O(\text{log} n + m)$ lookup of intervals that span a given point or interval, for $n$ total entries and $m$ spanning entries. The interval tree contains the start and end positions of each mate pair aligned to that contig, as well as a flag variable indicating whether that mate pair had correct strand and pairing orientation. Mate pairs where the two reads align to different contigs were excluded. Mapping quality is currently not considered at this stage - reads are retained regardless of the mapping quality (mapq) score. For each position $i$ for which the Z-score is to be calculated, the tree is queried with a start position $i-W$ and end position $i+W$, to retrieve read pairs spanning the interval between positions $i-W$ and $i+W$ (exclusive). The insert sizes of retrieved read pairs are then used to calculate the Z-score for position $i$. This allows NxRepair to rapidly query positions across a contig to discover the insert size distribution at the queried position. Use of the interval tree significantly increases the efficiency of Z-score calculation, as each pair of reads is fetched only once in order to build the tree. All relevant parameters are then stored in the tree for rapid look-up when a position is queried. This has several advantages. Firstly, it is significantly faster than fetching reads only when a position is queried. Secondly, it is more space efficient than a frequency array of all positions on all contigs but does not lose any information about the exact alignment positions. Finally, once construction of the tree is complete, multiple passes across a contig (for example with different spatial resolutions, or using different window sizes) can rapidly be made using the same tree.      
 
 \subsection{Misassembly Location and Contig Breaking}
 To improve the quality of the \textit{de novo} assembly, once a misassembly has been located, a contig is broken into two separate pieces at the site of a misassembly. The broken ends of the two new contigs can optionally be trimmed by a user defined length (default 4 kb) to remove the misassembled region. Trimming allows removal of the incorrectly assembled regions around a break-point, but can be switched off if a user does not want any sequence to be removed from the assembly. To prevent excessive clipping, misassemblies separated by less than the trimming distance are grouped together, the contig is broken at the start and end of the misassembled region and the misassembled section is discarded. Low-scoring regions within the trimming distance of the ends of contigs are not considered misassemblies, as the high proportion of mate pairs aligning here whose mate maps to a different contig reduces the number of pairs under consideration and hence lowers the observed Z-score. This also ensures that circular molecules, such as small plasmids, which are assembled into a single contig, are not truncated because of mate pairs at either end of the assembly that appear to span the entire contig, but which are spatially close when circularisation is considered.
@@ -211,8 +211,9 @@ Nine bacterial genomes were prepared according to the Nextera mate pair protocol
 the trimmed reads are available at the European Nucleotide Archive (ENA) at \url{http://www.ebi.ac.uk/ena/data/view/PRJEB8559}. Note that only these Nextera mate pair libraries were used. No additional single end or paired end libraries were required. For performance optimisation, the first replicate from each genome sequenced was used as a training set. The test set, for performance evaluation, was formed from the second replicate of each genome. 
 
 \subsection{Performance Optimisation}
+\label{sect:optimisation}
 \paragraph*{ROC Plots}
-To optimise the threshold in $Z$ below which to identify a misassembled region, we prepared ROC plots using Replicate 1 of each genome, varying the threshold value, $T$, in steps of 1 between -10 and 0. 
+To optimise the threshold in the Z-score, $Z$, below which to identify a misassembled region, we prepared ROC plots using Replicate 1 of each genome, varying the threshold value, $T$, in steps of 1 between -10 and 0. 
 
 The positions of true misassemblies were identified by aligning each \textit{de novo} assembly to its reference genome using QUAST~\cite{Gurevich2013}. To correctly compare the sites of true misassemblies with those identified by NxRepair, we divided each contig of the assembly into short stretches of 1 kb length. We then prepared an array, $A_{Nx}$ of size $\frac{L}{1000}$ for contig length $L$, corresponding to misassemblies identified by NxRepair. $A_{Nx}$ was filled as follows:
 
@@ -236,7 +237,7 @@ Based on the resultant ROC plots, shown in Fig.~\ref{fig:ROCs}, a threshold in $
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{illumina/allROC.pdf}}
-\caption{ROC plots for the seven genomes containing misassemblies.\label{fig:ROCs}}
+\caption{ROC plots for the seven genomes containing misassemblies. Each plot is labelled with an abbreviation of the genome used. The correspondence between the abbreviation and the bacterial genome is shown in Table~\ref{data-description}. ROC plots for the List. and Meio. genomes are not shown, as these did not contain any large misassemblies in the original assembly. \label{fig:ROCs}}
 \end{figure}
 
 \paragraph{Profiling}
@@ -247,7 +248,7 @@ Performance analysis was performed on a single core with 8 GB RAM available. Run
 
 \texttt{spades.py -k 21,33,55,77 -t 4 \\ --hqmp1-12 bacteria.fastq.gz  --hqmp1-fr -o assembly}
 
-The initial assembly quality was evaluated using QUAST~\cite{Gurevich2013} (version 2.3) to align the \textit{de novo} assembly to a reference genome:
+The initial assembly quality was evaluated using QUAST~\cite{Gurevich2013} (version 2.3, see~\url{XX}) to align the \textit{de novo} assembly to a reference genome:
 
 \texttt{python quast.py -o results\_sample -t 16 \\  -R ref/reference.fna sample\_new.fasta }
 
@@ -268,7 +269,7 @@ The default parameters used and their meanings are shown in Table~\ref{tab:param
 
 \begin{table}
 \begin{center}
-\caption{NxRepair Parameters \label{tab:parameters}}
+\caption{NxRepair Parameters. This table lists the user-modifiable parameters used in NxRepair, along with the default values used and a brief description of the meaning of each parameter. \label{tab:parameters}}
 \begin{tabular}{llp{8cm}}
     \hline
     Parameter & Default Value & Meaning \\ \hline
@@ -301,7 +302,7 @@ Furthermore, NxRepair currently uses a user-defined prior probability of incorre
 
 \begin{table}[]
 \begin{center}
-\caption{Number of large misassemblies and NGA50 as reported by QUAST before (left) and after correction by NxRepair (middle) and A5qc (right). \label{tab:improvement}}
+\caption{Number of large misassemblies and NGA50 as reported by QUAST before (left) and after correction by NxRepair (middle) and A5qc (right) for the second replicate of each of the nine genomes analysed using NxRepair. \label{tab:improvement}}
 \resizebox{\textwidth}{!}{
 {\begin{tabular}{llllllll}\hline
  & & \multicolumn{2}{l}{Before NxRepair} & \multicolumn{2}{l}{{\bf After NxRepair}} & \multicolumn{2}{l}{After A5qc} \\\hline
@@ -326,7 +327,7 @@ We evaluated the runtime and peak memory usage of NxRepair on each of the nine g
 
 \begin{table}
 \begin{center}
-\caption{NxRepair performance analysis. \label{tab:performance}}
+\caption{NxRepair performance analysis. The total run-time and memory usage of NxRepair in analysing \emph{de novo} assemblies of each of the nine genomes described in Table~\ref{data-description}. Results are shown for Replicate 1 of each genome. \label{tab:performance}}
 \begin{tabular}{lll}
     \hline
     Bacterium & Total Time (s) & Memory Usage (MiB) \\ \hline
@@ -402,7 +403,7 @@ We evaluated the runtime and peak memory usage of NxRepair on each of the nine g
 \begin{table}[]
 \begin{center}
 {
-\caption{Yield in bp, mean base quality and average read length after adapter removal, as well as the raw NGA50 score prior to NxRepair analysis for all genomes analysed.\label{tab:yield}}
+\caption{Parameters of the genome assemblies analysed by NxRepair. Yield in bp, mean base quality and average read length after adapter removal, as well as the raw NGA50 score prior to NxRepair analysis for all genomes analysed.\label{tab:yield}}
 {\begin{tabular}{lllll}\hline
 Genome & Yield [bp] & Mean base quality & Mean read length & Raw NGA50 \\\hline
 B. cereus lib1 & 140,034,231 & 30.83 & 120.50 &  1,157,404\\

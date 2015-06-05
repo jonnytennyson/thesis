@@ -9,10 +9,6 @@ Since FRET was first used to measure the distance between two fluorescent dyes o
 \subsection{The Physical Basis of Fluorescence}
 \paragraph{Fluorescence}
 \label{sect:fluorescence}
-Fluorescence is the physical phenomenon by which a molecule that has absorbed a photon of electromagnetic radiation and which is in an excited state relaxes via non-radiative processes, such as vibrational interactions, rotation and translation in its medium and then  emits a photon, returning to its ground state~\cite{valeur2001}. Typically, a fluorescence excitation-emission cycle involves transitions between the singlet ground state ($\text{S}_0$) and first excited state ($\text{S}_1$) of the fluorophore (Fig.~\ref{fig:jablonski}). Owing to the intramolecular transitions occurring prior to emission, the photon emitted is of a lower energy than the photon absorbed. The difference in energy between the absorbed and emitted photons is termed the Stokes shift (Fig.~\ref{fig:stokes},~\cite{Albani2011}) and is a characteristic of the energy levels available to the excited molecule. 
-
-The typical timescale for a single fluorescence excitation-emission cycle is approximately $10^{-10} - 10^{-7}$ s. This timescale is dominated by the lifetime of the excited state, (typically $10^{-10} - 10^{-7}$ s); photon excitation and emission processes, as well as vibrational transitions, occur on a timescale that is several orders of magniude shorter (absorption $10^{-15}$ s, relaxation $10^{-12} - 10^{-10}$ s).
-
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{introduction/jablonski.pdf}
@@ -29,19 +25,23 @@ The typical timescale for a single fluorescence excitation-emission cycle is app
 	\end{center}
 \end{figure}
 
+Fluorescence is the physical phenomenon by which a molecule that has absorbed a photon of electromagnetic radiation and which is in an excited state relaxes via non-radiative processes, such as vibrational interactions, rotation and translation in its medium and then  emits a photon, returning to its ground state~\cite{valeur2001}. Typically, a fluorescence excitation-emission cycle involves transitions between the singlet ground state ($\text{S}_0$) and first excited state ($\text{S}_1$) of the fluorophore (Fig.~\ref{fig:jablonski}). Owing to the intramolecular transitions occurring prior to emission, the photon emitted is of a lower energy than the photon absorbed. The difference in energy between the absorbed and emitted photons is termed the Stokes shift (Fig.~\ref{fig:stokes},~\cite{Albani2011}) and is a characteristic of the energy levels available to the excited molecule. 
+
+The typical timescale for a single fluorescence excitation-emission cycle is approximately $10^{-10} - 10^{-7}$ s. This timescale is dominated by the lifetime of the excited state, (typically $10^{-10} - 10^{-7}$ s); photon excitation and emission processes, as well as vibrational transitions, occur on a timescale that is several orders of magniude shorter (absorption $10^{-15}$ s, relaxation $10^{-12} - 10^{-10}$ s).
+
 \paragraph{Competing Processes}
 In addition to the $\text{S}_1$ to $\text{S}_0$ transition that results in fluorescence emission, other competing energetic transitions can also occur, resulting in non-radiative relaxation to the ground state $\text{S}_0$, or permanent changes to the electronic structure of the fluorophore (photobleaching). Internal conversion -- a non-radiative transition to a lower energy state of the same spin multiplicity -- is possible, although the large energy gap between the $\text{S}_1$ and $\text{S}_0$ states makes it much less frequent than the more accessible fluorescent pathway. A more significant competitor is inter-system crossing, involving a non-radiative transition from the first singlet excited state, $\text{S}_1$ to the first triplet excited state, $\text{T}_1$. Although forbidden by spin selection rules, inter-system crossing is facilitated by spin-orbit coupling, allowing it to compete with fluorescence (rate $10^{-10} - 10^{-8}$ s) as a relaxation pathway.
 
 From the $\text{T}_1$ state there are several accessible pathways to the ground state ($\text{S}_0$). Phosphorescence is the radiative decay from $\text{T}_1$ to $\text{T}_0$; alternatively, a second inter-system crossing back to $\text{S}_1$, followed by delayed fluorescence emission to reach the $\text{S}_0$ state is more common. As the lifetime of the $\text{T}_1$ state is long (on the order of $10^{-6} - 1$ s), this can be observed as photoblinking. These two processes are illustrated in Fig.~\ref{fig:jablonski}.  
 
-A third relaxation pathway from the $\text{T}_1$ state is photobleaching. If the fluorophore is in a solution containing dissolved oxygen, the $\text{T}_1$ state can interact with the triplet ground state of molecular oxygen, leading to de-excitation via triplet-triplet annihilation:
+A third relaxation pathway from the $\text{T}_1$ state is photobleaching. If the fluorophore is in a solution containing dissolved oxygen, the $\text{T}_1$ state can interact with the triplet ground state of molecular oxygen ($^3\text{O}_2$), leading to de-excitation via triplet-triplet annihilation:
 
 \begin{equation}
-^3\text{T}_1 + ^3\text{O}_2 \longrightarrow ^1\text{S}_0 + ^3\text{O}_2.
+^3\text{T}_1 + ^3\text{O}_2 \longrightarrow ^1\text{S}_0 + ^1\text{O}_2.
 \label{eq:blinking1}
 \end{equation} 
 
-The resultant singlet oxygen can then irreversibly oxidise the fluorophore, leaving it unable to undergo further fluorescent excitation-emission cycles.   
+The resultant singlet oxygen ($^1\text{O}_2$) can then irreversibly oxidise the fluorophore, leaving it unable to undergo further fluorescent excitation-emission cycles.   
 
 %Intersystem crossing ($10^{-10} - 10^{-8}$ s) and internal conversion ($10^{-11} - 10^{-9}$ s) are slower processes.
 
@@ -79,8 +79,8 @@ where $n_{\text{emitted}}$ and $n_{\text{absorbed}}$ are respectively the number
 
 \subsection{The Physical Basis of FRET}
 \label{sect:fret}
-\paragraph{F\"{o}rster Resonance Energy Transfer.}
-F\"{o}rster resonance energy transfer (FRET) is a non-radiative energy transfer process that can occur between chromophoric molecules~\cite{forster48}. The degree of energy transfer, E, is dependent on the fluorophore distance, varying inversely with the sixth power of the dye-dye distance, $r$: 
+\paragraph{F\"{o}rster Resonance Energy Transfer (FRET).}
+FRET is a non-radiative energy transfer process that can occur between chromophoric molecules~\cite{forster48}. The degree of energy transfer, E, is dependent on the fluorophore distance, varying inversely with the sixth power of the dye-dye distance, $r$: 
 
 \begin{equation}
 E = \frac{1}{1+ (\frac{r}{R_0})^6},
@@ -187,10 +187,10 @@ Advances in the fields of optical microscopy, fluorophore synthesis and data ana
 \label{subsect:techniques}
 The greatest challenge in single-molecule microscopy is to be able to detect dim fluorescence emission from individual molecules against a background of photon emission from other sources, such as Raman scattering by solution molecules and residual fluorescence from solution impurities~\cite{Moerner2003}. Consequently, a large amount of work has gone into maximizing the signal-to-noise ratio (SNR) of fluorescent emission data. This ratio can be optimised from both ends; namely maximising the signal and minimising the background noise. Maximising the signal involves the development and selection of fluorophores that achieve many fluorescent emission cycles during an excitation event. This is discussed in Section~\ref{sect:fluorophores}. 
 
-An effective way to minimize the background noise is to reduce the emission detection volume; as the number of photons detected from irrelevant species will be reduced with a smaller detection volume, whereas detection of photons from a single fluorophore of interest within the detection volume will be unaffected~\cite{Dillingham2008}. single-molecule fluorescence techniques can hence be characterised based on their method of detection volume reduction: Wide-field techniques, including Epifluorescence Microscopy and Total Internal Fluorescence Microscopy (TIRFM) illuminate and collect data from a wide image plane with a large area but minimal depth; by contrast confocal microscopy techniques attempt to collect data from the smallest detection volume possible -- a voxel of volume approximately 1 fL. These techniques and the optical geometry required for successful data collection, are summarized below. 
+An effective way to minimize the background noise is to reduce the emission detection volume; as the number of photons detected from irrelevant species will be reduced with a smaller detection volume, whereas detection of photons from a single fluorophore of interest within the detection volume will be unaffected~\cite{Dillingham2008}. single-molecule fluorescence techniques can hence be characterised based on their method of detection volume reduction: Wide-field techniques, including Epifluorescence Microscopy and Total Internal Fluorescence Microscopy (TIRFM) illuminate and collect data from a wide image plane with a large area but minimal depth; by contrast confocal microscopy techniques attempt to collect data from the smallest detection volume possible -- a voxel of volume approximately 1 fL. We now present a brief description of these techniques and the optical geometry required for successful data collection. 
 
 \paragraph{Epifluorescence Microscopy.}
-The simplest geometry for single-molecule fluorescence detection is epifluorescence microscopy (Fig.~\ref{fig:epi}). In an epifluorescence microscope monochromatic, collimated light is focused into the back apperture of an objective lens with a high Numerical Aperture (N.A.). A large volume of the fluorescently labelled sample, which is placed above the objective, is illuminated; emitted photons are collected through the same objective. Fluorescence emission is separated from excitation light using various filters before being focused onto a charge coupled device (CCD) camera which generates a current at each pixel proportional to the intensity of incident light.
+The simplest geometry for single-molecule fluorescence detection is epifluorescence microscopy (Fig.~\ref{fig:epi}). In an epifluorescence microscope monochromatic, collimated light is focused into the back apperture of an objective lens with a high Numerical Aperture (NA). A large volume of the fluorescently labelled sample, which is placed above the objective, is illuminated; emitted photons are collected through the same objective. Fluorescence emission is separated from excitation light using various filters before being focused onto a charge coupled device (CCD) camera which generates a current at each pixel proportional to the intensity of incident light.
 
 \begin{figure}
 	\begin{center}
@@ -232,13 +232,13 @@ Confocal microscopy takes the reduction in excitation volume a further step, min
 \begin{figure}
 	\begin{center}
 	\includegraphics*[clip=true, width=4in]{introduction/confocal.pdf}
-	\caption{Schematic of a confocal microscope. As in epifluorescence, laser light is focused into a sample using an objective lens with a high N.A. Emitted fluorescence is captured using the same objective and separated from reflected exciting photons using a dichroic mirror. The addition of a pinhole enables removal of out-of-focus light, improving the SNR as emitted fluorescence is now collected from only the fL-scale confocal volume. A second dichroic separates the remaining photons into donor and acceptor wavelengths. These photons are then directed onto APDs for counting and anlysis.}
+	\caption{Schematic of a confocal microscope. As in epifluorescence, laser light is focused into a sample using an objective lens with a high N.A. Emitted fluorescence is captured using the same objective and separated from reflected exciting photons using a dichroic mirror. The addition of a pinhole enables removal of out-of-focus light, improving the signal-to-noise ratio (SNR) as emitted fluorescence is now collected from only the fL-scale confocal volume. A second dichroic separates the remaining photons into donor and acceptor wavelengths. These photons are then directed onto APDs for counting and anlysis.}
 	\label{fig:confocal}
 	\end{center}
 \end{figure}
 
 \paragraph{Fluorescence Correlation Spectroscopy.}
-Fluorescence Correlation Spectroscopy (FCS)~\cite{Magde1972} is an extension of the Confocal method described above. In FCS, a higher concentration ($1$ nM - $100$ nM) of analyte solution is used, such that multiple fluorophores occupy the confocal volume an any time. Temporal fluctuations in the detected fluorescence emission can be used to determine physical parameters of the analyte solution, such as molecular concentrations and diffusion constants. These are determined by fitting a fluorescence autocorrelation function (Eq.~\ref{eq:fcs}), 
+Fluorescence Correlation Spectroscopy (FCS)~\cite{Magde1972} is an extension of the Confocal method described above. In FCS, a higher concentration ($1$ nM - $100$ nM) of analyte solution is used, such that multiple fluorophores occupy the confocal volume an any time. Temporal fluctuations in the detected fluorescence emission can be used to determine physical parameters of the analyte solution, such as molecular concentrations and diffusion constants. These are determined by fitting a fluorescence autocorrelation function, $G(\tau)$, (Eq.~\ref{eq:fcs}), 
 
 \begin{equation}
 G(\tau) = \frac{\langle \delta F(t) \cdot \delta F(t + \tau)\rangle}{\langle F(t)^2 \rangle},
@@ -275,22 +275,25 @@ Considerable effort has gone into synthesizing fluorophores that fulfil these re
 
 
 \section{Confocal Microscopy}
-Thus far, we have given a general overview of the different applications of fluorescence in single-molecule imaging. Howerver, this thesis primarily focuses on the analysis of data single-molecule confocal microscopy. Hence, we shall now give a more detailed description of the challenges and experiemntal methodologies specific to this single-molecule imaging technique.
+Thus far, we have given a general overview of the different applications of fluorescence in single-molecule imaging. Howerver, this thesis primarily focuses on the analysis of data from single-molecule confocal microscopy. Hence, we shall now give a more detailed description of the challenges and experiemntal methodologies specific to this single-molecule imaging technique.
 
 \subsection{Data Acquisition and Analysis}
 \paragraph{single-molecule FRET}
+\label{par:FRET}
 The most common form of confocal single microscopy exploits the phenomenon of FRET (Section~\ref{sect:fret}) to determine intramolecular distances in a single-molecule FRET (smFRET) experiment. In such an experiment, each molecule is site-specifically labelled with two fluorescent dyes, a donor ($D$) and an acceptor ($A$). The dyes are chosen such that the emission spectrum of the donor overlaps with the excitation spectrum of the acceptor, enabling FRET emission to occur when the two dyes are sufficiently close in space. 
 
 A collimated laser beam, matched to the excitation spectrum of the donor, is used to illuminate an extremely dilute solution of these labelled molecules. When a labelled molecule diffuses through the laser beam, the fluorophore is excited and photons are emitted.  Emitted photons are collected, separated from excitation photons, recollimated, then further separated into donor and acceptor wavelengths using a dichroic mirror and directed onto two APD detectors for collection and analysis (Fig.~\ref{fig:confocal}).
 
 In the simplest smFRET experiment, all photons reaching the detectors during data acquisition are binned as they are received into time-bins of length similar to the expected dwell-time of a molecule in the confocal volume. Fluorescent events are identified as the time-bins that contain sufficient photons to meet a specified criterion~\cite{weiss00}. Alternatively, to avoid missing or double counting fluorescent events that are split over more than one time-bin, photons can be binned a time-scale much shorter than the typical dwell time. A burst search algorithm~\cite{nir06} is then used to scan the resultant photon stream for bursts of a specified duration and brightness. Details of these two methods of event selection are provided in Chapter~\ref{chap:pyfret}.
 
-Identified fluorescent events are then used to generate FRET histograms: the FRET efficiency of each event is calculated as described above:
+Identified fluorescent events are then used to generate FRET histograms: the FRET efficiency of each event, $E$, is calculated as described above:
 
 \begin{equation}
-E = \frac{n_A}{n_A + \gamma \cdot n_D}
+E = \frac{n_A}{n_A + \gamma \cdot n_D},
 \label{eq:Eprod}
 \end{equation} 
+
+where $n_A$ and $n_D$ are the number of photons observed in the acceptor and donor channels respectively and $\gamma$ is the instrmental gamma-factor.
 
 Histograms of the observed FRET efficiencies (Fig.~\ref{fig:histogram} A) can be fitted with gaussian distributions to calculate approximate intramolecular distances and to identify conformational sub-populations that might have been invisible to an ensemble-based technique~\cite{joo08, Walter2008}.
 
@@ -303,7 +306,7 @@ Histograms of the observed FRET efficiencies (Fig.~\ref{fig:histogram} A) can be
 \end{figure}
 
 \paragraph{Direct Acceptor Excitation.}
-One drawback of the experimental technique summarized above is that the acceptor fluorophore can only be observed indirectly via FRET energy transfer from an excited donor fluorophore. Acceptor photobleaching and imperfect labelling of the analyte molecules can therefore lead to experimental artifacts such as the zero peak (Fig.~\ref{fig:histogram} B), which complicate or distort downstream analysis. As a consequence, several experimental modifications of the simple FRET experiment have been developed to enable direct observation of the acceptor fluorophore.
+One drawback of the experimental technique summarized above (Section~\ref{par:FRET}) is that the acceptor fluorophore can only be observed indirectly via FRET energy transfer from an excited donor fluorophore. Acceptor photobleaching and imperfect labelling of the analyte molecules can therefore lead to experimental artifacts such as the zero peak (Fig.~\ref{fig:histogram} B), which complicate or distort downstream analysis. As a consequence, several experimental modifications of the simple FRET experiment have been developed to enable direct observation of the acceptor fluorophore.
 
 One simple modification is Two Colour Coincidence Detection (TCCD)~\cite{orte06, orte10}. In this technique, two collimated, overlapped lasers are used to simultaneously excite both the donor and the acceptor fluorophores, enabling observation of the acceptor fluorophore even when the donor fluorophore is not present or when the inter-fluorophore distance is too great for FRET to occur. TCCD has been used in conjuction with simple FRET to study protein aggregation~\cite{cremades2012} and molecular conformation~\cite{Ye2012}. It is useful for identifying multimeric species, but extracting molecular distance can be challenging, as direct acceptor excitation cannot be simply separated from FRET emission~\cite{orte08_3}.  
 
@@ -312,7 +315,7 @@ A more complex modification uses Alternating Laser Excitation (ALEX). In an ALEX
 A further modification of this ALEX technique is Periodic Acceptor Excitation (PAX)~\cite{doose07}. PAX is a simplified version of ALEX, in which donor excitation is continuous, but there is rapid modulation of the acceptor excitation power. As in an ALEX experiment, this enables information about the molecular labelling state to be determined, however the experimental setup is simpler as rapid modulation is required for only one of the two lasers used.
 
 \paragraph{Application to Oligomer Sizing.}
-As described above, a smFRET experiment is used to obtain information about intramolecular distances. However, single-molecule confocal spectroscopy can also be applied to the problem of determining the size and stoichiometry of oligomeric species~\cite{orte10, cremades2012}. In these experiments, individual monomer molecules are labelled with a single fluorophore. Following some period of time during which the aggregation reaction proceeds, the reaction mixture is diluted to picomolar concentrations and subjected to TCCD illumination.  Oligomer size and stoichiometry is then calculated by comparing the brightness of observed fluorescent events with the brightness of a labelled monomer:
+As described thus far, a smFRET experiment is used to obtain information about intramolecular distances. However, single-molecule confocal spectroscopy can also be applied to the problem of determining the size and stoichiometry of oligomeric species~\cite{orte10, cremades2012}. In these experiments, individual monomer molecules are labelled with a single fluorophore. Following some period of time during which the aggregation reaction proceeds, the reaction mixture is diluted to picomolar concentrations and subjected to TCCD illumination.  Oligomer size and stoichiometry is then calculated by comparing the brightness of observed fluorescent events with the brightness of a labelled monomer:
 
 \begin{equation}
 \text{Size} = 2 \cdot \left(\frac{n_D + \gamma^{-1}n_A}{\langle n_{\text{monomer}}\rangle}\right),
@@ -348,7 +351,7 @@ A further extension of this sizing technique uses microfluidic flow~\cite{horroc
 
 %\subsection{Advantages over Ensemble Fluorescence Methods}
 \subsection{Computational Challenges}
-A confocal smFRET experiment, as described above, presents several computational challenges during data analysis. Based on an experimentally observed stream of observed photon counts, analysis should be able to determine many properties of the analyte and experiment, such as the number and concentration of fluorescent populations, the intramolecular distances between the dye attachment sites and, in an aggregation experiment, the stoichiometry of a multimeric complex. The following chapter (Chapter~\ref{chap:pyfret}) describes implementation of the most common methods for this form of data analsysis, involving deterministic event selection algorithms, simple subtraction based denoising, and the construction and fitting of FRET histograms to determine the number of fluorescent populations. Similar methods for oligomer sizing are briefly discussed in Chapter~\ref{chap:sizing}. 
+A confocal smFRET experiment, as described above (Section~\ref{par:FRET}), presents several computational challenges during data analysis. Based on an experimentally observed stream of observed photon counts, analysis should be able to determine many properties of the analyte and experiment, such as the number and concentration of fluorescent populations, the intramolecular distances between the dye attachment sites and, in an aggregation experiment, the stoichiometry of a multimeric complex. The following chapter (Chapter~\ref{chap:pyfret}) describes implementation of the most common methods for this form of data analsysis, involving deterministic event selection algorithms, simple subtraction based denoising, and the construction and fitting of FRET histograms to determine the number of fluorescent populations. Similar methods for oligomer sizing are briefly discussed in Chapter~\ref{chap:sizing}. 
 
 However, as photon emission by fluorophores is inherently a probabilistic phenomenon, these problems are also well-posed as problems of probabilistic inference: given an observed sequence of fluorescent bursts, what are the most likely properties of the experimental system that generated the observations. A considerable part of this thesis deals with the application of the tools of probabilistic modeling to the analysis of smFRET data, both to infer intramolecular distances (Chapter~\ref{chap:inference}) and to oligomer sizing (Chapter~\ref{chap:sizing}). Consequently, we now give a brief overview of Bayesian inference methods and outline the Monte Carlo sampling techniques used in this work.  
 
@@ -385,7 +388,7 @@ In the field of single-molecule fluorescence, the number of photons emitted by a
 \label{eq:poisson}
 \end{equation}
  
-for random varaible $X$ and integer values of $x$, describes the probability of a given number of events occurring in a fixed time interval. Hence, this is a good model for photon emission, where each time a fluorophore is excited it has some probability of returning to the ground state via a radiative decay mechanism (Section~\ref{sect:fluorescence}), resulting in emission of a photon. 
+for random varaible $X$, integer values of $x$, and rate parameter $\lambda$, describes the probability of a given number of events occurring in a fixed time interval. Hence, this is a good model for photon emission, where each time a fluorophore is excited it has some probability of returning to the ground state via a radiative decay mechanism (Section~\ref{sect:fluorescence}), resulting in emission of a photon. 
 
 
 %The canonical example is the outcome of an experiment in which a fair, six-sided die is rolled once. If we term the final value shown on the die $X$, we can describe the probability distribution over possible values of $X$ as follows:
