@@ -17,6 +17,10 @@
 \usepackage[toc,page]{appendix}
 \usepackage{fancyvrb}
 
+\usepackage{abstract}
+\renewcommand{\abstractname}{Declaration}    % clear the title
+ % originally center
+
 % Packages for pyFRET chapter
 \usepackage{amsmath}
 % amssymb package, useful for mathematical symbols
@@ -272,20 +276,38 @@
 \title{Inference Methods for the Analysis of Fluorescence Data}
 
 \author{Rebecca Roisin Murphy \\ 
-Department of Chemistry \\
-University of Cambridge \\
-Lensfield Road, Cambridge, CB2 1EW}
-
+Trinity College, Cambridge\\
+ \\
+ \\
+This dissertation is submitted for the degree of Doctor of Philosophy}
 \maketitle
 
+\input{/home/rebecca/Documents/repos/thesis/introduction/overview}
+
 \begin{abstract}
-  My PhD thesis.
+This dissertation is the result of my own work and includes nothing which is the outcome of work done in collaboration except as declared below and specified in the text.
+
+It is not substantially the same as any that I have submitted, or, is being concurrently submitted for a degree or diploma or other qualification at the University of Cambridge or any other University or similar institution. 
+
+I further state that no substantial part of my dissertation has already been submitted, or, is being concurrently submitted for any such degree, diploma or other qualification at the University of Cambridge or any other University of similar institution.
+
+The thesis does not exceed the prescribed word limit of 60,000 words.
+
+\textbf{Collaborations}
+This thesis focuses primarily on computational method development. Hence, there are places where I have used experimental data collected by other researchers. These instances are summarized here and are noted at the appropriate places in the main body of the thesis.
+
+\begin{itemize}
+\item In Chaper~\ref{chap:inference}, data from mixtures of two DNA duplexes was collected by Mathew H. Horrocks and used with permission to test performance of the Bayesian analysis method.
+\item In Chapter~\ref{chap:sizing}, the labelled Holliday Junctions were annealed and purified by Vladimiras Oleinikovas under my supervision.
+\item In Chapter~\ref{chap:illumina}, preparation of the genome libraries was carried out by Emma Carlson and Niall Gormley at Illumina Cambridge. The datasets were used with permission.
+\end{itemize}
+
 \end{abstract}
+
+\input{/home/rebecca/Documents/repos/thesis/introduction/acknowledgements}
 
 \tableofcontents
 
-\input{/home/rebecca/Documents/repos/thesis/introduction/acknowledgements}
-\input{/home/rebecca/Documents/repos/thesis/introduction/overview}
 \input{/home/rebecca/Documents/repos/thesis/introduction/intro}
 \input{/home/rebecca/Documents/repos/thesis/pyFRET/pyfret_chapter}
 \input{/home/rebecca/Documents/repos/thesis/inference/inference_chapter}
