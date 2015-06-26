@@ -180,6 +180,7 @@ $\Delta$T & 1 ms \\
 \end{table}
 
 \section{Performance Analysis of smFRET Analysis Algorithms}
+\label{sect:performance_analysis}
 To evaluate the performance of the smFRET analysis algorithms, experimental datasets collected as described above were used. The following sections describe the data analysis pathway using pyFRET and present the results of pyFRET analysis. A comparison of the performance of different algorithms on smFRET data collected from the same DNA constructs but under different excitation and photon collection regimes is also presented.
 
 \subsection{Evaluating Performance with DNA Duplexes}
@@ -336,7 +337,11 @@ pyFRET is available to download under an open source BSD licence from the Python
 smFRET is a fast-developing and active research field and although pyFRET provides the core tools for analysis of smFRET data, not all the algorithms used in analysis of smFRET data are currently implemented. In particular, pyFRET is currently not able to parse files generated using the picoQuant instrumentation and neither stochastic denoising nor photon distribution analysis~\cite{kalinin2007, antonik2006, santoso10, torella11} are implemented. I am keen to extend the functionality of pyFRET and happy to work with others to enable their use of and contribution to the pyFRET library.
 
 \section{Conclusions}
-This chapter presented pyFRET, a versatile open source library for analysis of smFRET data. In addition to demonstrating the usage of our event selection and fitting algorithms, their performances were thoroughly evaluated. It should be noted that even the sophisticated burst search algorithms are not able to overcome the biases introduced through event selection in simple FRET datasets. ALEX data collection, on the other hand, does not suffer from these biases, so is able to analyse a wide variety of smFRET datasets with considerable accuracy. Furthermore, the burst search algorithms, especially when combined with ALEX data collection, are robust to changes in the values of parameters T, L and M, ensuring that conclusions drawn from smFRET data are not influenced by the thresholding parameters used.
+This chapter presented pyFRET, a versatile open source library for analysis of smFRET data. In addition to demonstrating the usage of our event selection and fitting algorithms, the performances of these algorithms were thoroughly evaluated. During this evaluation, it was found that burst search algorithms, when combined with ALEX data collection, are robust to changes in the values of parameters T, L and M; and can accurately determine the population sizes and FRET efficiencies of a variety of experiemental datasets. On the other hand, neither simple thresholding nor the sophisticated burst search algorithms could overcome the biases introduced through event selection in simple FRET datasets. As a consequence, there has been considerable interest in the development of unbiased event selection and analysis tools for the analysis of smFRET datasets. The following chapter (Chapter~\ref{chap:inference}) describes the development and evaluation of a Bayesian analysis tool that can perform a complete analyis of time-binned, smFRET data in a single step, with no intermediate event selection or denoising.  
+
+%It should be noted that  ALEX data collection, on the other hand, does not suffer from these biases, so is able to analyse a wide variety of smFRET datasets with considerable accuracy. Furthermore, the burst search algorithms, especially when combined with ALEX data collection, are robust to changes in the values of parameters T, L and M, ensuring that conclusions drawn from smFRET data are not influenced by the thresholding parameters used.
+
+%One of the principal
 
 %\section*{Tables}
 

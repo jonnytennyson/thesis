@@ -294,7 +294,19 @@ However, when oligomers are simulated using the gamma-poisson mixture model, the
    \end{center}
 \end{figure}
 
-This simple analysis of simulated data illustrates the importance of understanding the models that underlie a data analysis technique. If oligomers are pure poisson emitters, then Eq.~\ref{eq:size_linear} is an appropriate method to approximate the oligomer size distribution. However, if the effects of excitation heterogeneity and photobleaching cause significant over-dispersal of the emission distribution, Eq.~\ref{eq:size_linear} produces an estimation of the oligomer size distribution that is extremely inaccurate. In the following section, photon emission histograms from model oligomers of known size are compared with simulated datasets, showing the poisson distribution is a poor model of the observed photon emission distributions.   
+\begin{figure}
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{sizing/True_vs_Measured_oligomer_events_geometric_100000.pdf}
+      \caption{True and calculated oligomer sizes for data simulated using gamma-poisson emission behaviour and a geometric distribution of oligomer sizes. Under these conditions, the calculated oligomer size distribution (blue line) superficially resembles the true size distribution (grey histogram).}
+      \label{fig:gamma_poisson_size_photons_geometric}
+   \end{center}
+\end{figure}
+
+It should be noted that the oligomer size distribution is not expected to be uniform; an exponential decay in observation frequency with increasing oligomer size is more likely. When such a distribution is simulated, using a geometric model of oligomer sizes, the calculated oligomer size distribution superficially resembles the true size distribution, even when the emission shows overdispersal (Fig.~\ref{fig:gamma_poisson_size_photons_geometric}). This suggests that the undelying oligomer size distribution may have masked the limitations of thresholding-based sizing analyses, which are revealed only when simulated datasets are analysed. 
+
+This simple analysis of simulated data illustrates the importance of understanding the models that underlie a data analysis technique. If oligomers are pure poisson emitters, then Eq.~\ref{eq:size_linear} is an appropriate method to approximate the oligomer size distribution. However, if the effects of excitation heterogeneity and photobleaching cause significant over-dispersal of the emission distribution, Eq.~\ref{eq:size_linear} produces an estimation of the oligomer size distribution that is extremely inaccurate. In the following section, photon emission histograms from model oligomers of known size are compared with simulated datasets, showing the poisson distribution is a poor model of the observed photon emission distributions. 
+
+\clearpage  
 
 \subsection{Understanding the Relationship Between Size and Photon Emission}
 To understand the relationship between oligomer size and photon emission in a single-molecule fluorescence experiment, it is necessary to have experimental datasets for which the size, or size distribution, of oligomers present is known. In a protein aggregation experiment, the aggregation reaction generates an heterogeneous solution of oligomers, but their size distribution is unknown, making them a poor model for understanding photon emission behaviour. 
