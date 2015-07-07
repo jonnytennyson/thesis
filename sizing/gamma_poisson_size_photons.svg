@@ -10,7 +10,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1460"
-   height="560"
+   height="591.08289"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
@@ -427,7 +427,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.69977474"
      inkscape:cx="520.64361"
-     inkscape:cy="429.69531"
+     inkscape:cy="429.69529"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -457,7 +457,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(430.01931,-244.47545)">
+     transform="translate(430.01931,-213.39258)">
     <g
        transform="matrix(1.25,0,0,-1.25,-420.01931,794.47545)"
        inkscape:label="gamma_poisson_oligomers_lam10"
@@ -2019,7 +2019,7 @@
          sodipodi:role="line"
          id="tspan4805"
          x="-412.45557"
-         y="266.9722">a</tspan></text>
+         y="266.9722">A</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:59.77967453px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -2030,6 +2030,6 @@
          sodipodi:role="line"
          id="tspan4809"
          x="314.13589"
-         y="272.94141">b</tspan></text>
+         y="272.94141">B</tspan></text>
   </g>
 </svg>

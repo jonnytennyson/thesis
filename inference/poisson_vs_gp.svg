@@ -14,7 +14,7 @@
    id="svg6761"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 5">
+   sodipodi:docname="poisson_vs_gp.svg">
   <defs
      id="defs6763">
     <clipPath
@@ -9649,7 +9649,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -30696,7 +30696,7 @@
          sodipodi:role="line"
          id="tspan29259"
          x="-576.28448"
-         y="-35.426399">a</tspan></text>
+         y="-35.426399">A</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:73.28035736px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -30707,7 +30707,7 @@
          sodipodi:role="line"
          id="tspan29263"
          x="156.31239"
-         y="-28.109097">b</tspan></text>
+         y="-28.109097">B</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:73.28035736px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -30718,7 +30718,7 @@
          sodipodi:role="line"
          id="tspan29267"
          x="-574.85321"
-         y="541.28717">c</tspan></text>
+         y="541.28717">C</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:73.28035736px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -30729,6 +30729,6 @@
          sodipodi:role="line"
          id="tspan29271"
          x="158.94232"
-         y="548.60443">d</tspan></text>
+         y="548.60443">D</tspan></text>
   </g>
 </svg>

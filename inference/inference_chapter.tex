@@ -16,7 +16,7 @@ As described in the previous chapter (Section~\ref{chap:pyfret}), smFRET experim
 
 \begin{figure}[b]
    \begin{center}
-      \includegraphics*[width=6in]{inference/S1_diagram_scheme.pdf}
+      \includegraphics*[width=6in]{inference/S1_new.pdf}
       \caption{A typical smFRET experiment. (A) Microscope set-up for smFRET. APD: Avalanche Photodiode. (B) The four possible labelling states for a single-molecule in the confocal volume.}
       \label{fig:schematic}
    \end{center}
@@ -635,7 +635,7 @@ These results are clear validation that the inference method works reliably acro
 
 \begin{figure}
    \begin{center}
-      \includegraphics*[width=6in]{inference/fig3_benchmark_synthetic.pdf}
+      \includegraphics*[width=6in]{inference/fig3_benchmark_synthetic_new.pdf}
       \caption{Validation of inference technique using realistic simulated datasets.  (A) Inferred FRET efficiency plotted against dye-dye distance.  (B) Inferred FRET efficiency plotted against calculated FRET efficiency. (C) Mean inferred FRET efficiency plotted against dataset size, for synthetic datasets with a dye-dye distance of 60 \AA. (D) Inferred population size plotted against actual population size for synthetic datasets with a dye-dye distance of 60 \AA. (E) Error in inferred FRET efficiency plotted against the mean value of background noise. The indicated mean noise was used in both the donor and the acceptor channels. The synthetic datasets used a dye-dye distance of 60 \AA. (F) Error in inferred FRET efficiency plotted against the rate of observation of labelled molecules, for synthetic datasets with a dye-dye distance of 60 \AA.  All data points on all plots (A-F) were created using 10 synthetic datasets, generated independently from the same starting parameters.  These datasets were analysed independently using the inference method, generating 98 accepted samples per dataset.  Shown are the mean values of all accepted samples.  The error bars are the values of the highest and the lowest accepted sample values, corresponding to a confidence interval within which the real value lies with probability $>$ 99\%.}
       \label{fig:fig3_benchmark_synthetic}
    \end{center}
@@ -647,7 +647,7 @@ A different story is told however, when population sizes are considered. Fig.~\r
 
 \begin{figure}
    \begin{center}
-      \includegraphics*[width=5.5in]{inference/summary_threshold_E_population.pdf}
+      \includegraphics*[width=4in]{inference/summary_threshold_E_population_new.pdf}
       \caption{\small{Graph illustrating the effect of threshold choice on the number of molecules detected (left) and the calculated FRET efficiency (right) of synthetic datasets with FRET efficiencies of 0.88 (A), 0.66 (B), 0.40 (C), 0.21 (D) and 0.11 (E) respectively. For all FRET efficiencies, the chosen threshold has a large effect on the number of molecules detected. The threshold also influences the calculated FRET efficiency, with the effect being particularly large for the highest FRET efficiencies.}}
       \label{fig:threshold_effect}
    \end{center}
@@ -668,7 +668,7 @@ A second illustration of this effect is shown in Fig.~\ref{fig:fig4_synthetic_An
 
 \begin{figure}
    \begin{center}
-      \includegraphics*[trim=0.8cm 0cm 0cm 0cm, clip=true, width=6in]{inference/fig5_labelled_multi_fig.pdf}
+      \includegraphics*[trim=0cm 0cm 0cm 0cm, clip=true, width=6in]{inference/fig5_labelled_multi_fig.pdf}
       \caption{Comparison of inference and thresholding analysis on datasets generated to simulate mixtures of fluorescent species.  Calculated population size is plotted against calculated FRET efficiency.  (A) Idealised situation, in which all FRET efficiencies and population sizes are inferred correctly. (B) Results of analysis using the inference method. (C) Analysis using SUM thresholding. (D) Analysis using AND thresholding. In all panels A - D, graphs in the left hand column are coloured according to FRET efficiency: blue crosses (+) , green circles, orange crosses (x), red triangles (point down) and black triangles (point up) represent FRET efficiencies of 0.11, 0.21, 0.40, 0.66 and 0.88 respectively. Graphs in the right hand column are coloured according to population size: orange crosses, red triangles (point down) and black triangles (point up) represent respectively the large, medium and small population sizes.}
       \label{fig:fig5_synthetic_multi}
    \end{center}

@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="1460.5599"
+   height="564.6839"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="poisson_size_photons.svg">
   <defs
      id="defs4">
     <clipPath
@@ -22,210 +22,240 @@
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3114"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3102"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3104"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3092"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3094"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3082"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3084"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3072"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3074"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3062"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3064"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3052"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3054"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3042"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3044"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3032"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3034"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3022"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3024"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3628"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3630"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3618"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3620"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3608"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3610"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3598"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3600"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3588"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3590"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3578"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3580"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3568"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3570"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3558"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3560"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3548"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3550"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath3538"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path3540"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath4144"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path4146"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath4134"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path4136"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath4124"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path4126"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath4114"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path4116"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath4104"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path4106"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath4094"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path4096"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath4084"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path4086"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath4074"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path4076"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath4064"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path4066"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
     <clipPath
        id="clipPath4054"
        clipPathUnits="userSpaceOnUse">
       <path
          id="path4056"
-         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z" />
+         d="m 72,43.2 357.12,0 0,345.6 -357.12,0 0,-345.6 z"
+         inkscape:connector-curvature="0" />
     </clipPath>
   </defs>
   <sodipodi:namedview
@@ -235,9 +265,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.69977474"
-     inkscape:cx="90.624302"
-     inkscape:cy="677.58205"
+     inkscape:zoom="0.4613918"
+     inkscape:cx="512.61284"
+     inkscape:cy="403.29634"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -245,7 +275,11 @@
      inkscape:window-height="744"
      inkscape:window-x="65"
      inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -254,14 +288,15 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(421.98854,-213.39258)">
     <g
        transform="matrix(1.25,0,0,-1.25,-411.42858,768.07647)"
        inkscape:label="poisson_oligomers_lam10"
@@ -2056,7 +2091,7 @@
          sodipodi:role="line"
          id="tspan4805"
          x="-412.45557"
-         y="266.9722">a</tspan></text>
+         y="266.9722">A</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:59.77967453px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -2067,6 +2102,6 @@
          sodipodi:role="line"
          id="tspan4809"
          x="314.13589"
-         y="272.94141">b</tspan></text>
+         y="272.94141">B</tspan></text>
   </g>
 </svg>

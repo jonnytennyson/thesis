@@ -3888,7 +3888,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3907,7 +3907,7 @@
          sodipodi:role="line"
          id="tspan4805"
          x="-412.45557"
-         y="266.9722">a</tspan></text>
+         y="266.9722">A</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:59.77967453px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -3918,7 +3918,7 @@
          sodipodi:role="line"
          id="tspan4809"
          x="314.13589"
-         y="272.94141">b</tspan></text>
+         y="272.94141">B</tspan></text>
     <g
        transform="matrix(1.25,0,0,-1.25,-440.02575,823.63027)"
        inkscape:label="newrun_data0000_marginalB"

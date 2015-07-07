@@ -33,7 +33,7 @@
      inkscape:snap-center="false"
      inkscape:window-width="1297"
      inkscape:window-height="716"
-     inkscape:window-x="65"
+     inkscape:window-x="69"
      inkscape:window-y="24"
      inkscape:window-maximized="0"
      showguides="false"
@@ -259,7 +259,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -998,16 +998,16 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:59.98740387px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:59.98740387px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        x="-483.88907"
-       y="-1288.4933"
+       y="-1282.5029"
        id="text5522"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5524"
          x="-483.88907"
-         y="-1288.4933"
-         style="font-weight:bold">a</tspan></text>
+         y="-1282.5029"
+         style="font-weight:normal;-inkscape-font-specification:Sans">A</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:59.98740387px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -1019,19 +1019,19 @@
          id="tspan5528"
          x="-124.15257"
          y="-1282.5033"
-         style="font-weight:bold">b</tspan></text>
+         style="font-weight:normal;-inkscape-font-specification:Sans">B</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:59.98740387px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="221.80496"
-       y="-1288.4933"
+       y="-1283.3524"
        id="text5530"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5532"
          x="221.80496"
-         y="-1288.4933"
-         style="font-weight:bold">c</tspan></text>
+         y="-1283.3524"
+         style="font-weight:normal">C</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:59.98740387px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -1043,7 +1043,7 @@
          id="tspan5536"
          x="467.77579"
          y="-1282.5033"
-         style="font-weight:bold">d</tspan></text>
+         style="font-weight:normal">D</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Lend)"
        d="m -240,-969.63782 100,0"

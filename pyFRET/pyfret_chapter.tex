@@ -20,7 +20,7 @@ Consequently, the distance between the two fluorophores can be determined from t
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{pyFRET/Fig1_schematic.pdf}
-      \caption{{\bf Instrumentation for a smFRET experiment.} A) The confocal microscope, excitation and detection apparatus. B) Labelled molecules diffuse through the excitation volume. C) The characteristic sigmoidal dependence of FRET efficiency on dye-dye distance.}
+      \caption{Instrumentation for a smFRET experiment. A) The confocal microscope, excitation and detection apparatus. B) Labelled molecules diffuse through the excitation volume. C) The characteristic sigmoidal dependence of FRET efficiency on dye-dye distance.}
       \label{fig:fig1_instrumentation}
    \end{center}
 \end{figure}
@@ -84,7 +84,7 @@ The data analysis workflow is illustrated in Fig.~\ref{fig:fig2_workflow} Follow
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{pyFRET/workflow.pdf}
-      \caption{{\bf Typical workflow for analysis using pyFRET.}}
+      \caption{Typical workflow for analysis using pyFRET.}
       \label{fig:fig2_workflow}
    \end{center}
 \end{figure}
@@ -92,7 +92,7 @@ The data analysis workflow is illustrated in Fig.~\ref{fig:fig2_workflow} Follow
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{pyFRET/6bp_example.pdf}
-      \caption{{\bf Figures made using pyFRET.} A) A Proximity Ratio histogram. B) A scatter-plot of FRET efficiency and fluorophore stoichiometry from ALEX data. C) A heatmap of event frequencies.  D) A 3D plot of event frequencies.}
+      \caption{Figures made using pyFRET. A) A Proximity Ratio histogram. B) A scatter-plot of FRET efficiency and fluorophore stoichiometry from ALEX data. C) A heatmap of event frequencies.  D) A 3D plot of event frequencies.}
       \label{fig:fig3_sample_results}
    \end{center}
 \end{figure}
@@ -116,8 +116,7 @@ The pyFRET library was tested using DNA duplexes dual-labelled with Alexa Fluor 
 ALEX data were collected for 15 minutes using alternating excitation at 488 and 640 nm, with respective laser powers of 80 and 70 mW, and a modulation rate of 0.1 ms, a dead-time of 0.1 $\mu$s and a delay compensation of 3 $\mu$s. ALEX data were then binned in intervals of 1 ms.
 
 \begin{table}[!ht]
-\caption{
-{\bf{Donor DNA Sequence}} DNA sequence of the donor-labelled strand, where {\bf 5} is a deoxy-T nucleotide, labelled with Alexa Fluor 488 at the C6 amino position.}
+\caption{Donor DNA Sequence DNA sequence of the donor-labelled strand, where {\bf 5} is a deoxy-T nucleotide, labelled with Alexa Fluor 488 at the C6 amino position.}
 \begin{tabular}{|l|l|}
 \hline
 Construct & Sequence \\
@@ -130,7 +129,7 @@ Donor & \footnotesize{TACTGCCTTTCTGTATCGC{\bf 5}TATCGCGTAGTTACCTGCCTTGCATAGCCACT
 
 \begin{table}[!ht]
 \caption{
-{\bf{Acceptor DNA Sequences}}. Preparing the dual-labelled dsDNA. An acceptor-labelled ssDNA, with the sequence shown was annealed to the indicated donor construct, to yield a dual-labelled construct with the labels separated by the given number of base pairs. In the displayed acceptor-strand sequences, {\bf 6} is a deoxy-T nucleotide, labelled with Alexa Fluor 647 at the C6 amino position.
+{Acceptor DNA Sequences}. Preparing the dual-labelled dsDNA. An acceptor-labelled ssDNA, with the sequence shown was annealed to the indicated donor construct, to yield a dual-labelled construct with the labels separated by the given number of base pairs. In the displayed acceptor-strand sequences, {\bf 6} is a deoxy-T nucleotide, labelled with Alexa Fluor 647 at the C6 amino position.
 }
 \begin{tabular}{|l|l|}
 \hline
@@ -162,7 +161,7 @@ To test the RASP Algorithm, a 1:1 mixture of 6 bp and 12 bp duplex was prepared 
 
 \begin{table}[!ht]
 \caption{
-{\bf{RASP Parameters}}. Parameters used in RASP analysis of the 6 bp duplex - 12 bp duplex mixture.}
+{RASP Parameters}. Parameters used in RASP analysis of the 6 bp duplex - 12 bp duplex mixture.}
 \begin{tabular}{|l|l|}
 \hline
 Parameter & Value \\
@@ -190,7 +189,7 @@ The pyFRET library was tested using DNA duplexes dual-labelled with Alexa Fluor 
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6.5in]{pyFRET/FRET_AND.pdf}
-      \caption{{\bf Analysis of FRET data from DNA duplexes using pyFRET.} A - E: Fitted FRET histograms from DNA duplexes labelled with a dye-dye separation of 4, 6, 8, 10 and 12 base pairs respectively. F) Characteristic sigmoidal curve of FRET efficiency against dye-dye distance.}
+      \caption{Analysis of FRET data from DNA duplexes using pyFRET. A - E: Fitted FRET histograms from DNA duplexes labelled with a dye-dye separation of 4, 6, 8, 10 and 12 base pairs respectively. F) Characteristic sigmoidal curve of FRET efficiency against dye-dye distance.}
       \label{fig:fig4_AND_plots}
    \end{center}
 \end{figure}
@@ -198,7 +197,7 @@ The pyFRET library was tested using DNA duplexes dual-labelled with Alexa Fluor 
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6.5in]{pyFRET/FRET_ALEX.pdf}
-      \caption{{\bf Analysis of ALEX data from DNA duplexes using pyALEX.} A - E: Fitted FRET histograms from DNA duplexes labelled with a dye-dye separation of 4, 6, 8, 10 and 12 base pairs respectively. F) Characteristic sigmoidal curve of FRET efficiency against dye-dye distance.}
+      \caption{Analysis of ALEX data from DNA duplexes using pyALEX. A - E: Fitted FRET histograms from DNA duplexes labelled with a dye-dye separation of 4, 6, 8, 10 and 12 base pairs respectively. F) Characteristic sigmoidal curve of FRET efficiency against dye-dye distance.}
       \label{fig:fig5_ALEX_plots}
    \end{center}
 \end{figure}
@@ -211,7 +210,7 @@ The pyFRET burst search algorithms were tested using data collected from the sam
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=9in]{pyFRET/burst_search.pdf}
-      \caption{{\bf Testing the burst search algorithms.} A) Fitted FRET histograms from DCBS on FRET data. B) Fitted FRET histograms from APBS on ALEX data. C) Fitted FRET histograms from DCBS on ALEX data. In A-C histograms from left to right are collected from 4 bp, 6 bp, 8 bp, 10 bp and 12 bp duplexes respectively. Histograms from APBS on FRET data are not shown, as the large zero peak hampers gaussian fitting when the FRET efficiency is low.}
+      \caption{Testing the burst search algorithms. A) Fitted FRET histograms from DCBS on FRET data. B) Fitted FRET histograms from APBS on ALEX data. C) Fitted FRET histograms from DCBS on ALEX data. In A-C histograms from left to right are collected from 4 bp, 6 bp, 8 bp, 10 bp and 12 bp duplexes respectively. Histograms from APBS on FRET data are not shown, as the large zero peak hampers gaussian fitting when the FRET efficiency is low.}
       \label{fig:burst_search}
    \end{center}
 \end{figure}
@@ -220,7 +219,7 @@ The pyFRET burst search algorithms were tested using data collected from the sam
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{pyFRET/Bp_vs_E.pdf}
-      \caption{{\bf Plot of FRET Efficiency vs dye-dye separation.} A) FRET data, analysed using the DCBS burst search algorithm. B) ALEX data, analysed using the DCBS burst search algorithm. C) Comparison of different methods. Blue circles and red triangles show ALEX and FRET burst data respectively; green crosses and open circles show simple thresholded data from ALEX and FRET experiments respectively.}
+      \caption{Plot of FRET Efficiency vs dye-dye separation. A) FRET data, analysed using the DCBS burst search algorithm. B) ALEX data, analysed using the DCBS burst search algorithm. C) Comparison of different methods. Blue circles and red triangles show ALEX and FRET burst data respectively; green crosses and open circles show simple thresholded data from ALEX and FRET experiments respectively.}
       \label{fig:fig6_Eplots}
    \end{center}
 \end{figure}
@@ -232,8 +231,7 @@ Burst search algorithms were developed as an improvement to the simple threshold
 
 
 \begin{table}[!ht]
-\caption{
-{\bf{Bin-times}.} Bin lengths and the corresponding minimum burst duration used to evaluate the effect of bin-time on burst search performance.}
+\caption{Bin-times .Bin lengths and the corresponding minimum burst duration used to evaluate the effect of bin-time on burst search performance.}
 \begin{tabular}{|l|l|}
 \hline
 Bin-time / $\mu$s & T / bins \\
@@ -256,7 +254,7 @@ Secondly, the effect of the search window T on burst search performance is evalu
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6.5in]{pyFRET/window_effect.pdf}
-      \caption{{\bf Evaluating the effect of detection window and bin time on the DCBS burst search algorithm for FRET and ALEX data.} A - C show analysis of FRET data. D - F show analysis of ALEX data. A) Varying the length of the time-bin has little effect on the performance of the DCBS algorithm. B) Varying the length of the time-bin has little effect on the performance of the APBS algorithm. C) Reducing the length of the minimum detection window used in DCBS selects for very bright bursts. For very short windows, this reduces the number of detected bursts but does not affect the calculated FRET efficiency. D) Varying the length of the time-bin has little effect on the performance of the DCBS algorithm. E) Varying the length of the time-bin has little effect on the performance of the APBS algorithm. D) Reducing the length of the minimum detection window used in DCBS selects for very bright bursts.}
+      \caption{Evaluating the effect of detection window and bin time on the DCBS burst search algorithm for FRET and ALEX data. A - C show analysis of FRET data. D - F show analysis of ALEX data. A) Varying the length of the time-bin has little effect on the performance of the DCBS algorithm. B) Varying the length of the time-bin has little effect on the performance of the APBS algorithm. C) Reducing the length of the minimum detection window used in DCBS selects for very bright bursts. For very short windows, this reduces the number of detected bursts but does not affect the calculated FRET efficiency. D) Varying the length of the time-bin has little effect on the performance of the DCBS algorithm. E) Varying the length of the time-bin has little effect on the performance of the APBS algorithm. D) Reducing the length of the minimum detection window used in DCBS selects for very bright bursts.}
       \label{fig:fig7_binning}
    \end{center}
 \end{figure}
@@ -266,7 +264,7 @@ Finally, the effect of the thresholds M and L on the performance of the DCBS alg
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{pyFRET/heatmaps.pdf}
-      \caption{{\bf Heatmaps showing the effect on calculated FRET efficiency and peak area of varying the burst search thresholds L and M.} A) Calculated FRET efficiency from DCBS analysis of FRET data. B) Calculated FRET efficiency from DCBS analysis of ALEX data. Missing values in B) are the result of insufficient events being retained for a gaussian fit to be performed. C) Calculated peak area from DCBS analysis of FRET data. D) Calculated FRET efficiency from DCBS analysis of ALEX data.}
+      \caption{Heatmaps showing the effect on calculated FRET efficiency and peak area of varying the burst search thresholds L and M. A) Calculated FRET efficiency from DCBS analysis of FRET data. B) Calculated FRET efficiency from DCBS analysis of ALEX data. Missing values in B) are the result of insufficient events being retained for a gaussian fit to be performed. C) Calculated peak area from DCBS analysis of FRET data. D) Calculated FRET efficiency from DCBS analysis of ALEX data.}
       \label{fig:fig8_heatmaps}
    \end{center}
 \end{figure}
@@ -288,7 +286,7 @@ A combination of simulated and experimental data were used to benchmark the perf
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{pyFRET/benchmarking.pdf}
-      \caption{{\bf Benchmarking the gaussian fitting process using simulated data.} A) Fitting a two-component Gaussian mixture to a simulated dataset simulating a 1:1 ratio of FRET populations, with FRET efficiencies of 0.4 and 0.6. The two peaks are easily distinguished and fitted correctly. B) Fitting a two-component Gaussian mixture to a simulated dataset simulating a 1:1 ratio of FRET populations, with FRET efficiencies of 0.4 and 0.5. There is significant overlap between the two peaks, so they cannot be distinguished by the fitting algorithm. C) Heatmap showing the relationship between partner FRET efficiency and the error in calculated FRET efficiency. Gaussian fits of datasets where the FRET efficiencies of the two peaks are extremely close to each other are distorted towards an intermediate value. D) One-dimensional representation of the heatmap shown in C), showing the distortion in calculated FRET efficiency when the two components of the mixture have very similar FRET efficiencies.}
+      \caption{Benchmarking the gaussian fitting process using simulated data. A) Fitting a two-component Gaussian mixture to a simulated dataset simulating a 1:1 ratio of FRET populations, with FRET efficiencies of 0.4 and 0.6. The two peaks are easily distinguished and fitted correctly. B) Fitting a two-component Gaussian mixture to a simulated dataset simulating a 1:1 ratio of FRET populations, with FRET efficiencies of 0.4 and 0.5. There is significant overlap between the two peaks, so they cannot be distinguished by the fitting algorithm. C) Heatmap showing the relationship between partner FRET efficiency and the error in calculated FRET efficiency. Gaussian fits of datasets where the FRET efficiencies of the two peaks are extremely close to each other are distorted towards an intermediate value. D) One-dimensional representation of the heatmap shown in C), showing the distortion in calculated FRET efficiency when the two components of the mixture have very similar FRET efficiencies.}
       \label{fig:fig_benchmarking}
    \end{center}
 \end{figure}
@@ -304,7 +302,7 @@ The results are even more distorted when the simple FRET data is considered (Fig
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{pyFRET/ratios.pdf}
-      \caption{{\bf Using pyFRET to fit multiple fluorescent populations from ALEX data.} ALEX data from mixtures of two DNA duplexes were analysed using pyFRET DCBS (A) and B)) or simple ALEX thresholding on re-binned data (C) and D)), then fitted using a two-component Gaussian mixture model. Three duplexes were used, to provide high-, intermediate- and low-FRET peaks. A) and C) Plot of FRET efficiency vs fractional population, coloured according to the dye-dye separation in the duplex. B) and D) Plot of FRET efficiency vs fractional population, coloured according to the population size.}
+      \caption{Using pyFRET to fit multiple fluorescent populations from ALEX data. ALEX data from mixtures of two DNA duplexes were analysed using pyFRET DCBS (A) and B)) or simple ALEX thresholding on re-binned data (C) and D)), then fitted using a two-component Gaussian mixture model. Three duplexes were used, to provide high-, intermediate- and low-FRET peaks. A) and C) Plot of FRET efficiency vs fractional population, coloured according to the dye-dye separation in the duplex. B) and D) Plot of FRET efficiency vs fractional population, coloured according to the population size.}
       \label{fig:ratios}
    \end{center}
 \end{figure}
@@ -312,7 +310,7 @@ The results are even more distorted when the simple FRET data is considered (Fig
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{pyFRET/ratios_FRET.pdf}
-      \caption{{\bf Using pyFRET to fit multiple fluorescent populations from FRET data.} FRET data from mixtures of two DNA duplexes were analysed using pyFRET DCBS (A) and B)) or simple AND thresholding on re-binned data (C) and D)), then fitted using a two-component Gaussian mixture model. Three duplexes were used, to provide high-, intermediate- and low-FRET peaks. A) and C) Plot of FRET efficiency vs fractional population, coloured according to the dye-dye separation in the duplex. B) and D) Plot of FRET efficiency vs fractional population, coloured according to the population size.}
+      \caption{Using pyFRET to fit multiple fluorescent populations from FRET data. FRET data from mixtures of two DNA duplexes were analysed using pyFRET DCBS (A) and B)) or simple AND thresholding on re-binned data (C) and D)), then fitted using a two-component Gaussian mixture model. Three duplexes were used, to provide high-, intermediate- and low-FRET peaks. A) and C) Plot of FRET efficiency vs fractional population, coloured according to the dye-dye separation in the duplex. B) and D) Plot of FRET efficiency vs fractional population, coloured according to the population size.}
       \label{fig:ratios_FRET}
    \end{center}
 \end{figure}
@@ -326,7 +324,7 @@ The pyFRET implementation of the RASP algorithm was benchmarked using data colle
 \begin{figure}[!ht]
    \begin{center}
       \includegraphics*[clip=true, width=6in]{pyFRET/RASP_performance.pdf}
-      \caption{{\bf RASP analysis of FRET data from a mixture of a high-FRET and low-FRET duplex.} The black line shows the baseline peak areas for the two duplexes. Other lines show the FRET histograms generated from bursts that occurred at the indicated time following a high-FRET burst. The Recurrence Interval $\Delta$T was 1 ms, centred at the times shown in the legend. Note the greatly increased peak area for high-FRET bursts, demonstrating the recurrence of high-FRET events as molecules diffuse back into the confocal volume.}
+      \caption{RASP analysis of FRET data from a mixture of a high-FRET and low-FRET duplex. The black line shows the baseline peak areas for the two duplexes. Other lines show the FRET histograms generated from bursts that occurred at the indicated time following a high-FRET burst. The Recurrence Interval $\Delta$T was 1 ms, centred at the times shown in the legend. Note the greatly increased peak area for high-FRET bursts, demonstrating the recurrence of high-FRET events as molecules diffuse back into the confocal volume.}
       \label{fig:fig9_RASP}
    \end{center}
 \end{figure}
