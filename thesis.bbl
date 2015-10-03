@@ -92,6 +92,13 @@ D.~J. Webb and C.~M. Brown.
 \newblock Epi-fluorescence microscopy.
 \newblock {\em Methods Mol Biol.}, 931:29--59, 2014.
 
+\bibitem{tyagi2014}
+S.~Tyagi, V.~VanDelinder, N.~Banterle, G.~Fuertes, S.~Milles, M.~Agez, and
+  E.~A. Lemke.
+\newblock Continuous throughput and long-term observation of single-molecule
+  fret without immobilization.
+\newblock {\em Nat. Methods}, 11:297--300, 2014.
+
 \bibitem{Wolf1995}
 K.~B. Wolf and G.~Krotzsch.
 \newblock Geometry and dynamics in refracting systems.
@@ -318,6 +325,10 @@ F.~P. Kelly.
 \newblock {\em {Reversibility and Stochastic Networks}}.
 \newblock OUP, 2011.
 
+\bibitem{sigma_alexa}
+ThermoFisher Scientific.
+\newblock R0 values for some alexa fluor dyes, 2015.
+
 \bibitem{deniz01}
 A.~A. Deniz, T.~A. Lawrence, M.~Dahan, D.~S. Chemla, P.~S. Schultz, and
   S.~Weiss.
@@ -371,6 +382,13 @@ A.~Hoffmann, D.~Nettels, J.~Clark, A.~Borgia, S.~E. Radford, J.~Clarke, and
   molecule fret of diffusing molecules: recurrence analysis of single particles
   (rasp).
 \newblock {\em Phys Chem Chem Phys}, 13:1857--1871, 2011.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
 
 \bibitem{murphy14}
 R.~R. Murphy, G.~Danezis, M.~H. Horrocks, S.~E. Jackson, and D.~Klenerman.
@@ -833,13 +851,6 @@ K.~J. Liu and T.-H. Wang.
   beam shaping.
 \newblock {\em Biophys J.}, 95:2964--2975, 2008.
 
-\bibitem{tyagi2014}
-S.~Tyagi, V.~VanDelinder, N.~Banterle, G.~Fuertes, S.~Milles, M.~Agez, and
-  E.~A. Lemke.
-\newblock Continuous throughput and long-term observation of single-molecule
-  fret without immobilization.
-\newblock {\em Nat. Methods}, 11:297--300, 2014.
-
 \bibitem{bentley2008}
 D.~R. Bentley, S.~Balasubramanian, H.~P Swerdlow, G.~P. Smith, J.~Milton,
   G.~Brown, C, K.~P. Hall, D.~J. Evers, C.~L. Barnes, H.~R. Bignell, J.~M.
@@ -1169,13 +1180,6 @@ G.~R. Mirams, C.~J. Arthurs, M.~O. Bernabeu, R.~Bordas, J.~Cooper, A.~Corrias,
 \newblock Chaste: An open source c++ library for computational physiology and
   biology.
 \newblock {\em PLOS Comp. Biol.}, 9:e1002970-- e1002970, 2013.
-
-\bibitem{scikit-learn}
-F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
-  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
-  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
-\newblock Scikit-learn: Machine learning in {P}ython.
-\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
 
 \bibitem{lee06}
 N.~K Lee, A.~N. Kapanidis, Y.~Wang, X.~Michalet, J.~Mukhopadhyay, R.~H.
