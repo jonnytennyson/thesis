@@ -104,7 +104,7 @@
 \contentsline {subsection}{\numberline {4.4.1}Preparation of DNA Holliday Junctions}{125}{subsection.4.4.1}
 \contentsline {paragraph}{Holliday Junction Preparation}{125}{section*.53}
 \contentsline {paragraph}{Holliday Junction Purification}{125}{section*.54}
-\contentsline {subsection}{\numberline {4.4.2}Simple FRET Measurements of DNA Holliday Junctions}{126}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.2}Simple FRET Measurements of DNA Holliday Junctions and Free Dyes}{126}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Counting Photobleaching Steps Using TIRF Imaging}{126}{subsection.4.4.3}
 \contentsline {section}{\numberline {4.5}Results}{127}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}The need for a Generative Model}{127}{subsection.4.5.1}
