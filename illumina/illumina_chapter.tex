@@ -48,7 +48,7 @@ In de Bruijn graph assembly, the sequencing reads are subdivided into all possib
 
 \begin{figure*}
 \centerline{\includegraphics[width=0.8\textwidth]{illumina/de_bruijn.pdf}}
-\caption{De Bruijn graph assembly from $k$-mers. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers.}
+\caption{De Bruijn graph assembly from $k$-mers. This schematic shows the process by which short reads are obtained from a small genome, how those short reads are then subdivided into even smaller read pieces of specific length $k$, named $k$-mers, an how those $k$-mers are used to construct a De Bruijn graph, from which the genome sequence can be determined. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers.}
 \label{fig:de-bruijn}
 \end{figure*}
 
@@ -58,7 +58,7 @@ One important challenge that is not resolved by de Bruijn graph assembly is the 
 
 \begin{figure*}
 \centerline{\includegraphics[width=0.8\textwidth]{illumina/de_bruijn_tangle.pdf}}
-\caption{A se Bruijn graph with repeats. The larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph.}
+\caption{A De Bruijn graph with repeats. As in Fig.~\ref{fig:de-bruijn}, the De Bruijn graph is constructed from $k$-mers derived from the short reads. Howerver, here the larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph, in which it is not possible to trace a single path through every node. Hence the exact position of the repeat sequence within the genome cannot be uniequely determined.}
 \label{fig:tangle}
 \end{figure*}
 
@@ -206,7 +206,7 @@ The Interval Tree implementation from the bx-python library (\url{https://bitbuc
 
 \section{Experimental Methods}
 \subsection{Data}
-\textit{Preparation of the genome libraries was carried out by Emma Carlson and Niall Gormley at Illumina Cambridge.} \\
+\textit{Preparation of the genome libraries was carried out by Emma Carlson and Niall Gormley at Illumina Cambridge. Preparation involves the molecular biology to fragment the genomes and attach the adapter sequences, plus doing the sequencing runs on the MiSeq machine. Data analysis was performed by the author. This is a standard division of labour between wet and in silico bioinformatics work.} \\
 Nine bacterial genomes were prepared according to the Nextera mate pair protocol and sequenced in duplicate in a single MiSeq run using $2 \times 151$ bp reads. The organisms sequenced are shown in Table~\ref{data-description}. Reads were trimmed using the MiSeq inbuilt trimmer. Table~\ref{tab:yield} gives an overview of sequencing yield, mean quality and read length after trimming. The untrimmed reads are available from BaseSpace via \url{https://basespace.illumina.com/s/TXv32Ve6wTl9}. In addition,
 the trimmed reads are available at the European Nucleotide Archive (ENA) at \url{http://www.ebi.ac.uk/ena/data/view/PRJEB8559}. Note that only these Nextera mate pair libraries were used. No additional single end or paired end libraries were required. For performance optimisation, the first replicate from each genome sequenced was used as a training set. The test set, for performance evaluation, was formed from the second replicate of each genome. 
 
@@ -237,7 +237,7 @@ Based on the resultant ROC plots, shown in Fig.~\ref{fig:ROCs}, a threshold in $
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{illumina/allROC.pdf}}
-\caption{ROC plots for the seven genomes containing misassemblies. Each plot is labelled with an abbreviation of the genome used. The correspondence between the abbreviation and the bacterial genome is shown in Table~\ref{data-description}. ROC plots for the List. and Meio. genomes are not shown, as these did not contain any large misassemblies in the original assembly. \label{fig:ROCs}}
+\caption{ROC plots for the seven genomes containing misassemblies. Each plot is labelled with an abbreviation of the genome used. The correspondence between the abbreviation and the bacterial genome is shown in Table~\ref{data-description}. ROC plots for the List. and Meio. genomes are not shown, as these did not contain any large misassemblies in the original assembly. An ROC plots the true positive rate (TPR) on the $y$-axis agains the false positive rate (FPR) on the $x$-axis. This is used in performance optimisation. See Section~\ref{sect:optimisation} for further discussion.\label{fig:ROCs}}
 \end{figure}
 
 \paragraph{Profiling}

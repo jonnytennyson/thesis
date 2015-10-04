@@ -497,6 +497,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Simple FRET Measurements of DNA Holliday Junctions and Free Dyes}{126}{subsection.4.4.2}}
 \newlabel{subsec:measure-dyes-HJ}{{4.4.2}{126}{Simple FRET Measurements of DNA Holliday Junctions and Free Dyes}{subsection.4.4.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Counting Photobleaching Steps Using TIRF Imaging}{126}{subsection.4.4.3}}
+\newlabel{tirf-photobleaching}{{4.4.3}{126}{Counting Photobleaching Steps Using TIRF Imaging}{subsection.4.4.3}{}}
 \citation{cremades2012}
 \@writefile{toc}{\contentsline {section}{\numberline {4.5}Results}{127}{section.4.5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}The need for a Generative Model}{127}{subsection.4.5.1}}
@@ -509,8 +510,8 @@
 \newlabel{fig:Poisson_size_photons_uniform}{{4.8}{130}{True and calculated oligomer sizes for data simulated using Poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) closely approximates the true size distribution (grey histogram)}{figure.4.8}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Simulating oligomer photon emission using the Gamma-Poisson mixture model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for Gamma-Poisson emission. b) The same distributions as in a), plotted using a logarithmic scale to show emission detail.}}{131}{figure.4.9}}
 \newlabel{fig:gamma_Poisson_size_photons}{{4.9}{131}{Simulating oligomer photon emission using the Gamma-Poisson mixture model. a) Simulated emission distributions from oligomers of size 1 (monomer) to 10, for Gamma-Poisson emission. b) The same distributions as in a), plotted using a logarithmic scale to show emission detail}{figure.4.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces True and calculated oligomer sizes for data simulated using Gamma-Poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) is an extremely poor approximation of the true size distribution (grey histogram).}}{132}{figure.4.10}}
-\newlabel{fig:gamma_Poisson_size_photons_uniform}{{4.10}{132}{True and calculated oligomer sizes for data simulated using Gamma-Poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) is an extremely poor approximation of the true size distribution (grey histogram)}{figure.4.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces True and calculated oligomer sizes for data simulated using Gamma-Poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) is an extremely poor approximation of the true size distribution (grey histogram). This poor fitting occurs because the fitting method assumes a linear relationship between oligomer size and number of photons emitted, but the overdispersal means that the correlation between oligomer size and number of photons emitted is much weaker. A more detailed discussion of this can be found in Section\nobreakspace  {}\ref  {sect:generative_model}.}}{132}{figure.4.10}}
+\newlabel{fig:gamma_Poisson_size_photons_uniform}{{4.10}{132}{True and calculated oligomer sizes for data simulated using Gamma-Poisson emission behaviour. Under these conditions, the calculated oligomer size distribution (blue line) is an extremely poor approximation of the true size distribution (grey histogram). This poor fitting occurs because the fitting method assumes a linear relationship between oligomer size and number of photons emitted, but the overdispersal means that the correlation between oligomer size and number of photons emitted is much weaker. A more detailed discussion of this can be found in Section~\ref {sect:generative_model}}{figure.4.10}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces True and calculated oligomer sizes for data simulated using Gamma-Poisson emission behaviour and a geometric distribution of oligomer sizes. Under these conditions, the calculated oligomer size distribution (blue line) superficially resembles the true size distribution (grey histogram).}}{133}{figure.4.11}}
 \newlabel{fig:gamma_Poisson_size_photons_geometric}{{4.11}{133}{True and calculated oligomer sizes for data simulated using Gamma-Poisson emission behaviour and a geometric distribution of oligomer sizes. Under these conditions, the calculated oligomer size distribution (blue line) superficially resembles the true size distribution (grey histogram)}{figure.4.11}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Understanding the Relationship Between Size and Photon Emission}{134}{subsection.4.5.2}}
@@ -530,44 +531,44 @@
 \newlabel{tab:initial_values}{{4.3}{141}{Initial values used in inferring oligomers of known size}{table.4.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Histograms of photon emission distributions for simulated a) monomers and b) trimers. The overlaid blue circles show the number of photons predicted by the Gamma-Poisson mixture model, using parameters inferred from the dataset using the Metropolis sampler.}}{141}{figure.4.16}}
 \newlabel{fig:hist_fit_trimer}{{4.16}{141}{Histograms of photon emission distributions for simulated a) monomers and b) trimers. The overlaid blue circles show the number of photons predicted by the Gamma-Poisson mixture model, using parameters inferred from the dataset using the Metropolis sampler}{figure.4.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Convergence of the inferred value of $\lambda _{\text  {DB}}$ during burn-in for simulations of the trimeric oligomer. The black dashed line represents the true value of $\lambda _{\text  {DB}}$.}}{142}{figure.4.17}}
-\newlabel{fig:convergence}{{4.17}{142}{Convergence of the inferred value of $\lambda _{\text {DB}}$ during burn-in for simulations of the trimeric oligomer. The black dashed line represents the true value of $\lambda _{\text {DB}}$}{figure.4.17}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.18}{\ignorespaces Overlays of simulated and experimental photon emission distributions for a) monomer and c) trimer oligomers. The blue histograms display experimental data from the Holliday Junction model oligomers. The green histograms display data from simulations using the Gamma-Poisson mixture model.}}{143}{figure.4.18}}
-\newlabel{fig:HJ_sim_overlay}{{4.18}{143}{Overlays of simulated and experimental photon emission distributions for a) monomer and c) trimer oligomers. The blue histograms display experimental data from the Holliday Junction model oligomers. The green histograms display data from simulations using the Gamma-Poisson mixture model}{figure.4.18}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}How Bright Are Holliday Junction Events?}{143}{subsection.4.5.4}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Inferred parameter values conditioned on a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text  {blue}}$. At low values of $R_{\text  {blue}}$, overfitting occurs and the inferred parameters are unphysical. When an attempt is made to infer the value of $R_{\text  {blue}}$ (bottom row), the data is also overfitted.}}{144}{table.4.4}}
-\newlabel{tab:R_blue}{{4.4}{144}{Inferred parameter values conditioned on a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text {blue}}$. At low values of $R_{\text {blue}}$, overfitting occurs and the inferred parameters are unphysical. When an attempt is made to infer the value of $R_{\text {blue}}$ (bottom row), the data is also overfitted}{table.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}How Bright Are Holliday Junction Events?}{142}{subsection.4.5.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Convergence of the inferred value of $\lambda _{\text  {DB}}$ during burn-in for simulations of the trimeric oligomer. The black dashed line represents the true value of $\lambda _{\text  {DB}}$.}}{143}{figure.4.17}}
+\newlabel{fig:convergence}{{4.17}{143}{Convergence of the inferred value of $\lambda _{\text {DB}}$ during burn-in for simulations of the trimeric oligomer. The black dashed line represents the true value of $\lambda _{\text {DB}}$}{figure.4.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.18}{\ignorespaces Overlays of simulated and experimental photon emission distributions for a) monomer and c) trimer oligomers. The blue histograms display experimental data from the Holliday Junction model oligomers. The green histograms display data from simulations using the Gamma-Poisson mixture model.}}{144}{figure.4.18}}
+\newlabel{fig:HJ_sim_overlay}{{4.18}{144}{Overlays of simulated and experimental photon emission distributions for a) monomer and c) trimer oligomers. The blue histograms display experimental data from the Holliday Junction model oligomers. The green histograms display data from simulations using the Gamma-Poisson mixture model}{figure.4.18}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.19}{\ignorespaces Photon emission distributions for datasets simulated with different values of the overdispersion parameter $R_{\text  {blue}}$. The values used are shown in the legend. For high values of $R_{\text  {blue}}$, the degree of overdispersal is small, and the fluorescence emission distribution resembles a pure Poisson distribuion (black histogram). For small values of $R_{\text  {blue}}$, the amount of overdispersal is much greater and the tail of the distribution is lengthened (green histogram).}}{145}{figure.4.19}}
 \newlabel{fig:R_blue}{{4.19}{145}{Photon emission distributions for datasets simulated with different values of the overdispersion parameter $R_{\text {blue}}$. The values used are shown in the legend. For high values of $R_{\text {blue}}$, the degree of overdispersal is small, and the fluorescence emission distribution resembles a pure Poisson distribuion (black histogram). For small values of $R_{\text {blue}}$, the amount of overdispersal is much greater and the tail of the distribution is lengthened (green histogram)}{figure.4.19}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Inferred parameter values conditioned on a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text  {blue}}$. At low values of $R_{\text  {blue}}$, overfitting occurs and the inferred parameters are unphysical. When an attempt is made to infer the value of $R_{\text  {blue}}$ (bottom row), the data is also overfitted.}}{145}{table.4.4}}
+\newlabel{tab:R_blue}{{4.4}{145}{Inferred parameter values conditioned on a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text {blue}}$. At low values of $R_{\text {blue}}$, overfitting occurs and the inferred parameters are unphysical. When an attempt is made to infer the value of $R_{\text {blue}}$ (bottom row), the data is also overfitted}{table.4.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.20}{\ignorespaces Fitting a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text  {blue}}$: a) $R_{\text  {blue}}$ = 0.1, b) $R_{\text  {blue}}$ = 0.5. c) $R_{\text  {blue}}$ = 1.0, d) $R_{\text  {blue}}$ = 2.0. Although there is a good correlation between the observed and inferred photon frequencies when $R_{\text  {blue}}$ is smaller, meaning that the data superficially seem better fitted when $R_{\text  {blue}}$ is much smaller than $1.0$ (A and B), these low values of $R_{\text  {blue}}$ overfit random variations and produce unphysical parameter values (see Table\nobreakspace  {}\ref  {tab:R_blue}). Furthermore, when $R_{\text  {blue}}$ is large ($R_{\text  {blue}} \ge 2.0$), the data are underfitted, with the high value of $R_{\text  {blue}}$ forcing a maximum at approximately $10$ photons to be present in the inferred frequencies, despite this not being observed in the data (D).}}{146}{figure.4.20}}
 \newlabel{fig:vary_Rblue}{{4.20}{146}{Fitting a dataset from the monomer model Holliday Junction, using different fixed values of $R_{\text {blue}}$: a) $R_{\text {blue}}$ = 0.1, b) $R_{\text {blue}}$ = 0.5. c) $R_{\text {blue}}$ = 1.0, d) $R_{\text {blue}}$ = 2.0. Although there is a good correlation between the observed and inferred photon frequencies when $R_{\text {blue}}$ is smaller, meaning that the data superficially seem better fitted when $R_{\text {blue}}$ is much smaller than $1.0$ (A and B), these low values of $R_{\text {blue}}$ overfit random variations and produce unphysical parameter values (see Table~\ref {tab:R_blue}). Furthermore, when $R_{\text {blue}}$ is large ($R_{\text {blue}} \ge 2.0$), the data are underfitted, with the high value of $R_{\text {blue}}$ forcing a maximum at approximately $10$ photons to be present in the inferred frequencies, despite this not being observed in the data (D)}{figure.4.20}{}}
 \newlabel{eq:n_photons_2}{{4.9}{147}{How Bright Are Holliday Junction Events?}{equation.4.5.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.5}Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}{147}{subsection.4.5.5}}
 \citation{zondervan03}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.5}Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}{148}{subsection.4.5.5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.21}{\ignorespaces Photobleaching analysis of the Holliday Junction oligomer models. Although the mean number of photobleaching steps observed does increase with the number of attached dyes, there is considerable heterogeneity. \emph  {This figure was prepared by Kristina A. Ganzinger and used with permission}.}}{149}{figure.4.21}}
 \newlabel{fig:photobleaching}{{4.21}{149}{Photobleaching analysis of the Holliday Junction oligomer models. Although the mean number of photobleaching steps observed does increase with the number of attached dyes, there is considerable heterogeneity. \emph {This figure was prepared by Kristina A. Ganzinger and used with permission}}{figure.4.21}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.22}{\ignorespaces Two example photon emission trajectories from monomer Holliday Junctions that show reversible photoblinking behaviour.}}{149}{figure.4.22}}
 \newlabel{fig:blinking}{{4.22}{149}{Two example photon emission trajectories from monomer Holliday Junctions that show reversible photoblinking behaviour}{figure.4.22}{}}
 \citation{zondervan03}
 \citation{zondervan03}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusions}{150}{section.4.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Complex Relationship between Size and Photon Emission}{150}{subsection.4.6.1}}
 \citation{joo2006}
 \citation{rasnik2006}
 \citation{aitken2008}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusions}{150}{section.4.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Complex Relationship between Size and Photon Emission}{150}{subsection.4.6.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Implications for Future Work on Molecular Sizing}{150}{subsection.4.6.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.23}{\ignorespaces The chemical structures of A) the para isomer of Alexa Fluor 488 and B) Rhodamine 6G are very similar. Both are derived from the flurone ring system shown in C).}}{151}{figure.4.23}}
-\newlabel{fig:fluorone}{{4.23}{151}{The chemical structures of A) the para isomer of Alexa Fluor 488 and B) Rhodamine 6G are very similar. Both are derived from the flurone ring system shown in C)}{figure.4.23}{}}
 \citation{liu2008}
 \citation{tyagi2014}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Implications for Future Work on Molecular Sizing}{151}{subsection.4.6.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.23}{\ignorespaces The chemical structures of A) the para isomer of Alexa Fluor 488 and B) Rhodamine 6G are very similar. Both are derived from the flurone ring system shown in C).}}{152}{figure.4.23}}
+\newlabel{fig:fluorone}{{4.23}{152}{The chemical structures of A) the para isomer of Alexa Fluor 488 and B) Rhodamine 6G are very similar. Both are derived from the flurone ring system shown in C)}{figure.4.23}{}}
 \citation{bentley2008}
 \citation{murphy2015}
 \citation{nextera2012}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{153}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{154}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:illumina}{{5}{153}{Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Overview}{153}{section.5.1}}
+\newlabel{chap:illumina}{{5}{154}{Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Overview}{154}{section.5.1}}
 \citation{sanger1977}
 \citation{sanger1977}
 \citation{metzker2005}
@@ -575,10 +576,10 @@
 \citation{Smith1986}
 \citation{illumina2010}
 \citation{Adessi2000}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Introduction}{154}{section.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Next-Generation Sequencing Technologies}{154}{subsection.5.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Schematic of Sanger Sequencing using terminator chemistry. Left: sequencing on a four-lane gel. Four lanes represent sequencing mixtures containing different ddNTPs. Right: Sanger sequencing in a single lane using fluorescently labelled ddNTPs. Middle: the corresponding DNA sequence.}}{155}{figure.5.1}}
-\newlabel{fig:sanger}{{5.1}{155}{Schematic of Sanger Sequencing using terminator chemistry. Left: sequencing on a four-lane gel. Four lanes represent sequencing mixtures containing different ddNTPs. Right: Sanger sequencing in a single lane using fluorescently labelled ddNTPs. Middle: the corresponding DNA sequence}{figure.5.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Introduction}{155}{section.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Next-Generation Sequencing Technologies}{155}{subsection.5.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Schematic of Sanger Sequencing using terminator chemistry. Left: sequencing on a four-lane gel. Four lanes represent sequencing mixtures containing different ddNTPs. Right: Sanger sequencing in a single lane using fluorescently labelled ddNTPs. Middle: the corresponding DNA sequence.}}{156}{figure.5.1}}
+\newlabel{fig:sanger}{{5.1}{156}{Schematic of Sanger Sequencing using terminator chemistry. Left: sequencing on a four-lane gel. Four lanes represent sequencing mixtures containing different ddNTPs. Right: Sanger sequencing in a single lane using fluorescently labelled ddNTPs. Middle: the corresponding DNA sequence}{figure.5.1}{}}
 \citation{Chen2013}
 \citation{Chen2013}
 \citation{bentley2008}
@@ -586,11 +587,11 @@
 \citation{eid2008}
 \citation{Levene2003}
 \citation{Roberts2013}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces A modified nucleotide showing Illumina terminator chemistry. The 3'-hydroxyl group is reversibly blocked by the 3\begingroup \let \relax \relax \endgroup [Pleaseinsert\PrerenderUnicode{′}intopreamble]-O-azidomethy terminator (red atoms), whilst the fluorescent indicator dye can be reversibly cleaved from the modified DNA base at the bond indicated by the arrow. Figure adapted from\nobreakspace  {}\cite  {Chen2013}}}{156}{figure.5.2}}
-\newlabel{fig:terminator}{{5.2}{156}{A modified nucleotide showing Illumina terminator chemistry. The 3'-hydroxyl group is reversibly blocked by the 3′-O-azidomethy terminator (red atoms), whilst the fluorescent indicator dye can be reversibly cleaved from the modified DNA base at the bond indicated by the arrow. Figure adapted from~\cite {Chen2013}}{figure.5.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Illumina Sequencing Technology}{156}{section*.55}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Sequencing by synthesis. A) DNA fragments are generated and joined to a pair of oligonucleotides. The ligated products are amplified using two oligonucleotide primers, resulting in double-stranded blunt-ended material with a different adaptor sequence on either end. B) DNA fragments are denatured and single strands are annealed to complementary oligonucleotides on the flow-cell surface. A new strand is copied from the original strand in an extension reaction; the original strand is then removed by denaturation. Multiple cycles of annealing, extension and denaturation in isothermal conditions result in cluster growth. C) The DNA in each cluster is linearized by cleavage within one adaptor sequence and denatured, generating single-stranded templates. D) Long-range paired-end sample preparation. The ends of each long fragment are tagged by incorporation of biotinylated (B) nucleotide and then circularized, forming a junction between the two ends. Circularized DNA is randomly fragmented and the biotinylated junction fragments are recovered and used as starting material in the standard sample preparation procedure. Figure and (adapted) caption from\nobreakspace  {}\cite  {bentley2008}.}}{157}{figure.5.3}}
-\newlabel{fig:illumina}{{5.3}{157}{Sequencing by synthesis. A) DNA fragments are generated and joined to a pair of oligonucleotides. The ligated products are amplified using two oligonucleotide primers, resulting in double-stranded blunt-ended material with a different adaptor sequence on either end. B) DNA fragments are denatured and single strands are annealed to complementary oligonucleotides on the flow-cell surface. A new strand is copied from the original strand in an extension reaction; the original strand is then removed by denaturation. Multiple cycles of annealing, extension and denaturation in isothermal conditions result in cluster growth. C) The DNA in each cluster is linearized by cleavage within one adaptor sequence and denatured, generating single-stranded templates. D) Long-range paired-end sample preparation. The ends of each long fragment are tagged by incorporation of biotinylated (B) nucleotide and then circularized, forming a junction between the two ends. Circularized DNA is randomly fragmented and the biotinylated junction fragments are recovered and used as starting material in the standard sample preparation procedure. Figure and (adapted) caption from~\cite {bentley2008}}{figure.5.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces A modified nucleotide showing Illumina terminator chemistry. The 3'-hydroxyl group is reversibly blocked by the 3\begingroup \let \relax \relax \endgroup [Pleaseinsert\PrerenderUnicode{′}intopreamble]-O-azidomethy terminator (red atoms), whilst the fluorescent indicator dye can be reversibly cleaved from the modified DNA base at the bond indicated by the arrow. Figure adapted from\nobreakspace  {}\cite  {Chen2013}}}{157}{figure.5.2}}
+\newlabel{fig:terminator}{{5.2}{157}{A modified nucleotide showing Illumina terminator chemistry. The 3'-hydroxyl group is reversibly blocked by the 3′-O-azidomethy terminator (red atoms), whilst the fluorescent indicator dye can be reversibly cleaved from the modified DNA base at the bond indicated by the arrow. Figure adapted from~\cite {Chen2013}}{figure.5.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Illumina Sequencing Technology}{157}{section*.55}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Sequencing by synthesis. A) DNA fragments are generated and joined to a pair of oligonucleotides. The ligated products are amplified using two oligonucleotide primers, resulting in double-stranded blunt-ended material with a different adaptor sequence on either end. B) DNA fragments are denatured and single strands are annealed to complementary oligonucleotides on the flow-cell surface. A new strand is copied from the original strand in an extension reaction; the original strand is then removed by denaturation. Multiple cycles of annealing, extension and denaturation in isothermal conditions result in cluster growth. C) The DNA in each cluster is linearized by cleavage within one adaptor sequence and denatured, generating single-stranded templates. D) Long-range paired-end sample preparation. The ends of each long fragment are tagged by incorporation of biotinylated (B) nucleotide and then circularized, forming a junction between the two ends. Circularized DNA is randomly fragmented and the biotinylated junction fragments are recovered and used as starting material in the standard sample preparation procedure. Figure and (adapted) caption from\nobreakspace  {}\cite  {bentley2008}.}}{158}{figure.5.3}}
+\newlabel{fig:illumina}{{5.3}{158}{Sequencing by synthesis. A) DNA fragments are generated and joined to a pair of oligonucleotides. The ligated products are amplified using two oligonucleotide primers, resulting in double-stranded blunt-ended material with a different adaptor sequence on either end. B) DNA fragments are denatured and single strands are annealed to complementary oligonucleotides on the flow-cell surface. A new strand is copied from the original strand in an extension reaction; the original strand is then removed by denaturation. Multiple cycles of annealing, extension and denaturation in isothermal conditions result in cluster growth. C) The DNA in each cluster is linearized by cleavage within one adaptor sequence and denatured, generating single-stranded templates. D) Long-range paired-end sample preparation. The ends of each long fragment are tagged by incorporation of biotinylated (B) nucleotide and then circularized, forming a junction between the two ends. Circularized DNA is randomly fragmented and the biotinylated junction fragments are recovered and used as starting material in the standard sample preparation procedure. Figure and (adapted) caption from~\cite {bentley2008}}{figure.5.3}{}}
 \citation{Bayley2014}
 \citation{Branton2008}
 \citation{Laszlo2014}
@@ -599,68 +600,68 @@
 \citation{Compeau2011}
 \citation{Pevzner2001}
 \citation{Zerbino2008}
-\@writefile{toc}{\contentsline {paragraph}{Single-Molecule Sequencing Technologies}{158}{section*.56}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}De Novo Sequence Assembly}{158}{subsection.5.2.2}}
+\@writefile{toc}{\contentsline {paragraph}{Single-Molecule Sequencing Technologies}{159}{section*.56}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}De Novo Sequence Assembly}{159}{subsection.5.2.2}}
 \citation{Zerbino2008,Bankevich2012,Li2010_SOAP}
 \citation{hunt2014}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces De Bruijn graph assembly from $k$-mers. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers.}}{159}{figure.5.4}}
-\newlabel{fig:de-bruijn}{{5.4}{159}{De Bruijn graph assembly from $k$-mers. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers}{figure.5.4}{}}
 \citation{edwards1990}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces A se Bruijn graph with repeats. The larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph.}}{160}{figure.5.5}}
-\newlabel{fig:tangle}{{5.5}{160}{A se Bruijn graph with repeats. The larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph}{figure.5.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Paired End Reads and Mate Pair Sequencing}{160}{subsection.5.2.3}}
-\@writefile{toc}{\contentsline {paragraph}{Paired End and Single End Reads}{160}{section*.57}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces De Bruijn graph assembly from $k$-mers. This schematic shows the process by which short reads are obtained from a small genome, how those short reads are then subdivided into even smaller read pieces of specific length $k$, named $k$-mers, an how those $k$-mers are used to construct a De Bruijn graph, from which the genome sequence can be determined. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers.}}{161}{figure.5.4}}
+\newlabel{fig:de-bruijn}{{5.4}{161}{De Bruijn graph assembly from $k$-mers. This schematic shows the process by which short reads are obtained from a small genome, how those short reads are then subdivided into even smaller read pieces of specific length $k$, named $k$-mers, an how those $k$-mers are used to construct a De Bruijn graph, from which the genome sequence can be determined. (A) A small, circular genome (B) Some short reads sequences. (C) Breaking the reads into $k$-mers ($k = 3$). $k$-mers are coloured according to the sequence from which they are derived. (D) Constructing a De Bruijn Graph from the $k$-mers}{figure.5.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces A De Bruijn graph with repeats. As in Fig.\nobreakspace  {}\ref  {fig:de-bruijn}, the De Bruijn graph is constructed from $k$-mers derived from the short reads. Howerver, here the larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph, in which it is not possible to trace a single path through every node. Hence the exact position of the repeat sequence within the genome cannot be uniequely determined.}}{161}{figure.5.5}}
+\newlabel{fig:tangle}{{5.5}{161}{A De Bruijn graph with repeats. As in Fig.~\ref {fig:de-bruijn}, the De Bruijn graph is constructed from $k$-mers derived from the short reads. Howerver, here the larger circular genome ATGCGTGCGTGGCA contains the repeated section TGCGTG, resulting in several 3-mers (TGC, GCG, CGT and GTG, coloured red, green blue and orange respectively) appearing more than once. This results in a tangled de Bruijn graph, in which it is not possible to trace a single path through every node. Hence the exact position of the repeat sequence within the genome cannot be uniequely determined}{figure.5.5}{}}
 \citation{medvedev2011,Bankevich2012}
 \citation{nextera2012}
 \citation{medvedev2011,Bankevich2012}
 \citation{Zerbino2008}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Paired End Reads and Mate Pair Sequencing}{162}{subsection.5.2.3}}
+\@writefile{toc}{\contentsline {paragraph}{Paired End and Single End Reads}{162}{section*.57}}
+\@writefile{toc}{\contentsline {paragraph}{Mate Pair Sequening}{162}{section*.58}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Evaluating Assembly Quality}{162}{subsection.5.2.4}}
 \citation{Miller2010}
 \citation{Gurevich2013}
 \citation{Bradnam2013}
 \citation{Salzberg2012}
-\@writefile{toc}{\contentsline {paragraph}{Mate Pair Sequening}{161}{section*.58}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Evaluating Assembly Quality}{161}{subsection.5.2.4}}
 \citation{Ghodsi2013}
 \citation{Coil2014,tritt2012}
 \citation{Hunt2013}
 \citation{Clark2013}
 \citation{pilon2014}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}Error Detection Methods}{163}{subsection.5.2.5}}
 \citation{Bankevich2012}
 \citation{tritt2012}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}Error Detection Methods}{162}{subsection.5.2.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Using NxRepair to remove large misassemblies. (A) Alignment of the \textit  {de novo} assembly of the M. tuberculosis genome to its reference genome. The assembly contains several large misassemblies. (B) A plot of NxRepair's support metric against scaffold position for the assembly. Low support for the assembly is identified in three regions of a contig. (C) Breaking the contigs at the identified positions resolves the most significant misassemblies. In (A) and (C), horizontal lines demarcate the scaffold boundaries.}}{163}{figure.5.6}}
-\newlabel{fig:NxRepair}{{5.6}{163}{Using NxRepair to remove large misassemblies. (A) Alignment of the \textit {de novo} assembly of the M. tuberculosis genome to its reference genome. The assembly contains several large misassemblies. (B) A plot of NxRepair's support metric against scaffold position for the assembly. Low support for the assembly is identified in three regions of a contig. (C) Breaking the contigs at the identified positions resolves the most significant misassemblies. In (A) and (C), horizontal lines demarcate the scaffold boundaries}{figure.5.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Theory}{164}{section.5.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Statistical Analysis of Mate Pair Insert Sizes}{164}{subsection.5.3.1}}
-\newlabel{sect:illumina_theory}{{5.3.1}{164}{Statistical Analysis of Mate Pair Insert Sizes}{subsection.5.3.1}{}}
-\newlabel{eq:posterior}{{5.1}{165}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.1}{}}
-\newlabel{eq:C}{{5.3}{165}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.3}{}}
-\newlabel{eq:contigD}{{5.4}{165}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Schematic illustrating mate pairs spanning a selected region. The upper read pair (green) spans the indicated region, as both reads align entirely outside of the region $[i-W, i+W]$. The lower read pair (cyan) do not span the indicated region, as the left-hand read overlaps the target area. }}{166}{figure.5.7}}
-\newlabel{fig:spanning}{{5.7}{166}{Schematic illustrating mate pairs spanning a selected region. The upper read pair (green) spans the indicated region, as both reads align entirely outside of the region $[i-W, i+W]$. The lower read pair (cyan) do not span the indicated region, as the left-hand read overlaps the target area}{figure.5.7}{}}
-\newlabel{eq:zscore}{{5.5}{166}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Global Assembly Parameters}{166}{subsection.5.3.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Using NxRepair to remove large misassemblies. (A) Alignment of the \textit  {de novo} assembly of the M. tuberculosis genome to its reference genome. The assembly contains several large misassemblies. (B) A plot of NxRepair's support metric against scaffold position for the assembly. Low support for the assembly is identified in three regions of a contig. (C) Breaking the contigs at the identified positions resolves the most significant misassemblies. In (A) and (C), horizontal lines demarcate the scaffold boundaries.}}{164}{figure.5.6}}
+\newlabel{fig:NxRepair}{{5.6}{164}{Using NxRepair to remove large misassemblies. (A) Alignment of the \textit {de novo} assembly of the M. tuberculosis genome to its reference genome. The assembly contains several large misassemblies. (B) A plot of NxRepair's support metric against scaffold position for the assembly. Low support for the assembly is identified in three regions of a contig. (C) Breaking the contigs at the identified positions resolves the most significant misassemblies. In (A) and (C), horizontal lines demarcate the scaffold boundaries}{figure.5.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Theory}{165}{section.5.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Statistical Analysis of Mate Pair Insert Sizes}{165}{subsection.5.3.1}}
+\newlabel{sect:illumina_theory}{{5.3.1}{165}{Statistical Analysis of Mate Pair Insert Sizes}{subsection.5.3.1}{}}
+\newlabel{eq:posterior}{{5.1}{166}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.1}{}}
+\newlabel{eq:C}{{5.3}{166}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.3}{}}
+\newlabel{eq:contigD}{{5.4}{166}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Schematic illustrating mate pairs spanning a selected region. The upper read pair (green) spans the indicated region, as both reads align entirely outside of the region $[i-W, i+W]$. The lower read pair (cyan) do not span the indicated region, as the left-hand read overlaps the target area. }}{167}{figure.5.7}}
+\newlabel{fig:spanning}{{5.7}{167}{Schematic illustrating mate pairs spanning a selected region. The upper read pair (green) spans the indicated region, as both reads align entirely outside of the region $[i-W, i+W]$. The lower read pair (cyan) do not span the indicated region, as the left-hand read overlaps the target area}{figure.5.7}{}}
+\newlabel{eq:zscore}{{5.5}{167}{Statistical Analysis of Mate Pair Insert Sizes}{equation.5.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Global Assembly Parameters}{167}{subsection.5.3.2}}
 \citation{Leys2013}
 \citation{cormen2009}
-\newlabel{eq:global}{{5.6}{167}{Global Assembly Parameters}{equation.5.3.6}{}}
-\newlabel{eq:mad_to_sigma}{{5.7}{167}{Global Assembly Parameters}{equation.5.3.7}{}}
-\newlabel{eq:k_scale}{{5.8}{167}{Global Assembly Parameters}{equation.5.3.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Interval Tree Construction}{167}{subsection.5.3.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Misassembly Location and Contig Breaking}{168}{subsection.5.3.4}}
+\newlabel{eq:global}{{5.6}{168}{Global Assembly Parameters}{equation.5.3.6}{}}
+\newlabel{eq:mad_to_sigma}{{5.7}{168}{Global Assembly Parameters}{equation.5.3.7}{}}
+\newlabel{eq:k_scale}{{5.8}{168}{Global Assembly Parameters}{equation.5.3.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Interval Tree Construction}{168}{subsection.5.3.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Misassembly Location and Contig Breaking}{169}{subsection.5.3.4}}
 \citation{numpy}
 \citation{scipy}
 \citation{Hunter2007}
 \citation{li2009}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}Availability and Dependencies}{169}{subsection.5.3.5}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Experimental Methods}{169}{section.5.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Data}{169}{subsection.5.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}Availability and Dependencies}{170}{subsection.5.3.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Experimental Methods}{170}{section.5.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Data}{170}{subsection.5.4.1}}
 \citation{Gurevich2013}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Performance Optimisation}{170}{subsection.5.4.2}}
-\newlabel{sect:optimisation}{{5.4.2}{170}{Performance Optimisation}{subsection.5.4.2}{}}
-\newlabel{eq:found}{{5.9}{170}{ROC Plots}{equation.5.4.9}{}}
-\newlabel{eq:tpr}{{5.10}{170}{ROC Plots}{equation.5.4.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces ROC plots for the seven genomes containing misassemblies. Each plot is labelled with an abbreviation of the genome used. The correspondence between the abbreviation and the bacterial genome is shown in Table\nobreakspace  {}\ref  {data-description}. ROC plots for the List. and Meio. genomes are not shown, as these did not contain any large misassemblies in the original assembly. }}{171}{figure.5.8}}
-\newlabel{fig:ROCs}{{5.8}{171}{ROC plots for the seven genomes containing misassemblies. Each plot is labelled with an abbreviation of the genome used. The correspondence between the abbreviation and the bacterial genome is shown in Table~\ref {data-description}. ROC plots for the List. and Meio. genomes are not shown, as these did not contain any large misassemblies in the original assembly}{figure.5.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Performance Optimisation}{171}{subsection.5.4.2}}
+\newlabel{sect:optimisation}{{5.4.2}{171}{Performance Optimisation}{subsection.5.4.2}{}}
+\newlabel{eq:found}{{5.9}{171}{ROC Plots}{equation.5.4.9}{}}
+\newlabel{eq:tpr}{{5.10}{171}{ROC Plots}{equation.5.4.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces ROC plots for the seven genomes containing misassemblies. Each plot is labelled with an abbreviation of the genome used. The correspondence between the abbreviation and the bacterial genome is shown in Table\nobreakspace  {}\ref  {data-description}. ROC plots for the List. and Meio. genomes are not shown, as these did not contain any large misassemblies in the original assembly. An ROC plots the true positive rate (TPR) on the $y$-axis agains the false positive rate (FPR) on the $x$-axis. This is used in performance optimisation. See Section\nobreakspace  {}\ref  {sect:optimisation} for further discussion.}}{172}{figure.5.8}}
+\newlabel{fig:ROCs}{{5.8}{172}{ROC plots for the seven genomes containing misassemblies. Each plot is labelled with an abbreviation of the genome used. The correspondence between the abbreviation and the bacterial genome is shown in Table~\ref {data-description}. ROC plots for the List. and Meio. genomes are not shown, as these did not contain any large misassemblies in the original assembly. An ROC plots the true positive rate (TPR) on the $y$-axis agains the false positive rate (FPR) on the $x$-axis. This is used in performance optimisation. See Section~\ref {sect:optimisation} for further discussion}{figure.5.8}{}}
 \citation{Bankevich2012}
 \citation{Gurevich2013}
 \citation{li2013}
@@ -669,87 +670,87 @@
 \citation{Bankevich2012}
 \citation{li2013}
 \citation{Gurevich2013}
-\@writefile{toc}{\contentsline {paragraph}{Profiling}{172}{section*.60}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Workflow Pipeline}{172}{subsection.5.4.3}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces NxRepair Parameters. This table lists the user-modifiable parameters used in NxRepair, along with the default values used and a brief description of the meaning of each parameter. }}{173}{table.5.1}}
-\newlabel{tab:parameters}{{5.1}{173}{NxRepair Parameters. This table lists the user-modifiable parameters used in NxRepair, along with the default values used and a brief description of the meaning of each parameter}{table.5.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Profiling}{173}{section*.60}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Workflow Pipeline}{173}{subsection.5.4.3}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces NxRepair Parameters. This table lists the user-modifiable parameters used in NxRepair, along with the default values used and a brief description of the meaning of each parameter. }}{174}{table.5.1}}
+\newlabel{tab:parameters}{{5.1}{174}{NxRepair Parameters. This table lists the user-modifiable parameters used in NxRepair, along with the default values used and a brief description of the meaning of each parameter}{table.5.1}{}}
 \citation{tritt2012}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Results}{174}{section.5.5}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Number of large misassemblies and NGA50 as reported by QUAST before (left) and after correction by NxRepair (middle) and A5qc (right) for the second replicate of each of the nine genomes analysed using NxRepair. }}{175}{table.5.2}}
-\newlabel{tab:improvement}{{5.2}{175}{Number of large misassemblies and NGA50 as reported by QUAST before (left) and after correction by NxRepair (middle) and A5qc (right) for the second replicate of each of the nine genomes analysed using NxRepair}{table.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Performance}{175}{subsection.5.5.1}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces NxRepair performance analysis. The total run-time and memory usage of NxRepair in analysing \emph  {de novo} assemblies of each of the nine genomes described in Table\nobreakspace  {}\ref  {data-description}. Results are shown for Replicate 1 of each genome. }}{176}{table.5.3}}
-\newlabel{tab:performance}{{5.3}{176}{NxRepair performance analysis. The total run-time and memory usage of NxRepair in analysing \emph {de novo} assemblies of each of the nine genomes described in Table~\ref {data-description}. Results are shown for Replicate 1 of each genome}{table.5.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Conclusions}{176}{section.5.6}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Summary of bacteria analysed and the relevant NCBI information on their reference genomes. There were two repeats of each strain. All 18 samples were prepared with the Nextera mate pair protocol and sequenced in a single MiSeq run using $2 \times 151$ bp reads. The untrimmed reads used as input to NxTrim (3.9Gbp in all) are available from BaseSpace via \url  {https://basespace.illumina.com/s/TXv32Ve6wTl9}.}}{178}{table.5.4}}
-\newlabel{data-description}{{5.4}{178}{Summary of bacteria analysed and the relevant NCBI information on their reference genomes. There were two repeats of each strain. All 18 samples were prepared with the Nextera mate pair protocol and sequenced in a single MiSeq run using $2 \times 151$ bp reads. The untrimmed reads used as input to NxTrim (3.9Gbp in all) are available from BaseSpace via \url {https://basespace.illumina.com/s/TXv32Ve6wTl9}}{table.5.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces Parameters of the genome assemblies analysed by NxRepair. Yield in bp, mean base quality and average read length after adapter removal, as well as the raw NGA50 score prior to NxRepair analysis for all genomes analysed.}}{179}{table.5.5}}
-\newlabel{tab:yield}{{5.5}{179}{Parameters of the genome assemblies analysed by NxRepair. Yield in bp, mean base quality and average read length after adapter removal, as well as the raw NGA50 score prior to NxRepair analysis for all genomes analysed}{table.5.5}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{180}{chapter.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Results}{175}{section.5.5}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Number of large misassemblies and NGA50 as reported by QUAST before (left) and after correction by NxRepair (middle) and A5qc (right) for the second replicate of each of the nine genomes analysed using NxRepair. }}{176}{table.5.2}}
+\newlabel{tab:improvement}{{5.2}{176}{Number of large misassemblies and NGA50 as reported by QUAST before (left) and after correction by NxRepair (middle) and A5qc (right) for the second replicate of each of the nine genomes analysed using NxRepair}{table.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Performance}{176}{subsection.5.5.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces NxRepair performance analysis. The total run-time and memory usage of NxRepair in analysing \emph  {de novo} assemblies of each of the nine genomes described in Table\nobreakspace  {}\ref  {data-description}. Results are shown for Replicate 1 of each genome. }}{177}{table.5.3}}
+\newlabel{tab:performance}{{5.3}{177}{NxRepair performance analysis. The total run-time and memory usage of NxRepair in analysing \emph {de novo} assemblies of each of the nine genomes described in Table~\ref {data-description}. Results are shown for Replicate 1 of each genome}{table.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Conclusions}{177}{section.5.6}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Summary of bacteria analysed and the relevant NCBI information on their reference genomes. There were two repeats of each strain. All 18 samples were prepared with the Nextera mate pair protocol and sequenced in a single MiSeq run using $2 \times 151$ bp reads. The untrimmed reads used as input to NxTrim (3.9Gbp in all) are available from BaseSpace via \url  {https://basespace.illumina.com/s/TXv32Ve6wTl9}.}}{179}{table.5.4}}
+\newlabel{data-description}{{5.4}{179}{Summary of bacteria analysed and the relevant NCBI information on their reference genomes. There were two repeats of each strain. All 18 samples were prepared with the Nextera mate pair protocol and sequenced in a single MiSeq run using $2 \times 151$ bp reads. The untrimmed reads used as input to NxTrim (3.9Gbp in all) are available from BaseSpace via \url {https://basespace.illumina.com/s/TXv32Ve6wTl9}}{table.5.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces Parameters of the genome assemblies analysed by NxRepair. Yield in bp, mean base quality and average read length after adapter removal, as well as the raw NGA50 score prior to NxRepair analysis for all genomes analysed.}}{180}{table.5.5}}
+\newlabel{tab:yield}{{5.5}{180}{Parameters of the genome assemblies analysed by NxRepair. Yield in bp, mean base quality and average read length after adapter removal, as well as the raw NGA50 score prior to NxRepair analysis for all genomes analysed}{table.5.5}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{181}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:conclusions}{{6}{180}{Conclusions and Future Work}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}General Conclusions}{180}{section.6.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}pyFRET}{180}{subsection.6.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Inference Analysis of smFRET Data}{181}{subsection.6.1.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Inference Analysis of Oligomer Sizing}{182}{subsection.6.1.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}NxRepair}{182}{subsection.6.1.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Applications and Future Work}{183}{section.6.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Open Source Software for smFRET}{183}{subsection.6.2.1}}
+\newlabel{chap:conclusions}{{6}{181}{Conclusions and Future Work}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}General Conclusions}{181}{section.6.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}pyFRET}{181}{subsection.6.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Inference Analysis of smFRET Data}{182}{subsection.6.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Inference Analysis of Oligomer Sizing}{183}{subsection.6.1.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}NxRepair}{183}{subsection.6.1.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Applications and Future Work}{184}{section.6.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Open Source Software for smFRET}{184}{subsection.6.2.1}}
 \citation{green1995}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Inference Analysis of smFRET Data}{184}{subsection.6.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}Accurate Sizing of Fluorescent Oligomers}{184}{subsection.6.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Inference Analysis of smFRET Data}{185}{subsection.6.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}Accurate Sizing of Fluorescent Oligomers}{185}{subsection.6.2.3}}
 \citation{murphy2015}
 \citation{Koren2015}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}Error Detection in \emph  {de novo} Assemblies}{185}{subsection.6.2.4}}
-\@writefile{toc}{\contentsline {chapter}{Appendices}{186}{section*.61}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}Error Detection in \emph  {de novo} Assemblies}{186}{subsection.6.2.4}}
+\@writefile{toc}{\contentsline {chapter}{Appendices}{187}{section*.61}}
 \citation{wilson06,merali10}
 \citation{mirams13}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}pyFRET: Implementation Details}{187}{Appendix.a.A}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}pyFRET: Implementation Details}{188}{Appendix.a.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:implementation}{{A}{187}{pyFRET: Implementation Details}{Appendix.a.A}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Development of Scientific Software}{187}{section.a.A.1}}
+\newlabel{app:implementation}{{A}{188}{pyFRET: Implementation Details}{Appendix.a.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Development of Scientific Software}{188}{section.a.A.1}}
 \citation{kapanidis05,nir06,sisamakis2010}
 \citation{Hunter2007}
 \citation{scikit-learn}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}pyFRET: Code Structure and Implementation Details}{188}{section.a.A.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.1}Dependencies}{188}{subsection.a.A.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.2}Simple Event Selection and Denoising}{189}{subsection.a.A.2.2}}
-\@writefile{toc}{\contentsline {paragraph}{FRET Data.}{189}{section*.62}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}pyFRET: Code Structure and Implementation Details}{189}{section.a.A.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.1}Dependencies}{189}{subsection.a.A.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.2}Simple Event Selection and Denoising}{190}{subsection.a.A.2.2}}
+\@writefile{toc}{\contentsline {paragraph}{FRET Data.}{190}{section*.62}}
 \citation{nir06}
 \citation{lee06}
-\@writefile{toc}{\contentsline {paragraph}{ALEX Data}{190}{section*.63}}
-\newlabel{eq:Eprod_ALEX}{{A.1}{190}{ALEX Data}{equation.a.A.2.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{ALEX Data}{191}{section*.63}}
+\newlabel{eq:Eprod_ALEX}{{A.1}{191}{ALEX Data}{equation.a.A.2.1}{}}
 \citation{nir06}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.3}Burst Search Algorithms}{191}{subsection.a.A.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.3}Burst Search Algorithms}{192}{subsection.a.A.2.3}}
 \citation{hoffmann11}
-\@writefile{toc}{\contentsline {section}{\numberline {A.3}RASP: Recurrence Analysis of Single Particles}{192}{section.a.A.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.1}Compatibilities}{193}{subsection.a.A.3.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}pyFRET: Code Samples}{194}{Appendix.a.B}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}RASP: Recurrence Analysis of Single Particles}{193}{section.a.A.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.1}Compatibilities}{194}{subsection.a.A.3.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}pyFRET: Code Samples}{195}{Appendix.a.B}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:code_samples}{{B}{194}{pyFRET: Code Samples}{Appendix.a.B}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B.1}Burst Search Algorithms}{194}{section.a.B.1}}
-\newlabel{app:burst_search}{{B.1}{194}{Burst Search Algorithms}{section.a.B.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.1.1}FRET Data}{194}{subsection.a.B.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.1.2}ALEX Data}{196}{subsection.a.B.1.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {B.2}Determining Accurate Concentrations}{197}{section.a.B.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.1}Testing the Gaussian Mixture Model}{197}{subsection.a.B.2.1}}
-\newlabel{app:code_samples_GMM}{{B.2.1}{197}{Testing the Gaussian Mixture Model}{subsection.a.B.2.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.2}ALEX Data}{199}{subsection.a.B.2.2}}
-\newlabel{app:code_samples_ALEX_mix}{{B.2.2}{199}{ALEX Data}{subsection.a.B.2.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.3}FRET Data}{202}{subsection.a.B.2.3}}
-\newlabel{app:code_samples_FRET_mix}{{B.2.3}{202}{FRET Data}{subsection.a.B.2.3}{}}
+\newlabel{app:code_samples}{{B}{195}{pyFRET: Code Samples}{Appendix.a.B}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.1}Burst Search Algorithms}{195}{section.a.B.1}}
+\newlabel{app:burst_search}{{B.1}{195}{Burst Search Algorithms}{section.a.B.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1.1}FRET Data}{195}{subsection.a.B.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1.2}ALEX Data}{197}{subsection.a.B.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.2}Determining Accurate Concentrations}{198}{section.a.B.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.1}Testing the Gaussian Mixture Model}{198}{subsection.a.B.2.1}}
+\newlabel{app:code_samples_GMM}{{B.2.1}{198}{Testing the Gaussian Mixture Model}{subsection.a.B.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.2}ALEX Data}{200}{subsection.a.B.2.2}}
+\newlabel{app:code_samples_ALEX_mix}{{B.2.2}{200}{ALEX Data}{subsection.a.B.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2.3}FRET Data}{203}{subsection.a.B.2.3}}
+\newlabel{app:code_samples_FRET_mix}{{B.2.3}{203}{FRET Data}{subsection.a.B.2.3}{}}
 \citation{murphy14}
 \citation{murphy2015}
 \citation{murphy2015_2}
 \bibstyle{unsrt}
 \bibdata{thesis}
-\@writefile{toc}{\contentsline {chapter}{\numberline {C}Papers Associated with this Thesis}{206}{Appendix.a.C}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}Papers Associated with this Thesis}{207}{Appendix.a.C}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:papers}{{C}{206}{Papers Associated with this Thesis}{Appendix.a.C}{}}
+\newlabel{app:papers}{{C}{207}{Papers Associated with this Thesis}{Appendix.a.C}{}}
 \bibcite{ha96}{{1}{}{{}}{{}}}
 \bibcite{haran03}{{2}{}{{}}{{}}}
 \bibcite{schuler02}{{3}{}{{}}{{}}}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  3 OCT 2015 19:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.19)  4 OCT 2015 13:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1191,7 +1191,7 @@ Package pdftex.def Info: sizing/multimer_emission.pdf used on input line 132.
 File: sizing/poisson_size_photons.pdf Graphic file (type pdf)
 
 <use sizing/poisson_size_photons.pdf>
-Package pdftex.def Info: sizing/poisson_size_photons.pdf used on input line 265
+Package pdftex.def Info: sizing/poisson_size_photons.pdf used on input line 266
 .
 (pdftex.def)             Requested size: 469.75499pt x 181.61542pt.
 
@@ -1202,7 +1202,7 @@ raphic file (type pdf)
 
 <use sizing/True_vs_Measured_oligomer_events_uniform_poisson_100000_hist.pdf>
 Package pdftex.def Info: sizing/True_vs_Measured_oligomer_events_uniform_poisso
-n_100000_hist.pdf used on input line 274.
+n_100000_hist.pdf used on input line 275.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
 [128]
@@ -1211,7 +1211,7 @@ File: sizing/gamma_poisson_size_photons.pdf Graphic file (type pdf)
 
 <use sizing/gamma_poisson_size_photons.pdf>
 Package pdftex.def Info: sizing/gamma_poisson_size_photons.pdf used on input li
-ne 284.
+ne 285.
 (pdftex.def)             Requested size: 469.75499pt x 190.17836pt.
 
 <sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf, id=40986, 578
@@ -1221,17 +1221,17 @@ ile (type pdf)
 
 <use sizing/True_vs_Measured_oligomer_events_uniform_100000_hist.pdf>
 Package pdftex.def Info: sizing/True_vs_Measured_oligomer_events_uniform_100000
-_hist.pdf used on input line 292.
+_hist.pdf used on input line 293.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/True_vs_Measured_oligomer_events_geometric_100000.pdf, id=40988, 578.16
+<sizing/True_vs_Measured_oligomer_events_geometric_100000.pdf, id=40990, 578.16
 pt x 433.62pt>
 File: sizing/True_vs_Measured_oligomer_events_geometric_100000.pdf Graphic file
  (type pdf)
 
 <use sizing/True_vs_Measured_oligomer_events_geometric_100000.pdf>
 Package pdftex.def Info: sizing/True_vs_Measured_oligomer_events_geometric_1000
-00.pdf used on input line 300.
+00.pdf used on input line 301.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
  [129 <./sizing/poisson_size_photons.pdf>] [130 <./sizing/True_vs_Measured_olig
 omer_events_uniform_poisson_100000_hist.pdf>] [131 <./sizing/gamma_poisson_size
@@ -1240,116 +1240,116 @@ ist.pdf>]
 [133 <./sizing/True_vs_Measured_oligomer_events_geometric_100000.pdf>] [134
 
 ]
-<sizing/Holliday_Junctions.pdf, id=41263, 578.16pt x 433.62pt>
+<sizing/Holliday_Junctions.pdf, id=41265, 578.16pt x 433.62pt>
 File: sizing/Holliday_Junctions.pdf Graphic file (type pdf)
 
 <use sizing/Holliday_Junctions.pdf>
-Package pdftex.def Info: sizing/Holliday_Junctions.pdf used on input line 330.
+Package pdftex.def Info: sizing/Holliday_Junctions.pdf used on input line 331.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/poisson_oligomers_log.pdf, id=41265, 578.16pt x 433.62pt>
+<sizing/poisson_oligomers_log.pdf, id=41267, 578.16pt x 433.62pt>
 File: sizing/poisson_oligomers_log.pdf Graphic file (type pdf)
 
 <use sizing/poisson_oligomers_log.pdf>
 Package pdftex.def Info: sizing/poisson_oligomers_log.pdf used on input line 33
-8.
+9.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/gamma_poisson_oligomers_log.pdf, id=41267, 578.16pt x 433.62pt>
+<sizing/gamma_poisson_oligomers_log.pdf, id=41269, 578.16pt x 433.62pt>
 File: sizing/gamma_poisson_oligomers_log.pdf Graphic file (type pdf)
 
 <use sizing/gamma_poisson_oligomers_log.pdf>
 Package pdftex.def Info: sizing/gamma_poisson_oligomers_log.pdf used on input l
-ine 347.
+ine 348.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
  [135] [136 <./sizing/Holliday_Junctions.pdf>] [137 <./sizing/poisson_oligomers
 _log.pdf>] [138 <./sizing/gamma_poisson_oligomers_log.pdf>]
-Underfull \hbox (badness 2261) in paragraph at lines 355--355
+Underfull \hbox (badness 2261) in paragraph at lines 356--356
 []\OT1/cmr/bx/n/14.4 Inferring Event Bright-ness Us-ing the Gamma-Poisson
  []
 
-<sizing/divergence.pdf, id=41394, 578.16pt x 433.62pt>
+<sizing/divergence.pdf, id=41396, 578.16pt x 433.62pt>
 File: sizing/divergence.pdf Graphic file (type pdf)
 
 <use sizing/divergence.pdf>
-Package pdftex.def Info: sizing/divergence.pdf used on input line 401.
+Package pdftex.def Info: sizing/divergence.pdf used on input line 402.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/oligomer_marginals.pdf, id=41396, 1172.38pt x 494.73425pt>
+<sizing/oligomer_marginals.pdf, id=41398, 1172.38pt x 494.73425pt>
 File: sizing/oligomer_marginals.pdf Graphic file (type pdf)
 
 <use sizing/oligomer_marginals.pdf>
-Package pdftex.def Info: sizing/oligomer_marginals.pdf used on input line 409.
+Package pdftex.def Info: sizing/oligomer_marginals.pdf used on input line 410.
 (pdftex.def)             Requested size: 433.62pt x 182.98087pt.
  [139
 
 ] [140 <./sizing/divergence.pdf>]
 [141 <./sizing/oligomer_marginals.pdf>]
-<sizing/Convergence.pdf, id=42275, 578.16pt x 433.62pt>
+<sizing/Convergence.pdf, id=42277, 578.16pt x 433.62pt>
 File: sizing/Convergence.pdf Graphic file (type pdf)
 
 <use sizing/Convergence.pdf>
-Package pdftex.def Info: sizing/Convergence.pdf used on input line 423.
+Package pdftex.def Info: sizing/Convergence.pdf used on input line 424.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
- [142 <./sizing/Convergence.pdf>]
-<sizing/HJ_overlays.pdf, id=42321, 1172.38pt x 491.21931pt>
+
+<sizing/HJ_overlays.pdf, id=42281, 1172.38pt x 491.21931pt>
 File: sizing/HJ_overlays.pdf Graphic file (type pdf)
 
 <use sizing/HJ_overlays.pdf>
-Package pdftex.def Info: sizing/HJ_overlays.pdf used on input line 436.
+Package pdftex.def Info: sizing/HJ_overlays.pdf used on input line 437.
 (pdftex.def)             Requested size: 469.75499pt x 196.82153pt.
- [143 <./sizing/HJ_overlays.pdf>]
-<sizing/varying_R_blue.pdf, id=42353, 578.16pt x 433.62pt>
+ [142] [143 <./sizing/Convergence.pdf>]
+<sizing/varying_R_blue.pdf, id=42334, 578.16pt x 433.62pt>
 File: sizing/varying_R_blue.pdf Graphic file (type pdf)
 
 <use sizing/varying_R_blue.pdf>
-Package pdftex.def Info: sizing/varying_R_blue.pdf used on input line 448.
+Package pdftex.def Info: sizing/varying_R_blue.pdf used on input line 449.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<sizing/vary_Rblue.pdf, id=42355, 1186.0529pt x 898.68573pt>
+<sizing/vary_Rblue.pdf, id=42336, 1186.0529pt x 898.68573pt>
 File: sizing/vary_Rblue.pdf Graphic file (type pdf)
 
 <use sizing/vary_Rblue.pdf>
-Package pdftex.def Info: sizing/vary_Rblue.pdf used on input line 456.
+Package pdftex.def Info: sizing/vary_Rblue.pdf used on input line 457.
 (pdftex.def)             Requested size: 469.75499pt x 355.94373pt.
- [144] [145 <./sizing/varying_R_blue.pdf>] [146 <./sizing/vary_Rblue.pdf>] [147
-]
-<sizing/results-holidayjunctions.pdf, id=44249, 817.0525pt x 574.145pt>
+ [144 <./sizing/HJ_overlays.pdf>] [145 <./sizing/varying_R_blue.pdf>] [146 <./s
+izing/vary_Rblue.pdf>] [147]
+<sizing/results-holidayjunctions.pdf, id=44252, 817.0525pt x 574.145pt>
 File: sizing/results-holidayjunctions.pdf Graphic file (type pdf)
 
 <use sizing/results-holidayjunctions.pdf>
 Package pdftex.def Info: sizing/results-holidayjunctions.pdf used on input line
- 501.
+ 502.
 (pdftex.def)             Requested size: 361.34999pt x 253.92117pt.
 
-<sizing/blinking_trajectories.pdf, id=44251, 1172.38pt x 449.68pt>
+<sizing/blinking_trajectories.pdf, id=44254, 1172.38pt x 449.68pt>
 File: sizing/blinking_trajectories.pdf Graphic file (type pdf)
 
 <use sizing/blinking_trajectories.pdf>
-Package pdftex.def Info: sizing/blinking_trajectories.pdf used on input line 50
-9.
+Package pdftex.def Info: sizing/blinking_trajectories.pdf used on input line 51
+0.
 (pdftex.def)             Requested size: 433.62pt x 166.31723pt.
  [148] [149 <./sizing/results-holidayjunctions.pdf> <./sizing/blinking_trajecto
-ries.pdf>]
-<sizing/fluorone.pdf, id=44297, 350.43507pt x 629.15048pt>
+ries.pdf>] [150]
+<sizing/fluorone.pdf, id=44304, 350.43507pt x 629.15048pt>
 File: sizing/fluorone.pdf Graphic file (type pdf)
 
 <use sizing/fluorone.pdf>
-Package pdftex.def Info: sizing/fluorone.pdf used on input line 529.
+Package pdftex.def Info: sizing/fluorone.pdf used on input line 530.
 (pdftex.def)             Requested size: 289.07999pt x 519.03635pt.
- [150] [151 <./sizing/fluorone.pdf>])
-(/home/rebecca/Documents/repos/thesis/illumina/illumina_chapter.tex [152]
+ [151] [152 <./sizing/fluorone.pdf>])
+(/home/rebecca/Documents/repos/thesis/illumina/illumina_chapter.tex [153]
 Chapter 5.
-[153
+[154
 
-] <illumina/sanger.pdf, id=44346, 1712.45473pt x 1551.40994pt>
+] <illumina/sanger.pdf, id=44354, 1712.45473pt x 1551.40994pt>
 File: illumina/sanger.pdf Graphic file (type pdf)
 
 <use illumina/sanger.pdf>
 Package pdftex.def Info: illumina/sanger.pdf used on input line 15.
 (pdftex.def)             Requested size: 375.80544pt x 340.45903pt.
- [154] [155 <./illumina/sanger.pdf>]
-<illumina/illumina_linker.pdf, id=44379, 984.24855pt x 304.60686pt>
+ [155] [156 <./illumina/sanger.pdf>]
+<illumina/illumina_linker.pdf, id=44386, 984.24855pt x 304.60686pt>
 File: illumina/illumina_linker.pdf Graphic file (type pdf)
 
 <use illumina/illumina_linker.pdf>
@@ -1359,52 +1359,56 @@ Package pdftex.def Info: illumina/illumina_linker.pdf used on input line 24.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-<illumina/illumina_sequencing.jpg, id=44383, 216.81pt x 204.16275pt>
+<illumina/illumina_sequencing.jpg, id=44390, 216.81pt x 204.16275pt>
 File: illumina/illumina_sequencing.jpg Graphic file (type jpg)
 
 <use illumina/illumina_sequencing.jpg>
 Package pdftex.def Info: illumina/illumina_sequencing.jpg used on input line 32
 .
 (pdftex.def)             Requested size: 375.80544pt x 353.92879pt.
- [156 <./illumina/illumina_linker.pdf>]
-[157 <./illumina/illumina_sequencing.jpg>] [158]
-<illumina/de_bruijn.pdf, id=44436, 1313.68893pt x 542.33794pt>
+ [157 <./illumina/illumina_linker.pdf>]
+[158 <./illumina/illumina_sequencing.jpg>] [159]
+<illumina/de_bruijn.pdf, id=44443, 1313.68893pt x 542.33794pt>
 File: illumina/de_bruijn.pdf Graphic file (type pdf)
 
 <use illumina/de_bruijn.pdf>
 Package pdftex.def Info: illumina/de_bruijn.pdf used on input line 50.
 (pdftex.def)             Requested size: 375.80544pt x 155.14719pt.
- [159 <./illumina/de_bruijn.pdf>]
-<illumina/de_bruijn_tangle.pdf, id=44457, 1162.60875pt x 527.8322pt>
+
+<illumina/de_bruijn_tangle.pdf, id=44446, 1162.60875pt x 527.8322pt>
 File: illumina/de_bruijn_tangle.pdf Graphic file (type pdf)
 
 <use illumina/de_bruijn_tangle.pdf>
 Package pdftex.def Info: illumina/de_bruijn_tangle.pdf used on input line 60.
 (pdftex.def)             Requested size: 375.80544pt x 170.61722pt.
- [160 <./illumina/de_bruijn_tangle.pdf>]
-[161] [162] <illumina/fig1_nxrepair.pdf, id=44516, 864.48692pt x 277.08688pt>
+ [160] [161 <./illumina/de_bruijn.pdf> <./illumina/de_bruijn_tangle.pdf
+
+pdfTeX warning: pdflatex (file ./illumina/de_bruijn_tangle.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>] [162] [163]
+<illumina/fig1_nxrepair.pdf, id=44524, 864.48692pt x 277.08688pt>
 File: illumina/fig1_nxrepair.pdf Graphic file (type pdf)
 
 <use illumina/fig1_nxrepair.pdf>
 Package pdftex.def Info: illumina/fig1_nxrepair.pdf used on input line 89.
 (pdftex.def)             Requested size: 446.26582pt x 143.03746pt.
- [163 <./illumina/fig1_nxrepair.pdf>] [164
+ [164 <./illumina/fig1_nxrepair.pdf>] [165
 
 ]
-[165] <illumina/spanning.pdf, id=45822, 1430.30577pt x 308.13841pt>
+[166] <illumina/spanning.pdf, id=45831, 1430.30577pt x 308.13841pt>
 File: illumina/spanning.pdf Graphic file (type pdf)
 
 <use illumina/spanning.pdf>
 Package pdftex.def Info: illumina/spanning.pdf used on input line 150.
 (pdftex.def)             Requested size: 375.80544pt x 80.96042pt.
- [166 <./illumina/spanning.pdf>] [167] [168]
-[169] <illumina/allROC.pdf, id=45887, 578.16pt x 433.62pt>
+ [167 <./illumina/spanning.pdf>] [168] [169]
+[170] <illumina/allROC.pdf, id=45895, 578.16pt x 433.62pt>
 File: illumina/allROC.pdf Graphic file (type pdf)
 
 <use illumina/allROC.pdf>
 Package pdftex.def Info: illumina/allROC.pdf used on input line 239.
 (pdftex.def)             Requested size: 375.80544pt x 281.84966pt.
- [170] [171 <./illumina/allROC.pdf>]
+ [171] [172 <./illumina/allROC.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 259--260
 []\OT1/cmtt/m/n/12 bwa mem sample/scaffolds.fasta -p bacteria.fastq.gz | samtoo
 ls view -bS - |
@@ -1421,12 +1425,12 @@ Underfull \hbox (badness 1472) in paragraph at lines 280--281
 []\OT1/cmr/m/n/12 Prior prob-a-bil-ity that the in-sert size is
  []
 
-[172] [173] [174]
+[173] [174] [175]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 303.
 
-[175]
+[176]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1439,49 +1443,49 @@ Overfull \hbox (14.41013pt too wide) in paragraph at lines 407--429
  [] 
  []
 
-) (/home/rebecca/Documents/repos/thesis/conclusions/conclusions.tex [176]
-[177] [178] [179]
+) (/home/rebecca/Documents/repos/thesis/conclusions/conclusions.tex [177]
+[178] [179] [180]
 Chapter 6.
-[180
+[181
 
-] [181] [182] [183] [184]) [185] [186
+] [182] [183] [184] [185]) [186] [187
 
 
 ]
 (/home/rebecca/Documents/repos/thesis/code_appendices/pyfret_implementation.tex
 Appendix A.
-[187
+[188
 
-] [188] [189] [190] [191] [192])
-(/home/rebecca/Documents/repos/thesis/code_appendices/appendix.tex [193]
+] [189] [190] [191] [192] [193])
+(/home/rebecca/Documents/repos/thesis/code_appendices/appendix.tex [194]
 Appendix B.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 12.
-[194
+[195
 
-] [195] [196] [197] [198] [199] [200] [201] [202] [203] [204])
-(/home/rebecca/Documents/repos/thesis/code_appendices/papers.tex [205]
+] [196] [197] [198] [199] [200] [201] [202] [203] [204] [205])
+(/home/rebecca/Documents/repos/thesis/code_appendices/papers.tex [206]
 Appendix C.
-) (./thesis.bbl [206
+) (./thesis.bbl [207
 
-] [207
+] [208
 
-] [208] [209] [210] [211]
+] [209] [210] [211] [212]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-) [212]
+) [213]
 Underfull \hbox (badness 6268) in paragraph at lines 451--454
 []\OT1/cmr/m/n/12 B. Schuler.  Single-molecule flu-o-res-cence spec-troscopy of
  pro-tein fold-ing.
  []
 
-[213] [214] [215] [216]
+[214] [215] [216] [217]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-3.def
 File: uni-3.def 2013/05/13 UCS: Unicode data U+0300..U+03FF
-) [217] [218]
-[219] [220] [221] [222] [223] [224])
+) [218] [219]
+[220] [221] [222] [223] [224] [225])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 333.
- [225]
+ [226]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 333.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 333.
@@ -1499,10 +1503,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 333.
  ) 
 Here is how much of TeX's memory you used:
- 14030 strings out of 495028
- 204181 string characters out of 6181496
- 347770 words of memory out of 5000000
- 16124 multiletter control sequences out of 15000+600000
+ 14032 strings out of 495028
+ 204210 string characters out of 6181496
+ 350007 words of memory out of 5000000
+ 16125 multiletter control sequences out of 15000+600000
  19445 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  30i,16n,40p,3307b,1927s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1529,10 +1533,10 @@ msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on thesis.pdf (228 pages, 9978015 bytes).
+Output written on thesis.pdf (229 pages, 9979505 bytes).
 PDF statistics:
- 46596 PDF objects out of 55141 (max. 8388607)
- 31370 compressed objects within 314 object streams
- 864 named destinations out of 1000 (max. 500000)
+ 46612 PDF objects out of 55141 (max. 8388607)
+ 31382 compressed objects within 314 object streams
+ 865 named destinations out of 1000 (max. 500000)
  1706 words of extra memory for PDF output out of 10000 (max. 10000000)
 
