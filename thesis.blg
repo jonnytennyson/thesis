@@ -5,45 +5,45 @@ The style file: unsrt.bst
 Database file #1: thesis.bib
 Warning--empty author and editor in goldbook2006
 Warning--empty journal in li2013
-You've used 200 entries,
+You've used 201 entries,
             1791 wiz_defined-function locations,
-            1594 strings with 45971 characters,
-and the built_in function-call counts, 56321 in all, are:
-= -- 4497
-> -- 4041
+            1599 strings with 46129 characters,
+and the built_in function-call counts, 56574 in all, are:
+= -- 4523
+> -- 4049
 < -- 0
-+ -- 1426
-- -- 1226
-* -- 4852
-:= -- 9661
-add.period$ -- 603
-call.type$ -- 200
-change.case$ -- 182
++ -- 1429
+- -- 1228
+* -- 4870
+:= -- 9700
+add.period$ -- 606
+call.type$ -- 201
+change.case$ -- 183
 chr.to.int$ -- 0
-cite$ -- 202
-duplicate$ -- 1792
-empty$ -- 4583
-format.name$ -- 1226
-if$ -- 11607
+cite$ -- 203
+duplicate$ -- 1801
+empty$ -- 4608
+format.name$ -- 1228
+if$ -- 11662
 int.to.chr$ -- 0
-int.to.str$ -- 200
-missing$ -- 210
-newline$ -- 1006
-num.names$ -- 199
-pop$ -- 337
+int.to.str$ -- 201
+missing$ -- 211
+newline$ -- 1011
+num.names$ -- 200
+pop$ -- 338
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 613
+skip$ -- 617
 stack$ -- 0
-substring$ -- 4546
-swap$ -- 199
+substring$ -- 4577
+swap$ -- 200
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 522
-width$ -- 203
-write$ -- 2185
+while$ -- 525
+width$ -- 204
+write$ -- 2196
 (There were 2 warnings)
