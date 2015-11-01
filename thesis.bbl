@@ -1166,6 +1166,69 @@ H.~Li.
   {BWA-MEM}.
 \newblock 2013.
 
+\bibitem{May2015}
+P.~F. May, P.~Zawadzki, D.~J. Sherratt, A.~N. Kapanidis, and L.K. Arciszewska.
+\newblock Assembly, translocation, and activation of xercd-dif recombination by
+  ftsk translocase analyzed in real-time by fret and two-color tethered
+  fluorophore motion.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 112:E5133--E5141, 2015.
+
+\bibitem{Sustarsic2015}
+M.~Sustarsic and A.~N. Kapanidis.
+\newblock Taking the ruler to the jungle: single-molecule fret for
+  understanding biomolecular structure and dynamics in live cells.
+\newblock {\em Curr. Opin. Struct. Biol.}, 284:52--59, 2015.
+
+\bibitem{Hochberg2013}
+G.~K.~A. Hochberg, H.~Ecroyd, C.~Liu, D.~Cox, D.~Cascio, M.~R. Sawaya, M.~P.
+  Collier, J.~Stroud, J.~A. Carver, A.~J. Baldwin, C.~V. Robinson,
+  D.~Eisenberg, J.~L.~P. Benesch, and A.~Laganowsky.
+\newblock A structured core domain of αb-crystallin can prevent amyloid
+  fibrillation and associated toxicity.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 111:E1562--E1570, 2013.
+
+\bibitem{chung2013}
+H.~S Chung and W.~M. Eaton.
+\newblock Single-molecule fluorescence probes dynamics of barrier crossing.
+\newblock {\em Nature}, 502:685--688, 2013.
+
+\bibitem{Kusumi2013}
+A.~Kusumi, T.~A. Tsunoyama, K.~M. Hirosawa, R.~S. Kasai, and T.~K. Fujiwara.
+\newblock Tracking single molecules at work in living cells.
+\newblock {\em Nature Chemical Biology}, 10:524--532, 2014.
+
+\bibitem{Fricke2015}
+F.~Fricke, M.~S. Dietz, and M.~Heilemann.
+\newblock Single-molecule methods to study membrane receptor oligomerization.
+\newblock {\em ChemPhysChem}, 16:713--721, 2015.
+
+\bibitem{Lee2015}
+T.~Lee, C.~R. Moran-Gutierrez, and A.~A. Deniz.
+\newblock Single-molecule methods to study membrane receptor oligomerization.
+\newblock {\em Sem Cell Dev Biol}, 37:26--34, 2015.
+
+\bibitem{Cao2015}
+H.~Cao, H.~Wu, R.~Luo, S.~Huang, Y.~Sun, X.~Tong, Y.~Xie, B.~Liu, H.~Yang,
+  H.~Zheng, J.~Li, B.~Li, Y.~Wang, F.~Yang, P.~Sun, S.~Liu, P.~Gao, H.~Huang,
+  J.~Sun, D.~Chen, G.~He, W.~Huang, Z.~Huang, Y.~Li, L.~C. A.~M. Tellier,
+  X.~Liu, Q.~Feng, X.~Xu, X.~Zhang, L.~Bolund, A.~Krogh, K.~Kristiansen,
+  R.~Drmanac, S.~Drmanac, R.~Nielsen, S.~Li, J.~Wang, H.~Yang, Y.~Li, Wong
+  gG~K.-S., and J.~Wang.
+\newblock De novo assembly of a haplotype-resolved human genome.
+\newblock {\em Nat. Biotechnol.}, 33:617--622, 2015.
+
+\bibitem{Xie2015}
+T.~Xie, J.-F. Zheng, S.~Liu, C.~Peng, Y.-M. Zhou, Q.-Y. Yang, and H.-Y. Zhang.
+\newblock De novo plant genome assembly based on chromatin interactions: A case
+  study of arabidopsis thaliana.
+\newblock {\em Molecular Plant}, 8:489--492, 2015.
+
+\bibitem{Fukushima2015}
+A.~Fukushima, M.~Nakamura, H.~Suzuki, K.~Saito, and M.~Yamazaki.
+\newblock De novo plant genome assembly based on chromatin interactions: A case
+  study of arabidopsis thaliana.
+\newblock {\em PLoS ONE}, 2015.
+
 \bibitem{Koren2015}
 S.~Koren and A.~M. Phillippy.
 \newblock One chromosome, one contig: complete microbial genomes from long-read

@@ -150,25 +150,25 @@
 \contentsline {section}{\numberline {6.2}Applications and Future Work}{184}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Open Source Software for smFRET}{184}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Inference Analysis of smFRET Data}{185}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Accurate Sizing of Fluorescent Oligomers}{185}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Error Detection in \emph {de novo} Assemblies}{186}{subsection.6.2.4}
-\contentsline {chapter}{Appendices}{187}{section*.61}
-\contentsline {chapter}{\numberline {A}pyFRET: Implementation Details}{188}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Development of Scientific Software}{188}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}pyFRET: Code Structure and Implementation Details}{189}{section.a.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Dependencies}{189}{subsection.a.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Simple Event Selection and Denoising}{190}{subsection.a.A.2.2}
-\contentsline {paragraph}{FRET Data.}{190}{section*.62}
-\contentsline {paragraph}{ALEX Data}{191}{section*.63}
-\contentsline {subsection}{\numberline {A.2.3}Burst Search Algorithms}{192}{subsection.a.A.2.3}
-\contentsline {section}{\numberline {A.3}RASP: Recurrence Analysis of Single Particles}{193}{section.a.A.3}
-\contentsline {subsection}{\numberline {A.3.1}Compatibilities}{194}{subsection.a.A.3.1}
-\contentsline {chapter}{\numberline {B}pyFRET: Code Samples}{195}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}Burst Search Algorithms}{195}{section.a.B.1}
-\contentsline {subsection}{\numberline {B.1.1}FRET Data}{195}{subsection.a.B.1.1}
-\contentsline {subsection}{\numberline {B.1.2}ALEX Data}{197}{subsection.a.B.1.2}
-\contentsline {section}{\numberline {B.2}Determining Accurate Concentrations}{198}{section.a.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Testing the Gaussian Mixture Model}{198}{subsection.a.B.2.1}
-\contentsline {subsection}{\numberline {B.2.2}ALEX Data}{200}{subsection.a.B.2.2}
-\contentsline {subsection}{\numberline {B.2.3}FRET Data}{203}{subsection.a.B.2.3}
-\contentsline {chapter}{\numberline {C}Papers Associated with this Thesis}{207}{Appendix.a.C}
+\contentsline {subsection}{\numberline {6.2.3}Accurate Sizing of Fluorescent Oligomers}{187}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Error Detection in \emph {de novo} Assemblies}{188}{subsection.6.2.4}
+\contentsline {chapter}{Appendices}{190}{section*.61}
+\contentsline {chapter}{\numberline {A}pyFRET: Implementation Details}{191}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Development of Scientific Software}{191}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}pyFRET: Code Structure and Implementation Details}{192}{section.a.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Dependencies}{192}{subsection.a.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Simple Event Selection and Denoising}{193}{subsection.a.A.2.2}
+\contentsline {paragraph}{FRET Data.}{193}{section*.62}
+\contentsline {paragraph}{ALEX Data}{194}{section*.63}
+\contentsline {subsection}{\numberline {A.2.3}Burst Search Algorithms}{195}{subsection.a.A.2.3}
+\contentsline {section}{\numberline {A.3}RASP: Recurrence Analysis of Single Particles}{196}{section.a.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Compatibilities}{197}{subsection.a.A.3.1}
+\contentsline {chapter}{\numberline {B}pyFRET: Code Samples}{198}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}Burst Search Algorithms}{198}{section.a.B.1}
+\contentsline {subsection}{\numberline {B.1.1}FRET Data}{198}{subsection.a.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}ALEX Data}{200}{subsection.a.B.1.2}
+\contentsline {section}{\numberline {B.2}Determining Accurate Concentrations}{201}{section.a.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Testing the Gaussian Mixture Model}{201}{subsection.a.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}ALEX Data}{203}{subsection.a.B.2.2}
+\contentsline {subsection}{\numberline {B.2.3}FRET Data}{206}{subsection.a.B.2.3}
+\contentsline {chapter}{\numberline {C}Papers Associated with this Thesis}{210}{Appendix.a.C}
