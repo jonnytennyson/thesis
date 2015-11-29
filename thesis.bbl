@@ -370,6 +370,14 @@ Z.~Merali.
   compute.
 \newblock {\em Nature}, 467:775--777, 2010.
 
+\bibitem{hoffmann11}
+A.~Hoffmann, D.~Nettels, J.~Clark, A.~Borgia, S.~E. Radford, J.~Clarke, and
+  Schuler B.
+\newblock Quantifying heterogeneity and conformational dynamics from single
+  molecule fret of diffusing molecules: recurrence analysis of single particles
+  (rasp).
+\newblock {\em Phys Chem Chem Phys}, 13:1857--1871, 2011.
+
 \bibitem{scikit-learn}
 F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
   M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
@@ -1241,14 +1249,6 @@ G.~R. Mirams, C.~J. Arthurs, M.~O. Bernabeu, R.~Bordas, J.~Cooper, A.~Corrias,
 G.~van Rossum.
 \newblock {\em Python tutorial, Technical Report CS-R9526}.
 \newblock Centrum voor Wiskunde en Informatica (CWI), Amsterdam, 1995.
-
-\bibitem{hoffmann11}
-A.~Hoffmann, D.~Nettels, J.~Clark, A.~Borgia, S.~E. Radford, J.~Clarke, and
-  Schuler B.
-\newblock Quantifying heterogeneity and conformational dynamics from single
-  molecule fret of diffusing molecules: recurrence analysis of single particles
-  (rasp).
-\newblock {\em Phys Chem Chem Phys}, 13:1857--1871, 2011.
 
 \bibitem{lee06}
 N.~K Lee, A.~N. Kapanidis, Y.~Wang, X.~Michalet, J.~Mukhopadhyay, R.~H.

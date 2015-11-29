@@ -75,7 +75,7 @@ The DCBS burst search is similar, but considers the donor and acceptor channels 
 
 \subsection{Alternating Laser Excitation}
 \paragraph{Time-binned Data.}
-A more sophisticated smFRET experiment uses Alternating Laser Excitation (ALEX) during data acquisition. In this method, the diffusing fluorescent molecules are subjected to excitation from both two lasers in rapid alternation~\cite{kapanidis05}. One laser excites the donor fluorophore and the other can directly excite the acceptor fluorophore. The alternation of the laser excitation is fast on the timescale of molecular dwell-time in the confocal volume, allowing a single fluorescent molecule to receive multiple cycles of donor-acceptor direct excitation.
+A more sophisticated smFRET experiment uses Alternating Laser Excitation (ALEX) during data acquisition. In this method, the diffusing fluorescent molecules are subjected to excitation from two lasers in rapid alternation~\cite{kapanidis05}. One laser excites the donor fluorophore and the other can directly excite the acceptor fluorophore. The alternation of the laser excitation is fast on the timescale of molecular dwell-time in the confocal volume, allowing a single fluorescent molecule to receive multiple cycles of donor-acceptor direct excitation.
 
 Instead of the two photon streams -- donor and acceptor photons -- observed in a simple smFRET experiment, in a confocal ALEX experiment, there are four streams: $F_{D_{ex}}^{D_{em}}$, $F_{D_{ex}}^{A_{em}}$, $F_{A_{ex}}^{D_{em}}$ and $F_{A_{ex}}^{A_{em}}$. $F_{D_{ex}}^{D_{em}}$ and $F_{D_{ex}}^{A_{em}}$, respectively donor and acceptor emission during donor excitation, are analogous to the two original donor and acceptor photon streams in a smFRET experiment. $F_{A_{ex}}^{A_{em}}$ records acceptor emission during direct acceptor excitation, whilst $F_{A_{ex}}^{D_{em}}$ records donor emission during acceptor excitation. Initial event selection is performed based on the number of photons observed during both donor excitation and acceptor excitation: $F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} > T_{D_{ex}}$ AND $F_{A_{ex}}^{A_{em}} > T_{A_{ex}}$ for threshold $T_{D_{ex}}$ during donor excitation and $T_{A_{ex}}$ during acceptor excitation provides an equivalent to AND thresholding; $F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} + F_{A_{ex}}^{A_{em}} > T$ for overall threshold $T$ is analogous to SUM thresholding. Performing event selection in this manner, based on direct excitation of both fluorophores, should remove the biases caused by simple AND or SUM thresholding. The presence of these extra channels also provides additional information about the labelling state of molecules giving rise to fluorescent bursts, allowing calculation of an emission stoichiometry, $S$:
 
@@ -88,6 +88,32 @@ Values of $S$  that are very close to one or very close to zero, indicate presen
 
 \paragraph{Fluorescent Burst Data}
 The burst search algorithms implemented for ALEX data work in a similar manner to those implemented for simple FRET data. In the ALEX APBS method, bursts are identified by considering the total number of fluorescent photons $F_{total} = F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} + F_{A_{ex}}^{A_{em}}$ in each time bin. Bursts are identified where the running sum (calculated using the  $F_{total}$ photon stream) in the averaging window $T$ exceeds the threshold $M$. The DCBS method considers donor excitation photons $F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}}$ separately from photons emitted during direct acceptor excitation $F_{donor} = F_{A_{ex}}^{A_{em}}$, requiring that the running sum exceeds $M$ for both $F_{donor}$ and $F_{A_{ex}}^{A_{em}}$.
+
+paragraph{RASP: Recurrence Analysis of Single Particles}
+A recent innovation in confocal smFRET is Recurrence Analysis of Single Particles (RASP)~\cite{hoffmann11}. RASP exploits the fact that fluorescent bursts occurring close in time are more likely to be from the same molecule diffusing back through the confocal volume than from a newly observed molecule. This can be used to determine interconversion kinetics and to test whether broad peaks in the FRET histogram derive from overlapping static populations.
+
+RASP is a two-step process. First, initial bursts ($b_1$) with a FRET efficiency $E_{b1}$ within some defined range $\Delta(E_{b1})$ are identified. Secondly, bursts ($b_2$) occurring within a time interval (called the recurrence interval) $T = (t_1, t_2)$ of $b_1$ are identified. Analysis of the distribution of FRET efficiencies in $b_2$, the population of recurrent bursts, provides information about the interconversion rate between subpopulations. The rate constants of interconversion can be extracted by fitting the relative subpopulations as a function of the recurrence interval $T$.
+
+pyFRET implements RASP using array masking, to allow efficient selection of relevant bursts. RASP can be called in a single step from a FRET bursts or ALEX bursts object, and a loop can readily be made to repeat the process at different time intervals:
+
+\begin{lstlisting}
+# RASP
+
+# initial E range: 0.4 < E < 0.6
+Emin = 0.4
+Emax = 0.6
+
+# Time interval for re-occurrence
+# given in number of bins
+Tmin = 1000
+Tmax = 10000
+
+# selecting re-occurring bursts
+recurrent_bursts = bursts_APBS.RASP(Emin, Emax, Tmin, Tmax)
+
+# histogram of re-occurring bursts
+recurrent_bursts.build_histogram(filepath, csvname, gamma=g_factor)
+\end{lstlisting} 
 
 
 \section{Experimental Methods}
@@ -226,7 +252,7 @@ Burst search algorithms were developed as an improvement to the simple threshold
 
 
 \begin{table}[!ht]
-\caption{Bin-times .Bin lengths and the corresponding minimum burst duration used to evaluate the effect of bin-time on burst search performance.}
+\caption{Bin-times. Bin lengths and the corresponding minimum burst duration used to evaluate the effect of bin-time on burst search performance.}
 \begin{tabular}{|l|l|}
 \hline
 Bin-time / $\mu$s & T / bins \\

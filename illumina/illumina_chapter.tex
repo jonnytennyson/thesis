@@ -105,7 +105,7 @@ A uniform distribution was selected to model anomalous insert sizes, as it makes
 
 A latent indicator variable, $X_l\in\{0,1\}$, is defined for each pair of reads, $l$, which takes the value $1$ if the insert size came from the null distribution, and $0$ otherwise. Within each window queried, the probability that each retrieved read, $r_l$ is drawn from the null distribution is given by:
 
-\begin{eqnarray} P(X_l=x|Y_l)& =& \frac{\pi_x(Y_l|X_l=x)}{\sum_{k=0}^1 \pi_k(Y_l|X_l=k)}
+\begin{eqnarray} P(X_l=x|Y_l)& =& \frac{\pi_xP(Y_l|X_l=x)}{\sum_{k=0}^1 \pi_kP(Y_l|X_l=k)}
 \label{eq:posterior}  
 \end{eqnarray}
 
