@@ -25,6 +25,33 @@ Secondly, the need for many researchers to develop and maintain their own analyi
 % Finally: reproducibility
 Finally, there is the issue of research reproducibility. Different research groups use widely differing tools to complete relatively similar tasks. New methods of data collection and analysis are frequently developed~\cite{kapanidis05, nir06, sisamakis2010}. However, when software is not released to the community, it is difficult for researchers, who must often implement poorly described methodologies entirely from scratch, to verify results or to adopt new techniques in their own research. As a consequence, new techniques are poorly benchmarked, making it difficult to understand whether a new analysis adds quality or merely complexity, whilst adoption of useful new methods is relatively slow. These three issues of productivity, reliability and reproducibility, all linked to the problem of poorly maintained softwared and lack of software development skills, are now becoming a key bottleneck in smFRET research.  
 
+\section{pyFRET: Overview of the Design and Implementation}
+This chapter presents pyFRET, an open source library, written in the Python programming language~\cite{vanRossum1995}, for the analysis of smFRET data. To our knowledge, this is the first open source software ever released by the smFRET research community. pyFRET is a small library that provides a toolkit facilitating all key steps in analysis of smFRET data: burst selection; cross-talk subtraction and burst denoising; data visualisation; and construction and simple fitting of FRET efficiency histograms. These analysis and visulalisation algorithms were implemented by the author using the python programming language, based on descriptions provided in peer-reviewed publications and described below. In providing this toolkit to the smFRET research community, I hope to facilitate the wider adoption of smFRET techniques in biological research as well as providing a framework for open communication about and sharing of data analysis tools.
+
+\subsection{Code Layout and Design}
+pyFRET provides four key data structures (classes) for manipulation of smFRET data. The FRET data object describes two fluorescence channels, corresponding to time-bins containing photons collected from donor (the donor channel, $D$) and acceptor (the acceptor channel, $A$) fluorophores. The ALEX data object describes four fluorescence channels, corresponding to the four temporal states in a smFRET experiment using Alternating Laser Excitation (ALEX), namely the donor channel when the donor laser is switched on ($D_D$); the donor channel when the acceptor laser is switched on ($D_A$); the acceptor channel when the donor laser is on ($A_D$); and the acceptor channel when the acceptor laser is on ($A_A$). The data structure can readily be expanded to include data from more detectors, which is needed in e.g. three-colour or anisotropy measurements.
+
+Two similar classes are used for fluorescence bursts identified using the burst search algorithms. In addition to the donor and acceptor channels, the FRET bursts class type holds three additional arrays, giving the first and last bin of each burst, and the duration of each burst. These three new attributes are similarly present in the ALEX bursts object, in addition to the four fluorescent channels in the ALEX data object. In addition to the methods present for the simple FRET and ALEX objects, the burst data objects also implement methods to plot burst duration and to analyse recurrent bursts (RASP)~\cite{hoffmann11}. 
+
+The data analysis workflow is illustrated in Fig.~\ref{fig:fig2_workflow} Following initialization of data objects, a single line of code performs background subtraction, event selection, cross-talk correction and calculation of the FRET efficiency. Likewise, simple but high-quality figures (see Fig.~\ref{fig:fig3_sample_results} for examples) can be generated in a single step.
+
+\begin{figure}[!ht]
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{pyFRET/workflow.pdf}
+      \caption{Typical workflow for analysis using pyFRET.}
+      \label{fig:fig2_workflow}
+   \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+   \begin{center}
+      \includegraphics*[clip=true, width=6in]{pyFRET/6bp_example.pdf}
+      \caption{Figures made using pyFRET, to display FRET and ALEX data colleted by the author from the DNA duplex with a 6 bp separation between the dye attachment sites. A) A Proximity Ratio histogram. B) A scatter-plot of FRET efficiency and fluorophore stoichiometry from ALEX data. Here, E and S are the FRET efficiency and Stoichiometry, as described in Section~\ref{subsec:event-selection-data}. C) A heatmap of event frequencies' x- and y- axes show the number of detected photons in the donor and acceptor channels respectively, the colorbar reports detection efficiency using a logarithmic scale.  D) A 3D plot of event frequencies; x- and y- axes show the number of detected photons in the donor and acceptor channels respectively, the z-axis shows a logarithmic scale of detection frequency.}
+      \label{fig:fig3_sample_results}
+   \end{center}
+\end{figure}
+
+
 
 \section{pyFRET: Code Structure and Implementation Details}
 \subsection{Dependencies}

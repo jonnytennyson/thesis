@@ -42,133 +42,133 @@
 \contentsline {subsection}{\numberline {2.3.2}Alternating Laser Excitation}{40}{subsection.2.3.2}
 \contentsline {paragraph}{Time-binned Data.}{40}{section*.24}
 \contentsline {paragraph}{Fluorescent Burst Data}{41}{section*.25}
-\contentsline {section}{\numberline {2.4}pyFRET: Design and Implementation}{41}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Code Layout and Design}{42}{subsection.2.4.1}
-\contentsline {section}{\numberline {2.5}Experimental Methods}{42}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Instrumentation}{43}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Benchmarking the Gaussian Fitting Using Simulated Datasets}{45}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Data to Evaluate the Simple Event Selection Algorithms}{45}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}Data to Evaluate Event Selection Using the Burst Search Algorithms}{46}{subsection.2.5.4}
-\contentsline {subsection}{\numberline {2.5.5}Performance Analysis Using Mixtures of DNA Duplexes}{47}{subsection.2.5.5}
-\contentsline {subsection}{\numberline {2.5.6}Testing the RASP Algorithm}{47}{subsection.2.5.6}
-\contentsline {section}{\numberline {2.6}Performance Analysis of smFRET Analysis Algorithms}{47}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Evaluating Performance with DNA Duplexes}{48}{subsection.2.6.1}
-\contentsline {paragraph}{Simple Algorithms.}{48}{section*.26}
-\contentsline {paragraph}{Burst Search Algorithms}{48}{section*.27}
-\contentsline {subsection}{\numberline {2.6.2}Evaluating the Burst Search Algorithms}{53}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Evaluating Gaussian Fitting}{55}{subsection.2.6.3}
-\contentsline {subsection}{\numberline {2.6.4}Benchmarking the RASP Algorithm}{62}{subsection.2.6.4}
-\contentsline {section}{\numberline {2.7}Availability and Future Directions}{62}{section.2.7}
-\contentsline {section}{\numberline {2.8}Conclusions}{64}{section.2.8}
-\contentsline {chapter}{\numberline {3}Bayesian Inference of Intramolecular Distances Using single-molecule FRET}{65}{chapter.3}
-\contentsline {section}{\numberline {3.1}Overview}{65}{section.3.1}
-\contentsline {section}{\numberline {3.2}Introduction}{66}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}A smFRET Experiment}{66}{subsection.3.2.1}
-\contentsline {paragraph}{The Experiment}{66}{section*.28}
-\contentsline {paragraph}{The Data.}{67}{section*.29}
-\contentsline {subsection}{\numberline {3.2.2}Approaches to Analysis of smFRET Data}{68}{subsection.3.2.2}
-\contentsline {paragraph}{Event Selection: Thresholding}{68}{section*.30}
-\contentsline {paragraph}{Event Denoising}{68}{section*.31}
-\contentsline {paragraph}{FRET Efficiency Calculation}{69}{section*.32}
-\contentsline {paragraph}{Stochastic Denoising}{73}{section*.33}
-\contentsline {subsection}{\numberline {3.2.3}Model Based Inference}{74}{subsection.3.2.3}
-\contentsline {paragraph}{Bayesian Inference.}{74}{section*.34}
-\contentsline {paragraph}{Application to Confocal smFRET Data}{75}{section*.35}
-\contentsline {section}{\numberline {3.3}Theory}{77}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}A Physical Model of a smFRET Experiment}{77}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Inference of Model Parameters}{86}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}The Metropolis-Hastings Algorithm}{91}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Experimental Methods}{92}{section.3.4}
-\contentsline {section}{\numberline {3.5}Results}{97}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Validation using Simulated Data}{97}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Application to Experimental Data}{105}{subsection.3.5.2}
+\contentsline {section}{\numberline {2.4}Experimental Methods}{41}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Instrumentation}{42}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Benchmarking the Gaussian Fitting Using Simulated Datasets}{42}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Data to Evaluate the Simple Event Selection Algorithms}{43}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Data to Evaluate Event Selection Using the Burst Search Algorithms}{44}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Performance Analysis Using Mixtures of DNA Duplexes}{44}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Testing the RASP Algorithm}{45}{subsection.2.4.6}
+\contentsline {section}{\numberline {2.5}Performance Analysis of smFRET Analysis Algorithms}{45}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Evaluating Performance with DNA Duplexes}{46}{subsection.2.5.1}
+\contentsline {paragraph}{Simple Algorithms.}{46}{section*.26}
+\contentsline {paragraph}{Burst Search Algorithms}{47}{section*.27}
+\contentsline {subsection}{\numberline {2.5.2}Evaluating the Burst Search Algorithms}{50}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Evaluating Gaussian Fitting}{52}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Benchmarking the RASP Algorithm}{60}{subsection.2.5.4}
+\contentsline {section}{\numberline {2.6}Availability and Future Directions}{60}{section.2.6}
+\contentsline {section}{\numberline {2.7}Conclusions}{62}{section.2.7}
+\contentsline {chapter}{\numberline {3}Bayesian Inference of Intramolecular Distances Using single-molecule FRET}{63}{chapter.3}
+\contentsline {section}{\numberline {3.1}Overview}{63}{section.3.1}
+\contentsline {section}{\numberline {3.2}Introduction}{64}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}A smFRET Experiment}{64}{subsection.3.2.1}
+\contentsline {paragraph}{The Experiment}{64}{section*.28}
+\contentsline {paragraph}{The Data.}{65}{section*.29}
+\contentsline {subsection}{\numberline {3.2.2}Approaches to Analysis of smFRET Data}{66}{subsection.3.2.2}
+\contentsline {paragraph}{Event Selection: Thresholding}{66}{section*.30}
+\contentsline {paragraph}{Event Denoising}{66}{section*.31}
+\contentsline {paragraph}{FRET Efficiency Calculation}{67}{section*.32}
+\contentsline {paragraph}{Stochastic Denoising}{71}{section*.33}
+\contentsline {subsection}{\numberline {3.2.3}Model Based Inference}{72}{subsection.3.2.3}
+\contentsline {paragraph}{Bayesian Inference.}{72}{section*.34}
+\contentsline {paragraph}{Application to Confocal smFRET Data}{73}{section*.35}
+\contentsline {section}{\numberline {3.3}Theory}{75}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}A Physical Model of a smFRET Experiment}{75}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Inference of Model Parameters}{84}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}The Metropolis-Hastings Algorithm}{89}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Experimental Methods}{90}{section.3.4}
+\contentsline {section}{\numberline {3.5}Results}{95}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Validation using Simulated Data}{95}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Application to Experimental Data}{102}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}Justification of the Gamma-Poisson Mixture Model}{106}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Conclusions and Future Work}{108}{section.3.6}
+\contentsline {section}{\numberline {3.6}Conclusions and Future Work}{106}{section.3.6}
 \contentsline {paragraph}{Extension to ALEX Data}{108}{section*.47}
-\contentsline {paragraph}{Extension to Photon Arrival Times}{110}{section*.48}
-\contentsline {paragraph}{Extension to Inference of Fluorescent Populations}{110}{section*.49}
-\contentsline {paragraph}{Extension to Oligomer Sizing}{111}{section*.50}
-\contentsline {paragraph}{Conclusion}{111}{section*.51}
-\contentsline {chapter}{\numberline {4}Bayesian Inference of Oligomer Sizes Using single-molecule FRET}{112}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overview}{112}{section.4.1}
-\contentsline {section}{\numberline {4.2}Introduction}{113}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Diseases of Protein Aggregation}{113}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Studying Protein Aggregation}{114}{subsection.4.2.2}
-\contentsline {paragraph}{Using smFRET to Identify Oligomers}{115}{section*.52}
-\contentsline {subsection}{\numberline {4.2.3}Understanding The Relationship Between Size and Photon Emission}{117}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}The DNA Holliday Junction as a Model Oligomer}{119}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Theory}{121}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}A Simple Poisson Model of Oligomer Photon Emission}{121}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}A Gamma-Poisson Mixture Model of Oligomer Photon Emission}{124}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Experimental Methods}{125}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Preparation of DNA Holliday Junctions}{125}{subsection.4.4.1}
-\contentsline {paragraph}{Holliday Junction Preparation}{125}{section*.53}
-\contentsline {paragraph}{Holliday Junction Purification}{125}{section*.54}
-\contentsline {subsection}{\numberline {4.4.2}Simple FRET Measurements of DNA Holliday Junctions and Free Dyes}{126}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Counting Photobleaching Steps Using TIRF Imaging}{126}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Results}{127}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}The need for a Generative Model}{127}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Understanding the Relationship Between Size and Photon Emission}{134}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Inferring Event Brightness Using the Gamma-Poisson Model}{139}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}How Bright Are Holliday Junction Events?}{142}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}{148}{subsection.4.5.5}
-\contentsline {section}{\numberline {4.6}Conclusions}{150}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Complex Relationship between Size and Photon Emission}{150}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Implications for Future Work on Molecular Sizing}{151}{subsection.4.6.2}
-\contentsline {chapter}{\numberline {5}Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{154}{chapter.5}
-\contentsline {section}{\numberline {5.1}Overview}{154}{section.5.1}
-\contentsline {section}{\numberline {5.2}Introduction}{155}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Next-Generation Sequencing Technologies}{155}{subsection.5.2.1}
-\contentsline {paragraph}{Illumina Sequencing Technology}{157}{section*.55}
-\contentsline {paragraph}{Single-Molecule Sequencing Technologies}{159}{section*.56}
-\contentsline {subsection}{\numberline {5.2.2}De Novo Sequence Assembly}{159}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Paired End Reads and Mate Pair Sequencing}{162}{subsection.5.2.3}
-\contentsline {paragraph}{Paired End and Single End Reads}{162}{section*.57}
-\contentsline {paragraph}{Mate Pair Sequening}{162}{section*.58}
-\contentsline {subsection}{\numberline {5.2.4}Evaluating Assembly Quality}{162}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Error Detection Methods}{163}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Theory}{165}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Statistical Analysis of Mate Pair Insert Sizes}{165}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Global Assembly Parameters}{167}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Interval Tree Construction}{168}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Misassembly Location and Contig Breaking}{169}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Availability and Dependencies}{170}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Experimental Methods}{170}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Data}{170}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Performance Optimisation}{171}{subsection.5.4.2}
-\contentsline {paragraph}{Profiling}{173}{section*.60}
-\contentsline {subsection}{\numberline {5.4.3}Workflow Pipeline}{173}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}Results}{175}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Performance}{176}{subsection.5.5.1}
-\contentsline {section}{\numberline {5.6}Conclusions}{177}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{181}{chapter.6}
-\contentsline {section}{\numberline {6.1}General Conclusions}{181}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}pyFRET}{181}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Inference Analysis of smFRET Data}{182}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Inference Analysis of Oligomer Sizing}{183}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}NxRepair}{183}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}Applications and Future Work}{184}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Open Source Software for smFRET}{184}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Inference Analysis of smFRET Data}{185}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Accurate Sizing of Fluorescent Oligomers}{187}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Error Detection in \emph {de novo} Assemblies}{188}{subsection.6.2.4}
-\contentsline {chapter}{Appendices}{190}{section*.61}
-\contentsline {chapter}{\numberline {A}pyFRET: Implementation Details}{191}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Development of Scientific Software}{191}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}pyFRET: Code Structure and Implementation Details}{192}{section.a.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Dependencies}{192}{subsection.a.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Simple Event Selection and Denoising}{193}{subsection.a.A.2.2}
-\contentsline {paragraph}{FRET Data.}{193}{section*.62}
+\contentsline {paragraph}{Extension to Photon Arrival Times}{108}{section*.48}
+\contentsline {paragraph}{Extension to Inference of Fluorescent Populations}{109}{section*.49}
+\contentsline {paragraph}{Extension to Oligomer Sizing}{109}{section*.50}
+\contentsline {paragraph}{Conclusion}{109}{section*.51}
+\contentsline {chapter}{\numberline {4}Bayesian Inference of Oligomer Sizes Using single-molecule FRET}{110}{chapter.4}
+\contentsline {section}{\numberline {4.1}Overview}{110}{section.4.1}
+\contentsline {section}{\numberline {4.2}Introduction}{111}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Diseases of Protein Aggregation}{111}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Studying Protein Aggregation}{112}{subsection.4.2.2}
+\contentsline {paragraph}{Using smFRET to Identify Oligomers}{113}{section*.52}
+\contentsline {subsection}{\numberline {4.2.3}Understanding The Relationship Between Size and Photon Emission}{115}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}The DNA Holliday Junction as a Model Oligomer}{117}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Theory}{119}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}A Simple Poisson Model of Oligomer Photon Emission}{119}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}A Gamma-Poisson Mixture Model of Oligomer Photon Emission}{122}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Experimental Methods}{123}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Preparation of DNA Holliday Junctions}{123}{subsection.4.4.1}
+\contentsline {paragraph}{Holliday Junction Preparation}{123}{section*.53}
+\contentsline {paragraph}{Holliday Junction Purification}{123}{section*.54}
+\contentsline {subsection}{\numberline {4.4.2}Simple FRET Measurements of DNA Holliday Junctions and Free Dyes}{124}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Counting Photobleaching Steps Using TIRF Imaging}{124}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Results}{125}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}The need for a Generative Model}{125}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Understanding the Relationship Between Size and Photon Emission}{132}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Inferring Event Brightness Using the Gamma-Poisson Model}{137}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}How Bright Are Holliday Junction Events?}{140}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}Photobleaching Steps Analysis Reveals Additional Source of Overdispersal}{146}{subsection.4.5.5}
+\contentsline {section}{\numberline {4.6}Conclusions}{148}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Complex Relationship between Size and Photon Emission}{148}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Implications for Future Work on Molecular Sizing}{149}{subsection.4.6.2}
+\contentsline {chapter}{\numberline {5}Probabilistic Inference for Error Detection in De Novo Genome Assemblies}{152}{chapter.5}
+\contentsline {section}{\numberline {5.1}Overview}{152}{section.5.1}
+\contentsline {section}{\numberline {5.2}Introduction}{153}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Next-Generation Sequencing Technologies}{153}{subsection.5.2.1}
+\contentsline {paragraph}{Illumina Sequencing Technology}{155}{section*.55}
+\contentsline {paragraph}{Single-Molecule Sequencing Technologies}{157}{section*.56}
+\contentsline {subsection}{\numberline {5.2.2}De Novo Sequence Assembly}{157}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Paired End Reads and Mate Pair Sequencing}{160}{subsection.5.2.3}
+\contentsline {paragraph}{Paired End and Single End Reads}{160}{section*.57}
+\contentsline {paragraph}{Mate Pair Sequening}{160}{section*.58}
+\contentsline {subsection}{\numberline {5.2.4}Evaluating Assembly Quality}{160}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Error Detection Methods}{161}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Theory}{163}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Statistical Analysis of Mate Pair Insert Sizes}{163}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Global Assembly Parameters}{165}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Interval Tree Construction}{166}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Misassembly Location and Contig Breaking}{167}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Availability and Dependencies}{168}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Experimental Methods}{168}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Data}{168}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Performance Optimisation}{169}{subsection.5.4.2}
+\contentsline {paragraph}{Profiling}{171}{section*.60}
+\contentsline {subsection}{\numberline {5.4.3}Workflow Pipeline}{171}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}Results}{173}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Performance}{174}{subsection.5.5.1}
+\contentsline {section}{\numberline {5.6}Conclusions}{175}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{179}{chapter.6}
+\contentsline {section}{\numberline {6.1}General Conclusions}{179}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}pyFRET}{179}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Inference Analysis of smFRET Data}{180}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Inference Analysis of Oligomer Sizing}{181}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}NxRepair}{181}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Applications and Future Work}{182}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Open Source Software for smFRET}{182}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Inference Analysis of smFRET Data}{183}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Accurate Sizing of Fluorescent Oligomers}{185}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Error Detection in \emph {de novo} Assemblies}{186}{subsection.6.2.4}
+\contentsline {chapter}{Appendices}{188}{section*.61}
+\contentsline {chapter}{\numberline {A}pyFRET: Implementation Details}{189}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Development of Scientific Software}{189}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}pyFRET: Overview of the Design and Implementation}{190}{section.a.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Code Layout and Design}{191}{subsection.a.A.2.1}
+\contentsline {section}{\numberline {A.3}pyFRET: Code Structure and Implementation Details}{192}{section.a.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Dependencies}{192}{subsection.a.A.3.1}
+\contentsline {subsection}{\numberline {A.3.2}Simple Event Selection and Denoising}{192}{subsection.a.A.3.2}
+\contentsline {paragraph}{FRET Data.}{192}{section*.62}
 \contentsline {paragraph}{ALEX Data}{194}{section*.63}
-\contentsline {subsection}{\numberline {A.2.3}Burst Search Algorithms}{195}{subsection.a.A.2.3}
-\contentsline {section}{\numberline {A.3}RASP: Recurrence Analysis of Single Particles}{196}{section.a.A.3}
-\contentsline {subsection}{\numberline {A.3.1}Compatibilities}{197}{subsection.a.A.3.1}
-\contentsline {chapter}{\numberline {B}pyFRET: Code Samples}{198}{Appendix.a.B}
-\contentsline {section}{\numberline {B.1}Burst Search Algorithms}{198}{section.a.B.1}
-\contentsline {subsection}{\numberline {B.1.1}FRET Data}{198}{subsection.a.B.1.1}
-\contentsline {subsection}{\numberline {B.1.2}ALEX Data}{200}{subsection.a.B.1.2}
-\contentsline {section}{\numberline {B.2}Determining Accurate Concentrations}{201}{section.a.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Testing the Gaussian Mixture Model}{201}{subsection.a.B.2.1}
-\contentsline {subsection}{\numberline {B.2.2}ALEX Data}{203}{subsection.a.B.2.2}
-\contentsline {subsection}{\numberline {B.2.3}FRET Data}{206}{subsection.a.B.2.3}
-\contentsline {chapter}{\numberline {C}Papers Associated with this Thesis}{210}{Appendix.a.C}
+\contentsline {subsection}{\numberline {A.3.3}Burst Search Algorithms}{195}{subsection.a.A.3.3}
+\contentsline {section}{\numberline {A.4}RASP: Recurrence Analysis of Single Particles}{196}{section.a.A.4}
+\contentsline {subsection}{\numberline {A.4.1}Compatibilities}{197}{subsection.a.A.4.1}
+\contentsline {chapter}{\numberline {B}pyFRET: Code Samples}{199}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}Burst Search Algorithms}{199}{section.a.B.1}
+\contentsline {subsection}{\numberline {B.1.1}FRET Data}{199}{subsection.a.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}ALEX Data}{201}{subsection.a.B.1.2}
+\contentsline {section}{\numberline {B.2}Determining Accurate Concentrations}{202}{section.a.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Testing the Gaussian Mixture Model}{202}{subsection.a.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}ALEX Data}{204}{subsection.a.B.2.2}
+\contentsline {subsection}{\numberline {B.2.3}FRET Data}{207}{subsection.a.B.2.3}
+\contentsline {chapter}{\numberline {C}Papers Associated with this Thesis}{211}{Appendix.a.C}

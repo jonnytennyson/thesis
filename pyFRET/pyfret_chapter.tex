@@ -89,32 +89,6 @@ Values of $S$  that are very close to one or very close to zero, indicate presen
 \paragraph{Fluorescent Burst Data}
 The burst search algorithms implemented for ALEX data work in a similar manner to those implemented for simple FRET data. In the ALEX APBS method, bursts are identified by considering the total number of fluorescent photons $F_{total} = F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}} + F_{A_{ex}}^{A_{em}}$ in each time bin. Bursts are identified where the running sum (calculated using the  $F_{total}$ photon stream) in the averaging window $T$ exceeds the threshold $M$. The DCBS method considers donor excitation photons $F_{D_{ex}}^{D_{em}} + F_{D_{ex}}^{A_{em}}$ separately from photons emitted during direct acceptor excitation $F_{donor} = F_{A_{ex}}^{A_{em}}$, requiring that the running sum exceeds $M$ for both $F_{donor}$ and $F_{A_{ex}}^{A_{em}}$.
 
-\section{pyFRET: Design and Implementation}
-This chapter presents pyFRET, an open source library, written in the Python programming language~\cite{vanRossum1995}, for the analysis of smFRET data. To our knowledge, this is the first open source software ever released by the smFRET research community. pyFRET is a small library that provides a toolkit facilitating all key steps in analysis of smFRET data: burst selection; cross-talk subtraction and burst denoising; data visualisation; and construction and simple fitting of FRET efficiency histograms. These analysis and visulalisation algorithms were implemented by the author using the python programming language, based on descriptions provided in peer-reviewed publications and described below. In providing this toolkit to the smFRET research community, I hope to facilitate the wider adoption of smFRET techniques in biological research as well as providing a framework for open communication about and sharing of data analysis tools.
-
-\subsection{Code Layout and Design}
-pyFRET provides four key data structures (classes) for manipulation of smFRET data. The FRET data object describes two fluorescence channels, corresponding to time-bins containing photons collected from donor (the donor channel, $D$) and acceptor (the acceptor channel, $A$) fluorophores. The ALEX data object describes four fluorescence channels, corresponding to the four temporal states in a smFRET experiment using Alternating Laser Excitation (ALEX), namely the donor channel when the donor laser is switched on ($D_D$); the donor channel when the acceptor laser is switched on ($D_A$); the acceptor channel when the donor laser is on ($A_D$); and the acceptor channel when the acceptor laser is on ($A_A$). The data structure can readily be expanded to include data from more detectors, which is needed in e.g. three-colour or anisotropy measurements.
-
-Two similar classes are used for fluorescence bursts identified using the burst search algorithms. In addition to the donor and acceptor channels, the FRET bursts class type holds three additional arrays, giving the first and last bin of each burst, and the duration of each burst. These three new attributes are similarly present in the ALEX bursts object, in addition to the four fluorescent channels in the ALEX data object. In addition to the methods present for the simple FRET and ALEX objects, the burst data objects also implement methods to plot burst duration and to analyse recurrent bursts (RASP)~\cite{hoffmann11}. 
-
-The data analysis workflow is illustrated in Fig.~\ref{fig:fig2_workflow} Following initialization of data objects, a single line of code performs background subtraction, event selection, cross-talk correction and calculation of the FRET efficiency. Likewise, simple but high-quality figures (see Fig.~\ref{fig:fig3_sample_results} for examples) can be generated in a single step.
-
-\begin{figure}[!ht]
-   \begin{center}
-      \includegraphics*[clip=true, width=6in]{pyFRET/workflow.pdf}
-      \caption{Typical workflow for analysis using pyFRET.}
-      \label{fig:fig2_workflow}
-   \end{center}
-\end{figure}
-
-\begin{figure}[!ht]
-   \begin{center}
-      \includegraphics*[clip=true, width=6in]{pyFRET/6bp_example.pdf}
-      \caption{Figures made using pyFRET, to display FRET and ALEX data colleted by the author from the DNA duplex with a 6 bp separation between the dye attachment sites. A) A Proximity Ratio histogram. B) A scatter-plot of FRET efficiency and fluorophore stoichiometry from ALEX data. Here, E and S are the FRET efficiency and Stoichiometry, as described in Section~\ref{subsec:event-selection-data}. C) A heatmap of event frequencies' x- and y- axes show the number of detected photons in the donor and acceptor channels respectively, the colorbar reports detection efficiency using a logarithmic scale.  D) A 3D plot of event frequencies; x- and y- axes show the number of detected photons in the donor and acceptor channels respectively, the z-axis shows a logarithmic scale of detection frequency.}
-      \label{fig:fig3_sample_results}
-   \end{center}
-\end{figure}
-
 
 \section{Experimental Methods}
 In order to effectively evaluate the performance of the pyFRET library, simulated datasets with known parameters were generated. smFRET data were also collected under various different excitation and data collection regimes. These datasets were then analysed using different algorithms reported in the literature and reimplemented in pyFRET. The results were compared, to determine the most effective analysis methods for smFRET data from both simple FRET and ALEX experiments. The following section describes the experimental protocols used in the generation of simulated datasets and the methods used in the collection and analysis of smFRET data.
@@ -284,8 +258,8 @@ Finally, the effect of the thresholds M and L (described in Section~\ref{par:bur
 
 \begin{figure}[!ht]
    \begin{center}
-      \includegraphics*[clip=true, width=6in]{pyFRET/heatmaps.pdf}
-      \caption{Heatmaps showing the effect on calculated FRET efficiency and peak area of varying the burst search thresholds L and M. A) Calculated FRET efficiency from DCBS analysis of FRET data. B) Calculated FRET efficiency from DCBS analysis of ALEX data. Missing values in B) are the result of insufficient events being retained for a Gaussian fit to be performed. C) Calculated peak area from DCBS analysis of FRET data. D) Calculated FRET efficiency from DCBS analysis of ALEX data.}
+      \includegraphics*[clip=true, width=6in]{pyFRET/heatmaps_errors.pdf}
+      \caption{Heatmaps showing the effect on calculated FRET efficiency and peak area of varying the burst search thresholds L and M. A) Calculated FRET efficiency from DCBS analysis of FRET data. B) Calculated FRET efficiency from DCBS analysis of ALEX data. Missing values in B) are the result of insufficient events being retained for a Gaussian fit to be performed. C) Calculated peak area from DCBS analysis of FRET data. D) Calculated FRET efficiency from DCBS analysis of ALEX data. E) and F) show the Bayesian Information Criterion (BIC) calculated for each two-component fit of the FRET (E) and ALEX (F) data. A smaller (more negative) value of the BIC implies a better fit.}
       \label{fig:fig8_heatmaps}
    \end{center}
 \end{figure}
@@ -313,7 +287,7 @@ A combination of simulated and experimental data were used to benchmark the perf
    \end{center}
 \end{figure}
 
-To further quantify the limits of the fitting performance on two population mixtures, the discrepancy between the true and calculated FRET efficiencies was quantified for all peaks fitted from the simulated datasets, then plotted this discrepancy as a function of the FRET efficiency of the partner peak. The results are shown in Fig.~\ref{fig:fig_benchmarking} C and D. When the two peaks have extremely similar mean FRET efficiencies, namely separated from each other by less than their standard deviation, the fitting algorithm cannot effectively distinguish them, so both calculated values are distorted towards an intermediate value. However, when the two peaks are well separated, both peaks are fitted correctly, independent of the mean of the partner peak.
+To further quantify the limits of the fitting performance on two population mixtures, the discrepancy between the true and calculated FRET efficiencies was quantified for all peaks fitted from the simulated datasets, then plotted this discrepancy as a function of the FRET efficiency of the partner peak. The results are shown in Fig.~\ref{fig:fig_benchmarking} C and D. When the two peaks have extremely similar mean FRET efficiencies, namely separated from each other by less than their standard deviation, the fitting algorithm cannot effectively distinguish them, so both calculated values are distorted towards an intermediate value. However, when the two peaks are well separated, both peaks are fitted correctly (a typical p-value for the difference between the calculated and true distribution means, determined from a Student's T-test with 5000 samples is 0.97, showing no statistically significant difference), independent of the mean of the partner peak.
 
 Finally, the performance of the Gaussian fitting on experimental datasets, consisting of a two-component mixture of DNA duplexes, was evaluated. Three duplexes were used for this experiment, namely the duplexes with a 4, 6 and 12 bp dye-dye separation, corresponding to a high-, intermediate- and low-FRET species respectively. The duplexes were mixed in either a 1:3 or 1:1 concentration ratio for data collection using ALEX. The data collection procedure is described in Sections~2.5.4 and~2.5.5. These data were analysed using the DCBS algorithm. The raw data were then re-binned into 1 ms time-bins and re-analysed using simple ALEX event selection. Additionally, the two photon channels ($D_D$ and $A_D$) that record donor and acceptor photons that arrive during donor excitation and hence correspond to the simple FRET part of an ALEX experiment were separated. These photon counts, from both the re-binned and the raw data, were used to compare the performance of the DCBS algorithm for FRET with simple FRET event selection using AND thresholding. Identified bursts were fitted with a two-component mixture of Gaussians. Note that the expected outcome of these experiments is a three-by-three grid of data points, corresponding to high, medium and low FRET efficiency duplexes, all measured at high, medium and low concentrations. Only DCBS on ALEX data (Fig.~\ref{fig:ratios} A) and B)) comes close to approximating this.
 
